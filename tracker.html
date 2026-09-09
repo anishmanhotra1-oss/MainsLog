@@ -849,23 +849,42 @@ const SankalpTracker = (function() {
 
   let lastTrackerSyncTime = null;
 
-  async function fetchServerProgress() {
+  function loadLocalProgressFallback() {
     try {
-      updateSyncUI('saving', 'Syncing with server...');
-      const res = await fetch('/api/tracker/progress');
-      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-      const data = await res.json();
-      if (data.success && data.progress) {
-        progress = data.progress;
-        if (data.updatedAt) lastTrackerSyncTime = data.updatedAt;
+      const stored = localStorage.getItem('op300_tracker_progress');
+      if (stored) {
+        progress = JSON.parse(stored);
+        return true;
       }
-      updateSyncUI('saved', 'Server synced');
+    } catch (e) {}
+    return false;
+  }
+
+  async function fetchServerProgress() {
+    let serverOk = false;
+    try {
+      updateSyncUI('saving', 'Syncing...');
+      const res = await fetch('/api/tracker/progress');
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.success && data.progress) {
+          progress = data.progress;
+          if (data.updatedAt) lastTrackerSyncTime = data.updatedAt;
+          try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
+          updateSyncUI('saved', 'Synced');
+          serverOk = true;
+        }
+      }
     } catch (e) {
-      console.error('Fetch server progress error:', e);
-      updateSyncUI('error', 'Sync error (retrying)');
+      console.log('Server fetch progress notice:', e);
     } finally {
       const loader = document.getElementById('loadingOverlay');
       if (loader) loader.classList.add('hidden');
+    }
+
+    if (!serverOk) {
+      const loaded = loadLocalProgressFallback();
+      updateSyncUI('saved', loaded ? 'Synced (Local)' : 'Ready');
     }
   }
 
@@ -874,13 +893,13 @@ const SankalpTracker = (function() {
       const res = await fetch('/api/tracker/progress');
       if (!res.ok) return;
       const data = await res.json();
-      if (data.success && data.updatedAt && data.updatedAt !== lastTrackerSyncTime) {
+      if (data && data.success && data.updatedAt && data.updatedAt !== lastTrackerSyncTime) {
         lastTrackerSyncTime = data.updatedAt;
         if (data.progress) {
           progress = data.progress;
           renderDataPreservingFocus();
           await syncProgressToMainApp();
-          updateSyncUI('saved', 'Server synced');
+          updateSyncUI('saved', 'Synced');
         }
       }
     } catch (e) {}
@@ -913,38 +932,48 @@ const SankalpTracker = (function() {
   }
 
   async function sendServerUpdate(payload) {
+    const { day, key, checked, note } = payload || {};
+    if (day && key) {
+      if (!progress[day]) progress[day] = { checks: {}, notes: {}, dates: {} };
+      if (!progress[day].checks) progress[day].checks = {};
+      progress[day].checks[key] = !!checked;
+      if (note !== undefined) {
+        if (!progress[day].notes) progress[day].notes = {};
+        progress[day].notes[key] = note;
+      }
+      try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
+    }
+
+    await syncProgressToMainApp();
+    updateSyncUI('saved', 'Saved');
+
     try {
-      updateSyncUI('saving', 'Saving changes...');
       const res = await fetch('/api/tracker/update', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
-      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-      const data = await res.json();
-      if (data.success && data.progress) {
-        progress = data.progress;
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.success && data.progress) {
+          progress = data.progress;
+          try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
+        }
       }
-      await syncProgressToMainApp();
-      updateSyncUI('saved', 'Saved to server');
     } catch (e) {
-      console.error('Save error:', e);
-      updateSyncUI('error', 'Save error — click to retry');
+      console.log('Background server sync notice:', e);
     }
   }
 
   async function sendServerReset() {
+    progress = {};
+    try { localStorage.removeItem('op300_tracker_progress'); } catch(e){}
+    await syncProgressToMainApp();
+    updateSyncUI('saved', 'Progress reset');
+
     try {
-      updateSyncUI('saving', 'Resetting progress...');
-      const res = await fetch('/api/tracker/reset', { method: 'POST' });
-      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
-      progress = {};
-      await syncProgressToMainApp();
-      updateSyncUI('saved', 'Progress reset');
-    } catch (e) {
-      console.error('Reset error:', e);
-      updateSyncUI('error', 'Reset failed');
-    }
+      await fetch('/api/tracker/reset', { method: 'POST' });
+    } catch (e) {}
   }
 
   function dayTotals(day){
