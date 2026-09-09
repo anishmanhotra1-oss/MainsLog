@@ -1,7 +1,20 @@
 {
-  "rewrites": [
-    { "source": "/tracker", "destination": "/tracker.html" },
-    { "source": "/api/sync", "destination": "/api/sync.js" },
-    { "source": "/api/tracker/(.*)", "destination": "/api/tracker.js" }
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "tracker.html", "use": "@vercel/static" },
+    { "src": "manifest.json", "use": "@vercel/static" },
+    { "src": "sw.js", "use": "@vercel/static" },
+    { "src": "favicon.png", "use": "@vercel/static" },
+    { "src": "apple-touch-icon.png", "use": "@vercel/static" },
+    { "src": "favicon.svg", "use": "@vercel/static" },
+    { "src": "api/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/tracker", "dest": "/tracker.html" },
+    { "src": "/tracker.html", "dest": "/tracker.html" },
+    { "src": "/api/sync", "dest": "/api/sync.js" },
+    { "src": "/api/tracker/(.*)", "dest": "/api/tracker.js" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
