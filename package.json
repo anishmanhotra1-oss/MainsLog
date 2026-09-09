@@ -1,0 +1,10 @@
+{
+  "name": "mains-log",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MainsLog - UPSC CSE Revision Engine & Sankalp 100-Day Ledger",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Building MainsLog static site'"
+  }
+}
