@@ -2320,7 +2320,7 @@
           <span>🎯</span> UPSC CSE 2027
         </div>
         <div style="display: flex; gap: 8px; align-items: center;">
-          <button class="prestige-backup-btn" id="pwaInstallBtn" style="display: none; background: #2563EB; color: #FFFFFF; border: none; font-weight: 700; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);">
+          <button class="prestige-backup-btn" id="pwaInstallBtn" onclick="triggerPwaInstall()" style="background: #2563EB; color: #FFFFFF; border: none; font-weight: 700; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);">
             <span>📲</span> Install App
           </button>
           <button class="prestige-backup-btn" id="quickExportBtn">
@@ -2903,6 +2903,38 @@
   </div>
 </div>
 
+<!-- PWA INSTALL GUIDE MODAL -->
+<div class="modal-overlay" id="pwaModal" onclick="closePwaInstallModal(event)">
+  <div class="popup-card" onclick="event.stopPropagation();" style="max-width: 480px; padding: 24px;">
+    <div class="popup-header" style="background: transparent; padding: 0 0 16px 0; border-bottom: 1px solid #E2E8F0;">
+      <h3 style="margin: 0; font-size: 18px; color: #0F172A; display: flex; align-items: center; gap: 8px;">
+        <span>📲</span> Install MainsLog App
+      </h3>
+      <button class="popup-close-btn" onclick="closePwaInstallModal()">✕</button>
+    </div>
+    <div style="padding: 18px 0; display: flex; flex-direction: column; gap: 16px; font-size: 13.5px; color: #334155;">
+      <div style="background: #EFF6FF; border: 1px solid #BFDBFE; padding: 14px 16px; border-radius: 14px; color: #1E40AF;">
+        <b style="font-size: 14px; color: #1E3A8A;">iPhone / iPad (Safari)</b>:
+        <ol style="margin: 8px 0 0 18px; padding: 0; line-height: 1.6;">
+          <li>Tap the <b>Share icon</b> (square with arrow) at the bottom toolbar.</li>
+          <li>Scroll down and tap <b>"Add to Home Screen"</b>.</li>
+          <li>Tap <b>Add</b> at top right.</li>
+        </ol>
+      </div>
+      <div style="background: #F0FDF4; border: 1px solid #BBF7D0; padding: 14px 16px; border-radius: 14px; color: #166534;">
+        <b style="font-size: 14px; color: #14532D;">Android / Chrome / Edge</b>:
+        <ol style="margin: 8px 0 0 18px; padding: 0; line-height: 1.6;">
+          <li>Tap the <b>3 dots menu</b> at top right of Chrome.</li>
+          <li>Tap <b>"Install app"</b> or <b>"Add to Home screen"</b>.</li>
+        </ol>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: flex-end;">
+      <button class="btn" onclick="closePwaInstallModal()" style="background: #2563EB; min-height: 40px; padding: 8px 24px;">Got It!</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const TRACKER_PLAN_DATA = [{"day": 1, "date": "Thu, 10 Sep 2026", "iso": "2026-09-10", "gs": "GS-2 (Preamble & Key Features)", "sociology": "Sociology (Paper 1: Sociology as a Science)", "csat": "Basic Introduction to CSAT", "isOff": false, "phase": "GS-2"}, {"day": 2, "date": "Fri, 11 Sep 2026", "iso": "2026-09-11", "gs": "GS-2 (Fundamental Rights & DPSP Interrelationship)", "sociology": "Sociology (Paper 1: Major Theoretical Perspectives)", "csat": "Calendar 1", "isOff": false, "phase": "GS-2"}, {"day": 3, "date": "Sat, 12 Sep 2026", "iso": "2026-09-12", "gs": "GS-2 (Basic Structure & Key Amendments)", "sociology": "Sociology (Paper 1: Positivism & Its Critique)", "csat": "Calendar 2", "isOff": false, "phase": "GS-2"}, {"day": 4, "date": "Sun, 13 Sep 2026", "iso": "2026-09-13", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-2"}, {"day": 5, "date": "Mon, 14 Sep 2026", "iso": "2026-09-14", "gs": "GS-2 (Separation of Powers & Executive vs Judiciary)", "sociology": "Sociology (Paper 1: Non-Positivist Methodologies)", "csat": "Clock 1", "isOff": false, "phase": "GS-2"}, {"day": 6, "date": "Tue, 15 Sep 2026", "iso": "2026-09-15", "gs": "GS-2 (Judicial Activism, PIL & Collegium System)", "sociology": "Sociology (Paper 1: Fact, Value & Objectivity)", "csat": "Clock 2", "isOff": false, "phase": "GS-2"}, {"day": 7, "date": "Wed, 16 Sep 2026", "iso": "2026-09-16", "gs": "GS-2 (Comparison of Indian Constitutional Scheme)", "sociology": "Sociology (Paper 1: Qualitative vs Quantitative Methods)", "csat": "Direction", "isOff": false, "phase": "GS-2"}, {"day": 8, "date": "Thu, 17 Sep 2026", "iso": "2026-09-17", "gs": "GS-2 (Federal Architecture & Governor's Role)", "sociology": "Sociology (Paper 1: Karl Marx — Historical Materialism)", "csat": "Venn Diagram 1", "isOff": false, "phase": "GS-2"}, {"day": 9, "date": "Fri, 18 Sep 2026", "iso": "2026-09-18", "gs": "GS-2 (Parliament, Speaker Neutrality & Debates)", "sociology": "Sociology (Paper 1: Karl Marx — Mode of Production & Alienation)", "csat": "Venn Diagram 2", "isOff": false, "phase": "GS-2"}, {"day": 10, "date": "Sat, 19 Sep 2026", "iso": "2026-09-19", "gs": "GS-2 (Parliamentary Committees & Privileges)", "sociology": "Sociology (Paper 1: Emile Durkheim — Division of Labour & Suicide)", "csat": "Series 1", "isOff": false, "phase": "GS-2"}];
 
@@ -3156,25 +3188,34 @@ let deferredPwaPrompt = null;
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
   deferredPwaPrompt = e;
-  const pwaBtn = document.getElementById('pwaInstallBtn');
-  if (pwaBtn) {
-    pwaBtn.style.display = 'inline-flex';
-  }
 });
 
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('#pwaInstallBtn');
-  if (btn && deferredPwaPrompt) {
+function triggerPwaInstall() {
+  if (deferredPwaPrompt) {
     deferredPwaPrompt.prompt();
     deferredPwaPrompt.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the PWA install prompt');
+        console.log('User accepted PWA install prompt');
       }
       deferredPwaPrompt = null;
-      btn.style.display = 'none';
     });
+  } else {
+    openPwaInstallModal();
   }
-});
+}
+
+function openPwaInstallModal() {
+  const modal = document.getElementById('pwaModal');
+  if (modal) modal.classList.add('active');
+}
+
+function closePwaInstallModal(e) {
+  if (e && e.target && e.target.id !== 'pwaModal' && !e.target.classList.contains('popup-close-btn') && e.target.tagName !== 'BUTTON') {
+    return;
+  }
+  const modal = document.getElementById('pwaModal');
+  if (modal) modal.classList.remove('active');
+}
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
