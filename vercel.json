@@ -1,11 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/tracker", "destination": "/tracker.html" },
-    { "source": "/tracker/", "destination": "/tracker.html" },
-    { "source": "/api/tracker/progress", "destination": "/api/tracker.js" },
-    { "source": "/api/tracker/update", "destination": "/api/tracker.js" },
-    { "source": "/api/tracker/reset", "destination": "/api/tracker.js" },
-    { "source": "/api/tracker/stats", "destination": "/api/tracker.js" }
+    { "source": "/api/sync", "destination": "/api/sync.js" },
+    { "source": "/api/tracker/(.*)", "destination": "/api/tracker.js" }
   ]
 }
