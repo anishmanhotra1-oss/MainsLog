@@ -1,9 +1,11 @@
-const CACHE_NAME = 'op300-pwa-v2';
+const CACHE_NAME = 'mainslog-pwa-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './tracker.html',
   './manifest.json',
+  './favicon.png',
+  './apple-touch-icon.png',
   'https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap'
 ];
 
