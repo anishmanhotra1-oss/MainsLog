@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sankalp — 100-Day Prelims Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0F172A;
+    --ink-soft: #475569;
+    --paper: #F8FAFC;
+    --paper-raised: #FFFFFF;
+    --paper-line: #E2E8F0;
+    --brass: #2563EB;
+    --brass-soft: #DBEAFE;
+    --sage: #059669;
+    --sage-soft: #D1FAE5;
+    --rust: #DC2626;
+    --rust-soft: #FEE2E2;
+    --brand-blue: #2563EB;
+    --brand-blue-dark: #1E40AF;
+    --brand-blue-light: #EFF6FF;
+    --shadow: 0 2px 10px rgba(37, 99, 235, 0.05), 0 1px 3px rgba(15, 23, 42, 0.05);
+    --shadow-hover: 0 8px 24px -4px rgba(37, 99, 235, 0.12);
+    --radius: 8px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body.ledger-body {
+    margin: 0;
+    background: #FAFAFC;
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', 'IBM Plex Sans', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .ledger-page {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+
+  /* ---------- SYNC STATUS BANNER ---------- */
+  .sync-status-bar {
+    position: fixed;
+    top: 14px;
+    right: 18px;
+    z-index: 1000;
+    background: #FFFFFF;
+    border: 1px solid #BFDBFE;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--brand-blue-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+    transition: all 0.25s ease;
+  }
+  .sync-status-bar.saving { border-color: var(--brand-blue); color: var(--brand-blue); background: var(--brand-blue-light); }
+  .sync-status-bar.saved { border-color: #A7F3D0; color: #065F46; background: #ECFDF5; }
+  .sync-status-bar.saved .sync-dot { background: #10B981; }
+  .sync-status-bar.error { border-color: #FCA5A5; color: #991B1B; background: #FEF2F2; }
+
+  .sync-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--brand-blue);
+  }
+  .sync-status-bar.saving .sync-dot { background: var(--brand-blue); animation: pulseDot 1s infinite; }
+  .sync-status-bar.error .sync-dot { background: var(--rust); }
+
+  @keyframes pulseDot {
+    0% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.3; transform: scale(0.8); }
+  }
+
+  /* ---------- LOADING OVERLAY ---------- */
+  .loading-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(248, 250, 252, 0.9);
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+  .loading-overlay.hidden { opacity: 0; pointer-events: none; }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #DBEAFE;
+    border-top-color: var(--brand-blue);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 12px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .loading-text {
+    font-family: 'Space Grotesk', 'Source Serif 4', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  /* ---------- HEADER ---------- */
+  header.hero {
+    padding: 36px 24px 28px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #EFF6FF 100%);
+    border: 1px solid #DBEAFE;
+    border-radius: 16px;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.08);
+    position: relative;
+  }
+  .eyebrow-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .file-no {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--brand-blue);
+  }
+  .quick-nav {
+    display: flex;
+    gap: 10px;
+  }
+  .quick-nav a {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    text-decoration: none;
+    background: #FFFFFF;
+    border: 1px solid var(--paper-line);
+    padding: 5px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+  }
+  .quick-nav a:hover { color: var(--brand-blue); border-color: var(--brand-blue); background: var(--brand-blue-light); }
+
+  h1.title {
+    font-family: 'Space Grotesk', 'Source Serif 4', serif;
+    font-weight: 800;
+    font-size: 38px;
+    margin: 0 0 6px;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  h1.title em {
+    font-style: normal;
+    color: var(--brand-blue);
+  }
+  .subtitle {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    max-width: 580px;
+    margin-bottom: 24px;
+  }
+
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .ring-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .ring {
+    width: 86px; height: 86px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: conic-gradient(#2563EB calc(var(--pct,0)*1%), #E2E8F0 0);
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+  }
+  .ring-inner {
+    width: 66px; height: 66px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .ring-inner .num { font-weight: 800; font-size: 18px; color: var(--brand-blue); }
+  .ring-inner .lbl { font-size: 9px; font-weight: 700; letter-spacing: 0.05em; color: var(--ink-soft); }
+  .ring-caption .t1 { font-size: 13px; color: var(--ink-soft); font-weight: 500; }
+  .ring-caption .t2 { font-weight: 700; font-size: 17px; color: var(--ink); }
+
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+  .chip {
+    background: #FFFFFF;
+    border: 1px solid #DBEAFE;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.04);
+  }
+  .chip b { color: var(--brand-blue); font-weight: 700; }
+
+  /* ---------- TOOLBAR ---------- */
+  .toolbar {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(250, 250, 252, 0.92);
+    backdrop-filter: blur(10px);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--paper-line);
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .toolbar input[type="search"] {
+    flex: 1;
+    min-width: 160px;
+    padding: 10px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+    background: #FFFFFF;
+    font-family: inherit;
+    font-size: 13.5px;
+    color: var(--ink);
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+  }
+  .toolbar input[type="search"]:focus { outline: none; border-color: var(--brand-blue); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
+
+  .filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #CBD5E1;
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-btn.active {
+    background: var(--brand-blue);
+    color: #FFFFFF;
+    border-color: var(--brand-blue);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  }
+  .filter-btn:hover:not(.active) { border-color: var(--brand-blue); color: var(--brand-blue); background: var(--brand-blue-light); }
+
+  .reset-btn {
+    padding: 8px 16px;
+    border: 1px solid #FCA5A5;
+    background: #FEF2F2;
+    color: #DC2626;
+    border-radius: 20px;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .reset-btn:hover { background: #DC2626; color: #FFFFFF; }
+
+  /* ---------- PHASE ---------- */
+  details.phase {
+    margin-top: 24px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  details.phase summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 20px;
+    background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  details.phase summary::-webkit-details-marker { display: none; }
+  .phase-head { display: flex; flex-direction: column; gap: 2px; }
+  .phase-title {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+  }
+  .phase-range { font-size: 12px; font-weight: 500; color: var(--ink-soft); }
+  .phase-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 150px;
+  }
+  .phase-bar-track {
+    flex: 1;
+    height: 7px;
+    background: #E2E8F0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .phase-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3B82F6 0%, #2563EB 100%);
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+  .phase-pct { font-size: 12px; font-weight: 700; color: var(--brand-blue); min-width: 36px; text-align: right; }
+  .chevron { transition: transform .15s ease; color: var(--ink-soft); font-size: 14px; }
+  details.phase[open] .chevron { transform: rotate(90deg); }
+  .phase-list { padding: 14px; }
+
+  /* ---------- DAY CARD ---------- */
+  .day-card {
+    border: 1px solid #E2E8F0;
+    background: #FFFFFF;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 16px 18px 14px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    transition: all 0.2s ease;
+  }
+  .day-card:hover {
+    border-color: #BFDBFE;
+    box-shadow: var(--shadow-hover);
+  }
+  .day-card.is-today {
+    border: 2px solid var(--brand-blue);
+    background: #F0F7FF;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+  }
+  .day-card.is-off {
+    background: #F8FAFC;
+    border-style: dashed;
+  }
+  .day-card.is-complete {
+    border-color: #10B981;
+    background: #F0FDF4;
+  }
+  .day-card.is-hidden { display: none; }
+
+  .day-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .day-num {
+    font-weight: 800;
+    font-size: 15px;
+    color: var(--brand-blue);
+    min-width: 56px;
+  }
+  .day-date { font-size: 13px; font-weight: 500; color: var(--ink-soft); flex: 1; }
+  .today-tag {
+    background: var(--brand-blue);
+    color: #fff;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    padding: 3px 9px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+  }
+  .day-mini-progress {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand-blue);
+    background: #EFF6FF;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .task-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 10px 24px;
+  }
+  .task-list li { display: flex; }
+  .task-list label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background 0.15s ease;
+  }
+  .task-list label:hover { background: #F1F5F9; }
+  .task-list input[type="checkbox"] {
+    margin-top: 3px;
+    width: 16px; height: 16px;
+    accent-color: var(--brand-blue);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .task-list input[type="checkbox"]:checked + span {
+    color: #94A3B8;
+    text-decoration: line-through;
+    text-decoration-color: #CBD5E1;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-right: 6px;
+    vertical-align: 1px;
+  }
+  .tag.gs { background: #DBEAFE; color: #1E40AF; }
+  .tag.soc { background: #E0E7FF; color: #3730A3; }
+  .tag.csat { background: #FEF3C7; color: #92400E; }
+  .tag.pyq { background: #F3E8FF; color: #6B21A8; }
+  .tag.ca { background: #D1FAE5; color: #065F46; }
+  .tag.rest { background: #E2E8F0; color: #475569; }
+
+  .note-field {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px dashed #BFDBFE;
+    background: transparent;
+    font-family: inherit;
+    font-size: 12.5px;
+    color: var(--ink);
+    padding: 3px 2px;
+  }
+  .note-field:focus {
+    outline: none;
+    border-bottom: 1px solid var(--brand-blue);
+  }
+  .note-field::placeholder { color: #94A3B8; font-style: italic; }
+
+  .off-note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 4px 0 10px;
+  }
+
+  @media (max-width: 640px) {
+    .ledger-page {
+      padding: 0 8px 80px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    header.hero {
+      padding: 18px 14px !important;
+      margin-top: 10px !important;
+      border-radius: 14px !important;
+    }
+
+    .phase-card, .summary-section, .filter-nav-bar {
+      padding: 14px 12px !important;
+      border-radius: 14px !important;
+    }
+
+    .task-list { grid-template-columns: 1fr; }
+    h1.title { font-size: 26px; }
+  }
+
+  /* ---------- SUMMARY ---------- */
+  .summary-section {
+    margin-top: 50px;
+    border-top: 2px solid #E2E8F0;
+    padding-top: 32px;
+  }
+  .summary-kicker {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--brand-blue);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+  h2.summary-title {
+    font-family: 'Space Grotesk', 'Source Serif 4', serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--ink);
+    margin: 0 0 6px;
+  }
+  .summary-sub { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 26px; max-width: 580px; }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 26px;
+  }
+  .stat-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 18px 16px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.04);
+  }
+  .stat-card .big {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--brand-blue);
+  }
+  .stat-card .lbl { font-size: 12px; color: var(--ink-soft); margin-top: 2px; font-weight: 500; }
+
+  .track-rows {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.04);
+  }
+  .track-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .track-row:last-child { border-bottom: none; }
+  .track-row .name { width: 160px; font-size: 13.5px; font-weight: 600; flex-shrink: 0; color: var(--ink); }
+  .track-row .bar-track {
+    flex: 1; height: 8px; background: #E2E8F0; border-radius: 4px; overflow: hidden;
+  }
+  .track-row .bar-fill { height: 100%; background: var(--brand-blue); transition: width 0.3s ease; }
+  .track-row .pct { width: 44px; text-align: right; font-size: 12.5px; font-weight: 700; color: var(--brand-blue); font-variant-numeric: tabular-nums; }
+
+  .summary-footer-note {
+    font-size: 13px;
+    color: var(--ink-soft);
+    border-left: 3px solid var(--brand-blue);
+    padding: 8px 0 8px 16px;
+    font-style: italic;
+    background: #EFF6FF;
+    border-radius: 0 8px 8px 0;
+  }
+
+  @media (max-width: 600px) {
+    .summary-grid { grid-template-columns: 1fr 1fr; }
+    .track-row .name { width: 100px; }
+  }
+
+  footer.page-footer {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 1px solid #E2E8F0;
+    font-size: 12px;
+    color: var(--ink-soft);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+</style>
+</head>
+<body class="ledger-body">
+
+<div class="sync-status-bar" id="syncStatus">
+  <span class="sync-dot"></span>
+  <span id="syncText">Server synced</span>
+</div>
+
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="spinner"></div>
+  <div class="loading-text">Loading Sankalp 100-Day Ledger...</div>
+</div>
+
+<div class="ledger-page">
+
+  <header class="hero">
+    <div class="eyebrow-row">
+      <span class="file-no">UPSC Prelims &amp; Optional · Working Tracker</span>
+      <nav class="quick-nav">
+        <a href="index.html" id="backHomeLink">← Main App</a>
+        <a href="#today-anchor" id="jumpTodayLink">Today</a>
+        <a href="#summary">Summary</a>
+      </nav>
+    </div>
+    <h1 class="title">Sankalp<em>.</em> The 100-Day Ledger</h1>
+    <p class="subtitle">GS (Polity → Ethics → Economy → History) · Sociology Optional · CSAT · daily PYQ practice and current affairs — 10 Sep to 18 Dec 2026.</p>
+
+    <div class="hero-stats">
+      <div class="ring-box">
+        <div class="ring" id="ringEl">
+          <div class="ring-inner">
+            <span class="num" id="ringPct">0%</span>
+            <span class="lbl">DONE</span>
+          </div>
+        </div>
+        <div class="ring-caption">
+          <div class="t1">Overall progress</div>
+          <div class="t2" id="ringTasks">0 / 600 tasks</div>
+        </div>
+      </div>
+      <div class="chips">
+        <div class="chip">Day <b id="chipDayNow">–</b> of 100</div>
+        <div class="chip"><b id="chipStreak">0</b>-day streak</div>
+        <div class="chip"><b id="chipDaysDone">0</b> days fully done</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <input type="search" id="searchBox" placeholder="Search a day, date or topic…">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="today">Today</button>
+    <button class="filter-btn" data-filter="pending">Pending</button>
+    <button class="filter-btn" data-filter="done">Completed</button>
+    <button class="reset-btn" id="resetBtn">Reset progress</button>
+  </div>
+
+  <div id="phaseContainer"><!-- phases + day cards injected by JS --></div>
+
+  <section class="summary-section" id="summary">
+    <div class="summary-kicker">END OF LEDGER</div>
+    <h2 class="summary-title">Where things stand</h2>
+    <p class="summary-sub">This section recalculates live as you check things off — read it any time as your progress report, or scroll here on Day 100 for the full audit.</p>
+
+    <div class="summary-grid">
+      <div class="stat-card">
+        <div class="big" id="sumOverallPct">0%</div>
+        <div class="lbl">Overall completion</div>
+      </div>
+      <div class="stat-card">
+        <div class="big" id="sumDaysDone">0 / 100</div>
+        <div class="lbl">Days fully completed</div>
+      </div>
+      <div class="stat-card">
+        <div class="big" id="sumDaysLeft">100</div>
+        <div class="lbl">Days remaining in plan</div>
+      </div>
+      <div class="stat-card">
+        <div class="big" id="sumStreak">0</div>
+        <div class="lbl">Current daily streak</div>
+      </div>
+      <div class="stat-card">
+        <div class="big" id="sumBestStreak">0</div>
+        <div class="lbl">Best streak so far</div>
+      </div>
+      <div class="stat-card">
+        <div class="big" id="sumMissed">0</div>
+        <div class="lbl">Past days with zero progress</div>
+      </div>
+    </div>
+
+    <div class="track-rows" id="trackRows"><!-- per-track bars injected --></div>
+
+    <p class="summary-footer-note" id="footerNote">Check off your first task to see a personalised note here.</p>
+  </section>
+
+  <footer class="page-footer">
+    <span>Progress is saved on the server — your records remain synchronized.</span>
+    <span>Sep 10 – Dec 18, 2026 · 100 Days</span>
+  </footer>
+
+</div>
+
+<script>
+const SankalpTracker = (function() {
+  const PLAN_DATA = [{"day": 1, "date": "Thu, 10 Sep 2026", "iso": "2026-09-10", "gs": "GS-2 (Preamble & Key Features)", "sociology": "Sociology (Paper 1: Sociology as a Science)", "csat": "Basic Introduction to CSAT", "isOff": false, "phase": "GS-2"}, {"day": 2, "date": "Fri, 11 Sep 2026", "iso": "2026-09-11", "gs": "GS-2 (Fundamental Rights & DPSP Interrelationship)", "sociology": "Sociology (Paper 1: Major Theoretical Perspectives)", "csat": "Calendar 1", "isOff": false, "phase": "GS-2"}, {"day": 3, "date": "Sat, 12 Sep 2026", "iso": "2026-09-12", "gs": "GS-2 (Basic Structure & Key Amendments)", "sociology": "Sociology (Paper 1: Positivism & Its Critique)", "csat": "Calendar 2", "isOff": false, "phase": "GS-2"}, {"day": 4, "date": "Sun, 13 Sep 2026", "iso": "2026-09-13", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-2"}, {"day": 5, "date": "Mon, 14 Sep 2026", "iso": "2026-09-14", "gs": "GS-2 (Separation of Powers & Executive vs Judiciary)", "sociology": "Sociology (Paper 1: Non-Positivist Methodologies)", "csat": "Clock 1", "isOff": false, "phase": "GS-2"}, {"day": 6, "date": "Tue, 15 Sep 2026", "iso": "2026-09-15", "gs": "GS-2 (Judicial Activism, PIL & Collegium System)", "sociology": "Sociology (Paper 1: Fact, Value & Objectivity)", "csat": "Clock 2", "isOff": false, "phase": "GS-2"}, {"day": 7, "date": "Wed, 16 Sep 2026", "iso": "2026-09-16", "gs": "GS-2 (Comparison of Indian Constitutional Scheme)", "sociology": "Sociology (Paper 1: Qualitative vs Quantitative Methods)", "csat": "Direction", "isOff": false, "phase": "GS-2"}, {"day": 8, "date": "Thu, 17 Sep 2026", "iso": "2026-09-17", "gs": "GS-2 (Federal Architecture & Governor's Role)", "sociology": "Sociology (Paper 1: Karl Marx — Historical Materialism)", "csat": "Venn Diagram 1", "isOff": false, "phase": "GS-2"}, {"day": 9, "date": "Fri, 18 Sep 2026", "iso": "2026-09-18", "gs": "GS-2 (Parliament, Speaker Neutrality & Debates)", "sociology": "Sociology (Paper 1: Karl Marx — Mode of Production & Alienation)", "csat": "Venn Diagram 2", "isOff": false, "phase": "GS-2"}, {"day": 10, "date": "Sat, 19 Sep 2026", "iso": "2026-09-19", "gs": "GS-2 (Parliamentary Committees & Privileges)", "sociology": "Sociology (Paper 1: Emile Durkheim — Division of Labour & Suicide)", "csat": "Series 1", "isOff": false, "phase": "GS-2"}, {"day": 11, "date": "Sun, 20 Sep 2026", "iso": "2026-09-20", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-2"}, {"day": 12, "date": "Mon, 21 Sep 2026", "iso": "2026-09-21", "gs": "GS-2 (RPA, Anti-Defection & Electoral Reforms)", "sociology": "Sociology (Paper 1: Emile Durkheim — Social Fact & Religion)", "csat": "Series 2", "isOff": false, "phase": "GS-2"}, {"day": 13, "date": "Tue, 22 Sep 2026", "iso": "2026-09-22", "gs": "GS-2 (Constitutional Bodies: EC, CAG, UPSC, FC)", "sociology": "Sociology (Paper 1: Max Weber — Social Action & Ideal Types)", "csat": "Series 3", "isOff": false, "phase": "GS-2"}, {"day": 14, "date": "Wed, 23 Sep 2026", "iso": "2026-09-23", "gs": "GS-2 (Statutory & Quasi-Judicial Bodies: NITI, NHRC, NGT)", "sociology": "Sociology (Paper 1: Max Weber — Authority & Bureaucracy)", "csat": "Coding Decoding", "isOff": false, "phase": "GS-2"}, {"day": 15, "date": "Thu, 24 Sep 2026", "iso": "2026-09-24", "gs": "GS-2 (73rd & 74th Amendments: PRI & ULBs)", "sociology": "Sociology (Paper 1: Max Weber — Protestant Ethic & Spirit of Capitalism)", "csat": "Ages", "isOff": false, "phase": "GS-2"}, {"day": 16, "date": "Fri, 25 Sep 2026", "iso": "2026-09-25", "gs": "GS-2 (Transparency, Accountability & Citizen Charters)", "sociology": "Sociology (Paper 1: Talcott Parsons — Social System & Pattern Variables)", "csat": "Syllogism", "isOff": false, "phase": "GS-2"}, {"day": 17, "date": "Sat, 26 Sep 2026", "iso": "2026-09-26", "gs": "GS-2 (Right to Information Act Issues & Reforms)", "sociology": "Sociology (Paper 1: Robert K. Merton — Latent/Manifest Functions & Anomie)", "csat": "Ranking and Sequencing", "isOff": false, "phase": "GS-2"}, {"day": 18, "date": "Sun, 27 Sep 2026", "iso": "2026-09-27", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-2"}, {"day": 19, "date": "Mon, 28 Sep 2026", "iso": "2026-09-28", "gs": "GS-2 (E-Governance Models & Limitations)", "sociology": "Sociology (Paper 1: George Herbert Mead — Self & Identity)", "csat": "Puzzles 1", "isOff": false, "phase": "GS-2"}, {"day": 20, "date": "Tue, 29 Sep 2026", "iso": "2026-09-29", "gs": "GS-2 (Role of Civil Services & Lateral Entry)", "sociology": "Sociology (Paper 1: Work & Economic Life)", "csat": "Puzzles 2", "isOff": false, "phase": "GS-2"}, {"day": 21, "date": "Wed, 30 Sep 2026", "iso": "2026-09-30", "gs": "GS-2 (Development Industry: NGOs, SHGs, Civil Society)", "sociology": "Sociology (Paper 1: Stratification & Mobility — Concepts & Theories)", "csat": "Sitting Arrangement", "isOff": false, "phase": "GS-2"}, {"day": 22, "date": "Thu, 01 Oct 2026", "iso": "2026-10-01", "gs": "GS-2 (Government Policies & Interventions)", "sociology": "Sociology (Paper 1: Gender, Class & Race Stratification)", "csat": "Cube and Dice", "isOff": false, "phase": "GS-2"}, {"day": 23, "date": "Fri, 02 Oct 2026", "iso": "2026-10-02", "gs": "GS-2 (Welfare Schemes for Vulnerable Sections)", "sociology": "Sociology (Paper 1: Social Mobility — Open & Closed Systems)", "csat": "Visual Reasoning", "isOff": false, "phase": "GS-2"}, {"day": 24, "date": "Sat, 03 Oct 2026", "iso": "2026-10-03", "gs": "GS-2 (Health, Education & Skill Development)", "sociology": "Sociology (Paper 1: Politics & Society — Power, Nation & State)", "csat": "Miscellaneous Reasoning (Part 1)", "isOff": false, "phase": "GS-2"}, {"day": 25, "date": "Sun, 04 Oct 2026", "iso": "2026-10-04", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-2"}, {"day": 26, "date": "Mon, 05 Oct 2026", "iso": "2026-10-05", "gs": "GS-2 (Poverty & Hunger Issues)", "sociology": "Sociology (Paper 1: Sociological Theories of Religion & Secularization)", "csat": "Miscellaneous Reasoning (Part 2)", "isOff": false, "phase": "GS-2"}, {"day": 27, "date": "Tue, 06 Oct 2026", "iso": "2026-10-06", "gs": "GS-2 (India & Neighborhood Relations)", "sociology": "Sociology (Paper 1: Kinship Systems, Family & Marriage)", "csat": "Number System (Part 01)", "isOff": false, "phase": "GS-2"}, {"day": 28, "date": "Wed, 07 Oct 2026", "iso": "2026-10-07", "gs": "GS-2 (Extended Neighborhood & Strategic Partners)", "sociology": "Sociology (Paper 1: Social Change — Theories & Agents)", "csat": "Number System (Part 02)", "isOff": false, "phase": "GS-2"}, {"day": 29, "date": "Thu, 08 Oct 2026", "iso": "2026-10-08", "gs": "GS-2 (Global & Regional Groupings: Quad, BRICS, G20)", "sociology": "Sociology (Paper 2: G.S. Ghurye — Indology)", "csat": "Number System (Part 03)", "isOff": false, "phase": "GS-2"}, {"day": 30, "date": "Fri, 09 Oct 2026", "iso": "2026-10-09", "gs": "GS-2 (Effect of Foreign Policies on India & Diaspora)", "sociology": "Sociology (Paper 2: M.N. Srinivas — Structural-Functionalism)", "csat": "Number System (Part 04)", "isOff": false, "phase": "GS-2"}, {"day": 31, "date": "Sat, 10 Oct 2026", "iso": "2026-10-10", "gs": "GS-2 (International Institutions: UN, WTO, IMF)", "sociology": "Sociology (Paper 2: A.R. Desai — Marxist Sociology)", "csat": "Number System (Part 05)", "isOff": false, "phase": "GS-2"}, {"day": 32, "date": "Sun, 11 Oct 2026", "iso": "2026-10-11", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-2"}, {"day": 33, "date": "Mon, 12 Oct 2026", "iso": "2026-10-12", "gs": "GS-2 Consolidation & Microtheme PYQ Review", "sociology": "Sociology (Paper 2: Caste System — Perspectives & Dynamics)", "csat": "Number System (Part 06)", "isOff": false, "phase": "GS-2"}, {"day": 34, "date": "Tue, 13 Oct 2026", "iso": "2026-10-13", "gs": "GS-2 Full-Length PYQ Writing Test", "sociology": "Sociology (Paper 2: Untouchability & Backward Classes)", "csat": "Number System (Part 07)", "isOff": false, "phase": "GS-2"}, {"day": 35, "date": "Wed, 14 Oct 2026", "iso": "2026-10-14", "gs": "GS-2 Answer Review & Feedback Analysis", "sociology": "Sociology (Paper 2: Tribal Communities & Agrarian Structure)", "csat": "Number System (Part 08)", "isOff": false, "phase": "GS-2"}, {"day": 36, "date": "Thu, 15 Oct 2026", "iso": "2026-10-15", "gs": "GS-4 (Ethics & Human Interface)", "sociology": "Sociology (Paper 2: Land Reforms & Green Revolution)", "csat": "LCM and HCF", "isOff": false, "phase": "GS-4"}, {"day": 37, "date": "Fri, 16 Oct 2026", "iso": "2026-10-16", "gs": "GS-4 (Human Values & Lessons from Leaders)", "sociology": "Sociology (Paper 2: Industrialization & Urbanization)", "csat": "LCM and HCF (Part 02)", "isOff": false, "phase": "GS-4"}, {"day": 38, "date": "Sat, 17 Oct 2026", "iso": "2026-10-17", "gs": "GS-4 (Attitude: Structure, Function & Persuasion)", "sociology": "Sociology (Paper 2: Politics & Society — Regionalism & Communalism)", "csat": "Percentage", "isOff": false, "phase": "GS-4"}, {"day": 39, "date": "Sun, 18 Oct 2026", "iso": "2026-10-18", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-4"}, {"day": 40, "date": "Mon, 19 Oct 2026", "iso": "2026-10-19", "gs": "GS-4 (Emotional Intelligence & Applications)", "sociology": "Sociology (Paper 2: Social Movements — Peasant & Tribal Movements)", "csat": "Percentage (Part 02)", "isOff": false, "phase": "GS-4"}, {"day": 41, "date": "Tue, 20 Oct 2026", "iso": "2026-10-20", "gs": "GS-4 (Western Thinkers: Socrates, Kant, Rawls)", "sociology": "Sociology (Paper 2: Backward Class & Dalit Movements)", "csat": "Average", "isOff": false, "phase": "GS-4"}, {"day": 42, "date": "Wed, 21 Oct 2026", "iso": "2026-10-21", "gs": "GS-4 (Indian Philosophers: Gandhi, Ambedkar, Kautilya)", "sociology": "Sociology (Paper 2: Environmental & Women's Movements)", "csat": "Order of Magnitude", "isOff": false, "phase": "GS-4"}, {"day": 43, "date": "Thu, 22 Oct 2026", "iso": "2026-10-22", "gs": "GS-4 (Foundational Values for Civil Services)", "sociology": "Sociology (Paper 2: Population Dynamics & Demographic Issues)", "csat": "Elementary Algebra", "isOff": false, "phase": "GS-4"}, {"day": 44, "date": "Fri, 23 Oct 2026", "iso": "2026-10-23", "gs": "GS-4 (Public Service Ethics & Dilemmas)", "sociology": "Sociology (Paper 2: Challenges of Social Transformation)", "csat": "Linear and Quadratic Equations", "isOff": false, "phase": "GS-4"}, {"day": 45, "date": "Sat, 24 Oct 2026", "iso": "2026-10-24", "gs": "GS-4 (Laws, Conscience & Governance)", "sociology": "Sociology (Paper 2: Poverty, Deprivation & Inequality)", "csat": "Sequence", "isOff": false, "phase": "GS-4"}, {"day": 46, "date": "Sun, 25 Oct 2026", "iso": "2026-10-25", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-4"}, {"day": 47, "date": "Mon, 26 Oct 2026", "iso": "2026-10-26", "gs": "GS-4 (Probity in Governance & Public Funds)", "sociology": "Sociology (Paper 2: Violence Against Women & Gender Issues)", "csat": "Fractions", "isOff": false, "phase": "GS-4"}, {"day": 48, "date": "Tue, 27 Oct 2026", "iso": "2026-10-27", "gs": "GS-4 (Challenges of Corruption)", "sociology": "Sociology (Paper 2: Ethnic Conflicts & Religious Fundamentalism)", "csat": "Time and Work 1", "isOff": false, "phase": "GS-4"}, {"day": 49, "date": "Wed, 28 Oct 2026", "iso": "2026-10-28", "gs": "GS-4 (Case Study Framework & Stakeholder Matrix)", "sociology": "Sociology (Paper 2: Modernization & Tradition in India)", "csat": "Time and Work 2", "isOff": false, "phase": "GS-4"}, {"day": 50, "date": "Thu, 29 Oct 2026", "iso": "2026-10-29", "gs": "GS-4 (Case Studies Practice: Ethics in Administration)", "sociology": "Sociology (Paper 1: Revision — Thinkers & Theories)", "csat": "Ratio and Partnership 1", "isOff": false, "phase": "GS-4"}, {"day": 51, "date": "Fri, 30 Oct 2026", "iso": "2026-10-30", "gs": "GS-4 (Case Studies Practice: Environment & Disasters)", "sociology": "Sociology (Paper 2: Revision — Indian Society Thinkers)", "csat": "Ratio and Partnership 2", "isOff": false, "phase": "GS-4"}, {"day": 52, "date": "Sat, 31 Oct 2026", "iso": "2026-10-31", "gs": "GS-4 Full-Length PYQ Writing Test", "sociology": "Sociology (Full Syllabus Sectional PYQ Writing)", "csat": "Profit and Loss 1", "isOff": false, "phase": "GS-4"}, {"day": 53, "date": "Sun, 01 Nov 2026", "iso": "2026-11-01", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-4"}, {"day": 54, "date": "Mon, 02 Nov 2026", "iso": "2026-11-02", "gs": "GS-3 (Planning, Growth & Inclusive Growth)", "sociology": "Sociology (Paper 1: Marx & Durkheim Inter-linkages)", "csat": "Profit and Loss 2", "isOff": false, "phase": "GS-3"}, {"day": 55, "date": "Tue, 03 Nov 2026", "iso": "2026-11-03", "gs": "GS-3 (Employment Issues & Skill Development)", "sociology": "Sociology (Paper 1: Weber & Parsons Comparative Analysis)", "csat": "Time, Speed and Distance 1", "isOff": false, "phase": "GS-3"}, {"day": 56, "date": "Wed, 04 Nov 2026", "iso": "2026-11-04", "gs": "GS-3 (Government Budgeting & GST Architecture)", "sociology": "Sociology (Paper 1: Merton & Mead Conceptual PYQs)", "csat": "Time, Speed and Distance 2", "isOff": false, "phase": "GS-3"}, {"day": 57, "date": "Thu, 05 Nov 2026", "iso": "2026-11-05", "gs": "GS-3 (Industrial Policy & Logistics Policy)", "sociology": "Sociology (Paper 2: Ghurye, Srinivas & Desai Comparative PYQs)", "csat": "Simple and Compound Interest", "isOff": false, "phase": "GS-3"}, {"day": 58, "date": "Fri, 06 Nov 2026", "iso": "2026-11-06", "gs": "GS-3 (Infrastructure & PM Gati Shakti)", "sociology": "Sociology (Paper 2: Caste, Class & Tribe Intersections)", "csat": "Data Interpretation 1", "isOff": false, "phase": "GS-3"}, {"day": 59, "date": "Sat, 07 Nov 2026", "iso": "2026-11-07", "gs": "GS-3 (Investment Models: PPP, BOT, HAM)", "sociology": "Sociology (Paper 2: Agrarian Social Structure PYQs)", "csat": "Data Interpretation 2", "isOff": false, "phase": "GS-3"}, {"day": 60, "date": "Sun, 08 Nov 2026", "iso": "2026-11-08", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-3"}, {"day": 61, "date": "Mon, 09 Nov 2026", "iso": "2026-11-09", "gs": "GS-3 (Cropping Patterns & Micro-Irrigation)", "sociology": "Sociology (Paper 1: Stratification & Mobility Applied PYQs)", "csat": "Data Sufficiency 1", "isOff": false, "phase": "GS-3"}, {"day": 62, "date": "Tue, 10 Nov 2026", "iso": "2026-11-10", "gs": "GS-3 (Farm Subsidies, MSP & E-Tech for Farmers)", "sociology": "Sociology (Paper 1: Politics & Society Applied PYQs)", "csat": "Data Sufficiency 2", "isOff": false, "phase": "GS-3"}, {"day": 63, "date": "Wed, 11 Nov 2026", "iso": "2026-11-11", "gs": "GS-3 (PDS, Food Security & Buffer Stock)", "sociology": "Sociology (Paper 1: Religion & Kinship Applied PYQs)", "csat": "Data Sufficiency 3", "isOff": false, "phase": "GS-3"}, {"day": 64, "date": "Thu, 12 Nov 2026", "iso": "2026-11-12", "gs": "GS-3 (Food Processing Industry & Supply Chain)", "sociology": "Sociology (Paper 2: Social Movements Analysis)", "csat": "Permutations and Combinations 1", "isOff": false, "phase": "GS-3"}, {"day": 65, "date": "Fri, 13 Nov 2026", "iso": "2026-11-13", "gs": "GS-3 (Land Reforms in India)", "sociology": "Sociology (Paper 2: Population & Urbanization PYQs)", "csat": "Permutations and Combinations 2", "isOff": false, "phase": "GS-3"}, {"day": 66, "date": "Sat, 14 Nov 2026", "iso": "2026-11-14", "gs": "GS-3 (Science & Tech Indigenization)", "sociology": "Sociology (Paper 2: Gender & Development PYQs)", "csat": "Permutations and Combinations 3", "isOff": false, "phase": "GS-3"}, {"day": 67, "date": "Sun, 15 Nov 2026", "iso": "2026-11-15", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-3"}, {"day": 68, "date": "Mon, 16 Nov 2026", "iso": "2026-11-16", "gs": "GS-3 (IT, AI, Robotics, Space Tech)", "sociology": "Sociology (Paper 1: Work & Economy PYQs)", "csat": "Permutations and Combinations 4", "isOff": false, "phase": "GS-3"}, {"day": 69, "date": "Tue, 17 Nov 2026", "iso": "2026-11-17", "gs": "GS-3 (Biotech, Gene Editing, IPR)", "sociology": "Sociology (Paper 1: Science, Tech & Social Change PYQs)", "csat": "Probability 1", "isOff": false, "phase": "GS-3"}, {"day": 70, "date": "Wed, 18 Nov 2026", "iso": "2026-11-18", "gs": "GS-3 (Environmental Pollution & Biodiversity Act)", "sociology": "Sociology (Paper 2: Modernization & Globalization PYQs)", "csat": "Probability 2", "isOff": false, "phase": "GS-3"}, {"day": 71, "date": "Thu, 19 Nov 2026", "iso": "2026-11-19", "gs": "GS-3 (Climate Change, COP Agreements, Panchamrit)", "sociology": "Sociology (Paper 2: Secularism & Regionalism PYQs)", "csat": "Geometry 1", "isOff": false, "phase": "GS-3"}, {"day": 72, "date": "Fri, 20 Nov 2026", "iso": "2026-11-20", "gs": "GS-3 (Disaster Management Framework)", "sociology": "Sociology (Paper 2: Tribal & Rural Transformation PYQs)", "csat": "Geometry 2", "isOff": false, "phase": "GS-3"}, {"day": 73, "date": "Sat, 21 Nov 2026", "iso": "2026-11-21", "gs": "GS-3 (Development vs Extremism / LWE)", "sociology": "Sociology (Paper 1 & 2 Integrated Applied PYQs)", "csat": "Geometry 3", "isOff": false, "phase": "GS-3"}, {"day": 74, "date": "Sun, 22 Nov 2026", "iso": "2026-11-22", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-3"}, {"day": 75, "date": "Mon, 23 Nov 2026", "iso": "2026-11-23", "gs": "GS-3 (Border Security & Maritime Security)", "sociology": "Sociology (Paper 1 Mock Paper 1 Practice)", "csat": "Geometry 4", "isOff": false, "phase": "GS-3"}, {"day": 76, "date": "Tue, 24 Nov 2026", "iso": "2026-11-24", "gs": "GS-3 (Cyber Security Threats & Policy)", "sociology": "Sociology (Paper 1 Model Answer Evaluation & Gap Analysis)", "csat": "Statistics", "isOff": false, "phase": "GS-3"}, {"day": 77, "date": "Wed, 25 Nov 2026", "iso": "2026-11-25", "gs": "GS-3 (Money Laundering & Terror Linkages)", "sociology": "Sociology (Paper 2 Mock Paper 1 Practice)", "csat": "Communication Skills 1", "isOff": false, "phase": "GS-3"}, {"day": 78, "date": "Thu, 26 Nov 2026", "iso": "2026-11-26", "gs": "GS-3 (Security Forces Structure & Mandates)", "sociology": "Sociology (Paper 2 Model Answer Evaluation & Gap Analysis)", "csat": "Communication Skills 2", "isOff": false, "phase": "GS-3"}, {"day": 79, "date": "Fri, 27 Nov 2026", "iso": "2026-11-27", "gs": "GS-3 Full-Length PYQ Writing Test", "sociology": "Sociology (High-Yield Concept & Keyword Revision)", "csat": "Reading Comprehension 1", "isOff": false, "phase": "GS-3"}, {"day": 80, "date": "Sat, 28 Nov 2026", "iso": "2026-11-28", "gs": "GS-1 (Harappan, Mauryan & Cave Architecture)", "sociology": "Sociology (Paper 1: Methodological PYQs Review)", "csat": "Reading Comprehension 2", "isOff": false, "phase": "GS-1"}, {"day": 81, "date": "Sun, 29 Nov 2026", "iso": "2026-11-29", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-1"}, {"day": 82, "date": "Mon, 30 Nov 2026", "iso": "2026-11-30", "gs": "GS-1 (Temple Architecture & South Indian Bronzes)", "sociology": "Sociology (Paper 1: Thinkers High-Yield PYQs)", "csat": "Reading Comprehension 3", "isOff": false, "phase": "GS-1"}, {"day": 83, "date": "Tue, 01 Dec 2026", "iso": "2026-12-01", "gs": "GS-1 (Classical Dances, Music & Painting Schools)", "sociology": "Sociology (Paper 2: Caste & Social Structure PYQs)", "csat": "Reading Comprehension 4", "isOff": false, "phase": "GS-1"}, {"day": 84, "date": "Wed, 02 Dec 2026", "iso": "2026-12-02", "gs": "GS-1 (Literature & 6 Schools of Philosophy)", "sociology": "Sociology (Paper 2: Social Movements PYQs)", "csat": "Reading Comprehension 5", "isOff": false, "phase": "GS-1"}, {"day": 85, "date": "Thu, 03 Dec 2026", "iso": "2026-12-03", "gs": "GS-1 (Bhakti & Sufi Movements)", "sociology": "Sociology (Paper 1 & 2: Contemporary Social Issues Application)", "csat": "Reading Comprehension 6", "isOff": false, "phase": "GS-1"}, {"day": 86, "date": "Fri, 04 Dec 2026", "iso": "2026-12-04", "gs": "GS-1 (British Conquest & Early Colonial Policies)", "sociology": "Sociology (Paper 1 Sectional PYQ Test)", "csat": "Reading Comprehension 7", "isOff": false, "phase": "GS-1"}, {"day": 87, "date": "Sat, 05 Dec 2026", "iso": "2026-12-05", "gs": "GS-1 (Revolt of 1857 & Early Nationalism)", "sociology": "Sociology (Paper 2 Sectional PYQ Test)", "csat": "Reading Comprehension 8", "isOff": false, "phase": "GS-1"}, {"day": 88, "date": "Sun, 06 Dec 2026", "iso": "2026-12-06", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-1"}, {"day": 89, "date": "Mon, 07 Dec 2026", "iso": "2026-12-07", "gs": "GS-1 (Swadeshi, Non-Cooperation & Civil Disobedience)", "sociology": "Sociology (Paper 1 Full Mock PYQ Attempt)", "csat": "Reading Comprehension 9", "isOff": false, "phase": "GS-1"}, {"day": 90, "date": "Tue, 08 Dec 2026", "iso": "2026-12-08", "gs": "GS-1 (Quit India, INA, Partition & Independence)", "sociology": "Sociology (Paper 1 Mock Evaluation & Structural Refinement)", "csat": "Reading Comprehension 10 (Syllabus Complete)", "isOff": false, "phase": "GS-1"}, {"day": 91, "date": "Wed, 09 Dec 2026", "iso": "2026-12-09", "gs": "GS-1 (Post-Independence Consolidation & Reorganization)", "sociology": "Sociology (Paper 2 Full Mock PYQ Attempt)", "csat": "Sectional Mock Test 1 (Reasoning Heavy)", "isOff": false, "phase": "GS-1"}, {"day": 92, "date": "Thu, 10 Dec 2026", "iso": "2026-12-10", "gs": "GS-1 (World History: Revolutions, Decolonization, World Wars)", "sociology": "Sociology (Paper 2 Mock Evaluation & Structural Refinement)", "csat": "Sectional Mock Test 2 (Quant Heavy)", "isOff": false, "phase": "GS-1"}, {"day": 93, "date": "Fri, 11 Dec 2026", "iso": "2026-12-11", "gs": "GS-1 (Indian Society, Diversity, Gender Issues)", "sociology": "Sociology (Paper 1 Thinkers Diagram & Matrix Revision)", "csat": "Sectional Mock Test 3 (Comprehension Heavy)", "isOff": false, "phase": "GS-1"}, {"day": 94, "date": "Sat, 12 Dec 2026", "iso": "2026-12-12", "gs": "GS-1 (Population Dynamics, Poverty, Demographic Dividend)", "sociology": "Sociology (Paper 2 Thinkers & Sociological Scholars Revision)", "csat": "Formulae & Shortcut Revision", "isOff": false, "phase": "GS-1"}, {"day": 95, "date": "Sun, 13 Dec 2026", "iso": "2026-12-13", "gs": "Day Off — Rest & Revision", "sociology": "Day Off — Rest & Revision", "csat": "Day Off — Rest & Revision", "isOff": true, "phase": "GS-1"}, {"day": 96, "date": "Mon, 14 Dec 2026", "iso": "2026-12-14", "gs": "GS-1 (Urbanization Issues, Slums, Migration)", "sociology": "Sociology (High-Yield Answer Structural Polish)", "csat": "Practice Session: Speed & Accuracy Techniques", "isOff": false, "phase": "GS-1"}, {"day": 97, "date": "Tue, 15 Dec 2026", "iso": "2026-12-15", "gs": "GS-1 (Social Empowerment, Communalism, Regionalism)", "sociology": "Sociology (PYQ Quote-based Questions Practice)", "csat": "High-Yield Practice: Number System & Permutations", "isOff": false, "phase": "GS-1"}, {"day": 98, "date": "Wed, 16 Dec 2026", "iso": "2026-12-16", "gs": "GS-1 (Globalization Impact on Society & Culture)", "sociology": "Sociology (Paper 1 High-Frequency PYQ Writing)", "csat": "Full-Length CSAT Mock Test 1", "isOff": false, "phase": "GS-1"}, {"day": 99, "date": "Thu, 17 Dec 2026", "iso": "2026-12-17", "gs": "GS-1 (Geomorphology: Plate Tectonics, Earthquakes)", "sociology": "Sociology (Paper 1 High-Frequency PYQ Writing)", "csat": "Mock Test 1 Evaluation & Error Analysis", "isOff": false, "phase": "GS-1"}, {"day": 100, "date": "Fri, 18 Dec 2026", "iso": "2026-12-18", "gs": "GS-1 (Climatology: Atmosphere, Cyclones, Jet Streams)", "sociology": "Sociology (Paper 2 High-Frequency PYQ Writing)", "csat": "Full-Length CSAT Mock Test 2", "isOff": false, "phase": "GS-1"}];
+
+  const PHASE_META = {
+    'GS-2': { title:'Phase 1 — GS-2: Polity, Governance, IR &amp; Social Justice', range:'Day 1–35 · 10 Sep – 14 Oct' },
+    'GS-4': { title:'Phase 2 — GS-4: Ethics, Integrity &amp; Aptitude', range:'Day 36–53 · 15 Oct – 1 Nov' },
+    'GS-3': { title:'Phase 3 — GS-3: Economy, Agriculture, S&amp;T, Environment &amp; Security', range:'Day 54–79 · 2 Nov – 27 Nov' },
+    'GS-1': { title:'Phase 4 — GS-1: History, Art &amp; Culture, Society &amp; Geography', range:'Day 80–100 · 28 Nov – 18 Dec' }
+  };
+
+  const CA_ROTATION = [
+    'Daily Current Affairs — read &amp; note (The Hindu / Indian Express editorials + PIB releases)',
+    'Daily Current Affairs — compile a one-page note covering the day\'s key national &amp; international events',
+    'Daily Current Affairs — revise the last 7 days notes alongside today\'s reading'
+  ];
+
+  function taskDefs(entry, idx){
+    if (entry.isOff){
+      return [
+        { key:'ca', tag:'ca', tagLabel:'CA', text: CA_ROTATION[idx % CA_ROTATION.length] },
+        { key:'rest', tag:'rest', tagLabel:'REST', text:'Light revision of the week\'s notes — no new topics today' }
+      ];
+    }
+    return [
+      { key:'gs', tag:'gs', tagLabel:'GS', text: entry.gs },
+      { key:'soc', tag:'soc', tagLabel:'SOC', text: entry.sociology },
+      { key:'csat', tag:'csat', tagLabel:'CSAT', text: entry.csat },
+      { key:'pyqgs', tag:'pyq', tagLabel:'PYQ', text:'GS PYQ Practice', editable:true, placeholder:'set today\'s target (e.g. topics, count)' },
+      { key:'pyqsoc', tag:'pyq', tagLabel:'PYQ', text:'Sociology PYQ Practice', editable:true, placeholder:'set today\'s target (e.g. topics, count)' },
+      { key:'ca', tag:'ca', tagLabel:'CA', text: CA_ROTATION[idx % CA_ROTATION.length] }
+    ];
+  }
+
+  let progress = {};
+  let noteDebounceTimer = null;
+  const syncChannel = new BroadcastChannel('anish_op300_broadcast');
+
+  function mapTaskSubject(entry, key, taskObj) {
+    if (key === 'csat') return 'CSAT';
+    if (key === 'ca') return 'Current Affairs';
+    if (key === 'soc' || key === 'pyqsoc') {
+      const text = taskObj ? taskObj.text : (entry.sociology || '');
+      return text.includes('Paper 2') ? 'Sociology Paper II' : 'Sociology Paper I';
+    }
+    const phaseMap = { 'GS-1': 'GS I', 'GS-2': 'GS II', 'GS-3': 'GS III', 'GS-4': 'GS IV' };
+    return phaseMap[entry.phase] || 'GS II';
+  }
+
+  function mapTaskTopic(entry, key, taskObj, noteVal) {
+    const baseText = taskObj ? taskObj.text : (entry.gs || entry.sociology || key.toUpperCase());
+    if (noteVal && noteVal.trim()) {
+      return `${baseText} (${noteVal.trim()})`;
+    }
+    return baseText;
+  }
+
+  async function syncProgressToMainApp() {
+    let entries = [];
+    let habitsLog = {};
+    let customHabits = [];
+    let config = {};
+
+    try {
+      const stored = localStorage.getItem('op300_entries_v2');
+      if (stored) entries = JSON.parse(stored) || [];
+    } catch(e) { entries = []; }
+
+    try {
+      const h = localStorage.getItem('op300_habits_v2'); if (h) habitsLog = JSON.parse(h);
+      const c = localStorage.getItem('op300_custom_habits_v2'); if (c) customHabits = JSON.parse(c);
+      const cfg = localStorage.getItem('op300_config_v2'); if (cfg) config = JSON.parse(cfg);
+    } catch(e){}
+
+    PLAN_DATA.forEach((entry, idx) => {
+      const day = entry.day;
+      const tasks = taskDefs(entry, idx);
+      const dayProg = progress[day] || {};
+      const checks = dayProg.checks || {};
+      const notes = dayProg.notes || {};
+      const dates = dayProg.dates || {};
+
+      tasks.forEach(t => {
+        const entryId = `tracker_d${day}_${t.key}`;
+        const isChecked = !!checks[t.key];
+        const noteVal = notes[t.key] || '';
+        const existingIdx = entries.findIndex(e => e.id === entryId);
+
+        if (isChecked) {
+          const subject = mapTaskSubject(entry, t.key, t);
+          const topic = mapTaskTopic(entry, t.key, t, noteVal);
+          const dateStudied = dates[t.key] || (existingIdx >= 0 && entries[existingIdx].dateStudied ? entries[existingIdx].dateStudied : todayISO());
+
+          if (existingIdx >= 0) {
+            entries[existingIdx].subject = subject;
+            entries[existingIdx].topic = topic;
+            entries[existingIdx].dateStudied = dateStudied;
+          } else {
+            entries.push({
+              id: entryId,
+              subject: subject,
+              topic: topic,
+              dateStudied: dateStudied,
+              r0Done: false,
+              sundayDone: false,
+              monthlyDone: false,
+              biMonthlyDone: false,
+              trackerSync: true
+            });
+          }
+        } else {
+          if (existingIdx >= 0) {
+            entries.splice(existingIdx, 1);
+          }
+        }
+      });
+    });
+
+    try {
+      localStorage.setItem('op300_entries_v2', JSON.stringify(entries));
+    } catch(e){}
+
+    try {
+      syncChannel.postMessage('SYNC_UPDATE');
+    } catch(e){}
+
+    try {
+      await fetch('/api/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ENTRIES: entries,
+          HABITS_LOG: habitsLog,
+          CUSTOM_HABITS: customHabits,
+          CONFIG: config,
+          timestamp: Date.now()
+        })
+      });
+    } catch(e){}
+  }
+
+  function todayISO(){
+    const d = new Date();
+    const off = d.getTimezoneOffset();
+    const local = new Date(d.getTime() - off*60000);
+    return local.toISOString().slice(0,10);
+  }
+  const TODAY = todayISO();
+
+  function updateSyncUI(status, message) {
+    const bar = document.getElementById('syncStatus');
+    const text = document.getElementById('syncText');
+    if (!bar || !text) return;
+    bar.className = 'sync-status-bar ' + status;
+    text.textContent = message;
+  }
+
+  let lastTrackerSyncTime = null;
+
+  function loadLocalProgressFallback() {
+    try {
+      const stored = localStorage.getItem('op300_tracker_progress');
+      if (stored) {
+        progress = JSON.parse(stored);
+        return true;
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  async function fetchServerProgress() {
+    let serverOk = false;
+    try {
+      updateSyncUI('saving', 'Syncing...');
+      const res = await fetch('/api/tracker/progress');
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.success && data.progress) {
+          progress = data.progress;
+          if (data.updatedAt) lastTrackerSyncTime = data.updatedAt;
+          try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
+          updateSyncUI('saved', 'Synced');
+          serverOk = true;
+        }
+      }
+    } catch (e) {
+      console.log('Server fetch progress notice:', e);
+    } finally {
+      const loader = document.getElementById('loadingOverlay');
+      if (loader) loader.classList.add('hidden');
+    }
+
+    if (!serverOk) {
+      const loaded = loadLocalProgressFallback();
+      updateSyncUI('saved', loaded ? 'Synced (Local)' : 'Ready');
+    }
+  }
+
+  async function pollServerProgress() {
+    try {
+      const res = await fetch('/api/tracker/progress');
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data && data.success && data.updatedAt && data.updatedAt !== lastTrackerSyncTime) {
+        lastTrackerSyncTime = data.updatedAt;
+        if (data.progress) {
+          progress = data.progress;
+          renderDataPreservingFocus();
+          await syncProgressToMainApp();
+          updateSyncUI('saved', 'Synced');
+        }
+      }
+    } catch (e) {}
+  }
+
+  function renderDataPreservingFocus() {
+    const activeEl = document.activeElement;
+
+    PLAN_DATA.forEach(entry => {
+      const day = entry.day;
+      const tasks = taskDefs(entry, entry.day - 1);
+      const dayProg = progress[day] || {};
+      const checks = dayProg.checks || {};
+      const notes = dayProg.notes || {};
+
+      tasks.forEach(t => {
+        const cb = document.querySelector(`input[type="checkbox"][data-day="${day}"][data-key="${t.key}"]`);
+        if (cb && cb !== activeEl) {
+          cb.checked = !!checks[t.key];
+        }
+        const noteInput = document.querySelector(`input.note-field[data-day="${day}"][data-notekey="${t.key}"]`);
+        if (noteInput && noteInput !== activeEl) {
+          noteInput.value = notes[t.key] || '';
+        }
+      });
+    });
+
+    recalc();
+    applyFilters();
+  }
+
+  async function sendServerUpdate(payload) {
+    const { day, key, checked, note } = payload || {};
+    if (day && key) {
+      if (!progress[day]) progress[day] = { checks: {}, notes: {}, dates: {} };
+      if (!progress[day].checks) progress[day].checks = {};
+      progress[day].checks[key] = !!checked;
+      if (note !== undefined) {
+        if (!progress[day].notes) progress[day].notes = {};
+        progress[day].notes[key] = note;
+      }
+      try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
+    }
+
+    await syncProgressToMainApp();
+    updateSyncUI('saved', 'Saved');
+
+    try {
+      const res = await fetch('/api/tracker/update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.success && data.progress) {
+          progress = data.progress;
+          try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
+        }
+      }
+    } catch (e) {
+      console.log('Background server sync notice:', e);
+    }
+  }
+
+  async function sendServerReset() {
+    progress = {};
+    try { localStorage.removeItem('op300_tracker_progress'); } catch(e){}
+    await syncProgressToMainApp();
+    updateSyncUI('saved', 'Progress reset');
+
+    try {
+      await fetch('/api/tracker/reset', { method: 'POST' });
+    } catch (e) {}
+  }
+
+  function dayTotals(day){
+    const entry = PLAN_DATA[day-1];
+    const tasks = taskDefs(entry, day-1);
+    const dayProg = progress[day] || {};
+    const checks = dayProg.checks || {};
+    let done = 0;
+    tasks.forEach(t => { if (checks[t.key]) done++; });
+    return { done, total: tasks.length };
+  }
+
+  function initDOM() {
+    const container = document.getElementById('phaseContainer');
+    if (!container) return;
+    container.innerHTML = '';
+
+    let currentPhaseKey = null;
+    let phaseWrap = null;
+    let phaseListEl = null;
+    let todayAnchorSet = false;
+
+    PLAN_DATA.forEach((entry, idx) => {
+      if (entry.phase !== currentPhaseKey){
+        currentPhaseKey = entry.phase;
+        const meta = PHASE_META[currentPhaseKey];
+        phaseWrap = document.createElement('details');
+        phaseWrap.className = 'phase';
+        phaseWrap.dataset.phase = currentPhaseKey;
+        phaseWrap.open = true;
+
+        const summary = document.createElement('summary');
+        summary.innerHTML = `
+          <div class="phase-head">
+            <span class="phase-title">${meta.title}</span>
+            <span class="phase-range">${meta.range}</span>
+          </div>
+          <div class="phase-bar-wrap">
+            <div class="phase-bar-track"><div class="phase-bar-fill" data-phase-bar="${currentPhaseKey}"></div></div>
+            <span class="phase-pct" data-phase-pct="${currentPhaseKey}">0%</span>
+            <span class="chevron">&#9656;</span>
+          </div>`;
+        phaseWrap.appendChild(summary);
+
+        phaseListEl = document.createElement('div');
+        phaseListEl.className = 'phase-list';
+        phaseWrap.appendChild(phaseListEl);
+
+        container.appendChild(phaseWrap);
+      }
+
+      const card = document.createElement('div');
+      card.className = 'day-card';
+      card.dataset.day = entry.day;
+      card.dataset.date = entry.date;
+      card.dataset.iso = entry.iso;
+      card.dataset.off = entry.isOff ? '1' : '0';
+      const isToday = entry.iso === TODAY;
+      if (isToday){ card.classList.add('is-today'); card.id = 'today-anchor'; todayAnchorSet = true; }
+      if (entry.isOff) card.classList.add('is-off');
+
+      const tasks = taskDefs(entry, idx);
+      const searchBlob = [entry.date, entry.gs, entry.sociology, entry.csat, 'day '+entry.day].join(' ').toLowerCase();
+      card.dataset.search = searchBlob;
+
+      let taskHtml = '';
+      tasks.forEach(t => {
+        const dayProg = progress[entry.day] || {};
+        const checked = dayProg.checks && dayProg.checks[t.key];
+        const noteVal = (dayProg.notes && dayProg.notes[t.key]) || '';
+        const noteField = t.editable
+          ? `<input type="text" class="note-field" data-day="${entry.day}" data-notekey="${t.key}" placeholder="${t.placeholder || ''}" value="${noteVal.replace(/"/g,'&quot;')}">`
+          : '';
+        taskHtml += `
+          <li>
+            <label>
+              <input type="checkbox" data-day="${entry.day}" data-key="${t.key}" ${checked ? 'checked' : ''}>
+              <span><span class="tag ${t.tag}">${t.tagLabel}</span>${t.text}${noteField}</span>
+            </label>
+          </li>`;
+      });
+
+      card.innerHTML = `
+        <div class="day-head">
+          <span class="day-num">Day ${String(entry.day).padStart(2,'0')}</span>
+          <span class="day-date">${entry.date}</span>
+          ${isToday ? '<span class="today-tag">TODAY</span>' : ''}
+          <span class="day-mini-progress" data-mini="${entry.day}">0/${tasks.length}</span>
+        </div>
+        ${entry.isOff ? '<p class="off-note">Scheduled rest day — GS, Sociology and CSAT study pause. Keep current affairs light and consistent.</p>' : ''}
+        <ul class="task-list" data-total="${tasks.length}">${taskHtml}</ul>
+      `;
+
+      phaseListEl.appendChild(card);
+    });
+
+    if (!todayAnchorSet){
+      const upcoming = document.querySelector('.day-card');
+      if (upcoming) upcoming.id = 'today-anchor';
+    }
+
+    // Event delegation
+    container.addEventListener('change', async (e) => {
+      if (e.target.matches('input[type="checkbox"]')) {
+        const day = parseInt(e.target.dataset.day, 10);
+        const key = e.target.dataset.key;
+        const checked = e.target.checked;
+
+        if (!progress[day]) progress[day] = { checks: {}, notes: {} };
+        if (!progress[day].checks) progress[day].checks = {};
+        progress[day].checks[key] = checked;
+
+        recalc();
+        await sendServerUpdate({ day, key, checked });
+      }
+    });
+
+    container.addEventListener('input', (e) => {
+      if (e.target.matches('input.note-field')) {
+        const day = parseInt(e.target.dataset.day, 10);
+        const notekey = e.target.dataset.notekey;
+        const value = e.target.value;
+
+        if (!progress[day]) progress[day] = { checks: {}, notes: {} };
+        if (!progress[day].notes) progress[day].notes = {};
+        progress[day].notes[notekey] = value;
+
+        if (noteDebounceTimer) clearTimeout(noteDebounceTimer);
+        noteDebounceTimer = setTimeout(async () => {
+          await sendServerUpdate({ day, key: notekey, note: value });
+        }, 400);
+      }
+    });
+
+    // Filter Buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
+      });
+    });
+
+    const searchBox = document.getElementById('searchBox');
+    if (searchBox) searchBox.addEventListener('input', applyFilters);
+
+    const resetBtn = document.getElementById('resetBtn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', async () => {
+        if (confirm('Are you sure you want to reset all 100-Day progress? This will clear all server records.')) {
+          await sendServerReset();
+          document.querySelectorAll('#phaseContainer input[type="checkbox"]').forEach(cb => cb.checked = false);
+          document.querySelectorAll('#phaseContainer input.note-field').forEach(nf => nf.value = '');
+          recalc();
+        }
+      });
+    }
+
+    const syncBar = document.getElementById('syncStatus');
+    if (syncBar) {
+      syncBar.addEventListener('click', () => {
+        fetchServerProgress().then(renderData);
+      });
+    }
+  }
+
+  function applyFilters() {
+    const activeBtn = document.querySelector('.filter-btn.active');
+    const filterType = activeBtn ? activeBtn.dataset.filter : 'all';
+    const searchBox = document.getElementById('searchBox');
+    const query = (searchBox && searchBox.value ? searchBox.value : '').toLowerCase().trim();
+
+    document.querySelectorAll('#phaseContainer .day-card').forEach(card => {
+      const day = parseInt(card.dataset.day, 10);
+      const { done, total } = dayTotals(day);
+      const searchBlob = card.dataset.search || '';
+      const matchesSearch = !query || searchBlob.includes(query);
+
+      let matchesFilter = true;
+      if (filterType === 'today') {
+        matchesFilter = (card.dataset.iso === TODAY);
+      } else if (filterType === 'pending') {
+        matchesFilter = (done < total);
+      } else if (filterType === 'done') {
+        matchesFilter = (done === total && total > 0);
+      }
+
+      const show = matchesSearch && matchesFilter;
+      card.classList.toggle('is-hidden', !show);
+    });
+
+    document.querySelectorAll('#phaseContainer details.phase').forEach(details => {
+      const visibleCards = details.querySelectorAll('.day-card:not(.is-hidden)');
+      if (query || filterType !== 'all') {
+        details.open = (visibleCards.length > 0);
+      } else {
+        details.open = true;
+      }
+    });
+  }
+
+  function renderData() {
+    document.querySelectorAll('#phaseContainer .day-card').forEach(card => {
+      const day = parseInt(card.dataset.day, 10);
+      const dayProg = progress[day] || {};
+      const checks = dayProg.checks || {};
+      const notes = dayProg.notes || {};
+
+      card.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        const key = cb.dataset.key;
+        cb.checked = !!checks[key];
+      });
+
+      card.querySelectorAll('input.note-field').forEach(nf => {
+        const key = nf.dataset.notekey;
+        nf.value = notes[key] || '';
+      });
+    });
+    recalc();
+  }
+
+  function recalc() {
+    let grandDone = 0, grandTotal = 0;
+    let daysFullyDone = 0;
+    let missedPast = 0;
+    const phaseTotals = {};
+
+    document.querySelectorAll('#phaseContainer .day-card').forEach(card => {
+      const day = parseInt(card.dataset.day, 10);
+      const { done, total } = dayTotals(day);
+      grandDone += done; grandTotal += total;
+
+      const mini = card.querySelector(`[data-mini="${day}"]`);
+      if (mini) mini.textContent = `${done}/${total}`;
+
+      const complete = (done === total && total > 0);
+      card.classList.toggle('is-complete', complete);
+      if (complete) daysFullyDone++;
+
+      if (card.dataset.iso < TODAY && done === 0) missedPast++;
+
+      const phase = PLAN_DATA[day-1] ? PLAN_DATA[day-1].phase : 'GS-2';
+      if (!phaseTotals[phase]) phaseTotals[phase] = { done:0, total:0 };
+      phaseTotals[phase].done += done;
+      phaseTotals[phase].total += total;
+    });
+
+    // Phase progress bars
+    Object.keys(phaseTotals).forEach(p => {
+      const pct = phaseTotals[p].total ? Math.round(100 * phaseTotals[p].done / phaseTotals[p].total) : 0;
+      const bar = document.querySelector(`[data-phase-bar="${p}"]`);
+      const lbl = document.querySelector(`[data-phase-pct="${p}"]`);
+      if (bar) bar.style.width = pct + '%';
+      if (lbl) lbl.textContent = pct + '%';
+    });
+
+    // Calculate streak
+    let streak = 0, bestStreak = 0, running = 0;
+    PLAN_DATA.forEach(entry => {
+      const { done, total } = dayTotals(entry.day);
+      const complete = (done === total && total > 0);
+      if (complete){
+        running++;
+        if (running > bestStreak) bestStreak = running;
+      } else {
+        running = 0;
+      }
+    });
+
+    const pastOrToday = PLAN_DATA.filter(e => e.iso <= TODAY).sort((a,b)=> b.iso.localeCompare(a.iso));
+    streak = 0;
+    for (const entry of pastOrToday){
+      const { done, total } = dayTotals(entry.day);
+      if (done === total && total > 0){ streak++; } else { break; }
+    }
+
+    const overallPct = grandTotal ? Math.round(100 * grandDone / grandTotal) : 0;
+
+    // Header Ring & Chips
+    const ringEl = document.getElementById('ringEl');
+    if (ringEl) ringEl.style.setProperty('--pct', overallPct);
+    const ringPct = document.getElementById('ringPct');
+    if (ringPct) ringPct.textContent = overallPct + '%';
+    const ringTasks = document.getElementById('ringTasks');
+    if (ringTasks) ringTasks.textContent = `${grandDone} / ${grandTotal} tasks`;
+
+    const chipDayNow = document.getElementById('chipDayNow');
+    if (chipDayNow) chipDayNow.textContent = pastOrToday.length ? pastOrToday[0].day : '0';
+    const chipStreak = document.getElementById('chipStreak');
+    if (chipStreak) chipStreak.textContent = streak;
+    const chipDaysDone = document.getElementById('chipDaysDone');
+    if (chipDaysDone) chipDaysDone.textContent = daysFullyDone;
+
+    // Summary section
+    const sumOverallPct = document.getElementById('sumOverallPct');
+    if (sumOverallPct) sumOverallPct.textContent = overallPct + '%';
+    const sumDaysDone = document.getElementById('sumDaysDone');
+    if (sumDaysDone) sumDaysDone.textContent = `${daysFullyDone} / 100`;
+    const sumDaysLeft = document.getElementById('sumDaysLeft');
+    if (sumDaysLeft) sumDaysLeft.textContent = Math.max(0, 100 - daysFullyDone);
+    const sumStreak = document.getElementById('sumStreak');
+    if (sumStreak) sumStreak.textContent = streak;
+    const sumBestStreak = document.getElementById('sumBestStreak');
+    if (sumBestStreak) sumBestStreak.textContent = bestStreak;
+    const sumMissed = document.getElementById('sumMissed');
+    if (sumMissed) sumMissed.textContent = missedPast;
+
+    // Per-track breakdown
+    const trackDefs = [
+      { key:'gs', label:'GS Study' },
+      { key:'soc', label:'Sociology Study' },
+      { key:'csat', label:'CSAT Practice' },
+      { key:'pyqgs', label:'GS PYQ Practice' },
+      { key:'pyqsoc', label:'Sociology PYQ Practice' },
+      { key:'ca', label:'Current Affairs' }
+    ];
+
+    const trackTotals = {};
+    trackDefs.forEach(t => trackTotals[t.key] = { done:0, total:0 });
+
+    PLAN_DATA.forEach((entry, idx) => {
+      const tasks = taskDefs(entry, idx);
+      const dayProg = progress[entry.day] || {};
+      const checks = dayProg.checks || {};
+      tasks.forEach(t => {
+        if (trackTotals[t.key]){
+          trackTotals[t.key].total++;
+          if (checks[t.key]) trackTotals[t.key].done++;
+        }
+      });
+    });
+
+    const trackRowsContainer = document.getElementById('trackRows');
+    if (trackRowsContainer){
+      trackRowsContainer.innerHTML = '';
+      trackDefs.forEach(t => {
+        const data = trackTotals[t.key];
+        const pct = data.total ? Math.round(100 * data.done / data.total) : 0;
+        const row = document.createElement('div');
+        row.className = 'track-row';
+        row.innerHTML = `
+          <div class="name">${t.label}</div>
+          <div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div>
+          <div class="pct">${pct}%</div>
+        `;
+        trackRowsContainer.appendChild(row);
+      });
+    }
+
+    const footerNote = document.getElementById('footerNote');
+    if (footerNote){
+      if (grandDone === 0){
+        footerNote.textContent = 'Check off your first task to see a personalised note here.';
+      } else if (overallPct === 100){
+        footerNote.textContent = '🏆 Outstanding execution! You have completed all 100 days of Sankalp Prelims Ledger.';
+      } else {
+        footerNote.textContent = `Keep pushing forward! ${grandDone} of ${grandTotal} tasks completed (${overallPct}% overall). Current daily streak: ${streak} days.`;
+      }
+    }
+  }
+
+  async function start() {
+    initDOM();
+    await fetchServerProgress();
+    renderData();
+    applyFilters();
+    await syncProgressToMainApp();
+    setInterval(pollServerProgress, 1000);
+  }
+
+  return { start };
+})();
+
+window.addEventListener('DOMContentLoaded', SankalpTracker.start);
+</script>
+</body>
+</html>
