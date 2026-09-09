@@ -1,6 +1,6 @@
 {
-  "cleanUrls": true,
   "rewrites": [
+    { "source": "/tracker", "destination": "/tracker.html" },
     { "source": "/api/sync", "destination": "/api/sync.js" },
     { "source": "/api/tracker/(.*)", "destination": "/api/tracker.js" }
   ]
