@@ -5,6 +5,7 @@
     { "src": "tracker.html", "use": "@vercel/static" },
     { "src": "manifest.json", "use": "@vercel/static" },
     { "src": "sw.js", "use": "@vercel/static" },
+    { "src": "favicon.ico", "use": "@vercel/static" },
     { "src": "favicon.png", "use": "@vercel/static" },
     { "src": "apple-touch-icon.png", "use": "@vercel/static" },
     { "src": "favicon.svg", "use": "@vercel/static" },
