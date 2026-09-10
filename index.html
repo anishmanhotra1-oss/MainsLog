@@ -2982,6 +2982,13 @@ function getTodayTrackerTasks(planEntry, idx) {
   ];
 }
 
+function parseTime(t) {
+  if (!t) return 0;
+  if (typeof t === 'number') return t;
+  const parsed = new Date(t).getTime();
+  return isNaN(parsed) ? 0 : parsed;
+}
+
 function mergeTrackerProgress(localProg, serverProg) {
   let merged = {};
   if (localProg && typeof localProg === 'object') {
@@ -3008,8 +3015,8 @@ function mergeTrackerProgress(localProg, serverProg) {
     const sTimestamps = sDay.timestamps || {};
 
     for (const k in sChecks) {
-      const localTime = mDay.timestamps[k] || 0;
-      const serverTime = typeof sTimestamps[k] === 'number' ? sTimestamps[k] : (sTimestamps[k] ? new Date(sTimestamps[k]).getTime() : 0);
+      const localTime = parseTime(mDay.timestamps[k]);
+      const serverTime = parseTime(sTimestamps[k]);
 
       if (serverTime >= localTime) {
         mDay.checks[k] = !!sChecks[k];
@@ -3374,8 +3381,10 @@ function isTrackerEntryChecked(id) {
   if (parts.length < 3) return true;
   const day = parseInt(parts[1].replace('d', ''), 10);
   const key = parts.slice(2).join('_');
+  if (!TRACKER_PROGRESS || Object.keys(TRACKER_PROGRESS).length === 0) return true;
   const dayProg = TRACKER_PROGRESS[day];
-  return !!(dayProg && dayProg.checks && dayProg.checks[key]);
+  if (!dayProg || !dayProg.checks) return true;
+  return !!dayProg.checks[key];
 }
 
 function mergeSingleEntry(localItem, serverItem) {
@@ -3389,8 +3398,8 @@ function mergeSingleEntry(localItem, serverItem) {
     const doneKey = m === 'biMonthly' ? 'biMonthlyDone' : `${m}Done`;
     const timeKey = `${m}UpdatedAt`;
 
-    const localTime = localItem[timeKey] || localItem.updatedAt || 0;
-    const serverTime = serverItem[timeKey] || serverItem.updatedAt || 0;
+    const localTime = parseTime(localItem[timeKey] || localItem.updatedAt);
+    const serverTime = parseTime(serverItem[timeKey] || serverItem.updatedAt);
 
     if (serverTime >= localTime) {
       res[doneKey] = serverItem[doneKey] !== undefined ? serverItem[doneKey] : localItem[doneKey];
@@ -3401,7 +3410,7 @@ function mergeSingleEntry(localItem, serverItem) {
     }
   });
 
-  res.updatedAt = Math.max(localItem.updatedAt || 0, serverItem.updatedAt || 0);
+  res.updatedAt = Math.max(parseTime(localItem.updatedAt), parseTime(serverItem.updatedAt));
   return res;
 }
 

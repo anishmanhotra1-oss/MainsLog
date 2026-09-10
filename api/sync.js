@@ -36,6 +36,13 @@ async function saveCloudSyncData(data) {
   } catch (e) {}
 }
 
+function parseTime(t) {
+  if (!t) return 0;
+  if (typeof t === 'number') return t;
+  const parsed = new Date(t).getTime();
+  return isNaN(parsed) ? 0 : parsed;
+}
+
 function mergeTrackerProgress(localProg, serverProg) {
   let merged = {};
   if (localProg && typeof localProg === 'object') {
@@ -62,8 +69,8 @@ function mergeTrackerProgress(localProg, serverProg) {
     const sTimestamps = sDay.timestamps || {};
 
     for (const k in sChecks) {
-      const localTime = mDay.timestamps[k] || 0;
-      const serverTime = typeof sTimestamps[k] === 'number' ? sTimestamps[k] : (sTimestamps[k] ? new Date(sTimestamps[k]).getTime() : 0);
+      const localTime = parseTime(mDay.timestamps[k]);
+      const serverTime = parseTime(sTimestamps[k]);
 
       if (serverTime >= localTime) {
         mDay.checks[k] = !!sChecks[k];
@@ -96,8 +103,8 @@ function mergeSingleEntry(oldItem, incomingItem) {
     const doneKey = m === 'biMonthly' ? 'biMonthlyDone' : `${m}Done`;
     const timeKey = `${m}UpdatedAt`;
 
-    const oldTime = oldItem[timeKey] || oldItem.updatedAt || 0;
-    const incTime = incomingItem[timeKey] || incomingItem.updatedAt || 0;
+    const oldTime = parseTime(oldItem[timeKey] || oldItem.updatedAt);
+    const incTime = parseTime(incomingItem[timeKey] || incomingItem.updatedAt);
 
     if (incTime >= oldTime) {
       res[doneKey] = incomingItem[doneKey] !== undefined ? incomingItem[doneKey] : oldItem[doneKey];
@@ -108,7 +115,7 @@ function mergeSingleEntry(oldItem, incomingItem) {
     }
   });
 
-  res.updatedAt = Math.max(oldItem.updatedAt || 0, incomingItem.updatedAt || 0, Date.now());
+  res.updatedAt = Math.max(parseTime(oldItem.updatedAt), parseTime(incomingItem.updatedAt), Date.now());
   return res;
 }
 

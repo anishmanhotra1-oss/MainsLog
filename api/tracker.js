@@ -1,6 +1,13 @@
 const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a0898aa8da600d';
 let trackerProgress = {};
 
+function parseTime(t) {
+  if (!t) return 0;
+  if (typeof t === 'number') return t;
+  const parsed = new Date(t).getTime();
+  return isNaN(parsed) ? 0 : parsed;
+}
+
 function mergeTrackerProgress(localProg, serverProg) {
   let merged = {};
   if (localProg && typeof localProg === 'object') {
@@ -27,8 +34,8 @@ function mergeTrackerProgress(localProg, serverProg) {
     const sTimestamps = sDay.timestamps || {};
 
     for (const k in sChecks) {
-      const localTime = mDay.timestamps[k] || 0;
-      const serverTime = typeof sTimestamps[k] === 'number' ? sTimestamps[k] : (sTimestamps[k] ? new Date(sTimestamps[k]).getTime() : 0);
+      const localTime = parseTime(mDay.timestamps[k]);
+      const serverTime = parseTime(sTimestamps[k]);
 
       if (serverTime >= localTime) {
         mDay.checks[k] = !!sChecks[k];

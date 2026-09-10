@@ -102,6 +102,13 @@ const server = http.createServer(async (req, res) => {
 
   let reqPath = req.url.split('?')[0];
 
+function parseTime(t) {
+  if (!t) return 0;
+  if (typeof t === 'number') return t;
+  const parsed = new Date(t).getTime();
+  return isNaN(parsed) ? 0 : parsed;
+}
+
 function mergeSingleEntry(oldItem, incomingItem) {
   if (!oldItem) return incomingItem;
   if (!incomingItem) return oldItem;
@@ -113,8 +120,8 @@ function mergeSingleEntry(oldItem, incomingItem) {
     const doneKey = m === 'biMonthly' ? 'biMonthlyDone' : `${m}Done`;
     const timeKey = `${m}UpdatedAt`;
 
-    const oldTime = oldItem[timeKey] || oldItem.updatedAt || 0;
-    const incTime = incomingItem[timeKey] || incomingItem.updatedAt || 0;
+    const oldTime = parseTime(oldItem[timeKey] || oldItem.updatedAt);
+    const incTime = parseTime(incomingItem[timeKey] || incomingItem.updatedAt);
 
     if (incTime >= oldTime) {
       res[doneKey] = incomingItem[doneKey] !== undefined ? incomingItem[doneKey] : oldItem[doneKey];
@@ -125,7 +132,7 @@ function mergeSingleEntry(oldItem, incomingItem) {
     }
   });
 
-  res.updatedAt = Math.max(oldItem.updatedAt || 0, incomingItem.updatedAt || 0, Date.now());
+  res.updatedAt = Math.max(parseTime(oldItem.updatedAt), parseTime(incomingItem.updatedAt), Date.now());
   return res;
 }
 
@@ -155,8 +162,8 @@ function mergeTrackerProgress(localProg, serverProg) {
     const sTimestamps = sDay.timestamps || {};
 
     for (const k in sChecks) {
-      const localTime = mDay.timestamps[k] || 0;
-      const serverTime = typeof sTimestamps[k] === 'number' ? sTimestamps[k] : (sTimestamps[k] ? new Date(sTimestamps[k]).getTime() : 0);
+      const localTime = parseTime(mDay.timestamps[k]);
+      const serverTime = parseTime(sTimestamps[k]);
 
       if (serverTime >= localTime) {
         mDay.checks[k] = !!sChecks[k];
@@ -270,8 +277,9 @@ function mergeTrackerProgress(localProg, serverProg) {
           if (!data.progress[day].dates) data.progress[day].dates = {};
 
           if (typeof checked === 'boolean') {
+            const nowTime = body.timestamp || Date.now();
             data.progress[day].checks[key] = checked;
-            data.progress[day].timestamps[key] = new Date().toISOString();
+            data.progress[day].timestamps[key] = nowTime;
             if (checked && !data.progress[day].dates[key]) {
               data.progress[day].dates[key] = new Date().toISOString().slice(0, 10);
             } else if (!checked) {
