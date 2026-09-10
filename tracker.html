@@ -750,8 +750,18 @@ const SankalpTracker = (function() {
     return phaseMap[entry.phase] || 'GS II';
   }
 
+  function isValidEntry(e) {
+    if (!e || typeof e !== 'object' || !e.id) return false;
+    if (!e.topic || e.topic === 'undefined' || e.topic.includes('undefined')) return false;
+    if (!e.subject || e.subject === 'undefined') return false;
+    return true;
+  }
+
   function mapTaskTopic(entry, key, taskObj, noteVal) {
-    const baseText = taskObj ? taskObj.text : (entry.gs || entry.sociology || key.toUpperCase());
+    let baseText = taskObj && taskObj.text ? taskObj.text : (entry ? (entry.gs || entry.sociology || entry.csat) : '');
+    if (!baseText || baseText === 'undefined') {
+      baseText = `Day ${entry ? entry.day : ''} Target (${key ? key.toUpperCase() : ''})`;
+    }
     if (noteVal && noteVal.trim()) {
       return `${baseText} (${noteVal.trim()})`;
     }
@@ -818,6 +828,8 @@ const SankalpTracker = (function() {
         }
       });
     });
+
+    entries = entries.filter(isValidEntry);
 
     try {
       localStorage.setItem('op300_entries_v2', JSON.stringify(entries));

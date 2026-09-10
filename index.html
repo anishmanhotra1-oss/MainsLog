@@ -3049,6 +3049,46 @@ async function fetchTrackerProgress() {
   }
 }
 
+function isValidEntry(e) {
+  if (!e || typeof e !== 'object' || !e.id) return false;
+  if (!e.topic || e.topic === 'undefined' || e.topic.includes('undefined')) return false;
+  if (!e.subject || e.subject === 'undefined') return false;
+  return true;
+}
+
+function getTaskDetails(day, key, taskObj) {
+  const planEntry = TRACKER_PLAN_DATA.find(p => p.day === day);
+  let subject = 'GS II';
+  let topic = (taskObj && taskObj.text) ? taskObj.text : '';
+
+  const phaseMap = { 'GS-1': 'GS I', 'GS-2': 'GS II', 'GS-3': 'GS III', 'GS-4': 'GS IV' };
+
+  if (key === 'csat') {
+    subject = 'CSAT';
+    if (!topic && planEntry) topic = planEntry.csat;
+  } else if (key === 'soc' || key === 'pyqsoc') {
+    const text = topic || (planEntry ? planEntry.sociology : '');
+    subject = text.includes('Paper 2') ? 'Sociology Paper II' : 'Sociology Paper I';
+    if (!topic && planEntry) topic = planEntry.sociology;
+    if (key === 'pyqsoc' && (!topic || topic === 'undefined')) topic = 'Sociology PYQ Practice';
+  } else if (key === 'ca') {
+    subject = 'Current Affairs';
+    if (!topic || topic === 'undefined') topic = 'Daily Current Affairs';
+  } else if (key === 'pyqgs') {
+    subject = planEntry ? (phaseMap[planEntry.phase] || 'GS II') : 'GS II';
+    if (!topic || topic === 'undefined') topic = 'GS PYQ Practice';
+  } else {
+    subject = planEntry ? (phaseMap[planEntry.phase] || 'GS II') : 'GS II';
+    if (!topic && planEntry) topic = planEntry.gs;
+  }
+
+  if (!topic || topic === 'undefined' || topic.includes('undefined')) {
+    topic = `Day ${day} Target (${key ? key.toUpperCase() : ''})`;
+  }
+
+  return { subject, topic };
+}
+
 async function updateTrackerTaskState(day, key, checked, taskObj) {
   if (!TRACKER_PROGRESS[day]) TRACKER_PROGRESS[day] = { checks: {}, notes: {}, dates: {} };
   if (!TRACKER_PROGRESS[day].checks) TRACKER_PROGRESS[day].checks = {};
@@ -3076,9 +3116,8 @@ async function updateTrackerTaskState(day, key, checked, taskObj) {
   const entryId = `tracker_d${day}_${key}`;
   const existingIdx = ENTRIES.findIndex(e => e.id === entryId);
 
-  if (checked && taskObj) {
-    const subject = taskObj.label === 'CSAT' ? 'CSAT' : (taskObj.label === 'Current Affairs' ? 'Current Affairs' : (taskObj.label.includes('Soc') ? 'Sociology Paper I' : 'GS II'));
-    const topic = taskObj.text;
+  if (checked) {
+    const { subject, topic } = getTaskDetails(day, key, taskObj);
     if (existingIdx >= 0) {
       ENTRIES[existingIdx].subject = subject;
       ENTRIES[existingIdx].topic = topic;
@@ -3099,6 +3138,7 @@ async function updateTrackerTaskState(day, key, checked, taskObj) {
     }
   }
 
+  ENTRIES = ENTRIES.filter(isValidEntry);
   pushToCentralServer();
   renderAll();
 }
@@ -3293,7 +3333,7 @@ window.addEventListener('storage', () => {
 });
 
 async function pushToCentralServer() {
-  ENTRIES = (ENTRIES || []).filter(item => isTrackerEntryChecked(item.id));
+  ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && isTrackerEntryChecked(item.id));
   saveData();
   try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
 
@@ -3324,12 +3364,12 @@ function isTrackerEntryChecked(id) {
 function mergeEntries(localEntries, serverEntries) {
   const map = new Map();
   (localEntries || []).forEach(e => {
-    if (e && e.id && isTrackerEntryChecked(e.id)) {
+    if (isValidEntry(e) && isTrackerEntryChecked(e.id)) {
       map.set(e.id, e);
     }
   });
   (serverEntries || []).forEach(e => {
-    if (e && e.id && isTrackerEntryChecked(e.id)) {
+    if (isValidEntry(e) && isTrackerEntryChecked(e.id)) {
       if (!map.has(e.id)) {
         map.set(e.id, e);
       } else {
@@ -3593,7 +3633,7 @@ function loadData() {
   try {
     const tp = localStorage.getItem('op300_tracker_progress'); if (tp) TRACKER_PROGRESS = JSON.parse(tp);
     const e = localStorage.getItem(STORAGE_KEYS.ENTRIES); if (e) ENTRIES = JSON.parse(e);
-    ENTRIES = (ENTRIES || []).filter(item => isTrackerEntryChecked(item.id));
+    ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && isTrackerEntryChecked(item.id));
     const h = localStorage.getItem(STORAGE_KEYS.HABITS); if (h) HABITS_LOG = JSON.parse(h);
     const c = localStorage.getItem(STORAGE_KEYS.CUSTOM_HABITS); if (c) CUSTOM_HABITS = JSON.parse(c);
     const cfg = localStorage.getItem(STORAGE_KEYS.CONFIG); if (cfg) CONFIG = JSON.parse(cfg);
