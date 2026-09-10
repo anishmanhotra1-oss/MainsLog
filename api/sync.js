@@ -1,6 +1,6 @@
 const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a0898aa8da600d';
 
-let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, timestamp: 0 };
+let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, timestamp: 0 };
 
 async function fetchCloudSyncData() {
   try {
@@ -14,6 +14,7 @@ async function fetchCloudSyncData() {
           HABITS_LOG: json.data.HABITS_LOG || memorySyncData.HABITS_LOG,
           CUSTOM_HABITS: json.data.CUSTOM_HABITS || memorySyncData.CUSTOM_HABITS,
           CONFIG: json.data.CONFIG || memorySyncData.CONFIG,
+          SCORE_REGISTER: json.data.SCORE_REGISTER || memorySyncData.SCORE_REGISTER,
           timestamp: json.data.timestamp || memorySyncData.timestamp
         };
       }

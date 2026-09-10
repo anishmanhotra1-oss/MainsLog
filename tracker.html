@@ -846,6 +846,19 @@ const SankalpTracker = (function() {
       syncChannel.postMessage('SYNC_UPDATE');
     } catch(e){}
 
+    let scoreRegister = { gs: {}, csat: {} };
+    try {
+      const keys = ['gs_Polity','gs_Economics','gs_AMAC','gs_Modern_History','gs_Environment','gs_S_T','gs_Geography','gs_IR','gs_CA','gs_FLT','csat_FLT'];
+      keys.forEach(k => {
+        const raw = localStorage.getItem('mainslog_score_' + k);
+        if (raw) {
+          const arr = JSON.parse(raw);
+          if (k.startsWith('gs_')) scoreRegister.gs[k.replace('gs_', '')] = arr;
+          if (k.startsWith('csat_')) scoreRegister.csat[k.replace('csat_', '')] = arr;
+        }
+      });
+    } catch(e){}
+
     try {
       await fetch('/api/sync', {
         method: 'POST',
@@ -856,6 +869,7 @@ const SankalpTracker = (function() {
           HABITS_LOG: habitsLog,
           CUSTOM_HABITS: customHabits,
           CONFIG: config,
+          SCORE_REGISTER: scoreRegister,
           timestamp: Date.now()
         })
       });

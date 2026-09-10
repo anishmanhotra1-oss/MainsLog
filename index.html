@@ -5203,6 +5203,24 @@ window.ScoreRegisterModule = (function(){
     return section === 'gs' ? ('gs_' + subjectKey) : ('csat_' + subjectKey);
   }
 
+  function syncLoadFromLocalStorage() {
+    GS_SUBJECTS.forEach(function(s) {
+      var k = storageKey('gs', s.key);
+      try {
+        var raw = localStorage.getItem('mainslog_score_' + k);
+        if (!state.gs) state.gs = {};
+        state.gs[s.key] = raw ? sortEntries(JSON.parse(raw)) : (state.gs[s.key] || []);
+      } catch(e) { if (!state.gs) state.gs = {}; if (!state.gs[s.key]) state.gs[s.key] = []; }
+    });
+    try {
+      var rawCsat = localStorage.getItem('mainslog_score_' + storageKey('csat', 'FLT'));
+      if (!state.csat) state.csat = {};
+      state.csat['FLT'] = rawCsat ? sortEntries(JSON.parse(rawCsat)) : (state.csat['FLT'] || []);
+    } catch(e) { if (!state.csat) state.csat = {}; if (!state.csat['FLT']) state.csat['FLT'] = []; }
+  }
+
+  syncLoadFromLocalStorage();
+
   function loadSection(key){
     var localStorageKey = 'mainslog_score_' + key;
     if(window.storage && typeof window.storage.get === 'function'){
@@ -5688,8 +5706,21 @@ window.ScoreRegisterModule = (function(){
       return Promise.all(keys.map(function(k){ return loadSection(k.storageKey); }));
     }).then(function(results){
       keys.forEach(function(k, i){
-        if(k.section === 'gs') state.gs[k.key] = sortEntries(results[i]);
-        else state.csat[k.key] = sortEntries(results[i]);
+        var loaded = sortEntries(results[i] || []);
+        var existing = (k.section === 'gs') ? (state.gs[k.key] || []) : (state.csat[k.key] || []);
+        var map = new Map();
+        existing.forEach(function(e){ if (e && e.id && !deletedScoreIds.has(e.id)) map.set(e.id, e); });
+        loaded.forEach(function(e){ if (e && e.id && !deletedScoreIds.has(e.id)) map.set(e.id, e); });
+        var merged = Array.from(map.values());
+        sortEntries(merged);
+
+        if(k.section === 'gs') {
+          if (!state.gs) state.gs = {};
+          state.gs[k.key] = merged;
+        } else {
+          if (!state.csat) state.csat = {};
+          state.csat[k.key] = merged;
+        }
       });
       isInitialized = true;
       renderEverything();
