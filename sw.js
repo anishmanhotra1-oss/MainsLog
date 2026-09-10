@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mainslog-pwa-v4';
+const CACHE_NAME = 'mainslog-pwa-v5';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -38,6 +38,11 @@ self.addEventListener('activate', (event) => {
 
 // Network-first strategy for HTML pages so updates show instantly
 self.addEventListener('fetch', (event) => {
+  // Never intercept or cache API requests
+  if (event.request.url.includes('/api/')) {
+    return;
+  }
+
   const isHtml = event.request.mode === 'navigate' || 
                  (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) ||
                  event.request.url.endsWith('.html');

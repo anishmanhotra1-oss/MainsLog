@@ -858,6 +858,47 @@ const SankalpTracker = (function() {
     text.textContent = message;
   }
 
+  function mergeTrackerProgress(localProg, serverProg) {
+    let merged = {};
+    if (localProg && typeof localProg === 'object') {
+      try { merged = JSON.parse(JSON.stringify(localProg)); } catch(e){ merged = {}; }
+    }
+    if (!serverProg || typeof serverProg !== 'object') return merged;
+
+    for (const day in serverProg) {
+      if (!merged[day]) {
+        merged[day] = JSON.parse(JSON.stringify(serverProg[day]));
+        continue;
+      }
+      const sDay = serverProg[day];
+      if (sDay.checks) {
+        if (!merged[day].checks) merged[day].checks = {};
+        for (const k in sDay.checks) {
+          if (sDay.checks[k]) {
+            merged[day].checks[k] = true;
+          }
+        }
+      }
+      if (sDay.notes) {
+        if (!merged[day].notes) merged[day].notes = {};
+        for (const k in sDay.notes) {
+          if (sDay.notes[k] && !merged[day].notes[k]) {
+            merged[day].notes[k] = sDay.notes[k];
+          }
+        }
+      }
+      if (sDay.dates) {
+        if (!merged[day].dates) merged[day].dates = {};
+        for (const k in sDay.dates) {
+          if (sDay.dates[k] && !merged[day].dates[k]) {
+            merged[day].dates[k] = sDay.dates[k];
+          }
+        }
+      }
+    }
+    return merged;
+  }
+
   let lastTrackerSyncTime = null;
 
   function loadLocalProgressFallback() {
@@ -871,19 +912,31 @@ const SankalpTracker = (function() {
     return false;
   }
 
+  syncChannel.onmessage = (event) => {
+    if (event.data === 'SYNC_UPDATE') {
+      loadLocalProgressFallback();
+      renderDataPreservingFocus();
+    }
+  };
+
+  window.addEventListener('storage', () => {
+    loadLocalProgressFallback();
+    renderDataPreservingFocus();
+  });
+
   async function fetchServerProgress() {
-    let serverOk = false;
+    loadLocalProgressFallback();
     try {
       updateSyncUI('saving', 'Syncing...');
       const res = await fetch('/api/tracker/progress');
       if (res.ok) {
         const data = await res.json();
         if (data && data.success && data.progress) {
-          progress = data.progress;
+          progress = mergeTrackerProgress(progress, data.progress);
           if (data.updatedAt) lastTrackerSyncTime = data.updatedAt;
           try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
+          renderDataPreservingFocus();
           updateSyncUI('saved', 'Synced');
-          serverOk = true;
         }
       }
     } catch (e) {
@@ -892,11 +945,7 @@ const SankalpTracker = (function() {
       const loader = document.getElementById('loadingOverlay');
       if (loader) loader.classList.add('hidden');
     }
-
-    if (!serverOk) {
-      const loaded = loadLocalProgressFallback();
-      updateSyncUI('saved', loaded ? 'Synced (Local)' : 'Ready');
-    }
+    updateSyncUI('saved', 'Synced');
   }
 
   async function pollServerProgress() {
@@ -907,7 +956,8 @@ const SankalpTracker = (function() {
       if (data && data.success && data.updatedAt && data.updatedAt !== lastTrackerSyncTime) {
         lastTrackerSyncTime = data.updatedAt;
         if (data.progress) {
-          progress = data.progress;
+          progress = mergeTrackerProgress(progress, data.progress);
+          try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
           renderDataPreservingFocus();
           await syncProgressToMainApp();
           updateSyncUI('saved', 'Synced');

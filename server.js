@@ -128,30 +128,37 @@ const server = http.createServer(async (req, res) => {
     if (reqPath === '/api/tracker/update' && req.method === 'POST') {
       try {
         const body = await parseJsonBody(req);
-        const { day, key, checked, note } = body;
-        if (!day || !key) {
-          return sendJsonResponse(res, 400, { success: false, error: 'Missing day or key' });
-        }
+        const { day, key, checked, note, progress } = body;
         const data = readProgressData();
-        if (!data.progress[day]) {
-          data.progress[day] = { checks: {}, notes: {}, timestamps: {} };
-        }
-        if (!data.progress[day].checks) data.progress[day].checks = {};
-        if (!data.progress[day].notes) data.progress[day].notes = {};
-        if (!data.progress[day].timestamps) data.progress[day].timestamps = {};
-        if (!data.progress[day].dates) data.progress[day].dates = {};
-
-        if (typeof checked === 'boolean') {
-          data.progress[day].checks[key] = checked;
-          data.progress[day].timestamps[key] = new Date().toISOString();
-          if (checked && !data.progress[day].dates[key]) {
-            data.progress[day].dates[key] = new Date().toISOString().slice(0, 10);
-          } else if (!checked) {
-            delete data.progress[day].dates[key];
+        if (progress && typeof progress === 'object') {
+          for (const d in progress) {
+            if (!data.progress[d]) data.progress[d] = { checks: {}, notes: {}, dates: {}, timestamps: {} };
+            if (progress[d].checks) data.progress[d].checks = { ...data.progress[d].checks, ...progress[d].checks };
+            if (progress[d].notes) data.progress[d].notes = { ...data.progress[d].notes, ...progress[d].notes };
+            if (progress[d].dates) data.progress[d].dates = { ...data.progress[d].dates, ...progress[d].dates };
           }
         }
-        if (typeof note === 'string') {
-          data.progress[day].notes[key] = note;
+        if (day && key) {
+          if (!data.progress[day]) {
+            data.progress[day] = { checks: {}, notes: {}, timestamps: {}, dates: {} };
+          }
+          if (!data.progress[day].checks) data.progress[day].checks = {};
+          if (!data.progress[day].notes) data.progress[day].notes = {};
+          if (!data.progress[day].timestamps) data.progress[day].timestamps = {};
+          if (!data.progress[day].dates) data.progress[day].dates = {};
+
+          if (typeof checked === 'boolean') {
+            data.progress[day].checks[key] = checked;
+            data.progress[day].timestamps[key] = new Date().toISOString();
+            if (checked && !data.progress[day].dates[key]) {
+              data.progress[day].dates[key] = new Date().toISOString().slice(0, 10);
+            } else if (!checked) {
+              delete data.progress[day].dates[key];
+            }
+          }
+          if (typeof note === 'string') {
+            data.progress[day].notes[key] = note;
+          }
         }
 
         writeProgressData(data);

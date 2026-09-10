@@ -2982,23 +2982,70 @@ function getTodayTrackerTasks(planEntry, idx) {
   ];
 }
 
+function mergeTrackerProgress(localProg, serverProg) {
+  let merged = {};
+  if (localProg && typeof localProg === 'object') {
+    try { merged = JSON.parse(JSON.stringify(localProg)); } catch(e){ merged = {}; }
+  }
+  if (!serverProg || typeof serverProg !== 'object') return merged;
+
+  for (const day in serverProg) {
+    if (!merged[day]) {
+      merged[day] = JSON.parse(JSON.stringify(serverProg[day]));
+      continue;
+    }
+    const sDay = serverProg[day];
+    if (sDay.checks) {
+      if (!merged[day].checks) merged[day].checks = {};
+      for (const k in sDay.checks) {
+        if (sDay.checks[k]) {
+          merged[day].checks[k] = true;
+        }
+      }
+    }
+    if (sDay.notes) {
+      if (!merged[day].notes) merged[day].notes = {};
+      for (const k in sDay.notes) {
+        if (sDay.notes[k] && !merged[day].notes[k]) {
+          merged[day].notes[k] = sDay.notes[k];
+        }
+      }
+    }
+    if (sDay.dates) {
+      if (!merged[day].dates) merged[day].dates = {};
+      for (const k in sDay.dates) {
+        if (sDay.dates[k] && !merged[day].dates[k]) {
+          merged[day].dates[k] = sDay.dates[k];
+        }
+      }
+    }
+  }
+  return merged;
+}
+
 async function fetchTrackerProgress() {
+  let localProg = {};
+  try {
+    const stored = localStorage.getItem('op300_tracker_progress');
+    if (stored) localProg = JSON.parse(stored);
+  } catch(err){}
+
   try {
     const res = await fetch('/api/tracker/progress');
     if (res.ok) {
       const data = await res.json();
-      if (data && data.progress) {
-        TRACKER_PROGRESS = data.progress;
+      if (data && data.success && data.progress) {
+        const merged = mergeTrackerProgress(localProg, data.progress);
+        TRACKER_PROGRESS = merged;
         try { localStorage.setItem('op300_tracker_progress', JSON.stringify(TRACKER_PROGRESS)); } catch(e){}
         renderHomeTrackerTargets();
         renderHeaderStats();
       }
     }
   } catch(e) {
-    try {
-      const stored = localStorage.getItem('op300_tracker_progress');
-      if (stored) TRACKER_PROGRESS = JSON.parse(stored);
-    } catch(err){}
+    TRACKER_PROGRESS = localProg;
+    renderHomeTrackerTargets();
+    renderHeaderStats();
   }
 }
 
@@ -3016,6 +3063,7 @@ async function updateTrackerTaskState(day, key, checked, taskObj) {
   }
 
   try { localStorage.setItem('op300_tracker_progress', JSON.stringify(TRACKER_PROGRESS)); } catch(e){}
+  try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
 
   try {
     await fetch('/api/tracker/update', {
@@ -3232,12 +3280,16 @@ syncChannel.onmessage = (event) => {
   if (event.data === 'SYNC_UPDATE') {
     loadData();
     renderAll();
+    renderHomeTrackerTargets();
+    renderHeaderStats();
   }
 };
 
 window.addEventListener('storage', () => {
   loadData();
   renderAll();
+  renderHomeTrackerTargets();
+  renderHeaderStats();
 });
 
 async function pushToCentralServer() {
@@ -3477,6 +3529,7 @@ function loadData() {
     const h = localStorage.getItem(STORAGE_KEYS.HABITS); if (h) HABITS_LOG = JSON.parse(h);
     const c = localStorage.getItem(STORAGE_KEYS.CUSTOM_HABITS); if (c) CUSTOM_HABITS = JSON.parse(c);
     const cfg = localStorage.getItem(STORAGE_KEYS.CONFIG); if (cfg) CONFIG = JSON.parse(cfg);
+    const tp = localStorage.getItem('op300_tracker_progress'); if (tp) TRACKER_PROGRESS = JSON.parse(tp);
   } catch(err) { console.error(err); }
 }
 

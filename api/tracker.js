@@ -16,7 +16,10 @@ module.exports = (req, res) => {
 
   if (url.includes('/update')) {
     const body = req.body || {};
-    const { day, key, checked, note } = body;
+    const { day, key, checked, note, progress } = body;
+    if (progress && typeof progress === 'object') {
+      trackerProgress = { ...trackerProgress, ...progress };
+    }
     if (day && key) {
       if (!trackerProgress[day]) trackerProgress[day] = { checks: {}, notes: {}, dates: {} };
       if (!trackerProgress[day].checks) trackerProgress[day].checks = {};
