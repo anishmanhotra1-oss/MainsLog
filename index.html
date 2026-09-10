@@ -2298,6 +2298,314 @@
       padding: 10px 6px;
     }
   }
+  /* ---------- MARKS TRACKER (SCORE REGISTER) STYLES ---------- */
+  .score-register-root .masthead {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+  }
+  .score-register-root .masthead h1 {
+    font-family: var(--font-heading), 'Newsreader', serif;
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin: 0 0 6px;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+  .score-register-root .masthead p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 60ch;
+  }
+
+  .score-register-root .section-switch {
+    display: flex;
+    gap: 4px;
+    background: #F1F5F9;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 4px;
+    width: fit-content;
+    margin-bottom: 24px;
+  }
+  .score-register-root .switch-btn {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .score-register-root .switch-btn:hover { color: var(--text-primary); }
+  .score-register-root .switch-btn.active {
+    background: #FFFFFF;
+    color: var(--brand-blue);
+    box-shadow: var(--shadow-sm);
+    font-weight: 800;
+  }
+
+  .score-register-root .score-view { display: none; }
+  .score-register-root .score-view.active { display: block; animation: scoreFade .25s ease; }
+  @keyframes scoreFade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+  .score-register-root .card-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .score-register-root .card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .score-register-root .card .num {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--brand-blue);
+    display: block;
+    line-height: 1.1;
+  }
+  .score-register-root .card .lbl {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin-top: 4px;
+    display: block;
+    font-weight: 600;
+  }
+  .score-register-root .card .sub {
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    margin-top: 2px;
+    display: block;
+    opacity: 0.8;
+  }
+
+  .score-register-root .block {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 22px 24px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow-sm);
+  }
+  .score-register-root .block h3 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin: 0 0 4px;
+    color: var(--text-primary);
+  }
+  .score-register-root .block .block-sub {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0 0 16px;
+  }
+  .score-register-root .chart-box { position: relative; height: 240px; }
+  .score-register-root .chart-box .empty-state { position: absolute; inset: 0; margin: 0; display: flex; align-items: center; justify-content: center; }
+
+  .score-register-root .gs-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .score-register-root .subject-rail {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .score-register-root .rail-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-left: 4px solid transparent;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 12px 14px;
+    font-family: var(--font-body);
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .score-register-root .rail-btn:last-child { border-bottom: none; }
+  .score-register-root .rail-btn:hover { background: var(--bg-subtle); color: var(--text-primary); }
+  .score-register-root .rail-btn.active { background: #EFF6FF; color: var(--brand-blue); border-left-color: var(--dot, var(--brand-blue)); font-weight: 700; }
+  .score-register-root .rail-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--dot, var(--brand-blue)); }
+  .score-register-root .rail-count { margin-left: auto; color: var(--text-muted); font-size: 0.76rem; font-family: var(--font-mono); }
+
+  .score-register-root .subject-panel {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px 26px;
+    box-shadow: var(--shadow-sm);
+  }
+  .score-register-root .panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    gap: 16px;
+  }
+  .score-register-root .panel-head h2 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0 0 4px;
+    color: var(--text-primary);
+  }
+  .score-register-root .panel-count { margin: 0; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; }
+  .score-register-root .stat-block { text-align: right; flex-shrink: 0; }
+  .score-register-root .stat-num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .score-register-root .stat-label { display: block; color: var(--text-muted); font-size: 0.76rem; margin-top: 2px; text-transform: uppercase; font-weight: 700; }
+
+  .score-register-root .entry-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) auto;
+    gap: 10px;
+    align-items: end;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+  }
+  .score-register-root .entry-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .score-register-root .entry-form input {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    padding: 9px 12px;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 600;
+    outline: none;
+  }
+  .score-register-root .entry-form input:focus { border-color: var(--brand-blue); box-shadow: 0 0 0 3px rgba(37,99,235,.15); }
+  .score-register-root .entry-form button {
+    background: var(--brand-blue);
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.86rem;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(37,99,235,.28);
+    transition: all 0.2s;
+  }
+  .score-register-root .entry-form button:hover { background: #1D4ED8; transform: translateY(-1px); }
+
+  .score-register-root .chart-wrap { height: 230px; margin-bottom: 20px; }
+  .score-register-root .empty-state {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    padding: 24px 16px;
+    text-align: center;
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+    background: var(--bg-subtle);
+  }
+  .score-register-root .analysis-text {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    padding: 14px 18px;
+    border-left: 4px solid var(--dot, var(--brand-blue));
+    background: #EFF6FF;
+    border-radius: 0 10px 10px 0;
+  }
+  .score-register-root .analysis-text b { color: var(--text-primary); font-weight: 700; }
+
+  .score-register-root table.entry-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .score-register-root table.entry-table th {
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 700;
+    font-size: 0.74rem;
+    padding: 0 10px 10px;
+    border-bottom: 1px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .score-register-root table.entry-table td {
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+  }
+  .score-register-root table.entry-table tr:last-child td { border-bottom: none; }
+  .score-register-root table.entry-table td.pct { color: var(--brand-blue); font-weight: 800; font-family: var(--font-mono); }
+  .score-register-root table.entry-table td.del { text-align: right; }
+  .score-register-root .del-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--crimson);
+    border-radius: var(--radius-sm);
+    padding: 4px 10px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .score-register-root .del-btn:hover { background: #FEF2F2; border-color: #FCA5A5; }
+
+  .score-register-root .trend-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  .score-register-root .trend-up { background: #ECFDF5; color: #059669; border: 1px solid #A7F3D0; }
+  .score-register-root .trend-down { background: #FEF2F2; color: #DC2626; border: 1px solid #FCA5A5; }
+  .score-register-root .trend-flat { background: #F1F5F9; color: #64748B; border: 1px solid #E2E8F0; }
+
+  @media (max-width: 720px) {
+    .score-register-root .gs-layout { grid-template-columns: 1fr; }
+    .score-register-root .subject-rail { display: flex; overflow-x: auto; }
+    .score-register-root .rail-btn { border-left: none; border-bottom: none; border-right: 1px solid var(--border-color); flex-shrink: 0; }
+    .score-register-root .rail-btn.active { border-left: none; border-bottom: 3px solid var(--dot, var(--brand-blue)); }
+    .score-register-root .entry-form { grid-template-columns: 1fr 1fr; }
+    .score-register-root .card-row { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -2786,6 +3094,53 @@
     </div>
   </div>
 
+  <!-- TAB 6: MARKS TRACKER (SCORE REGISTER) -->
+  <div id="tab-scores" class="tab-view">
+    <div class="score-register-root">
+      <header class="masthead">
+        <h1>Score Register</h1>
+        <p>Log every GS and CSAT test as you write it, and watch where you're strong, where you're slipping, and what needs another round.</p>
+      </header>
+
+      <nav class="section-switch" id="scoreSectionSwitch">
+        <button class="switch-btn active" data-scoreview="dashboard">Dashboard</button>
+        <button class="switch-btn" data-scoreview="gs">General Studies</button>
+        <button class="switch-btn" data-scoreview="csat">CSAT</button>
+      </nav>
+
+      <div id="scoreViewDashboard" class="score-view active">
+        <div class="card-row" id="scoreCardRow"></div>
+        <div class="block">
+          <h3>FLT trend — GS vs CSAT</h3>
+          <p class="block-sub">Full-length test scores over time, side by side.</p>
+          <div class="chart-box" id="scoreTrendChartBox">
+            <canvas id="chartScoreDashboardTrend"></canvas>
+            <p class="empty-state" id="scoreTrendEmptyState" style="display:none;">Log an FLT score in GS or CSAT to see the combined trend here.</p>
+          </div>
+        </div>
+        <div class="block">
+          <h3>Average score by area</h3>
+          <p class="block-sub">Every GS topic and both FLT sections, compared.</p>
+          <div class="chart-box" id="scoreBarsChartBox">
+            <canvas id="chartScoreDashboardBars"></canvas>
+            <p class="empty-state" id="scoreBarsEmptyState" style="display:none;">Chart library isn't available right now — log scores and they'll still be saved.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="scoreViewGS" class="score-view">
+        <div class="gs-layout">
+          <aside class="subject-rail" id="scoreSubjectRail"></aside>
+          <section class="subject-panel" id="scoreGSPanel"></section>
+        </div>
+      </div>
+
+      <div id="scoreViewCSAT" class="score-view">
+        <section class="subject-panel" id="scoreCSATPanel"></section>
+      </div>
+    </div>
+  </div>
+
 <!-- BOTTOM NAVIGATION BAR (INCLUDES SANKALP) -->
 <nav class="bottom-nav-bar" id="mainBottomNav">
   <div class="bottom-nav-container">
@@ -2831,6 +3186,13 @@
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
       </div>
       <span>Records</span>
+    </button>
+
+    <button class="b-nav-item" data-tab="tab-scores">
+      <div class="b-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <span>Scores</span>
     </button>
   </div>
 </nav>
@@ -4430,6 +4792,10 @@ function switchTab(tabId) {
   const targetView = document.getElementById(tabId);
   if (targetView) targetView.classList.add('active');
 
+  if (tabId === 'tab-scores' && window.ScoreRegisterModule) {
+    window.ScoreRegisterModule.init();
+  }
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -4681,6 +5047,489 @@ function renderPopupContent() {
   }
 }
 
+/* ---------------- SCORE REGISTER (MARKS TRACKER) MODULE ---------------- */
+window.ScoreRegisterModule = (function(){
+  var GS_SUBJECTS = [
+    {key:'Polity',          label:'Polity',                    color:'#2F6FED'},
+    {key:'Economics',       label:'Economics',                 color:'#0E7A8F'},
+    {key:'AMAC',            label:'Art & Culture (AMAC)',      color:'#B3760F'},
+    {key:'Modern_History',  label:'Modern History',            color:'#7C4FB0'},
+    {key:'Environment',     label:'Environment & Ecology',     color:'#1F9D5C'},
+    {key:'S_T',             label:'Science & Technology',      color:'#0E8F8F'},
+    {key:'Geography',       label:'Geography',                 color:'#B5541F'},
+    {key:'IR',              label:'International Relations',   color:'#5A5FC7'},
+    {key:'CA',              label:'Current Affairs',           color:'#C23D6B'},
+    {key:'FLT',             label:'Full Length Test (GS)',     color:'#D98C1A'}
+  ];
+  var CSAT_SECTION = {key:'FLT', label:'Full Length Test (CSAT)', color:'#1A5FC9'};
+
+  var state = { gs:{}, csat:{} };
+  var chartsReady = false;
+  var isInitialized = false;
+  var CHART_JS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js';
+
+  function loadChartJs(){
+    return new Promise(function(resolve){
+      if(typeof window.Chart !== 'undefined'){ resolve(true); return; }
+      var script = document.createElement('script');
+      script.src = CHART_JS_URL;
+      script.onload = function(){ resolve(typeof window.Chart !== 'undefined'); };
+      script.onerror = function(){ resolve(false); };
+      document.head.appendChild(script);
+      setTimeout(function(){ resolve(typeof window.Chart !== 'undefined'); }, 6000);
+    });
+  }
+  var chartInstances = {};
+  var activeGSSubject = 'Polity';
+  var saveNoteTimer = null;
+
+  function storageKey(section, subjectKey){
+    return section === 'gs' ? ('gs_' + subjectKey) : ('csat_' + subjectKey);
+  }
+
+  function loadSection(key){
+    var localStorageKey = 'mainslog_score_' + key;
+    if(window.storage && typeof window.storage.get === 'function'){
+      return window.storage.get(key, false).then(function(res){
+        if(res && res.value) return JSON.parse(res.value);
+        var stored = localStorage.getItem(localStorageKey);
+        return stored ? JSON.parse(stored) : [];
+      }).catch(function(){
+        var stored = localStorage.getItem(localStorageKey);
+        return stored ? JSON.parse(stored) : [];
+      });
+    }
+    var stored = localStorage.getItem(localStorageKey);
+    return Promise.resolve(stored ? JSON.parse(stored) : []);
+  }
+
+  function saveSection(key, arr){
+    var jsonStr = JSON.stringify(arr);
+    try { localStorage.setItem('mainslog_score_' + key, jsonStr); } catch(e){}
+    flashSaved();
+    if(window.storage && typeof window.storage.set === 'function'){
+      return window.storage.set(key, jsonStr, false).catch(function(err){
+        console.error('Storage error', err);
+      });
+    }
+    return Promise.resolve();
+  }
+
+  function flashSaved(msg){
+    var el = document.getElementById('saveNote');
+    if(!el) return;
+    el.textContent = msg || 'Saved';
+    el.classList.add('show');
+    clearTimeout(saveNoteTimer);
+    saveNoteTimer = setTimeout(function(){ el.classList.remove('show'); }, 1400);
+  }
+
+  function todayStr(){
+    var d = new Date();
+    var m = String(d.getMonth()+1).padStart(2,'0');
+    var day = String(d.getDate()).padStart(2,'0');
+    return d.getFullYear() + '-' + m + '-' + day;
+  }
+
+  function formatDateShort(dateStr){
+    var d = new Date(dateStr + 'T00:00:00');
+    if(isNaN(d)) return dateStr;
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return d.getDate() + ' ' + months[d.getMonth()];
+  }
+
+  function sortEntries(arr){
+    if(!Array.isArray(arr)) return [];
+    arr.sort(function(a,b){
+      if(a.date !== b.date) return a.date < b.date ? -1 : 1;
+      return (a.order||0) - (b.order||0);
+    });
+    return arr;
+  }
+
+  function pctOf(e){ return (e.marks / e.max) * 100; }
+
+  function computeStats(entries){
+    if(!entries || !entries.length) return null;
+    var pct = entries.map(pctOf);
+    var avg = pct.reduce(function(a,b){return a+b;},0) / pct.length;
+    var best = Math.max.apply(null, pct);
+    var worst = Math.min.apply(null, pct);
+    var latest = pct[pct.length-1];
+    var trend = 'flat';
+    if(pct.length >= 2){
+      var prevAvg = pct.slice(0,-1).reduce(function(a,b){return a+b;},0) / (pct.length-1);
+      if(latest - prevAvg > 3) trend = 'up';
+      else if(prevAvg - latest > 3) trend = 'down';
+    }
+    var variance = pct.reduce(function(a,b){return a + Math.pow(b-avg,2);},0) / pct.length;
+    var sd = Math.sqrt(variance);
+    return {avg:avg, best:best, worst:worst, latest:latest, trend:trend, sd:sd, count:entries.length};
+  }
+
+  function analysisSentence(stats, label){
+    if(!stats) return 'No scores logged yet for ' + label + '. Add a test above to start tracking.';
+    var parts = [];
+    parts.push(stats.count + ' test' + (stats.count===1?'':'s') + ' logged, averaging <b>' + stats.avg.toFixed(1) + '%</b>.');
+    parts.push('Scores have ranged from ' + stats.worst.toFixed(1) + '% to ' + stats.best.toFixed(1) + '%.');
+    if(stats.count >= 2){
+      if(stats.trend === 'up') parts.push('The most recent test (' + stats.latest.toFixed(1) + '%) is above your running average — you\'re trending upward.');
+      else if(stats.trend === 'down') parts.push('The most recent test (' + stats.latest.toFixed(1) + '%) is below your running average — worth revising this area again soon.');
+      else parts.push('The most recent test (' + stats.latest.toFixed(1) + '%) is close to your running average — performance is steady.');
+      if(stats.sd > 12) parts.push('Scores swing quite a bit test to test, which usually points to gaps in a few specific topics rather than the whole section.');
+      else if(stats.sd > 6) parts.push('There\'s some variation between tests, but nothing extreme.');
+      else parts.push('Scores are consistent from test to test.');
+    }
+    return parts.join(' ');
+  }
+
+  function trendTagHtml(stats){
+    if(!stats || stats.count < 2) return '';
+    var cls = stats.trend === 'up' ? 'trend-up' : stats.trend === 'down' ? 'trend-down' : 'trend-flat';
+    var txt = stats.trend === 'up' ? 'Improving' : stats.trend === 'down' ? 'Slipping' : 'Steady';
+    return '<span class="trend-tag ' + cls + '">' + txt + '</span>';
+  }
+
+  function setupSwitchers(){
+    var switcher = document.getElementById('scoreSectionSwitch');
+    if(!switcher || switcher.dataset.initialized) return;
+    switcher.dataset.initialized = 'true';
+    switcher.addEventListener('click', function(e){
+      var btn = e.target.closest('.switch-btn');
+      if(!btn) return;
+      switcher.querySelectorAll('.switch-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var view = btn.dataset.scoreview;
+      document.querySelectorAll('#tab-scores .score-view').forEach(function(v){ v.classList.remove('active'); });
+      var targetEl = document.getElementById('scoreView' + (view === 'gs' ? 'GS' : view === 'csat' ? 'CSAT' : 'Dashboard'));
+      if(targetEl) targetEl.classList.add('active');
+      if(view === 'dashboard') renderDashboard();
+      if(view === 'gs') renderGSPanel(activeGSSubject);
+      if(view === 'csat') renderCSATPanel();
+    });
+  }
+
+  function renderRail(){
+    var rail = document.getElementById('scoreSubjectRail');
+    if(!rail) return;
+    rail.innerHTML = GS_SUBJECTS.map(function(s){
+      var arr = state.gs[s.key] || [];
+      var active = s.key === activeGSSubject ? ' active' : '';
+      return '<button class="rail-btn' + active + '" data-key="' + s.key + '" style="--dot:' + s.color + '">' +
+        '<span class="rail-dot"></span>' + s.label + '<span class="rail-count">' + arr.length + '</span>' +
+        '</button>';
+    }).join('');
+    rail.querySelectorAll('.rail-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        activeGSSubject = btn.dataset.key;
+        renderRail();
+        renderGSPanel(activeGSSubject);
+      });
+    });
+  }
+
+  function renderPanel(container, section, meta){
+    if(!container) return;
+    var key = storageKey(section, meta.key);
+    var entries = section === 'gs' ? (state.gs[meta.key] || []) : (state.csat[meta.key] || []);
+    var stats = computeStats(entries);
+    var nextTestNo = entries.length ? (parseInt(entries[entries.length-1].testNo) + 1 || '') : 1;
+    var lastMax = entries.length ? entries[entries.length-1].max : 100;
+
+    var rowsHtml = entries.slice().reverse().map(function(e){
+      var pct = pctOf(e).toFixed(1);
+      return '<tr>' +
+        '<td>' + formatDateShort(e.date) + '</td>' +
+        '<td>Test ' + e.testNo + '</td>' +
+        '<td>' + e.marks + ' / ' + e.max + '</td>' +
+        '<td class="pct">' + pct + '%</td>' +
+        '<td class="del"><button class="del-btn" data-id="' + e.id + '">Remove</button></td>' +
+        '</tr>';
+    }).join('');
+
+    container.innerHTML =
+      '<div class="panel-head">' +
+        '<div><h2>' + meta.label + trendTagHtml(stats) + '</h2>' +
+        '<p class="panel-count">' + entries.length + ' test' + (entries.length===1?'':'s') + ' logged</p></div>' +
+        '<div class="stat-block"><span class="stat-num" style="color:' + meta.color + '">' + (stats ? stats.avg.toFixed(1) + '%' : '—') + '</span>' +
+        '<span class="stat-label">average score</span></div>' +
+      '</div>' +
+      '<form class="entry-form" id="form-' + key + '">' +
+        '<label>Date<input type="date" name="date" value="' + todayStr() + '" required></label>' +
+        '<label>Test no.<input type="number" min="1" name="testNo" value="' + nextTestNo + '" required></label>' +
+        '<label>Marks obtained<input type="number" step="0.01" min="0" name="marks" placeholder="e.g. 68" required></label>' +
+        '<label>Out of<input type="number" step="0.01" min="1" name="max" value="' + lastMax + '" required></label>' +
+        '<button type="submit">Add score</button>' +
+      '</form>' +
+      (entries.length
+        ? (chartsReady
+            ? '<div class="chart-wrap"><canvas id="chart-' + key + '"></canvas></div>'
+            : '<p class="empty-state">Chart library isn\'t available right now — your scores are still listed in the table below.</p>')
+        : '<p class="empty-state">No scores yet. Add your first test above — the chart and analysis will appear here.</p>') +
+      '<p class="analysis-text" style="border-left-color:' + meta.color + '">' + analysisSentence(stats, meta.label) + '</p>' +
+      (entries.length ? '<table class="entry-table"><thead><tr><th>Date</th><th>Test</th><th>Marks</th><th>Score</th><th></th></tr></thead><tbody>' + rowsHtml + '</tbody></table>' : '');
+
+    var form = document.getElementById('form-' + key);
+    if(form){
+      form.addEventListener('submit', function(ev){
+        ev.preventDefault();
+        var fd = new FormData(form);
+        var marks = parseFloat(fd.get('marks'));
+        var max = parseFloat(fd.get('max'));
+        if(isNaN(marks) || isNaN(max) || max <= 0 || marks < 0){ return; }
+        var entry = {
+          id: Date.now() + '_' + Math.random().toString(36).slice(2,7),
+          date: fd.get('date') || todayStr(),
+          testNo: fd.get('testNo'),
+          marks: marks,
+          max: max,
+          order: entries.length
+        };
+        entries.push(entry);
+        sortEntries(entries);
+        if(section === 'gs') state.gs[meta.key] = entries; else state.csat[meta.key] = entries;
+        saveSection(key, entries).then(function(){
+          if(section === 'gs'){ renderRail(); renderGSPanel(meta.key); }
+          else renderCSATPanel();
+        });
+      });
+    }
+
+    container.querySelectorAll('.del-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.dataset.id;
+        var updated = entries.filter(function(e){ return e.id !== id; });
+        if(section === 'gs') state.gs[meta.key] = updated; else state.csat[meta.key] = updated;
+        saveSection(key, updated).then(function(){
+          if(section === 'gs'){ renderRail(); renderGSPanel(meta.key); }
+          else renderCSATPanel();
+        });
+      });
+    });
+
+    if(entries.length && chartsReady){
+      renderLineChart('chart-' + key, entries, meta.color);
+    }
+  }
+
+  function renderGSPanel(subjectKey){
+    var meta = GS_SUBJECTS.find(function(s){ return s.key === subjectKey; });
+    if(meta) renderPanel(document.getElementById('scoreGSPanel'), 'gs', meta);
+  }
+
+  function renderCSATPanel(){
+    renderPanel(document.getElementById('scoreCSATPanel'), 'csat', CSAT_SECTION);
+  }
+
+  function renderLineChart(canvasId, entries, color){
+    if(typeof Chart === 'undefined') return;
+    var ctx = document.getElementById(canvasId);
+    if(!ctx) return;
+    if(chartInstances[canvasId]){ chartInstances[canvasId].destroy(); delete chartInstances[canvasId]; }
+    var labels = entries.map(function(e){ return formatDateShort(e.date) + ' · T' + e.testNo; });
+    var data = entries.map(function(e){ return +(pctOf(e).toFixed(1)); });
+    try{
+      chartInstances[canvasId] = new Chart(ctx, {
+        type:'line',
+        data:{
+          labels: labels,
+          datasets:[{
+            label:'Score %',
+            data: data,
+            borderColor: color,
+            backgroundColor: color + '30',
+            fill:true,
+            tension:0.3,
+            pointRadius:4,
+            pointBackgroundColor: color,
+            pointBorderColor: '#ffffff',
+            pointBorderWidth:1.5
+          }]
+        },
+        options:{
+          responsive:true,
+          maintainAspectRatio:false,
+          scales:{
+            y:{ min:0, max:100, ticks:{ color:'#5b6b84', callback:function(v){ return v + '%'; } }, grid:{ color:'#e7eff9' } },
+            x:{ ticks:{ color:'#5b6b84' }, grid:{ display:false } }
+          },
+          plugins:{
+            legend:{ display:false },
+            tooltip:{
+              callbacks:{
+                label: function(ctx){
+                  var e = entries[ctx.dataIndex];
+                  return e.marks + ' / ' + e.max + '  (' + ctx.formattedValue + '%)';
+                }
+              }
+            }
+          }
+        }
+      });
+    }catch(err){ console.warn('Chart render failed', err); }
+  }
+
+  function renderBarChart(canvasId, labels, values, colors){
+    var ctx = document.getElementById(canvasId);
+    if(!ctx) return;
+    var emptyEl = document.getElementById('scoreBarsEmptyState');
+    if(chartInstances[canvasId]){ chartInstances[canvasId].destroy(); delete chartInstances[canvasId]; }
+
+    if(typeof Chart === 'undefined'){
+      ctx.style.display = 'none';
+      if(emptyEl) emptyEl.style.display = 'flex';
+      return;
+    }
+    ctx.style.display = 'block';
+    if(emptyEl) emptyEl.style.display = 'none';
+
+    try{
+      chartInstances[canvasId] = new Chart(ctx, {
+        type:'bar',
+        data:{ labels: labels, datasets:[{ data: values, backgroundColor: colors, borderRadius:3, maxBarThickness:36 }] },
+        options:{
+          responsive:true,
+          maintainAspectRatio:false,
+          scales:{
+            y:{ min:0, max:100, ticks:{ color:'#5b6b84', callback:function(v){ return v + '%'; } }, grid:{ color:'#e7eff9' } },
+            x:{ ticks:{ color:'#5b6b84', font:{ size:10 } }, grid:{ display:false } }
+          },
+          plugins:{
+            legend:{ display:false },
+            tooltip:{ callbacks:{ label: function(ctx){ return ctx.formattedValue + '%'; } } }
+          }
+        }
+      });
+    }catch(err){
+      console.warn('Chart render failed', err);
+      ctx.style.display = 'none';
+      if(emptyEl){ emptyEl.style.display = 'flex'; emptyEl.textContent = "Couldn't draw this chart, but your scores are saved."; }
+    }
+  }
+
+  function renderDashboardTrend(){
+    var canvasId = 'chartScoreDashboardTrend';
+    var canvasEl = document.getElementById(canvasId);
+    var emptyEl = document.getElementById('scoreTrendEmptyState');
+    if(!canvasEl || !emptyEl) return;
+
+    if(chartInstances[canvasId]){ chartInstances[canvasId].destroy(); delete chartInstances[canvasId]; }
+
+    var gsFlt = state.gs.FLT || [];
+    var csatFlt = state.csat.FLT || [];
+    var allDates = Array.from(new Set(gsFlt.map(function(e){return e.date;}).concat(csatFlt.map(function(e){return e.date;})))).sort();
+
+    if(!allDates.length || typeof Chart === 'undefined'){
+      canvasEl.style.display = 'none';
+      emptyEl.style.display = 'flex';
+      emptyEl.textContent = typeof Chart === 'undefined'
+        ? "Chart library isn't available right now — log scores and they'll still be saved."
+        : 'Log an FLT score in GS or CSAT to see the combined trend here.';
+      return;
+    }
+
+    canvasEl.style.display = 'block';
+    emptyEl.style.display = 'none';
+
+    var gsMap = {}, csatMap = {};
+    gsFlt.forEach(function(e){ gsMap[e.date] = +(pctOf(e).toFixed(1)); });
+    csatFlt.forEach(function(e){ csatMap[e.date] = +(pctOf(e).toFixed(1)); });
+    var gsData = allDates.map(function(d){ return d in gsMap ? gsMap[d] : null; });
+    var csatData = allDates.map(function(d){ return d in csatMap ? csatMap[d] : null; });
+
+    try{
+      chartInstances[canvasId] = new Chart(canvasEl, {
+        type:'line',
+        data:{
+          labels: allDates.map(formatDateShort),
+          datasets:[
+            { label:'GS FLT', data: gsData, borderColor:'#D98C1A', backgroundColor:'#D98C1A20', tension:0.3, spanGaps:true, pointRadius:4 },
+            { label:'CSAT FLT', data: csatData, borderColor:'#1A5FC9', backgroundColor:'#1A5FC920', tension:0.3, spanGaps:true, pointRadius:4 }
+          ]
+        },
+        options:{
+          responsive:true,
+          maintainAspectRatio:false,
+          scales:{
+            y:{ min:0, max:100, ticks:{ color:'#5b6b84', callback:function(v){ return v + '%'; } }, grid:{ color:'#e7eff9' } },
+            x:{ ticks:{ color:'#5b6b84' }, grid:{ display:false } }
+          },
+          plugins:{ legend:{ display:true, labels:{ color:'#5b6b84', boxWidth:10 } } }
+        }
+      });
+    }catch(err){
+      console.warn('Chart render failed', err);
+      canvasEl.style.display = 'none';
+      emptyEl.style.display = 'flex';
+      emptyEl.textContent = "Couldn't draw this chart, but your scores are saved.";
+    }
+  }
+
+  function renderDashboard(){
+    var allSections = GS_SUBJECTS.map(function(s){ return {label:s.label, color:s.color, entries: state.gs[s.key] || []}; });
+    allSections.push({label: CSAT_SECTION.label, color: CSAT_SECTION.color, entries: state.csat.FLT || []});
+
+    var totalTests = allSections.reduce(function(a,s){ return a + s.entries.length; }, 0);
+    var allPct = [];
+    allSections.forEach(function(s){ s.entries.forEach(function(e){ allPct.push(pctOf(e)); }); });
+    var overallAvg = allPct.length ? (allPct.reduce(function(a,b){return a+b;},0)/allPct.length) : null;
+
+    var withData = allSections.filter(function(s){ return s.entries.length; }).map(function(s){
+      return { label:s.label, avg: computeStats(s.entries).avg };
+    });
+    var strongest = withData.length ? withData.reduce(function(a,b){ return b.avg > a.avg ? b : a; }) : null;
+    var weakest = withData.length ? withData.reduce(function(a,b){ return b.avg < a.avg ? b : a; }) : null;
+
+    var cardRow = document.getElementById('scoreCardRow');
+    if(cardRow){
+      cardRow.innerHTML =
+        '<div class="card"><span class="num">' + totalTests + '</span><span class="lbl">Tests logged</span><span class="sub">across GS and CSAT</span></div>' +
+        '<div class="card"><span class="num">' + (overallAvg !== null ? overallAvg.toFixed(1) + '%' : '—') + '</span><span class="lbl">Overall average</span><span class="sub">all sections combined</span></div>' +
+        '<div class="card"><span class="num" style="color:var(--up, #1F9D5C)">' + (strongest ? strongest.avg.toFixed(0) + '%' : '—') + '</span><span class="lbl">Strongest area</span><span class="sub">' + (strongest ? strongest.label : 'no data yet') + '</span></div>' +
+        '<div class="card"><span class="num" style="color:var(--down, #E0463F)">' + (weakest ? weakest.avg.toFixed(0) + '%' : '—') + '</span><span class="lbl">Needs focus</span><span class="sub">' + (weakest ? weakest.label : 'no data yet') + '</span></div>';
+    }
+
+    renderDashboardTrend();
+
+    var barLabels = allSections.map(function(s){ return s.label.replace(' (GS)','').replace(' (CSAT)',' (C)'); });
+    var barValues = allSections.map(function(s){ var st = computeStats(s.entries); return st ? +st.avg.toFixed(1) : 0; });
+    var barColors = allSections.map(function(s){ return s.color; });
+    renderBarChart('chartScoreDashboardBars', barLabels, barValues, barColors);
+  }
+
+  function renderEverything(){
+    renderRail();
+    renderGSPanel(activeGSSubject);
+    renderCSATPanel();
+    renderDashboard();
+  }
+
+  function init(){
+    if(isInitialized) return Promise.resolve();
+    setupSwitchers();
+    var keys = GS_SUBJECTS.map(function(s){ return {section:'gs', key:s.key, storageKey: storageKey('gs', s.key)}; });
+    keys.push({section:'csat', key:'FLT', storageKey: storageKey('csat','FLT')});
+
+    return loadChartJs().then(function(ok){
+      chartsReady = ok;
+      if(!ok) console.warn('Chart.js could not be loaded — showing data tables without charts.');
+      return Promise.all(keys.map(function(k){ return loadSection(k.storageKey); }));
+    }).then(function(results){
+      keys.forEach(function(k, i){
+        if(k.section === 'gs') state.gs[k.key] = sortEntries(results[i]);
+        else state.csat[k.key] = sortEntries(results[i]);
+      });
+      isInitialized = true;
+      renderEverything();
+    }).catch(function(err){
+      console.error('Failed to load stored score data', err);
+      try{ isInitialized = true; renderEverything(); }catch(err2){ console.error('Render failed', err2); }
+    });
+  }
+
+  return { init: init, renderEverything: renderEverything };
+})();
+
 (function init() {
   try {
     const logDateEl = document.getElementById('logDate');
@@ -4689,6 +5538,7 @@ function renderPopupContent() {
 
   try { loadData(); } catch(e){ console.error("loadData error:", e); }
   try { renderAll(); } catch(e){ console.error("renderAll error:", e); }
+  try { window.ScoreRegisterModule.init(); } catch(e){}
 
   try { pollCentralServer(); } catch(e){}
   try { fetchTrackerProgress(); } catch(e){}
