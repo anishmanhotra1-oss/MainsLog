@@ -3376,11 +3376,7 @@ function mergeEntries(localEntries, serverEntries) {
         const localItem = map.get(e.id);
         map.set(e.id, {
           ...localItem,
-          ...e,
-          r0Done: typeof localItem.r0Done === 'boolean' ? localItem.r0Done : !!e.r0Done,
-          sundayDone: typeof localItem.sundayDone === 'boolean' ? localItem.sundayDone : !!e.sundayDone,
-          monthlyDone: typeof localItem.monthlyDone === 'boolean' ? localItem.monthlyDone : !!e.monthlyDone,
-          biMonthlyDone: typeof localItem.biMonthlyDone === 'boolean' ? localItem.biMonthlyDone : !!e.biMonthlyDone
+          ...e
         });
       }
     }

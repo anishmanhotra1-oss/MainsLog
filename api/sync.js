@@ -83,11 +83,7 @@ module.exports = async (req, res) => {
           const oldItem = entryMap.get(e.id);
           entryMap.set(e.id, {
             ...oldItem,
-            ...e,
-            r0Done: typeof e.r0Done === 'boolean' ? e.r0Done : !!oldItem.r0Done,
-            sundayDone: typeof e.sundayDone === 'boolean' ? e.sundayDone : !!oldItem.sundayDone,
-            monthlyDone: typeof e.monthlyDone === 'boolean' ? e.monthlyDone : !!oldItem.monthlyDone,
-            biMonthlyDone: typeof e.biMonthlyDone === 'boolean' ? e.biMonthlyDone : !!oldItem.biMonthlyDone
+            ...e
           });
         }
       }
