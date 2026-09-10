@@ -4028,7 +4028,7 @@ async function pollCentralServer() {
           updated = true;
         }
         if (data.SCORE_REGISTER && window.ScoreRegisterModule && typeof window.ScoreRegisterModule.mergeCloudScores === 'function') {
-          window.ScoreRegisterModule.mergeCloudScores(data.SCORE_REGISTER);
+          window.ScoreRegisterModule.mergeCloudScores(data.SCORE_REGISTER, data.deletedScoreIds);
         }
         if (updated) {
           if (data.timestamp) lastLocalSyncTime = data.timestamp;
@@ -5390,9 +5390,38 @@ window.ScoreRegisterModule = (function(){
     return Promise.resolve();
   }
 
-  function mergeCloudScores(cloudScoreReg) {
-    if (!cloudScoreReg || typeof cloudScoreReg !== 'object') return;
+  function mergeCloudScores(cloudScoreReg, cloudDeletedIds) {
+    if ((!cloudScoreReg || typeof cloudScoreReg !== 'object') && !Array.isArray(cloudDeletedIds)) return;
     var updated = false;
+
+    if (Array.isArray(cloudDeletedIds)) {
+      cloudDeletedIds.forEach(function(id) {
+        if (id && !deletedScoreIds.has(id)) {
+          deletedScoreIds.add(id);
+          updated = true;
+        }
+      });
+      if (updated) {
+        try { localStorage.setItem('mainslog_deleted_score_ids', JSON.stringify(Array.from(deletedScoreIds))); } catch(e){}
+      }
+    }
+
+    ['gs', 'csat'].forEach(function(sec) {
+      if (state[sec]) {
+        Object.keys(state[sec]).forEach(function(subKey) {
+          var localArr = state[sec][subKey] || [];
+          var filtered = localArr.filter(function(item) {
+            return item && item.id && !deletedScoreIds.has(item.id);
+          });
+          if (filtered.length !== localArr.length) {
+            state[sec][subKey] = filtered;
+            var key = storageKey(sec, subKey);
+            try { localStorage.setItem('mainslog_score_' + key, JSON.stringify(filtered)); } catch(e){}
+            updated = true;
+          }
+        });
+      }
+    });
 
     var mergeSection = function(sectionKey, cloudObj) {
       if (!cloudObj || typeof cloudObj !== 'object') return;
@@ -5434,8 +5463,10 @@ window.ScoreRegisterModule = (function(){
       });
     };
 
-    mergeSection('gs', cloudScoreReg.gs);
-    mergeSection('csat', cloudScoreReg.csat);
+    if (cloudScoreReg) {
+      mergeSection('gs', cloudScoreReg.gs);
+      mergeSection('csat', cloudScoreReg.csat);
+    }
 
     if (updated && isInitialized) {
       renderEverything();
@@ -5494,8 +5525,13 @@ window.ScoreRegisterModule = (function(){
     return {avg:avg, best:best, worst:worst, latest:latest, trend:trend, sd:sd, count:entries.length};
   }
 
-  function analysisSentence(stats, label){
-    if(!stats) return 'No scores logged yet for ' + label + '. Add a test above to start tracking.';
+  function analysisSentence(stats, label, isCsat){
+    if(!stats) {
+      if (isCsat) {
+        return 'No scores logged yet for ' + label + '. Minimum qualifying cutoff is <b>67 marks out of 200 (33.33%)</b>. Add a CSAT test above to start tracking.';
+      }
+      return 'No scores logged yet for ' + label + '. Add a test above to start tracking.';
+    }
     var parts = [];
     parts.push(stats.count + ' test' + (stats.count===1?'':'s') + ' logged, averaging <b>' + stats.avg.toFixed(1) + '%</b>.');
     parts.push('Scores have ranged from ' + stats.worst.toFixed(1) + '% to ' + stats.best.toFixed(1) + '%.');
@@ -5507,14 +5543,36 @@ window.ScoreRegisterModule = (function(){
       else if(stats.sd > 6) parts.push('There\'s some variation between tests, but nothing extreme.');
       else parts.push('Scores are consistent from test to test.');
     }
+
+    if (isCsat) {
+      var latestMarks200 = (stats.latest / 100) * 200;
+      if (latestMarks200 >= 67) {
+        parts.push('🎯 <b>CSAT Status: QUALIFIED</b> (Latest: <b>' + latestMarks200.toFixed(1) + ' / 200 marks</b>, clearing the 67-mark / 33.33% qualifying cutoff).');
+      } else {
+        var gap = (67 - latestMarks200).toFixed(1);
+        parts.push('⚠️ <b>CSAT Status: NOT QUALIFIED</b> (Latest: <b>' + latestMarks200.toFixed(1) + ' / 200 marks</b> — <b>' + gap + ' marks</b> short of the 67-mark qualifying cutoff).');
+      }
+    }
+
     return parts.join(' ');
   }
 
-  function trendTagHtml(stats){
-    if(!stats || stats.count < 2) return '';
-    var cls = stats.trend === 'up' ? 'trend-up' : stats.trend === 'down' ? 'trend-down' : 'trend-flat';
-    var txt = stats.trend === 'up' ? 'Improving' : stats.trend === 'down' ? 'Slipping' : 'Steady';
-    return '<span class="trend-tag ' + cls + '">' + txt + '</span>';
+  function trendTagHtml(stats, isCsat){
+    var tags = [];
+    if (isCsat && stats) {
+      var latestMarks200 = (stats.latest / 100) * 200;
+      if (latestMarks200 >= 67) {
+        tags.push('<span class="trend-tag trend-up">✓ Qualified (≥67 Marks)</span>');
+      } else {
+        tags.push('<span class="trend-tag trend-down">⚠ Cutoff Gap (&lt;67 Marks)</span>');
+      }
+    }
+    if(stats && stats.count >= 2){
+      var cls = stats.trend === 'up' ? 'trend-up' : stats.trend === 'down' ? 'trend-down' : 'trend-flat';
+      var txt = stats.trend === 'up' ? 'Improving' : stats.trend === 'down' ? 'Slipping' : 'Steady';
+      tags.push('<span class="trend-tag ' + cls + '">' + txt + '</span>');
+    }
+    return tags.join('');
   }
 
   function setupSwitchers(){
@@ -5557,11 +5615,12 @@ window.ScoreRegisterModule = (function(){
 
   function renderPanel(container, section, meta){
     if(!container) return;
+    var isCsat = (section === 'csat');
     var key = storageKey(section, meta.key);
     var entries = section === 'gs' ? (state.gs[meta.key] || []) : (state.csat[meta.key] || []);
     var stats = computeStats(entries);
     var nextTestNo = entries.length ? (parseInt(entries[entries.length-1].testNo) + 1 || '') : 1;
-    var lastMax = entries.length ? entries[entries.length-1].max : 100;
+    var lastMax = entries.length ? entries[entries.length-1].max : (isCsat ? 200 : 100);
 
     var rowsHtml = entries.slice().reverse().map(function(e){
       var pct = pctOf(e).toFixed(1);
@@ -5576,8 +5635,8 @@ window.ScoreRegisterModule = (function(){
 
     container.innerHTML =
       '<div class="panel-head">' +
-        '<div class="panel-head-top"><h2>' + meta.label + trendTagHtml(stats) + '</h2>' +
-        '<p class="panel-count">' + entries.length + ' test' + (entries.length===1?'':'s') + ' logged</p></div>' +
+        '<div class="panel-head-top"><h2>' + meta.label + trendTagHtml(stats, isCsat) + '</h2>' +
+        '<p class="panel-count">' + entries.length + ' test' + (entries.length===1?'':'s') + ' logged' + (isCsat ? ' &middot; <b style="color:var(--brand-blue)">Qualifying Cutoff: 67 Marks / 200 (33.33%)</b>' : '') + '</p></div>' +
         '<div class="stat-block"><span class="stat-num" style="color:' + meta.color + '">' + (stats ? stats.avg.toFixed(1) + '%' : '—') + '</span>' +
         '<span class="stat-label">average score</span></div>' +
       '</div>' +
@@ -5592,8 +5651,8 @@ window.ScoreRegisterModule = (function(){
         ? ((typeof window.Chart !== 'undefined' || chartsReady)
             ? '<div class="chart-wrap"><canvas id="chart-' + key + '"></canvas></div>'
             : '<p class="empty-state">Chart library isn\'t available right now — your scores are still listed in the table below.</p>')
-        : '<p class="empty-state">No scores yet. Add your first test above — the chart and analysis will appear here.</p>') +
-      '<p class="analysis-text" style="border-left-color:' + meta.color + '">' + analysisSentence(stats, meta.label) + '</p>' +
+        : '<p class="empty-state">' + (isCsat ? 'No CSAT scores yet. Minimum qualifying cutoff is 67 marks out of 200 (33.33%). Add your first test above.' : 'No scores yet. Add your first test above — the chart and analysis will appear here.') + '</p>') +
+      '<p class="analysis-text" style="border-left-color:' + meta.color + '">' + analysisSentence(stats, meta.label, isCsat) + '</p>' +
       (entries.length ? '<div class="entry-table-wrap"><table class="entry-table"><thead><tr><th>Date</th><th>Test</th><th>Marks</th><th>Score</th><th></th></tr></thead><tbody>' + rowsHtml + '</tbody></table></div>' : '');
 
     var form = document.getElementById('form-' + key);
@@ -5636,7 +5695,7 @@ window.ScoreRegisterModule = (function(){
     });
 
     if(entries.length && (typeof window.Chart !== 'undefined' || chartsReady)){
-      renderLineChart('chart-' + key, entries, meta.color);
+      renderLineChart('chart-' + key, entries, meta.color, isCsat);
     }
   }
 
@@ -5649,30 +5708,46 @@ window.ScoreRegisterModule = (function(){
     renderPanel(document.getElementById('scoreCSATPanel'), 'csat', CSAT_SECTION);
   }
 
-  function renderLineChart(canvasId, entries, color){
+  function renderLineChart(canvasId, entries, color, isCsat){
     if(typeof Chart === 'undefined') return;
     var ctx = document.getElementById(canvasId);
     if(!ctx) return;
     if(chartInstances[canvasId]){ chartInstances[canvasId].destroy(); delete chartInstances[canvasId]; }
     var labels = entries.map(function(e){ return formatDateShort(e.date) + ' · T' + e.testNo; });
     var data = entries.map(function(e){ return +(pctOf(e).toFixed(1)); });
+
+    var datasets = [{
+      label:'Score %',
+      data: data,
+      borderColor: color,
+      backgroundColor: color + '30',
+      fill:true,
+      tension:0.3,
+      pointRadius:4,
+      pointBackgroundColor: color,
+      pointBorderColor: '#ffffff',
+      pointBorderWidth:1.5
+    }];
+
+    if (isCsat) {
+      datasets.push({
+        label: 'CSAT Cutoff (67 Marks / 33.3%)',
+        data: entries.map(function(){ return 33.33; }),
+        borderColor: '#DC2626',
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        borderDash: [6, 4],
+        pointRadius: 0,
+        fill: false
+      });
+    }
+
     try{
       chartInstances[canvasId] = new Chart(ctx, {
         type:'line',
         data:{
           labels: labels,
-          datasets:[{
-            label:'Score %',
-            data: data,
-            borderColor: color,
-            backgroundColor: color + '30',
-            fill:true,
-            tension:0.3,
-            pointRadius:4,
-            pointBackgroundColor: color,
-            pointBorderColor: '#ffffff',
-            pointBorderWidth:1.5
-          }]
+          datasets: datasets
         },
         options:{
           responsive:true,
@@ -5682,10 +5757,13 @@ window.ScoreRegisterModule = (function(){
             x:{ ticks:{ color:'#5b6b84' }, grid:{ display:false } }
           },
           plugins:{
-            legend:{ display:false },
+            legend:{ display: isCsat ? true : false, labels: { color: '#5b6b84', boxWidth: 12 } },
             tooltip:{
               callbacks:{
                 label: function(ctx){
+                  if (ctx.dataset.label && ctx.dataset.label.includes('Cutoff')) {
+                    return 'CSAT Qualifying Cutoff: 67 Marks (33.33%)';
+                  }
                   var e = entries[ctx.dataIndex];
                   return e.marks + ' / ' + e.max + '  (' + ctx.formattedValue + '%)';
                 }

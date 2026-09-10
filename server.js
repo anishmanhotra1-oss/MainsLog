@@ -185,8 +185,8 @@ function mergeTrackerProgress(localProg, serverProg) {
   return merged;
 }
 
-function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []) {
-  const delSet = new Set(deletedScoreIds || []);
+function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScoreIds = [], existingDeletedScoreIds = []) {
+  const delSet = new Set([...(incomingDeletedScoreIds || []), ...(existingDeletedScoreIds || [])]);
   const res = { gs: {}, csat: {} };
   const existing = existingScores || { gs: {}, csat: {} };
   const incoming = incomingScores || { gs: {}, csat: {} };
@@ -221,7 +221,10 @@ function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []
 
   mergeSubObj(existing.gs || {}, incoming.gs || {}, 'gs');
   mergeSubObj(existing.csat || {}, incoming.csat || {}, 'csat');
-  return res;
+  return {
+    mergedScores: res,
+    deletedScoreIds: Array.from(delSet)
+  };
 }
 
   // API Endpoints
@@ -243,6 +246,7 @@ function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []
             CUSTOM_HABITS: body.CUSTOM_HABITS || [],
             CONFIG: body.CONFIG || {},
             SCORE_REGISTER: { gs: {}, csat: {} },
+            deletedScoreIds: [],
             timestamp: Date.now()
           };
           const saved = writeSyncData(resetData);
@@ -272,7 +276,12 @@ function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []
         const mergedEntries = Array.from(entryMap.values());
         const mergedHabits = { ...(existingData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
         const mergedTrackerProgress = mergeTrackerProgress(existingData.TRACKER_PROGRESS, body.TRACKER_PROGRESS || body.progress);
-        const mergedScoreRegister = mergeScoreRegister(existingData.SCORE_REGISTER, body.SCORE_REGISTER, body.deletedScoreIds);
+        const { mergedScores, deletedScoreIds: mergedDeletedScoreIds } = mergeScoreRegister(
+          existingData.SCORE_REGISTER,
+          body.SCORE_REGISTER,
+          body.deletedScoreIds,
+          existingData.deletedScoreIds
+        );
 
         const updated = {
           ...existingData,
@@ -280,7 +289,8 @@ function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []
           ENTRIES: mergedEntries,
           HABITS_LOG: mergedHabits,
           TRACKER_PROGRESS: mergedTrackerProgress,
-          SCORE_REGISTER: mergedScoreRegister
+          SCORE_REGISTER: mergedScores,
+          deletedScoreIds: mergedDeletedScoreIds
         };
         const saved = writeSyncData(updated);
         return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, data: saved });

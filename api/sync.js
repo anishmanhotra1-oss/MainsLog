@@ -1,6 +1,6 @@
 const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a0898aa8da600d';
 
-let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, timestamp: 0 };
+let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, deletedScoreIds: [], timestamp: 0 };
 
 async function fetchCloudSyncData() {
   try {
@@ -15,6 +15,7 @@ async function fetchCloudSyncData() {
           CUSTOM_HABITS: json.data.CUSTOM_HABITS || memorySyncData.CUSTOM_HABITS,
           CONFIG: json.data.CONFIG || memorySyncData.CONFIG,
           SCORE_REGISTER: json.data.SCORE_REGISTER || memorySyncData.SCORE_REGISTER,
+          deletedScoreIds: Array.isArray(json.data.deletedScoreIds) ? json.data.deletedScoreIds : memorySyncData.deletedScoreIds,
           timestamp: json.data.timestamp || memorySyncData.timestamp
         };
       }
@@ -120,8 +121,8 @@ function mergeSingleEntry(oldItem, incomingItem) {
   return res;
 }
 
-function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []) {
-  const delSet = new Set(deletedScoreIds || []);
+function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScoreIds = [], existingDeletedScoreIds = []) {
+  const delSet = new Set([...(incomingDeletedScoreIds || []), ...(existingDeletedScoreIds || [])]);
   const res = { gs: {}, csat: {} };
   const existing = existingScores || { gs: {}, csat: {} };
   const incoming = incomingScores || { gs: {}, csat: {} };
@@ -156,7 +157,10 @@ function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []
 
   mergeSubObj(existing.gs || {}, incoming.gs || {}, 'gs');
   mergeSubObj(existing.csat || {}, incoming.csat || {}, 'csat');
-  return res;
+  return {
+    mergedScores: res,
+    deletedScoreIds: Array.from(delSet)
+  };
 }
 
 module.exports = async (req, res) => {
@@ -185,6 +189,7 @@ module.exports = async (req, res) => {
         CUSTOM_HABITS: body.CUSTOM_HABITS || [],
         CONFIG: body.CONFIG || {},
         SCORE_REGISTER: { gs: {}, csat: {} },
+        deletedScoreIds: [],
         timestamp: Date.now()
       };
       await saveCloudSyncData(resetData);
@@ -215,7 +220,12 @@ module.exports = async (req, res) => {
     const mergedEntries = Array.from(entryMap.values());
     const mergedHabits = { ...(currentData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
     const mergedTrackerProgress = mergeTrackerProgress(currentData.TRACKER_PROGRESS, body.TRACKER_PROGRESS || body.progress);
-    const mergedScoreRegister = mergeScoreRegister(currentData.SCORE_REGISTER, body.SCORE_REGISTER, body.deletedScoreIds);
+    const { mergedScores, deletedScoreIds: mergedDeletedScoreIds } = mergeScoreRegister(
+      currentData.SCORE_REGISTER,
+      body.SCORE_REGISTER,
+      body.deletedScoreIds,
+      currentData.deletedScoreIds
+    );
 
     const updatedData = {
       ...currentData,
@@ -223,7 +233,8 @@ module.exports = async (req, res) => {
       ENTRIES: mergedEntries,
       HABITS_LOG: mergedHabits,
       TRACKER_PROGRESS: mergedTrackerProgress,
-      SCORE_REGISTER: mergedScoreRegister,
+      SCORE_REGISTER: mergedScores,
+      deletedScoreIds: mergedDeletedScoreIds,
       timestamp: Date.now()
     };
 
@@ -235,7 +246,8 @@ module.exports = async (req, res) => {
       ENTRIES: updatedData.ENTRIES,
       TRACKER_PROGRESS: updatedData.TRACKER_PROGRESS,
       HABITS_LOG: updatedData.HABITS_LOG,
-      SCORE_REGISTER: updatedData.SCORE_REGISTER
+      SCORE_REGISTER: updatedData.SCORE_REGISTER,
+      deletedScoreIds: updatedData.deletedScoreIds
     });
   }
 
