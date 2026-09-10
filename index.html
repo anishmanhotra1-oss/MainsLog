@@ -3337,10 +3337,10 @@ function mergeEntries(localEntries, serverEntries) {
         map.set(e.id, {
           ...localItem,
           ...e,
-          r0Done: localItem.r0Done || e.r0Done,
-          sundayDone: localItem.sundayDone || e.sundayDone,
-          monthlyDone: localItem.monthlyDone || e.monthlyDone,
-          biMonthlyDone: localItem.biMonthlyDone || e.biMonthlyDone
+          r0Done: typeof localItem.r0Done === 'boolean' ? localItem.r0Done : !!e.r0Done,
+          sundayDone: typeof localItem.sundayDone === 'boolean' ? localItem.sundayDone : !!e.sundayDone,
+          monthlyDone: typeof localItem.monthlyDone === 'boolean' ? localItem.monthlyDone : !!e.monthlyDone,
+          biMonthlyDone: typeof localItem.biMonthlyDone === 'boolean' ? localItem.biMonthlyDone : !!e.biMonthlyDone
         });
       }
     }
@@ -4287,6 +4287,7 @@ function attachCheckboxListeners(container) {
         if (type === 'sunday') entry.sundayDone = e.target.checked;
         if (type === 'monthly') entry.monthlyDone = e.target.checked;
         if (type === 'bimonthly') entry.biMonthlyDone = e.target.checked;
+        saveData();
         pushToCentralServer();
         renderAll();
       }

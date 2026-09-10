@@ -42,10 +42,10 @@ module.exports = (req, res) => {
           entryMap.set(e.id, {
             ...oldItem,
             ...e,
-            r0Done: oldItem.r0Done || e.r0Done,
-            sundayDone: oldItem.sundayDone || e.sundayDone,
-            monthlyDone: oldItem.monthlyDone || e.monthlyDone,
-            biMonthlyDone: oldItem.biMonthlyDone || e.biMonthlyDone
+            r0Done: typeof e.r0Done === 'boolean' ? e.r0Done : !!oldItem.r0Done,
+            sundayDone: typeof e.sundayDone === 'boolean' ? e.sundayDone : !!oldItem.sundayDone,
+            monthlyDone: typeof e.monthlyDone === 'boolean' ? e.monthlyDone : !!oldItem.monthlyDone,
+            biMonthlyDone: typeof e.biMonthlyDone === 'boolean' ? e.biMonthlyDone : !!oldItem.biMonthlyDone
           });
         }
       }
