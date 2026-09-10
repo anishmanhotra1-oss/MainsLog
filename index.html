@@ -3293,6 +3293,7 @@ window.addEventListener('storage', () => {
 });
 
 async function pushToCentralServer() {
+  ENTRIES = (ENTRIES || []).filter(item => isTrackerEntryChecked(item.id));
   saveData();
   try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
 
@@ -3310,14 +3311,25 @@ async function pushToCentralServer() {
   } catch(err){}
 }
 
-function mergeEntries(localEntries, serverEntries) {
-  if (!Array.isArray(serverEntries)) return localEntries || [];
-  if (!Array.isArray(localEntries)) return serverEntries || [];
+function isTrackerEntryChecked(id) {
+  if (!id || typeof id !== 'string' || !id.startsWith('tracker_d')) return true;
+  const parts = id.split('_');
+  if (parts.length < 3) return true;
+  const day = parseInt(parts[1].replace('d', ''), 10);
+  const key = parts.slice(2).join('_');
+  const dayProg = TRACKER_PROGRESS[day];
+  return !!(dayProg && dayProg.checks && dayProg.checks[key]);
+}
 
+function mergeEntries(localEntries, serverEntries) {
   const map = new Map();
-  (localEntries || []).forEach(e => { if (e && e.id) map.set(e.id, e); });
+  (localEntries || []).forEach(e => {
+    if (e && e.id && isTrackerEntryChecked(e.id)) {
+      map.set(e.id, e);
+    }
+  });
   (serverEntries || []).forEach(e => {
-    if (e && e.id) {
+    if (e && e.id && isTrackerEntryChecked(e.id)) {
       if (!map.has(e.id)) {
         map.set(e.id, e);
       } else {
@@ -3569,11 +3581,12 @@ function getPendingItemsToday() {
 
 function loadData() {
   try {
+    const tp = localStorage.getItem('op300_tracker_progress'); if (tp) TRACKER_PROGRESS = JSON.parse(tp);
     const e = localStorage.getItem(STORAGE_KEYS.ENTRIES); if (e) ENTRIES = JSON.parse(e);
+    ENTRIES = (ENTRIES || []).filter(item => isTrackerEntryChecked(item.id));
     const h = localStorage.getItem(STORAGE_KEYS.HABITS); if (h) HABITS_LOG = JSON.parse(h);
     const c = localStorage.getItem(STORAGE_KEYS.CUSTOM_HABITS); if (c) CUSTOM_HABITS = JSON.parse(c);
     const cfg = localStorage.getItem(STORAGE_KEYS.CONFIG); if (cfg) CONFIG = JSON.parse(cfg);
-    const tp = localStorage.getItem('op300_tracker_progress'); if (tp) TRACKER_PROGRESS = JSON.parse(tp);
   } catch(err) { console.error(err); }
 }
 
