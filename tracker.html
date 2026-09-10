@@ -803,11 +803,13 @@ const SankalpTracker = (function() {
           const subject = mapTaskSubject(entry, t.key, t);
           const topic = mapTaskTopic(entry, t.key, t, noteVal);
           const dateStudied = dates[t.key] || (existingIdx >= 0 && entries[existingIdx].dateStudied ? entries[existingIdx].dateStudied : todayISO());
+          const now = Date.now();
 
           if (existingIdx >= 0) {
             entries[existingIdx].subject = subject;
             entries[existingIdx].topic = topic;
             entries[existingIdx].dateStudied = dateStudied;
+            entries[existingIdx].updatedAt = now;
           } else {
             entries.push({
               id: entryId,
@@ -818,6 +820,11 @@ const SankalpTracker = (function() {
               sundayDone: false,
               monthlyDone: false,
               biMonthlyDone: false,
+              r0UpdatedAt: now,
+              sundayUpdatedAt: now,
+              monthlyUpdatedAt: now,
+              biMonthlyUpdatedAt: now,
+              updatedAt: now,
               trackerSync: true
             });
           }

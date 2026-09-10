@@ -53,6 +53,33 @@ function mergeProgress(target, source) {
   return merged;
 }
 
+function mergeSingleEntry(oldItem, incomingItem) {
+  if (!oldItem) return incomingItem;
+  if (!incomingItem) return oldItem;
+
+  const res = { ...oldItem, ...incomingItem };
+
+  const milestones = ['r0', 'sunday', 'monthly', 'biMonthly'];
+  milestones.forEach(m => {
+    const doneKey = m === 'biMonthly' ? 'biMonthlyDone' : `${m}Done`;
+    const timeKey = `${m}UpdatedAt`;
+
+    const oldTime = oldItem[timeKey] || oldItem.updatedAt || 0;
+    const incTime = incomingItem[timeKey] || incomingItem.updatedAt || 0;
+
+    if (incTime >= oldTime) {
+      res[doneKey] = incomingItem[doneKey] !== undefined ? incomingItem[doneKey] : oldItem[doneKey];
+      res[timeKey] = incTime;
+    } else {
+      res[doneKey] = oldItem[doneKey] !== undefined ? oldItem[doneKey] : incomingItem[doneKey];
+      res[timeKey] = oldTime;
+    }
+  });
+
+  res.updatedAt = Math.max(oldItem.updatedAt || 0, incomingItem.updatedAt || 0, Date.now());
+  return res;
+}
+
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -72,7 +99,7 @@ module.exports = async (req, res) => {
     const body = req.body || {};
     const incomingEntries = body.ENTRIES || [];
     
-    // Merge entries by ID so entries logged on mobile or desktop are never lost
+    // Merge entries using milestone timestamps so ticking & unticking sync perfectly cross-device
     const entryMap = new Map();
     (currentData.ENTRIES || []).forEach(e => { if (e && e.id) entryMap.set(e.id, e); });
     incomingEntries.forEach(e => {
@@ -81,10 +108,7 @@ module.exports = async (req, res) => {
           entryMap.set(e.id, e);
         } else {
           const oldItem = entryMap.get(e.id);
-          entryMap.set(e.id, {
-            ...oldItem,
-            ...e
-          });
+          entryMap.set(e.id, mergeSingleEntry(oldItem, e));
         }
       }
     });

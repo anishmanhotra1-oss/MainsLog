@@ -102,6 +102,33 @@ const server = http.createServer(async (req, res) => {
 
   let reqPath = req.url.split('?')[0];
 
+function mergeSingleEntry(oldItem, incomingItem) {
+  if (!oldItem) return incomingItem;
+  if (!incomingItem) return oldItem;
+
+  const res = { ...oldItem, ...incomingItem };
+
+  const milestones = ['r0', 'sunday', 'monthly', 'biMonthly'];
+  milestones.forEach(m => {
+    const doneKey = m === 'biMonthly' ? 'biMonthlyDone' : `${m}Done`;
+    const timeKey = `${m}UpdatedAt`;
+
+    const oldTime = oldItem[timeKey] || oldItem.updatedAt || 0;
+    const incTime = incomingItem[timeKey] || incomingItem.updatedAt || 0;
+
+    if (incTime >= oldTime) {
+      res[doneKey] = incomingItem[doneKey] !== undefined ? incomingItem[doneKey] : oldItem[doneKey];
+      res[timeKey] = incTime;
+    } else {
+      res[doneKey] = oldItem[doneKey] !== undefined ? oldItem[doneKey] : incomingItem[doneKey];
+      res[timeKey] = oldTime;
+    }
+  });
+
+  res.updatedAt = Math.max(oldItem.updatedAt || 0, incomingItem.updatedAt || 0, Date.now());
+  return res;
+}
+
   // API Endpoints
   if (reqPath === '/api/sync') {
     if (req.method === 'GET') {
@@ -120,10 +147,7 @@ const server = http.createServer(async (req, res) => {
               entryMap.set(e.id, e);
             } else {
               const oldItem = entryMap.get(e.id);
-              entryMap.set(e.id, {
-                ...oldItem,
-                ...e
-              });
+              entryMap.set(e.id, mergeSingleEntry(oldItem, e));
             }
           }
         });
