@@ -134,11 +134,24 @@ const server = http.createServer(async (req, res) => {
 
         const mergedEntries = Array.from(entryMap.values());
         const mergedHabits = { ...(existingData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
+        
+        let mergedTrackerProgress = existingData.TRACKER_PROGRESS || {};
+        if (body.TRACKER_PROGRESS || body.progress) {
+          const incomingProg = body.TRACKER_PROGRESS || body.progress;
+          for (const d in incomingProg) {
+            if (!mergedTrackerProgress[d]) mergedTrackerProgress[d] = { checks: {}, notes: {}, dates: {} };
+            if (incomingProg[d].checks) mergedTrackerProgress[d].checks = { ...(mergedTrackerProgress[d].checks || {}), ...incomingProg[d].checks };
+            if (incomingProg[d].notes) mergedTrackerProgress[d].notes = { ...(mergedTrackerProgress[d].notes || {}), ...incomingProg[d].notes };
+            if (incomingProg[d].dates) mergedTrackerProgress[d].dates = { ...(mergedTrackerProgress[d].dates || {}), ...incomingProg[d].dates };
+          }
+        }
+
         const updated = {
           ...existingData,
           ...body,
           ENTRIES: mergedEntries,
-          HABITS_LOG: mergedHabits
+          HABITS_LOG: mergedHabits,
+          TRACKER_PROGRESS: mergedTrackerProgress
         };
         const saved = writeSyncData(updated);
         return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, data: saved });

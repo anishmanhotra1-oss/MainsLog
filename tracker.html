@@ -833,6 +833,7 @@ const SankalpTracker = (function() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ENTRIES: entries,
+          TRACKER_PROGRESS: progress,
           HABITS_LOG: habitsLog,
           CUSTOM_HABITS: customHabits,
           CONFIG: config,

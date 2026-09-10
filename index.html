@@ -3298,7 +3298,7 @@ async function pushToCentralServer() {
   try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
 
   const payload = {
-    ENTRIES, HABITS_LOG, CUSTOM_HABITS, CONFIG, timestamp: Date.now()
+    ENTRIES, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG, timestamp: Date.now()
   };
 
   try {
@@ -3355,6 +3355,14 @@ async function pollCentralServer() {
       const data = await res.json();
       if (data) {
         let updated = false;
+        if (data.TRACKER_PROGRESS && typeof data.TRACKER_PROGRESS === 'object') {
+          const mergedProg = mergeTrackerProgress(TRACKER_PROGRESS, data.TRACKER_PROGRESS);
+          if (JSON.stringify(mergedProg) !== JSON.stringify(TRACKER_PROGRESS)) {
+            TRACKER_PROGRESS = mergedProg;
+            try { localStorage.setItem('op300_tracker_progress', JSON.stringify(TRACKER_PROGRESS)); } catch(e){}
+            updated = true;
+          }
+        }
         if (data.ENTRIES && Array.isArray(data.ENTRIES)) {
           const merged = mergeEntries(ENTRIES, data.ENTRIES);
           if (merged.length !== ENTRIES.length || JSON.stringify(merged) !== JSON.stringify(ENTRIES)) {
@@ -3377,6 +3385,8 @@ async function pollCentralServer() {
           if (data.timestamp) lastLocalSyncTime = data.timestamp;
           saveData();
           renderAll();
+          renderHomeTrackerTargets();
+          renderHeaderStats();
           if (document.getElementById('popupModal').classList.contains('active')) { renderPopupContent(); }
         }
       }
