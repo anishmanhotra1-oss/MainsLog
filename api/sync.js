@@ -129,13 +129,32 @@ module.exports = async (req, res) => {
   if (req.method === 'POST') {
     const currentData = await fetchCloudSyncData();
     const body = req.body || {};
+
+    if (body.resetAll) {
+      const resetData = {
+        ENTRIES: [],
+        TRACKER_PROGRESS: {},
+        HABITS_LOG: {},
+        CUSTOM_HABITS: body.CUSTOM_HABITS || [],
+        CONFIG: body.CONFIG || {},
+        timestamp: Date.now()
+      };
+      await saveCloudSyncData(resetData);
+      return res.status(200).json({ success: true, ...resetData });
+    }
+
     const incomingEntries = body.ENTRIES || [];
+    const deletedIds = new Set(body.deletedIds || []);
     
     // Merge entries using milestone timestamps so ticking & unticking sync perfectly cross-device
     const entryMap = new Map();
-    (currentData.ENTRIES || []).forEach(e => { if (e && e.id) entryMap.set(e.id, e); });
+    (currentData.ENTRIES || []).forEach(e => {
+      if (e && e.id && !deletedIds.has(e.id)) {
+        entryMap.set(e.id, e);
+      }
+    });
     incomingEntries.forEach(e => {
-      if (e && e.id) {
+      if (e && e.id && !deletedIds.has(e.id)) {
         if (!entryMap.has(e.id)) {
           entryMap.set(e.id, e);
         } else {

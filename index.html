@@ -3349,13 +3349,13 @@ window.addEventListener('storage', () => {
   renderHeaderStats();
 });
 
-async function pushToCentralServer() {
+async function pushToCentralServer(extraData = {}) {
   ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && isTrackerEntryChecked(item.id));
   saveData();
   try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
 
   const payload = {
-    ENTRIES, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG, timestamp: Date.now()
+    ENTRIES, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG, timestamp: Date.now(), ...extraData
   };
 
   try {
@@ -4348,7 +4348,9 @@ function renderMasterLog() {
 function deleteEntry(id) {
   if (confirm("Delete topic entry?")) {
     ENTRIES = ENTRIES.filter(x => x.id !== id);
-    pushToCentralServer();
+    saveData();
+    try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
+    pushToCentralServer({ deletedIds: [id] });
     renderAll();
   }
 }
@@ -4480,6 +4482,46 @@ document.getElementById('btnAddHabit').addEventListener('click', () => {
     input.value = "";
   }
 });
+
+const btnResetAllEl = document.getElementById('btnResetAll');
+if (btnResetAllEl) {
+  btnResetAllEl.addEventListener('click', async () => {
+    if (confirm("⚠️ Are you sure you want to RESET ALL data?\n\nThis will clear all logged topics, tracker target checkmarks, habit logs, and master records.")) {
+      ENTRIES = [];
+      TRACKER_PROGRESS = {};
+      HABITS_LOG = {};
+      CUSTOM_HABITS = [...DEFAULT_HABITS];
+      saveData();
+      try { localStorage.removeItem('op300_tracker_progress'); } catch(e){}
+      try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
+
+      try {
+        await fetch('/api/sync', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            resetAll: true,
+            ENTRIES: [],
+            TRACKER_PROGRESS: {},
+            HABITS_LOG: {},
+            CUSTOM_HABITS: [...DEFAULT_HABITS],
+            CONFIG: CONFIG,
+            timestamp: Date.now()
+          })
+        });
+      } catch(e){}
+
+      try {
+        await fetch('/api/tracker/reset', { method: 'POST' });
+      } catch(e){}
+
+      renderAll();
+      renderHomeTrackerTargets();
+      renderHeaderStats();
+      alert("All data and records have been successfully reset.");
+    }
+  });
+}
 
 const masterSearchEl = document.getElementById('masterSearchInput');
 if (masterSearchEl) {

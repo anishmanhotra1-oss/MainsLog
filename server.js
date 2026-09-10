@@ -188,10 +188,31 @@ function mergeTrackerProgress(localProg, serverProg) {
       try {
         const body = await parseJsonBody(req);
         const existingData = readSyncData();
+
+        if (body.resetAll) {
+          const resetData = {
+            ENTRIES: [],
+            TRACKER_PROGRESS: {},
+            HABITS_LOG: {},
+            CUSTOM_HABITS: body.CUSTOM_HABITS || [],
+            CONFIG: body.CONFIG || {},
+            timestamp: Date.now()
+          };
+          const saved = writeSyncData(resetData);
+          return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, data: saved });
+        }
+
+        const incomingEntries = body.ENTRIES || [];
+        const deletedIds = new Set(body.deletedIds || []);
+
         const entryMap = new Map();
-        (existingData.ENTRIES || []).forEach(e => { if (e && e.id) entryMap.set(e.id, e); });
-        (body.ENTRIES || []).forEach(e => {
-          if (e && e.id) {
+        (existingData.ENTRIES || []).forEach(e => {
+          if (e && e.id && !deletedIds.has(e.id)) {
+            entryMap.set(e.id, e);
+          }
+        });
+        incomingEntries.forEach(e => {
+          if (e && e.id && !deletedIds.has(e.id)) {
             if (!entryMap.has(e.id)) {
               entryMap.set(e.id, e);
             } else {

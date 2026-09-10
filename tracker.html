@@ -1057,12 +1057,27 @@ const SankalpTracker = (function() {
   async function sendServerReset() {
     progress = {};
     try { localStorage.removeItem('op300_tracker_progress'); } catch(e){}
-    await syncProgressToMainApp();
-    updateSyncUI('saved', 'Progress reset');
-
+    try { localStorage.removeItem('op300_entries_v2'); } catch(e){}
     try {
       await fetch('/api/tracker/reset', { method: 'POST' });
     } catch (e) {}
+    try {
+      await fetch('/api/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          resetAll: true,
+          ENTRIES: [],
+          TRACKER_PROGRESS: {},
+          HABITS_LOG: habitsLog,
+          CUSTOM_HABITS: customHabits,
+          CONFIG: config,
+          timestamp: Date.now()
+        })
+      });
+    } catch(e){}
+    await syncProgressToMainApp();
+    updateSyncUI('saved', 'Progress reset');
   }
 
   function dayTotals(day){
