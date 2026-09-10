@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
   :root {
     --bg-main: #FAFAFC;
@@ -5266,17 +5267,50 @@ window.ScoreRegisterModule = (function(){
   var state = { gs:{}, csat:{} };
   var chartsReady = false;
   var isInitialized = false;
-  var CHART_JS_URL = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js';
+  var CDN_URLS = [
+    'https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js',
+    'https://unpkg.com/chart.js@4.4.4/dist/chart.umd.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js'
+  ];
 
   function loadChartJs(){
     return new Promise(function(resolve){
-      if(typeof window.Chart !== 'undefined'){ resolve(true); return; }
-      var script = document.createElement('script');
-      script.src = CHART_JS_URL;
-      script.onload = function(){ resolve(typeof window.Chart !== 'undefined'); };
-      script.onerror = function(){ resolve(false); };
-      document.head.appendChild(script);
-      setTimeout(function(){ resolve(typeof window.Chart !== 'undefined'); }, 6000);
+      if(typeof window.Chart !== 'undefined'){
+        chartsReady = true;
+        resolve(true);
+        return;
+      }
+      var index = 0;
+      function tryNextCDN(){
+        if(typeof window.Chart !== 'undefined'){
+          chartsReady = true;
+          if(isInitialized) renderEverything();
+          resolve(true);
+          return;
+        }
+        if(index >= CDN_URLS.length){
+          chartsReady = typeof window.Chart !== 'undefined';
+          resolve(chartsReady);
+          return;
+        }
+        var script = document.createElement('script');
+        script.src = CDN_URLS[index++];
+        script.onload = function(){
+          chartsReady = typeof window.Chart !== 'undefined';
+          if(chartsReady && isInitialized) renderEverything();
+          resolve(chartsReady);
+        };
+        script.onerror = function(){
+          tryNextCDN();
+        };
+        document.head.appendChild(script);
+      }
+      tryNextCDN();
+      setTimeout(function(){
+        chartsReady = typeof window.Chart !== 'undefined';
+        if(chartsReady && isInitialized) renderEverything();
+        resolve(chartsReady);
+      }, 5000);
     });
   }
   var chartInstances = {};
@@ -5555,7 +5589,7 @@ window.ScoreRegisterModule = (function(){
         '<button type="submit">Add score</button>' +
       '</form>' +
       (entries.length
-        ? (chartsReady
+        ? ((typeof window.Chart !== 'undefined' || chartsReady)
             ? '<div class="chart-wrap"><canvas id="chart-' + key + '"></canvas></div>'
             : '<p class="empty-state">Chart library isn\'t available right now — your scores are still listed in the table below.</p>')
         : '<p class="empty-state">No scores yet. Add your first test above — the chart and analysis will appear here.</p>') +
@@ -5601,7 +5635,7 @@ window.ScoreRegisterModule = (function(){
       });
     });
 
-    if(entries.length && chartsReady){
+    if(entries.length && (typeof window.Chart !== 'undefined' || chartsReady)){
       renderLineChart('chart-' + key, entries, meta.color);
     }
   }
