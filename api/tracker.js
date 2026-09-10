@@ -1,6 +1,20 @@
+const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a0898aa8da600d';
 let trackerProgress = {};
 
-module.exports = (req, res) => {
+async function fetchCloudProgress() {
+  try {
+    const res = await fetch(CLOUD_SYNC_URL);
+    if (res.ok) {
+      const json = await res.json();
+      if (json && json.data && json.data.TRACKER_PROGRESS) {
+        trackerProgress = json.data.TRACKER_PROGRESS;
+      }
+    }
+  } catch (e) {}
+  return trackerProgress;
+}
+
+module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -11,10 +25,12 @@ module.exports = (req, res) => {
 
   const url = req.url || '';
   if (url.includes('/progress')) {
-    return res.status(200).json({ success: true, progress: trackerProgress, updatedAt: new Date().toISOString() });
+    const prog = await fetchCloudProgress();
+    return res.status(200).json({ success: true, progress: prog, updatedAt: new Date().toISOString() });
   }
 
   if (url.includes('/update')) {
+    await fetchCloudProgress();
     const body = req.body || {};
     const { day, key, checked, note, progress } = body;
     if (progress && typeof progress === 'object') {
@@ -29,8 +45,23 @@ module.exports = (req, res) => {
         trackerProgress[day].notes[key] = note;
       }
     }
+
+    try {
+      fetch(CLOUD_SYNC_URL).then(r => r.json()).then(json => {
+        const data = (json && json.data) ? json.data : {};
+        data.TRACKER_PROGRESS = trackerProgress;
+        data.timestamp = Date.now();
+        return fetch(CLOUD_SYNC_URL, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: 'MainsLog_Anish_Sync_Key', data })
+        });
+      }).catch(() => {});
+    } catch(e) {}
+
     return res.status(200).json({ success: true, progress: trackerProgress, updatedAt: new Date().toISOString() });
   }
 
-  return res.status(200).json({ success: true, progress: trackerProgress });
+  const prog = await fetchCloudProgress();
+  return res.status(200).json({ success: true, progress: prog });
 };
