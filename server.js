@@ -111,8 +111,37 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'POST') {
       try {
         const body = await parseJsonBody(req);
-        const saved = writeSyncData(body);
-        return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp });
+        const existingData = readSyncData();
+        const entryMap = new Map();
+        (existingData.ENTRIES || []).forEach(e => { if (e && e.id) entryMap.set(e.id, e); });
+        (body.ENTRIES || []).forEach(e => {
+          if (e && e.id) {
+            if (!entryMap.has(e.id)) {
+              entryMap.set(e.id, e);
+            } else {
+              const oldItem = entryMap.get(e.id);
+              entryMap.set(e.id, {
+                ...oldItem,
+                ...e,
+                r0Done: oldItem.r0Done || e.r0Done,
+                sundayDone: oldItem.sundayDone || e.sundayDone,
+                monthlyDone: oldItem.monthlyDone || e.monthlyDone,
+                biMonthlyDone: oldItem.biMonthlyDone || e.biMonthlyDone
+              });
+            }
+          }
+        });
+
+        const mergedEntries = Array.from(entryMap.values());
+        const mergedHabits = { ...(existingData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
+        const updated = {
+          ...existingData,
+          ...body,
+          ENTRIES: mergedEntries,
+          HABITS_LOG: mergedHabits
+        };
+        const saved = writeSyncData(updated);
+        return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, data: saved });
       } catch (e) {
         return sendJsonResponse(res, 400, { success: false, error: 'Invalid JSON' });
       }

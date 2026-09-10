@@ -3310,19 +3310,63 @@ async function pushToCentralServer() {
   } catch(err){}
 }
 
+function mergeEntries(localEntries, serverEntries) {
+  if (!Array.isArray(serverEntries)) return localEntries || [];
+  if (!Array.isArray(localEntries)) return serverEntries || [];
+
+  const map = new Map();
+  (localEntries || []).forEach(e => { if (e && e.id) map.set(e.id, e); });
+  (serverEntries || []).forEach(e => {
+    if (e && e.id) {
+      if (!map.has(e.id)) {
+        map.set(e.id, e);
+      } else {
+        const localItem = map.get(e.id);
+        map.set(e.id, {
+          ...localItem,
+          ...e,
+          r0Done: localItem.r0Done || e.r0Done,
+          sundayDone: localItem.sundayDone || e.sundayDone,
+          monthlyDone: localItem.monthlyDone || e.monthlyDone,
+          biMonthlyDone: localItem.biMonthlyDone || e.biMonthlyDone
+        });
+      }
+    }
+  });
+  return Array.from(map.values());
+}
+
 async function pollCentralServer() {
   try {
     const res = await fetch('/api/sync');
     if (res.ok) {
       const data = await res.json();
-      if (data && data.timestamp && data.timestamp > lastLocalSyncTime) {
-        lastLocalSyncTime = data.timestamp;
-        if (data.ENTRIES) ENTRIES = data.ENTRIES;
-        if (data.HABITS_LOG) HABITS_LOG = data.HABITS_LOG;
-        if (data.CUSTOM_HABITS) CUSTOM_HABITS = data.CUSTOM_HABITS;
-        if (data.CONFIG) CONFIG = data.CONFIG;
-        saveData(); renderAll();
-        if (document.getElementById('popupModal').classList.contains('active')) { renderPopupContent(); }
+      if (data) {
+        let updated = false;
+        if (data.ENTRIES && Array.isArray(data.ENTRIES)) {
+          const merged = mergeEntries(ENTRIES, data.ENTRIES);
+          if (merged.length !== ENTRIES.length || JSON.stringify(merged) !== JSON.stringify(ENTRIES)) {
+            ENTRIES = merged;
+            updated = true;
+          }
+        }
+        if (data.HABITS_LOG && typeof data.HABITS_LOG === 'object') {
+          const mergedHabits = { ...(HABITS_LOG || {}), ...(data.HABITS_LOG || {}) };
+          if (JSON.stringify(mergedHabits) !== JSON.stringify(HABITS_LOG)) {
+            HABITS_LOG = mergedHabits;
+            updated = true;
+          }
+        }
+        if (data.CUSTOM_HABITS && Array.isArray(data.CUSTOM_HABITS) && data.CUSTOM_HABITS.length > CUSTOM_HABITS.length) {
+          CUSTOM_HABITS = data.CUSTOM_HABITS;
+          updated = true;
+        }
+        if (updated) {
+          if (data.timestamp) lastLocalSyncTime = data.timestamp;
+          saveData();
+          renderAll();
+          if (document.getElementById('popupModal').classList.contains('active')) { renderPopupContent(); }
+        }
       }
     }
   } catch(err){}
@@ -4477,8 +4521,9 @@ function renderPopupContent() {
   try { loadData(); } catch(e){ console.error("loadData error:", e); }
   try { renderAll(); } catch(e){ console.error("renderAll error:", e); }
 
-  try { pushToCentralServer(); } catch(e){}
+  try { pollCentralServer(); } catch(e){}
   try { fetchTrackerProgress(); } catch(e){}
+  try { pushToCentralServer(); } catch(e){}
   try { setInterval(pollCentralServer, 1500); } catch(e){}
   try { setInterval(fetchTrackerProgress, 1500); } catch(e){}
   try { setInterval(updateLiveClockAndSync, 1000); } catch(e){}
