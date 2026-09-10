@@ -891,28 +891,36 @@ const SankalpTracker = (function() {
         continue;
       }
       const sDay = serverProg[day];
-      if (sDay.checks) {
-        if (!merged[day].checks) merged[day].checks = {};
-        for (const k in sDay.checks) {
-          if (sDay.checks[k]) {
-            merged[day].checks[k] = true;
+      const mDay = merged[day];
+
+      if (!mDay.checks) mDay.checks = {};
+      if (!mDay.notes) mDay.notes = {};
+      if (!mDay.dates) mDay.dates = {};
+      if (!mDay.timestamps) mDay.timestamps = {};
+
+      const sChecks = sDay.checks || {};
+      const sNotes = sDay.notes || {};
+      const sDates = sDay.dates || {};
+      const sTimestamps = sDay.timestamps || {};
+
+      for (const k in sChecks) {
+        const localTime = mDay.timestamps[k] || 0;
+        const serverTime = typeof sTimestamps[k] === 'number' ? sTimestamps[k] : (sTimestamps[k] ? new Date(sTimestamps[k]).getTime() : 0);
+
+        if (serverTime >= localTime) {
+          mDay.checks[k] = !!sChecks[k];
+          if (serverTime > 0) mDay.timestamps[k] = serverTime;
+          if (sChecks[k] && sDates[k]) {
+            mDay.dates[k] = sDates[k];
+          } else if (!sChecks[k]) {
+            delete mDay.dates[k];
           }
         }
       }
-      if (sDay.notes) {
-        if (!merged[day].notes) merged[day].notes = {};
-        for (const k in sDay.notes) {
-          if (sDay.notes[k] && !merged[day].notes[k]) {
-            merged[day].notes[k] = sDay.notes[k];
-          }
-        }
-      }
-      if (sDay.dates) {
-        if (!merged[day].dates) merged[day].dates = {};
-        for (const k in sDay.dates) {
-          if (sDay.dates[k] && !merged[day].dates[k]) {
-            merged[day].dates[k] = sDay.dates[k];
-          }
+
+      for (const k in sNotes) {
+        if (sNotes[k] && !mDay.notes[k]) {
+          mDay.notes[k] = sNotes[k];
         }
       }
     }

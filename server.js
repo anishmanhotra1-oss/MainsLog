@@ -129,6 +129,55 @@ function mergeSingleEntry(oldItem, incomingItem) {
   return res;
 }
 
+function mergeTrackerProgress(localProg, serverProg) {
+  let merged = {};
+  if (localProg && typeof localProg === 'object') {
+    try { merged = JSON.parse(JSON.stringify(localProg)); } catch(e){ merged = {}; }
+  }
+  if (!serverProg || typeof serverProg !== 'object') return merged;
+
+  for (const day in serverProg) {
+    if (!merged[day]) {
+      merged[day] = JSON.parse(JSON.stringify(serverProg[day]));
+      continue;
+    }
+    const sDay = serverProg[day];
+    const mDay = merged[day];
+
+    if (!mDay.checks) mDay.checks = {};
+    if (!mDay.notes) mDay.notes = {};
+    if (!mDay.dates) mDay.dates = {};
+    if (!mDay.timestamps) mDay.timestamps = {};
+
+    const sChecks = sDay.checks || {};
+    const sNotes = sDay.notes || {};
+    const sDates = sDay.dates || {};
+    const sTimestamps = sDay.timestamps || {};
+
+    for (const k in sChecks) {
+      const localTime = mDay.timestamps[k] || 0;
+      const serverTime = typeof sTimestamps[k] === 'number' ? sTimestamps[k] : (sTimestamps[k] ? new Date(sTimestamps[k]).getTime() : 0);
+
+      if (serverTime >= localTime) {
+        mDay.checks[k] = !!sChecks[k];
+        if (serverTime > 0) mDay.timestamps[k] = serverTime;
+        if (sChecks[k] && sDates[k]) {
+          mDay.dates[k] = sDates[k];
+        } else if (!sChecks[k]) {
+          delete mDay.dates[k];
+        }
+      }
+    }
+
+    for (const k in sNotes) {
+      if (sNotes[k] && !mDay.notes[k]) {
+        mDay.notes[k] = sNotes[k];
+      }
+    }
+  }
+  return merged;
+}
+
   // API Endpoints
   if (reqPath === '/api/sync') {
     if (req.method === 'GET') {
@@ -154,17 +203,7 @@ function mergeSingleEntry(oldItem, incomingItem) {
 
         const mergedEntries = Array.from(entryMap.values());
         const mergedHabits = { ...(existingData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
-        
-        let mergedTrackerProgress = existingData.TRACKER_PROGRESS || {};
-        if (body.TRACKER_PROGRESS || body.progress) {
-          const incomingProg = body.TRACKER_PROGRESS || body.progress;
-          for (const d in incomingProg) {
-            if (!mergedTrackerProgress[d]) mergedTrackerProgress[d] = { checks: {}, notes: {}, dates: {} };
-            if (incomingProg[d].checks) mergedTrackerProgress[d].checks = { ...(mergedTrackerProgress[d].checks || {}), ...incomingProg[d].checks };
-            if (incomingProg[d].notes) mergedTrackerProgress[d].notes = { ...(mergedTrackerProgress[d].notes || {}), ...incomingProg[d].notes };
-            if (incomingProg[d].dates) mergedTrackerProgress[d].dates = { ...(mergedTrackerProgress[d].dates || {}), ...incomingProg[d].dates };
-          }
-        }
+        const mergedTrackerProgress = mergeTrackerProgress(existingData.TRACKER_PROGRESS, body.TRACKER_PROGRESS || body.progress);
 
         const updated = {
           ...existingData,
