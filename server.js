@@ -47,12 +47,12 @@ function writeProgressData(data) {
 function readSyncData() {
   ensureStorage();
   if (!fs.existsSync(SYNC_FILE)) {
-    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, timestamp: 0 };
+    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, timestamp: 0 };
   }
   try {
     return JSON.parse(fs.readFileSync(SYNC_FILE, 'utf-8'));
   } catch (e) {
-    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, timestamp: 0 };
+    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, timestamp: 0 };
   }
 }
 
@@ -185,6 +185,45 @@ function mergeTrackerProgress(localProg, serverProg) {
   return merged;
 }
 
+function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []) {
+  const delSet = new Set(deletedScoreIds || []);
+  const res = { gs: {}, csat: {} };
+  const existing = existingScores || { gs: {}, csat: {} };
+  const incoming = incomingScores || { gs: {}, csat: {} };
+
+  const mergeSubObj = (oldObj, incObj, targetKey) => {
+    const keys = new Set([...Object.keys(oldObj || {}), ...Object.keys(incObj || {})]);
+    keys.forEach(k => {
+      const oldArr = oldObj[k] || [];
+      const incArr = incObj[k] || [];
+      const map = new Map();
+
+      oldArr.forEach(e => {
+        if (e && e.id && !delSet.has(e.id)) map.set(e.id, e);
+      });
+      incArr.forEach(e => {
+        if (e && e.id && !delSet.has(e.id)) {
+          if (!map.has(e.id)) {
+            map.set(e.id, e);
+          } else {
+            map.set(e.id, { ...map.get(e.id), ...e });
+          }
+        }
+      });
+      const mergedList = Array.from(map.values());
+      mergedList.sort((a,b) => {
+        if (a.date !== b.date) return a.date < b.date ? -1 : 1;
+        return (a.order || 0) - (b.order || 0);
+      });
+      res[targetKey][k] = mergedList;
+    });
+  };
+
+  mergeSubObj(existing.gs || {}, incoming.gs || {}, 'gs');
+  mergeSubObj(existing.csat || {}, incoming.csat || {}, 'csat');
+  return res;
+}
+
   // API Endpoints
   if (reqPath === '/api/sync') {
     if (req.method === 'GET') {
@@ -203,6 +242,7 @@ function mergeTrackerProgress(localProg, serverProg) {
             HABITS_LOG: {},
             CUSTOM_HABITS: body.CUSTOM_HABITS || [],
             CONFIG: body.CONFIG || {},
+            SCORE_REGISTER: { gs: {}, csat: {} },
             timestamp: Date.now()
           };
           const saved = writeSyncData(resetData);
@@ -232,13 +272,15 @@ function mergeTrackerProgress(localProg, serverProg) {
         const mergedEntries = Array.from(entryMap.values());
         const mergedHabits = { ...(existingData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
         const mergedTrackerProgress = mergeTrackerProgress(existingData.TRACKER_PROGRESS, body.TRACKER_PROGRESS || body.progress);
+        const mergedScoreRegister = mergeScoreRegister(existingData.SCORE_REGISTER, body.SCORE_REGISTER, body.deletedScoreIds);
 
         const updated = {
           ...existingData,
           ...body,
           ENTRIES: mergedEntries,
           HABITS_LOG: mergedHabits,
-          TRACKER_PROGRESS: mergedTrackerProgress
+          TRACKER_PROGRESS: mergedTrackerProgress,
+          SCORE_REGISTER: mergedScoreRegister
         };
         const saved = writeSyncData(updated);
         return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, data: saved });

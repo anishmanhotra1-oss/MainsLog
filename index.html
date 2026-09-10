@@ -2598,12 +2598,98 @@
   .score-register-root .trend-down { background: #FEF2F2; color: #DC2626; border: 1px solid #FCA5A5; }
   .score-register-root .trend-flat { background: #F1F5F9; color: #64748B; border: 1px solid #E2E8F0; }
 
-  @media (max-width: 720px) {
-    .score-register-root .gs-layout { grid-template-columns: 1fr; }
-    .score-register-root .subject-rail { display: flex; overflow-x: auto; }
-    .score-register-root .rail-btn { border-left: none; border-bottom: none; border-right: 1px solid var(--border-color); flex-shrink: 0; }
-    .score-register-root .rail-btn.active { border-left: none; border-bottom: 3px solid var(--dot, var(--brand-blue)); }
-    .score-register-root .entry-form { grid-template-columns: 1fr 1fr; }
+  /* Mobile Responsiveness for Score Register */
+  #tab-scores {
+    padding-bottom: 110px;
+  }
+
+  @media (max-width: 768px) {
+    .score-register-root .masthead h1 { font-size: 1.65rem; }
+    .score-register-root .section-switch {
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 10px;
+      padding: 3px;
+      scrollbar-width: none;
+    }
+    .score-register-root .section-switch::-webkit-scrollbar { display: none; }
+    .score-register-root .switch-btn {
+      flex: 1 0 auto;
+      text-align: center;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+    }
+    .score-register-root .gs-layout { grid-template-columns: 1fr; gap: 14px; }
+    .score-register-root .subject-rail {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;
+      border-radius: 12px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .score-register-root .subject-rail::-webkit-scrollbar { display: none; }
+    .score-register-root .rail-btn {
+      flex: 0 0 auto;
+      width: auto;
+      border-left: none;
+      border-bottom: none;
+      border-right: 1px solid var(--border-color);
+      padding: 10px 14px;
+      font-size: 0.82rem;
+    }
+    .score-register-root .rail-btn.active {
+      border-left: none;
+      border-bottom: 3px solid var(--dot, var(--brand-blue));
+    }
+    .score-register-root .subject-panel,
+    .score-register-root .block {
+      padding: 16px 14px;
+      border-radius: 14px;
+    }
+    .score-register-root .panel-head {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .score-register-root .panel-head h2 { font-size: 1.25rem; }
+    .score-register-root .stat-num { font-size: 1.5rem; }
+    .score-register-root .entry-form {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      padding: 12px;
+    }
+    .score-register-root .entry-form button {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-top: 4px;
+      padding: 11px;
+    }
+    .score-register-root .card-row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .score-register-root .card { padding: 12px 14px; }
+    .score-register-root .card .num { font-size: 1.4rem; }
+    .score-register-root .chart-box,
+    .score-register-root .chart-wrap { height: 200px; }
+    .score-register-root table.entry-table { min-width: 480px; }
+    .score-register-root .entry-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .score-register-root .entry-form { grid-template-columns: 1fr; }
     .score-register-root .card-row { grid-template-columns: 1fr 1fr; }
   }
 </style>
@@ -3723,8 +3809,15 @@ async function pushToCentralServer(extraData = {}) {
   saveData();
   try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
 
+  const scoreState = (window.ScoreRegisterModule && window.ScoreRegisterModule.getState) ? window.ScoreRegisterModule.getState() : {};
+  const deletedScoreIds = (window.ScoreRegisterModule && window.ScoreRegisterModule.getDeletedIds) ? window.ScoreRegisterModule.getDeletedIds() : [];
+
   const payload = {
-    ENTRIES, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG, timestamp: Date.now(), ...extraData
+    ENTRIES, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG,
+    SCORE_REGISTER: scoreState,
+    deletedScoreIds: deletedScoreIds,
+    timestamp: Date.now(),
+    ...extraData
   };
 
   try {
@@ -3828,6 +3921,9 @@ async function pollCentralServer() {
         if (data.CUSTOM_HABITS && Array.isArray(data.CUSTOM_HABITS) && data.CUSTOM_HABITS.length > CUSTOM_HABITS.length) {
           CUSTOM_HABITS = data.CUSTOM_HABITS;
           updated = true;
+        }
+        if (data.SCORE_REGISTER && window.ScoreRegisterModule && typeof window.ScoreRegisterModule.mergeCloudScores === 'function') {
+          window.ScoreRegisterModule.mergeCloudScores(data.SCORE_REGISTER);
         }
         if (updated) {
           if (data.timestamp) lastLocalSyncTime = data.timestamp;
@@ -5083,6 +5179,26 @@ window.ScoreRegisterModule = (function(){
   var activeGSSubject = 'Polity';
   var saveNoteTimer = null;
 
+  var deletedScoreIds = new Set();
+  try {
+    var storedDel = localStorage.getItem('mainslog_deleted_score_ids');
+    if (storedDel) JSON.parse(storedDel).forEach(function(id){ deletedScoreIds.add(id); });
+  } catch(e){}
+
+  function recordDeletedScoreId(id) {
+    if (!id) return;
+    deletedScoreIds.add(id);
+    try { localStorage.setItem('mainslog_deleted_score_ids', JSON.stringify(Array.from(deletedScoreIds))); } catch(e){}
+  }
+
+  function getState() {
+    return JSON.parse(JSON.stringify(state));
+  }
+
+  function getDeletedIds() {
+    return Array.from(deletedScoreIds);
+  }
+
   function storageKey(section, subjectKey){
     return section === 'gs' ? ('gs_' + subjectKey) : ('csat_' + subjectKey);
   }
@@ -5107,12 +5223,67 @@ window.ScoreRegisterModule = (function(){
     var jsonStr = JSON.stringify(arr);
     try { localStorage.setItem('mainslog_score_' + key, jsonStr); } catch(e){}
     flashSaved();
+    if (typeof pushToCentralServer === 'function') {
+      pushToCentralServer();
+    }
     if(window.storage && typeof window.storage.set === 'function'){
       return window.storage.set(key, jsonStr, false).catch(function(err){
         console.error('Storage error', err);
       });
     }
     return Promise.resolve();
+  }
+
+  function mergeCloudScores(cloudScoreReg) {
+    if (!cloudScoreReg || typeof cloudScoreReg !== 'object') return;
+    var updated = false;
+
+    var mergeSection = function(sectionKey, cloudObj) {
+      if (!cloudObj || typeof cloudObj !== 'object') return;
+      Object.keys(cloudObj).forEach(function(subKey) {
+        var cloudArr = cloudObj[subKey] || [];
+        var localArr = state[sectionKey] ? (state[sectionKey][subKey] || []) : [];
+        var map = new Map();
+
+        localArr.forEach(function(item) {
+          if (item && item.id && !deletedScoreIds.has(item.id)) {
+            map.set(item.id, item);
+          }
+        });
+
+        cloudArr.forEach(function(item) {
+          if (item && item.id && !deletedScoreIds.has(item.id)) {
+            if (!map.has(item.id)) {
+              map.set(item.id, item);
+              updated = true;
+            } else {
+              var oldItem = map.get(item.id);
+              if (JSON.stringify(oldItem) !== JSON.stringify(item)) {
+                map.set(item.id, Object.assign({}, oldItem, item));
+                updated = true;
+              }
+            }
+          }
+        });
+
+        var merged = Array.from(map.values());
+        sortEntries(merged);
+        if (JSON.stringify(merged) !== JSON.stringify(localArr)) {
+          if (!state[sectionKey]) state[sectionKey] = {};
+          state[sectionKey][subKey] = merged;
+          var key = storageKey(sectionKey, subKey);
+          try { localStorage.setItem('mainslog_score_' + key, JSON.stringify(merged)); } catch(e){}
+          updated = true;
+        }
+      });
+    };
+
+    mergeSection('gs', cloudScoreReg.gs);
+    mergeSection('csat', cloudScoreReg.csat);
+
+    if (updated && isInitialized) {
+      renderEverything();
+    }
   }
 
   function flashSaved(msg){
@@ -5267,7 +5438,7 @@ window.ScoreRegisterModule = (function(){
             : '<p class="empty-state">Chart library isn\'t available right now — your scores are still listed in the table below.</p>')
         : '<p class="empty-state">No scores yet. Add your first test above — the chart and analysis will appear here.</p>') +
       '<p class="analysis-text" style="border-left-color:' + meta.color + '">' + analysisSentence(stats, meta.label) + '</p>' +
-      (entries.length ? '<table class="entry-table"><thead><tr><th>Date</th><th>Test</th><th>Marks</th><th>Score</th><th></th></tr></thead><tbody>' + rowsHtml + '</tbody></table>' : '');
+      (entries.length ? '<div class="entry-table-wrap"><table class="entry-table"><thead><tr><th>Date</th><th>Test</th><th>Marks</th><th>Score</th><th></th></tr></thead><tbody>' + rowsHtml + '</tbody></table></div>' : '');
 
     var form = document.getElementById('form-' + key);
     if(form){
@@ -5298,6 +5469,7 @@ window.ScoreRegisterModule = (function(){
     container.querySelectorAll('.del-btn').forEach(function(btn){
       btn.addEventListener('click', function(){
         var id = btn.dataset.id;
+        recordDeletedScoreId(id);
         var updated = entries.filter(function(e){ return e.id !== id; });
         if(section === 'gs') state.gs[meta.key] = updated; else state.csat[meta.key] = updated;
         saveSection(key, updated).then(function(){
@@ -5527,7 +5699,13 @@ window.ScoreRegisterModule = (function(){
     });
   }
 
-  return { init: init, renderEverything: renderEverything };
+  return {
+    init: init,
+    renderEverything: renderEverything,
+    getState: getState,
+    getDeletedIds: getDeletedIds,
+    mergeCloudScores: mergeCloudScores
+  };
 })();
 
 (function init() {

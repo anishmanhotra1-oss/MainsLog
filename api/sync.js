@@ -119,6 +119,45 @@ function mergeSingleEntry(oldItem, incomingItem) {
   return res;
 }
 
+function mergeScoreRegister(existingScores, incomingScores, deletedScoreIds = []) {
+  const delSet = new Set(deletedScoreIds || []);
+  const res = { gs: {}, csat: {} };
+  const existing = existingScores || { gs: {}, csat: {} };
+  const incoming = incomingScores || { gs: {}, csat: {} };
+
+  const mergeSubObj = (oldObj, incObj, targetKey) => {
+    const keys = new Set([...Object.keys(oldObj || {}), ...Object.keys(incObj || {})]);
+    keys.forEach(k => {
+      const oldArr = oldObj[k] || [];
+      const incArr = incObj[k] || [];
+      const map = new Map();
+
+      oldArr.forEach(e => {
+        if (e && e.id && !delSet.has(e.id)) map.set(e.id, e);
+      });
+      incArr.forEach(e => {
+        if (e && e.id && !delSet.has(e.id)) {
+          if (!map.has(e.id)) {
+            map.set(e.id, e);
+          } else {
+            map.set(e.id, { ...map.get(e.id), ...e });
+          }
+        }
+      });
+      const mergedList = Array.from(map.values());
+      mergedList.sort((a,b) => {
+        if (a.date !== b.date) return a.date < b.date ? -1 : 1;
+        return (a.order || 0) - (b.order || 0);
+      });
+      res[targetKey][k] = mergedList;
+    });
+  };
+
+  mergeSubObj(existing.gs || {}, incoming.gs || {}, 'gs');
+  mergeSubObj(existing.csat || {}, incoming.csat || {}, 'csat');
+  return res;
+}
+
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -144,6 +183,7 @@ module.exports = async (req, res) => {
         HABITS_LOG: {},
         CUSTOM_HABITS: body.CUSTOM_HABITS || [],
         CONFIG: body.CONFIG || {},
+        SCORE_REGISTER: { gs: {}, csat: {} },
         timestamp: Date.now()
       };
       await saveCloudSyncData(resetData);
@@ -174,6 +214,7 @@ module.exports = async (req, res) => {
     const mergedEntries = Array.from(entryMap.values());
     const mergedHabits = { ...(currentData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
     const mergedTrackerProgress = mergeTrackerProgress(currentData.TRACKER_PROGRESS, body.TRACKER_PROGRESS || body.progress);
+    const mergedScoreRegister = mergeScoreRegister(currentData.SCORE_REGISTER, body.SCORE_REGISTER, body.deletedScoreIds);
 
     const updatedData = {
       ...currentData,
@@ -181,6 +222,7 @@ module.exports = async (req, res) => {
       ENTRIES: mergedEntries,
       HABITS_LOG: mergedHabits,
       TRACKER_PROGRESS: mergedTrackerProgress,
+      SCORE_REGISTER: mergedScoreRegister,
       timestamp: Date.now()
     };
 
@@ -191,7 +233,8 @@ module.exports = async (req, res) => {
       timestamp: updatedData.timestamp,
       ENTRIES: updatedData.ENTRIES,
       TRACKER_PROGRESS: updatedData.TRACKER_PROGRESS,
-      HABITS_LOG: updatedData.HABITS_LOG
+      HABITS_LOG: updatedData.HABITS_LOG,
+      SCORE_REGISTER: updatedData.SCORE_REGISTER
     });
   }
 
