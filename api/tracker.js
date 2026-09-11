@@ -8,6 +8,8 @@ function parseTime(t) {
   return isNaN(parsed) ? 0 : parsed;
 }
 
+let lastCloudTimestamp = 0;
+
 function mergeTrackerProgress(localProg, serverProg) {
   let merged = {};
   if (localProg && typeof localProg === 'object') {
@@ -49,8 +51,11 @@ function mergeTrackerProgress(localProg, serverProg) {
     }
 
     for (const k in sNotes) {
-      if (sNotes[k] && !mDay.notes[k]) {
+      const localNoteTime = parseTime(mDay.timestamps[k + '_note'] || mDay.timestamps[k]);
+      const serverNoteTime = parseTime(sTimestamps[k + '_note'] || sTimestamps[k]);
+      if (serverNoteTime >= localNoteTime || !mDay.notes[k]) {
         mDay.notes[k] = sNotes[k];
+        if (serverNoteTime > 0) mDay.timestamps[k + '_note'] = serverNoteTime;
       }
     }
   }
@@ -62,8 +67,13 @@ async function fetchCloudProgress() {
     const res = await fetch(CLOUD_SYNC_URL);
     if (res.ok) {
       const json = await res.json();
-      if (json && json.data && json.data.TRACKER_PROGRESS) {
-        trackerProgress = mergeTrackerProgress(trackerProgress, json.data.TRACKER_PROGRESS);
+      if (json && json.data) {
+        if (json.data.TRACKER_PROGRESS) {
+          trackerProgress = mergeTrackerProgress(trackerProgress, json.data.TRACKER_PROGRESS);
+        }
+        if (json.data.timestamp) {
+          lastCloudTimestamp = json.data.timestamp;
+        }
       }
     }
   } catch (e) {}
@@ -79,6 +89,7 @@ async function saveCloudProgress(prog) {
       const data = (json && json.data) ? json.data : {};
       data.TRACKER_PROGRESS = trackerProgress;
       data.timestamp = Date.now();
+      lastCloudTimestamp = data.timestamp;
       await fetch(CLOUD_SYNC_URL, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -100,7 +111,7 @@ module.exports = async (req, res) => {
   const url = req.url || '';
   if (url.includes('/progress')) {
     const prog = await fetchCloudProgress();
-    return res.status(200).json({ success: true, progress: prog, updatedAt: new Date().toISOString() });
+    return res.status(200).json({ success: true, progress: prog, updatedAt: new Date(lastCloudTimestamp || Date.now()).toISOString(), timestamp: lastCloudTimestamp });
   }
 
   if (url.includes('/update')) {
@@ -130,13 +141,14 @@ module.exports = async (req, res) => {
       if (note !== undefined) {
         if (!trackerProgress[day].notes) trackerProgress[day].notes = {};
         trackerProgress[day].notes[key] = note;
+        trackerProgress[day].timestamps[key + '_note'] = now;
       }
     }
 
     await saveCloudProgress(trackerProgress);
-    return res.status(200).json({ success: true, progress: trackerProgress, updatedAt: new Date().toISOString() });
+    return res.status(200).json({ success: true, progress: trackerProgress, updatedAt: new Date(lastCloudTimestamp || Date.now()).toISOString(), timestamp: lastCloudTimestamp });
   }
 
   const prog = await fetchCloudProgress();
-  return res.status(200).json({ success: true, progress: prog });
+  return res.status(200).json({ success: true, progress: prog, timestamp: lastCloudTimestamp });
 };

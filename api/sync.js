@@ -86,8 +86,11 @@ function mergeTrackerProgress(localProg, serverProg) {
     }
 
     for (const k in sNotes) {
-      if (sNotes[k] && !mDay.notes[k]) {
+      const localNoteTime = parseTime(mDay.timestamps[k + '_note'] || mDay.timestamps[k]);
+      const serverNoteTime = parseTime(sTimestamps[k + '_note'] || sTimestamps[k]);
+      if (serverNoteTime >= localNoteTime || !mDay.notes[k]) {
         mDay.notes[k] = sNotes[k];
+        if (serverNoteTime > 0) mDay.timestamps[k + '_note'] = serverNoteTime;
       }
     }
   }

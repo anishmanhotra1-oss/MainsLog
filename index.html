@@ -3583,8 +3583,11 @@ function mergeTrackerProgress(localProg, serverProg) {
     }
 
     for (const k in sNotes) {
-      if (sNotes[k] && !mDay.notes[k]) {
+      const localNoteTime = parseTime(mDay.timestamps[k + '_note'] || mDay.timestamps[k]);
+      const serverNoteTime = parseTime(sTimestamps[k + '_note'] || sTimestamps[k]);
+      if (serverNoteTime >= localNoteTime || !mDay.notes[k]) {
         mDay.notes[k] = sNotes[k];
+        if (serverNoteTime > 0) mDay.timestamps[k + '_note'] = serverNoteTime;
       }
     }
   }
@@ -3708,15 +3711,6 @@ async function updateTrackerTaskState(day, key, checked, taskObj) {
   ENTRIES = ENTRIES.filter(isValidEntry);
   saveData();
   pushToCentralServer();
-
-  try {
-    await fetch('/api/tracker/update', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ day, key, checked, timestamp: now })
-    });
-  } catch(e){}
-
   renderAll();
 }
 
@@ -5971,6 +5965,19 @@ window.ScoreRegisterModule = (function(){
   try { setInterval(pollCentralServer, 1500); } catch(e){}
   try { setInterval(fetchTrackerProgress, 1500); } catch(e){}
   try { setInterval(updateLiveClockAndSync, 1000); } catch(e){}
+
+  try {
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        pollCentralServer();
+        fetchTrackerProgress();
+      }
+    });
+    window.addEventListener('focus', () => {
+      pollCentralServer();
+      fetchTrackerProgress();
+    });
+  } catch(e){}
 
   try {
     if (!sessionStorage.getItem('op300_poem_shown') && !localStorage.getItem('op300_poem_shown')) {

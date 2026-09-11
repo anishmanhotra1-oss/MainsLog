@@ -768,7 +768,7 @@ const SankalpTracker = (function() {
     return baseText;
   }
 
-  async function syncProgressToMainApp() {
+  async function syncProgressToMainApp(skipServerPush = false) {
     let entries = [];
     let habitsLog = {};
     let customHabits = [];
@@ -845,6 +845,8 @@ const SankalpTracker = (function() {
     try {
       syncChannel.postMessage('SYNC_UPDATE');
     } catch(e){}
+
+    if (skipServerPush) return;
 
     let scoreRegister = { gs: {}, csat: {} };
     try {
@@ -940,8 +942,11 @@ const SankalpTracker = (function() {
       }
 
       for (const k in sNotes) {
-        if (sNotes[k] && !mDay.notes[k]) {
+        const localNoteTime = parseTime(mDay.timestamps[k + '_note'] || mDay.timestamps[k]);
+        const serverNoteTime = parseTime(sTimestamps[k + '_note'] || sTimestamps[k]);
+        if (serverNoteTime >= localNoteTime || !mDay.notes[k]) {
           mDay.notes[k] = sNotes[k];
+          if (serverNoteTime > 0) mDay.timestamps[k + '_note'] = serverNoteTime;
         }
       }
     }
@@ -1002,13 +1007,15 @@ const SankalpTracker = (function() {
       const res = await fetch('/api/tracker/progress');
       if (!res.ok) return;
       const data = await res.json();
-      if (data && data.success && data.updatedAt && data.updatedAt !== lastTrackerSyncTime) {
-        lastTrackerSyncTime = data.updatedAt;
-        if (data.progress) {
-          progress = mergeTrackerProgress(progress, data.progress);
+      if (data && data.success && data.progress) {
+        const updatedProg = mergeTrackerProgress(progress, data.progress);
+        const hasChanges = JSON.stringify(updatedProg) !== JSON.stringify(progress);
+        if (hasChanges || (data.updatedAt && data.updatedAt !== lastTrackerSyncTime)) {
+          if (data.updatedAt) lastTrackerSyncTime = data.updatedAt;
+          progress = updatedProg;
           try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
           renderDataPreservingFocus();
-          await syncProgressToMainApp();
+          await syncProgressToMainApp(true);
           updateSyncUI('saved', 'Synced');
         }
       }
@@ -1047,6 +1054,7 @@ const SankalpTracker = (function() {
     if (day && key) {
       if (!progress[day]) progress[day] = { checks: {}, notes: {}, dates: {}, timestamps: {} };
       if (!progress[day].checks) progress[day].checks = {};
+      if (!progress[day].notes) progress[day].notes = {};
       if (!progress[day].timestamps) progress[day].timestamps = {};
       if (!progress[day].dates) progress[day].dates = {};
 
@@ -1060,31 +1068,15 @@ const SankalpTracker = (function() {
         }
       }
       if (note !== undefined) {
-        if (!progress[day].notes) progress[day].notes = {};
         progress[day].notes[key] = note;
+        progress[day].timestamps[key + '_note'] = now;
       }
       try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
     }
 
-    await syncProgressToMainApp();
+    updateSyncUI('saving', 'Saving...');
+    await syncProgressToMainApp(false);
     updateSyncUI('saved', 'Saved');
-
-    try {
-      const res = await fetch('/api/tracker/update', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ day, key, checked, note, timestamp: now })
-      });
-      if (res.ok) {
-        const data = await res.json();
-        if (data && data.success && data.progress) {
-          progress = mergeTrackerProgress(progress, data.progress);
-          try { localStorage.setItem('op300_tracker_progress', JSON.stringify(progress)); } catch(e){}
-        }
-      }
-    } catch (e) {
-      console.log('Background server sync notice:', e);
-    }
   }
 
   async function sendServerReset() {
@@ -1243,14 +1235,18 @@ const SankalpTracker = (function() {
         const day = parseInt(e.target.dataset.day, 10);
         const notekey = e.target.dataset.notekey;
         const value = e.target.value;
+        const now = Date.now();
 
-        if (!progress[day]) progress[day] = { checks: {}, notes: {} };
+        if (!progress[day]) progress[day] = { checks: {}, notes: {}, timestamps: {} };
         if (!progress[day].notes) progress[day].notes = {};
+        if (!progress[day].timestamps) progress[day].timestamps = {};
+
         progress[day].notes[notekey] = value;
+        progress[day].timestamps[notekey + '_note'] = now;
 
         if (noteDebounceTimer) clearTimeout(noteDebounceTimer);
         noteDebounceTimer = setTimeout(async () => {
-          await sendServerUpdate({ day, key: notekey, note: value });
+          await sendServerUpdate({ day, key: notekey, note: value, timestamp: now });
         }, 400);
       }
     });
@@ -1487,8 +1483,17 @@ const SankalpTracker = (function() {
     await fetchServerProgress();
     renderData();
     applyFilters();
-    await syncProgressToMainApp();
-    setInterval(pollServerProgress, 1000);
+    await syncProgressToMainApp(false);
+    setInterval(pollServerProgress, 1500);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        pollServerProgress();
+      }
+    });
+    window.addEventListener('focus', () => {
+      pollServerProgress();
+    });
   }
 
   return { start };

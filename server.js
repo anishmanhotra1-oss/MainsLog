@@ -28,20 +28,23 @@ function ensureStorage() {
 }
 
 function readProgressData() {
-  ensureStorage();
-  try {
-    const raw = fs.readFileSync(DATA_FILE, 'utf-8');
-    return JSON.parse(raw);
-  } catch (e) {
-    return { progress: {}, updatedAt: new Date().toISOString() };
-  }
+  const syncData = readSyncData();
+  return {
+    progress: syncData.TRACKER_PROGRESS || {},
+    updatedAt: new Date(syncData.timestamp || 0).toISOString()
+  };
 }
 
 function writeProgressData(data) {
-  ensureStorage();
-  data.updatedAt = new Date().toISOString();
-  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
-  return data;
+  const syncData = readSyncData();
+  if (data.progress && typeof data.progress === 'object') {
+    syncData.TRACKER_PROGRESS = mergeTrackerProgress(syncData.TRACKER_PROGRESS, data.progress);
+  }
+  const saved = writeSyncData(syncData);
+  return {
+    progress: saved.TRACKER_PROGRESS || {},
+    updatedAt: new Date(saved.timestamp || 0).toISOString()
+  };
 }
 
 function readSyncData() {
@@ -177,8 +180,11 @@ function mergeTrackerProgress(localProg, serverProg) {
     }
 
     for (const k in sNotes) {
-      if (sNotes[k] && !mDay.notes[k]) {
+      const localNoteTime = parseTime(mDay.timestamps[k + '_note'] || mDay.timestamps[k]);
+      const serverNoteTime = parseTime(sTimestamps[k + '_note'] || sTimestamps[k]);
+      if (serverNoteTime >= localNoteTime || !mDay.notes[k]) {
         mDay.notes[k] = sNotes[k];
+        if (serverNoteTime > 0) mDay.timestamps[k + '_note'] = serverNoteTime;
       }
     }
   }
