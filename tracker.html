@@ -768,6 +768,18 @@ const SankalpTracker = (function() {
     return baseText;
   }
 
+  let deletedEntryIds = new Set();
+  try {
+    const storedDelEntries = localStorage.getItem('op300_deleted_entry_ids');
+    if (storedDelEntries) JSON.parse(storedDelEntries).forEach(id => deletedEntryIds.add(id));
+  } catch(e){}
+
+  function recordDeletedEntryId(id) {
+    if (!id) return;
+    deletedEntryIds.add(id);
+    try { localStorage.setItem('op300_deleted_entry_ids', JSON.stringify(Array.from(deletedEntryIds))); } catch(e){}
+  }
+
   async function syncProgressToMainApp(skipServerPush = false) {
     let entries = [];
     let habitsLog = {};
@@ -799,7 +811,7 @@ const SankalpTracker = (function() {
         const noteVal = notes[t.key] || '';
         const existingIdx = entries.findIndex(e => e.id === entryId);
 
-        if (isChecked) {
+        if (isChecked && !deletedEntryIds.has(entryId)) {
           const subject = mapTaskSubject(entry, t.key, t);
           const topic = mapTaskTopic(entry, t.key, t, noteVal);
           const dateStudied = dates[t.key] || (existingIdx >= 0 && entries[existingIdx].dateStudied ? entries[existingIdx].dateStudied : todayISO());
@@ -836,7 +848,7 @@ const SankalpTracker = (function() {
       });
     });
 
-    entries = entries.filter(isValidEntry);
+    entries = entries.filter(e => isValidEntry(e) && !deletedEntryIds.has(e.id));
 
     try {
       localStorage.setItem('op300_entries_v2', JSON.stringify(entries));
@@ -872,6 +884,7 @@ const SankalpTracker = (function() {
           CUSTOM_HABITS: customHabits,
           CONFIG: config,
           SCORE_REGISTER: scoreRegister,
+          deletedEntryIds: Array.from(deletedEntryIds),
           timestamp: Date.now()
         })
       });

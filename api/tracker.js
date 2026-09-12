@@ -81,13 +81,13 @@ async function fetchCloudProgress() {
 }
 
 async function saveCloudProgress(prog) {
-  trackerProgress = prog;
   try {
     const res = await fetch(CLOUD_SYNC_URL);
     if (res.ok) {
       const json = await res.json();
-      const data = (json && json.data) ? json.data : {};
-      data.TRACKER_PROGRESS = trackerProgress;
+      const data = (json && json.data && typeof json.data === 'object') ? json.data : {};
+      data.TRACKER_PROGRESS = mergeTrackerProgress(data.TRACKER_PROGRESS || {}, prog);
+      trackerProgress = data.TRACKER_PROGRESS;
       data.timestamp = Date.now();
       lastCloudTimestamp = data.timestamp;
       await fetch(CLOUD_SYNC_URL, {

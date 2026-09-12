@@ -50,12 +50,12 @@ function writeProgressData(data) {
 function readSyncData() {
   ensureStorage();
   if (!fs.existsSync(SYNC_FILE)) {
-    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, timestamp: 0 };
+    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
   }
   try {
     return JSON.parse(fs.readFileSync(SYNC_FILE, 'utf-8'));
   } catch (e) {
-    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, timestamp: 0 };
+    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
   }
 }
 
@@ -253,6 +253,7 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
             CONFIG: body.CONFIG || {},
             SCORE_REGISTER: { gs: {}, csat: {} },
             deletedScoreIds: [],
+            deletedEntryIds: [],
             timestamp: Date.now()
           };
           const saved = writeSyncData(resetData);
@@ -260,16 +261,20 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
         }
 
         const incomingEntries = body.ENTRIES || [];
-        const deletedIds = new Set(body.deletedIds || []);
+        const incomingDeletedEntryIds = body.deletedIds || body.deletedEntryIds || [];
+        const delEntrySet = new Set([
+          ...(existingData.deletedEntryIds || []),
+          ...(incomingDeletedEntryIds || [])
+        ]);
 
         const entryMap = new Map();
         (existingData.ENTRIES || []).forEach(e => {
-          if (e && e.id && !deletedIds.has(e.id)) {
+          if (e && e.id && !delEntrySet.has(e.id)) {
             entryMap.set(e.id, e);
           }
         });
         incomingEntries.forEach(e => {
-          if (e && e.id && !deletedIds.has(e.id)) {
+          if (e && e.id && !delEntrySet.has(e.id)) {
             if (!entryMap.has(e.id)) {
               entryMap.set(e.id, e);
             } else {
@@ -296,7 +301,8 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
           HABITS_LOG: mergedHabits,
           TRACKER_PROGRESS: mergedTrackerProgress,
           SCORE_REGISTER: mergedScores,
-          deletedScoreIds: mergedDeletedScoreIds
+          deletedScoreIds: mergedDeletedScoreIds,
+          deletedEntryIds: Array.from(delEntrySet)
         };
         const saved = writeSyncData(updated);
         return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, data: saved });

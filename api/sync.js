@@ -1,6 +1,6 @@
 const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a0898aa8da600d';
 
-let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, deletedScoreIds: [], timestamp: 0 };
+let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
 
 async function fetchCloudSyncData() {
   try {
@@ -16,6 +16,7 @@ async function fetchCloudSyncData() {
           CONFIG: json.data.CONFIG || memorySyncData.CONFIG,
           SCORE_REGISTER: json.data.SCORE_REGISTER || memorySyncData.SCORE_REGISTER,
           deletedScoreIds: Array.isArray(json.data.deletedScoreIds) ? json.data.deletedScoreIds : memorySyncData.deletedScoreIds,
+          deletedEntryIds: Array.isArray(json.data.deletedEntryIds) ? json.data.deletedEntryIds : memorySyncData.deletedEntryIds,
           timestamp: json.data.timestamp || memorySyncData.timestamp
         };
       }
@@ -193,6 +194,7 @@ module.exports = async (req, res) => {
         CONFIG: body.CONFIG || {},
         SCORE_REGISTER: { gs: {}, csat: {} },
         deletedScoreIds: [],
+        deletedEntryIds: [],
         timestamp: Date.now()
       };
       await saveCloudSyncData(resetData);
@@ -200,17 +202,21 @@ module.exports = async (req, res) => {
     }
 
     const incomingEntries = body.ENTRIES || [];
-    const deletedIds = new Set(body.deletedIds || []);
-    
+    const incomingDeletedEntryIds = body.deletedIds || body.deletedEntryIds || [];
+    const delEntrySet = new Set([
+      ...(currentData.deletedEntryIds || []),
+      ...(incomingDeletedEntryIds || [])
+    ]);
+
     // Merge entries using milestone timestamps so ticking & unticking sync perfectly cross-device
     const entryMap = new Map();
     (currentData.ENTRIES || []).forEach(e => {
-      if (e && e.id && !deletedIds.has(e.id)) {
+      if (e && e.id && !delEntrySet.has(e.id)) {
         entryMap.set(e.id, e);
       }
     });
     incomingEntries.forEach(e => {
-      if (e && e.id && !deletedIds.has(e.id)) {
+      if (e && e.id && !delEntrySet.has(e.id)) {
         if (!entryMap.has(e.id)) {
           entryMap.set(e.id, e);
         } else {
@@ -238,6 +244,7 @@ module.exports = async (req, res) => {
       TRACKER_PROGRESS: mergedTrackerProgress,
       SCORE_REGISTER: mergedScores,
       deletedScoreIds: mergedDeletedScoreIds,
+      deletedEntryIds: Array.from(delEntrySet),
       timestamp: Date.now()
     };
 
@@ -249,8 +256,11 @@ module.exports = async (req, res) => {
       ENTRIES: updatedData.ENTRIES,
       TRACKER_PROGRESS: updatedData.TRACKER_PROGRESS,
       HABITS_LOG: updatedData.HABITS_LOG,
+      CUSTOM_HABITS: updatedData.CUSTOM_HABITS,
+      CONFIG: updatedData.CONFIG,
       SCORE_REGISTER: updatedData.SCORE_REGISTER,
-      deletedScoreIds: updatedData.deletedScoreIds
+      deletedScoreIds: updatedData.deletedScoreIds,
+      deletedEntryIds: updatedData.deletedEntryIds
     });
   }
 

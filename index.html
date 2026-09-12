@@ -3903,8 +3903,20 @@ window.addEventListener('storage', () => {
   renderHeaderStats();
 });
 
+let deletedEntryIds = new Set();
+try {
+  const storedDelEntries = localStorage.getItem('op300_deleted_entry_ids');
+  if (storedDelEntries) JSON.parse(storedDelEntries).forEach(id => deletedEntryIds.add(id));
+} catch(e){}
+
+function recordDeletedEntryId(id) {
+  if (!id) return;
+  deletedEntryIds.add(id);
+  try { localStorage.setItem('op300_deleted_entry_ids', JSON.stringify(Array.from(deletedEntryIds))); } catch(e){}
+}
+
 async function pushToCentralServer(extraData = {}) {
-  ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && isTrackerEntryChecked(item.id));
+  ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && !deletedEntryIds.has(item.id));
   saveData();
   try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
 
@@ -3915,6 +3927,7 @@ async function pushToCentralServer(extraData = {}) {
     ENTRIES, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG,
     SCORE_REGISTER: scoreState,
     deletedScoreIds: deletedScoreIds,
+    deletedEntryIds: Array.from(deletedEntryIds),
     timestamp: Date.now(),
     ...extraData
   };
@@ -3968,15 +3981,18 @@ function mergeSingleEntry(localItem, serverItem) {
   return res;
 }
 
-function mergeEntries(localEntries, serverEntries) {
+function mergeEntries(localEntries, serverEntries, cloudDeletedIds = []) {
+  const delSet = new Set([...Array.from(deletedEntryIds), ...(cloudDeletedIds || [])]);
+  delSet.forEach(id => recordDeletedEntryId(id));
+
   const map = new Map();
   (localEntries || []).forEach(e => {
-    if (isValidEntry(e) && isTrackerEntryChecked(e.id)) {
+    if (isValidEntry(e) && !delSet.has(e.id)) {
       map.set(e.id, e);
     }
   });
   (serverEntries || []).forEach(e => {
-    if (isValidEntry(e) && isTrackerEntryChecked(e.id)) {
+    if (isValidEntry(e) && !delSet.has(e.id)) {
       if (!map.has(e.id)) {
         map.set(e.id, e);
       } else {
@@ -3995,6 +4011,17 @@ async function pollCentralServer() {
       const data = await res.json();
       if (data) {
         let updated = false;
+        if (Array.isArray(data.deletedEntryIds)) {
+          data.deletedEntryIds.forEach(id => {
+            if (id && !deletedEntryIds.has(id)) {
+              deletedEntryIds.add(id);
+              updated = true;
+            }
+          });
+          if (updated) {
+            try { localStorage.setItem('op300_deleted_entry_ids', JSON.stringify(Array.from(deletedEntryIds))); } catch(e){}
+          }
+        }
         if (data.TRACKER_PROGRESS && typeof data.TRACKER_PROGRESS === 'object') {
           const mergedProg = mergeTrackerProgress(TRACKER_PROGRESS, data.TRACKER_PROGRESS);
           if (JSON.stringify(mergedProg) !== JSON.stringify(TRACKER_PROGRESS)) {
@@ -4004,7 +4031,7 @@ async function pollCentralServer() {
           }
         }
         if (data.ENTRIES && Array.isArray(data.ENTRIES)) {
-          const merged = mergeEntries(ENTRIES, data.ENTRIES);
+          const merged = mergeEntries(ENTRIES, data.ENTRIES, data.deletedEntryIds);
           if (merged.length !== ENTRIES.length || JSON.stringify(merged) !== JSON.stringify(ENTRIES)) {
             ENTRIES = merged;
             updated = true;
@@ -4030,7 +4057,7 @@ async function pollCentralServer() {
           renderAll();
           renderHomeTrackerTargets();
           renderHeaderStats();
-          if (document.getElementById('popupModal').classList.contains('active')) { renderPopupContent(); }
+          if (document.getElementById('popupModal') && document.getElementById('popupModal').classList.contains('active')) { renderPopupContent(); }
         }
       }
     }
@@ -4236,7 +4263,7 @@ function loadData() {
   try {
     const tp = localStorage.getItem('op300_tracker_progress'); if (tp) TRACKER_PROGRESS = JSON.parse(tp);
     const e = localStorage.getItem(STORAGE_KEYS.ENTRIES); if (e) ENTRIES = JSON.parse(e);
-    ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && isTrackerEntryChecked(item.id));
+    ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && !deletedEntryIds.has(item.id));
     const h = localStorage.getItem(STORAGE_KEYS.HABITS); if (h) HABITS_LOG = JSON.parse(h);
     const c = localStorage.getItem(STORAGE_KEYS.CUSTOM_HABITS); if (c) CUSTOM_HABITS = JSON.parse(c);
     const cfg = localStorage.getItem(STORAGE_KEYS.CONFIG); if (cfg) CONFIG = JSON.parse(cfg);
@@ -4913,10 +4940,11 @@ function renderMasterLog() {
 
 function deleteEntry(id) {
   if (confirm("Delete topic entry?")) {
+    recordDeletedEntryId(id);
     ENTRIES = ENTRIES.filter(x => x.id !== id);
     saveData();
     try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
-    pushToCentralServer({ deletedIds: [id] });
+    pushToCentralServer({ deletedIds: [id], deletedEntryIds: Array.from(deletedEntryIds) });
     renderAll();
   }
 }
