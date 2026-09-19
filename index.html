@@ -5674,6 +5674,117 @@ document.getElementById('btnAddHabit').addEventListener('click', () => {
   }
 });
 
+// EXPORT CSV HANDLER
+function exportCSVBackup() {
+  try {
+    if (!ENTRIES || ENTRIES.length === 0) {
+      alert("No logged topics found to export.");
+      return;
+    }
+    const headers = ["ID", "Subject", "Topic", "Date Studied", "R0 Revised", "Sunday (R7) Revised", "Monthly Revised", "Bi-Monthly Revised"];
+    const rows = ENTRIES.map(e => [
+      `"${(e.id || '').toString().replace(/"/g, '""')}"`,
+      `"${(e.subject || '').toString().replace(/"/g, '""')}"`,
+      `"${(e.topic || '').toString().replace(/"/g, '""')}"`,
+      `"${e.dateStudied || ''}"`,
+      e.r0Done ? "Yes" : "No",
+      e.sundayDone ? "Yes" : "No",
+      e.monthlyDone ? "Yes" : "No",
+      e.biMonthlyDone ? "Yes" : "No"
+    ]);
+    const csvContent = [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `mainslog_entries_${getTodayStr()}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  } catch(e) {
+    console.error("exportCSVBackup error:", e);
+    alert("Error exporting CSV: " + e.message);
+  }
+}
+
+const btnExportCSVElem = document.getElementById('btnExportCSV');
+if (btnExportCSVElem) {
+  btnExportCSVElem.addEventListener('click', exportCSVBackup);
+}
+
+// IMPORT JSON HANDLER
+const btnImportJSONEl = document.getElementById('btnImportJSON');
+const jsonFileInputEl = document.getElementById('jsonFileInput');
+
+if (btnImportJSONEl && jsonFileInputEl) {
+  btnImportJSONEl.addEventListener('click', () => {
+    jsonFileInputEl.click();
+  });
+
+  jsonFileInputEl.addEventListener('change', (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const parsed = JSON.parse(event.target.result);
+        if (parsed.ENTRIES && Array.isArray(parsed.ENTRIES)) {
+          ENTRIES = parsed.ENTRIES;
+        }
+        if (parsed.TRACKER_PROGRESS && typeof parsed.TRACKER_PROGRESS === 'object') {
+          TRACKER_PROGRESS = parsed.TRACKER_PROGRESS;
+        }
+        if (parsed.HABITS_LOG && typeof parsed.HABITS_LOG === 'object') {
+          HABITS_LOG = parsed.HABITS_LOG;
+        }
+        if (parsed.CUSTOM_HABITS && Array.isArray(parsed.CUSTOM_HABITS)) {
+          CUSTOM_HABITS = parsed.CUSTOM_HABITS;
+        }
+        saveData();
+        pushToCentralServer();
+        renderAll();
+        if (typeof renderHomeTrackerTargets === 'function') try { renderHomeTrackerTargets(); } catch(err){}
+        if (typeof renderHeaderStats === 'function') try { renderHeaderStats(); } catch(err){}
+        alert("✅ Backup data imported successfully!");
+      } catch(err) {
+        console.error("Import JSON error:", err);
+        alert("❌ Invalid JSON backup file format.");
+      }
+      jsonFileInputEl.value = "";
+    };
+    reader.readAsText(file);
+  });
+}
+
+// BACKUP JSON HANDLER
+function downloadJSONBackup() {
+  try {
+    const dataObj = {
+      ENTRIES: ENTRIES || [],
+      TRACKER_PROGRESS: TRACKER_PROGRESS || {},
+      HABITS_LOG: HABITS_LOG || {},
+      CUSTOM_HABITS: CUSTOM_HABITS || [],
+      CONFIG: CONFIG || {}
+    };
+    const blob = new Blob([JSON.stringify(dataObj, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `mainslog_backup_${getTodayStr()}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  } catch(e) {
+    console.error("downloadJSONBackup error:", e);
+    alert("Error downloading JSON backup: " + e.message);
+  }
+}
+
+const quickExportBtnEl = document.getElementById('quickExportBtn');
+if (quickExportBtnEl) {
+  quickExportBtnEl.addEventListener('click', downloadJSONBackup);
+}
+
+// RESET ALL HANDLER
 const btnResetAllEl = document.getElementById('btnResetAll');
 if (btnResetAllEl) {
   btnResetAllEl.addEventListener('click', async () => {
@@ -5707,8 +5818,8 @@ if (btnResetAllEl) {
       } catch(e){}
 
       renderAll();
-      renderHomeTrackerTargets();
-      renderHeaderStats();
+      if (typeof renderHomeTrackerTargets === 'function') try { renderHomeTrackerTargets(); } catch(err){}
+      if (typeof renderHeaderStats === 'function') try { renderHeaderStats(); } catch(err){}
       alert("All data and records have been successfully reset.");
     }
   });
@@ -5723,16 +5834,10 @@ if (masterFilterEl) {
   masterFilterEl.addEventListener('change', renderMasterLog);
 }
 
-document.getElementById('btnOpenPopupHeader').addEventListener('click', openPopupModal);
-
-function downloadJSONBackup() {
-  const blob = new Blob([JSON.stringify({ ENTRIES, HABITS_LOG, CUSTOM_HABITS, CONFIG }, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a'); a.href = url; a.download = `anish_operation300_backup_${getTodayStr()}.json`;
-  a.click(); URL.revokeObjectURL(url);
+const btnOpenPopupHeaderEl = document.getElementById('btnOpenPopupHeader');
+if (btnOpenPopupHeaderEl) {
+  btnOpenPopupHeaderEl.addEventListener('click', openPopupModal);
 }
-
-document.getElementById('quickExportBtn').addEventListener('click', downloadJSONBackup);
 
 function openPoemModal() {
   document.getElementById('poemModal').classList.add('active');
