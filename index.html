@@ -542,25 +542,116 @@
   .routine-slot-card.active-slot .slot-card-desc { color: rgba(255, 255, 255, 0.9) !important; }
 
   /* REVISION ENGINE VISUAL ANALYTICS DASHBOARD */
+  .recall-hero-card {
+    background: #FFFFFF !important;
+    border: 1.5px solid #E2E8F0 !important;
+    border-radius: 24px !important;
+    padding: 28px !important;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05) !important;
+  }
+
+  .recall-header-banner {
+    background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+    border: 1.5px solid #DBEAFE;
+    border-radius: 20px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .recall-header-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 5px;
+    background: linear-gradient(180deg, #2563EB 0%, #1D4ED8 100%);
+  }
+
+  .recall-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .recall-header-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  }
+
+  .recall-header-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 800;
+    color: #0F172A;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+  }
+
+  .recall-header-sub {
+    font-size: 13px;
+    color: #475569;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .recall-badge {
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+  .recall-badge.r0 { background: #EFF6FF; color: #2563EB; }
+  .recall-badge.r7 { background: #FFFBEB; color: #D97706; }
+  .recall-badge.r30 { background: #ECFDF5; color: #059669; }
+  .recall-badge.r60 { background: #F5F3FF; color: #7C3AED; }
+
   .rev-analytics-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 1024px) {
+    .rev-analytics-container { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 550px) {
+    .rev-analytics-container { grid-template-columns: 1fr; }
   }
 
   .rev-stat-hero-card {
-    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 16px;
-    box-shadow: var(--shadow-sm);
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 16px 18px;
     display: flex;
     align-items: center;
     gap: 14px;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+    transition: all 0.2s ease;
   }
+
+  .rev-stat-hero-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  }
+
+  .rev-stat-hero-card.card-r0 { border-left: 4px solid #2563EB; }
+  .rev-stat-hero-card.card-r7 { border-left: 4px solid #D97706; }
+  .rev-stat-hero-card.card-monthly { border-left: 4px solid #059669; }
+  .rev-stat-hero-card.card-bimonthly { border-left: 4px solid #7C3AED; }
 
   .rev-ring-wrapper {
     position: relative;
@@ -575,7 +666,7 @@
 
   .rev-ring-bg {
     fill: none;
-    stroke: var(--bg-subtle);
+    stroke: #F1F5F9;
     stroke-width: 7;
   }
 
@@ -598,24 +689,54 @@
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 13px;
-    color: var(--text-primary);
+    color: #0F172A;
   }
 
   .rev-card-details { flex: 1; min-width: 0; }
-  .rev-card-title { font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: var(--text-primary); margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .rev-card-sub { font-size: 11.5px; color: var(--text-muted); margin-bottom: 6px; font-weight: 500; }
+  .rev-card-title { font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: #0F172A; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rev-card-sub { font-size: 11.5px; color: #64748B; margin-bottom: 6px; font-weight: 500; }
   .rev-card-pill { display: inline-block; font-size: 9.5px; font-weight: 800; padding: 2px 7px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .rev-card-pill.pill-r0 { background: #EFF6FF; color: #2563EB; }
+  .rev-card-pill.pill-r7 { background: #FFFBEB; color: #B45309; }
+  .rev-card-pill.pill-monthly { background: #ECFDF5; color: #047857; }
+  .rev-card-pill.pill-bimonthly { background: #F5F3FF; color: #6D28D9; }
 
   /* SUBJECT DISTRIBUTION & PIE CHART CARD */
   .rev-subject-analytics-card {
     background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 20px;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 22px;
     margin-bottom: 24px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+  }
+
+  .rev-sub-analytics-header {
+    border-bottom: 1px solid #F1F5F9;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+  }
+
+  .rev-sub-analytics-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 16px;
+    color: #0F172A;
     display: flex;
-    gap: 24px;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .rev-sub-analytics-subtitle {
+    font-size: 12px;
+    color: #64748B;
+    margin-top: 2px;
+  }
+
+  .rev-subject-analytics-body {
+    display: flex;
+    gap: 28px;
     align-items: center;
     flex-wrap: wrap;
   }
@@ -665,6 +786,25 @@
   .rev-sub-bar-track { flex: 1; height: 6px; background: var(--bg-subtle); border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color); }
   .rev-sub-bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease; }
   .rev-sub-bar-count { width: 34px; text-align: right; font-size: 11px; font-weight: 800; font-family: var(--font-mono); color: var(--text-muted); }
+
+  .rev-queues-header {
+    margin-top: 28px;
+    margin-bottom: 16px;
+  }
+
+  .rev-queues-title {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 800;
+    color: #0F172A;
+    margin: 0 0 2px 0;
+  }
+
+  .rev-queues-sub {
+    font-size: 12.5px;
+    color: #64748B;
+    margin: 0;
+  }
 
   .sub-badge {
     display: inline-block;
@@ -3306,20 +3446,26 @@
     </div>
   </div>
 
-  <!-- TAB 3: REVISION ENGINE -->
+  <!-- TAB 3: REVISION ENGINE (RECALL) -->
   <div id="tab-revision" class="tab-view">
-    <div class="section-card">
-      <h2 style="font-family: var(--font-heading); font-size: 22px; font-weight: 800; color: #0F172A; margin-bottom: 6px;">
-        Multi-Tier Scheduled Revision Engine
-      </h2>
-      <div style="font-size: 13px; color: #475569; margin-bottom: 20px; line-height: 1.5;">
-        Organized by <span style="color: #2563EB; font-weight: 700;">Same-Day R0</span>, <span style="color: #2563EB; font-weight: 700;">Sunday Weekly Vault (R7)</span>, <span style="color: #2563EB; font-weight: 700;">Monthly 2-Day Block</span>, and <span style="color: #2563EB; font-weight: 700;">Bi-Monthly 60-Day Review</span>.
+    <div class="section-card recall-hero-card">
+      <!-- Top Title Header Banner -->
+      <div class="recall-header-banner">
+        <div class="recall-title-wrap">
+          <div class="recall-header-icon">🔄</div>
+          <div>
+            <h2 class="recall-header-title">Multi-Tier Scheduled Revision Engine</h2>
+            <div class="recall-header-sub">
+              Systematic Active Recall organized by <span class="recall-badge r0">Same-Day R0</span>, <span class="recall-badge r7">Sunday Vault (R7)</span>, <span class="recall-badge r30">Monthly 2-Day</span>, and <span class="recall-badge r60">Bi-Monthly 60-Day</span>.
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- VISUAL REVISION ANALYTICS DASHBOARD -->
       <div class="rev-analytics-container">
         <!-- R0 Ring Card -->
-        <div class="rev-stat-hero-card">
+        <div class="rev-stat-hero-card card-r0">
           <div class="rev-ring-wrapper">
             <svg viewBox="0 0 80 80">
               <circle class="rev-ring-bg" cx="40" cy="40" r="35"></circle>
@@ -3330,12 +3476,12 @@
           <div class="rev-card-details">
             <div class="rev-card-title">Same-Day R0</div>
             <div class="rev-card-sub" id="subRingR0">0 of 0 topics</div>
-            <span class="rev-card-pill" style="background:#EFF6FF; color:#2563EB;">Daily Active</span>
+            <span class="rev-card-pill pill-r0">Daily Active</span>
           </div>
         </div>
 
         <!-- Sunday R7 Ring Card -->
-        <div class="rev-stat-hero-card">
+        <div class="rev-stat-hero-card card-r7">
           <div class="rev-ring-wrapper">
             <svg viewBox="0 0 80 80">
               <circle class="rev-ring-bg" cx="40" cy="40" r="35"></circle>
@@ -3346,12 +3492,12 @@
           <div class="rev-card-details">
             <div class="rev-card-title">Sunday Vault (R7)</div>
             <div class="rev-card-sub" id="subRingR7">0 of 0 topics</div>
-            <span class="rev-card-pill" style="background:#FFFBEB; color:#B45309;">Weekly Review</span>
+            <span class="rev-card-pill pill-r7">Weekly Review</span>
           </div>
         </div>
 
         <!-- Monthly Ring Card -->
-        <div class="rev-stat-hero-card">
+        <div class="rev-stat-hero-card card-monthly">
           <div class="rev-ring-wrapper">
             <svg viewBox="0 0 80 80">
               <circle class="rev-ring-bg" cx="40" cy="40" r="35"></circle>
@@ -3362,12 +3508,12 @@
           <div class="rev-card-details">
             <div class="rev-card-title">Monthly Vault</div>
             <div class="rev-card-sub" id="subRingMonthly">0 of 0 topics</div>
-            <span class="rev-card-pill" style="background:#ECFDF5; color:#047857;">2-Day Block</span>
+            <span class="rev-card-pill pill-monthly">2-Day Block</span>
           </div>
         </div>
 
         <!-- Bi-Monthly Ring Card -->
-        <div class="rev-stat-hero-card">
+        <div class="rev-stat-hero-card card-bimonthly">
           <div class="rev-ring-wrapper">
             <svg viewBox="0 0 80 80">
               <circle class="rev-ring-bg" cx="40" cy="40" r="35"></circle>
@@ -3378,24 +3524,36 @@
           <div class="rev-card-details">
             <div class="rev-card-title">Bi-Monthly Vault</div>
             <div class="rev-card-sub" id="subRingBiMonthly">0 of 0 topics</div>
-            <span class="rev-card-pill" style="background:#F5F3FF; color:#6D28D9;">60-Day Review</span>
+            <span class="rev-card-pill pill-bimonthly">60-Day Review</span>
           </div>
         </div>
       </div>
 
       <!-- SUBJECT DISTRIBUTION PIE CHART & RETENTION BARS -->
       <div class="rev-subject-analytics-card">
-        <div class="rev-pie-container">
-          <div class="rev-pie-chart" id="revPieChart"></div>
-          <div class="rev-pie-inner">
-            <div class="rev-pie-inner-val" id="revTotalTopicsCount">0</div>
-            <div class="rev-pie-inner-lbl">Topics</div>
+        <div class="rev-sub-analytics-header">
+          <div class="rev-sub-analytics-title">📊 Subject Revision Density</div>
+          <div class="rev-sub-analytics-subtitle">Breakdown of logged topics across GS Papers & Sociology</div>
+        </div>
+        <div class="rev-subject-analytics-body">
+          <div class="rev-pie-container">
+            <div class="rev-pie-chart" id="revPieChart"></div>
+            <div class="rev-pie-inner">
+              <div class="rev-pie-inner-val" id="revTotalTopicsCount">0</div>
+              <div class="rev-pie-inner-lbl">Topics</div>
+            </div>
+          </div>
+
+          <div class="rev-subject-bars-wrap" id="revSubjectBarsWrap">
+            <!-- Dynamically populated subject bars -->
           </div>
         </div>
+      </div>
 
-        <div class="rev-subject-bars-wrap" id="revSubjectBarsWrap">
-          <!-- Dynamically populated subject bars -->
-        </div>
+      <!-- REVISION QUEUES SECTION HEADER -->
+      <div class="rev-queues-header">
+        <h3 class="rev-queues-title">⚡ Revision Queues Ledger</h3>
+        <p class="rev-queues-sub">Switch between revision tiers to review & complete scheduled topics</p>
       </div>
 
       <!-- SUB NAV WITH BADGES -->
