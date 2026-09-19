@@ -1070,22 +1070,64 @@
     letter-spacing: 0.3px;
   }
   .prestige-quote-right {
-    text-align: right;
-    max-width: 260px;
+    position: relative;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+    border: 1.5px solid #DBEAFE;
+    border-radius: 18px;
+    padding: 10px 18px 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.1);
+    transition: all 0.25s ease;
+    overflow: hidden;
+    max-width: 360px;
+  }
+  .prestige-quote-right:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -2px rgba(37, 99, 235, 0.18);
+    border-color: #93C5FD;
+  }
+  .prestige-quote-flag-line {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3.5px;
+    background: linear-gradient(90deg, #FF9933 0%, #E2E8F0 50%, #138808 100%);
+  }
+  .prestige-quote-icon {
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+    border-radius: 12px;
+    border: 1px solid #BFDBFE;
+    flex-shrink: 0;
+  }
+  .prestige-quote-body {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
   }
   .prestige-quote-text {
-    font-family: 'Kalam', 'Rozha One', cursive, serif;
+    font-family: var(--font-heading);
     font-size: 13.5px;
-    color: #334155;
+    font-weight: 800;
+    color: #1E40AF;
+    letter-spacing: -0.2px;
+    line-height: 1.35;
     font-style: italic;
-    line-height: 1.4;
   }
-  .prestige-quote-underline {
-    width: 60px;
-    height: 2px;
-    background: #CBD5E1;
-    margin: 4px 0 0 auto;
-    border-radius: 2px;
+  .prestige-quote-sub {
+    font-size: 9.5px;
+    font-weight: 800;
+    color: #64748B;
+    letter-spacing: 0.6px;
+    margin-top: 2px;
+    text-transform: uppercase;
   }
 
   /* 4 STAT CARDS ROW (MATCHING REFERENCE IMAGE EXACTLY) */
@@ -3072,8 +3114,12 @@
         </div>
 
         <div class="prestige-quote-right">
-          <div class="prestige-quote-text">&ldquo;A better you builds a better India&rdquo;</div>
-          <div class="prestige-quote-underline"></div>
+          <div class="prestige-quote-flag-line"></div>
+          <div class="prestige-quote-icon">🇮🇳</div>
+          <div class="prestige-quote-body">
+            <div class="prestige-quote-text">&ldquo;A better you builds a better India&rdquo;</div>
+            <div class="prestige-quote-sub">Nation Building Through Discipline</div>
+          </div>
         </div>
       </div>
 
