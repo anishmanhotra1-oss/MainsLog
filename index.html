@@ -1310,14 +1310,14 @@
     pointer-events: none;
   }
 
-  /* HOME PAGE SAME-DAY REVISION QUEUE (R0) STYLES */
+  /* HOME PAGE SAME-DAY REVISION QUEUE (R0) STYLES (BLUE & WHITE THEME) */
   .r0-home-card {
     background: #FFFFFF;
-    border: 1.5px solid var(--border-color);
+    border: 1.5px solid #BFDBFE;
     border-radius: 24px;
     padding: 24px;
     margin-top: 24px;
-    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.08);
     position: relative;
     overflow: hidden;
   }
@@ -1327,7 +1327,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #F59E0B 0%, #EAB308 50%, #2563EB 100%);
+    background: linear-gradient(90deg, #2563EB 0%, #3B82F6 100%);
   }
 
   .r0-home-header {
@@ -1338,7 +1338,7 @@
     gap: 12px;
     margin-bottom: 18px;
     padding-bottom: 14px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #EFF6FF;
   }
 
   .r0-home-title-wrap {
@@ -1347,38 +1347,25 @@
     gap: 12px;
   }
 
-  .r0-home-icon-badge {
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #EAB308;
-    font-size: 18px;
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
-  }
-
   .r0-home-title-text {
     font-family: var(--font-heading);
     font-size: 20px;
     font-weight: 800;
-    color: var(--text-primary);
+    color: #1E40AF;
     line-height: 1.2;
   }
 
   .r0-home-sub {
     font-size: 12.5px;
-    color: var(--text-muted);
+    color: #64748B;
     font-weight: 500;
     margin-top: 2px;
   }
 
   .r0-counter-pill {
-    background: #FFFBEB;
-    border: 1px solid #FDE68A;
-    color: #B45309;
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    color: #1E40AF;
     font-size: 12px;
     font-weight: 800;
     padding: 6px 14px;
@@ -1389,7 +1376,7 @@
   }
 
   .r0-item-card {
-    background: #F8FAFC;
+    background: #FFFFFF;
     border: 1.5px solid #E2E8F0;
     border-radius: 16px;
     padding: 14px 18px;
@@ -1402,14 +1389,14 @@
   }
 
   .r0-item-card:hover {
-    background: #FFFFFF;
-    border-color: #CBD5E1;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    background: #F8FAFC;
+    border-color: #BFDBFE;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.06);
   }
 
   .r0-item-card.is-done {
-    background: #F0FDF4 !important;
-    border-color: #BBF7D0 !important;
+    background: #EFF6FF !important;
+    border-color: #BFDBFE !important;
   }
 
   .r0-item-left {
@@ -1420,7 +1407,7 @@
   .r0-item-topic {
     font-weight: 700;
     font-size: 14px;
-    color: var(--text-primary);
+    color: #0F172A;
     line-height: 1.35;
     margin-bottom: 4px;
   }
@@ -1434,7 +1421,7 @@
   }
 
   .r0-item-r7-tag {
-    color: #D97706;
+    color: #2563EB;
     font-weight: 700;
     font-size: 11px;
   }
@@ -3267,13 +3254,12 @@
     <div class="r0-home-card">
       <div class="r0-home-header">
         <div class="r0-home-title-wrap">
-          <div class="r0-home-icon-badge">⚡</div>
           <div>
             <div class="r0-home-title-text">Same-Day Revision Queue (R0)</div>
             <div class="r0-home-sub">Recite today's logged topics during your 1:30 AM – 2:30 AM revision slot.</div>
           </div>
         </div>
-        <div class="r0-counter-pill" id="homeR0CounterPill">⚡ 0 / 0 Revised</div>
+        <div class="r0-counter-pill" id="homeR0CounterPill">0 / 0 Revised</div>
       </div>
 
       <div id="dashboardR0List" class="item-list"></div>
@@ -4913,27 +4899,27 @@ function renderDashboardQueue() {
   const counterPill = document.getElementById('homeR0CounterPill');
   if (counterPill) {
     if (totalCount === 0) {
-      counterPill.innerHTML = `⚡ 0 Topics Logged`;
+      counterPill.innerHTML = `0 Topics Logged`;
       counterPill.style.background = "#F1F5F9";
       counterPill.style.borderColor = "#E2E8F0";
       counterPill.style.color = "#64748B";
     } else if (doneCount === totalCount) {
       counterPill.innerHTML = `🏆 All ${totalCount} R0 Revised!`;
-      counterPill.style.background = "#ECFDF5";
-      counterPill.style.borderColor = "#A7F3D0";
-      counterPill.style.color = "#059669";
+      counterPill.style.background = "#EFF6FF";
+      counterPill.style.borderColor = "#BFDBFE";
+      counterPill.style.color = "#1E40AF";
     } else {
-      counterPill.innerHTML = `⚡ ${doneCount} / ${totalCount} Revised`;
-      counterPill.style.background = "#FFFBEB";
-      counterPill.style.borderColor = "#FDE68A";
-      counterPill.style.color = "#B45309";
+      counterPill.innerHTML = `${doneCount} / ${totalCount} Revised`;
+      counterPill.style.background = "#EFF6FF";
+      counterPill.style.borderColor = "#BFDBFE";
+      counterPill.style.color = "#1E40AF";
     }
   }
 
   if (todayEntries.length === 0) {
     container.innerHTML = `
-      <div style="text-align:center; padding:24px 16px; background:#F8FAFC; border:1px dashed #CBD5E1; border-radius:16px; color:var(--text-muted); font-size:13px;">
-        ⚡ No topics logged yet today. Add a topic above to auto-queue for Same-Day R0 revision!
+      <div style="text-align:center; padding:24px 16px; background:#F8FAFC; border:1px dashed #BFDBFE; border-radius:16px; color:#64748B; font-size:13px;">
+        No topics logged yet today. Add a topic above to auto-queue for Same-Day R0 revision!
       </div>
     `;
     return;
