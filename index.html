@@ -4363,10 +4363,7 @@ function getPendingItemsToday() {
   const isMonthlyBlock = (today.endsWith("-01") || today.endsWith("-02"));
 
   const sameDayPending = ENTRIES.filter(e => e.dateStudied === today && !e.r0Done);
-  const sundayPending = ENTRIES.filter(e => {
-    if (e.sundayDone) return false;
-    return isSunday ? e.dateStudied <= weekRange.satStr : e.dateStudied < weekRange.monStr;
-  });
+  const sundayPending = ENTRIES.filter(e => !e.sundayDone && e.dateStudied >= weekRange.monStr && e.dateStudied <= weekRange.satStr);
   const monthlyPending = isMonthlyBlock ? ENTRIES.filter(e => !e.monthlyDone && e.dateStudied < today.slice(0, 7) + "-01") : [];
 
   if (!HABITS_LOG[today]) HABITS_LOG[today] = {};
@@ -4431,10 +4428,7 @@ function renderHeaderStats() {
   if (elDueSame) elDueSame.textContent = sameDayDue;
 
   const weekRange = getMonToSatWeekRange(today);
-  const sundayDue = ENTRIES.filter(e => (
-    (e.dateStudied >= weekRange.monStr && e.dateStudied <= weekRange.satStr) ||
-    (!e.sundayDone && e.dateStudied <= weekRange.satStr)
-  ) && !e.sundayDone).length;
+  const sundayDue = ENTRIES.filter(e => e.dateStudied >= weekRange.monStr && e.dateStudied <= weekRange.satStr && !e.sundayDone).length;
 
   const elDueSunday = document.getElementById('statDueSunday');
   if (elDueSunday) elDueSunday.textContent = sundayDue;
@@ -4497,7 +4491,6 @@ function renderHeaderStats() {
 
 function renderHomeTrackerTargets() {
   const today = getTodayStr();
-  if (!HABITS_LOG[today]) HABITS_LOG[today] = {};
 
   const todayEntry = getTodayTrackerEntry();
   const isAvailableDay = todayEntry && !todayEntry.isBeforeStart && !todayEntry.isCompletedAll;
@@ -4508,14 +4501,8 @@ function renderHomeTrackerTargets() {
     ? TRACKER_PROGRESS[todayEntry.day].checks
     : {};
 
-  const trackerDoneCount = todayTasks.filter(t => !!dayProg[t.key]).length;
-  const trackerTotalCount = todayTasks.length;
-
-  const customDoneCount = CUSTOM_HABITS.filter(h => !!HABITS_LOG[today][h]).length;
-  const customTotalCount = CUSTOM_HABITS.length;
-
-  const totalDone = trackerDoneCount + customDoneCount;
-  const totalAll = trackerTotalCount + customTotalCount;
+  const totalDone = todayTasks.filter(t => !!dayProg[t.key]).length;
+  const totalAll = todayTasks.length;
   const pendingCount = Math.max(0, totalAll - totalDone);
   const pct = totalAll > 0 ? Math.round((totalDone / totalAll) * 100) : 0;
 
@@ -4531,11 +4518,11 @@ function renderHomeTrackerTargets() {
 
   const elStatusBadgeText = document.getElementById('dominanceStatusBadgeText');
   if (elStatusBadgeText) {
-    if (pct === 100) elStatusBadgeText.textContent = "🏆 Perfect Execution! All Targets Done.";
+    if (pct === 100) elStatusBadgeText.textContent = "🏆 Perfect Execution! All Sankalp Targets Done.";
     else if (pct >= 80) elStatusBadgeText.textContent = "⚡ Dominating Today — Keep Going!";
     else if (pct >= 40) elStatusBadgeText.textContent = "🔥 Hunting Mode — Stay Focused!";
     else if (totalDone > 0) elStatusBadgeText.textContent = "🚀 Momentum Started — Push Further!";
-    else elStatusBadgeText.textContent = "🎯 Execute Today's Targets Below!";
+    else elStatusBadgeText.textContent = "🎯 Execute Today's Sankalp Targets Below!";
   }
 
   // 2. Update Quick Stat Column Values
@@ -4551,13 +4538,13 @@ function renderHomeTrackerTargets() {
   const elDayBadge = document.getElementById('homeTrackerDayBadge');
   if (elDayBadge) {
     if (isAvailableDay) {
-      elDayBadge.textContent = `Day ${todayEntry.day} • See Targets ↗`;
+      elDayBadge.textContent = `Sankalp Day ${todayEntry.day} • See All ↗`;
     } else {
-      elDayBadge.textContent = `Custom Targets • See All ↗`;
+      elDayBadge.textContent = `Sankalp Targets • See All ↗`;
     }
   }
 
-  // 3. Render Today's Interactive Tasks List
+  // 3. Render Today's Interactive Sankalp Tasks List (No Custom Habits/Goals here)
   const container = document.getElementById('homeTrackerList');
   if (!container) return;
   container.innerHTML = "";
@@ -4565,13 +4552,13 @@ function renderHomeTrackerTargets() {
   if (totalAll === 0) {
     container.innerHTML = `
       <div style="text-align:center; padding: 24px; background:#FFFFFF; border:1px solid var(--border-color); border-radius:18px; color:var(--text-muted); font-size:13px;">
-        🎯 No active targets scheduled for today. Add custom targets in <b>Targets</b> tab!
+        🎯 No active Sankalp targets scheduled for today.
       </div>
     `;
     return;
   }
 
-  // 3A. Render Sankalp Plan Tasks
+  // Render Sankalp Plan Tasks Only
   todayTasks.forEach(task => {
     const isChecked = !!dayProg[task.key];
     const card = document.createElement('div');
@@ -4602,36 +4589,11 @@ function renderHomeTrackerTargets() {
     container.appendChild(card);
   });
 
-  // 3B. Render Custom Habit Targets
-  CUSTOM_HABITS.forEach(habit => {
-    const isChecked = !!HABITS_LOG[today][habit];
-    const card = document.createElement('div');
-    card.className = `mob-task-card ${isChecked ? 'is-completed' : ''}`;
-
-    card.innerHTML = `
-      <div class="mob-task-icon-box" style="background: #F0F5FF; color: #2563EB;">
-        <span style="font-size: 11px; font-weight: 800; font-family: var(--font-mono);">GOAL</span>
-      </div>
-      <div class="mob-task-details">
-        <div class="mob-task-title" style="${isChecked ? 'text-decoration: line-through; opacity: 0.65;' : ''}">${habit}</div>
-        <div class="mob-task-sub">
-          <span style="font-weight: 700; color: #2563EB;">Daily Target</span> &middot; Custom Goal
-        </div>
-      </div>
-      <div class="mob-task-right">
-        <input type="checkbox" class="mob-task-checkbox" ${isChecked ? 'checked' : ''} data-custom-habit="${habit}"/>
-      </div>
-    `;
-
-    container.appendChild(card);
-  });
-
-  // 3C. Attach Event Listeners to Tasks Checkboxes
+  // Attach Event Listeners to Tasks Checkboxes
   container.querySelectorAll('.mob-task-checkbox').forEach(cb => {
     cb.addEventListener('change', (e) => {
       const planKey = e.target.getAttribute('data-plan-task');
       const dayNum = e.target.getAttribute('data-day');
-      const customHabit = e.target.getAttribute('data-custom-habit');
 
       if (planKey && dayNum) {
         if (!TRACKER_PROGRESS[dayNum]) TRACKER_PROGRESS[dayNum] = { checks: {}, notes: {}, dates: {}, timestamps: {} };
@@ -4648,12 +4610,6 @@ function renderHomeTrackerTargets() {
           delete TRACKER_PROGRESS[dayNum].dates[planKey];
         }
         try { localStorage.setItem('op300_tracker_progress', JSON.stringify(TRACKER_PROGRESS)); } catch(err){}
-        pushToCentralServer();
-        renderAll();
-      } else if (customHabit) {
-        if (!HABITS_LOG[today]) HABITS_LOG[today] = {};
-        HABITS_LOG[today][customHabit] = e.target.checked;
-        saveData();
         pushToCentralServer();
         renderAll();
       }
@@ -4878,8 +4834,7 @@ function renderRevisionTab() {
   const listSunday = document.getElementById('listRevSunday');
   const notice = document.getElementById('sundayNoticeBox');
   const sundayEntries = ENTRIES.filter(e => (
-    (e.dateStudied >= weekRange.monStr && e.dateStudied <= weekRange.satStr) ||
-    (!e.sundayDone && e.dateStudied <= weekRange.satStr)
+    e.dateStudied >= weekRange.monStr && e.dateStudied <= weekRange.satStr
   ));
   if (listSunday) {
     listSunday.innerHTML = "";
