@@ -167,14 +167,24 @@ function mergeTrackerProgress(localProg, serverProg) {
     for (const k in sChecks) {
       const localTime = parseTime(mDay.timestamps[k]);
       const serverTime = parseTime(sTimestamps[k]);
+      const sVal = !!sChecks[k];
+      const mVal = !!mDay.checks[k];
 
-      if (serverTime >= localTime) {
-        mDay.checks[k] = !!sChecks[k];
-        if (serverTime > 0) mDay.timestamps[k] = serverTime;
-        if (sChecks[k] && sDates[k]) {
-          mDay.dates[k] = sDates[k];
-        } else if (!sChecks[k]) {
-          delete mDay.dates[k];
+      if (sVal) {
+        mDay.checks[k] = true;
+        if (serverTime > localTime) {
+          mDay.timestamps[k] = serverTime;
+        }
+        if (sDates[k]) mDay.dates[k] = sDates[k];
+      } else {
+        if (mVal) {
+          if (serverTime > localTime && serverTime > 0) {
+            mDay.checks[k] = false;
+            mDay.timestamps[k] = serverTime;
+            delete mDay.dates[k];
+          }
+        } else {
+          mDay.checks[k] = false;
         }
       }
     }
@@ -182,9 +192,11 @@ function mergeTrackerProgress(localProg, serverProg) {
     for (const k in sNotes) {
       const localNoteTime = parseTime(mDay.timestamps[k + '_note'] || mDay.timestamps[k]);
       const serverNoteTime = parseTime(sTimestamps[k + '_note'] || sTimestamps[k]);
-      if (serverNoteTime >= localNoteTime || !mDay.notes[k]) {
-        mDay.notes[k] = sNotes[k];
-        if (serverNoteTime > 0) mDay.timestamps[k + '_note'] = serverNoteTime;
+      if (serverNoteTime > localNoteTime || !mDay.notes[k]) {
+        if (sNotes[k] !== undefined) {
+          mDay.notes[k] = sNotes[k];
+          if (serverNoteTime > 0) mDay.timestamps[k + '_note'] = serverNoteTime;
+        }
       }
     }
   }
