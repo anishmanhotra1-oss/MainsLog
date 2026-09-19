@@ -1215,50 +1215,92 @@
 
   /* MODERN MOBILE HOME UI STYLES (MATCHING REFERENCE UI) */
   .mob-home-hero {
-    background: linear-gradient(135deg, #4338CA 0%, #4F46E5 40%, #6366F1 75%, #7C3AED 100%);
+    background: linear-gradient(135deg, #3730A3 0%, #4F46E5 45%, #6366F1 80%, #7C3AED 100%);
     border-radius: 28px;
-    padding: 24px 24px 64px 24px;
+    padding: 24px 24px 60px 24px;
     color: #FFFFFF;
     position: relative;
-    box-shadow: 0 14px 30px rgba(79, 70, 229, 0.22);
+    box-shadow: 0 16px 36px rgba(79, 70, 229, 0.28), 0 4px 12px rgba(0,0,0,0.1);
     overflow: hidden;
   }
+
+  .mob-home-hero::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
   .mob-hero-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
+
   .mob-hero-lbl {
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0.92;
-    letter-spacing: 0.3px;
+    font-size: 13.5px;
+    font-weight: 700;
+    opacity: 0.95;
+    letter-spacing: 0.4px;
   }
+
   .mob-hero-pill {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     color: #FFFFFF;
     font-size: 12px;
     font-weight: 700;
-    padding: 5px 14px;
+    padding: 6px 14px;
     border-radius: 20px;
     cursor: pointer;
+    transition: all 0.2s;
   }
+
+  .mob-hero-pill:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-1px);
+  }
+
   .mob-hero-pct {
     font-family: var(--font-heading);
-    font-size: 46px;
+    font-size: 48px;
     font-weight: 800;
     line-height: 1;
     margin-bottom: 4px;
     letter-spacing: -1px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.15);
   }
+
   .mob-hero-sub {
     font-size: 13.5px;
     font-weight: 600;
     opacity: 0.92;
   }
+
+  .mob-hero-progress-track {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 14px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .mob-hero-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #38BDF8 0%, #34D399 100%);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+  }
+
   .mob-hero-sparkline {
     position: absolute;
     right: -5px;
@@ -2977,25 +3019,30 @@
     <div class="mob-home-hero" style="margin-top: 20px;">
       <div class="mob-hero-top">
         <div style="display: flex; align-items: center; gap: 8px;">
-          <span style="font-size: 16px;">🎯</span>
+          <span style="font-size: 18px;">🎯</span>
           <span class="mob-hero-lbl">SANKALP TARGETS &middot; Today's Progress</span>
         </div>
-        <button class="mob-hero-pill" onclick="switchTab('tab-habits')">Weekly ⌄</button>
+        <button class="mob-hero-pill" onclick="switchTab('tab-habits')">All Targets ↗</button>
       </div>
 
-      <div style="display: flex; align-items: flex-end; justify-content: space-between; position: relative; z-index: 2; margin-top: 14px;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; position: relative; z-index: 2; margin-top: 12px;">
         <div>
           <div class="mob-hero-pct" id="homeTrackerPctVal">0%</div>
           <div class="mob-hero-sub" id="dominanceStatusBadgeText">Great Progress!</div>
         </div>
 
-        <div style="font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.18); padding: 5px 14px; border-radius: 18px; border: 1px solid rgba(255,255,255,0.35);" id="homeTrackerRatioVal">0 / 6 Completed</div>
+        <div style="font-size: 12.5px; font-weight: 800; color: #FFFFFF; background: rgba(255,255,255,0.22); backdrop-filter: blur(8px); padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.38);" id="homeTrackerRatioVal">0 / 0 Completed</div>
+      </div>
+
+      <!-- ANIMATED PROGRESS TRACKER BAR -->
+      <div class="mob-hero-progress-track">
+        <div class="mob-hero-progress-fill" id="homeTrackerProgressBar" style="width: 0%;"></div>
       </div>
 
       <!-- SMOOTH SVG WAVE SPARKLINE FROM UI IMAGE -->
       <svg class="mob-hero-sparkline" viewBox="0 0 170 70" fill="none">
         <path d="M5 50 Q 40 10, 85 40 T 165 15" stroke="rgba(255,255,255,0.85)" stroke-width="4.5" stroke-linecap="round"/>
-        <path d="M5 50 Q 40 10, 85 40 T 165 15" stroke="#F43F5E" stroke-width="4.5" stroke-dasharray="24 150" stroke-linecap="round"/>
+        <path d="M5 50 Q 40 10, 85 40 T 165 15" stroke="#38BDF8" stroke-width="4.5" stroke-dasharray="24 150" stroke-linecap="round"/>
       </svg>
     </div>
 
@@ -3003,7 +3050,7 @@
     <div class="mob-hero-stats-card">
       <div class="mob-stat-col">
         <div class="mob-stat-val" id="mobStatTotalTasks">0</div>
-        <div class="mob-stat-lbl">Tasks</div>
+        <div class="mob-stat-lbl">Total Tasks</div>
       </div>
 
       <div class="mob-stat-col">
@@ -3012,21 +3059,16 @@
       </div>
 
       <div class="mob-stat-col">
-        <div class="mob-stat-val" style="color: #EF4444;" id="mobStatPendingTasks">0</div>
+        <div class="mob-stat-val" style="color: #E11D48;" id="mobStatPendingTasks">0</div>
         <div class="mob-stat-lbl">Pending</div>
       </div>
-    </div>
-
-    <!-- Hidden elements for JS compatibility -->
-    <div style="display: none;">
-      <div id="homeTrackerProgressBar" style="width:0%;"></div>
     </div>
 
     <!-- TODAY'S TASKS SECTION (MATCHING REFERENCE UI) -->
     <div style="margin-bottom: 24px;">
       <div class="mob-tasks-header">
-        <div class="mob-tasks-title">Today's Tasks</div>
-        <span class="mob-tasks-seeall" id="homeTrackerDayBadge" onclick="switchTab('tab-habits')">Day 1 &middot; See All</span>
+        <div class="mob-tasks-title">Today's Execution Checklist</div>
+        <span class="mob-tasks-seeall" id="homeTrackerDayBadge" onclick="switchTab('tab-habits')">See All Targets ↗</span>
       </div>
 
       <div id="homeTrackerList" class="item-list"></div>
@@ -4449,6 +4491,174 @@ function renderHeaderStats() {
       badge.innerHTML = `⚠️ FIGHT BACK (${pct}%)`;
     }
   }
+
+  renderHomeTrackerTargets();
+}
+
+function renderHomeTrackerTargets() {
+  const today = getTodayStr();
+  if (!HABITS_LOG[today]) HABITS_LOG[today] = {};
+
+  const todayEntry = getTodayTrackerEntry();
+  const isAvailableDay = todayEntry && !todayEntry.isBeforeStart && !todayEntry.isCompletedAll;
+  const todayIndex = isAvailableDay ? TRACKER_PLAN_DATA.findIndex(p => p.day === todayEntry.day) : -1;
+  const todayTasks = isAvailableDay ? getTodayTrackerTasks(todayEntry, todayIndex >= 0 ? todayIndex : 0) : [];
+
+  const dayProg = (isAvailableDay && TRACKER_PROGRESS[todayEntry.day] && TRACKER_PROGRESS[todayEntry.day].checks)
+    ? TRACKER_PROGRESS[todayEntry.day].checks
+    : {};
+
+  const trackerDoneCount = todayTasks.filter(t => !!dayProg[t.key]).length;
+  const trackerTotalCount = todayTasks.length;
+
+  const customDoneCount = CUSTOM_HABITS.filter(h => !!HABITS_LOG[today][h]).length;
+  const customTotalCount = CUSTOM_HABITS.length;
+
+  const totalDone = trackerDoneCount + customDoneCount;
+  const totalAll = trackerTotalCount + customTotalCount;
+  const pendingCount = Math.max(0, totalAll - totalDone);
+  const pct = totalAll > 0 ? Math.round((totalDone / totalAll) * 100) : 0;
+
+  // 1. Update Hero Card Values
+  const elPctVal = document.getElementById('homeTrackerPctVal');
+  if (elPctVal) elPctVal.textContent = pct + "%";
+
+  const elRatioVal = document.getElementById('homeTrackerRatioVal');
+  if (elRatioVal) elRatioVal.textContent = `${totalDone} / ${totalAll} Completed`;
+
+  const elProgressFill = document.getElementById('homeTrackerProgressBar');
+  if (elProgressFill) elProgressFill.style.width = pct + "%";
+
+  const elStatusBadgeText = document.getElementById('dominanceStatusBadgeText');
+  if (elStatusBadgeText) {
+    if (pct === 100) elStatusBadgeText.textContent = "🏆 Perfect Execution! All Targets Done.";
+    else if (pct >= 80) elStatusBadgeText.textContent = "⚡ Dominating Today — Keep Going!";
+    else if (pct >= 40) elStatusBadgeText.textContent = "🔥 Hunting Mode — Stay Focused!";
+    else if (totalDone > 0) elStatusBadgeText.textContent = "🚀 Momentum Started — Push Further!";
+    else elStatusBadgeText.textContent = "🎯 Execute Today's Targets Below!";
+  }
+
+  // 2. Update Quick Stat Column Values
+  const elTotalTasks = document.getElementById('mobStatTotalTasks');
+  if (elTotalTasks) elTotalTasks.textContent = totalAll;
+
+  const elCompletedTasks = document.getElementById('mobStatCompletedTasks');
+  if (elCompletedTasks) elCompletedTasks.textContent = totalDone;
+
+  const elPendingTasks = document.getElementById('mobStatPendingTasks');
+  if (elPendingTasks) elPendingTasks.textContent = pendingCount;
+
+  const elDayBadge = document.getElementById('homeTrackerDayBadge');
+  if (elDayBadge) {
+    if (isAvailableDay) {
+      elDayBadge.textContent = `Day ${todayEntry.day} • See Targets ↗`;
+    } else {
+      elDayBadge.textContent = `Custom Targets • See All ↗`;
+    }
+  }
+
+  // 3. Render Today's Interactive Tasks List
+  const container = document.getElementById('homeTrackerList');
+  if (!container) return;
+  container.innerHTML = "";
+
+  if (totalAll === 0) {
+    container.innerHTML = `
+      <div style="text-align:center; padding: 24px; background:#FFFFFF; border:1px solid var(--border-color); border-radius:18px; color:var(--text-muted); font-size:13px;">
+        🎯 No active targets scheduled for today. Add custom targets in <b>Targets</b> tab!
+      </div>
+    `;
+    return;
+  }
+
+  // 3A. Render Sankalp Plan Tasks
+  todayTasks.forEach(task => {
+    const isChecked = !!dayProg[task.key];
+    const card = document.createElement('div');
+    card.className = `mob-task-card ${isChecked ? 'is-completed' : ''}`;
+    
+    let tagBg = "#DBEAFE"; let tagColor = "#1E40AF";
+    if (task.key === 'soc' || task.tag === 'SOC') { tagBg = "#DCFCE7"; tagColor = "#166534"; }
+    else if (task.key === 'csat' || task.tag === 'CSAT') { tagBg = "#FEF3C7"; tagColor = "#92400E"; }
+    else if (task.tag === 'PYQ') { tagBg = "#F3E8FF"; tagColor = "#6B21A8"; }
+    else if (task.key === 'ca' || task.tag === 'CA') { tagBg = "#FFE4E6"; tagColor = "#9F1239"; }
+    else if (task.key === 'rest') { tagBg = "#E2E8F0"; tagColor = "#475569"; }
+
+    card.innerHTML = `
+      <div class="mob-task-icon-box" style="background:${tagBg}; color:${tagColor};">
+        <span style="font-size: 11px; font-weight: 800; font-family: var(--font-mono);">${task.tag}</span>
+      </div>
+      <div class="mob-task-details">
+        <div class="mob-task-title" style="${isChecked ? 'text-decoration: line-through; opacity: 0.65;' : ''}">${task.text}</div>
+        <div class="mob-task-sub">
+          <span style="font-weight: 700; color: ${tagColor};">${task.label}</span> &middot; Sankalp Day ${todayEntry.day}
+        </div>
+      </div>
+      <div class="mob-task-right">
+        <input type="checkbox" class="mob-task-checkbox" ${isChecked ? 'checked' : ''} data-plan-task="${task.key}" data-day="${todayEntry.day}"/>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
+  // 3B. Render Custom Habit Targets
+  CUSTOM_HABITS.forEach(habit => {
+    const isChecked = !!HABITS_LOG[today][habit];
+    const card = document.createElement('div');
+    card.className = `mob-task-card ${isChecked ? 'is-completed' : ''}`;
+
+    card.innerHTML = `
+      <div class="mob-task-icon-box" style="background: #F0F5FF; color: #2563EB;">
+        <span style="font-size: 11px; font-weight: 800; font-family: var(--font-mono);">GOAL</span>
+      </div>
+      <div class="mob-task-details">
+        <div class="mob-task-title" style="${isChecked ? 'text-decoration: line-through; opacity: 0.65;' : ''}">${habit}</div>
+        <div class="mob-task-sub">
+          <span style="font-weight: 700; color: #2563EB;">Daily Target</span> &middot; Custom Goal
+        </div>
+      </div>
+      <div class="mob-task-right">
+        <input type="checkbox" class="mob-task-checkbox" ${isChecked ? 'checked' : ''} data-custom-habit="${habit}"/>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
+  // 3C. Attach Event Listeners to Tasks Checkboxes
+  container.querySelectorAll('.mob-task-checkbox').forEach(cb => {
+    cb.addEventListener('change', (e) => {
+      const planKey = e.target.getAttribute('data-plan-task');
+      const dayNum = e.target.getAttribute('data-day');
+      const customHabit = e.target.getAttribute('data-custom-habit');
+
+      if (planKey && dayNum) {
+        if (!TRACKER_PROGRESS[dayNum]) TRACKER_PROGRESS[dayNum] = { checks: {}, notes: {}, dates: {}, timestamps: {} };
+        if (!TRACKER_PROGRESS[dayNum].checks) TRACKER_PROGRESS[dayNum].checks = {};
+        if (!TRACKER_PROGRESS[dayNum].dates) TRACKER_PROGRESS[dayNum].dates = {};
+        if (!TRACKER_PROGRESS[dayNum].timestamps) TRACKER_PROGRESS[dayNum].timestamps = {};
+
+        const now = Date.now();
+        TRACKER_PROGRESS[dayNum].checks[planKey] = e.target.checked;
+        TRACKER_PROGRESS[dayNum].timestamps[planKey] = now;
+        if (e.target.checked) {
+          TRACKER_PROGRESS[dayNum].dates[planKey] = getTodayStr();
+        } else {
+          delete TRACKER_PROGRESS[dayNum].dates[planKey];
+        }
+        try { localStorage.setItem('op300_tracker_progress', JSON.stringify(TRACKER_PROGRESS)); } catch(err){}
+        pushToCentralServer();
+        renderAll();
+      } else if (customHabit) {
+        if (!HABITS_LOG[today]) HABITS_LOG[today] = {};
+        HABITS_LOG[today][customHabit] = e.target.checked;
+        saveData();
+        pushToCentralServer();
+        renderAll();
+      }
+    });
+  });
 }
 
 let SELECTED_ROUTINE_DATE = null;
