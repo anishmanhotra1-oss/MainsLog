@@ -3,6 +3,7 @@
   "builds": [
     { "src": "index.html", "use": "@vercel/static" },
     { "src": "tracker.html", "use": "@vercel/static" },
+    { "src": "deed.jpg", "use": "@vercel/static" },
     { "src": "manifest.json", "use": "@vercel/static" },
     { "src": "sw.js", "use": "@vercel/static" },
     { "src": "favicon.ico", "use": "@vercel/static" },
@@ -14,6 +15,7 @@
   "routes": [
     { "src": "/tracker", "dest": "/tracker.html" },
     { "src": "/tracker.html", "dest": "/tracker.html" },
+    { "src": "/deed.jpg", "dest": "/deed.jpg" },
     { "src": "/api/sync", "dest": "/api/sync.js" },
     { "src": "/api/tracker/(.*)", "dest": "/api/tracker.js" },
     { "src": "/(.*)", "dest": "/$1" }
