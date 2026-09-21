@@ -1,8 +1,9 @@
-const CACHE_NAME = 'mainslog-pwa-v5';
+const CACHE_NAME = 'mainslog-pwa-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './tracker.html',
+  './deed.jpg',
   './manifest.json',
   './favicon.ico',
   './favicon.png',
