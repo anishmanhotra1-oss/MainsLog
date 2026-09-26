@@ -390,6 +390,34 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
     return sendJsonResponse(res, 404, { success: false, error: 'Endpoint not found' });
   }
 
+  // Push Notification Endpoints
+  if (reqPath.startsWith('/api/push/')) {
+    if (reqPath === '/api/push/subscribe' && req.method === 'POST') {
+      try {
+        const body = await parseJsonBody(req);
+        const PUSH_FILE = path.join(DATA_DIR, 'push_subscriptions.json');
+        ensureStorage();
+        let subs = [];
+        if (fs.existsSync(PUSH_FILE)) {
+          try { subs = JSON.parse(fs.readFileSync(PUSH_FILE, 'utf-8')); } catch(e){ subs = []; }
+        }
+        if (body && body.endpoint) {
+          if (!subs.some(s => s.endpoint === body.endpoint)) {
+            subs.push(body);
+            fs.writeFileSync(PUSH_FILE, JSON.stringify(subs, null, 2), 'utf-8');
+          }
+        }
+        return sendJsonResponse(res, 200, { success: true, count: subs.length });
+      } catch (err) {
+        return sendJsonResponse(res, 400, { success: false, error: 'Invalid subscription body' });
+      }
+    }
+
+    if (reqPath === '/api/push/test' && req.method === 'POST') {
+      return sendJsonResponse(res, 200, { success: true, message: 'Test trigger acknowledged' });
+    }
+  }
+
   // Static File Serving
   if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
   if (reqPath === '/tracker') reqPath = '/tracker.html';

@@ -4103,6 +4103,33 @@
           <div class="slot-card-desc" id="widgetSlotDesc">Updating real-time slot tracking...</div>
         </div>
 
+        <!-- PWA MOBILE PUSH NOTIFICATION CONTROL CARD -->
+        <div class="notification-control-card" id="notificationControlCard" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 16px; padding: 18px 20px; color: #FFFFFF; margin-top: 16px; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25); border: 1px solid rgba(255, 255, 255, 0.1);">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(59, 130, 246, 0.2); display: flex; align-items: center; justify-content: center; font-size: 20px; border: 1px solid rgba(96, 165, 250, 0.3);">
+                🔔
+              </div>
+              <div>
+                <div style="font-size: 15px; font-weight: 800; letter-spacing: -0.2px; color: #FFFFFF;">Daily Study Slot Alerts</div>
+                <div style="font-size: 12px; color: #94A3B8;" id="notifStatusSub">Get instant mobile notifications when your study slots start</div>
+              </div>
+            </div>
+            <span id="notifStatusBadge" style="font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; background: rgba(234, 179, 8, 0.2); color: #FDE047; border: 1px solid rgba(234, 179, 8, 0.4);">
+              Checking...
+            </span>
+          </div>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
+            <button id="btnEnableNotif" onclick="requestNotificationPermission()" style="flex: 1; min-width: 160px; background: #2563EB; color: #FFF; border: none; padding: 10px 16px; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px;">
+              ⚡ Enable Mobile Alerts
+            </button>
+            <button id="btnTestNotif" onclick="sendTestNotification()" style="background: rgba(255, 255, 255, 0.1); color: #E2E8F0; border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px 16px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+              🧪 Test Notification
+            </button>
+          </div>
+        </div>
+
         <button class="btn btn-outline" style="width: 100%; margin-top: 16px;" onclick="switchTab('tab-timetable')">View Full Routine</button>
       </div>
     </div>
@@ -5352,6 +5379,186 @@ const TIMETABLE_SLOTS = [
   { start: "01:30", end: "02:30", title: "Same-Day R0 Review", timeDisplay: "1:30 AM – 2:30 AM", desc: "Complete active recall of all topics studied today.", colorClass: "slot-blue" },
   { start: "02:30", end: "07:00", title: "Rest & Sleep Block", timeDisplay: "2:30 AM – 7:00 AM", desc: "Recharging sleep for tomorrow's execution.", colorClass: "slot-mint" }
 ];
+
+// ==========================================
+// PWA STUDY SLOT PUSH NOTIFICATION ENGINE
+// ==========================================
+let studyNotifInterval = null;
+
+function updateNotificationUI() {
+  const badge = document.getElementById('notifStatusBadge');
+  const sub = document.getElementById('notifStatusSub');
+  const btn = document.getElementById('btnEnableNotif');
+
+  if (!('Notification' in window)) {
+    if (badge) { badge.textContent = 'Not Supported'; badge.style.background = 'rgba(239, 68, 68, 0.2)'; badge.style.color = '#FCA5A5'; }
+    if (sub) sub.textContent = 'Browser does not support web notifications.';
+    if (btn) btn.disabled = true;
+    return;
+  }
+
+  if (Notification.permission === 'granted') {
+    if (badge) {
+      badge.textContent = '🟢 Active on Mobile';
+      badge.style.background = 'rgba(16, 185, 129, 0.2)';
+      badge.style.color = '#6EE7B7';
+      badge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+    }
+    if (sub) sub.textContent = 'Automatic phone alerts enabled for every study slot!';
+    if (btn) {
+      btn.innerHTML = '✅ Mobile Alerts Active';
+      btn.style.background = '#10B981';
+    }
+  } else if (Notification.permission === 'denied') {
+    if (badge) {
+      badge.textContent = 'Blocked in Settings';
+      badge.style.background = 'rgba(239, 68, 68, 0.2)';
+      badge.style.color = '#FCA5A5';
+      badge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+    }
+    if (sub) sub.textContent = 'Notification permission blocked. Allow notifications in browser settings.';
+    if (btn) {
+      btn.innerHTML = '⚠️ Permission Blocked';
+      btn.style.background = '#EF4444';
+    }
+  } else {
+    if (badge) {
+      badge.textContent = 'Notifications Disabled';
+      badge.style.background = 'rgba(234, 179, 8, 0.2)';
+      badge.style.color = '#FDE047';
+      badge.style.borderColor = 'rgba(234, 179, 8, 0.4)';
+    }
+    if (sub) sub.textContent = 'Get instant mobile notifications when your study slots start';
+    if (btn) {
+      btn.innerHTML = '⚡ Enable Mobile Alerts';
+      btn.style.background = '#2563EB';
+    }
+  }
+}
+
+async function requestNotificationPermission() {
+  if (!('Notification' in window)) {
+    alert('Notifications are not supported by this browser.');
+    return;
+  }
+
+  try {
+    const permission = await Notification.requestPermission();
+    updateNotificationUI();
+
+    if (permission === 'granted') {
+      sendNotificationToMobile(
+        '🔔 MainsLog Study Alerts Enabled!',
+        'Your daily study slots will now trigger automatic phone notifications.',
+        'welcome-notif'
+      );
+      startStudySlotNotifier();
+    }
+  } catch (err) {
+    console.error('Error requesting notification permission:', err);
+  }
+}
+
+function sendNotificationToMobile(title, body, tag) {
+  if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
+
+  if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage({
+      type: 'SHOW_STUDY_NOTIFICATION',
+      title: title,
+      body: body,
+      tag: tag || 'study-slot-reminder',
+      url: window.location.href
+    });
+  } else if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(reg => {
+      reg.showNotification(title, {
+        body: body,
+        icon: './favicon.png',
+        badge: './favicon.png',
+        vibrate: [200, 100, 200, 100, 200],
+        tag: tag || 'study-slot-reminder',
+        renotify: true,
+        data: { url: window.location.href },
+        actions: [
+          { action: 'open', title: '📖 View Target' },
+          { action: 'dismiss', title: 'Dismiss' }
+        ]
+      });
+    });
+  } else {
+    try {
+      new Notification(title, {
+        body: body,
+        icon: './favicon.png',
+        tag: tag || 'study-slot-reminder'
+      });
+    } catch(e){}
+  }
+}
+
+function sendTestNotification() {
+  if (!('Notification' in window)) {
+    alert('Notifications are not supported in your browser.');
+    return;
+  }
+
+  if (Notification.permission !== 'granted') {
+    requestNotificationPermission().then(() => {
+      if (Notification.permission === 'granted') {
+        sendTestNotification();
+      }
+    });
+    return;
+  }
+
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  sendNotificationToMobile(
+    '🧪 MainsLog Test Notification',
+    `Phone alert tested successfully at ${timeStr}! Study slot reminders are live on your mobile device.`,
+    'test-alert-' + Date.now()
+  );
+}
+
+function checkAndTriggerSlotNotification() {
+  if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
+
+  const now = new Date();
+  const curHours = String(now.getHours()).padStart(2, '0');
+  const curMins = String(now.getMinutes()).padStart(2, '0');
+  const timeKey = `${curHours}:${curMins}`;
+  const todayIso = now.toISOString().slice(0, 10);
+
+  if (typeof TIMETABLE_SLOTS !== 'undefined' && Array.isArray(TIMETABLE_SLOTS)) {
+    TIMETABLE_SLOTS.forEach(slot => {
+      if (slot.start === timeKey) {
+        const storageKey = `notif_sent_${todayIso}_${slot.start}`;
+        if (!localStorage.getItem(storageKey)) {
+          localStorage.setItem(storageKey, 'true');
+          sendNotificationToMobile(
+            `📚 Study Slot Starting: ${slot.title}`,
+            `⏰ ${slot.timeDisplay} — ${slot.desc}`,
+            `slot-alert-${slot.start}-${todayIso}`
+          );
+        }
+      }
+    });
+  }
+}
+
+function startStudySlotNotifier() {
+  if (studyNotifInterval) clearInterval(studyNotifInterval);
+  checkAndTriggerSlotNotification();
+  studyNotifInterval = setInterval(checkAndTriggerSlotNotification, 30000);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  updateNotificationUI();
+  if ('Notification' in window && Notification.permission === 'granted') {
+    startStudySlotNotifier();
+  }
+});
 
 const DEFAULT_HABITS = [
   "Running / Physical Exercise",

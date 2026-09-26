@@ -1,4 +1,5 @@
-const CACHE_NAME = 'mainslog-pwa-v7';
+// MainsLog PWA Service Worker with Push Notifications & Study Slot Reminders
+const CACHE_NAME = 'mainslog-pwa-v8';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -77,3 +78,89 @@ self.addEventListener('fetch', (event) => {
     );
   }
 });
+
+// ==========================================
+// PWA PUSH & LOCAL NOTIFICATION HANDLERS
+// ==========================================
+
+self.addEventListener('push', (event) => {
+  let data = {
+    title: '📚 MainsLog Study Slot Alert',
+    body: 'Time for your scheduled study slot!',
+    url: './index.html'
+  };
+
+  try {
+    if (event.data) {
+      const payload = event.data.json();
+      data = { ...data, ...payload };
+    }
+  } catch (e) {
+    if (event.data) {
+      data.body = event.data.text();
+    }
+  }
+
+  const options = {
+    body: data.body,
+    icon: './favicon.png',
+    badge: './favicon.png',
+    vibrate: [200, 100, 200, 100, 200],
+    tag: data.tag || 'study-slot-push',
+    renotify: true,
+    data: {
+      url: data.url || './index.html'
+    },
+    actions: [
+      { action: 'open', title: '📖 Open Routine' },
+      { action: 'dismiss', title: 'Dismiss' }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(data.title, options)
+  );
+});
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  if (event.action === 'dismiss') return;
+
+  const targetUrl = (event.notification.data && event.notification.data.url) ? event.notification.data.url : './index.html';
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
+      for (const client of clientList) {
+        if (client.url.includes('index.html') || client.url.endsWith('/') || client.url.includes('tracker')) {
+          if ('focus' in client) {
+            return client.focus();
+          }
+        }
+      }
+      if (clients.openWindow) {
+        return clients.openWindow(targetUrl);
+      }
+    })
+  );
+});
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SHOW_STUDY_NOTIFICATION') {
+    const { title, body, tag, url } = event.data;
+    const options = {
+      body: body || 'Time to focus on your target study slot!',
+      icon: './favicon.png',
+      badge: './favicon.png',
+      vibrate: [200, 100, 200, 100, 200],
+      tag: tag || 'study-slot-reminder',
+      renotify: true,
+      data: { url: url || './index.html' },
+      actions: [
+        { action: 'open', title: '📖 View Target' },
+        { action: 'dismiss', title: 'Dismiss' }
+      ]
+    };
+    self.registration.showNotification(title || '📚 MainsLog Study Slot Alert', options);
+  }
+});
+
