@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Topper Answer Copies — UPSC CSE Mains</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #FFFFFF;
+    --paper: #F8FAFC;
+    --card: #FFFFFF;
+    --ink: #0F172A;
+    --ink-soft: #475569;
+    --ink-faint: #64748B;
+    --navy: #0F172A;
+    --blue-900: #1E3A8A;
+    --blue-800: #1E40AF;
+    --blue-700: #1D4ED8;
+    --blue-600: #2563EB;
+    --blue-500: #3B82F6;
+    --blue-300: #93C5FD;
+    --blue-150: #DBEAFE;
+    --blue-100: #EFF6FF;
+    --blue-50: #F0F9FF;
+    --line: #E2E8F0;
+    --shadow: rgba(37, 99, 235, 0.08);
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  ::selection { background: var(--blue-600); color: #fff; }
+
+  /* ---------- Hero Banner ---------- */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 45%, #2563EB 100%);
+    color: #fff; padding: 3.5rem 1.6rem 6.8rem; overflow: hidden;
+    box-shadow: 0 10px 30px -10px rgba(30, 58, 138, 0.4);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
+                      repeating-linear-gradient(to bottom, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 32px);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; gap: 2rem; align-items: flex-start; }
+  .hero-copy { max-width: 36rem; }
+  .kicker {
+    font-family: "IBM Plex Mono", monospace; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; color: #93C5FD;
+    margin: 0 0 1rem; display: inline-flex; align-items: center; gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.35rem 0.85rem; border-radius: 999px; backdrop-filter: blur(4px);
+  }
+  h1 {
+    font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800;
+    font-size: clamp(2.2rem, 5.5vw, 3.2rem); line-height: 1.1; margin: 0 0 0.9rem; letter-spacing: -0.025em; color: #FFFFFF;
+  }
+  .lede { font-size: 1.02rem; color: #DBEAFE; max-width: 52ch; line-height: 1.6; margin: 0 0 1.8rem; }
+  .stat-row { display: flex; gap: 2.4rem; flex-wrap: wrap; }
+  .stat b { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.75rem; font-weight: 800; display: block; color: #60A5FA; }
+  .stat span { font-family: "IBM Plex Mono", monospace; font-size: 0.7rem; color: #BFD6FA; letter-spacing: 0.05em; text-transform: uppercase; }
+
+  .seal {
+    flex: none; width: 115px; height: 115px; display: none; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+  }
+  @media (min-width: 640px) { .seal { display: block; } }
+
+  /* ---------- Floating Main Panel ---------- */
+  .wrap { max-width: 960px; margin: -3.6rem auto 5rem; padding: 0 1.4rem; position: relative; z-index: 10; }
+  .panel {
+    background: #FFFFFF; border-radius: 24px; box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.08);
+    padding: 1.5rem 1.6rem 1rem; border: 1.5px solid var(--line);
+    animation: riseIn 0.5s cubic-bezier(.16,1,.3,1) both;
+  }
+  @keyframes riseIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+  nav.tabs { display: flex; gap: 0.4rem; overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
+  nav.tabs::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    appearance: none; background: var(--blue-100); border: 1px solid var(--blue-150); cursor: pointer;
+    font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--blue-800);
+    padding: 0.6rem 1.1rem; border-radius: 12px; white-space: nowrap; transition: all 0.2s ease;
+  }
+  .tab-btn:hover { background: var(--blue-150); transform: translateY(-1px); }
+  .tab-btn.active { background: var(--blue-600); color: #fff; border-color: var(--blue-600); box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28); }
+
+  .controls { display: flex; gap: 0.75rem; align-items: center; margin: 1.2rem 0 1rem; flex-wrap: wrap; }
+  .search-box { flex: 1 1 220px; display: flex; align-items: center; border: 1.5px solid var(--line); background: #FFFFFF; border-radius: 12px; padding: 0.6rem 0.9rem; transition: all 0.2s ease; box-shadow: 0 2px 6px rgba(0,0,0,0.02); }
+  .search-box:focus-within { border-color: var(--blue-600); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15); }
+  .search-box svg { flex: none; opacity: 0.6; margin-right: 0.6rem; color: var(--blue-600); }
+  .search-box input { border: none; background: none; outline: none; font-family: "Plus Jakarta Sans", sans-serif; font-size: 0.9rem; color: var(--ink); width: 100%; font-weight: 500; }
+  .search-box input::placeholder { color: var(--ink-faint); }
+
+  .sort-toggle { display: flex; border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; background: #F1F5F9; padding: 3px; font-family: "Plus Jakarta Sans", sans-serif; font-size: 0.78rem; font-weight: 600; }
+  .sort-toggle button { appearance: none; background: transparent; border: none; color: var(--ink-soft); padding: 0.5rem 0.85rem; cursor: pointer; border-radius: 999px; transition: all 0.2s ease; }
+  .sort-toggle button.active { background: var(--blue-600); color: #fff; box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25); }
+
+  .folder-link { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; font-size: 0.78rem; color: var(--blue-700); text-decoration: none; border: 1.5px solid var(--blue-300); border-radius: 12px; padding: 0.6rem 0.9rem; white-space: nowrap; background: var(--blue-50); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 4px; }
+  .folder-link:hover { background: var(--blue-600); color: #fff; border-color: var(--blue-600); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25); }
+
+  .paper-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 0.5rem; padding-top: 0.5rem; border-top: 1px dashed var(--line); }
+  .paper-title { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; font-size: 1.25rem; color: var(--blue-900); letter-spacing: -0.01em; }
+  .count-line { font-family: "IBM Plex Mono", monospace; font-size: 0.75rem; font-weight: 600; color: var(--blue-700); background: var(--blue-100); border: 1px solid var(--blue-150); padding: 4px 12px; border-radius: 999px; }
+
+  .year-group { margin: 1.4rem 0 0.5rem; }
+  .year-label { display: inline-flex; align-items: center; gap: 6px; font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; color: var(--blue-800); background: var(--blue-100); border: 1px solid var(--blue-150); border-radius: 999px; padding: 0.3rem 0.85rem; margin-bottom: 0.8rem; }
+
+  .register { list-style: none; margin: 0 0 0.5rem; padding: 0; display: grid; gap: 0.75rem; }
+  .ticket {
+    display: grid; grid-template-columns: 1fr auto; align-items: stretch; background: #FFFFFF;
+    border: 1.5px solid var(--line); border-radius: 16px; overflow: hidden; position: relative;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.03); transition: all 0.2s cubic-bezier(.16,1,.3,1);
+  }
+  .ticket:hover { box-shadow: 0 10px 25px -4px rgba(37, 99, 235, 0.12); border-color: var(--blue-300); transform: translateY(-2px); }
+  .ticket-main { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.1rem; min-width: 0; }
+  .rank-badge {
+    flex: none; width: 2.8rem; height: 2.8rem; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue-600) 0%, var(--blue-800) 100%);
+    color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: "IBM Plex Mono", monospace; font-size: 0.66rem; font-weight: 700; text-align: center; line-height: 1.05;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+  }
+  .who { min-width: 0; flex: 1; }
+  .name { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; font-size: 1.02rem; color: var(--ink); margin: 0 0 0.35rem; overflow-wrap: break-word; }
+  .meta-line { display: flex; align-items: center; gap: 0.65rem; font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; color: var(--ink-faint); }
+  .gauge { width: 70px; height: 6px; background: var(--blue-100); border-radius: 999px; overflow: hidden; flex: none; border: 1px solid var(--blue-150); }
+  .gauge > i { display: block; height: 100%; background: linear-gradient(90deg, var(--blue-500), var(--blue-700)); border-radius: 999px; }
+  .marks-val { color: var(--blue-700); font-weight: 700; }
+
+  .stub {
+    flex: none; width: 8.2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.4rem;
+    padding: 0.6rem 0.7rem; border-left: 1.5px dashed var(--blue-300); background: var(--blue-50); position: relative;
+  }
+  .stub::before, .stub::after { content: ""; position: absolute; left: -9px; width: 16px; height: 16px; border-radius: 50%; background: var(--card); border: 1.5px solid var(--line); }
+  .stub::before { top: -9px; } .stub::after { bottom: -9px; }
+  .file-chip {
+    font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; font-size: 0.72rem; text-decoration: none;
+    color: var(--blue-700); background: #FFFFFF; border: 1.5px solid var(--blue-300); border-radius: 8px;
+    padding: 0.35rem 0.65rem; white-space: nowrap; width: 100%; text-align: center; transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+  .file-chip:hover { background: var(--blue-600); color: #fff; border-color: var(--blue-600); box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25); }
+  .no-copy { font-family: "IBM Plex Mono", monospace; font-size: 0.68rem; color: var(--ink-faint); font-style: italic; text-align: center; }
+
+  .empty-state { padding: 3.5rem 1rem; text-align: center; color: var(--ink-faint); font-family: "Plus Jakarta Sans", sans-serif; font-weight: 600; font-size: 0.95rem; background: #FFFFFF; border: 1.5px dashed var(--line); border-radius: 16px; }
+
+  footer.note { max-width: 960px; margin: 0 auto; padding: 0 1.4rem 3.5rem; font-family: "Plus Jakarta Sans", sans-serif; font-size: 0.78rem; color: var(--ink-faint); line-height: 1.7; text-align: center; }
+  footer.note a { color: var(--blue-700); font-weight: 600; }
+
+  @media (max-width: 560px) {
+    .ticket { grid-template-columns: 1fr; }
+    .stub { width: 100%; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; border-left: none; border-top: 1.5px dashed var(--blue-300); padding: 0.75rem 1rem; }
+    .stub::before, .stub::after { left: 50%; top: -9px; transform: translateX(-50%); }
+    .stub::after { display:none; }
+    .file-chip { width: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="kicker">📚 UPSC CSE MAINS · 2022 – 2023</p>
+        <h1>Topper Answer Copies</h1>
+        <p class="lede">Rank, marks and the actual scanned answer sheets of Civil Services toppers, filed paper by paper — open a copy and see exactly how a top scorer wrote it.</p>
+        <div class="stat-row" id="stat-row"></div>
+      </div>
+      <svg class="seal" viewBox="0 0 120 120" fill="none">
+        <circle cx="60" cy="60" r="56" stroke="#93C5FD" stroke-width="1.2" stroke-dasharray="3 4"/>
+        <circle cx="60" cy="60" r="44" stroke="#fff" stroke-width="1.4"/>
+        <path id="sealCircle" d="M60,16 A44,44 0 1 1 59.9,16" fill="none"/>
+        <text font-family="IBM Plex Mono, monospace" font-size="7.3" fill="#DBEAFE" letter-spacing="2">
+          <textPath href="#sealCircle" startOffset="2">TOP SCORER ARCHIVE • EST. 2022 •</textPath>
+        </text>
+        <text x="60" y="57" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="20" fill="#fff" font-weight="800">AIR</text>
+        <text x="60" y="74" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#93C5FD">RECORD</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="panel">
+      <nav class="tabs" id="tabs" role="tablist" aria-label="Paper"></nav>
+
+      <div class="controls">
+        <div class="search-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="search" placeholder="Search by name or rank…" autocomplete="off">
+        </div>
+        <div class="sort-toggle" id="sort-toggle">
+          <button data-sort="default" class="active">As listed</button>
+          <button data-sort="marks">By marks</button>
+          <button data-sort="rank">By rank</button>
+        </div>
+        <a class="folder-link" id="folder-link" href="#" target="_blank" rel="noopener">Full folder ↗</a>
+      </div>
+
+      <div class="paper-head">
+        <span class="paper-title" id="paper-title"></span>
+        <span class="count-line" id="count-line"></span>
+      </div>
+
+      <div id="content"></div>
+    </div>
+  </div>
+
+  <footer class="note">
+    Compiled from the "Topper Answer Copies" sheet, originally sourced via t.me/TeamKJS. All linked scans were created and published by the respective candidates / institutions and are publicly available — nothing here is claimed as original work, this is only a reading aid.
+  </footer>
+
+<script>
+const DATA = {"essay": {"label": "Essay", "full": "Essay", "folder_link": "https://drive.google.com/drive/folders/1PIF87jfIQNO2kJwxbNoWLvyuVD_hmyo2?usp=drive_link", "entries": [{"name": "Ramesh Chandra Verma", "rank": 150, "year": 2023, "marks": 148.0, "files": []}, {"name": "Katyayani Singh", "rank": 592, "year": 2023, "marks": 143.0, "files": []}, {"name": "Raghunath Singh", "rank": 461, "year": 2023, "marks": 140.0, "files": []}, {"name": "Nausheen", "rank": 9, "year": 2023, "marks": 137.0, "files": [{"label": "Nausheen AIR9 Essay (137) 1.pdf", "url": "https://drive.google.com/file/d/1D83ld5ZtqwRr3T7RhUlF1X2ujGsPeTLc/view?usp=drive_link"}, {"label": "Nausheen AIR9 Essay (137) 2.pdf", "url": "https://drive.google.com/file/d/1v59Q6zu729Dd_64d39ZkTsow2Xctaf4t/view?usp=drive_link"}]}, {"name": "Saurabh Sharma", "rank": 23, "year": 2023, "marks": 136.0, "files": []}, {"name": "Atul Mishra", "rank": 94, "year": 2023, "marks": 136.0, "files": []}, {"name": "Animesh Pradhan", "rank": 2, "year": 2023, "marks": 133.0, "files": [{"label": "Animesh Pradhan AIR2 Essay (133).pdf", "url": "https://drive.google.com/file/d/1aXSxxk35o8lW3HS5u17d01P1pKYp4lxN/view?usp=drive_link"}]}, {"name": "Chandreshkumar Shankhala", "rank": 432, "year": 2023, "marks": 133.0, "files": []}, {"name": "Apurv Anand", "rank": 163, "year": 2023, "marks": 132.0, "files": [{"label": "Apurv Anand AIR163 Essay (132).pdf", "url": "https://drive.google.com/file/d/1SZQ96px6vgw2Ce2COyRfkUR8Mm5uSt2R/view?usp=drive_link"}]}, {"name": "Devashish Bindal", "rank": 301, "year": 2023, "marks": 131.0, "files": [{"label": "Devashish Bindal AIR301 Essay(131) 1.pdf", "url": "https://drive.google.com/file/d/1cWmmJ4kl4uMX1OmV6W3UgRt5NQTp0rUJ/view?usp=drive_link"}, {"label": "Devashish Bindal AIR301 Essay(131) 2.pdf", "url": "https://drive.google.com/file/d/1_C2h3WstEZ25CUuxwwStFppLbFIjJaRC/view?usp=drive_link"}]}, {"name": "Ayushi Pradhan", "rank": 26, "year": 2023, "marks": 130.0, "files": [{"label": "Ayushi Pradhan AIR26 Essay(130).pdf", "url": "https://drive.google.com/file/d/1TbRosqsKzs_KBsKa67IgnKfIepsKTjd7/view?usp=drive_link"}]}, {"name": "Akanchha Singh", "rank": 44, "year": 2023, "marks": 129.0, "files": [{"label": "Akanchha Singh AIR44 Essay (129).pdf", "url": "https://drive.google.com/file/d/1PhZ7PyMzk5X6EeAKPnF4eoJtOO8U_TyY/view?usp=drive_link"}]}, {"name": "Kunal Rastogi", "rank": 15, "year": 2023, "marks": 129.0, "files": [{"label": "Kunal Rastogi AIR15 Essay(129).pdf", "url": "https://drive.google.com/file/d/13yE-CMvC1eUeh4q4gZdCtecLjmadGGCG/view?usp=drive_link"}]}, {"name": "Animesh Verma", "rank": 38, "year": 2023, "marks": 128.0, "files": [{"label": "Animesh Verma AIR38 Essay (128).pdf", "url": "https://drive.google.com/file/d/1PAMSFUav5EznFSdX5j0GwPH5UvKa9aY-/view?usp=drive_link"}]}, {"name": "Samiksha Sarwari", "rank": 124, "year": 2023, "marks": 126.0, "files": [{"label": "Samiksha Sarwari AIR124 Essay (126).pdf", "url": "https://drive.google.com/file/d/1GqgX--RT67xur4xVg0--XDFnwXFx-6MQ/view?usp=drive_link"}]}, {"name": "Aditya Srivastava", "rank": 1, "year": 2023, "marks": 117.0, "files": [{"label": "Aditya Srivastava AIR1 Essay (117).pdf", "url": "https://drive.google.com/file/d/12SEWfFYwE6JigFmyxjUZZ_jPRMLV5nn7/view?usp=drive_link"}]}, {"name": "Ruhani", "rank": 5, "year": 2023, "marks": null, "files": [{"label": "Ruhani AIR5 Essay.pdf", "url": "https://drive.google.com/file/d/1iDnVRPKw6jhSAEM9xvW4DNQpymTd97P-/view?usp=drive_link"}]}, {"name": "Gautam Vivekanandan", "rank": 211, "year": 2022, "marks": 149.0, "files": [{"label": "Gautam Vivekanandan AIR211 Essay(149)-1.pdf", "url": "https://drive.google.com/file/d/1yc542WAAxRemVY3rDbsjoGTS3N_03pDF/view?usp=drive_link"}, {"label": "Gautam Vivekanandan AIR211 Essay(149)-2.pdf", "url": "https://drive.google.com/file/d/1JeRJq_uIXZ4LOwKGNa1KF23_Fx84p0L4/view?usp=drive_link"}]}, {"name": "Smriti Mishra", "rank": 4, "year": 2022, "marks": 145.0, "files": [{"label": "Smriti Mishra AIR 4 Essay (145).pdf", "url": "https://drive.google.com/file/d/1q_3TzpJwdxnckN4HJXmRW8Mwa9EHzLHu/view?usp=drive_link"}]}, {"name": "Herrsh Sharma", "rank": 194, "year": 2022, "marks": 145.0, "files": [{"label": "Herrsh Sharma AIR194 Essay(145)-1.pdf", "url": "https://drive.google.com/file/d/1i5cgTfcg33bbWe4p_AKrzjBa-7Qvg6o7/view?usp=drive_link"}, {"label": "Herrsh Sharma AIR194 Essay(145)-2.pdf", "url": "https://drive.google.com/file/d/1v1zDpGCRblx1Jo01EUNW_FNp4Ea0sk9l/view?usp=drive_link"}, {"label": "Herrsh Sharma AIR194 Essay(145)-3.pdf", "url": "https://drive.google.com/file/d/1M8upUmsDH112WvK2hPQbNdH7dW7I4guz/view?usp=drive_link"}, {"label": "Herrsh Sharma AIR194 Essay(145)-4.pdf", "url": "https://drive.google.com/file/d/1X9F_dPJCT3CZGG5aPBM2oepg0-p7AJ7b/view?usp=drive_link"}]}, {"name": "Kalpana Pandey", "rank": 102, "year": 2022, "marks": 144.0, "files": [{"label": "Kalpana Pandey AIR102 Essay(144).pdf", "url": "https://drive.google.com/file/d/1AH4_NdAvd5X-njYGYL3V4eqvSsb3CYJv/view?usp=drive_link"}]}, {"name": "Eppalapally Susmitha", "rank": 384, "year": 2022, "marks": 144.0, "files": []}, {"name": "Rahul Srivastava", "rank": 10, "year": 2022, "marks": 142.0, "files": [{"label": "Rahul Shrivastava AIR10 Essay(142).pdf", "url": "https://drive.google.com/file/d/1KzHsnFmKmlmLoUQ4QhVkKszh13qu0znL/view?usp=drive_link"}]}, {"name": "Jain Jainom \nMahendrakumar", "rank": 103, "year": 2022, "marks": 142.0, "files": []}, {"name": "Rohit Kumar", "rank": 225, "year": 2022, "marks": 142.0, "files": []}, {"name": "Divya", "rank": 105, "year": 2022, "marks": 141.0, "files": []}, {"name": "Ishita Kishore", "rank": 1, "year": 2022, "marks": 137.0, "files": [{"label": "Ishita Kishore AIR1 Essay(137)-1.pdf", "url": "https://drive.google.com/file/d/1t6H7__X1wX_BGH9HWG-b0-AFhjoWRcrd/view?usp=drive_link"}, {"label": "Ishita Kishore AIR1 Essay(137)-2.pdf", "url": "https://drive.google.com/file/d/1H_rSqxSAWG3li50VFzu2VCU0ybkEqW1B/view?usp=drive_link"}, {"label": "Ishita Kishore AIR1 Essay(137)-3.pdf", "url": "https://drive.google.com/file/d/11OYwMwYbIs1B-WKYMkhfC8LhLlJqfUjR/view?usp=drive_link"}]}, {"name": "Rupal Srivastava", "rank": 113, "year": 2022, "marks": 137.0, "files": []}, {"name": "Shivam Yadav", "rank": 21, "year": 2022, "marks": 135.0, "files": []}, {"name": "Jatin Jain", "rank": 91, "year": 2022, "marks": 135.0, "files": []}, {"name": "Sparsh Yadav", "rank": 51, "year": 2022, "marks": 134.0, "files": []}, {"name": "Mayur Hazarika", "rank": 5, "year": 2022, "marks": 133.0, "files": []}, {"name": "Vaishali", "rank": 23, "year": 2022, "marks": 133.0, "files": []}, {"name": "Garima Lohia", "rank": 2, "year": 2022, "marks": 131.0, "files": [{"label": "Garima Lohia AIR2 Essay(131).pdf", "url": "https://drive.google.com/file/d/1BV70gJlzgberovakFJIAov0iC_UN-xka/view?usp=drive_link"}]}]}, "gs1": {"label": "GS1", "full": "General Studies I", "folder_link": "https://drive.google.com/drive/folders/1PIF87jfIQNO2kJwxbNoWLvyuVD_hmyo2?usp=drive_link", "entries": [{"name": "Animesh Pradhan", "rank": 2, "year": 2023, "marks": 109.0, "files": [{"label": "Animesh Pradhan GS1.pdf", "url": "https://drive.google.com/file/d/1XUTvvVN63MAK9MVxQnFOhYf7Haaxwy3z/view?usp=drive_link"}]}, {"name": "Prem Kumar", "rank": 130, "year": 2023, "marks": 109.0, "files": []}, {"name": "Aditi Upadhyay", "rank": 127, "year": 2023, "marks": 105.0, "files": [{"label": "Aditi Upadhyay GS1.pdf", "url": "https://drive.google.com/file/d/1L51T5WMuf_IpUL_XCKAitN6LlA8rF1TD/view?usp=drive_link"}]}, {"name": "Aditya Srivastava", "rank": 1, "year": 2023, "marks": 104.0, "files": [{"label": "Aditya-Srivastava GS1.pdf", "url": "https://drive.google.com/file/d/18vB3aYFHRYjZP49erUi_QPfGmGxbEc2A/view?usp=drive_link"}]}, {"name": "Abhinav Jain", "rank": 35, "year": 2023, "marks": 104.0, "files": []}, {"name": "Manisha", "rank": 266, "year": 2023, "marks": 104.0, "files": []}, {"name": "Vignesh T A", "rank": 314, "year": 2023, "marks": 104.0, "files": []}, {"name": "Aman Agarwal", "rank": 544, "year": 2023, "marks": 104.0, "files": []}, {"name": "Rohit Tyagi", "rank": 74, "year": 2023, "marks": 103.0, "files": [{"label": "Rohit Tyagi GS1.pdf", "url": "https://drive.google.com/file/d/1hr7Gyznpk4Up4z_JREyS09DTTLmWvf1q/view?usp=drive_link"}]}, {"name": "Nausheen", "rank": 9, "year": 2023, "marks": 101.0, "files": [{"label": "Nausheen GS1 1.pdf", "url": "https://drive.google.com/file/d/1TV0aRpgX4Sg9uN4XZgNt7MCMfTBOuIQP/view?usp=drive_link"}, {"label": "Nausheen GS1 2.pdf", "url": "https://drive.google.com/file/d/1eKlSdWVbfwk8ukv2ialUb1fYF_OZNm_o/view?usp=drive_link"}]}, {"name": "Ashish Kumar", "rank": 8, "year": 2023, "marks": 100.0, "files": [{"label": "Ashish Singhal GS1.pdf", "url": "https://drive.google.com/file/d/1_gYZ5iVYeBH0msrRsZZ8ULW5_N6lrYrJ/view?usp=drive_link"}]}, {"name": "Aishwaryam Prajapati", "rank": 10, "year": 2023, "marks": null, "files": [{"label": "Aishwaryam Prajapati GS1.pdf", "url": "https://drive.google.com/file/d/1jF39A08yQP-yPc0az-I1WsZfLByBAQSh/view?usp=drive_link"}]}, {"name": "Kush Motwani", "rank": 11, "year": 2023, "marks": null, "files": [{"label": "Kush Motwani GS1.pdf", "url": "https://drive.google.com/file/d/1CTQEt8sgzFo6VnpkqVycR7FxYt8dqS6Z/view?usp=drive_link"}]}, {"name": "Ruhani", "rank": 5, "year": 2023, "marks": null, "files": [{"label": "Ruhani GS1.pdf", "url": "https://drive.google.com/file/d/1FiLIPSXWB-NrhqF6zB_Ig6zp8RIO4uwB/view?usp=drive_link"}, {"label": "Ruhani GS1 2.pdf", "url": "https://drive.google.com/file/d/16p5cgv02HUcgIPwqVWe2sm81jL9d5vSq/view?usp=drive_link"}]}, {"name": "Anmol Rathore", "rank": 7, "year": 2023, "marks": null, "files": [{"label": "Anmol Rathore GS1.pdf", "url": "https://drive.google.com/file/d/1mp8Rmf4KZvHIBTFw0mDmdYL0pxKb0RSE/view?usp=drive_link"}]}, {"name": "Abhishek Dawachya", "rank": 610, "year": 2022, "marks": 128.0, "files": []}, {"name": "Ishita Kishore", "rank": 1, "year": 2022, "marks": 121.0, "files": [{"label": "Ishita Kishore GS1.pdf", "url": "https://drive.google.com/file/d/1z4-4eJVLdLlEoLD3nXKzCJDz3IACglX5/view?usp=drive_link"}]}, {"name": "Malavika G Nair", "rank": 172, "year": 2022, "marks": 121.0, "files": []}, {"name": "Prashant Raj", "rank": 97, "year": 2022, "marks": 120.0, "files": [{"label": "Prashant Raj GS1.pdf", "url": "https://drive.google.com/file/d/1O7B84J29PbNtKahl19Qpniwix7_UjXDr/view?usp=drive_link"}]}, {"name": "Laghima Tiwari", "rank": 19, "year": 2022, "marks": 117.0, "files": []}, {"name": "Komal Meena", "rank": 765, "year": 2022, "marks": 117.0, "files": []}, {"name": "Rohit Kumar", "rank": 225, "year": 2022, "marks": 117.0, "files": [{"label": "Rohit Kumar GS1.pdf", "url": "https://drive.google.com/file/d/1z7E-tPFeqTpjRRztp5wGx3s6lbHDrUlL/view?usp=drive_link"}]}, {"name": "Rahul Srivastava", "rank": 10, "year": 2022, "marks": 116.0, "files": [{"label": "Rahul Srivastava GS1.pdf", "url": "https://drive.google.com/file/d/19gWu_AmNRVqstkYdWEHpueA0LTgeYBhN/view?usp=drive_link"}, {"label": "Rahul Srivastava GS1 2.pdf", "url": "https://drive.google.com/file/d/1usgJpoaH63EyuCk9wnJmwVmA1I8BKe3C/view?usp=drive_link"}]}, {"name": "Komal Aggarwal", "rank": 303, "year": 2022, "marks": 115.0, "files": []}, {"name": "Vishwajeet Souryan", "rank": 126, "year": 2022, "marks": 115.0, "files": [{"label": "Vishwajeet-Souryan GS1.pdf", "url": "https://drive.google.com/file/d/1vyGDCZGFsMPxCy1F8Y_6Ev4-_yKbYQwz/view?usp=drive_link"}]}, {"name": "Siddharth Shukla", "rank": 18, "year": 2022, "marks": 115.0, "files": [{"label": "Siddharth Shukla GS1.pdf", "url": "https://drive.google.com/file/d/1H0HHubbhN5DxbRD-JbxrLeaxKyj8VpDc/view?usp=drive_link"}]}, {"name": "Vidushi Singh", "rank": 13, "year": 2022, "marks": 115.0, "files": [{"label": "Vidushi Singh GS1.pdf", "url": "https://drive.google.com/file/d/1rjDQnfMd5gkLS7dJyAKdVX_NP0_iwSKY/view?usp=drive_link"}, {"label": "Vidushi Singh GS1 2.pdf", "url": "https://drive.google.com/file/d/1SFYtKf4B1VMqd-jIsYcE1_2RyS3gqvB_/view?usp=drive_link"}]}, {"name": "Priyansha Garg", "rank": 31, "year": 2022, "marks": 115.0, "files": [{"label": "Priyansha Garg GS1.pdf", "url": "https://drive.google.com/file/d/1DLzL-tQPxTq34FNtBrBYAAj5tNfgpQj3/view?usp=drive_link"}]}, {"name": "Kasturi Panda", "rank": 67, "year": 2022, "marks": 114.0, "files": [{"label": "Kasturi Panda GS1 1.pdf", "url": "https://drive.google.com/file/d/1JepeyU5NH1v9nhnOd1VsuqSov72N4pNI/view?usp=drive_link"}, {"label": "Kasturi Panda GS1 2.pdf", "url": "https://drive.google.com/file/d/1J_etLaaFnrgFE95TOhUzGDA0NTfjWVmh/view?usp=drive_link"}]}]}, "gs2": {"label": "GS2", "full": "General Studies II", "folder_link": "https://drive.google.com/drive/folders/1PIF87jfIQNO2kJwxbNoWLvyuVD_hmyo2?usp=drive_link", "entries": [{"name": "Kunal Rastogi", "rank": 15, "year": 2023, "marks": 134.0, "files": [{"label": "Kunal Rastogi GS2.pdf", "url": "https://drive.google.com/file/d/1cxbX_kZYtzBkxOCRYpqcwmgoz3y4NnCY/view?usp=drive_link"}, {"label": "KUNAL RASTOGI GS2 2.pdf", "url": "https://drive.google.com/file/d/1r1Uvi6zVrzZJL0cFQMKU8DOgsGFlpaVD/view?usp=drive_link"}]}, {"name": "Aditya Srivastava", "rank": 1, "year": 2023, "marks": 132.0, "files": [{"label": "Aditya-Srivastava GS2.pdf", "url": "https://drive.google.com/file/d/12qspdsFI_4hekv-b-dHFNjq_sq5dHWEI/view?usp=drive_link"}, {"label": "Aditya-Srivastava GS2 (2).pdf", "url": "https://drive.google.com/file/d/1QrSb5gMxcDGGej3cvrPA6VqnBXazAHYC/view?usp=drive_link"}]}, {"name": "Muskan Srivastava", "rank": 98, "year": 2023, "marks": 130.0, "files": [{"label": "MUSKAN SRIVASTAVA GS2.pdf", "url": "https://drive.google.com/file/d/1_fL8XLFlo0jYHjR13nBnszLIOaFpNGu2/view?usp=drive_link"}]}, {"name": "Animesh Pradhan", "rank": 2, "year": 2023, "marks": 127.0, "files": [{"label": "Animesh Pradhan GS2 .pdf", "url": "https://drive.google.com/file/d/1YFFf3gNAFgZFBz8uypFlM3Ogx7In-SlN/view?usp=drive_link"}]}, {"name": "Aniket Shandilya", "rank": 12, "year": 2023, "marks": 127.0, "files": [{"label": "ANIKET SHANDILYA GS2.pdf", "url": "https://drive.google.com/file/d/1c3Bj24DgKAj6qb0D_lno64uAELwL67tI/view?usp=drive_link"}]}, {"name": "Benjo P Jose", "rank": 59, "year": 2023, "marks": 127.0, "files": [{"label": "Benjo Jose GS2.pdf", "url": "https://drive.google.com/file/d/1edDS5-u-REn3xUhxpqGGbhuJj0IDdl3r/view?usp=drive_link"}]}, {"name": "Nandala Saikiran", "rank": 27, "year": 2023, "marks": 125.0, "files": [{"label": "Nandala Saikiran GS2.pdf", "url": "https://drive.google.com/file/d/1rWwTGrPzvOu7GuzgWyn0uDQye-iWTKog/view?usp=drive_link"}]}, {"name": "Khushhali Solanki", "rank": 61, "year": 2023, "marks": 125.0, "files": []}, {"name": "Monika Srivastava", "rank": 455, "year": 2023, "marks": 125.0, "files": []}, {"name": "Kajal Singh", "rank": 485, "year": 2023, "marks": 125.0, "files": []}, {"name": "Ruhani", "rank": 5, "year": 2023, "marks": null, "files": [{"label": "Ruhani GS2.pdf", "url": "https://drive.google.com/file/d/119AWSwBQDGsNGCpA_PynQBBV7UJhG8AC/view?usp=drive_link"}, {"label": "RUHANI GS2 2.pdf", "url": "https://drive.google.com/file/d/1oxPuxdS-0-wKjtsCP54GrujuAZBhMKNB/view?usp=drive_link"}]}, {"name": "Srishti Dabas", "rank": 6, "year": 2023, "marks": null, "files": [{"label": "Srishti Dabas GS2.pdf", "url": "https://drive.google.com/file/d/1DYrTjMxLqQnJpm8DkBKbY-minIici0DA/view?usp=drive_link"}]}, {"name": "Anmol Rathore", "rank": 7, "year": 2023, "marks": null, "files": [{"label": "Anmol Rathore GS2.pdf", "url": "https://drive.google.com/file/d/1cChrjK8W3-bLHaW-PUe3YrJsQ2L3nDa6/view?usp=drive_link"}]}, {"name": "Kush Motwani", "rank": 11, "year": 2023, "marks": null, "files": [{"label": "Kush Motwani GS2.pdf", "url": "https://drive.google.com/file/d/1DSTsBFiPQyl7uo0l083bd5MakN-XJFzB/view?usp=drive_link"}]}, {"name": "Vaishali", "rank": 23, "year": 2022, "marks": 135.0, "files": [{"label": "Vaishali GS2.pdf", "url": "https://drive.google.com/file/d/19_sTs29QNSKmWnOA9da2uGa55kV9asU_/view?usp=drive_link"}]}, {"name": "Rahul Srivastava", "rank": 10, "year": 2022, "marks": 132.0, "files": [{"label": "Rahul Srivastava GS2.pdf", "url": "https://drive.google.com/file/d/1uPoY-TNuaJFgBpe7ZMTCzchDN21d5QfV/view?usp=drive_link"}]}, {"name": "Garima Lohia", "rank": 2, "year": 2022, "marks": 131.0, "files": [{"label": "Garima Lohia GS2 1.pdf", "url": "https://drive.google.com/file/d/1kAJiQIcJcKyNNuciBS_R6r3zYZAjQnVt/view?usp=drive_link"}, {"label": "Garima Lohia GS2 2.pdf", "url": "https://drive.google.com/file/d/1Ryoqp4NIZynpsNpYeS0QUGsShPI_OvuB/view?usp=drive_link"}]}, {"name": "Ishita Kishore", "rank": 1, "year": 2022, "marks": 130.0, "files": [{"label": "Ishita Kishore GS2.pdf", "url": "https://drive.google.com/file/d/19GDJUIERBtXymQ38BXPmjgDxQHyJSLg8/view?usp=drive_link"}]}, {"name": "Smriti Mishra", "rank": 4, "year": 2022, "marks": 130.0, "files": [{"label": "Smriti Mishra GS2.pdf", "url": "https://drive.google.com/file/d/1RMdiWHKtlseONXeUmMqeMb9wW5h7hENr/view?usp=drive_link"}, {"label": "Smriti Mishra GS2 (1).pdf", "url": "https://drive.google.com/file/d/1c9_uNTkOke26EI5OFuuomXXiFUFAeiJG/view?usp=drive_link"}]}, {"name": "Malini S", "rank": 81, "year": 2022, "marks": 129.0, "files": []}, {"name": "Goldi Gupta", "rank": 181, "year": 2022, "marks": 128.0, "files": [{"label": "Goldi Gupta GS2.pdf", "url": "https://drive.google.com/file/d/1joK6rSdovMZDpnZwj1dDpQ5ZHAdw0wcC/view?usp=drive_link"}]}, {"name": "Jarad Pratik Anil", "rank": 112, "year": 2022, "marks": 127.0, "files": []}, {"name": "Mohit Gupta", "rank": 195, "year": 2022, "marks": 127.0, "files": []}, {"name": "Siddharth Shukla", "rank": 18, "year": 2022, "marks": 125.0, "files": [{"label": "Siddharth Shukla GS2 (1).pdf", "url": "https://drive.google.com/file/d/1EkoAnqvpYgX92doaMkY8UBHhfbtHm9Ci/view?usp=drive_link"}, {"label": "Siddharth Shukla GS2.pdf", "url": "https://drive.google.com/file/d/1k9vtg3YXBiYK8cDWSJe-QzUNFn9X0okr/view?usp=drive_link"}]}, {"name": "Prashant Raj", "rank": 97, "year": 2022, "marks": 125.0, "files": [{"label": "Prashant Raj GS2.pdf", "url": "https://drive.google.com/file/d/1Erl8aBSOWOkE6SqH4Z20YURWEgjYqpuQ/view?usp=drive_link"}]}, {"name": "Abhinav Siwach", "rank": 12, "year": 2022, "marks": 123.0, "files": [{"label": "Abhinav Siwach GS2.pdf", "url": "https://drive.google.com/file/d/1BQ9jW6i7ORESo7ARcTqHORGl4UEc7ZL9/view?usp=drive_link"}]}]}, "gs3": {"label": "GS3", "full": "General Studies III", "folder_link": "https://drive.google.com/drive/folders/1PIF87jfIQNO2kJwxbNoWLvyuVD_hmyo2?usp=drive_link", "entries": [{"name": "Animesh Pradhan", "rank": 2, "year": 2023, "marks": 103.0, "files": [{"label": "Animesh Pradhan GS3.pdf", "url": "https://drive.google.com/file/d/1Qb5mqGl_hMqX962TEXafbvXhuBPNnctS/view?usp=drive_link"}]}, {"name": "Ashish Kumar", "rank": 8, "year": 2023, "marks": 101.0, "files": []}, {"name": "Shaurya Arora", "rank": 14, "year": 2023, "marks": 101.0, "files": []}, {"name": "Animesh Verma", "rank": 38, "year": 2023, "marks": 100.0, "files": [{"label": "Animesh Verma GS3 1.pdf", "url": "https://drive.google.com/file/d/1Dy2azfksk42x15_dMvQwb9dxLMbzsel7/view?usp=drive_link"}, {"label": "Animesh Verma GS3 2.pdf", "url": "https://drive.google.com/file/d/1-mjRac1_av2w2q59TWow8vgxRjFKzCEB/view?usp=drive_link"}]}, {"name": "Khushhali Solanki", "rank": 61, "year": 2023, "marks": 106.0, "files": [{"label": "Khushhali Solanki GS3.pdf", "url": "https://drive.google.com/file/d/1kZrkNz3zPv77mlVdwxRRU6KjvgvscI7O/view?usp=drive_link"}]}, {"name": "Saloni Chhabra", "rank": 29, "year": 2023, "marks": 99.0, "files": []}, {"name": "Abhinav Jain", "rank": 35, "year": 2023, "marks": 99.0, "files": []}, {"name": "Priya Rani", "rank": 69, "year": 2023, "marks": 99.0, "files": []}, {"name": "Nitin Choudhary", "rank": 578, "year": 2023, "marks": 99.0, "files": []}, {"name": "Rohit Tyagi", "rank": 74, "year": 2023, "marks": 98.0, "files": []}, {"name": "Samiksha Sarwari", "rank": 124, "year": 2023, "marks": 98.0, "files": [{"label": "Samiksha Sarwari GS3 1.pdf", "url": "https://drive.google.com/file/d/1f4C0U00wlAGESDS-fPiUvtzgxbrCgVl0/view?usp=drive_link"}, {"label": "Samiksha Sarwari GS3 2.pdf", "url": "https://drive.google.com/file/d/1MQ7tE7UJnajdfbsYn8ZdxjOcGJ5S2C_0/view?usp=drive_link"}, {"label": "Samiksha Sarwari GS3 3.pdf", "url": "https://drive.google.com/file/d/1Nd5iXoad0ZjRQN_sK3_E_3UtUtjDdk3D/view?usp=drive_link"}]}, {"name": "Anjna Dahiya", "rank": 134, "year": 2023, "marks": 98.0, "files": []}, {"name": "Sushir Shrikrushna", "rank": 155, "year": 2023, "marks": 97.0, "files": [{"label": "Sushir Srikrushna GS3.pdf", "url": "https://drive.google.com/file/d/1EVTFJ4qgjUVRFl8Mz9qR60uXTJrSNNoA/view?usp=drive_link"}]}, {"name": "Neeti Agrawal", "rank": 383, "year": 2023, "marks": 97.0, "files": [{"label": "Neeti Agrawal GS3.pdf", "url": "https://drive.google.com/file/d/1RhY40Q9TpTOZmx5LrHC-aq2GcrYNYeaZ/view?usp=drive_link"}]}, {"name": "Prajanandan Giri", "rank": 24, "year": 2023, "marks": 96.0, "files": [{"label": "Prajanandan Giri GS3.pdf", "url": "https://drive.google.com/file/d/11TSLsd6_X56PNoH_W4KgiYWcDegJSzto/view?usp=drive_link"}]}, {"name": "Deepti Rohilla", "rank": 39, "year": 2023, "marks": 96.0, "files": [{"label": "Deepti Rohilla GS3.pdf", "url": "https://drive.google.com/file/d/1YzhfvBuyKZ9QjAb5rVzZVMI-GQBU6h_Z/view?usp=drive_link"}]}, {"name": "Muskan Srivastava", "rank": 98, "year": 2023, "marks": 96.0, "files": [{"label": "Muskan Srivastava GS3.pdf", "url": "https://drive.google.com/file/d/19LRQOVr3X8DRTKeaG6CUT7rfINi-ZF_P/view?usp=drive_link"}]}, {"name": "Mayur Hazarika", "rank": 5, "year": 2022, "marks": 102.0, "files": []}, {"name": "Goldi Gupta", "rank": 181, "year": 2022, "marks": 101.0, "files": [{"label": "Goldi Gupta GS3.pdf", "url": "https://drive.google.com/file/d/1wM_9-tblhVS4PmWAh8yd_HPZCIHllNKJ/view?usp=drive_link"}]}, {"name": "UMA Harathi N", "rank": 3, "year": 2022, "marks": 100.0, "files": []}, {"name": "Aaditya Sharma", "rank": 70, "year": 2022, "marks": 100.0, "files": []}, {"name": "Anjali Garg", "rank": 79, "year": 2022, "marks": 100.0, "files": []}, {"name": "Ayush Goel", "rank": 171, "year": 2022, "marks": 98.0, "files": [{"label": "Ayush Goel GS3.pdf", "url": "https://drive.google.com/file/d/1WI7j--rJbQqtw7Xhxx-FKG-e5xQk6n2I/view?usp=drive_link"}]}, {"name": "Smriti Mishra", "rank": 4, "year": 2022, "marks": 97.0, "files": []}, {"name": "Priyansha Garg", "rank": 31, "year": 2022, "marks": 97.0, "files": [{"label": "Priyansha Garg GS3.pdf", "url": "https://drive.google.com/file/d/1PZDfxWrCoAhBmSqeOcB-bUyNKShKrBAW/view?usp=drive_link"}]}, {"name": "Malavija G Nair", "rank": 172, "year": 2022, "marks": 96.0, "files": []}, {"name": "Tarun Bansal", "rank": 204, "year": 2022, "marks": 96.0, "files": []}, {"name": "Diksha Rai", "rank": 374, "year": 2022, "marks": 96.0, "files": []}, {"name": "Vedika Bihani", "rank": 213, "year": 2022, "marks": 95.0, "files": [{"label": "Vedika Bihani GS3.pdf", "url": "https://drive.google.com/file/d/1st7aJ14bIEaTHJK65BP84sgzzff7gE6P/view?usp=drive_link"}]}, {"name": "Manan Aggarwal", "rank": 46, "year": 2022, "marks": 94.0, "files": [{"label": "Manan Agarwal GS3.pdf", "url": "https://drive.google.com/file/d/1QiOY5tBaA46jEdmsAwL5ygnHVOFxZyb2/view?usp=drive_link"}]}, {"name": "Parsanjeet Kaur", "rank": 11, "year": 2022, "marks": null, "files": [{"label": "Parsanjeet Kour GS3.pdf", "url": "https://drive.google.com/file/d/1tfrfhDZxIlsQwiLKvWfh64hbnO6MoyVN/view?usp=drive_link"}]}, {"name": "Anoushka Sharma", "rank": 20, "year": 2022, "marks": null, "files": [{"label": "Anoushka Sharma GS3.pdf", "url": "https://drive.google.com/file/d/13h5R2GibmzGJxQ2ONvmq4rPtMJ8FCIF8/view?usp=drive_link"}]}]}, "gs4": {"label": "GS4", "full": "General Studies IV — Ethics", "folder_link": "https://drive.google.com/drive/folders/1PIF87jfIQNO2kJwxbNoWLvyuVD_hmyo2?usp=drive_link", "entries": [{"name": "Aditya Srivastava", "rank": 1, "year": 2023, "marks": 143.0, "files": [{"label": "Aditya Srivastava GS4.pdf", "url": "https://drive.google.com/file/d/1lsuXzCGz8jr9jnhJbycSmjHFyBm7nrHC/view?usp=drive_link"}, {"label": "Aditya Srivastava GS4 (2).pdf", "url": "https://drive.google.com/file/d/1nWz0S4RSCrtz8oIu_x99VlkNh-083qgs/view?usp=drive_link"}, {"label": "Aditya-Srivastava GS4 (3).pdf", "url": "https://drive.google.com/file/d/1GcosUYi0Alp_62d3f31EnDbITDHJlpvS/view?usp=drive_link"}]}, {"name": "Khushalee Solanki", "rank": 61, "year": 2023, "marks": 136.0, "files": [{"label": "KHUSHHALI SOLANKI GS4.pdf", "url": "https://drive.google.com/file/d/1FrywOolYtLZRKp-vUbD5GvHkwc3KKlHY/view?usp=drive_link"}]}, {"name": "Shivansh Rathee", "rank": 63, "year": 2023, "marks": 135.0, "files": [{"label": "Shivansh Rathee GS4.pdf", "url": "https://drive.google.com/file/d/1u29bXxcpP27f_ifxyKe65-_GziyxFzpJ/view?usp=drive_link"}]}, {"name": "Animesh Pradhan", "rank": 2, "year": 2023, "marks": 134.0, "files": [{"label": "ANIMESH PRADHAN GS4.pdf", "url": "https://drive.google.com/file/d/19Dq_4h2OVpP55arHJv4iB-C6Z-9Zn6Jc/view?usp=drive_link"}]}, {"name": "Garima Mundra", "rank": 80, "year": 2023, "marks": 133.0, "files": [{"label": "Garima Mundra GS4 - 1.pdf", "url": "https://drive.google.com/file/d/1GFNungGJN1V4WEO1ZvxJaT1yeRGSoA6s/view?usp=drive_link"}, {"label": "Garima Mundra GS4 - 2.pdf", "url": "https://drive.google.com/file/d/1OtxEhZ4EsvXDWlPexjEEJZKVPDH7ylvb/view?usp=drive_link"}]}, {"name": "Ashish Singhal", "rank": 8, "year": 2023, "marks": 132.0, "files": [{"label": "Ashish Singhal GS4.pdf", "url": "https://drive.google.com/file/d/1_esK7GSKHZx02dE5ar1suKIoxr2hC8ze/view?usp=drive_link"}]}, {"name": "Anshul Hindal", "rank": 48, "year": 2023, "marks": 132.0, "files": [{"label": "ANSHUL HINDAL GS-4.pdf", "url": "https://drive.google.com/file/d/1tUBSjBUdc4O7d2QmvHJ-YKF4f5_eGqVz/view?usp=drive_link"}, {"label": "ANSHUL HINDAL GS-4 (1).pdf", "url": "https://drive.google.com/file/d/12EB4RX00oWhW66tk8K-CKZDpHojMt79K/view?usp=drive_link"}, {"label": "ANSHUL HINDAL GS-4 (2).pdf", "url": "https://drive.google.com/file/d/1woxHWdgxKUkfmnyKrHrj4RQuh4t3Aw7B/view?usp=drive_link"}]}, {"name": "Aswin Kakumani", "rank": 148, "year": 2023, "marks": 131.0, "files": [{"label": "Aswin Kakumani GS4.pdf", "url": "https://drive.google.com/file/d/1pCDka6h8WsprZaf6K7Sy5Jvms4NT7OiC/view?usp=drive_link"}]}, {"name": "Shivam Kumar", "rank": 19, "year": 2023, "marks": 130.0, "files": [{"label": "SHIVAM KUMAR GS4 (1).pdf", "url": "https://drive.google.com/file/d/1_ZFPe4FVDkkfNxF3oKpEcnGOTR6tTAMT/view?usp=drive_link"}, {"label": "SHIVAM KUMAR GS4 (2).pdf", "url": "https://drive.google.com/file/d/1hwriI13GRgrwpzoQtKn6O70yLQ_HsmLh/view?usp=drive_link"}]}, {"name": "Ruhani", "rank": 5, "year": 2023, "marks": null, "files": [{"label": "RUHANI GS4.pdf", "url": "https://drive.google.com/file/d/19UpqtzGAiYeqNIEZMmxtC8JCoOUNlHfx/view?usp=drive_link"}]}, {"name": "Garima Lohia", "rank": 2, "year": 2022, "marks": 141.0, "files": [{"label": "Garima Lohia GS4 - 1.pdf", "url": "https://drive.google.com/file/d/1FVCP1TIK0TpiE2mOlSrOBtglpBq8pfGf/view?usp=drive_link"}, {"label": "Garima Lohia GS4 - 2.pdf", "url": "https://drive.google.com/file/d/1mNkXGqR8U8MWRz--Yhsy-011hB3EuA3R/view?usp=drive_link"}]}, {"name": "Uma Harathi N", "rank": 3, "year": 2022, "marks": 132.0, "files": [{"label": "Uma Harathi GS4 - 1.pdf", "url": "https://drive.google.com/file/d/14SmFBm7SPUU33827lFj237WsHYUJ7EJE/view?usp=drive_link"}, {"label": "Uma Harathi GS4 - 2.pdf", "url": "https://drive.google.com/file/d/1ufhUWYeihdX9AXepy76lDgxEReRjJr9M/view?usp=drive_link"}]}, {"name": "Madhav Upadhyay", "rank": 148, "year": 2022, "marks": 132.0, "files": []}, {"name": "Abhinav Siwach", "rank": 12, "year": 2022, "marks": 130.0, "files": [{"label": "Abhinav Siwach GS4 - 1.pdf", "url": "https://drive.google.com/file/d/1hUPXQg53ty6ArcLFifPVDwDMMPRCu2XF/view?usp=drive_link"}, {"label": "Abhinav Siwach GS4 - 2.pdf", "url": "https://drive.google.com/file/d/1IxDp01aS__LFcDmizA0D-wEQK3mPINRi/view?usp=drive_link"}]}, {"name": "Malavika G Nair", "rank": 172, "year": 2022, "marks": 130.0, "files": []}, {"name": "Ayush Goel", "rank": 171, "year": 2022, "marks": 129.0, "files": [{"label": "Ayush Goel GS4 1.pdf", "url": "https://drive.google.com/file/d/13l_S53iE0n56ux0YNNxqX5yVgCggHUD1/view?usp=drive_link"}, {"label": "Ayush Goel GS4 2.pdf", "url": "https://drive.google.com/file/d/1EMzySqxEfXaOfXiIiz1wvm92jlY27y9t/view?usp=drive_link"}]}, {"name": "Laghima Tiwari", "rank": 19, "year": 2022, "marks": 127.0, "files": []}, {"name": "Vaishali", "rank": 23, "year": 2022, "marks": 127.0, "files": [{"label": "Vaishali Chopra GS4.pdf", "url": "https://drive.google.com/file/d/1hrsPNa3-rG7zVKZRYDWccfBbxcZHGwIx/view?usp=drive_link"}]}, {"name": "Vidushi Singh", "rank": 13, "year": 2022, "marks": 126.0, "files": [{"label": "Vidushi Singh GS4-1.pdf", "url": "https://drive.google.com/file/d/14QfQEW-7Re5GFPpU7l58NoSMZs3kakpB/view?usp=drive_link"}, {"label": "Vidushi Singh GS4-2.pdf", "url": "https://drive.google.com/file/d/1HbzldJRll2ZrgxN2qs4QujUd8f50-zru/view?usp=drive_link"}]}, {"name": "Prashant Raj", "rank": 97, "year": 2022, "marks": 126.0, "files": [{"label": "Prashant Raj GS4 1.pdf", "url": "https://drive.google.com/file/d/1EkDXI0S6MggKrSYR_XHTHWa_-iiYx-YC/view?usp=drive_link"}, {"label": "Prashant Raj GS4 2.pdf", "url": "https://drive.google.com/file/d/109mBIQhjMP3Nv3-axTLjDVehQLYzj_SJ/view?usp=drive_link"}]}]}};
+const ORDER = ["essay", "gs1", "gs2", "gs3", "gs4"];
+const MAX_MARKS = 250;
+
+let state = { paper: "gs1", query: "", sort: "default" };
+
+const tabsEl = document.getElementById("tabs");
+const contentEl = document.getElementById("content");
+const titleEl = document.getElementById("paper-title");
+const countEl = document.getElementById("count-line");
+const folderLinkEl = document.getElementById("folder-link");
+const searchEl = document.getElementById("search");
+const sortToggleEl = document.getElementById("sort-toggle");
+const statRowEl = document.getElementById("stat-row");
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function fmtMarks(m) { if (m === null || m === undefined || m === "") return null; return Number(m).toString(); }
+
+function buildStats() {
+  let totalToppers = 0, totalCopies = 0;
+  ORDER.forEach(k => {
+    totalToppers += DATA[k].entries.length;
+    DATA[k].entries.forEach(e => totalCopies += e.files.length);
+  });
+  const stats = [[String(totalToppers), "topper entries"], [String(totalCopies), "scanned copies"], ["5", "papers indexed"]];
+  statRowEl.innerHTML = stats.map(([v, l]) => '<div class="stat"><b>' + v + '</b><span>' + l + '</span></div>').join("");
+}
+
+function buildTabs() {
+  ORDER.forEach(key => {
+    const p = DATA[key];
+    const btn = document.createElement("button");
+    btn.className = "tab-btn" + (key === state.paper ? " active" : "");
+    btn.textContent = p.label;
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("data-key", key);
+    btn.addEventListener("click", () => { state.paper = key; searchEl.value = ""; state.query = ""; render(); });
+    tabsEl.appendChild(btn);
+  });
+}
+
+function render() {
+  [...tabsEl.children].forEach(btn => btn.classList.toggle("active", btn.getAttribute("data-key") === state.paper));
+
+  const paper = DATA[state.paper];
+  titleEl.textContent = paper.full;
+  folderLinkEl.href = paper.folder_link || "#";
+  folderLinkEl.style.visibility = paper.folder_link ? "visible" : "hidden";
+
+  let entries = paper.entries.slice();
+  if (state.query.trim()) {
+    const q = state.query.trim().toLowerCase();
+    entries = entries.filter(e => e.name.toLowerCase().includes(q) || String(e.rank).includes(q));
+  }
+  const years = [...new Set(entries.map(e => e.year))].sort((a, b) => b - a);
+  if (state.sort === "marks") entries.sort((a, b) => (b.marks ?? -1) - (a.marks ?? -1));
+  else if (state.sort === "rank") entries.sort((a, b) => (a.rank ?? 1e9) - (b.rank ?? 1e9));
+
+  contentEl.innerHTML = "";
+  if (entries.length === 0) {
+    contentEl.innerHTML = '<div class="empty-state">No toppers match "' + escapeHtml(state.query) + '" in ' + paper.label + '.</div>';
+    countEl.textContent = "";
+    return;
+  }
+  const withCopies = paper.entries.filter(e => e.files.length > 0).length;
+  countEl.textContent = paper.entries.length + " listed · " + withCopies + " with a copy";
+
+  years.forEach(year => {
+    const group = entries.filter(e => e.year === year);
+    if (!group.length) return;
+    const yearWrap = document.createElement("div");
+    yearWrap.className = "year-group";
+    const yl = document.createElement("span");
+    yl.className = "year-label";
+    yl.textContent = year + " batch";
+    yearWrap.appendChild(yl);
+
+    const list = document.createElement("ul");
+    list.className = "register";
+
+    group.forEach(e => {
+      const li = document.createElement("li");
+      li.className = "ticket";
+      const marks = fmtMarks(e.marks);
+      const pct = marks !== null ? Math.max(4, Math.min(100, (Number(marks) / MAX_MARKS) * 100)) : 0;
+
+      const main = document.createElement("div");
+      main.className = "ticket-main";
+      main.innerHTML =
+        '<div class="rank-badge">AIR<br>' + e.rank + '</div>' +
+        '<div class="who"><p class="name">' + escapeHtml(e.name) + '</p><div class="meta-line">' +
+          (marks !== null
+            ? '<span class="gauge"><i style="width:' + pct + '%"></i></span><span class="marks-val">' + marks + '</span><span>/ 250</span>'
+            : '<span>marks not recorded</span>') +
+        '</div></div>';
+
+      const stub = document.createElement("div");
+      stub.className = "stub";
+      if (e.files.length) {
+        e.files.forEach((f, i) => {
+          const a = document.createElement("a");
+          a.className = "file-chip"; a.href = f.url; a.target = "_blank"; a.rel = "noopener";
+          a.textContent = e.files.length > 1 ? "Copy " + (i + 1) : "Copy";
+          a.title = f.label;
+          stub.appendChild(a);
+        });
+      } else {
+        const span = document.createElement("span");
+        span.className = "no-copy"; span.textContent = "no copy";
+        stub.appendChild(span);
+      }
+
+      li.appendChild(main); li.appendChild(stub); list.appendChild(li);
+    });
+
+    yearWrap.appendChild(list);
+    contentEl.appendChild(yearWrap);
+  });
+}
+
+searchEl.addEventListener("input", (e) => { state.query = e.target.value; render(); });
+sortToggleEl.addEventListener("click", (e) => {
+  const btn = e.target.closest("button[data-sort]");
+  if (!btn) return;
+  state.sort = btn.getAttribute("data-sort");
+  [...sortToggleEl.children].forEach(b => b.classList.toggle("active", b === btn));
+  render();
+});
+
+buildStats();
+buildTabs();
+const urlParams = new URLSearchParams(window.location.search);
+const initSearch = urlParams.get('search');
+if (initSearch) {
+  state.query = initSearch;
+  searchEl.value = initSearch;
+}
+render();
+</script>
+</body>
+</html>

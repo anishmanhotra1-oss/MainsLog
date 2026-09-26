@@ -3307,6 +3307,554 @@
   .deed-modal-commit-btn:active {
     transform: translateY(0);
   }
+
+  /* TOPPER COPIES VAULT STYLES */
+  .topper-copies-root {
+    padding: 0 0 40px 0;
+  }
+
+  /* TWO BIG LANDING CARDS FOR GS AND SOCIOLOGY */
+  .topper-landing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  .topper-main-card {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 24px;
+    padding: 26px 28px 24px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .topper-main-card:hover {
+    transform: translateY(-6px);
+    border-color: #3B82F6;
+    box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
+  }
+
+  .topper-main-card.card-soc:hover {
+    border-color: #8B5CF6;
+    box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.15);
+  }
+
+  .topper-main-card.active {
+    border-color: #2563EB;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F0F7FF 100%);
+  }
+
+  .topper-main-card.card-soc.active {
+    border-color: #7C3AED;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9F5FF 100%);
+  }
+
+  .topper-card-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .topper-card-icon-lg {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  }
+
+  .topper-main-card.card-soc .topper-card-icon-lg {
+    background: #F5F3FF;
+    border-color: #DDD6FE;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  }
+
+  .topper-pill-count {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: #EFF6FF;
+    border: 1px solid #DBEAFE;
+    color: #1D4ED8;
+  }
+
+  .topper-main-card.card-soc .topper-pill-count {
+    background: #F5F3FF;
+    border-color: #DDD6FE;
+    color: #6D28D9;
+  }
+
+  .topper-main-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 800;
+    color: #0F172A;
+    letter-spacing: -0.02em;
+    margin-top: 4px;
+  }
+
+  .topper-main-btn {
+    background: #2563EB;
+    color: #FFFFFF;
+    border: 1px solid #2563EB;
+    padding: 13px 20px;
+    border-radius: 14px;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  }
+
+  .topper-main-btn .btn-arrow {
+    font-size: 16px;
+    transition: transform 0.25s ease;
+  }
+
+  .topper-main-card:hover .topper-main-btn {
+    background: #1D4ED8;
+    border-color: #1D4ED8;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.38);
+  }
+
+  .topper-main-card:hover .topper-main-btn .btn-arrow {
+    transform: translateX(6px);
+  }
+
+  .topper-main-card.card-soc .topper-main-btn {
+    background: #7C3AED;
+    color: #FFFFFF;
+    border-color: #7C3AED;
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
+  }
+
+  .topper-main-card.card-soc:hover .topper-main-btn {
+    background: #6D28D9;
+    border-color: #6D28D9;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.38);
+  }
+
+  .toppers-hero-card {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #1E40AF 100%);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    color: #FFFFFF;
+    box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.25);
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .toppers-hero-card::after {
+    content: "";
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .toppers-kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #93C5FD;
+    margin-bottom: 6px;
+  }
+
+  .toppers-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(22px, 3.5vw, 32px);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .toppers-hero-sub {
+    font-size: 14px;
+    color: #94A3B8;
+    max-width: 680px;
+    line-height: 1.6;
+  }
+
+  .btn-topper-add {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-family: var(--font-heading);
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-topper-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+  }
+
+  .toppers-stats-strip {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+  }
+
+  .topper-stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topper-stat-num {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 800;
+    color: #F8FAFC;
+  }
+
+  .topper-stat-lbl {
+    font-size: 12px;
+    color: #64748B;
+    font-weight: 500;
+  }
+
+  /* TOOLBAR & SEARCH */
+  .toppers-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .toppers-search-wrap {
+    width: 100%;
+  }
+
+  .toppers-search-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+  }
+
+  .toppers-search-input:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  }
+
+  .toppers-filter-buttons {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+  }
+
+  .topper-filter-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+
+  .topper-filter-btn.active {
+    background: var(--brand-blue);
+    color: #FFFFFF;
+    border-color: var(--brand-blue);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  }
+
+  .topper-filter-btn:hover:not(.active) {
+    background: var(--brand-blue-light);
+    color: var(--brand-blue);
+    border-color: var(--brand-blue-border);
+  }
+
+  /* TOPPERS GRID & CARD */
+  .toppers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .topper-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .topper-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--brand-blue-border);
+    box-shadow: var(--shadow-md);
+  }
+
+  .topper-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+
+  .topper-rank-badge {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    color: #92400E;
+    border: 1px solid #FCD34D;
+    font-family: var(--font-heading);
+    font-size: 11.5px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .topper-paper-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: var(--brand-blue-light);
+    color: var(--brand-blue);
+    border: 1px solid var(--brand-blue-border);
+  }
+
+  .topper-name {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .topper-title-text {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+
+  .topper-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+  .topper-notes-box {
+    background: var(--bg-subtle);
+    border-left: 3px solid var(--brand-blue);
+    padding: 8px 12px;
+    border-radius: 0 8px 8px 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .topper-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .topper-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: var(--bg-subtle);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+  }
+
+  .topper-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border-color);
+  }
+
+  .btn-topper-view {
+    flex: 1;
+    background: var(--brand-blue-light);
+    color: var(--brand-blue);
+    border: 1px solid var(--brand-blue-border);
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 12.5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .btn-topper-view:hover {
+    background: var(--brand-blue);
+    color: #FFFFFF;
+    border-color: var(--brand-blue);
+  }
+
+  .btn-topper-delete {
+    background: var(--crimson-soft);
+    color: var(--crimson);
+    border: 1px solid #FCA5A5;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .btn-topper-delete:hover {
+    background: var(--crimson);
+    color: #FFFFFF;
+  }
+
+  /* MODAL FOR ADDING TOPPER COPY */
+  .topper-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    padding: 16px;
+  }
+
+  .topper-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .topper-modal-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    max-width: 580px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 26px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
+  }
+
+  .topper-modal-overlay.active .topper-modal-card {
+    transform: scale(1);
+  }
+
+  .topper-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .topper-modal-header h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+
+  .topper-form-group {
+    margin-bottom: 14px;
+  }
+
+  .topper-form-group label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+  }
+
+  .topper-form-input, .topper-form-select, .topper-form-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    color: var(--text-primary);
+    background: #FFFFFF;
+  }
+
+  .topper-form-input:focus, .topper-form-select:focus, .topper-form-textarea:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
 </style>
 </head>
 <body>
@@ -3893,6 +4441,53 @@
     </div>
   </div>
 
+  <!-- TAB 7: TOPPER COPIES VAULT LANDING PAGE -->
+  <div id="tab-toppers" class="tab-view">
+    <div class="topper-copies-root">
+      <!-- HERO HEADER BANNER -->
+      <div class="toppers-hero-card">
+        <div class="toppers-header-content">
+          <div>
+            <div class="toppers-kicker">🏆 EXCELLENCE BENCHMARK</div>
+            <h2 class="toppers-hero-title">UPSC Toppers' Answer Copies</h2>
+            <p class="toppers-hero-sub">
+              Curated reference collection of topper answer booklets, presentation frameworks, diagrams, and key statistics for GS and Sociology.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TWO BIG LANDING CARDS FOR GS & SOCIOLOGY -->
+      <div class="topper-landing-grid">
+        <!-- GS CARD -->
+        <a href="gs.html" class="topper-main-card active" id="cardGsCategory" style="text-decoration:none; color:inherit;">
+          <div class="topper-card-badge-row">
+            <div class="topper-card-icon-lg">📘</div>
+            <span class="topper-pill-count">GS I - IV &amp; Essay</span>
+          </div>
+          <div class="topper-main-title">General Studies</div>
+          <div class="topper-main-btn">
+            <span>Explore GS Copies</span>
+            <span class="btn-arrow">&rarr;</span>
+          </div>
+        </a>
+
+        <!-- SOCIOLOGY CARD -->
+        <a href="sociology.html" class="topper-main-card card-soc" id="cardSocCategory" style="text-decoration:none; color:inherit;">
+          <div class="topper-card-badge-row">
+            <div class="topper-card-icon-lg">📙</div>
+            <span class="topper-pill-count">Paper 1 &amp; Paper 2</span>
+          </div>
+          <div class="topper-main-title">Sociology Optional</div>
+          <div class="topper-main-btn">
+            <span>Explore Sociology Copies</span>
+            <span class="btn-arrow">&rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
 <!-- BOTTOM NAVIGATION BAR (INCLUDES SANKALP) -->
 <nav class="bottom-nav-bar" id="mainBottomNav">
   <div class="bottom-nav-container">
@@ -3917,6 +4512,13 @@
       <span>Tracker</span>
     </a>
 
+    <button class="b-nav-item" data-tab="tab-toppers">
+      <div class="b-nav-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><polyline points="9 6 12 9 15 6"/></svg>
+      </div>
+      <span>Copies</span>
+    </button>
+
     <button class="b-nav-item" id="moreNavBtn" onclick="toggleMoreNavMenu(event)">
       <div class="b-nav-icon">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
@@ -3926,6 +4528,13 @@
 
     <!-- MORE POPOVER MENU -->
     <div class="more-nav-popover" id="moreNavPopover">
+      <button class="more-nav-item" data-tab="tab-toppers">
+        <div class="more-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><polyline points="9 6 12 9 15 6"/></svg>
+        </div>
+        <span>Copies</span>
+      </button>
+
       <button class="more-nav-item" data-tab="tab-timetable">
         <div class="more-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="2"/></svg>
@@ -3956,6 +4565,83 @@
     </div>
   </div>
 </nav>
+
+<!-- ADD TOPPER COPY MODAL -->
+<div class="topper-modal-overlay" id="topperModalOverlay" onclick="closeAddTopperModalOnBackdrop(event)">
+  <div class="topper-modal-card">
+    <div class="topper-modal-header">
+      <h3>🏆 Add Topper Answer Copy</h3>
+      <button class="popup-close-btn" onclick="closeAddTopperModal()">✕</button>
+    </div>
+    <div class="topper-modal-body">
+      <div class="topper-form-group">
+        <label>Topper Name *</label>
+        <input type="text" id="addTcName" class="topper-form-input" placeholder="e.g. Aditya Srivastava"/>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <div class="topper-form-group" style="flex:1;">
+          <label>Rank &amp; Year *</label>
+          <input type="text" id="addTcRank" class="topper-form-input" placeholder="e.g. AIR 1 (UPSC 2023)"/>
+        </div>
+        <div class="topper-form-group" style="flex:1;">
+          <label>Paper / Subject *</label>
+          <select id="addTcSubject" class="topper-form-select">
+            <option value="GS I">GS I</option>
+            <option value="GS II">GS II</option>
+            <option value="GS III">GS III</option>
+            <option value="GS IV">GS IV (Ethics)</option>
+            <option value="Essay">Essay</option>
+            <option value="Sociology">Sociology</option>
+            <option value="Optional">Optional</option>
+          </select>
+        </div>
+      </div>
+      <div class="topper-form-group">
+        <label>Title / Test Name *</label>
+        <input type="text" id="addTcTitle" class="topper-form-input" placeholder="e.g. Ethics FLT 1 Mock Copy"/>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <div class="topper-form-group" style="flex:1;">
+          <label>Coaching / Institute</label>
+          <input type="text" id="addTcInstitute" class="topper-form-input" placeholder="e.g. Vision IAS / ForumIAS"/>
+        </div>
+        <div class="topper-form-group" style="flex:1;">
+          <label>Year</label>
+          <input type="text" id="addTcYear" class="topper-form-input" placeholder="e.g. 2023"/>
+        </div>
+      </div>
+      <div class="topper-form-group">
+        <label>PDF / Drive Link *</label>
+        <input type="url" id="addTcPdfUrl" class="topper-form-input" placeholder="https://..."/>
+      </div>
+      <div class="topper-form-group">
+        <label>Key Highlights / Tags (comma separated)</label>
+        <input type="text" id="addTcHighlights" class="topper-form-input" placeholder="e.g. Diagrams, SC Judgments, Intro-Conclusion"/>
+      </div>
+      <div class="topper-form-group">
+        <label>Personal Notes &amp; Takeaways</label>
+        <textarea id="addTcNotes" class="topper-form-textarea" rows="3" placeholder="Key observations from this copy..."></textarea>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px;">
+      <button class="btn btn-outline" onclick="closeAddTopperModal()">Cancel</button>
+      <button class="btn" onclick="saveNewTopperCopy()">Save Copy</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOPPER CATEGORY VIEW MODAL -->
+<div class="topper-modal-overlay" id="topperCategoryModalOverlay" onclick="closeTopperCategoryModalOnBackdrop(event)">
+  <div class="topper-modal-card" style="max-width: 820px; width: 92%;">
+    <div class="topper-modal-header">
+      <h3 id="topperCategoryModalTitle">🏆 UPSC Topper Answer Copies</h3>
+      <button class="popup-close-btn" onclick="closeTopperCategoryModal()">✕</button>
+    </div>
+    <div class="topper-modal-body" id="topperCategoryModalBody" style="max-height: 70vh; overflow-y: auto; display: grid; gap: 16px; padding-right: 4px;">
+      <!-- Category copies rendered dynamically -->
+    </div>
+  </div>
+</div>
 
 <!-- Floating Action Button -->
 <button class="floating-popup-btn" style="display: none !important;" onclick="openPopupModal()">
@@ -5599,6 +6285,7 @@ function renderAll() {
   try { renderHabits(); } catch(e){ console.error("renderHabits error:", e); }
   try { populateSubjectSelects(); } catch(e){ console.error("populateSubjectSelects error:", e); }
   try { renderMasterLog(); } catch(e){ console.error("renderMasterLog error:", e); }
+  try { renderTopperCopies(); } catch(e){ console.error("renderTopperCopies error:", e); }
   try { updateRevisionSchedulePreview(); } catch(e){ console.error("updateRevisionSchedulePreview error:", e); }
 }
 
@@ -5611,7 +6298,7 @@ function switchTab(tabId) {
   const targetView = document.getElementById(tabId);
   if (targetView) targetView.classList.add('active');
 
-  const moreTabs = ['tab-timetable', 'tab-habits', 'tab-master', 'tab-scores'];
+  const moreTabs = ['tab-timetable', 'tab-habits', 'tab-master', 'tab-scores', 'tab-toppers'];
   const moreBtn = document.getElementById('moreNavBtn');
   if (moreBtn) {
     if (moreTabs.includes(tabId)) {
@@ -5625,6 +6312,10 @@ function switchTab(tabId) {
 
   if (tabId === 'tab-scores' && window.ScoreRegisterModule) {
     window.ScoreRegisterModule.init();
+  }
+
+  if (tabId === 'tab-toppers') {
+    renderTopperCopies();
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -6715,6 +7406,420 @@ window.ScoreRegisterModule = (function(){
   };
 })();
 
+// TOPPER COPIES MODULE & DATA
+const DEFAULT_TOPPER_COPIES = [
+  {
+    id: "tc_1",
+    name: "Aditya Srivastava",
+    rank: "AIR 1 (UPSC 2023)",
+    subject: "GS IV",
+    title: "Ethics, Integrity & Aptitude - Vision IAS Mock Copy",
+    year: "2023",
+    institute: "Vision IAS",
+    pdfUrl: "https://visionias.in/toppers/all_toppers_copy.php",
+    highlights: ["Diagrams & Frameworks", "Real-life Case Examples", "Clear Subheadings"],
+    notes: "Excellent structure in Section A questions with authentic ethical quotes & flowcharts."
+  },
+  {
+    id: "tc_2",
+    name: "Ishita Kishore",
+    rank: "AIR 1 (UPSC 2022)",
+    subject: "GS II",
+    title: "Polity, Governance & IR - ForumIAS FLT",
+    year: "2022",
+    institute: "ForumIAS",
+    pdfUrl: "https://blog.forumias.com/ishita-kishore-upsc-topper-rank-1/",
+    highlights: ["Constitutional Articles", "Supreme Court Judgments", "Policy Recommendations"],
+    notes: "Great use of Committee reports (2nd ARC, Punchhi, Law Commission) and SC case laws."
+  },
+  {
+    id: "tc_3",
+    name: "Garima Lohia",
+    rank: "AIR 2 (UPSC 2022)",
+    subject: "Essay",
+    title: "Philosophical & Societal Essays",
+    year: "2022",
+    institute: "Vision IAS",
+    pdfUrl: "https://visionias.in/toppers/all_toppers_copy.php",
+    highlights: ["Anecdotal Intros", "Multidimensional Analysis", "Strong Conclusions"],
+    notes: "Masterclass in philosophical essays: uses historical quotes, PESTLE analysis, and smooth transitions."
+  },
+  {
+    id: "tc_4",
+    name: "Shruti Sharma",
+    rank: "AIR 1 (UPSC 2021)",
+    subject: "GS I",
+    title: "History, Art & Culture, Society & Geography",
+    year: "2021",
+    institute: "Vision IAS / ForumIAS",
+    pdfUrl: "https://visionias.in/toppers/all_toppers_copy.php",
+    highlights: ["Maps & Schematics", "Bullet Points", "Data & Timeline"],
+    notes: "Includes neat maps for Geography and structured chronological headings for Modern History."
+  },
+  {
+    id: "tc_5",
+    name: "Anudeep Durishetty",
+    rank: "AIR 1 (UPSC 2017)",
+    subject: "GS III",
+    title: "Economy, S&T, Environment & Security",
+    year: "2017",
+    institute: "IASbaba / ForumIAS",
+    pdfUrl: "https://anudeepdurishetty.in/",
+    highlights: ["Concise Bullet Points", "Economic Survey Data", "Diagrammatic Flow"],
+    notes: "Gold standard for concise answers: intro with data, 5-6 points in body with diagrams, way forward."
+  },
+  {
+    id: "tc_6",
+    name: "Yaksh Chaudhary",
+    rank: "AIR 6 (UPSC 2021)",
+    subject: "Sociology",
+    title: "Sociology Paper I & II Advanced Mocks",
+    year: "2021",
+    institute: "Triumph IAS / Vision IAS",
+    pdfUrl: "https://visionias.in/toppers/all_toppers_copy.php",
+    highlights: ["Thinkers & Quotes", "Paper 1 & 2 Integration", "Contemporary Case Studies"],
+    notes: "Interlinks Paper 1 theoretical perspectives (Marx, Durkheim, Weber) with Paper 2 Indian empirical realities."
+  },
+  {
+    id: "tc_7",
+    name: "Wardah Khan",
+    rank: "AIR 18 (UPSC 2023)",
+    subject: "GS II",
+    title: "Governance & Social Justice Special Copy",
+    year: "2023",
+    institute: "NextIAS / ForumIAS",
+    pdfUrl: "https://blog.forumias.com/",
+    highlights: ["Government Schemes", "Data Statistics", "Point-wise Structure"],
+    notes: "Crisp presentation of Welfare Schemes, target beneficiaries, challenges, and actionable solutions."
+  },
+  {
+    id: "tc_8",
+    name: "Aditya Srivastava",
+    rank: "AIR 1 (UPSC 2023)",
+    subject: "Sociology",
+    title: "Sociology Optional Paper 1 & 2 Test Series",
+    year: "2023",
+    institute: "Vision IAS",
+    pdfUrl: "https://visionias.in/toppers/all_toppers_copy.php",
+    highlights: ["Thinkers Matrix", "Empirical Evidence", "Diagrams & Tables"],
+    notes: "Excellent use of sociological terms, thinkers, and recent societal surveys."
+  }
+];
+
+let TOPPER_COPIES = [];
+let topperSubjectFilter = 'ALL';
+
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function loadTopperCopies() {
+  try {
+    const raw = localStorage.getItem('MAINS_LOG_TOPPER_COPIES_v1');
+    if (raw) {
+      TOPPER_COPIES = JSON.parse(raw);
+    } else {
+      TOPPER_COPIES = [...DEFAULT_TOPPER_COPIES];
+      saveTopperCopiesStorage();
+    }
+  } catch(e) {
+    TOPPER_COPIES = [...DEFAULT_TOPPER_COPIES];
+  }
+}
+
+function saveTopperCopiesStorage() {
+  try {
+    localStorage.setItem('MAINS_LOG_TOPPER_COPIES_v1', JSON.stringify(TOPPER_COPIES));
+  } catch(e) {
+    console.error("Failed to save topper copies to storage", e);
+  }
+}
+
+function setFilterSubject(subj, btnEl) {
+  topperSubjectFilter = subj;
+
+  const gsCard = document.getElementById('cardGsCategory');
+  const socCard = document.getElementById('cardSocCategory');
+
+  if (subj === 'Sociology') {
+    if (socCard) socCard.classList.add('active');
+    if (gsCard) gsCard.classList.remove('active');
+  } else if (['GS I', 'GS II', 'GS III', 'GS IV', 'Essay'].includes(subj)) {
+    if (gsCard) gsCard.classList.add('active');
+    if (socCard) socCard.classList.remove('active');
+  } else {
+    if (gsCard) gsCard.classList.remove('active');
+    if (socCard) socCard.classList.remove('active');
+  }
+
+  if (btnEl) {
+    document.querySelectorAll('.topper-filter-btn').forEach(b => b.classList.remove('active'));
+    btnEl.classList.add('active');
+  }
+  renderTopperCopies();
+}
+
+function selectMainCategory(cat) {
+  const gsCard = document.getElementById('cardGsCategory');
+  const socCard = document.getElementById('cardSocCategory');
+
+  if (cat === 'GS') {
+    topperSubjectFilter = 'ALL_GS';
+    if (gsCard) gsCard.classList.add('active');
+    if (socCard) socCard.classList.remove('active');
+  } else if (cat === 'SOCIOLOGY') {
+    topperSubjectFilter = 'Sociology';
+    if (socCard) socCard.classList.add('active');
+    if (gsCard) gsCard.classList.remove('active');
+  } else {
+    topperSubjectFilter = 'ALL';
+    if (gsCard) gsCard.classList.remove('active');
+    if (socCard) socCard.classList.remove('active');
+  }
+
+  document.querySelectorAll('.topper-filter-btn').forEach(b => b.classList.remove('active'));
+  const btnAll = document.getElementById('btnFilterAll');
+  if (btnAll) btnAll.classList.add('active');
+
+  renderTopperCopies();
+}
+
+function filterTopperCopies() {
+  renderTopperCopies();
+}
+
+function renderTopperCopies() {
+  if (!TOPPER_COPIES || TOPPER_COPIES.length === 0) {
+    loadTopperCopies();
+  }
+
+  const container = document.getElementById('topperCopiesGrid');
+  if (!container) return;
+
+  const searchInput = document.getElementById('topperSearchInput');
+  const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+  const filtered = TOPPER_COPIES.filter(tc => {
+    let matchSubject = true;
+    if (topperSubjectFilter === 'ALL_GS') {
+      matchSubject = ['GS I', 'GS II', 'GS III', 'GS IV', 'Essay'].includes(tc.subject);
+    } else if (topperSubjectFilter !== 'ALL') {
+      matchSubject = (tc.subject === topperSubjectFilter);
+    }
+
+    const matchQuery = !query || 
+      (tc.name && tc.name.toLowerCase().includes(query)) ||
+      (tc.rank && tc.rank.toLowerCase().includes(query)) ||
+      (tc.title && tc.title.toLowerCase().includes(query)) ||
+      (tc.subject && tc.subject.toLowerCase().includes(query)) ||
+      (tc.institute && tc.institute.toLowerCase().includes(query)) ||
+      (tc.notes && tc.notes.toLowerCase().includes(query)) ||
+      (tc.highlights && tc.highlights.some(h => h.toLowerCase().includes(query)));
+    return matchSubject && matchQuery;
+  });
+
+  // Update Stats
+  const statTotal = document.getElementById('toppersStatTotal');
+  if (statTotal) statTotal.textContent = TOPPER_COPIES.length;
+
+  const statSubjects = document.getElementById('toppersStatSubjects');
+  if (statSubjects) {
+    const uniqueSubjs = new Set(TOPPER_COPIES.map(x => x.subject));
+    statSubjects.textContent = uniqueSubjs.size;
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; background: #FFFFFF; border: 1px dashed var(--border-color); border-radius: var(--radius-md);">
+        <div style="font-size: 32px; margin-bottom: 8px;">📚</div>
+        <div style="font-size: 16px; font-weight: 700; color: var(--text-primary);">No topper copies found</div>
+        <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Try selecting 'All Papers' or adjusting your search query.</div>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(tc => {
+    const highlightsHtml = (tc.highlights || []).map(h => `<span class="topper-tag">✨ ${escapeHtml(h)}</span>`).join('');
+    const isCustom = tc.isCustom ? true : false;
+    const notesHtml = tc.notes ? `<div class="topper-notes-box"><b>Key Takeaways:</b> ${escapeHtml(tc.notes)}</div>` : '';
+    const yearText = tc.year ? ` (${escapeHtml(tc.year)})` : '';
+
+    return `
+      <div class="topper-card">
+        <div>
+          <div class="topper-card-header">
+            <span class="topper-rank-badge">🏆 ${escapeHtml(tc.rank || 'Topper')}</span>
+            <span class="topper-paper-tag">${escapeHtml(tc.subject || 'GS')}</span>
+          </div>
+          <div class="topper-name">${escapeHtml(tc.name)}</div>
+          <div class="topper-title-text">${escapeHtml(tc.title)}</div>
+          <div class="topper-meta">Source: ${escapeHtml(tc.institute || 'UPSC Topper Archive')}${yearText}</div>
+          ${notesHtml}
+          <div class="topper-tags">${highlightsHtml}</div>
+        </div>
+        <div class="topper-card-actions">
+          <a href="${escapeHtml(tc.pdfUrl || '#')}" target="_blank" rel="noopener noreferrer" class="btn-topper-view">
+            <span>📄</span> View Copy PDF ↗
+          </a>
+          ${isCustom ? `<button class="btn-topper-delete" onclick="deleteTopperCopy('${tc.id}')">Delete</button>` : ''}
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function openAddTopperModal() {
+  const overlay = document.getElementById('topperModalOverlay');
+  if (overlay) {
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeAddTopperModal() {
+  const overlay = document.getElementById('topperModalOverlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function closeAddTopperModalOnBackdrop(e) {
+  if (e.target && e.target.id === 'topperModalOverlay') {
+    closeAddTopperModal();
+  }
+}
+
+function openCategoryModal(cat) {
+  if (!TOPPER_COPIES || TOPPER_COPIES.length === 0) {
+    loadTopperCopies();
+  }
+  const titleEl = document.getElementById('topperCategoryModalTitle');
+  const bodyEl = document.getElementById('topperCategoryModalBody');
+  const overlay = document.getElementById('topperCategoryModalOverlay');
+  if (!overlay || !bodyEl || !titleEl) return;
+
+  let filtered = [];
+  if (cat === 'GS') {
+    titleEl.innerHTML = '📘 General Studies Topper Copies (GS I - IV &amp; Essay)';
+    filtered = TOPPER_COPIES.filter(tc => ['GS I', 'GS II', 'GS III', 'GS IV', 'Essay'].includes(tc.subject));
+  } else if (cat === 'SOCIOLOGY') {
+    titleEl.innerHTML = '📙 Sociology Optional Topper Copies (Paper 1 &amp; Paper 2)';
+    filtered = TOPPER_COPIES.filter(tc => tc.subject === 'Sociology');
+  } else {
+    titleEl.innerHTML = '🏆 UPSC Topper Answer Copies';
+    filtered = TOPPER_COPIES;
+  }
+
+  if (filtered.length === 0) {
+    bodyEl.innerHTML = `
+      <div style="text-align: center; padding: 40px 20px; background: #FFFFFF; border: 1px dashed var(--border-color); border-radius: var(--radius-md);">
+        <div style="font-size: 32px; margin-bottom: 8px;">📚</div>
+        <div style="font-size: 16px; font-weight: 700; color: var(--text-primary);">No topper copies found</div>
+      </div>
+    `;
+  } else {
+    bodyEl.innerHTML = filtered.map(tc => {
+      const highlightsHtml = (tc.highlights || []).map(h => `<span class="topper-tag">✨ ${escapeHtml(h)}</span>`).join('');
+      const notesHtml = tc.notes ? `<div class="topper-notes-box"><b>Key Takeaways:</b> ${escapeHtml(tc.notes)}</div>` : '';
+      const yearText = tc.year ? ` (${escapeHtml(tc.year)})` : '';
+      return `
+        <div class="topper-card" style="margin-bottom:0;">
+          <div>
+            <div class="topper-card-header">
+              <span class="topper-rank-badge">🏆 ${escapeHtml(tc.rank || 'Topper')}</span>
+              <span class="topper-paper-tag">${escapeHtml(tc.subject || 'GS')}</span>
+            </div>
+            <div class="topper-name">${escapeHtml(tc.name)}</div>
+            <div class="topper-title-text">${escapeHtml(tc.title)}</div>
+            <div class="topper-meta">Source: ${escapeHtml(tc.institute || 'UPSC Topper Archive')}${yearText}</div>
+            ${notesHtml}
+            <div class="topper-tags">${highlightsHtml}</div>
+          </div>
+          <div class="topper-card-actions">
+            <a href="${escapeHtml(tc.pdfUrl || '#')}" target="_blank" rel="noopener noreferrer" class="btn-topper-view">
+              <span>📄</span> View Copy PDF ↗
+            </a>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeTopperCategoryModal() {
+  const overlay = document.getElementById('topperCategoryModalOverlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function closeTopperCategoryModalOnBackdrop(e) {
+  if (e.target && e.target.id === 'topperCategoryModalOverlay') {
+    closeTopperCategoryModal();
+  }
+}
+
+function saveNewTopperCopy() {
+  const name = document.getElementById('addTcName').value.trim();
+  const rank = document.getElementById('addTcRank').value.trim();
+  const subject = document.getElementById('addTcSubject').value;
+  const title = document.getElementById('addTcTitle').value.trim();
+  const institute = document.getElementById('addTcInstitute').value.trim();
+  const year = document.getElementById('addTcYear').value.trim();
+  const pdfUrl = document.getElementById('addTcPdfUrl').value.trim();
+  const highlightsRaw = document.getElementById('addTcHighlights').value.trim();
+  const notes = document.getElementById('addTcNotes').value.trim();
+
+  if (!name) { alert("Please enter the topper's name."); return; }
+  if (!rank) { alert("Please enter the rank and year."); return; }
+  if (!title) { alert("Please enter the copy title."); return; }
+  if (!pdfUrl) { alert("Please enter a valid PDF / Drive link."); return; }
+
+  const highlights = highlightsRaw ? highlightsRaw.split(',').map(s => s.trim()).filter(Boolean) : ["Topper Reference"];
+
+  const newTc = {
+    id: "tc_c_" + Date.now() + "_" + Math.random().toString(36).substring(2, 6),
+    name, rank, subject, title, institute, year, pdfUrl, highlights, notes,
+    isCustom: true
+  };
+
+  TOPPER_COPIES.unshift(newTc);
+  saveTopperCopiesStorage();
+  closeAddTopperModal();
+
+  // Reset Form
+  document.getElementById('addTcName').value = '';
+  document.getElementById('addTcRank').value = '';
+  document.getElementById('addTcTitle').value = '';
+  document.getElementById('addTcInstitute').value = '';
+  document.getElementById('addTcYear').value = '';
+  document.getElementById('addTcPdfUrl').value = '';
+  document.getElementById('addTcHighlights').value = '';
+  document.getElementById('addTcNotes').value = '';
+
+  renderTopperCopies();
+}
+
+function deleteTopperCopy(id) {
+  if (confirm("Delete this custom topper copy?")) {
+    TOPPER_COPIES = TOPPER_COPIES.filter(x => x.id !== id);
+    saveTopperCopiesStorage();
+    renderTopperCopies();
+  }
+}
+
 (function init() {
   try {
     const logDateEl = document.getElementById('logDate');
@@ -6722,8 +7827,19 @@ window.ScoreRegisterModule = (function(){
   } catch(e){}
 
   try { loadData(); } catch(e){ console.error("loadData error:", e); }
+  try { loadTopperCopies(); } catch(e){ console.error("loadTopperCopies error:", e); }
   try { renderAll(); } catch(e){ console.error("renderAll error:", e); }
   try { window.ScoreRegisterModule.init(); } catch(e){}
+
+  try {
+    const activeTabFromStorage = localStorage.getItem('MAINS_LOG_ACTIVE_TAB');
+    if (activeTabFromStorage) {
+      localStorage.removeItem('MAINS_LOG_ACTIVE_TAB');
+      switchTab(activeTabFromStorage);
+    } else if (window.location.hash === '#toppers') {
+      switchTab('tab-toppers');
+    }
+  } catch(e){}
 
   try { pollCentralServer(); } catch(e){}
   try { fetchTrackerProgress(); } catch(e){}
