@@ -4104,28 +4104,25 @@
         </div>
 
         <!-- PWA MOBILE PUSH NOTIFICATION CONTROL CARD -->
-        <div class="notification-control-card" id="notificationControlCard" style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border-radius: 16px; padding: 18px 20px; color: #FFFFFF; margin-top: 16px; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25); border: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="notification-control-card" id="notificationControlCard" style="background: linear-gradient(135deg, rgba(238, 242, 255, 0.75) 0%, rgba(245, 243, 255, 0.9) 100%); border: 1.5px solid #E0E7FF; border-radius: 16px; padding: 16px 18px; margin-top: 14px; box-shadow: 0 4px 16px rgba(37, 99, 235, 0.04); transition: all 0.3s ease;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
-            <div style="display: flex; align-items: center; gap: 10px;">
-              <div style="width: 38px; height: 38px; border-radius: 10px; background: rgba(59, 130, 246, 0.2); display: flex; align-items: center; justify-content: center; font-size: 20px; border: 1px solid rgba(96, 165, 250, 0.3);">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, #2563EB 0%, #4F46E5 100%); display: flex; align-items: center; justify-content: center; font-size: 20px; color: #FFFFFF; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25); flex-shrink: 0;">
                 🔔
               </div>
               <div>
-                <div style="font-size: 15px; font-weight: 800; letter-spacing: -0.2px; color: #FFFFFF;">Daily Study Slot Alerts</div>
-                <div style="font-size: 12px; color: #94A3B8;" id="notifStatusSub">Get instant mobile notifications when your study slots start</div>
+                <div style="font-family: var(--font-heading); font-size: 14px; font-weight: 800; color: #1E293B; letter-spacing: -0.2px;">Daily Study Slot Reminders</div>
+                <div style="font-size: 12px; color: #64748B; margin-top: 2px; line-height: 1.4;" id="notifStatusSub">Status bar alerts on your phone when study slots start</div>
               </div>
             </div>
-            <span id="notifStatusBadge" style="font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; background: rgba(234, 179, 8, 0.2); color: #FDE047; border: 1px solid rgba(234, 179, 8, 0.4);">
+            <span id="notifStatusBadge" style="font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; background: rgba(234, 179, 8, 0.15); color: #D97706; border: 1px solid rgba(234, 179, 8, 0.3); white-space: nowrap;">
               Checking...
             </span>
           </div>
 
-          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
-            <button id="btnEnableNotif" onclick="requestNotificationPermission()" style="flex: 1; min-width: 160px; background: #2563EB; color: #FFF; border: none; padding: 10px 16px; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px;">
+          <div style="margin-top: 10px;">
+            <button id="btnEnableNotif" onclick="requestNotificationPermission()" style="width: 100%; background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); color: #FFFFFF; border: none; padding: 11px 18px; border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);">
               ⚡ Enable Mobile Alerts
-            </button>
-            <button id="btnTestNotif" onclick="sendTestNotification()" style="background: rgba(255, 255, 255, 0.1); color: #E2E8F0; border: 1px solid rgba(255, 255, 255, 0.2); padding: 10px 16px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;">
-              🧪 Test Notification
             </button>
           </div>
         </div>
@@ -5391,47 +5388,58 @@ function updateNotificationUI() {
   const btn = document.getElementById('btnEnableNotif');
 
   if (!('Notification' in window)) {
-    if (badge) { badge.textContent = 'Not Supported'; badge.style.background = 'rgba(239, 68, 68, 0.2)'; badge.style.color = '#FCA5A5'; }
+    if (badge) {
+      badge.textContent = 'Not Supported';
+      badge.style.background = 'rgba(239, 68, 68, 0.12)';
+      badge.style.color = '#DC2626';
+      badge.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+    }
     if (sub) sub.textContent = 'Browser does not support web notifications.';
-    if (btn) btn.disabled = true;
+    if (btn) {
+      btn.disabled = true;
+      btn.style.opacity = '0.6';
+    }
     return;
   }
 
   if (Notification.permission === 'granted') {
     if (badge) {
-      badge.textContent = '🟢 Active on Mobile';
-      badge.style.background = 'rgba(16, 185, 129, 0.2)';
-      badge.style.color = '#6EE7B7';
-      badge.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+      badge.textContent = '🟢 Active on Phone';
+      badge.style.background = 'rgba(16, 185, 129, 0.15)';
+      badge.style.color = '#059669';
+      badge.style.borderColor = 'rgba(16, 185, 129, 0.3)';
     }
-    if (sub) sub.textContent = 'Automatic phone alerts enabled for every study slot!';
+    if (sub) sub.textContent = 'Automatic status bar alerts are active for all scheduled study slots.';
     if (btn) {
-      btn.innerHTML = '✅ Mobile Alerts Active';
-      btn.style.background = '#10B981';
+      btn.innerHTML = '✅ Mobile Reminders Active';
+      btn.style.background = 'linear-gradient(135deg, #059669 0%, #10B981 100%)';
+      btn.style.boxShadow = '0 4px 14px rgba(16, 185, 129, 0.25)';
     }
   } else if (Notification.permission === 'denied') {
     if (badge) {
-      badge.textContent = 'Blocked in Settings';
-      badge.style.background = 'rgba(239, 68, 68, 0.2)';
-      badge.style.color = '#FCA5A5';
-      badge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+      badge.textContent = 'Permission Blocked';
+      badge.style.background = 'rgba(239, 68, 68, 0.12)';
+      badge.style.color = '#DC2626';
+      badge.style.borderColor = 'rgba(239, 68, 68, 0.3)';
     }
-    if (sub) sub.textContent = 'Notification permission blocked. Allow notifications in browser settings.';
+    if (sub) sub.textContent = 'Notification permission is blocked. Allow notifications in browser settings.';
     if (btn) {
-      btn.innerHTML = '⚠️ Permission Blocked';
-      btn.style.background = '#EF4444';
+      btn.innerHTML = '⚠️ Enable in Browser Settings';
+      btn.style.background = 'linear-gradient(135deg, #DC2626 0%, #EF4444 100%)';
+      btn.style.boxShadow = '0 4px 14px rgba(220, 38, 38, 0.25)';
     }
   } else {
     if (badge) {
-      badge.textContent = 'Notifications Disabled';
-      badge.style.background = 'rgba(234, 179, 8, 0.2)';
-      badge.style.color = '#FDE047';
-      badge.style.borderColor = 'rgba(234, 179, 8, 0.4)';
+      badge.textContent = 'Inactive';
+      badge.style.background = 'rgba(234, 179, 8, 0.15)';
+      badge.style.color = '#D97706';
+      badge.style.borderColor = 'rgba(234, 179, 8, 0.3)';
     }
-    if (sub) sub.textContent = 'Get instant mobile notifications when your study slots start';
+    if (sub) sub.textContent = 'Status bar alerts on your phone when study slots start.';
     if (btn) {
       btn.innerHTML = '⚡ Enable Mobile Alerts';
-      btn.style.background = '#2563EB';
+      btn.style.background = 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)';
+      btn.style.boxShadow = '0 4px 14px rgba(37, 99, 235, 0.25)';
     }
   }
 }
