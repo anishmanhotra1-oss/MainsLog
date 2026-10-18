@@ -1793,6 +1793,310 @@
 
 @media (max-width: 768px) {
   .pyq-x1 .pyq-pdf-frame {
-    height: 580px;
+    height: 520px;
+  }
+}
+
+/* =====================================================================
+   Comprehensive Responsive Overrides across all Viewports
+   ===================================================================== */
+
+/* --- TABLETS & COMPACT LAPTOPS (<= 1024px) --- */
+@media (max-width: 1024px) {
+  .pyq-x1 .pyq-container {
+    padding: 24px 18px 80px;
+  }
+}
+
+/* --- STANDARD TABLETS & LARGE MOBILE (<= 768px) --- */
+@media (max-width: 768px) {
+  .pyq-x1 .pyq-container {
+    padding: 16px 12px 70px;
+  }
+
+  .pyq-x1 .pyq-hero {
+    padding: 24px 18px;
+    margin-bottom: 20px;
+  }
+
+  .pyq-x1 .pyq-hero-title {
+    font-size: 26px;
+  }
+
+  .pyq-x1 .pyq-hero-desc {
+    font-size: 13.5px;
+    margin-bottom: 18px;
+  }
+
+  .pyq-x1 .pyq-hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .pyq-x1 .pyq-stat-card {
+    padding: 10px 12px;
+  }
+
+  .pyq-x1 .pyq-stat-val {
+    font-size: 18px;
+  }
+
+  .pyq-x1 .pyq-toggles-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .pyq-x1 .pyq-view-switch-btns {
+    width: 100%;
+    display: flex;
+  }
+
+  .pyq-x1 .pyq-view-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .pyq-x1 .pyq-analytics-card {
+    padding: 20px 16px;
+  }
+
+  .pyq-x1 .pyq-analytics-title {
+    font-size: 17px;
+  }
+
+  .pyq-x1 .pyq-analytics-kpis {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+/* --- MOBILE DEVICES (<= 640px) --- */
+@media (max-width: 640px) {
+  .pyq-x1 .pyq-top-bar {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .pyq-x1 .pyq-back-link {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .pyq-x1 .pyq-theme-toggle {
+    font-size: 11.5px;
+    padding: 6px 10px;
+  }
+
+  .pyq-x1 .pyq-hero-badge {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .pyq-x1 .pyq-hero-edition {
+    font-size: 10.5px;
+  }
+
+  .pyq-x1 .pyq-hero-title {
+    font-size: 23px;
+  }
+
+  .pyq-x1 .pyq-subject-banner {
+    padding: 16px 14px;
+    margin-bottom: 16px;
+  }
+
+  .pyq-x1 .pyq-filter-panel {
+    padding: 16px 14px;
+    margin-bottom: 18px;
+  }
+
+  .pyq-x1 .pyq-search-kbd {
+    display: none; /* Hide keyboard shortcut tag on mobile touch screens */
+  }
+
+  .pyq-x1 .pyq-search-input {
+    padding: 11px 40px 11px 38px;
+    font-size: 13.5px;
+  }
+
+  .pyq-x1 .pyq-search-icon {
+    left: 12px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .pyq-x1 .pyq-quick-chips {
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+  }
+
+  .pyq-x1 .pyq-chip-btn {
+    padding: 5px 12px;
+    font-size: 11.5px;
+  }
+
+  .pyq-x1 .pyq-filter-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .pyq-x1 .pyq-question-card {
+    padding: 16px 14px;
+    margin-bottom: 14px;
+    border-radius: var(--pyq-radius-md);
+  }
+
+  .pyq-x1 .pyq-q-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .pyq-x1 .pyq-q-meta-strip {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .pyq-x1 .pyq-q-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .pyq-x1 .pyq-q-text {
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
+
+  .pyq-x1 .pyq-options-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .pyq-x1 .pyq-option-item {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .pyq-x1 .pyq-reveal-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 9px 14px;
+  }
+
+  .pyq-x1 .pyq-ans-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+
+  .pyq-x1 .pyq-concept-badge {
+    align-self: flex-start;
+  }
+
+  .pyq-x1 .pyq-stmt-analysis-item {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .pyq-x1 .pyq-trap-box {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  /* Responsive Ranked Topic Leaderboard Item */
+  .pyq-x1 .pyq-ranked-topic-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .pyq-x1 .pyq-ranked-topic-body {
+    width: 100%;
+  }
+
+  .pyq-x1 .pyq-ranked-topic-meta {
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid var(--pyq-border-subtle);
+    padding-top: 8px;
+  }
+
+  .pyq-x1 .pyq-year-bars-container {
+    height: 110px;
+  }
+
+  .pyq-x1 .pyq-pdf-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .pyq-x1 .pyq-pdf-actions {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+  }
+
+  .pyq-x1 .pyq-pdf-action-btn {
+    flex: 1;
+    justify-content: center;
+    font-size: 11.5px;
+    padding: 6px 10px;
+  }
+
+  .pyq-x1 .pyq-pdf-frame {
+    height: 480px;
+  }
+}
+
+/* --- COMPACT MOBILE PHONES (<= 420px) --- */
+@media (max-width: 420px) {
+  .pyq-x1 .pyq-hero-title {
+    font-size: 21px;
+  }
+
+  .pyq-x1 .pyq-hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .pyq-x1 .pyq-stat-card {
+    padding: 10px 12px;
+  }
+
+  .pyq-x1 .pyq-analytics-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .pyq-x1 .pyq-view-btn {
+    padding: 7px 4px;
+    font-size: 11px;
+  }
+
+  .pyq-x1 .pyq-view-btn .pyq-view-badge {
+    display: none; /* Hide badge on very narrow screens */
+  }
+
+  .pyq-x1 .pyq-pagination {
+    gap: 6px;
+  }
+
+  .pyq-x1 .pyq-page-btn {
+    flex: 1;
+    text-align: center;
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .pyq-x1 .pyq-page-info {
+    width: 100%;
+    text-align: center;
+    order: -1;
+    font-size: 11.5px;
+    margin-bottom: 4px;
   }
 }
