@@ -1,0 +1,1336 @@
+{
+  "subject": "Environment",
+  "total": 30,
+  "questions": [
+    {
+      "id": "env-2024-05",
+      "subject": "Environment",
+      "year": 2024,
+      "qNo": 5,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding the Cheetah Reintroduction Project in India:",
+      "statements": [
+        "Cheetahs were introduced to Kuno National Park in Madhya Pradesh from Namibia and South Africa.",
+        "The Asiatic Cheetah is categorized as 'Critically Endangered' on the IUCN Red List and survives only in Iran.",
+        "Kuno National Park is dominated by tropical moist deciduous rainforest vegetation."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Wildlife Conservation",
+      "subTopic": "Project Cheetah & Habitat Ecology",
+      "concept": "Transcontinental species reintroduction and eco-climatic biome matching.",
+      "explanation": "Statements 1 and 2 are correct: African cheetahs (Acinonyx jubatus jubatus) were translocated to Kuno National Park from Namibia (8 cheetahs in 2022) and South Africa (12 in 2023). The indigenous Asiatic Cheetah (Acinonyx jubatus venaticus) was declared extinct in India in 1952 and now survives only in Iran as a Critically Endangered subspecies (fewer than 50 individuals). Statement 3 is incorrect: Kuno National Park is part of the Vindhyan dry deciduous forest and savanna woodland biome (Northern Tropical Dry Deciduous Forest), characterized by open grasslands and scrub, NOT tropical moist deciduous rainforest.",
+      "statementAnalysis": [
+        {
+          "text": "Cheetahs were introduced to Kuno National Park in Madhya Pradesh from Namibia and South Africa.",
+          "verdict": "correct",
+          "why": "Transcontinental relocation completed under Action Plan for Introduction of Cheetah."
+        },
+        {
+          "text": "The Asiatic Cheetah is categorized as 'Critically Endangered' on the IUCN Red List and survives only in Iran.",
+          "verdict": "correct",
+          "why": "Official IUCN Red List status of Acinonyx jubatus venaticus."
+        },
+        {
+          "text": "Kuno National Park is dominated by tropical moist deciduous rainforest vegetation.",
+          "verdict": "incorrect",
+          "why": "Kuno is a dry deciduous forest / scrub savanna, ideal for open cursorial predators."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 2 are scientifically and factually accurate.",
+        "b": "Incorrect because statement 3 is ecologically false.",
+        "c": "Incorrect because statement 3 is false.",
+        "d": "Incorrect because statement 3 is false."
+      },
+      "trap": "Examiners substitute 'dry deciduous scrub/savanna' with 'tropical moist rainforest' to test habitat ecology.",
+      "relatedFacts": [
+        "Gandhi Sagar Wildlife Sanctuary and Nauradehi Sanctuary are being prepared as alternative habitats.",
+        "The last recorded three Asiatic cheetahs in India were shot down in 1947 by Maharaja Ramanuj Pratap Singh Deo of Koriya.",
+        "National Tiger Conservation Authority (NTCA) is the nodal implementing body for Project Cheetah."
+      ]
+    },
+    {
+      "id": "env-2023-16",
+      "subject": "Environment",
+      "year": 2023,
+      "qNo": 16,
+      "type": "conceptual",
+      "question": "Why is the plant 'Prosopis juliflora' often mentioned in the news?",
+      "statements": [],
+      "options": {
+        "a": "Its extract is widely used in cosmetics.",
+        "b": "It tends to reduce the biodiversity in the area in which it grows.",
+        "c": "Its extract is used in the synthesis of pesticides.",
+        "d": "None of the above"
+      },
+      "answer": "b",
+      "topic": "Invasive Alien Species",
+      "subTopic": "Ecological Displacement by Invasive Flora",
+      "concept": "Allelopathy, deep taproots, and suppression of indigenous flora by invasive alien shrubs.",
+      "explanation": "Prosopis juliflora (locally known as Vilayati Babul or Seemai Karuvelam) is an invasive alien shrub native to Mexico and South America, introduced to India in the late 19th century. Due to its aggressive drought tolerance, deep taproot system, and allelopathic biochemical exudates that inhibit the germination of native plants, it aggressively invades grasslands and scrubs, drastically depleting groundwater and eliminating native biodiversity.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Unrelated commercial distractor.",
+        "b": "Correct: Textbook definition of invasive ecological disruption.",
+        "c": "Incorrect: Distractor.",
+        "d": "Incorrect."
+      },
+      "trap": "Assuming introduced drought-resistant plants are beneficial without considering their aggressive ecological invasiveness.",
+      "relatedFacts": [
+        "Other notorious invasive alien plants in India include Lantana camara, Parthenium hysterophorus (carrot grass), and Eichhornia crassipes (water hyacinth).",
+        "Convention on Biological Diversity (CBD) Aichi Target 9 and Kunming-Montreal Target 6 focus on managing invasive alien species.",
+        "Prosopis juliflora severely threatens the Banni grasslands of Gujarat, home to the Maldhari pastoralists."
+      ]
+    },
+    {
+      "id": "env-2022-22",
+      "subject": "Environment",
+      "year": 2022,
+      "qNo": 22,
+      "type": "conceptual",
+      "question": "The 'Miyawaki method' is well known for the:",
+      "statements": [],
+      "options": {
+        "a": "Promotion of commercial farming in arid and semi-arid areas",
+        "b": "Development of gardens using genetically modified flora",
+        "c": "Creation of mini-forests in urban areas",
+        "d": "Harvesting wind energy on coastal margins"
+      },
+      "answer": "c",
+      "topic": "Forestry & Afforestation",
+      "subTopic": "Urban Forestry & Miyawaki Technique",
+      "concept": "High-density multi-layered native planting creating fast-growing climax micro-ecosystems.",
+      "explanation": "Pioneered by Japanese botanist Akira Miyawaki, the Miyawaki method involves planting two to four native species of trees and shrubs per square meter in thoroughly prepared, organic-rich soil. This dense, multi-layered arrangement forces plants to compete vertically for sunlight, growing up to 10 times faster, being 30 times denser, and becoming 100 times more biodiverse than conventional monoculture plantations, making it ideal for urban micro-forests.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: It is an ecological restoration technique, not commercial agriculture.",
+        "b": "Incorrect: Uses strictly indigenous native species, never GMO plants.",
+        "c": "Correct: Internationally acclaimed technique for urban dense mini-forests.",
+        "d": "Incorrect: Completely unrelated to wind energy."
+      },
+      "trap": "Distractors associating Japanese scientific methods with GM technology or industrial agriculture.",
+      "relatedFacts": [
+        "A Miyawaki forest achieves self-sustainability within 2 to 3 years without requiring artificial watering or weeding.",
+        "Indian cities like Chennai, Hyderabad, and Delhi have implemented Miyawaki urban patches under Smart Cities Mission.",
+        "Nagar Van Yojana (Urban Forest Scheme) aims to develop 400 urban forests across India."
+      ]
+    },
+    {
+      "id": "env-2021-08",
+      "subject": "Environment",
+      "year": 2021,
+      "qNo": 8,
+      "type": "pairing",
+      "question": "Consider the following pairs of wildlife and their natural habitats in India:",
+      "statements": [
+        "Blue-finned Mahseer — Cauvery River",
+        "Irrawaddy Dolphin — Chambal River",
+        "Rusty-spotted Cat — Eastern Ghats"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "c",
+      "topic": "Fauna & Biodiversity Hotspots",
+      "subTopic": "Species Distribution & River Basins",
+      "concept": "Specific aquatic and terrestrial ecological niches of flagship Indian fauna.",
+      "explanation": "Pair 1 is correctly matched: The Blue-finned Mahseer (Tor khudree) is an indigenous freshwater fish inhabiting the clean, fast-flowing waters of the Cauvery River basin. Pair 2 is incorrectly matched: Irrawaddy Dolphins (Orcaella brevirostris) are euryhaline marine and estuarine mammals found in Chilika Lake (Odisha) and Sundarbans; they do NOT inhabit the Chambal River (the Chambal is famous for Gangetic River Dolphins and Gharials). Pair 3 is correctly matched: The Rusty-spotted Cat (Prionailurus rubiginosus), the world's smallest wild cat, is found in the deciduous scrublands of the Eastern Ghats, Gir, and Central India.",
+      "statementAnalysis": [
+        {
+          "text": "Blue-finned Mahseer — Cauvery River",
+          "verdict": "correct",
+          "why": "Native to the Cauvery river basin in South India."
+        },
+        {
+          "text": "Irrawaddy Dolphin — Chambal River",
+          "verdict": "incorrect",
+          "why": "Chambal is home to Platanista gangetica (Gangetic dolphin); Irrawaddy dolphin lives in Chilika Lake."
+        },
+        {
+          "text": "Rusty-spotted Cat — Eastern Ghats",
+          "verdict": "correct",
+          "why": "Recorded in Eastern Ghats and dry deciduous forests."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because pair 2 is false.",
+        "b": "Incorrect because pair 2 is false.",
+        "c": "Correct option encompassing pairs 1 and 3.",
+        "d": "Incorrect because pair 2 is false."
+      },
+      "trap": "Swapping Gangetic Dolphin (freshwater Chambal river) with Irrawaddy Dolphin (brackish Chilika lake).",
+      "relatedFacts": [
+        "IUCN downlisted the Blue-finned Mahseer from 'Critically Endangered' to 'Least Concern' in 2021 following successful captive breeding.",
+        "Chilika Lake hosts the single largest population of Irrawaddy dolphins in the world.",
+        "Gharial (Gavialis gangeticus) is Critically Endangered and its primary breeding stronghold is the National Chambal Sanctuary."
+      ]
+    },
+    {
+      "id": "env-2020-03",
+      "subject": "Environment",
+      "year": 2020,
+      "qNo": 3,
+      "type": "statement-based",
+      "question": "What are the advantages of fertigation in agriculture?",
+      "statements": [
+        "Controlling the alkalinity of irrigation water is possible.",
+        "Efficient application of Rock Phosphate and all other phosphatic fertilizers is possible.",
+        "Increased availability of nutrients to plants is possible.",
+        "Reduction in the leaching of chemical nutrients is possible."
+      ],
+      "options": {
+        "a": "1, 2 and 3 only",
+        "b": "1, 2 and 4 only",
+        "c": "1, 3 and 4 only",
+        "d": "2, 3 and 4 only"
+      },
+      "answer": "c",
+      "topic": "Sustainable Agriculture",
+      "subTopic": "Micro-Irrigation & Fertigation Technology",
+      "concept": "Precision water-soluble nutrient delivery versus insoluble mineral compounds.",
+      "explanation": "Fertigation is the injection of water-soluble fertilizers into an irrigation system (drip or sprinkler). Statements 1, 3, and 4 are correct: Fertigation enables pH control of irrigation water, delivers dissolved ions directly to root zones with high nutrient uptake efficiency, and eliminates deep percolation leaching. Statement 2 is incorrect: Rock Phosphate is highly water-INSOLUBLE; applying it through fertigation drippers clogs nozzles and drip emitters. Only completely water-soluble fertilizers (e.g., urea, monoammonium phosphate, potassium nitrate) can be used.",
+      "statementAnalysis": [
+        {
+          "text": "Controlling the alkalinity of irrigation water is possible.",
+          "verdict": "correct",
+          "why": "Acid injection via fertigation neutralizes alkaline irrigation water."
+        },
+        {
+          "text": "Efficient application of Rock Phosphate and all other phosphatic fertilizers is possible.",
+          "verdict": "incorrect",
+          "why": "Rock phosphate is insoluble in water and severely clogs drip emitters."
+        },
+        {
+          "text": "Increased availability of nutrients to plants is possible.",
+          "verdict": "correct",
+          "why": "Direct placement in the active root rhizosphere zone."
+        },
+        {
+          "text": "Reduction in the leaching of chemical nutrients is possible.",
+          "verdict": "correct",
+          "why": "Nutrient delivery matches real-time crop uptake."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 2 is chemically and agronomically false.",
+        "b": "Incorrect because statement 2 is false.",
+        "c": "Correct option containing statements 1, 3, and 4.",
+        "d": "Incorrect because statement 2 is false."
+      },
+      "trap": "The absolute phrase 'Rock Phosphate and ALL other phosphatic fertilizers' is a classic giveaway for an incorrect statement.",
+      "relatedFacts": [
+        "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY) champions 'Per Drop More Crop' micro-irrigation.",
+        "Fertigation increases fertilizer use efficiency (FUE) by 80-90% compared to traditional broadcast methods.",
+        "Chelated micronutrients are used in fertigation to prevent precipitation reactions."
+      ]
+    },
+    {
+      "id": "env-2019-14",
+      "subject": "Environment",
+      "year": 2019,
+      "qNo": 14,
+      "type": "conceptual",
+      "question": "In India, 'Extended Producer Responsibility' (EPR) was introduced as an important feature in which of the following?",
+      "statements": [],
+      "options": {
+        "a": "The Bio-medical Waste (Management and Handling) Rules, 1998",
+        "b": "The Recycled Plastic (Manufacture and Usage) Rules, 1999",
+        "c": "The e-Waste (Management and Handling) Rules, 2011",
+        "d": "The Food Safety and Standards Regulations, 2011"
+      },
+      "answer": "c",
+      "topic": "Environmental Legislation & Waste Management",
+      "subTopic": "Extended Producer Responsibility (EPR)",
+      "concept": "OECD Polluter-Pays principle holding manufacturers legally accountable for the post-consumer life cycle.",
+      "explanation": "Extended Producer Responsibility (EPR) was first introduced into Indian environmental law as a binding statutory requirement under the E-Waste (Management and Handling) Rules, 2011. It mandated producers of electrical and electronic equipment to establish take-back mechanisms and finance authorized recycling infrastructure for electronic end-of-life products. (Subsequently extended to Plastic Waste Rules in 2016).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Biomedical waste focuses on segregation and incineration at source by healthcare facilities.",
+        "b": "Incorrect: Did not have formal EPR provisions.",
+        "c": "Correct: Landmark origin of formal EPR in India under the 2011 E-Waste regulations.",
+        "d": "Incorrect: Deals with food quality and standards."
+      },
+      "trap": "Confusing plastic waste rules with e-waste rules: EPR was introduced first in E-Waste Rules 2011 before being adopted in Plastic Waste Management Rules 2016.",
+      "relatedFacts": [
+        "Central Pollution Control Board (CPCB) maintains the centralized online EPR portal.",
+        "Plastic Waste Management Amendment Rules 2022 established mandatory minimum recycled content targets under EPR.",
+        "E-waste rules ban the use of hazardous substances (lead, mercury, cadmium, hexavalent chromium) above specified RoHS thresholds."
+      ]
+    },
+    {
+      "id": "env-2018-09",
+      "subject": "Environment",
+      "year": 2018,
+      "qNo": 9,
+      "type": "conceptual",
+      "question": "The term 'Sixth Mass Extinction' or 'Sixth Extinction' is often mentioned in the news in the context of the discussion of:",
+      "statements": [],
+      "options": {
+        "a": "Widespread monoculture farming and catastrophic climate change",
+        "b": "Fears of a collision of a massive meteoroid with the Earth",
+        "c": "Large-scale loss of biodiversity due to human activities across the globe",
+        "d": "A nuclear winter caused by atomic confrontation"
+      },
+      "answer": "c",
+      "topic": "Global Ecology & Biodiversity Loss",
+      "subTopic": "The Holocene/Anthropocene Mass Extinction",
+      "concept": "Modern extinction rates exceeding baseline background rates by 100 to 1,000 times due to anthropogenic pressures.",
+      "explanation": "Earth has witnessed five major mass extinction events in geological history (Ordovician, Late Devonian, Permian, Triassic, and Cretaceous-Paleogene). Scientists define the ongoing Holocene/Anthropocene crisis as the 'Sixth Mass Extinction', characterized by an unprecedented acceleration of species extinctions directly driven by human overexploitation, habitat destruction, deforestation, pollution, invasive species, and anthropogenic climate change.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: While monoculture contributes, the term broadly encompasses global anthropogenic biodiversity collapse.",
+        "b": "Incorrect: Asteroid impact was the cause of the 5th (Cretaceous) extinction, not the ongoing 6th.",
+        "c": "Correct: Accurate definition recognized by IPBES and IUCN.",
+        "d": "Incorrect: Theoretical scenario, not the current ecological reality."
+      },
+      "trap": "Conflating past physical/cosmic extinction causes (meteorites, volcanic flood basalts) with the contemporary human-induced biological crisis.",
+      "relatedFacts": [
+        "The Permian-Triassic extinction ('The Great Dying') wiped out over 95% of marine species 252 million years ago.",
+        "IPBES Global Assessment Report warns that 1 million plant and animal species now face extinction.",
+        "The Living Planet Report 2022 by WWF reported an average 69% decline in global wildlife populations since 1970."
+      ]
+    },
+    {
+      "id": "env-2017-04",
+      "subject": "Environment",
+      "year": 2017,
+      "qNo": 4,
+      "type": "statement-based",
+      "question": "With reference to the 'National Biodiversity Authority' (NBA), consider the following statements:",
+      "statements": [
+        "NBA was established in 2003 under the Biological Diversity Act.",
+        "NBA functions to approve access to Indian biological resources and patent applications based on Indian traditional knowledge.",
+        "NBA headquarters is located in New Delhi."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Biodiversity Governance",
+      "subTopic": "National Biodiversity Authority (Biological Diversity Act 2002)",
+      "concept": "Access and Benefit Sharing (ABS) mechanisms and institutional headquarters.",
+      "explanation": "Statements 1 and 2 are correct: The NBA was established in 2003 under Section 8 of the Biological Diversity Act, 2002 to implement the Nagoya Protocol on Access and Benefit Sharing (ABS). Foreign entities, non-residents, and multinational corporations must obtain prior NBA approval before accessing Indian bio-resources or applying for patents based on Indian traditional knowledge. Statement 3 is incorrect: The headquarters of the NBA is located in CHENNAI, Tamil Nadu, NOT New Delhi.",
+      "statementAnalysis": [
+        {
+          "text": "NBA was established in 2003 under the Biological Diversity Act.",
+          "verdict": "correct",
+          "why": "Enacted post-Convention on Biological Diversity (CBD) commitments."
+        },
+        {
+          "text": "NBA functions to approve access to Indian biological resources and patent applications based on Indian traditional knowledge.",
+          "verdict": "correct",
+          "why": "Mandated under Section 3, 4, and 6 of the Act."
+        },
+        {
+          "text": "NBA headquarters is located in New Delhi.",
+          "verdict": "incorrect",
+          "why": "NBA headquarters is in Chennai, Tamil Nadu."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 2 are valid, while statement 3 falsely identifies the headquarters.",
+        "b": "Incorrect because statement 3 is false.",
+        "c": "Incorrect because statement 3 is false.",
+        "d": "Incorrect because statement 3 is false."
+      },
+      "trap": "Headquarters trap: Students assume all statutory central regulatory bodies are headquartered in New Delhi.",
+      "relatedFacts": [
+        "Biological Diversity Act establishes a 3-tier structure: NBA at national level (Chennai), State Biodiversity Boards (SBBs) at state level, and Biodiversity Management Committees (BMCs) at local panchayat/urban level.",
+        "BMCs are mandated to prepare People's Biodiversity Registers (PBRs).",
+        "Section 21 mandates fair and equitable benefit sharing flowing back to indigenous conservers."
+      ]
+    },
+    {
+      "id": "env-2016-15",
+      "subject": "Environment",
+      "year": 2016,
+      "qNo": 15,
+      "type": "statement-based",
+      "question": "Consider the following statements in respect of 'TRAFFIC':",
+      "statements": [
+        "TRAFFIC is a bureau under the United Nations Environment Programme (UNEP).",
+        "The mission of TRAFFIC is to ensure that trade in wild plants and animals is not a threat to the conservation of nature."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "b",
+      "topic": "International Environmental Organizations",
+      "subTopic": "TRAFFIC & Wildlife Trade Monitoring",
+      "concept": "Distinction between UN intergovernmental agencies and NGO conservation alliances.",
+      "explanation": "Statement 1 is incorrect: TRAFFIC (Trade Records Analysis of Fauna and Flora in Commerce) is a leading non-governmental wildlife trade monitoring network established in 1976 as a joint strategic alliance between the World Wide Fund for Nature (WWF) and the International Union for Conservation of Nature (IUCN). It is NOT an agency or bureau under UNEP. Statement 2 is correct: Its mission is to ensure that commercial trade in wild plants and animals does not threaten biodiversity and works closely with CITES.",
+      "statementAnalysis": [
+        {
+          "text": "TRAFFIC is a bureau under the United Nations Environment Programme (UNEP).",
+          "verdict": "incorrect",
+          "why": "It is a joint programme of WWF and IUCN, not a UNEP bureau."
+        },
+        {
+          "text": "The mission of TRAFFIC is to ensure that trade in wild plants and animals is not a threat to the conservation of nature.",
+          "verdict": "correct",
+          "why": "Exact mission statement of TRAFFIC."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 1 is false.",
+        "b": "Correct: Only statement 2 is accurate.",
+        "c": "Incorrect because statement 1 is false.",
+        "d": "Incorrect because statement 2 is valid."
+      },
+      "trap": "UPSC frequently misattributes NGO/IUCN initiatives (like TRAFFIC, BirdLife International, Wetlands International) to United Nations bodies (UNEP, UNESCO).",
+      "relatedFacts": [
+        "CITES (Washington Convention) is legally binding on parties, whereas TRAFFIC provides independent scientific intelligence and market monitoring.",
+        "In India, TRAFFIC functions as a division of WWF-India in New Delhi.",
+        "TRAFFIC developed the 'Super Sniffers' program training sniffer dogs to combat illegal wildlife smuggling in India."
+      ]
+    },
+    {
+      "id": "env-2015-18",
+      "subject": "Environment",
+      "year": 2015,
+      "qNo": 18,
+      "type": "statement-based",
+      "question": "With reference to 'Dugong', a mammal found in India, which of the following statements is/are correct?",
+      "statements": [
+        "It is a herbivorous marine animal.",
+        "It is found along the entire coast of India.",
+        "It is given legal protection under Schedule I of the Wildlife (Protection) Act, 1972."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 only",
+        "c": "1 and 3 only",
+        "d": "3 only"
+      },
+      "answer": "c",
+      "topic": "Marine Ecology & Fauna",
+      "subTopic": "Dugong (Sea Cow) & Seagrass Ecosystems",
+      "concept": "Habitat specificity of marine sirenians and highest statutory protection.",
+      "explanation": "Statements 1 and 3 are correct: The Dugong (Dugong dugon), commonly known as the 'Sea Cow', is the world's only strictly herbivorous marine mammal, grazing almost exclusively on underwater seagrass meadows. Because of severe population depletion, it is accorded the highest level of legal protection under Schedule I of the Wildlife (Protection) Act, 1972. Statement 2 is incorrect: It is NOT found along the 'entire' coast of India; its fragmented populations are restricted exclusively to the Gulf of Mannar, Palk Bay, the Gulf of Kutch, and the Andaman and Nicobar Islands.",
+      "statementAnalysis": [
+        {
+          "text": "It is a herbivorous marine animal.",
+          "verdict": "correct",
+          "why": "Feeds solely on seagrasses in shallow coastal waters."
+        },
+        {
+          "text": "It is found along the entire coast of India.",
+          "verdict": "incorrect",
+          "why": "Extreme word 'entire'; absent along most of the eastern and western coasts."
+        },
+        {
+          "text": "It is given legal protection under Schedule I of the Wildlife (Protection) Act, 1972.",
+          "verdict": "correct",
+          "why": "Schedule I species receiving absolute statutory protection."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 2 is false.",
+        "b": "Incorrect.",
+        "c": "Correct option consisting of statements 1 and 3.",
+        "d": "Incorrect because statement 1 is also true."
+      },
+      "trap": "Extreme geographic generalization: 'along the ENTIRE coast of India'.",
+      "relatedFacts": [
+        "India's first Dugong Conservation Reserve was notified in Tamil Nadu across the Palk Bay in 2022.",
+        "IUCN Red List status: Vulnerable globally.",
+        "Seagrass beds act as major Blue Carbon sinks, sequestering carbon faster than terrestrial tropical forests."
+      ]
+    },
+    {
+      "id": "env-2014-11",
+      "subject": "Environment",
+      "year": 2014,
+      "qNo": 11,
+      "type": "conceptual",
+      "question": "Brominated flame retardants are used in many household products like mattresses and upholstery. Why is there some concern about their use?",
+      "statements": [
+        "They are highly resistant to degradation in the environment.",
+        "They are able to accumulate in humans and animals."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "c",
+      "topic": "Environmental Pollution & Ecotoxicology",
+      "subTopic": "Persistent Organic Pollutants (POPs)",
+      "concept": "Persistence, bioaccumulation, and biomagnification under the Stockholm Convention.",
+      "explanation": "Brominated flame retardants (such as Polybrominated diphenyl ethers or PBDEs) are organobromine compounds added to plastics, textiles, and electronic circuits to slow combustion. However, they are chemical Persistent Organic Pollutants (POPs): they are chemically stable and resistant to environmental photolysis and microbial degradation (Statement 1) and are lipophilic, leading to severe bioaccumulation and biomagnification in fatty tissues of aquatic animals and humans (Statement 2), causing neurodevelopmental disruption.",
+      "statementAnalysis": [
+        {
+          "text": "They are highly resistant to degradation in the environment.",
+          "verdict": "correct",
+          "why": "Characteristics of Persistent Organic Pollutants (POPs)."
+        },
+        {
+          "text": "They are able to accumulate in humans and animals.",
+          "verdict": "correct",
+          "why": "Lipophilic compounds exhibit high bioconcentration factors."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 2 is also valid.",
+        "b": "Incorrect because statement 1 is also valid.",
+        "c": "Correct option validating both environmental risks.",
+        "d": "Incorrect."
+      },
+      "trap": "Candidates often assume modern consumer chemical coatings breakdown quickly.",
+      "relatedFacts": [
+        "Listed as restricted Persistent Organic Pollutants (POPs) under the Stockholm Convention on POPs.",
+        "Bioaccumulation refers to the build-up of a chemical in an individual organism over its lifetime.",
+        "Biomagnification refers to the progressive increase in concentration of the chemical at successive trophic levels."
+      ]
+    },
+    {
+      "id": "env-2013-09",
+      "subject": "Environment",
+      "year": 2013,
+      "qNo": 9,
+      "type": "statement-based",
+      "question": "In which of the following states is the 'Lion-tailed macaque' found in its natural habitat?",
+      "statements": [
+        "Tamil Nadu",
+        "Kerala",
+        "Karnataka",
+        "Andhra Pradesh"
+      ],
+      "options": {
+        "a": "1, 2 and 3 only",
+        "b": "2 only",
+        "c": "1, 3 and 4 only",
+        "d": "1, 2, 3 and 4"
+      },
+      "answer": "a",
+      "topic": "Endangered Endemic Fauna",
+      "subTopic": "Lion-Tailed Macaque (Macaca silenus)",
+      "concept": "Endemism to the evergreen rainforest canopy of the Western Ghats.",
+      "explanation": "The Lion-tailed macaque (Macaca silenus) is an endangered Old World monkey strictly endemic to the tropical rainforest and evergreen broadleaf canopies of the SOUTH WESTERN GHATS. Its natural habitat is restricted to the moist evergreen forests of Tamil Nadu (Anamalai, Kalakkad Mundanthurai), Kerala (Silent Valley, Periyar), and Karnataka (Kudremukh, Sharavathi). It is completely absent in Andhra Pradesh, which is dominated by the dry deciduous forests of the Eastern Ghats.",
+      "statementAnalysis": [
+        {
+          "text": "Tamil Nadu",
+          "verdict": "correct",
+          "why": "Found in Anamalai Tiger Reserve and KMTR."
+        },
+        {
+          "text": "Kerala",
+          "verdict": "correct",
+          "why": "Silent Valley National Park is its prime habitat."
+        },
+        {
+          "text": "Karnataka",
+          "verdict": "correct",
+          "why": "Found in Kudremukh and Someshwara."
+        },
+        {
+          "text": "Andhra Pradesh",
+          "verdict": "incorrect",
+          "why": "Not an evergreen Western Ghats habitat; species is completely absent."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Present in the contiguous Western Ghats states (1, 2, 3).",
+        "b": "Incorrect because it is also present in Tamil Nadu and Karnataka.",
+        "c": "Incorrect because Andhra Pradesh is false.",
+        "d": "Incorrect because Andhra Pradesh is false."
+      },
+      "trap": "Including Andhra Pradesh by confusing Western Ghats endemic fauna with broad South Indian distribution.",
+      "relatedFacts": [
+        "Silent Valley National Park was saved from a hydroelectric project largely to preserve the Lion-tailed macaque.",
+        "IUCN Status: Endangered; listed on Schedule I of the Wildlife (Protection) Act, 1972.",
+        "It is strictly arboreal, rarely coming down to the ground, feeding on fruits, seeds, and insects in the upper forest canopy."
+      ]
+    },
+    {
+      "id": "env-2023-01",
+      "subject": "Environment",
+      "year": 2023,
+      "qNo": 1,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding 'Green Hydrogen':",
+      "statements": [
+        "It can be used directly as a fuel for internal combustion engines.",
+        "It can be blended with natural gas and used in pipelines for heat and power.",
+        "It can be used in the hydrogen fuel cell to run vehicles."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Renewable Energy & Climate Mitigation",
+      "subTopic": "Green Hydrogen & Decarbonization Pathways",
+      "concept": "Electrolysis using renewable power and versatile end-use applications across mobility and heating.",
+      "explanation": "All three statements are correct: Green Hydrogen is produced by splitting water into hydrogen and oxygen through electrolysis powered by renewable electricity (solar or wind). Statement 1 is correct: Hydrogen can be used directly in modified Internal Combustion Engines (H2-ICE) as a zero-carbon combustion fuel. Statement 2 is correct: Green hydrogen can be blended with Compressed Natural Gas (H-CNG) up to 18-20% into existing city gas distribution networks without modifying pipelines. Statement 3 is correct: It is the primary fuel for Polymer Electrolyte Membrane (PEM) Fuel Cell Electric Vehicles (FCEVs), emitting only pure water vapor.",
+      "statementAnalysis": [
+        {
+          "text": "It can be used directly as a fuel for internal combustion engines.",
+          "verdict": "correct",
+          "why": "H2-ICE engines burn pure hydrogen with water as exhaust."
+        },
+        {
+          "text": "It can be blended with natural gas and used in pipelines for heat and power.",
+          "verdict": "correct",
+          "why": "NTPC and GAIL have commissioned green hydrogen blending pilots in piped natural gas (PNG)."
+        },
+        {
+          "text": "It can be used in the hydrogen fuel cell to run vehicles.",
+          "verdict": "correct",
+          "why": "Fuel cells electrochemically combine H2 and O2 to generate electricity."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statement 3 is also true.",
+        "b": "Incorrect, statement 1 is also true.",
+        "c": "Incorrect, statement 2 is also true.",
+        "d": "Correct option validating all three industrial applications."
+      },
+      "trap": "Assuming hydrogen cannot be combusted in internal combustion engines and can only be used in fuel cells.",
+      "relatedFacts": [
+        "National Green Hydrogen Mission was launched with an outlay of Rs. 19,744 crore aiming for 5 MMT annual production by 2030.",
+        "Grey Hydrogen is produced from natural gas using steam methane reforming (releases CO2 into atmosphere).",
+        "Blue Hydrogen uses steam methane reforming but captures and stores the carbon underground (CCUS)."
+      ]
+    },
+    {
+      "id": "env-2023-04",
+      "subject": "Environment",
+      "year": 2023,
+      "qNo": 4,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding the use of 'Biochar' in farming:",
+      "statements": [
+        "Biochar can be used as a part of the growing medium in vertical farming.",
+        "When biochar is a part of the growing medium, it promotes the growth of nitrogen-fixing microorganisms.",
+        "When biochar is a part of the growing medium, it enables the growing medium to retain water for longer periods."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Soil Ecology & Carbon Sequestration",
+      "subTopic": "Biochar Agronomy & Pyrolysis",
+      "concept": "Porous recalcitrant carbon matrix enhancing soil water retention and microbial colonization.",
+      "explanation": "All three statements are correct: Biochar is charcoal produced by thermal decomposition of organic biomass under oxygen-limited conditions (pyrolysis). Statement 1 is correct: Due to its lightweight, sterile, and porous nature, biochar is widely incorporated into soilless substrates in urban vertical farming. Statement 2 is correct: Its high specific surface area, alkaline pH, and internal microporous pores provide shelter and nutrient retention that strongly promote beneficial mycorrhizal fungi and nitrogen-fixing bacteria (like Rhizobium and Azotobacter). Statement 3 is correct: Its high porosity increases soil water-holding capacity, preventing drought stress and reducing irrigation frequency.",
+      "statementAnalysis": [
+        {
+          "text": "Biochar can be used as a part of the growing medium in vertical farming.",
+          "verdict": "correct",
+          "why": "Excellent soilless substrate component."
+        },
+        {
+          "text": "When biochar is a part of the growing medium, it promotes the growth of nitrogen-fixing microorganisms.",
+          "verdict": "correct",
+          "why": "Provides porous micro-habitats and protects bacteria from desiccation."
+        },
+        {
+          "text": "When biochar is a part of the growing medium, it enables the growing medium to retain water for longer periods.",
+          "verdict": "correct",
+          "why": "High microporosity stores capillary water."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statement 3 is also true.",
+        "b": "Incorrect, statement 1 is also true.",
+        "c": "Incorrect, statement 2 is also true.",
+        "d": "Correct option validating all three agronomic benefits."
+      },
+      "trap": "Skepticism over whether biochar can be used in high-tech vertical farming.",
+      "relatedFacts": [
+        "Terra Preta ('black earth') soils in the Amazon basin were created by pre-Columbian indigenous farmers using biochar.",
+        "Biochar locks carbon into the soil for hundreds to thousands of years, making it an approved Carbon Dioxide Removal (CDR) technology.",
+        "It helps remediate heavy metal toxicity by adsorbing lead, cadmium, and arsenic ions in degraded soils."
+      ]
+    },
+    {
+      "id": "env-2022-02",
+      "subject": "Environment",
+      "year": 2022,
+      "qNo": 2,
+      "type": "conceptual",
+      "question": "The term 'Biorock technology' is talked about in which of the following situations?",
+      "statements": [],
+      "options": {
+        "a": "Restoration of damaged coral reefs",
+        "b": "Development of building materials using plant residues",
+        "c": "Identification of areas for exploration/extraction of shale gas",
+        "d": "Providing salt licks for wild animals in protected areas"
+      },
+      "answer": "a",
+      "topic": "Marine Conservation & Coral Reefs",
+      "subTopic": "Biorock (Mineral Accretion Technology)",
+      "concept": "Low-voltage electrolytic deposition of calcium carbonate accelerating hermatypic coral calcification.",
+      "explanation": "Biorock technology (Mineral Accretion Technology) was invented by Wolf Hilbertz and Thomas Goreau. It works by passing safe, low-voltage direct electrical currents through submerged conductive steel mesh structures anchored to the sea bottom. This induces electrochemical electrolysis, causing calcium carbonate (limestone) and magnesium hydroxide to precipitate out of seawater onto the frame. Corals transplanted onto Biorock grow 3 to 5 times faster and show extraordinary resistance to bleaching caused by thermal stress.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Benchmark global technique for coral reef regeneration.",
+        "b": "Incorrect: Unrelated bio-composite material distractor.",
+        "c": "Incorrect: That relates to hydraulic fracturing.",
+        "d": "Incorrect: Unrelated wildlife management distractor."
+      },
+      "trap": "Assuming 'Biorock' refers to organic construction stone or shale geology.",
+      "relatedFacts": [
+        "Zoological Survey of India (ZSI) successfully implemented Biorock technology to restore bleached coral reefs in the Gulf of Kutch, Gujarat.",
+        "Corals share an obligate mutualistic endosymbiosis with photosynthetic microalgae called Zooxanthellae.",
+        "Coral bleaching occurs when elevated sea surface temperatures cause corals to expel their colorful zooxanthellae, turning bone white."
+      ]
+    },
+    {
+      "id": "env-2021-03",
+      "subject": "Environment",
+      "year": 2021,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "Which one of the following statements best describes the term 'Carbon Fertilization'?",
+      "statements": [],
+      "options": {
+        "a": "Increased plant growth due to increased concentration of carbon dioxide in the atmosphere",
+        "b": "Increased temperature of Earth due to increased concentration of carbon dioxide in the atmosphere",
+        "c": "Increased acidity of oceans as a result of increased concentration of carbon dioxide in the atmosphere",
+        "d": "Adaptation of all living beings on Earth to the climate change brought about by the increased concentration of carbon dioxide in the atmosphere"
+      },
+      "answer": "a",
+      "topic": "Global Climate Change & Plant Physiology",
+      "subTopic": "Carbon Fertilization Effect (CFE)",
+      "concept": "Enhanced photosynthetic carboxylation efficiency under elevated ambient CO2 levels in C3 plants.",
+      "explanation": "Carbon fertilization refers to the phenomenon of accelerated photosynthetic rates and biomass growth in plants resulting from elevated levels of atmospheric carbon dioxide (CO2). Because CO2 is a limiting substrate for the enzyme RuBisCO in C3 photosynthesis, higher atmospheric CO2 concentrations increase photosynthetic carbon fixation and improve plant water-use efficiency (by allowing stomata to narrow while taking in adequate CO2).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Definitional botanical meaning of Carbon Fertilization.",
+        "b": "Incorrect: That describes the Greenhouse Effect / Global Warming.",
+        "c": "Incorrect: That describes Ocean Acidification.",
+        "d": "Incorrect: Fabricated distractor."
+      },
+      "trap": "Confusing the biological enhancement effect (Option a) with the physical heating effect (Option b) or ocean chemistry (Option c).",
+      "relatedFacts": [
+        "C3 plants (wheat, rice, barley, soybeans) show a much stronger carbon fertilization response than C4 plants (maize, sugarcane).",
+        "While plant biomass increases under carbon fertilization, studies show that protein, zinc, and iron concentrations in cereal crops decline (nutrient dilution effect).",
+        "Global satellite greening data (NDVI) recorded by NASA confirms widespread greening of Earth's vegetated lands driven predominantly by the carbon fertilization effect."
+      ]
+    },
+    {
+      "id": "env-2020-01",
+      "subject": "Environment",
+      "year": 2020,
+      "qNo": 1,
+      "type": "statement-based",
+      "question": "What are the advantages of 'zero-tillage' in agriculture?",
+      "statements": [
+        "Sowing of wheat is possible without burning the residue of previous crop.",
+        "Without the need for nursery of rice saplings, direct planting of paddy seeds in the wet soil is possible.",
+        "Carbon sequestration in the soil is possible."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Conservation Agriculture",
+      "subTopic": "Zero Tillage & Stubble Burning Mitigation",
+      "concept": "Direct drill seeding through crop residue conserving soil organic matter and eliminating agricultural fires.",
+      "explanation": "All three statements are correct: Statement 1 is correct: Using machines like the Happy Seeder or Super Seeder, wheat seeds can be drilled directly into the soil amidst standing paddy stubble, eliminating the need for farmers to burn crop residue. Statement 2 is correct: Zero tillage allows Direct Seeded Rice (DSR), where pre-germinated paddy seeds are sown directly into wet fields without raising seedlings in a nursery and transplanting, saving up to 30% irrigation water. Statement 3 is correct: Tillage disturbs soil aggregates and exposes soil organic carbon to rapid oxidation; zero tillage keeps carbon locked inside the soil aggregates, facilitating substantial soil carbon sequestration.",
+      "statementAnalysis": [
+        {
+          "text": "Sowing of wheat is possible without burning the residue of previous crop.",
+          "verdict": "correct",
+          "why": "Happy Seeder cuts and lifts straw while sowing wheat seeds."
+        },
+        {
+          "text": "Without the need for nursery of rice saplings, direct planting of paddy seeds in the wet soil is possible.",
+          "verdict": "correct",
+          "why": "Direct Seeded Rice (DSR) technology."
+        },
+        {
+          "text": "Carbon sequestration in the soil is possible.",
+          "verdict": "correct",
+          "why": "Undisturbed soil prevents microbial oxidation of organic matter."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statement 3 is also true.",
+        "b": "Incorrect, statement 1 is also true.",
+        "c": "Incorrect.",
+        "d": "Correct option validating all three environmental and agronomic benefits."
+      },
+      "trap": "Assuming zero-tillage cannot sequester carbon or is inapplicable to paddy cultivation.",
+      "relatedFacts": [
+        "Conservation Agriculture is founded on three pillars: Minimum mechanical soil disturbance (zero till), permanent organic soil cover (mulch), and diversified crop rotations.",
+        "Eliminating stubble burning via in-situ zero tillage drastically reduces winter air pollution (PM2.5/PM10) across Delhi-NCR.",
+        "Earthworm populations and soil microbial biomass increase significantly under sustained zero tillage regimes."
+      ]
+    },
+    {
+      "id": "env-2016-03",
+      "subject": "Environment",
+      "year": 2016,
+      "qNo": 3,
+      "type": "statement-based",
+      "question": "With reference to 'Red Sanders', sometimes seen in the news, consider the following statements:",
+      "statements": [
+        "It is a tree species found in a part of South India.",
+        "It is one of the most important trees in the tropical rain forest areas of South India."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "a",
+      "topic": "Endemic Flora & Forest Conservation",
+      "subTopic": "Red Sanders (Pterocarpus santalinus)",
+      "concept": "Strict endemism to the dry deciduous scrub of the southern Eastern Ghats (Seshachalam Hills).",
+      "explanation": "Statement 1 is correct: Red Sanders (Pterocarpus santalinus) is a valuable timber tree endemic to a narrow geographical tract of South India, specifically the Seshachalam and Veligonda hills of the Eastern Ghats across Kadapa, Chittoor, and Nellore districts of Andhra Pradesh. Statement 2 is incorrect: It does NOT grow in 'tropical rain forests'; it is a species of TROPICAL DRY DECIDUOUS FORESTS and rocky scrublands, highly adapted to drought and dry climates.",
+      "statementAnalysis": [
+        {
+          "text": "It is a tree species found in a part of South India.",
+          "verdict": "correct",
+          "why": "Strictly endemic to Rayalaseema region of Andhra Pradesh."
+        },
+        {
+          "text": "It is one of the most important trees in the tropical rain forest areas of South India.",
+          "verdict": "incorrect",
+          "why": "Grows in tropical dry deciduous thorn/scrub forests, NOT tropical rainforests."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Only statement 1 is true.",
+        "b": "Incorrect because statement 2 is ecologically false.",
+        "c": "Incorrect because statement 2 is false.",
+        "d": "Incorrect because statement 1 is valid."
+      },
+      "trap": "Substituting 'tropical dry deciduous' with 'tropical rainforest'.",
+      "relatedFacts": [
+        "IUCN Red List status: Endangered (due to rampant illegal felling and smuggling).",
+        "Listed under Appendix II of CITES (Convention on International Trade in Endangered Species).",
+        "Highly prized in China and East Asia for traditional furniture carving, musical instruments, and as a natural red dye (santalin)."
+      ]
+    },
+    {
+      "id": "env-2023-07",
+      "subject": "Environment",
+      "year": 2023,
+      "qNo": 7,
+      "type": "matching",
+      "question": "Consider the following pairs of Wetlands and their locations:",
+      "statements": [
+        "Hokera Wetland — Punjab",
+        "Renuka Wetland — Himachal Pradesh",
+        "Rudrasagar Lake — Tripura",
+        "Sasthamkotta Lake — Tamil Nadu"
+      ],
+      "options": {
+        "a": "Only one pair",
+        "b": "Only two pairs",
+        "c": "Only three pairs",
+        "d": "All four pairs"
+      },
+      "answer": "b",
+      "topic": "Wetlands & Ramsar Sites",
+      "subTopic": "Ramsar Sites Distribution Across Indian States",
+      "concept": "Geographic locations of ecologically sensitive designated Ramsar wetlands in India.",
+      "explanation": "Pair 1 is incorrectly matched: Hokera Wetland is located in the UT of Jammu and Kashmir (near Srinagar), NOT Punjab. Pair 2 is correctly matched: Renuka Wetland (a freshwater lake and smallest Ramsar site in India) is located in Sirmaur district of Himachal Pradesh. Pair 3 is correctly matched: Rudrasagar Lake (a lowland reservoir nourished by three perennial streams) is located in Tripura. Pair 4 is incorrectly matched: Sasthamkotta Lake (the largest freshwater lake in Kerala) is located in Kollam district of Kerala, NOT Tamil Nadu. Therefore, only two pairs are correctly matched.",
+      "statementAnalysis": [
+        {
+          "text": "Hokera Wetland — Punjab",
+          "verdict": "incorrect",
+          "why": "Hokera is located in Jammu & Kashmir."
+        },
+        {
+          "text": "Renuka Wetland — Himachal Pradesh",
+          "verdict": "correct",
+          "why": "Renuka is in Himachal Pradesh; smallest Ramsar site in India."
+        },
+        {
+          "text": "Rudrasagar Lake — Tripura",
+          "verdict": "correct",
+          "why": "Rudrasagar Lake is in Sepahijala district, Tripura."
+        },
+        {
+          "text": "Sasthamkotta Lake — Tamil Nadu",
+          "verdict": "incorrect",
+          "why": "Sasthamkotta Lake is in Kollam, Kerala."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Exactly two pairs are correct.",
+        "b": "Correct: Only pairs 2 and 3 are correctly matched.",
+        "c": "Incorrect: Pairs 1 and 4 are wrong.",
+        "d": "Incorrect: Only two pairs are valid."
+      },
+      "trap": "In the new 2023 'Only one/two/three/all pairs' question format, elimination does not work directly; every single pair's precise geography must be known.",
+      "relatedFacts": [
+        "The Ramsar Convention on Wetlands of International Importance was adopted in Ramsar, Iran in 1971.",
+        "Sundarbans is the largest Ramsar site in India, while Renuka Wetland in Himachal Pradesh is the smallest.",
+        "Montreux Record is a register of wetland sites on the Ramsar List where changes in ecological character have occurred, are occurring, or are likely to occur; Keoladeo National Park (Rajasthan) and Loktak Lake (Manipur) are currently on it."
+      ]
+    },
+    {
+      "id": "env-2022-06",
+      "subject": "Environment",
+      "year": 2022,
+      "qNo": 6,
+      "type": "statement-based",
+      "question": "Which of the following organisms are 'filter feeders' in aquatic ecosystems?",
+      "statements": [],
+      "options": {
+        "a": "Catfish",
+        "b": "Octopus",
+        "c": "Oysters",
+        "d": "Pelicans"
+      },
+      "answer": "c",
+      "topic": "Marine Ecology & Fauna",
+      "subTopic": "Trophic Adaptations & Suspension/Filter Feeding",
+      "concept": "Ecological feeding mechanisms where organisms strain suspended organic matter and plankton from water.",
+      "explanation": "Filter feeders are aquatic animals that feed by straining suspended matter and food particles (algae, bacteria, and detritus) from water, typically by passing the water over a specialized filtering structure (such as gills or baleen plates). Oysters (and other bivalve mollusks like clams and mussels) are classic sessile filter feeders; an individual adult oyster can filter up to 50 gallons of water per day, playing a vital ecological role in clarifying estuaries and preventing eutrophication.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Catfish are primarily bottom-dwelling scavengers/predators using sensory barbels.",
+        "b": "Incorrect: Octopuses are active predatory cephalopods hunting crabs and fish.",
+        "c": "Correct (Answer): Oysters pump water across ciliated gills to filter plankton.",
+        "d": "Incorrect: Pelicans are piscivorous birds that scoop fish using their expandable throat pouch."
+      },
+      "trap": "Aspirants confuse benthic scavengers (catfish) with suspension/filter feeders.",
+      "relatedFacts": [
+        "Whale sharks and baleen whales are large marine filter feeders.",
+        "Oyster reefs provide biogenic habitats that protect coastlines from storm surges.",
+        "Excessive sedimentation can clog the delicate cilia of bivalve filter feeders, causing suffocation."
+      ]
+    },
+    {
+      "id": "env-2020-06",
+      "subject": "Environment",
+      "year": 2020,
+      "qNo": 6,
+      "type": "statement-based",
+      "question": "With reference to the fly ash produced by thermal power plants using coal, which of the following statements are correct?",
+      "statements": [
+        "Fly ash can be used in the production of bricks for building construction.",
+        "Fly ash can be used as a replacement for some of the Portland cement contents of concrete.",
+        "Fly ash is made up of silicon dioxide and calcium oxide only, and does not contain any toxic elements."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Environmental Pollution & Waste Management",
+      "subTopic": "Fly Ash Utilization & Heavy Metal Toxicity",
+      "concept": "Industrial byproducts, pozzolanic properties in green concrete, and hazardous trace heavy metals.",
+      "explanation": "Statements 1 and 2 are correct: Fly ash is a pozzolanic material that reacts with lime to form cementitious compounds; it is widely utilized in fly-ash bricks, road embankments, and as a partial replacement (up to 30-35%) for Portland cement in concrete, enhancing durability. Statement 3 is incorrect: Fly ash contains significant quantities of toxic heavy metals such as arsenic, lead, mercury, nickel, cobalt, and cadmium; hence the absolute assertion 'does not contain any toxic elements' is scientifically completely wrong.",
+      "statementAnalysis": [
+        {
+          "text": "Fly ash can be used in the production of bricks for building construction.",
+          "verdict": "correct",
+          "why": "Fly ash bricks are lighter, stronger, and more thermal-insulating than conventional clay bricks."
+        },
+        {
+          "text": "Fly ash can be used as a replacement for some of the Portland cement contents of concrete.",
+          "verdict": "correct",
+          "why": "Pozzolanic reaction improves concrete compressive strength and reduces heat of hydration."
+        },
+        {
+          "text": "Fly ash is made up of silicon dioxide and calcium oxide only, and does not contain any toxic elements.",
+          "verdict": "incorrect",
+          "why": "Coal fly ash contains toxic heavy metals (arsenic, boron, chromium, lead, mercury)."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 2 are valid engineering applications.",
+        "b": "Incorrect: Statement 3 contains an extreme false claim.",
+        "c": "Incorrect: Statement 3 is false.",
+        "d": "Incorrect: Statement 3 is false."
+      },
+      "trap": "The word 'only' and 'does not contain any toxic elements' is an extreme generalization typical of incorrect options in UPSC Prelims.",
+      "relatedFacts": [
+        "The Ministry of Environment, Forest and Climate Change (MoEFCC) mandated 100% fly ash utilization for thermal power plants within a 300 km radius of construction sites.",
+        "Fly ash contains silica, alumina, and iron oxide, classified into Class F (from anthracite/bituminous coal) and Class C (from lignite/sub-bituminous coal).",
+        "Unmanaged fly ash slurry in ash ponds causes groundwater contamination due to heavy metal leaching."
+      ]
+    },
+    {
+      "id": "env-2019-02",
+      "subject": "Environment",
+      "year": 2019,
+      "qNo": 2,
+      "type": "conceptual",
+      "question": "Which of the following are the primary agricultural sources of methane emissions into the atmosphere?",
+      "statements": [
+        "Paddy (rice) fields",
+        "Enteric fermentation in domestic livestock (cattle)",
+        "Coal mining",
+        "Landfills"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1, 2 and 4 only",
+        "d": "1, 2, 3 and 4"
+      },
+      "answer": "a",
+      "topic": "Climate Change & Greenhouse Gases",
+      "subTopic": "Methane (CH4) Biogenic Sources vs Industrial Sources",
+      "concept": "Distinction between agricultural biogenic sources and non-agricultural industrial/waste sources of methane.",
+      "explanation": "The question specifically asks for AGRICULTURAL sources of methane emissions. Flooded paddy (rice) fields provide an anaerobic environment where methanogenic bacteria decompose organic matter, generating methane. Enteric fermentation during ruminant digestion in livestock (cattle, buffaloes, sheep) produces large amounts of biogenic methane expelled through burping. Coal mining is an energy/mining industrial source, and landfills are a municipal solid waste source; neither is an agricultural source. Hence, 1 and 2 only.",
+      "statementAnalysis": [
+        {
+          "text": "Paddy (rice) fields",
+          "verdict": "correct",
+          "why": "Anaerobic waterlogged soils produce methane via methanogens (agricultural)."
+        },
+        {
+          "text": "Enteric fermentation in domestic livestock (cattle)",
+          "verdict": "correct",
+          "why": "Ruminant microbial digestion generates significant biogenic methane (agricultural)."
+        },
+        {
+          "text": "Coal mining",
+          "verdict": "incorrect",
+          "why": "Energy/mining sector emissions, not agricultural."
+        },
+        {
+          "text": "Landfills",
+          "verdict": "incorrect",
+          "why": "Municipal solid waste management sector, not agricultural."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 2 are the agricultural sources.",
+        "b": "Incorrect: Coal mining is industrial.",
+        "c": "Incorrect: Landfills are waste sector.",
+        "d": "Incorrect: Mixes industrial and municipal sources with agricultural ones."
+      },
+      "trap": "Candidates identify all 4 as methane sources without noticing the qualifying word 'agricultural' in the question stem.",
+      "relatedFacts": [
+        "Methane (CH4) has a Global Warming Potential (GWP) ~28-36 times higher than CO2 over a 100-year timescale, and ~80 times over a 20-year timescale.",
+        "The Global Methane Pledge launched at COP26 aims to slash global methane emissions by 30% by 2030.",
+        "System of Rice Intensification (SRI) and Alternate Wetting and Drying (AWD) substantially curb methane emissions from paddy cultivation."
+      ]
+    },
+    {
+      "id": "env-2018-05",
+      "subject": "Environment",
+      "year": 2018,
+      "qNo": 5,
+      "type": "conceptual",
+      "question": "What is the calculation behind 'Earth Overshoot Day'?",
+      "statements": [],
+      "options": {
+        "a": "The date when humanity's demand for ecological resources and services in a given year exceeds what Earth can regenerate in that year.",
+        "b": "The day when the carbon emissions of a year exceed the total photosynthetic capacity of all global forests.",
+        "c": "The day when the temperature anomaly crosses the 1.5°C threshold above pre-industrial levels.",
+        "d": "The day when total plastic production equals the total weight of fish in the ocean."
+      },
+      "answer": "a",
+      "topic": "Global Ecology & Sustainability",
+      "subTopic": "Ecological Footprint & Earth Overshoot Day",
+      "concept": "Global Footprint Network methodology comparing biocapacity to human ecological footprint.",
+      "explanation": "Earth Overshoot Day marks the date when humanity's annual demand for ecological resources and services (carbon sequestration, food, timber, fiber) exceeds what Earth's ecosystems can regenerate in that entire year. It is calculated by the international research organization Global Footprint Network as: (Planet's Biocapacity / Humanity's Ecological Footprint) x 365. For the rest of the year, humanity operates in ecological deficit by liquidating local resource stocks and accumulating carbon dioxide in the atmosphere.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Direct definition by the Global Footprint Network.",
+        "b": "Incorrect: Too narrow; ecological footprint includes cropland, grazing land, fishing grounds, and forests, not just forest carbon.",
+        "c": "Incorrect: Confuses overshoot with IPCC global warming temperature thresholds.",
+        "d": "Incorrect: Fictitious distractor referring to Ellen MacArthur Foundation plastics projection."
+      },
+      "trap": "Candidates often restrict the concept solely to carbon emissions or temperature instead of the holistic ecological footprint vs biocapacity.",
+      "relatedFacts": [
+        "In 1970, Earth Overshoot Day fell in late December; today it typically falls in late July or early August.",
+        "Biocapacity is measured in global hectares (gha).",
+        "Countries with demand higher than domestic biocapacity are running an ecological deficit and rely on imports or liquidating natural capital."
+      ]
+    },
+    {
+      "id": "env-2017-06",
+      "subject": "Environment",
+      "year": 2017,
+      "qNo": 6,
+      "type": "statement-based",
+      "question": "With reference to the 'TRAFFIC' (The Wildlife Trade Monitoring Network), consider the following statements:",
+      "statements": [
+        "TRAFFIC is a bureau under United Nations Environment Programme (UNEP).",
+        "The mission of TRAFFIC is to ensure that trade in wild plants and animals is not a threat to the conservation of nature."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "b",
+      "topic": "International Environmental Governance",
+      "subTopic": "TRAFFIC & Illegal Wildlife Trade",
+      "concept": "Organizational status, founding partners (WWF and IUCN), and core conservation mandate of TRAFFIC.",
+      "explanation": "Statement 1 is incorrect: TRAFFIC is NOT a bureau under UNEP. It is a leading non-governmental organisation (NGO) established in 1976 as a strategic joint alliance of WWF (World Wide Fund for Nature) and IUCN (International Union for Conservation of Nature). Statement 2 is correct: Its primary mission is to ensure that commercial trade in wild plants and animals is not a threat to the conservation of nature and to combat illegal poaching and wildlife trafficking globally.",
+      "statementAnalysis": [
+        {
+          "text": "TRAFFIC is a bureau under United Nations Environment Programme (UNEP).",
+          "verdict": "incorrect",
+          "why": "TRAFFIC is a joint NGO programme of WWF and IUCN, not a UN body."
+        },
+        {
+          "text": "The mission of TRAFFIC is to ensure that trade in wild plants and animals is not a threat to the conservation of nature.",
+          "verdict": "correct",
+          "why": "Official mission statement adopted since its founding in 1976."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 1 is false.",
+        "b": "Correct: Only Statement 2 is true.",
+        "c": "Incorrect: Statement 1 is false.",
+        "d": "Incorrect: Statement 2 is valid."
+      },
+      "trap": "Examiner frequently replaces NGO origins (WWF/IUCN) with UN agency acronyms (UNEP, UNDP, FAO) to trap candidates.",
+      "relatedFacts": [
+        "TRAFFIC works in close cooperation with the Secretariat of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES).",
+        "In India, TRAFFIC operates as a programme division of WWF-India based in New Delhi.",
+        "It publishes regular investigative reports on illegal trade in pangolin scales, red sanders, tiger bone, and shark fins."
+      ]
+    },
+    {
+      "id": "env-2016-08",
+      "subject": "Environment",
+      "year": 2016,
+      "qNo": 8,
+      "type": "conceptual",
+      "question": "Which of the following National Parks is unique in being a swamp with floating vegetation that supports a rich biodiversity?",
+      "statements": [],
+      "options": {
+        "a": "Bhitarkanika National Park",
+        "b": "Keibul Lamjao National Park",
+        "c": "Keoladeo Ghana National Park",
+        "d": "Sultanpur National Park"
+      },
+      "answer": "b",
+      "topic": "Protected Areas & Wetlands",
+      "subTopic": "Keibul Lamjao & Loktak Lake Ecosystem",
+      "concept": "Unique 'phumdis' (floating biomass mats) and endemic habitat of the Sangai brow-antlered deer.",
+      "explanation": "Keibul Lamjao National Park, located in Bishnupur district of Manipur on the southern part of Loktak Lake, is the ONLY floating national park in the world. It is characterized by floating decomposing plant biomass called 'phumdis'. This floating ecosystem is the last natural habitat of the critically endangered Sangai (Rucervus eldii eldii), also known as the dancing deer of Manipur.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Bhitarkanika (Odisha) is famous for estuarine crocodiles and mangrove wetlands.",
+        "b": "Correct: Keibul Lamjao is the world's only floating national park, home to the Sangai deer.",
+        "c": "Incorrect: Keoladeo (Bharatpur, Rajasthan) is an artificial wetland famous for migratory waterfowl.",
+        "d": "Incorrect: Sultanpur (Haryana) is a bird sanctuary/wetland on the Indo-Gangetic plain."
+      },
+      "trap": "Candidates often mix up Loktak Lake's floating park with Bharatpur's famous Keoladeo bird sanctuary.",
+      "relatedFacts": [
+        "Sangai deer is the state animal of Manipur.",
+        "Loktak Lake is also a Ramsar site and is listed under the Montreux Record due to ecological degradation caused by the Ithai barrage.",
+        "Phumdis are thick mats of soil, vegetation, and organic matter that float on the water surface."
+      ]
+    },
+    {
+      "id": "env-2015-06",
+      "subject": "Environment",
+      "year": 2015,
+      "qNo": 6,
+      "type": "conceptual",
+      "question": "Which one of the following is the best description of the term 'ecosystem'?",
+      "statements": [],
+      "options": {
+        "a": "A community of organisms interacting with one another",
+        "b": "That part of the Earth which is inhabited by living organisms",
+        "c": "A community of organisms together with the environment in which they live",
+        "d": "The flora and fauna of a geographical area"
+      },
+      "answer": "c",
+      "topic": "Ecology Basics",
+      "subTopic": "Concept and Boundaries of an Ecosystem",
+      "concept": "Fundamental distinction between a biotic community and an ecosystem incorporating physical abiotic interactions.",
+      "explanation": "An 'ecosystem' is a functional, self-sustaining unit of nature where living organisms (biotic community: plants, animals, microbes) interact among themselves AND with the surrounding physical and chemical environment (abiotic components: sunlight, air, water, soil, nutrients) through energy flows and nutrient cycles. Option (a) describes only a 'biotic community', option (b) defines the 'biosphere', and option (d) describes 'biota'. Option (c) is the comprehensive, precise definition coined by A.G. Tansley in 1935.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Defines only the biotic community, ignoring the abiotic physical environment.",
+        "b": "Incorrect: Defines the Biosphere.",
+        "c": "Correct (Answer): Captures both the biotic community and its abiotic environment functioning together.",
+        "d": "Incorrect: Refers only to floral and faunal assemblages."
+      },
+      "trap": "Option (a) sounds very convincing to students who forget that an ecosystem strictly requires the interaction between biotic and abiotic components.",
+      "relatedFacts": [
+        "The term 'ecosystem' was coined by British ecologist Arthur Tansley in 1935.",
+        "Eugene Odum is known as the father of modern ecosystem ecology.",
+        "Energy flow in an ecosystem is always unidirectional (from sun to producers to consumers), while chemical nutrients cycle endlessly."
+      ]
+    },
+    {
+      "id": "env-2014-08",
+      "subject": "Environment",
+      "year": 2014,
+      "qNo": 8,
+      "type": "conceptual",
+      "question": "Lichens, which are capable of initiating ecological succession even on a bare rock, are actually a symbiotic association of:",
+      "statements": [],
+      "options": {
+        "a": "Algae and bacteria",
+        "b": "Algae and fungi",
+        "c": "Bacteria and fungi",
+        "d": "Fungi and mosses"
+      },
+      "answer": "b",
+      "topic": "Ecology Basics & Mutualism",
+      "subTopic": "Symbiosis & Ecological Pioneers (Lichens)",
+      "concept": "Mutualistic relationship between a photobiont (algae) and a mycobiont (fungi) acting as pioneer species.",
+      "explanation": "Lichens are a classic example of obligate mutualistic symbiosis between an alga (or cyanobacterium, known as the photobiont) and a fungus (known as the mycobiont). The algal partner photosynthesizes and synthesizes organic carbohydrates and nourishment, while the fungal partner provides structural anchoring, water absorption, and minerals. Because they secrete carbonic and lichenic acids that etch and weather bare rock into fine soil particles, lichens act as vital pioneer species in primary ecological succession (lithosere).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Standard lichens are algae and fungi.",
+        "b": "Correct: Mutualistic symbiosis between algae (photobiont) and fungi (mycobiont).",
+        "c": "Incorrect: Bacteria and fungi form diverse associations, but not classic lichen bodies.",
+        "d": "Incorrect: Mosses are bryophyte plants that follow lichens in succession."
+      },
+      "trap": "Students confuse the pioneer bryophytes (mosses) with the composite symbiotic organism (lichens).",
+      "relatedFacts": [
+        "Lichens are sensitive bio-indicators of air pollution, especially sulphur dioxide (SO2); they disappear in polluted urban industrial zones.",
+        "India's first Lichen Park was established in Munsyari, Pithoragarh district of Uttarakhand.",
+        "Litmus paper used in pH testing is extracted from lichens (Roccella tinctoria)."
+      ]
+    },
+    {
+      "id": "env-2013-04",
+      "subject": "Environment",
+      "year": 2013,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "If you want to see gharials in their natural habitat, which one of the following is the best place to visit?",
+      "statements": [],
+      "options": {
+        "a": "Bhitarkanika Mangroves",
+        "b": "Chambal River",
+        "c": "Pulicat Lake",
+        "d": "Deepor Beel"
+      },
+      "answer": "b",
+      "topic": "Fauna & Conservation",
+      "subTopic": "Gharial Habitat & Protected Sanctuaries",
+      "concept": "Freshwater riverine ecology and breeding strongholds of the Critically Endangered Gharial (Gavialis gangeticus).",
+      "explanation": "The National Chambal Sanctuary (located on the tri-junction of Rajasthan, Madhya Pradesh, and Uttar Pradesh along the pristine Chambal River) is the most critical and viable wild breeding stronghold for the Critically Endangered Gharial (Gavialis gangeticus). Unlike saltwater or marsh crocodiles (muggers), gharials are obligate freshwater riverine specialists with long, slender snouts adapted for catching fish, and they require clean, deep flowing water and high sandbanks for basking and nesting.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Bhitarkanika is famous for Saltwater Crocodiles (Crocodylus porosus).",
+        "b": "Correct: The Chambal River sanctuary preserves the world's largest wild breeding population of Gharials.",
+        "c": "Incorrect: Pulicat is a brackish water lagoon primarily sheltering flamingoes and waterfowl.",
+        "d": "Incorrect: Deepor Beel is a freshwater lake/wetland in Assam, not a gharial river habitat."
+      },
+      "trap": "Aspirants confuse the Saltwater crocodile stronghold (Bhitarkanika) with the freshwater gharial habitat (Chambal).",
+      "relatedFacts": [
+        "The gharial is listed as Critically Endangered on the IUCN Red List and in Schedule I of the Wildlife (Protection) Act, 1972.",
+        "The male gharial possesses a bulbous nasal growth resembling an earthen pot ('ghara'), from which its name derives.",
+        "Chambal River is one of the cleanest and least polluted rivers in northern India because historical myths prevented heavy industrialization."
+      ]
+    },
+    {
+      "id": "env-2024-02",
+      "subject": "Environment",
+      "year": 2024,
+      "qNo": 2,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding the Wildlife (Protection) Act, 1972, after the 2022 Amendment:",
+      "statements": [
+        "The number of Schedules has been rationalized from six to four.",
+        "Schedule I now provides the highest level of protection for specially protected animals.",
+        "A new Schedule has been added specifically to implement CITES (Convention on International Trade in Endangered Species of Wild Fauna and Flora)."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Environmental Legislation",
+      "subTopic": "Wildlife (Protection) Amendment Act, 2022",
+      "concept": "Major rationalization of Schedules and domestic compliance mechanism for CITES enforcement in India.",
+      "explanation": "All three statements are correct under the Wildlife (Protection) Amendment Act, 2022 (which came into force on April 1, 2023): 1. The original six Schedules were reduced to four: Schedule I for animals with highest level of protection; Schedule II for animals with lesser protection; Schedule III for protected plant species; and Schedule IV for specimens listed in the Appendices of CITES. 2. Schedule I continues to give the highest protection, eliminating the previous division between Schedule I and Schedule II part II. 3. A dedicated Schedule IV was created to give domestic legal force to CITES regulation of international specimen trade.",
+      "statementAnalysis": [
+        {
+          "text": "The number of Schedules has been rationalized from six to four.",
+          "verdict": "correct",
+          "why": "Schedules reduced from 6 to 4; vermin schedule (Schedule V) was deleted."
+        },
+        {
+          "text": "Schedule I now provides the highest level of protection for specially protected animals.",
+          "verdict": "correct",
+          "why": "All critically endangered and highly protected fauna consolidated into Schedule I."
+        },
+        {
+          "text": "A new Schedule has been added specifically to implement CITES (Convention on International Trade in Endangered Species of Wild Fauna and Flora).",
+          "verdict": "correct",
+          "why": "Schedule IV specifically incorporates CITES Appendices into domestic Indian law."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 3 is also correct.",
+        "b": "Incorrect: Statement 1 is also correct.",
+        "c": "Incorrect: Statement 2 is also correct.",
+        "d": "Correct: All three statements reflect the 2022 legislative amendments."
+      },
+      "trap": "Candidates might think vermin is still Schedule V; the 2022 amendment completely removed Schedule V and empowered the Centre to declare vermin by notification.",
+      "relatedFacts": [
+        "The 2022 Act empowers the Central Government to designate a Management Authority and a Scientific Authority under CITES.",
+        "Persons possessing live specimens of captive animals listed under CITES Appendix must obtain a certificate of registration.",
+        "Penalties were substantially hiked: general fines increased from Rs 25,000 to Rs 1,00,000."
+      ]
+    },
+    {
+      "id": "env-2021-04",
+      "subject": "Environment",
+      "year": 2021,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "Which one of the following is used in preparing a natural biopesticide or mosquito repellent?",
+      "statements": [],
+      "options": {
+        "a": "Congress grass",
+        "b": "Elephant grass",
+        "c": "Lemongrass",
+        "d": "Nut grass"
+      },
+      "answer": "c",
+      "topic": "Sustainable Ecology & Plant Products",
+      "subTopic": "Natural Repellents & Biopesticides",
+      "concept": "Aromatic plant extracts containing citral and citronella used as non-toxic bio-repellents.",
+      "explanation": "Lemongrass (Cymbopogon citratus and Cymbopogon nardus) contains aromatic volatile essential oils, predominantly citronellol, citronellal, and geraniol. These natural terpene compounds act as potent insect and mosquito repellents by masking environmental cues and carbon dioxide plumes that mosquitoes use to locate human hosts. In contrast, Congress grass (Parthenium hysterophorus) is a toxic invasive alien weed that causes severe contact dermatitis.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Parthenium hysterophorus (Congress grass) is a toxic invasive weed.",
+        "b": "Incorrect: Elephant grass (Pennisetum purpureum) is a high-yield tropical forage grass.",
+        "c": "Correct: Lemongrass is the commercial source of citronella oil used in organic mosquito repellents.",
+        "d": "Incorrect: Nut grass (Cyperus rotundus) is an aggressive perennial tuberous sedge weed."
+      },
+      "trap": "Candidates confuse hazardous invasive plants (Parthenium) with beneficial aromatic grasses (Lemongrass).",
+      "relatedFacts": [
+        "Pyrethrum, extracted from Chrysanthemum flowers, is another natural insecticide that attacks insect nervous systems.",
+        "Neem oil (Azadirachtin) acts as an antifeedant and growth disruptor for crop pests.",
+        "Citronella candles and sprays are registered with environmental protection agencies as low-risk biopesticides."
+      ]
+    }
+  ]
+}

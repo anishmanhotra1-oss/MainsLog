@@ -12,7 +12,8 @@ const MIME_TYPES = {
   '.ico': 'image/x-icon',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg'
+  '.jpeg': 'image/jpeg',
+  '.pdf': 'application/pdf'
 };
 
 const DATA_DIR = path.join(__dirname, 'data');
@@ -51,13 +52,32 @@ function writeProgressData(data) {
 
 function readSyncData() {
   ensureStorage();
+  const defaultData = {
+    ENTRIES: [],
+    HABITS_LOG: {},
+    CUSTOM_HABITS: [],
+    CONFIG: {},
+    SCORE_REGISTER: { gs: {}, csat: {} },
+    PRELIMS_TARGETS_V1: [],
+    TRACKER_PROGRESS: {},
+    EB_ENTRIES: [],
+    deletedScoreIds: [],
+    deletedEntryIds: [],
+    timestamp: 0
+  };
   if (!fs.existsSync(SYNC_FILE)) {
-    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
+    return defaultData;
   }
   try {
-    return JSON.parse(fs.readFileSync(SYNC_FILE, 'utf-8'));
+    const data = JSON.parse(fs.readFileSync(SYNC_FILE, 'utf-8'));
+    if (!Array.isArray(data.ENTRIES)) data.ENTRIES = [];
+    if (!Array.isArray(data.PRELIMS_TARGETS_V1)) data.PRELIMS_TARGETS_V1 = [];
+    if (!data.TRACKER_PROGRESS || typeof data.TRACKER_PROGRESS !== 'object') data.TRACKER_PROGRESS = {};
+    if (!Array.isArray(data.EB_ENTRIES)) data.EB_ENTRIES = [];
+    if (!Array.isArray(data.deletedEntryIds)) data.deletedEntryIds = [];
+    return data;
   } catch (e) {
-    return { ENTRIES: [], HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
+    return defaultData;
   }
 }
 
@@ -266,6 +286,8 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
             CUSTOM_HABITS: body.CUSTOM_HABITS || [],
             CONFIG: body.CONFIG || {},
             SCORE_REGISTER: { gs: {}, csat: {} },
+            PRELIMS_TARGETS_V1: [],
+            EB_ENTRIES: [],
             deletedScoreIds: [],
             deletedEntryIds: [],
             timestamp: Date.now()
@@ -274,12 +296,39 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
           return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, data: saved });
         }
 
+        function getRelatedIds(id) {
+          if (!id) return [];
+          const raw = String(id).trim();
+          let clean = raw;
+          let prev;
+          do {
+            prev = clean;
+            clean = clean.replace(/^(plt_|entry_plt_|entry_|plt_entry_)/, '');
+          } while (clean !== prev);
+
+          if (!clean) return [raw];
+
+          return Array.from(new Set([
+            raw, clean,
+            'plt_' + clean,
+            'entry_' + clean,
+            'entry_plt_' + clean,
+            'entry_plt_plt_' + clean,
+            'plt_entry_' + clean,
+            'plt_entry_entry_plt_' + clean
+          ]));
+        }
+
         const incomingEntries = body.ENTRIES || [];
         const incomingDeletedEntryIds = body.deletedIds || body.deletedEntryIds || [];
-        const delEntrySet = new Set([
+        const rawDel = [
           ...(existingData.deletedEntryIds || []),
           ...(incomingDeletedEntryIds || [])
-        ]);
+        ];
+        const delEntrySet = new Set();
+        rawDel.forEach(id => {
+          getRelatedIds(id).forEach(rid => delEntrySet.add(rid));
+        });
 
         const entryMap = new Map();
         (existingData.ENTRIES || []).forEach(e => {
@@ -298,6 +347,129 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
           }
         });
 
+        // Prelims Targets merging with timestamp comparison
+        let mergedPrelimsTargets = (existingData.PRELIMS_TARGETS_V1 || []).filter(t => {
+          if (!t || !t.id) return false;
+          const entryId = t.id.startsWith('entry_plt_') ? t.id : 'entry_plt_' + t.id;
+          return !delEntrySet.has(t.id) && !delEntrySet.has(entryId);
+        });
+        if (Array.isArray(body.PRELIMS_TARGETS_V1)) {
+          const pltMap = new Map();
+          mergedPrelimsTargets.forEach(t => {
+            if (t && t.id) pltMap.set(t.id, t);
+          });
+          body.PRELIMS_TARGETS_V1.forEach(t => {
+            if (!t || !t.id) return;
+            const entryId = t.id.startsWith('entry_plt_') ? t.id : 'entry_plt_' + t.id;
+            if (delEntrySet.has(t.id) || delEntrySet.has(entryId)) return;
+            if (!pltMap.has(t.id)) {
+              pltMap.set(t.id, t);
+            } else {
+              const oldT = pltMap.get(t.id);
+              const oldTime = parseTime(oldT.updatedAt || oldT.completedAt);
+              const incTime = parseTime(t.updatedAt || t.completedAt);
+              const isDone = incTime >= oldTime ? t.completed : oldT.completed;
+
+              const oldSunTime = parseTime(oldT.sundayUpdatedAt || oldTime);
+              const incSunTime = parseTime(t.sundayUpdatedAt || incTime);
+              const isSunDone = incSunTime >= oldSunTime ? (t.sundayDone !== undefined ? t.sundayDone : oldT.sundayDone) : oldT.sundayDone;
+
+              const oldMonTime = parseTime(oldT.monthlyUpdatedAt || oldTime);
+              const incMonTime = parseTime(t.monthlyUpdatedAt || incTime);
+              const isMonDone = incMonTime >= oldMonTime ? (t.monthlyDone !== undefined ? t.monthlyDone : oldT.monthlyDone) : oldT.monthlyDone;
+
+              const oldBiTime = parseTime(oldT.biMonthlyUpdatedAt || oldTime);
+              const incBiTime = parseTime(t.biMonthlyUpdatedAt || incTime);
+              const isBiDone = incBiTime >= oldBiTime ? (t.biMonthlyDone !== undefined ? t.biMonthlyDone : oldT.biMonthlyDone) : oldT.biMonthlyDone;
+
+              pltMap.set(t.id, {
+                ...oldT,
+                ...t,
+                completed: isDone,
+                completedAt: isDone ? (t.completedAt || oldT.completedAt || Date.now()) : null,
+                sundayDone: !!isSunDone,
+                sundayUpdatedAt: Math.max(oldSunTime, incSunTime),
+                monthlyDone: !!isMonDone,
+                monthlyUpdatedAt: Math.max(oldMonTime, incMonTime),
+                biMonthlyDone: !!isBiDone,
+                biMonthlyUpdatedAt: Math.max(oldBiTime, incBiTime),
+                updatedAt: Math.max(oldTime, incTime, Date.now())
+              });
+            }
+          });
+          mergedPrelimsTargets = Array.from(pltMap.values());
+        }
+
+        // Two-way reconciliation between entryMap and mergedPrelimsTargets (matched strictly by related ID)
+        mergedPrelimsTargets.forEach(t => {
+          const allTargetIds = getRelatedIds(t.id);
+          let entry = null;
+          for (const rid of allTargetIds) {
+            if (entryMap.has(rid)) {
+              entry = entryMap.get(rid);
+              break;
+            }
+          }
+          if (entry) {
+            // R0 / Completed sync
+            const eTime = parseTime(entry.r0UpdatedAt || entry.updatedAt);
+            const tTime = parseTime(t.updatedAt || t.completedAt);
+            if (eTime > tTime) {
+              t.completed = !!entry.r0Done;
+              t.completedAt = entry.r0Done ? eTime : null;
+              t.updatedAt = eTime;
+            } else if (tTime > eTime) {
+              entry.r0Done = !!t.completed;
+              entry.r0UpdatedAt = tTime;
+            }
+
+            // Sunday Vault (R7) milestone sync
+            const eSunTime = parseTime(entry.sundayUpdatedAt || entry.updatedAt);
+            const tSunTime = parseTime(t.sundayUpdatedAt || t.updatedAt);
+            if (eSunTime > tSunTime) {
+              t.sundayDone = !!entry.sundayDone;
+              t.sundayUpdatedAt = eSunTime;
+            } else if (tSunTime > eSunTime) {
+              entry.sundayDone = !!t.sundayDone;
+              entry.sundayUpdatedAt = tSunTime;
+            } else if (entry.sundayDone !== undefined || t.sundayDone !== undefined) {
+              const sunVal = (entry.sundayDone !== undefined) ? !!entry.sundayDone : !!t.sundayDone;
+              entry.sundayDone = sunVal;
+              t.sundayDone = sunVal;
+            }
+
+            // Monthly milestone sync
+            const eMonTime = parseTime(entry.monthlyUpdatedAt || entry.updatedAt);
+            const tMonTime = parseTime(t.monthlyUpdatedAt || t.updatedAt);
+            if (eMonTime > tMonTime) {
+              t.monthlyDone = !!entry.monthlyDone;
+              t.monthlyUpdatedAt = eMonTime;
+            } else if (tMonTime > eMonTime) {
+              entry.monthlyDone = !!t.monthlyDone;
+              entry.monthlyUpdatedAt = tMonTime;
+            } else if (entry.monthlyDone !== undefined || t.monthlyDone !== undefined) {
+              const monVal = (entry.monthlyDone !== undefined) ? !!entry.monthlyDone : !!t.monthlyDone;
+              entry.monthlyDone = monVal;
+              t.monthlyDone = monVal;
+            }
+
+            // BiMonthly milestone sync
+            const eBiTime = parseTime(entry.biMonthlyUpdatedAt || entry.updatedAt);
+            const tBiTime = parseTime(t.biMonthlyUpdatedAt || t.updatedAt);
+            if (eBiTime > tBiTime) {
+              t.biMonthlyDone = !!entry.biMonthlyDone;
+              t.biMonthlyUpdatedAt = eBiTime;
+            } else if (tBiTime > eBiTime) {
+              entry.biMonthlyDone = !!t.biMonthlyDone;
+              entry.biMonthlyUpdatedAt = tBiTime;
+            } else if (entry.biMonthlyDone !== undefined || t.biMonthlyDone !== undefined) {
+              const biVal = (entry.biMonthlyDone !== undefined) ? !!entry.biMonthlyDone : !!t.biMonthlyDone;
+              entry.biMonthlyDone = biVal;
+              t.biMonthlyDone = biVal;
+            }
+          }
+        });
+
         const mergedEntries = Array.from(entryMap.values());
         const mergedHabits = { ...(existingData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
         const mergedTrackerProgress = mergeTrackerProgress(existingData.TRACKER_PROGRESS, body.TRACKER_PROGRESS || body.progress);
@@ -307,19 +479,22 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
           body.deletedScoreIds,
           existingData.deletedScoreIds
         );
+        const mergedEbEntries = body.EB_ENTRIES || existingData.EB_ENTRIES || [];
 
         const updated = {
           ...existingData,
           ...body,
           ENTRIES: mergedEntries,
+          PRELIMS_TARGETS_V1: mergedPrelimsTargets,
           HABITS_LOG: mergedHabits,
           TRACKER_PROGRESS: mergedTrackerProgress,
           SCORE_REGISTER: mergedScores,
+          EB_ENTRIES: mergedEbEntries,
           deletedScoreIds: mergedDeletedScoreIds,
           deletedEntryIds: Array.from(delEntrySet)
         };
         const saved = writeSyncData(updated);
-        return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, data: saved });
+        return sendJsonResponse(res, 200, { success: true, timestamp: saved.timestamp, ...saved, data: saved });
       } catch (e) {
         return sendJsonResponse(res, 400, { success: false, error: 'Invalid JSON' });
       }
@@ -421,22 +596,43 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
   // Static File Serving
   if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
   if (reqPath === '/tracker') reqPath = '/tracker.html';
+  if (reqPath === '/pyq') reqPath = '/pyq.html';
 
   const filePath = path.join(__dirname, reqPath);
+  const ext = path.extname(filePath).toLowerCase();
+  const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
+  fs.stat(filePath, (err, stats) => {
+    if (err || !stats.isFile()) {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
       res.end('404 Not Found');
       return;
     }
-    const ext = path.extname(filePath).toLowerCase();
-    const contentType = MIME_TYPES[ext] || 'application/octet-stream';
-    res.writeHead(200, {
-      'Content-Type': contentType,
-      'Access-Control-Allow-Origin': '*'
-    });
-    res.end(data);
+
+    const range = req.headers.range;
+    if (range && ext === '.pdf') {
+      const parts = range.replace(/bytes=/, "").split("-");
+      const start = parseInt(parts[0], 10);
+      const end = parts[1] ? parseInt(parts[1], 10) : stats.size - 1;
+      const chunksize = (end - start) + 1;
+      const file = fs.createReadStream(filePath, { start, end });
+      res.writeHead(206, {
+        'Content-Range': `bytes ${start}-${end}/${stats.size}`,
+        'Accept-Ranges': 'bytes',
+        'Content-Length': chunksize,
+        'Content-Type': contentType,
+        'Access-Control-Allow-Origin': '*'
+      });
+      file.pipe(res);
+    } else {
+      res.writeHead(200, {
+        'Content-Length': stats.size,
+        'Content-Type': contentType,
+        'Accept-Ranges': 'bytes',
+        'Access-Control-Allow-Origin': '*'
+      });
+      fs.createReadStream(filePath).pipe(res);
+    }
   });
 });
 

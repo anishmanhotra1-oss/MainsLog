@@ -1,12 +1,12 @@
 {
-  "name": "MainsLog — UPSC CSE Revision Engine",
-  "short_name": "MainsLog",
+  "name": "Saankalp — UPSC CSE Command Center",
+  "short_name": "Saankalp",
   "description": "Civil Services Revision Engine & Personal Study Schedule",
   "start_url": "/",
   "id": "/",
   "display": "standalone",
-  "background_color": "#FAFAFC",
-  "theme_color": "#2563EB",
+  "background_color": "#0F172A",
+  "theme_color": "#059669",
   "orientation": "portrait-primary",
   "icons": [
     {

@@ -1,0 +1,1434 @@
+{
+  "subject": "Science-Tech",
+  "total": 30,
+  "questions": [
+    {
+      "id": "scitech-2024-06",
+      "subject": "Science-Tech",
+      "year": 2024,
+      "qNo": 6,
+      "type": "conceptual",
+      "question": "In the context of Artificial Intelligence, consider the following statements regarding 'Large Language Models' (LLMs) and Generative AI:",
+      "statements": [
+        "They are trained on massive datasets using deep learning neural networks based on transformer architectures.",
+        "They can produce plausible-sounding but factually incorrect outputs, a phenomenon known as 'hallucination'.",
+        "They possess genuine subjective consciousness and self-awareness equivalent to the human mind."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Emerging Technologies",
+      "subTopic": "Generative AI, Large Language Models & Hallucinations",
+      "concept": "Probabilistic token prediction vs biological consciousness in transformer networks.",
+      "explanation": "Statements 1 and 2 are correct: LLMs (like GPT-4, Gemini, Claude) utilize deep neural networks built on Transformer architectures (using self-attention mechanisms) trained on billions of parameters across vast text corpora. Because they generate text probabilistically based on pattern matching rather than deterministic factual verification, they can generate confident yet entirely false or fabricated information, known as 'AI hallucination'. Statement 3 is incorrect: Modern LLMs are statistical prediction engines (Artificial Narrow Intelligence); they possess zero subjective consciousness, sentience, intentionality, or self-awareness.",
+      "statementAnalysis": [
+        {
+          "text": "They are trained on massive datasets using deep learning neural networks based on transformer architectures.",
+          "verdict": "correct",
+          "why": "The Transformer architecture was introduced in Google's landmark paper 'Attention Is All You Need' (2017)."
+        },
+        {
+          "text": "They can produce plausible-sounding but factually incorrect outputs, a phenomenon known as 'hallucination'.",
+          "verdict": "correct",
+          "why": "Standard scientific terminology for confabulation in generative models."
+        },
+        {
+          "text": "They possess genuine subjective consciousness and self-awareness equivalent to the human mind.",
+          "verdict": "incorrect",
+          "why": "AI models lack phenomenal consciousness, subjective experience (qualia), or sentience."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 2 accurately reflect AI computer science.",
+        "b": "Incorrect because statement 3 is science fiction.",
+        "c": "Incorrect because statement 3 is false.",
+        "d": "Incorrect because statement 3 is false."
+      },
+      "trap": "Sensationalized claims attributing human consciousness to statistical prediction algorithms.",
+      "relatedFacts": [
+        "Artificial General Intelligence (AGI) refers to a theoretical AI system that can understand or learn any intellectual task that a human being can.",
+        "IndiaAI Mission was approved by the Union Cabinet in 2024 with a budget outlay of over Rs. 10,300 crore to build national compute capacity.",
+        "Reinforcement Learning from Human Feedback (RLHF) is used to align LLM responses with human values and safety."
+      ]
+    },
+    {
+      "id": "scitech-2023-11",
+      "subject": "Science-Tech",
+      "year": 2023,
+      "qNo": 11,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding ballistic and cruise missiles:",
+      "statements": [
+        "Ballistic missiles are jet-propelled at subsonic speeds throughout their flight, while cruise missiles are rocket-powered only in the initial phase.",
+        "Agni-V is a medium-range supersonic cruise missile, while BrahMos is a solid-fuelled intercontinental ballistic missile."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "d",
+      "topic": "Defense Technology",
+      "subTopic": "Missile Propulsion & Trajectory Mechanics",
+      "concept": "Complete reciprocal inversion of ballistic vs cruise propulsion and weapon systems.",
+      "explanation": "Both statements are completely inverted by the examiner. Statement 1 is incorrect: Cruise missiles are jet-propelled (using turbofan/ramjet engines) and fly aerodynamically within the atmosphere at low altitudes throughout their flight. Ballistic missiles are rocket-powered during initial boost phase, leaving the atmosphere in a sub-orbital parabolic trajectory before falling back to earth under gravity. Statement 2 is incorrect: Agni-V is a three-stage solid-fueled Intercontinental Ballistic Missile (ICBM) with a range exceeding 5,000 km, while BrahMos is a supersonic cruise missile developed jointly by India and Russia.",
+      "statementAnalysis": [
+        {
+          "text": "Ballistic missiles are jet-propelled at subsonic speeds throughout their flight, while cruise missiles are rocket-powered only in the initial phase.",
+          "verdict": "incorrect",
+          "why": "Descriptions are swapped: Ballistic uses rocket boost; cruise uses continuous air-breathing jet engines."
+        },
+        {
+          "text": "Agni-V is a medium-range supersonic cruise missile, while BrahMos is a solid-fuelled intercontinental ballistic missile.",
+          "verdict": "incorrect",
+          "why": "Descriptions are swapped: Agni-V is an ICBM; BrahMos is a supersonic cruise missile."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 1 is false.",
+        "b": "Incorrect because statement 2 is false.",
+        "c": "Incorrect because both statements are false.",
+        "d": "Correct option; both statements are symmetric examiner inversions."
+      },
+      "trap": "UPSC classic trap: Complete reciprocal swap of terms across both statements.",
+      "relatedFacts": [
+        "BrahMos flies at speeds of Mach 2.8 to 3.0, making it the fastest operational supersonic cruise missile in the world.",
+        "In 2024, India successfully tested Agni-5 with Multiple Independently Targetable Re-entry Vehicle (MIRV) technology under Mission Divyastra.",
+        "Prithvi was India's first indigenous short-range liquid-propellant surface-to-surface ballistic missile."
+      ]
+    },
+    {
+      "id": "scitech-2022-14",
+      "subject": "Science-Tech",
+      "year": 2022,
+      "qNo": 14,
+      "type": "conceptual",
+      "question": "Which one of the following is the context in which the term 'Fractional Orbital Bombardment System' (FOBS) is discussed in the news?",
+      "statements": [],
+      "options": {
+        "a": "A hypersonic missile is launched into space to orbit the Earth and then descends to a target on Earth.",
+        "b": "A spacecraft lands on another planet after making several orbital motions.",
+        "c": "A missile is put into a stable orbit around Earth to be fired when necessary.",
+        "d": "None of the above"
+      },
+      "answer": "a",
+      "topic": "Space & Defense Technology",
+      "subTopic": "Fractional Orbital Bombardment System (FOBS)",
+      "concept": "De-orbiting warheads from Low Earth Orbit bypassing early-warning polar radar systems.",
+      "explanation": "A Fractional Orbital Bombardment System (FOBS) is a space-based missile system developed during the Cold War (and revived recently with hypersonic glide vehicles). Unlike an ICBM that follows a predictable sub-orbital parabolic ballistic trajectory, FOBS launches the warhead into a low Earth orbit (fractional orbit), allowing it to approach the target from any direction (such as over the South Pole, bypassing northern missile early-warning radars) before de-orbiting and descending toward its target.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Accurate aerospace definition of a fractional orbital de-orbiting system.",
+        "b": "Incorrect: That describes interplanetary gravitational capture.",
+        "c": "Incorrect: Permanent orbital weapons are banned under the Outer Space Treaty (1967).",
+        "d": "Incorrect."
+      },
+      "trap": "Confusing permanent orbital weapon satellites with 'fractional' (partial orbit and de-orbit) trajectory systems.",
+      "relatedFacts": [
+        "Article IV of the 1967 Outer Space Treaty strictly prohibits placing nuclear weapons or weapons of mass destruction in orbit around the Earth.",
+        "Hypersonic Glide Vehicles (HGVs) travel at speeds greater than Mach 5 and can manoeuvre aerodynamically in flight.",
+        "China's reported 2021 test of a FOBS-capable hypersonic glide vehicle triggered intense global military interest."
+      ]
+    },
+    {
+      "id": "scitech-2021-09",
+      "subject": "Science-Tech",
+      "year": 2021,
+      "qNo": 9,
+      "type": "statement-based",
+      "question": "In the context of vaccines manufactured to prevent COVID-19 pandemic, consider the following statements:",
+      "statements": [
+        "The Serum Institute of India produced COVID-19 vaccine named Covishield using mRNA platform.",
+        "Sputnik V vaccine is manufactured using vector based platform.",
+        "COVAXIN is an inactivated whole virion vaccine."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Biotechnology & Immunology",
+      "subTopic": "Vaccine Platforms & Delivery Mechanisms",
+      "concept": "Recombinant viral vectors vs whole-virion inactivated vs mRNA platforms.",
+      "explanation": "Statement 1 is incorrect: Covishield (developed by Oxford-AstraZeneca and manufactured by SII) is a RECOMBINANT VIRAL VECTOR vaccine using a replication-deficient chimpanzee adenovirus (ChAdOx1), NOT an mRNA platform (Pfizer-BioNTech and Moderna use mRNA). Statement 2 is correct: Sputnik V uses a human adenovirus viral vector platform (Ad26 and Ad5). Statement 3 is correct: Covaxin (developed by Bharat Biotech in collaboration with ICMR-NIV) is an inactivated whole-virion SARS-CoV-2 vaccine.",
+      "statementAnalysis": [
+        {
+          "text": "The Serum Institute of India produced COVID-19 vaccine named Covishield using mRNA platform.",
+          "verdict": "incorrect",
+          "why": "Covishield uses chimpanzee adenovirus vector; Pfizer and Moderna use mRNA."
+        },
+        {
+          "text": "Sputnik V vaccine is manufactured using vector based platform.",
+          "verdict": "correct",
+          "why": "Uses two different human adenovirus vectors."
+        },
+        {
+          "text": "COVAXIN is an inactivated whole virion vaccine.",
+          "verdict": "correct",
+          "why": "Beta-propiolactone inactivated whole SARS-CoV-2 virus."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 1 is false.",
+        "b": "Correct answer consisting of statements 2 and 3.",
+        "c": "Incorrect because statement 1 is false.",
+        "d": "Incorrect because statement 1 is false."
+      },
+      "trap": "Assuming Covishield is an mRNA vaccine because it was widely administered globally.",
+      "relatedFacts": [
+        "ZyCoV-D (developed by Zydus Cadila) was the world's first plasmid DNA vaccine for humans, administered via needle-free applicator.",
+        "Corbevax (developed by Biological E) is a protein subunit vaccine.",
+        "GEMCOVAC-19 was India's first indigenously developed mRNA COVID-19 vaccine."
+      ]
+    },
+    {
+      "id": "scitech-2020-04",
+      "subject": "Science-Tech",
+      "year": 2020,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "In the context of recent advances in human reproductive technology, 'Pronuclear Transfer' is used for:",
+      "statements": [],
+      "options": {
+        "a": "fertilization of egg in vitro by the donor sperm",
+        "b": "genetic modification of sperm-producing cells",
+        "c": "development of stem cells into functional embryos",
+        "d": "prevention of mitochondrial diseases in offspring"
+      },
+      "answer": "d",
+      "topic": "Reproductive Biotechnology",
+      "subTopic": "Mitochondrial Replacement Therapy (MRT)",
+      "concept": "Preventing transmission of maternally inherited mitochondrial DNA mutations ('Three-Parent Baby').",
+      "explanation": "Mitochondria carry their own distinct circular genome (mtDNA) inherited exclusively through the mother's egg. Mutations in mtDNA cause debilitating and fatal metabolic, neurological, and muscular disorders. 'Pronuclear Transfer' (PNT) is an in-vitro fertilization technique where the nucleus (pronuclei) from a fertilized egg of a mother carrying defective mitochondria is extracted and transferred into an enucleated fertilized donor egg with healthy mitochondria, effectively preventing the transmission of mitochondrial diseases to the child (popularly termed a 'three-parent child').",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: That describes standard IVF/ICSI.",
+        "b": "Incorrect: Relates to germline gene editing.",
+        "c": "Incorrect: Relates to embryonic stem cell cloning.",
+        "d": "Correct: Proven clinical application of Pronuclear Transfer (MRT)."
+      },
+      "trap": "Assuming the technique alters nuclear genetics rather than addressing cytoplasmic/mitochondrial mutations.",
+      "relatedFacts": [
+        "Maternal Spindle Transfer (MST) is the other major form of Mitochondrial Replacement Therapy, performed prior to fertilization.",
+        "The child born from MRT inherits over 99.8% of nuclear DNA from the biological parents and approximately 0.1-0.2% mtDNA from the healthy egg donor.",
+        "The United Kingdom became the first country to legally approve Mitochondrial Replacement Therapy in 2015."
+      ]
+    },
+    {
+      "id": "scitech-2019-12",
+      "subject": "Science-Tech",
+      "year": 2019,
+      "qNo": 12,
+      "type": "conceptual",
+      "question": "What is the Cas9 protein that is often mentioned in news?",
+      "statements": [],
+      "options": {
+        "a": "A molecular scissors used in targeted gene editing",
+        "b": "A biosensor used in the accurate detection of pathogens in patients",
+        "c": "A gene that makes plants pest-resistant",
+        "d": "A structural protein used in biodegradable plastics"
+      },
+      "answer": "a",
+      "topic": "Genetic Engineering & Biotechnology",
+      "subTopic": "CRISPR-Cas9 Genome Editing",
+      "concept": "RNA-guided endonuclease enzyme cleaving target double-stranded DNA sequences.",
+      "explanation": "Cas9 (CRISPR-associated protein 9) is an RNA-guided endonuclease enzyme that acts as 'molecular scissors'. It binds to a synthetic guide RNA (gRNA) that matches a specific target DNA sequence, allowing precise, site-specific double-stranded breaks in the genomic DNA of living organisms to knock out, add, or edit genes.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Definitional molecular biology role of Cas9 endonuclease.",
+        "b": "Incorrect: Biosensors use different enzymatic or fluorescent platforms.",
+        "c": "Incorrect: That describes Bt endotoxin genes (Cry1Ac).",
+        "d": "Incorrect: Unrelated polymer distractor."
+      },
+      "trap": "Confusing CRISPR-Cas9 genome editing with transgenic Bt toxin genes.",
+      "relatedFacts": [
+        "Emmanuelle Charpentier and Jennifer A. Doudna were awarded the 2020 Nobel Prize in Chemistry for developing the CRISPR-Cas9 gene editing method.",
+        "CRISPR stands for 'Clustered Regularly Interspaced Short Palindromic Repeats', derived from bacterial adaptive immune defense against bacteriophages.",
+        "Casgevy was the world's first CRISPR gene-editing therapy approved in 2023 for sickle cell disease and beta-thalassemia."
+      ]
+    },
+    {
+      "id": "scitech-2018-06",
+      "subject": "Science-Tech",
+      "year": 2018,
+      "qNo": 6,
+      "type": "statement-based",
+      "question": "'3D printing' has applications in which of the following?",
+      "statements": [
+        "Preparation of confectionery items",
+        "Manufacture of bionic ears",
+        "Automotive industry",
+        "Reconstructive surgeries",
+        "Data processing technologies"
+      ],
+      "options": {
+        "a": "1, 3 and 4 only",
+        "b": "2, 3 and 5 only",
+        "c": "1 and 4 only",
+        "d": "1, 2, 3, 4 and 5"
+      },
+      "answer": "d",
+      "topic": "Advanced Manufacturing & Frontier Tech",
+      "subTopic": "Additive Manufacturing (3D Printing)",
+      "concept": "Multi-disciplinary layer-by-layer material deposition across food, medicine, and circuitry.",
+      "explanation": "3D printing (Additive Manufacturing) builds three-dimensional objects layer-by-layer from digital CAD models. It is utilized in food processing (confectionery chocolate designs, Statement 1); biomedical tissue engineering (bionic ears, prosthetic limbs, Statement 2); automotive lightweight part manufacturing (Statement 3); patient-specific surgical implants and craniofacial reconstructive surgery (Statement 4); and printing semiconductor conductive micro-circuits for data processing electronics (Statement 5).",
+      "statementAnalysis": [
+        {
+          "text": "Preparation of confectionery items",
+          "verdict": "correct",
+          "why": "3D food printers construct custom chocolate and paste designs."
+        },
+        {
+          "text": "Manufacture of bionic ears",
+          "verdict": "correct",
+          "why": "Princeton researchers successfully printed bionic ears with embedded electronics."
+        },
+        {
+          "text": "Automotive industry",
+          "verdict": "correct",
+          "why": "Rapid prototyping and lightweight metal components."
+        },
+        {
+          "text": "Reconstructive surgeries",
+          "verdict": "correct",
+          "why": "Custom titanium skull and bone implants."
+        },
+        {
+          "text": "Data processing technologies",
+          "verdict": "correct",
+          "why": "3D printed circuit boards (PCBs) and micro-sensors for processing hardware."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statements 2 and 5 are also valid.",
+        "b": "Incorrect, statement 1 is also valid.",
+        "c": "Incorrect.",
+        "d": "Correct option validating all multidisciplinary applications."
+      },
+      "trap": "Candidates often doubt 'confectionery items' or 'data processing technologies', assuming 3D printing is solely mechanical.",
+      "relatedFacts": [
+        "National Strategy on Additive Manufacturing was released by MeitY to position India as a global 3D printing hub.",
+        "India's first 3D-printed post office was inaugurated in Bengaluru in 2023.",
+        "4D printing incorporates 'smart materials' that change their shape or properties dynamically over time when exposed to external stimuli (heat, moisture, light)."
+      ]
+    },
+    {
+      "id": "scitech-2017-08",
+      "subject": "Science-Tech",
+      "year": 2017,
+      "qNo": 8,
+      "type": "conceptual",
+      "question": "What is the application of 'Somatic Cell Nuclear Transfer' (SCNT) technology?",
+      "statements": [],
+      "options": {
+        "a": "Production of biolarvicides",
+        "b": "Manufacture of biodegradable plastics",
+        "c": "Reproductive cloning of animals",
+        "d": "Production of organisms free of diseases"
+      },
+      "answer": "c",
+      "topic": "Cellular Biotechnology",
+      "subTopic": "Somatic Cell Nuclear Transfer (SCNT)",
+      "concept": "Enucleation of ovum and somatic nucleus transplantation to create genetic clones.",
+      "explanation": "Somatic Cell Nuclear Transfer (SCNT) is a laboratory strategy for creating a viable embryo from a body cell and an egg cell. The nucleus of an unfertilized somatic egg is removed (enucleation) and replaced with the nucleus from a donor somatic body cell. After an electrical or chemical stimulus induces division, the resulting blastocyst is implanted into a surrogate mother for REPRODUCTIVE CLONING of animals (e.g., Dolly the sheep in 1996, and Garima the cloned buffalo in India).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Biolarvicides use Bacillus thuringiensis or fungi.",
+        "b": "Incorrect: Biodegradable plastics use polyhydroxyalkanoates (PHA) or polylactic acid (PLA).",
+        "c": "Correct: Benchmark biological technique for animal cloning.",
+        "d": "Incorrect: That describes gene therapies or pathogen-free germplasm."
+      },
+      "trap": "Confusing cellular cloning (SCNT) with transgenic disease resistance or bioplastics.",
+      "relatedFacts": [
+        "Dolly the sheep (1996) at the Roslin Institute was the first mammal cloned from an adult somatic cell.",
+        "National Dairy Research Institute (NDRI), Karnal developed India's cloned buffalo calves using hand-guided cloning.",
+        "Therapeutic cloning uses SCNT to harvest patient-specific pluripotent embryonic stem cells for regenerative medicine without immune rejection."
+      ]
+    },
+    {
+      "id": "scitech-2016-10",
+      "subject": "Science-Tech",
+      "year": 2016,
+      "qNo": 10,
+      "type": "conceptual",
+      "question": "'Project Loon', sometimes seen in the news, is related to:",
+      "statements": [],
+      "options": {
+        "a": "waste management technology",
+        "b": "wireless communication technology",
+        "c": "solar power production technology",
+        "d": "water conservation technology"
+      },
+      "answer": "b",
+      "topic": "Telecommunications & Networking",
+      "subTopic": "Stratospheric High-Altitude Balloons",
+      "concept": "High-altitude pseudo-satellites (HAPS) delivering 4G-LTE wireless internet to rural and remote regions.",
+      "explanation": "Project Loon was a research and development project by Alphabet (Google) that used high-altitude helium balloons floating in the stratosphere (altitude of 18-25 km) to create an aerial wireless communication network, bringing high-speed broadband internet connectivity to rural, unserved, and disaster-affected areas.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Distractor.",
+        "b": "Correct: Iconic wireless connectivity project.",
+        "c": "Incorrect: Distractor.",
+        "d": "Incorrect: Distractor."
+      },
+      "trap": "Direct vocabulary question on global tech breakthrough initiatives.",
+      "relatedFacts": [
+        "The balloons navigated stratospheric wind layers using automated algorithms and solar-powered electronics.",
+        "Provided emergency cellular connectivity to Puerto Rico following Hurricane Maria in 2017.",
+        "High-Altitude Pseudo-Satellites (HAPS) are now being developed by CSIR-NAL in India for persistent telecommunication and border surveillance."
+      ]
+    },
+    {
+      "id": "scitech-2015-14",
+      "subject": "Science-Tech",
+      "year": 2015,
+      "qNo": 14,
+      "type": "statement-based",
+      "question": "With reference to 'Near Field Communication' (NFC) Technology, which of the following statements is/are correct?",
+      "statements": [
+        "It is a contactless communication technology that uses high-frequency radio waves.",
+        "NFC is designed for use by devices which can be at a distance of even a metre from each other.",
+        "NFC can use encryption when sending sensitive information."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "c",
+      "topic": "Information Technology",
+      "subTopic": "Short-Range Wireless Protocols: NFC vs RFID vs Bluetooth",
+      "concept": "High frequency (13.56 MHz) inductive electromagnetic coupling restricted to 4 cm distance.",
+      "explanation": "Statements 1 and 3 are correct: NFC is a short-range contactless wireless technology operating at 13.56 MHz that enables data exchange via electromagnetic radio induction between devices, and it supports robust public-key cryptography and encryption algorithms (used in Apple Pay, Google Pay, and contactless debit cards). Statement 2 is incorrect: NFC is designed strictly for ultra-short ranges (typically 4 centimetres or less). Operating at 'a distance of even a metre' is characteristic of Bluetooth or passive ultra-high frequency RFID, NOT NFC.",
+      "statementAnalysis": [
+        {
+          "text": "It is a contactless communication technology that uses high-frequency radio waves.",
+          "verdict": "correct",
+          "why": "Operates at the 13.56 MHz high-frequency ISM band."
+        },
+        {
+          "text": "NFC is designed for use by devices which can be at a distance of even a metre from each other.",
+          "verdict": "incorrect",
+          "why": "Strict physical operating distance is within 4 cm to prevent eavesdropping."
+        },
+        {
+          "text": "NFC can use encryption when sending sensitive information.",
+          "verdict": "correct",
+          "why": "Secured with tokenization and standard SSL/AES encryption."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 2 is false.",
+        "b": "Incorrect because statement 1 is also true.",
+        "c": "Correct option validating statements 1 and 3.",
+        "d": "Incorrect because statement 2 is false."
+      },
+      "trap": "Numerical range trap: 'distance of even a metre'. NFC is explicitly designed for under 4 cm to guarantee physical proximity.",
+      "relatedFacts": [
+        "NFC evolved from Radio Frequency Identification (RFID) technology.",
+        "Unlike Bluetooth, NFC requires zero manual pairing; devices connect in less than a tenth of a second automatically upon touching.",
+        "FASTag used on Indian highway toll booths uses Passive RFID technology operating at UHF (865-868 MHz), functioning up to 10-12 metres."
+      ]
+    },
+    {
+      "id": "scitech-2014-07",
+      "subject": "Science-Tech",
+      "year": 2014,
+      "qNo": 7,
+      "type": "conceptual",
+      "question": "The term 'Kessler Syndrome' is mentioned in the news in the context of:",
+      "statements": [],
+      "options": {
+        "a": "Genetic defects caused by microgravity",
+        "b": "Catastrophic cascading collisions of space debris in Low Earth Orbit",
+        "c": "Atmospheric heating caused by solar flares",
+        "d": "Decay of orbital satellites due to geomagnetic storms"
+      },
+      "answer": "b",
+      "topic": "Space Science & Orbital Mechanics",
+      "subTopic": "Space Debris & Kessler Collision Cascade",
+      "concept": "Self-sustaining chain reaction of orbital collisions rendering orbital bands unusable.",
+      "explanation": "Proposed by NASA scientist Donald J. Kessler in 1978, the 'Kessler Syndrome' is a theoretical scenario in which the density of objects (satellites, spent rocket stages, and space junk) in Low Earth Orbit (LEO) becomes high enough that collisions between objects create a cascading chain reaction. Each collision creates thousands of hypervelocity fragments, triggering further collisions in an exponential cascade, rendering space activities and satellite orbits unusable for generations.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Medical physiology distractor.",
+        "b": "Correct: Standard astrophysical definition of space debris cascading collisions.",
+        "c": "Incorrect: Solar physics distractor.",
+        "d": "Incorrect."
+      },
+      "trap": "Confusing biological spaceflight syndromes with orbital mechanical collision cascades.",
+      "relatedFacts": [
+        "Low Earth Orbit (LEO) extends up to 2,000 km altitude and contains the International Space Station and mega-constellations like Starlink.",
+        "ISRO launched 'Project NETRA' (Network for space object Tracking and Analysis) to monitor space debris hazards.",
+        "Inter-Agency Space Debris Coordination Committee (IADC) formulates international space debris mitigation guidelines."
+      ]
+    },
+    {
+      "id": "scitech-2013-03",
+      "subject": "Science-Tech",
+      "year": 2013,
+      "qNo": 3,
+      "type": "statement-based",
+      "question": "The efforts to detect the existence of 'Higgs Boson' particle will help us to understand:",
+      "statements": [
+        "why basic particles have mass",
+        "the reason why matter exists in the universe",
+        "the technology to travel faster than light"
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 2 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "c",
+      "topic": "Nuclear & Particle Physics",
+      "subTopic": "The Standard Model & Higgs Mechanism",
+      "concept": "Spontaneous electroweak symmetry breaking conferring inertial mass to fundamental particles.",
+      "explanation": "Statements 1 and 2 are correct: In the Standard Model of particle physics, the Higgs field is a scalar quantum field present throughout the universe. Fundamental particles (quarks and leptons) acquire inertial mass through their physical interaction with the Higgs field (mediated by the Higgs Boson). Without this mechanism, all elementary particles would remain massless like photons and travel at the speed of light, precluding the formation of atoms, chemical bonds, stars, and baryonic matter. Statement 3 is incorrect: Special Theory of Relativity firmly dictates that nothing with mass can travel faster than light; the discovery of the Higgs boson does NOT enable faster-than-light travel.",
+      "statementAnalysis": [
+        {
+          "text": "why basic particles have mass",
+          "verdict": "correct",
+          "why": "The Higgs mechanism explains the origin of elementary particle mass."
+        },
+        {
+          "text": "the reason why matter exists in the universe",
+          "verdict": "correct",
+          "why": "Without mass, atoms and stable matter cannot condense."
+        },
+        {
+          "text": "the technology to travel faster than light",
+          "verdict": "incorrect",
+          "why": "Physics forbids faster-than-light travel."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statement 2 is also true.",
+        "b": "Incorrect because statement 3 is false.",
+        "c": "Correct option validating statements 1 and 2.",
+        "d": "Incorrect because statement 3 is false."
+      },
+      "trap": "Believing media hype that the 'God Particle' would allow sci-fi feats like faster-than-light warp drive travel.",
+      "relatedFacts": [
+        "Predicted by Peter Higgs, François Englert and colleagues in 1964, and experimentally confirmed at CERN's Large Hadron Collider (LHC) in 2012.",
+        "Named in honor of Indian theoretical physicist Satyendra Nath Bose for his pioneering work on quantum statistics (Bose-Einstein statistics and Bosons).",
+        "The Higgs Boson is a spin-0 scalar boson with an invariant mass of approximately 125 GeV."
+      ]
+    },
+    {
+      "id": "scitech-2022-01",
+      "subject": "Science-Tech",
+      "year": 2022,
+      "qNo": 1,
+      "type": "statement-based",
+      "question": "With reference to 'Web 3.0', consider the following statements:",
+      "statements": [
+        "Web 3.0 technology enables people to control their own data.",
+        "In Web 3.0 world, there can be blockchain based social networks.",
+        "Web 3.0 is operated by a consortium of major multinational tech monopolies rather than individuals."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Information Technology & The Internet",
+      "subTopic": "Web 3.0 & Decentralized Web",
+      "concept": "Transition from centralized platform monopolies (Web 2.0) to decentralized user-owned protocols (Web 3.0).",
+      "explanation": "Statements 1 and 2 are correct: Web 3.0 represents a vision of a decentralized, trustless, and permissionless internet built on distributed ledger (blockchain) technologies. Users own and control their own personal identity and data through self-sovereign cryptographic wallets rather than surrendering data to corporate servers, and decentralized social networks run on public smart contracts. Statement 3 is incorrect: The core defining philosophy of Web 3.0 is the DISMANTLING of the centralized monopoly control currently exercised by Big Tech giants in Web 2.0 (Google, Meta, Amazon); it is governed by decentralized autonomous organizations (DAOs) and open-source protocols, NOT operated by tech monopolies.",
+      "statementAnalysis": [
+        {
+          "text": "Web 3.0 technology enables people to control their own data.",
+          "verdict": "correct",
+          "why": "Decentralized data ownership using self-sovereign identity."
+        },
+        {
+          "text": "In Web 3.0 world, there can be blockchain based social networks.",
+          "verdict": "correct",
+          "why": "Platforms like Lens Protocol and Farcaster run on public blockchains."
+        },
+        {
+          "text": "Web 3.0 is operated by a consortium of major multinational tech monopolies rather than individuals.",
+          "verdict": "incorrect",
+          "why": "Operates on peer-to-peer decentralized networks, explicitly rejecting tech monopoly hegemony."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 2 represent the fundamental ethos of Web 3.0.",
+        "b": "Incorrect because statement 3 is false.",
+        "c": "Incorrect because statement 3 is false.",
+        "d": "Incorrect because statement 3 is false."
+      },
+      "trap": "Believing Web 3.0 is an expansion of Big Tech corporate monopolies rather than an open decentralized paradigm.",
+      "relatedFacts": [
+        "Web 1.0 (1990-2004) was 'Read-Only' (static web pages); Web 2.0 (2004-present) is 'Read-Write' (interactive social media dominated by platforms); Web 3.0 is 'Read-Write-Own'.",
+        "Decentralized Autonomous Organizations (DAOs) use smart contracts on blockchains to automate organizational governance without executive boards.",
+        "InterPlanetary File System (IPFS) is a peer-to-peer hypermedia protocol used for decentralized file storage in Web 3.0."
+      ]
+    },
+    {
+      "id": "scitech-2022-05",
+      "subject": "Science-Tech",
+      "year": 2022,
+      "qNo": 5,
+      "type": "statement-based",
+      "question": "With reference to 'Non-Fungible Tokens' (NFTs), consider the following statements:",
+      "statements": [
+        "They enable the digital representation of physical assets.",
+        "They are unique cryptographic tokens that exist on a blockchain and cannot be replicated.",
+        "They can be traded or exchanged at equivalency and therefore can be used as a medium of commercial transactions."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Emerging Technologies",
+      "subTopic": "Blockchain & Non-Fungible Tokens (NFTs)",
+      "concept": "Difference between fungible assets (currencies) and non-fungible assets (unique verifiable ownership).",
+      "explanation": "Statements 1 and 2 are correct: NFTs are unique cryptographic tokens minted on a blockchain ledger with unique metadata and identification codes that provide indisputable proof of authenticity and ownership of digital or tokenized physical assets (such as digital art, music, or real-estate title deeds). Statement 3 is incorrect: The defining property of an NFT is that it is NON-FUNGIBLE (it cannot be exchanged at equivalency). A ₹100 note or 1 Bitcoin is 'fungible' because one can be directly swapped for another of identical value; an NFT is completely unique and cannot be traded at mutual equivalency, and therefore cannot serve as a standardized medium of commercial exchange (money).",
+      "statementAnalysis": [
+        {
+          "text": "They enable the digital representation of physical assets.",
+          "verdict": "correct",
+          "why": "Real-world assets (deeds, luxury goods) can be tokenized as NFTs."
+        },
+        {
+          "text": "They are unique cryptographic tokens that exist on a blockchain and cannot be replicated.",
+          "verdict": "correct",
+          "why": "Uniqueness is guaranteed by cryptographic hashing and blockchain consensus."
+        },
+        {
+          "text": "They can be traded or exchanged at equivalency and therefore can be used as a medium of commercial transactions.",
+          "verdict": "incorrect",
+          "why": "Non-fungibility means they lack equivalency; they cannot function as money."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 2 are valid.",
+        "b": "Incorrect because statement 3 contradicts the very definition of non-fungibility.",
+        "c": "Incorrect because statement 3 is false.",
+        "d": "Incorrect because statement 3 is false."
+      },
+      "trap": "Directly testing the word 'Non-Fungible': claiming it can be 'exchanged at equivalency' (which is the definition of Fungible).",
+      "relatedFacts": [
+        "ERC-721 and ERC-1155 are the predominant token standards for NFTs on the Ethereum blockchain.",
+        "Smart contracts attached to NFTs can automate royalty payments to original creators every time the token is resold.",
+        "Tokenization converts rights to an asset into a digital token on a blockchain."
+      ]
+    },
+    {
+      "id": "scitech-2021-01",
+      "subject": "Science-Tech",
+      "year": 2021,
+      "qNo": 1,
+      "type": "statement-based",
+      "question": "With reference to 'Carbon Nanotubes' (CNTs), consider the following statements:",
+      "statements": [
+        "They can be used as carriers of drugs and antigens in the human body.",
+        "They can be made into artificial blood capillaries for an injured part of human body.",
+        "They can be used in biochemical sensors.",
+        "Carbon nanotubes are biodegradable."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2, 3 and 4 only",
+        "c": "1, 3 and 4 only",
+        "d": "1, 2, 3 and 4"
+      },
+      "answer": "d",
+      "topic": "Nanotechnology",
+      "subTopic": "Carbon Nanotubes (CNTs) & Biomedical Applications",
+      "concept": "Cylindrical allotropes of carbon with exceptional electrical, thermal, tensile, and functionalized biodegradable properties.",
+      "explanation": "All four statements are correct: Carbon Nanotubes (cylindrical fullerene structures of graphene sheets) have revolutionized biomedicine: 1. Functionalized CNTs can penetrate cell membranes, serving as targeted delivery vehicles for oncology drugs, vaccines, and antigens directly to malignant cells. 2. Due to high biocompatibility and tensile strength, functionalized CNT scaffolds can serve as artificial vascular grafts and artificial blood capillaries. 3. Their exceptional electrical conductivity and surface area make them premier electrochemical biosensors for detecting blood glucose, cancer biomarkers, and viral RNA. 4. While pristine CNTs persist in the environment, functionalized CNTs can be completely degraded by human white blood cell enzymes (such as neutrophil myeloperoxidase, MPO) and fungal peroxidases, confirming their biodegradability.",
+      "statementAnalysis": [
+        {
+          "text": "They can be used as carriers of drugs and antigens in the human body.",
+          "verdict": "correct",
+          "why": "Targeted nanomedicine delivery platforms."
+        },
+        {
+          "text": "They can be made into artificial blood capillaries for an injured part of human body.",
+          "verdict": "correct",
+          "why": "Biocompatible scaffolds in tissue engineering."
+        },
+        {
+          "text": "They can be used in biochemical sensors.",
+          "verdict": "correct",
+          "why": "High electrical sensitivity to molecular adsorption."
+        },
+        {
+          "text": "Carbon nanotubes are biodegradable.",
+          "verdict": "correct",
+          "why": "Enzymatically cleaved by human myeloperoxidase."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statements 3 and 4 are also valid.",
+        "b": "Incorrect, statement 1 is also valid.",
+        "c": "Incorrect, statement 2 is also valid.",
+        "d": "Correct option validating all four scientific capabilities."
+      },
+      "trap": "Assuming carbon allotropes (like graphite/diamond) can never be biodegradable, missing modern enzyme-catalyzed biodegradation discoveries.",
+      "relatedFacts": [
+        "Single-walled carbon nanotubes (SWCNTs) consist of a single cylindrical graphene layer; multi-walled carbon nanotubes (MWCNTs) consist of nested cylinders.",
+        "CNTs possess tensile strength up to 100 times greater than steel at one-sixth the weight.",
+        "Graphene is a single 2D layer of carbon atoms arranged in a hexagonal honeycomb lattice."
+      ]
+    },
+    {
+      "id": "scitech-2020-02",
+      "subject": "Science-Tech",
+      "year": 2020,
+      "qNo": 2,
+      "type": "statement-based",
+      "question": "With the present state of development, 'Artificial Intelligence' can effectively do which of the following?",
+      "statements": [
+        "Bring down electricity consumption in industrial units",
+        "Create meaningful short stories and songs",
+        "Disease diagnosis",
+        "Text-to-Speech conversion",
+        "Wireless transmission of electrical energy"
+      ],
+      "options": {
+        "a": "1, 2, 3 and 5 only",
+        "b": "1, 3 and 4 only",
+        "c": "2, 4 and 5 only",
+        "d": "1, 2, 3 and 4 only"
+      },
+      "answer": "d",
+      "topic": "Computer Science & Artificial Intelligence",
+      "subTopic": "Current Real-World Applications of AI",
+      "concept": "Scope of predictive machine learning versus physical wireless power engineering.",
+      "explanation": "Statements 1, 2, 3, and 4 are well-established operational applications of Artificial Intelligence: AI optimizes load shedding and industrial heating/cooling systems, reducing electricity consumption by 30-40% (e.g. DeepMind's data center cooling); generative models write poetry, songs, and coherent narrative stories; deep convolutional neural networks match or exceed radiologist accuracy in detecting diabetic retinopathy, tuberculosis, and tumors; and neural TTS engines generate human-like speech. Statement 5 is incorrect: 'Wireless transmission of electrical energy' (magnetic resonance coupling, microwaves, lasers) is a fundamental branch of ELECTRICAL/ELECTROMAGNETIC ENGINEERING, not a software AI function.",
+      "statementAnalysis": [
+        {
+          "text": "Bring down electricity consumption in industrial units",
+          "verdict": "correct",
+          "why": "Industrial IoT and AI energy optimization algorithms."
+        },
+        {
+          "text": "Create meaningful short stories and songs",
+          "verdict": "correct",
+          "why": "Generative transformer models."
+        },
+        {
+          "text": "Disease diagnosis",
+          "verdict": "correct",
+          "why": "Deep learning models in diagnostic imaging and pathology."
+        },
+        {
+          "text": "Text-to-Speech conversion",
+          "verdict": "correct",
+          "why": "Deep neural audio synthesis."
+        },
+        {
+          "text": "Wireless transmission of electrical energy",
+          "verdict": "incorrect",
+          "why": "A physical electromagnetism technology (Nikola Tesla / inductive coupling), not an AI capability."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 5 is false.",
+        "b": "Incorrect, statement 2 is also valid.",
+        "c": "Incorrect because statement 5 is false.",
+        "d": "Correct answer consisting of statements 1, 2, 3, and 4."
+      },
+      "trap": "Including 'Wireless transmission of electrical energy' by confusing software computing power with physical electrical power transmission.",
+      "relatedFacts": [
+        "Alan Turing proposed the 'Turing Test' in 1950 to evaluate whether a machine can exhibit intelligent behavior indistinguishable from that of a human.",
+        "Computer Vision and Natural Language Processing (NLP) are the two largest sub-domains of practical AI deployment.",
+        "Autonomous vehicles use a combination of Computer Vision, LiDAR, radar, and sensor-fusion AI models."
+      ]
+    },
+    {
+      "id": "scitech-2019-01",
+      "subject": "Science-Tech",
+      "year": 2019,
+      "qNo": 1,
+      "type": "statement-based",
+      "question": "Which of the following are the reasons for the occurrence of multi-drug resistance in microbial pathogens in India?",
+      "statements": [
+        "Genetic predisposition of some people",
+        "Taking incorrect doses of antibiotics to cure diseases",
+        "Using antibiotics in livestock farming",
+        "Multiple chronic diseases in some people"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1, 3 and 4 only",
+        "d": "2, 3 and 4 only"
+      },
+      "answer": "b",
+      "topic": "Microbiology & Public Health",
+      "subTopic": "Antimicrobial Resistance (AMR) & Superbugs",
+      "concept": "Selective evolutionary pressure on bacteria driven by antibiotic overexposure versus human genetics.",
+      "explanation": "Statements 2 and 3 are correct: Antimicrobial Resistance (AMR) occurs when BACTERIA mutate to survive antibiotics. The primary anthropogenic drivers of this resistance are: taking incomplete or inappropriate doses of antibiotics (which kills weak bacteria while allowing resistant strains to survive and proliferate via horizontal gene transfer) and massive non-therapeutic prophylactic use of antibiotics as growth promoters in poultry, dairy, and livestock farming. Statements 1 and 4 are incorrect: Drug resistance is a genetic property of the BACTERIAL PATHOGEN (via plasmids, efflux pumps, beta-lactamase enzymes), NOT the genetic predisposition of human patients, nor is it caused by a patient having multiple chronic diseases.",
+      "statementAnalysis": [
+        {
+          "text": "Genetic predisposition of some people",
+          "verdict": "incorrect",
+          "why": "Bacteria mutate to become resistant; human genes are irrelevant to bacterial resistance."
+        },
+        {
+          "text": "Taking incorrect doses of antibiotics to cure diseases",
+          "verdict": "correct",
+          "why": "Sub-therapeutic doses exert selective pressure favoring resistant bacterial strains."
+        },
+        {
+          "text": "Using antibiotics in livestock farming",
+          "verdict": "correct",
+          "why": "Agricultural runoff and animal feed contaminate food chains with resistant microbes."
+        },
+        {
+          "text": "Multiple chronic diseases in some people",
+          "verdict": "incorrect",
+          "why": "Having multiple diseases does not cause bacteria to evolve resistance."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 1 is false.",
+        "b": "Correct answer consisting of statements 2 and 3.",
+        "c": "Incorrect because statements 1 and 4 are false.",
+        "d": "Incorrect because statement 4 is false."
+      },
+      "trap": "Confusing a human's genetic disease vulnerability with a pathogen's evolved biochemical resistance mechanisms.",
+      "relatedFacts": [
+        "WHO lists Antimicrobial Resistance as one of the top 10 global public health threats facing humanity.",
+        "National Action Plan on Antimicrobial Resistance (NAP-AMR) was launched by the Ministry of Health in India.",
+        "Red Line Campaign on antibiotic packaging reminds consumers not to consume antibiotics without a doctor's prescription."
+      ]
+    },
+    {
+      "id": "scitech-2016-02",
+      "subject": "Science-Tech",
+      "year": 2016,
+      "qNo": 2,
+      "type": "statement-based",
+      "question": "With reference to 'Li-Fi' (Light Fidelity) technology, recently in the news, which of the following statements is/are correct?",
+      "statements": [
+        "It uses light as the medium for high-speed data transmission.",
+        "It is a wireless technology and is several times faster than 'Wi-Fi'."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "c",
+      "topic": "Optical Communications & Wireless Networking",
+      "subTopic": "Li-Fi (Visible Light Communication)",
+      "concept": "Modulation of LED optical wavelengths for high-speed indoor wireless data transmission.",
+      "explanation": "Both statements are correct: Statement 1 is correct: Li-Fi (Light Fidelity), coined by Prof. Harald Haas in 2011, is a Visible Light Communication (VLC) system that transmits digital data by rapidly switching light-emitting diodes (LEDs) on and off at nanosecond speeds imperceptible to the human eye. Statement 2 is correct: It is a high-speed bidirectional wireless technology capable of achieving laboratory speeds exceeding 100 Gbps, which is up to 100 times faster than conventional radio-frequency Wi-Fi.",
+      "statementAnalysis": [
+        {
+          "text": "It uses light as the medium for high-speed data transmission.",
+          "verdict": "correct",
+          "why": "Uses the visible light spectrum (400-800 THz)."
+        },
+        {
+          "text": "It is a wireless technology and is several times faster than 'Wi-Fi'.",
+          "verdict": "correct",
+          "why": "Provides orders-of-magnitude greater bandwidth than congested 2.4 GHz and 5 GHz radio bands."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 2 is also true.",
+        "b": "Incorrect because statement 1 is also true.",
+        "c": "Correct option validating both technical properties.",
+        "d": "Incorrect."
+      },
+      "trap": "Believing optical communication can only be wired (like fiber optics) rather than wireless.",
+      "relatedFacts": [
+        "Because light cannot penetrate opaque walls, Li-Fi provides inherently superior local data security against eavesdropping.",
+        "It produces zero electromagnetic interference, making it ideal for hospital operating theaters and aircraft cabins.",
+        "The visible light spectrum is 10,000 times larger than the entire radio frequency spectrum."
+      ]
+    },
+    {
+      "id": "scitech-2023-03",
+      "subject": "Science & Tech",
+      "year": 2023,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "In which of the following applications is an 'accelerometer' used?",
+      "statements": [
+        "Detection of car crash/collision which results in the deployment of airbags almost instantly",
+        "Detection of accidental fall of a laptop which results in the immediate turning off of the hard drive",
+        "Detection of the tilt of the smartphone which results in the rotation of display between portrait and landscape mode"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Applied Physics & Sensor Technology",
+      "subTopic": "Micro-Electro-Mechanical Systems (MEMS) & Accelerometers",
+      "concept": "MEMS accelerometer applications across automotive safety, hard drive drop protection, and mobile orientation.",
+      "explanation": "All three applications utilize micro-electro-mechanical systems (MEMS) accelerometers: 1. In automobiles, accelerometers measure rapid changes in velocity/deceleration during a collision to trigger the instantaneous inflation of safety airbags within milliseconds. 2. In laptops, accelerometers sense sudden gravitational free-fall, triggering active hard drive protection systems to park read/write heads and prevent head-crash damage on impact. 3. In smartphones, 3-axis accelerometers detect gravitational orientation and tilt to rotate the screen UI between portrait and landscape modes.",
+      "statementAnalysis": [
+        {
+          "text": "Detection of car crash/collision which results in the deployment of airbags almost instantly",
+          "verdict": "correct",
+          "why": "Rapid negative acceleration sensing triggers chemical inflators for airbags."
+        },
+        {
+          "text": "Detection of accidental fall of a laptop which results in the immediate turning off of the hard drive",
+          "verdict": "correct",
+          "why": "Free-fall detection parks magnetic heads before ground impact."
+        },
+        {
+          "text": "Detection of the tilt of the smartphone which results in the rotation of display between portrait and landscape mode",
+          "verdict": "correct",
+          "why": "Gravitational vector sensing dynamically controls display orientation."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 3 is also true.",
+        "b": "Incorrect: Statement 1 is also true.",
+        "c": "Incorrect: Statement 2 is also true.",
+        "d": "Correct: All three are classic MEMS accelerometer functions."
+      },
+      "trap": "Candidates might confuse accelerometers with gyroscopes, but linear motion, gravitational tilt, and sudden impact deceleration are classic accelerometer domains.",
+      "relatedFacts": [
+        "MEMS devices combine mechanical micro-structures (springs, masses) with electronic circuits etched on silicon chips.",
+        "Gyroscopes measure angular velocity (rotational rate), whereas accelerometers measure linear acceleration and gravity.",
+        "Wearable smartwatches utilize accelerometers to count steps (pedometers) and monitor sleep movements."
+      ]
+    },
+    {
+      "id": "scitech-2023-04",
+      "subject": "Science & Tech",
+      "year": 2023,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "With reference to 'Green Hydrogen', consider the following statements:",
+      "statements": [
+        "It can be used directly as a fuel for internal combustion engines.",
+        "It can be blended with natural gas and used as fuel for heat or power generation.",
+        "It can be used in the hydrogen fuel cell to run vehicles."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Clean Energy Technology",
+      "subTopic": "Green Hydrogen Production & Multi-Sector Decarbonization",
+      "concept": "Electrolysis-derived zero-carbon hydrogen as an energy carrier in mobility, blending, and fuel cells.",
+      "explanation": "All three statements are technologically sound: 1. Hydrogen can be combusted directly in modified internal combustion engines (Hydrogen ICE), producing water vapor and trace NOx without CO2 emissions. 2. Green hydrogen can be blended with Compressed Natural Gas (H-CNG) up to 18-20% into city gas distribution networks for domestic heating and industrial furnaces. 3. Hydrogen Fuel Cell Electric Vehicles (FCEVs) combine hydrogen with atmospheric oxygen electrochemically to generate electricity that powers an electric traction motor, with pure water (H2O) as the only tailpipe exhaust.",
+      "statementAnalysis": [
+        {
+          "text": "It can be used directly as a fuel for internal combustion engines.",
+          "verdict": "correct",
+          "why": "Hydrogen internal combustion engines (H2-ICE) are operational and commercially tested."
+        },
+        {
+          "text": "It can be blended with natural gas and used as fuel for heat or power generation.",
+          "verdict": "correct",
+          "why": "H-CNG blending is widely piloted in Delhi and internationally."
+        },
+        {
+          "text": "It can be used in the hydrogen fuel cell to run vehicles.",
+          "verdict": "correct",
+          "why": "Proton Exchange Membrane (PEM) fuel cells power commercial FCEVs like Toyota Mirai."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 3 is also correct.",
+        "b": "Incorrect: Statement 1 is also correct.",
+        "c": "Incorrect: Statement 2 is also correct.",
+        "d": "Correct: All three applications are valid industrial and mobility uses."
+      },
+      "trap": "Students often believe hydrogen CANNOT be used in internal combustion engines and only in fuel cells, ignoring direct hydrogen combustion engines.",
+      "relatedFacts": [
+        "Green hydrogen is produced by water electrolysis powered entirely by renewable energy (solar/wind), unlike Grey hydrogen (from steam methane reforming) or Blue hydrogen (with carbon capture).",
+        "India launched the National Green Hydrogen Mission in 2023 with a target of 5 MMT annual production by 2030.",
+        "Green Ammonia is an ideal hydrogen carrier for international maritime transport and fertilizer manufacturing."
+      ]
+    },
+    {
+      "id": "scitech-2021-03",
+      "subject": "Science & Tech",
+      "year": 2021,
+      "qNo": 3,
+      "type": "statement-based",
+      "question": "With reference to the recent development in science, which one of the following statements is NOT correct?",
+      "statements": [],
+      "options": {
+        "a": "Functional chromosomes can be created by joining segments of DNA taken from cells of different species.",
+        "b": "Pieces of artificial functional DNA can be created in laboratories.",
+        "c": "A piece of DNA taken from an animal cell can be made to replicate even outside a living cell in a laboratory.",
+        "d": "Cells taken from plant and animal tissues can undergo cell division in laboratory petri dishes."
+      },
+      "answer": "a",
+      "topic": "Biotechnology & Genetic Engineering",
+      "subTopic": "Synthetic Biology & DNA Replication (PCR)",
+      "concept": "Synthetic biology limits vs established in vitro techniques (Polymerase Chain Reaction, cell culture, gene synthesis).",
+      "explanation": "Statement (a) is NOT correct: While genetic engineering frequently splices short gene fragments or plasmids from different species (recombinant DNA), scientists CANNOT currently create entire whole functional eukaryotic chromosomes by randomly stitching together disparate chromosomal segments taken from cells of different species. Statements (b), (c), and (d) are routine standard laboratory procedures: Artificial functional oligonucleotides and synthetic bacterial genomes (e.g. Mycoplasma mycoides JCVI-syn1.0 by Craig Venter) have been synthesized in labs (b); DNA fragments replicate outside living cells via Polymerase Chain Reaction (PCR) (c); and animal/plant tissue culture in petri dishes has been practiced for decades (d).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect statement (Answer): Creating complete functional chromosomes by joining segments across different species is scientifically false.",
+        "b": "Correct statement: Synthetic DNA synthesis is a routine commercial service.",
+        "c": "Correct statement: PCR (Polymerase Chain Reaction) replicates DNA in vitro outside cells.",
+        "d": "Correct statement: In vitro cell culture is foundational to biology."
+      },
+      "trap": "Candidates confuse small recombinant gene plasmids with assembling whole functional synthetic chromosomes across species.",
+      "relatedFacts": [
+        "Kary Mullis won the Nobel Prize in Chemistry (1993) for inventing the Polymerase Chain Reaction (PCR).",
+        "PCR utilizes a heat-stable DNA polymerase called Taq polymerase, isolated from the thermophilic bacterium Thermus aquaticus.",
+        "The J. Craig Venter Institute synthesized the first self-replicating synthetic bacterial cell in 2010."
+      ]
+    },
+    {
+      "id": "scitech-2020-03",
+      "subject": "Science & Tech",
+      "year": 2020,
+      "qNo": 3,
+      "type": "statement-based",
+      "question": "In the context of the developments in bioinformatics, the term 'transcriptome', sometimes seen in the news, refers to:",
+      "statements": [],
+      "options": {
+        "a": "A range of enzymes used in genome editing",
+        "b": "The full range of mRNA molecules expressed by an organism",
+        "c": "The description of the mechanism of gene expression",
+        "d": "A mechanism of genetic mutations"
+      },
+      "answer": "b",
+      "topic": "Biotechnology & Genomics",
+      "subTopic": "Omics Technologies (Genome, Transcriptome, Proteome)",
+      "concept": "Definition and biochemical scope of the complete messenger RNA library of a cell.",
+      "explanation": "A 'transcriptome' is the complete set of all RNA molecules (especially messenger RNA or mRNA) transcripts produced by the genome of an individual cell, tissue, or organism at a specific developmental stage or under specific physiological/environmental conditions. While the genome is essentially static and identical across all somatic cells of an organism, the transcriptome is highly dynamic and reflects which genes are actively being transcribed and expressed at any given moment. RNA sequencing (RNA-seq) is the primary tool used in transcriptomics.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Genome editing enzymes include Cas9, TALENs, and Zinc Finger Nucleases.",
+        "b": "Correct (Answer): The full spectrum of mRNA/RNA transcripts expressed by an organism.",
+        "c": "Incorrect: Central dogma / gene regulation describes expression mechanisms, not the transcriptome.",
+        "d": "Incorrect: Mutagenesis refers to mutation mechanisms."
+      },
+      "trap": "Candidates confuse the omics hierarchy: Genome (DNA) -> Transcriptome (RNA) -> Proteome (Proteins) -> Metabolome (Metabolites).",
+      "relatedFacts": [
+        "Unlike the genome which is constant, the transcriptome varies dramatically between different cell types (e.g. neuron vs liver cell) within the same organism.",
+        "Microarrays and high-throughput RNA-Seq are used to quantify transcriptomes.",
+        "Differential transcriptome analysis allows doctors to compare healthy tissue versus cancerous tumors to detect oncogene upregulation."
+      ]
+    },
+    {
+      "id": "scitech-2019-03",
+      "subject": "Science & Tech",
+      "year": 2019,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "Which of the following statements is/are correct regarding the 'RNA interference (RNAi)' technology?",
+      "statements": [
+        "It is used in developing hormone replacement therapies.",
+        "It can be used in producing crop plants that are resistant to viral pathogens.",
+        "It can be used in developing therapies for the treatment of cancer."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Cellular Biotechnology & Molecular Biology",
+      "subTopic": "RNA Interference (RNAi) & Post-Transcriptional Gene Silencing",
+      "concept": "Double-stranded RNA-mediated enzymatic degradation of specific mRNA transcripts.",
+      "explanation": "Statements 2 and 3 are correct: RNA interference (RNAi) is a biological mechanism in which double-stranded RNA (dsRNA) molecules inhibit gene expression or translation by neutralizing targeted mRNA molecules (post-transcriptional gene silencing). It has been harnessed in agriculture to create nematode-resistant and virus-resistant crops (e.g. against root-knot nematode Meloidogyne incognita in tobacco) and in medicine to silence oncogenes and mutant genes causing cancer. Statement 1 is incorrect: Hormone replacement therapies involve administering synthetic hormones (like estrogen, progesterone, or thyroid hormones) into the body, not post-transcriptional gene silencing using RNAi.",
+      "statementAnalysis": [
+        {
+          "text": "It is used in developing hormone replacement therapies.",
+          "verdict": "incorrect",
+          "why": "Hormone replacement delivers biochemical hormones, not gene-silencing dsRNA."
+        },
+        {
+          "text": "It can be used in producing crop plants that are resistant to viral pathogens.",
+          "verdict": "correct",
+          "why": "RNAi targets viral RNA genomes, providing broad pathogen resistance in crops."
+        },
+        {
+          "text": "It can be used in developing therapies for the treatment of cancer.",
+          "verdict": "correct",
+          "why": "siRNA molecules knock down mutant oncogenes promoting uncontrolled tumor proliferation."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 1 is false.",
+        "b": "Correct: Statements 2 and 3 represent verified therapeutic and agricultural applications.",
+        "c": "Incorrect: Statement 1 is false.",
+        "d": "Incorrect: Includes false Statement 1."
+      },
+      "trap": "Aspirants assume modern biotechnology therapies apply indiscriminately to all treatments, failing to differentiate hormone replacement from gene knockdown.",
+      "relatedFacts": [
+        "Andrew Fire and Craig Mello were awarded the 2006 Nobel Prize in Physiology or Medicine for the discovery of RNA interference in Caenorhabditis elegans.",
+        "The enzyme Dicer cuts long double-stranded RNA into short interfering RNA (siRNA) fragments.",
+        "The RISC (RNA-Induced Silencing Complex) unwinds siRNA and cleaves complementary cellular mRNA strands."
+      ]
+    },
+    {
+      "id": "scitech-2018-03",
+      "subject": "Science & Tech",
+      "year": 2018,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "When the alarm of your smartphone rings in the morning, you wake up and knock it off to snooze. The coffee maker automatically turns on, the geyser in your bathroom heats water, and when you step into your car, the GPS displays traffic updates and recalculates the best route. In the context of technology, which one of the following terms best describes this interconnected scenario?",
+      "statements": [],
+      "options": {
+        "a": "Border Gateway Protocol",
+        "b": "Internet of Things",
+        "c": "Internet Protocol",
+        "d": "Virtual Private Network"
+      },
+      "answer": "b",
+      "topic": "Information Technology & Emerging Systems",
+      "subTopic": "Internet of Things (IoT) & Smart Automation",
+      "concept": "Network of physical devices embedded with sensors, software, and network connectivity exchanging telemetry autonomously.",
+      "explanation": "The scenario describes the 'Internet of Things' (IoT). IoT refers to a vast interconnected network of physical devices, home appliances, vehicles, and smart meters embedded with electronics, software, sensors, actuators, and network connectivity that enables these objects to collect, communicate, analyze, and act upon environmental data without requiring direct human-to-human or human-to-computer intervention. Options (a), (c), and (d) are specific network protocols/routing architectures (BGP, IP, VPN).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: BGP is the routing protocol of the global Internet backbone.",
+        "b": "Correct (Answer): Internet of Things (IoT) describes autonomous inter-device communication.",
+        "c": "Incorrect: IP is the foundational addressing protocol for packet routing.",
+        "d": "Incorrect: VPN provides encrypted tunneling across public networks."
+      },
+      "trap": "Question is framed as a long lifestyle narrative; aspirants must extract the underlying core technological paradigm (IoT).",
+      "relatedFacts": [
+        "Kevin Ashton coined the term 'Internet of Things' in 1999 during his work at Procter & Gamble.",
+        "IPv6 provides an address space of 2^128 unique IP addresses, ensuring every connected IoT device on Earth can have a dedicated IP address.",
+        "Edge computing is increasingly used in IoT to process critical sensor data locally at the sensor level to minimize transmission latency."
+      ]
+    },
+    {
+      "id": "scitech-2017-04",
+      "subject": "Science & Tech",
+      "year": 2017,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "Organic Light Emitting Diodes (OLEDs) are used to create digital displays in some TVs and smartphones. What are the advantages of OLED displays over Liquid Crystal Displays (LCDs)?",
+      "statements": [
+        "OLED displays can be fabricated on flexible plastic substrates.",
+        "Roll-up displays embedded in clothing can be made using OLEDs.",
+        "Transparent displays are possible using OLEDs."
+      ],
+      "options": {
+        "a": "1 and 3 only",
+        "b": "2 only",
+        "c": "1, 2 and 3",
+        "d": "None of the above"
+      },
+      "answer": "c",
+      "topic": "Applied Physics & Optoelectronics",
+      "subTopic": "OLEDs vs LCD Displays",
+      "concept": "Self-emissive organic semiconductor thin films enabling flexible, rollable, and transparent form factors.",
+      "explanation": "All three statements are correct: 1. Unlike traditional LCDs which require rigid glass layers and a bulky backlight unit (CCFL or LED), OLEDs utilize emissive organic semiconductor layers that emit light directly when an electric current is applied. Because they require no backlights, OLEDs can be printed on thin, lightweight, flexible plastic substrates (such as polyethylene terephthalate - PET). 2. This mechanical flexibility allows the fabrication of foldable, curved, and roll-up displays that can be rolled like a scroll or integrated into wearable electronic fabrics. 3. Because the organic pixels can be made virtually transparent when not emitting light and deposited on transparent conductive substrates (like ITO), fully see-through/transparent heads-up displays are feasible.",
+      "statementAnalysis": [
+        {
+          "text": "OLED displays can be fabricated on flexible plastic substrates.",
+          "verdict": "correct",
+          "why": "Emissive organic polymers adhere to thin flexible plastic without rigid glass."
+        },
+        {
+          "text": "Roll-up displays embedded in clothing can be made using OLEDs.",
+          "verdict": "correct",
+          "why": "Ultra-thin substrates enable rollable panels and smart electronic textiles."
+        },
+        {
+          "text": "Transparent displays are possible using OLEDs.",
+          "verdict": "correct",
+          "why": "Transparent OLED (TOLED) panels transmit high visible light when unlit."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 2 is also valid.",
+        "b": "Incorrect: Statements 1 and 3 are also valid.",
+        "c": "Correct: All three statements represent verified commercial OLED capabilities.",
+        "d": "Incorrect: All statements are true."
+      },
+      "trap": "Aspirants mistakenly believe 'roll-up displays in clothing' is science fiction, unaware that flexible OLED textiles are established commercial reality.",
+      "relatedFacts": [
+        "OLED displays achieve 'infinite' contrast ratios and true deep blacks because black pixels are completely turned off.",
+        "MicroLED displays are an emerging competitor, utilizing inorganic GaN microscopic LEDs that offer higher brightness without OLED organic degradation (burn-in).",
+        "AMOLED (Active-Matrix OLED) integrates a thin-film transistor (TFT) backplane to control individual pixel luminescence."
+      ]
+    },
+    {
+      "id": "scitech-2016-04",
+      "subject": "Science & Tech",
+      "year": 2016,
+      "qNo": 4,
+      "type": "statement-based",
+      "question": "With reference to 'Astrosat', the astronomical observatory launched by India, which of the following statements is/are correct?",
+      "statements": [
+        "Other than USA and Russia, India is the only country to have launched a similar observatory into space.",
+        "Astrosat is a 2000 kg satellite placed in an orbit at 1650 km above the surface of the Earth."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "d",
+      "topic": "Space Technology & Astronomy",
+      "subTopic": "Astrosat Space Observatory (ISRO)",
+      "concept": "Orbital altitude, mass, and international standing of ISRO's first dedicated multi-wavelength space telescope.",
+      "explanation": "Both statements are incorrect: Statement 1 is incorrect: Besides NASA (USA) and Roscosmos (Russia), several other space agencies have launched space observatories, notably ESA (European Space Agency, with Hubble, Gaia, Herschel) and JAXA (Japan, with Suzaku, Hitomi); India was not the third, but the fifth/sixth entity to achieve this. Statement 2 is incorrect: Astrosat has a lift-off mass of approximately 1,515 kg (not 2000 kg) and was inserted into a Low Earth Orbit (LEO) at an altitude of approximately 650 km (not 1650 km) with an inclination of 6 degrees by the PSLV-C30 rocket on September 28, 2015.",
+      "statementAnalysis": [
+        {
+          "text": "Other than USA and Russia, India is the only country to have launched a similar observatory into space.",
+          "verdict": "incorrect",
+          "why": "ESA (Europe) and JAXA (Japan) launched space observatories long before."
+        },
+        {
+          "text": "Astrosat is a 2000 kg satellite placed in an orbit at 1650 km above the surface of the Earth.",
+          "verdict": "incorrect",
+          "why": "Orbital altitude is 650 km (LEO), not 1650 km, and mass is ~1,515 kg."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 1 is false.",
+        "b": "Incorrect: Statement 2 is false.",
+        "c": "Incorrect: Both statements are false.",
+        "d": "Correct (Official UPSC Key): Neither 1 nor 2 is factually accurate."
+      },
+      "trap": "Examiners inflate orbital altitude (from 650 km to 1650 km) and omit ESA/Japan to tempt aspirants into picking '1 only' or 'Both'.",
+      "relatedFacts": [
+        "Astrosat simultaneously observes the universe in multiple wavelengths: optical, near-UV, far-UV, soft X-ray, and hard X-ray.",
+        "Payloads include UVIT (Ultra Violet Imaging Telescope), LAXPC, SXT, CZTI, and SSM.",
+        "Astrosat detected extreme-UV light from a galaxy located 9.3 billion light-years away (AUDFs01)."
+      ]
+    },
+    {
+      "id": "scitech-2015-06",
+      "subject": "Science & Tech",
+      "year": 2015,
+      "qNo": 6,
+      "type": "statement-based",
+      "question": "With reference to the Indian Regional Navigation Satellite System (IRNSS / NavIC), consider the following statements:",
+      "statements": [
+        "IRNSS has three satellites in geostationary and four satellites in geosynchronous orbits.",
+        "IRNSS covers entire India and about 5500 sq. km beyond its borders.",
+        "India will have its own satellite navigation system with full global coverage by the middle of 2019."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "None"
+      },
+      "answer": "a",
+      "topic": "Space Technology & Satellite Navigation",
+      "subTopic": "IRNSS (NavIC) Constellation Architecture",
+      "concept": "Orbital configuration (3 GEO + 4 GSO), primary coverage footprint (1,500 km), and regional vs global scope.",
+      "explanation": "Statement 1 is correct: The baseline space segment of IRNSS consists of seven satellites: three in Geostationary Earth Orbit (GEO) at 32.5°E, 83°E, and 131.5°E, and four in inclined Geosynchronous Orbit (GSO) in two orbital planes with an inclination of 29°. Statement 2 is incorrect: The coverage area of NavIC encompasses the primary service area covering the Indian landmass and extending up to 1,500 km (NOT 5,500 km) beyond its boundaries. Statement 3 is incorrect: IRNSS is strictly a REGIONAL navigation system designed for South Asia, not a global positioning system like GPS (USA), GLONASS (Russia), or Galileo (EU); India has not deployed a global constellation.",
+      "statementAnalysis": [
+        {
+          "text": "IRNSS has three satellites in geostationary and four satellites in geosynchronous orbits.",
+          "verdict": "correct",
+          "why": "Official 7-satellite constellation architecture (3 GEO + 4 GSO)."
+        },
+        {
+          "text": "IRNSS covers entire India and about 5500 sq. km beyond its borders.",
+          "verdict": "incorrect",
+          "why": "Coverage zone is 1,500 km beyond borders, not 5,500 sq. km."
+        },
+        {
+          "text": "India will have its own satellite navigation system with full global coverage by the middle of 2019.",
+          "verdict": "incorrect",
+          "why": "NavIC is an autonomous regional system, not global."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Only Statement 1 accurately states the orbital setup.",
+        "b": "Incorrect: Statement 2 distorts coverage radius.",
+        "c": "Incorrect: Statements 2 and 3 are false.",
+        "d": "Incorrect: Statement 1 is valid."
+      },
+      "trap": "Examiner inserts exaggerated coverage figures (5,500 km) and claims global status to catch inattentive candidates.",
+      "relatedFacts": [
+        "NavIC provides two services: Standard Positioning Service (SPS) for civilian users and Restricted Service (RS) for authorized defense users.",
+        "Atomic rubidium clocks onboard provide precise time synchronization essential for trilateration.",
+        "In 2023, ISRO launched the NVS-01 satellite, the first of the second-generation NavIC constellation featuring an indigenous Indian rubidium atomic clock."
+      ]
+    },
+    {
+      "id": "scitech-2014-03",
+      "subject": "Science & Tech",
+      "year": 2014,
+      "qNo": 3,
+      "type": "statement-based",
+      "question": "With reference to 'Agni-IV' missile, which of the following statements is/are correct?",
+      "statements": [
+        "It is a surface-to-surface missile.",
+        "It is fueled by liquid propellant only.",
+        "It can deliver a one-tonne nuclear warheads about 4000 km away."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "c",
+      "topic": "Defense Technology & Strategic Missiles",
+      "subTopic": "Agni Missile Family & Ballistic Systems (DRDO)",
+      "concept": "Propulsion chemistry, staging, delivery payload, and operational strike radius of intermediate-range ballistic missiles (IRBM).",
+      "explanation": "Statement 1 is correct: Agni-IV is an intermediate-range ballistic missile (IRBM) operating on a surface-to-surface trajectory. Statement 2 is incorrect: Agni-IV is powered by a two-stage SOLID propellant propulsion system, NOT liquid propellant; solid propellants offer rapid launch readiness and ease of canisterized road-mobile transport. Statement 3 is correct: Agni-IV has an operational strike range of approximately 4,000 km and is designed to carry a 1,000 kg (one-tonne) payload (conventional or thermonuclear warhead).",
+      "statementAnalysis": [
+        {
+          "text": "It is a surface-to-surface missile.",
+          "verdict": "correct",
+          "why": "Agni-IV is a surface-to-surface intermediate-range ballistic missile."
+        },
+        {
+          "text": "It is fueled by liquid propellant only.",
+          "verdict": "incorrect",
+          "why": "Powered by two solid-propellant stages; not liquid fueled."
+        },
+        {
+          "text": "It can deliver a one-tonne nuclear warheads about 4000 km away.",
+          "verdict": "correct",
+          "why": "Strike range is ~4,000 km with a 1,000 kg warhead."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 3 is also correct.",
+        "b": "Incorrect: Statement 2 is false.",
+        "c": "Correct: Statements 1 and 3 are factually accurate.",
+        "d": "Incorrect: Statement 2 is false."
+      },
+      "trap": "Solid vs liquid propulsion: Modern strategic ballistic missiles (Agni-IV, Agni-V, Agni-Prime) use solid rocket motors for rapid road/rail mobile deployment.",
+      "relatedFacts": [
+        "Agni-IV was developed under the Integrated Guided Missile Development Programme (IGMDP) led by DRDO.",
+        "It incorporates a ring laser gyroscope-based inertial navigation system (RINS) coupled with a micro-inertial navigation system (MINGS).",
+        "Agni-V has a range exceeding 5,000 km and recently underwent testing with Multiple Independently Targetable Re-entry Vehicles (MIRV) under Mission Divyastra."
+      ]
+    },
+    {
+      "id": "scitech-2024-02",
+      "subject": "Science & Tech",
+      "year": 2024,
+      "qNo": 2,
+      "type": "conceptual",
+      "question": "In the context of renewable energy, what makes 'Perovskite solar cells' a revolutionary alternative to conventional Silicon solar cells?",
+      "statements": [
+        "They can be produced using simple, low-cost solution-processing techniques.",
+        "They can achieve higher theoretical power conversion efficiencies than traditional single-junction silicon cells.",
+        "They can be fabricated as semi-transparent and flexible photovoltaic films."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Clean Energy & Materials Science",
+      "subTopic": "Perovskite Photovoltaics vs Silicon Solar Cells",
+      "concept": "Bandgap tunability, low manufacturing temperatures, and tandem cell configurations of perovskite crystals.",
+      "explanation": "All three statements are technological advantages of perovskite solar cells: 1. Conventional silicon wafers require energy-intensive high-temperature (>1400°C) purification of metallurgical silicon into electronic-grade ingots. In contrast, perovskite materials (bearing an ABX3 crystalline structure) can be printed from liquid inks at low temperatures (<150°C) via roll-to-roll printing. 2. In tandem with silicon (Perovskite-Silicon Tandem cells), they overcome the Shockley-Queisser theoretical efficiency limit of silicon (29%), achieving lab efficiencies exceeding 33%. 3. Their bandgap can be chemically tuned, enabling semi-transparent solar windows and lightweight flexible solar films.",
+      "statementAnalysis": [
+        {
+          "text": "They can be produced using simple, low-cost solution-processing techniques.",
+          "verdict": "correct",
+          "why": "Low-temperature liquid ink printing slashes manufacturing capital costs."
+        },
+        {
+          "text": "They can achieve higher theoretical power conversion efficiencies than traditional single-junction silicon cells.",
+          "verdict": "correct",
+          "why": "Tandem perovskite cells surpass the 29% Shockley-Queisser limit of silicon."
+        },
+        {
+          "text": "They can be fabricated as semi-transparent and flexible photovoltaic films.",
+          "verdict": "correct",
+          "why": "Enables building-integrated photovoltaics (BIPV) and wearable solar."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 3 is also correct.",
+        "b": "Incorrect: Statement 1 is also correct.",
+        "c": "Incorrect: Statement 2 is also correct.",
+        "d": "Correct: All three statements accurately portray perovskite photovoltaic advantages."
+      },
+      "trap": "The main remaining technical hurdle for perovskites is long-term moisture and thermal stability, but their manufacturing and efficiency advantages are undisputed.",
+      "relatedFacts": [
+        "The mineral perovskite (calcium titanium oxide, CaTiO3) was discovered in the Ural Mountains in 1839 by Gustav Rose, named after Russian mineralogist L.A. Perovski.",
+        "Lead halide perovskites (such as methylammonium lead iodide, CH3NH3PbI3) are the most widely studied photovoltaic formulations.",
+        "Tandem solar cells absorb different wavelengths of sunlight: perovskite absorbs high-energy blue photons, while silicon underneath absorbs lower-energy red/infrared photons."
+      ]
+    },
+    {
+      "id": "scitech-2013-05",
+      "subject": "Science & Tech",
+      "year": 2013,
+      "qNo": 5,
+      "type": "conceptual",
+      "question": "Which of the following diseases can be transmitted from one person to another through tattooing?",
+      "statements": [
+        "Chikungunya",
+        "Hepatitis B",
+        "HIV-AIDS"
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Public Health & Infectious Diseases",
+      "subTopic": "Blood-Borne Pathogens vs Vector-Borne Pathogens",
+      "concept": "Transmission modes: blood-borne parenterally transmitted pathogens (HBV, HIV) vs mosquito vector-borne transmission (Chikungunya).",
+      "explanation": "Statements 2 and 3 are correct: Hepatitis B virus (HBV) and Human Immunodeficiency Virus (HIV) are blood-borne pathogens transmitted parenterally through contaminated needles, unsterilized tattooing equipment, body piercing tools, and blood transfusions. Statement 1 is incorrect: Chikungunya is a viral disease transmitted exclusively through the bite of infected mosquitoes (primarily Aedes aegypti and Aedes albopictus), NOT through unsterilized tattooing needles. Hence, 2 and 3 only.",
+      "statementAnalysis": [
+        {
+          "text": "Chikungunya",
+          "verdict": "incorrect",
+          "why": "Transmitted by Aedes mosquito bites, not directly via tattooing needles."
+        },
+        {
+          "text": "Hepatitis B",
+          "verdict": "correct",
+          "why": "Highly contagious blood-borne virus transmitted via unsterilized needles."
+        },
+        {
+          "text": "HIV-AIDS",
+          "verdict": "correct",
+          "why": "Transmitted through blood-to-blood contact and needle-sharing."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Chikungunya is vector-borne.",
+        "b": "Correct (Official UPSC Key): Hepatitis B and HIV are blood-borne pathogens transmissible via tattooing.",
+        "c": "Incorrect: Statement 1 is false.",
+        "d": "Incorrect: Statement 1 is false."
+      },
+      "trap": "Candidates overlook the transmission vector, assuming any communicable viral infection can spread via unsterile needle exposure.",
+      "relatedFacts": [
+        "Hepatitis B virus is ~50 to 100 times more infectious than HIV and can survive on environmental surfaces for at least 7 days.",
+        "Aedes aegypti is also the daytime-biting mosquito vector for Dengue, Zika, and Yellow fever.",
+        "Autoclaving and single-use disposable needles eliminate the risk of tattooing-transmitted blood pathogens."
+      ]
+    }
+  ]
+}

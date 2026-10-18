@@ -1,0 +1,1398 @@
+{
+  "subject": "Geography",
+  "total": 30,
+  "questions": [
+    {
+      "id": "geo-2024-04",
+      "subject": "Geography",
+      "year": 2024,
+      "qNo": 4,
+      "type": "pairing",
+      "question": "Consider the following pairs of strategic straits and the water bodies they connect:",
+      "statements": [
+        "Strait of Hormuz — Persian Gulf and Gulf of Oman",
+        "Bab-el-Mandeb — Red Sea and Gulf of Aden",
+        "Strait of Malacca — Andaman Sea and South China Sea"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "World Geography & Strategic Straits",
+      "subTopic": "Maritime Choke Points & Global Trade Arteries",
+      "concept": "Physical connectivity of critical global hydrocarbon choke points.",
+      "explanation": "All three pairs are correctly matched: Pair 1: The Strait of Hormuz connects the Persian Gulf with the Gulf of Oman (and onwards to the Arabian Sea), separating Iran from Oman/UAE; approximately 21% of global petroleum passes through it. Pair 2: The Bab-el-Mandeb ('Gate of Tears') connects the Red Sea with the Gulf of Aden (leading into the Indian Ocean), separating Yemen from Djibouti and Eritrea. Pair 3: The Strait of Malacca connects the Andaman Sea (Indian Ocean) with the South China Sea (Pacific Ocean), separating the Malay Peninsula from the Indonesian island of Sumatra.",
+      "statementAnalysis": [
+        {
+          "text": "Strait of Hormuz — Persian Gulf and Gulf of Oman",
+          "verdict": "correct",
+          "why": "Crucial oil transit strait bordered by Iran and Oman."
+        },
+        {
+          "text": "Bab-el-Mandeb — Red Sea and Gulf of Aden",
+          "verdict": "correct",
+          "why": "Southern exit of the Red Sea."
+        },
+        {
+          "text": "Strait of Malacca — Andaman Sea and South China Sea",
+          "verdict": "correct",
+          "why": "World's busiest maritime transit route."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, pair 3 is also true.",
+        "b": "Incorrect, pair 1 is also true.",
+        "c": "Incorrect, pair 2 is also true.",
+        "d": "Correct option; all three maritime connections are accurate."
+      },
+      "trap": "Examiners often swap Persian Gulf with Red Sea to create false maritime pairs.",
+      "relatedFacts": [
+        "Suez Canal connects the Mediterranean Sea to the Red Sea.",
+        "Bosphorus Strait connects the Black Sea to the Sea of Marmara.",
+        "Dardanelles Strait connects the Sea of Marmara to the Aegean Sea."
+      ]
+    },
+    {
+      "id": "geo-2023-10",
+      "subject": "Geography",
+      "year": 2023,
+      "qNo": 10,
+      "type": "conceptual",
+      "question": "Ilmenite and rutile, abundantly available in certain coastal tracts of India, are rich sources of which one of the following?",
+      "statements": [],
+      "options": {
+        "a": "Aluminium",
+        "b": "Copper",
+        "c": "Iron",
+        "d": "Titanium"
+      },
+      "answer": "d",
+      "topic": "Mineral Resources of India",
+      "subTopic": "Beach Sand Minerals & Strategic Metals",
+      "concept": "Placer heavy mineral deposits along Indian coastlines.",
+      "explanation": "Ilmenite (FeTiO3) and Rutile (TiO2) are heavy beach sand minerals and the primary commercial ores of TITANIUM. In India, extensive heavy mineral placer beach deposits occur along the coastal sands of Kerala (Chavara), Tamil Nadu (Manavalakurichi), Odisha (Ganjam), and Andhra Pradesh.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Aluminium is extracted from Bauxite.",
+        "b": "Incorrect: Copper is extracted from Chalcopyrite, Malachite.",
+        "c": "Incorrect: While ilmenite contains iron, it is primarily mined as the premier source of Titanium.",
+        "d": "Correct: Standard metallurgical source of Titanium dioxide and metal."
+      },
+      "trap": "Candidates select 'Iron' because of the prefix in Ilmenite's chemical formula, missing that its primary economic extraction is Titanium.",
+      "relatedFacts": [
+        "Monazite (source of Thorium and rare earths) is another famous heavy mineral found in Kerala beach sands.",
+        "Indian Rare Earths Limited (IREL) is a central public sector enterprise managing heavy beach sand minerals under the Department of Atomic Energy.",
+        "Titanium is prized for its high strength-to-weight ratio and exceptional corrosion resistance in aerospace and defense."
+      ]
+    },
+    {
+      "id": "geo-2022-19",
+      "subject": "Geography",
+      "year": 2022,
+      "qNo": 19,
+      "type": "conceptual",
+      "question": "Gandikota canyon of South India was created by which one of the following rivers?",
+      "statements": [],
+      "options": {
+        "a": "Cauvery",
+        "b": "Manjira",
+        "c": "Pennar",
+        "d": "Tungabhadra"
+      },
+      "answer": "c",
+      "topic": "Geomorphology of India",
+      "subTopic": "Canyons, Gorges and Fluvial Landforms",
+      "concept": "Fluvial incised gorge carving through the Erramala quartzite ranges.",
+      "explanation": "Gandikota Canyon (popularly known as the 'Grand Canyon of India') is a spectacular gorge carved out by the PENNAR RIVER as it cuts deeply through the massive Erramala range of hills in the Kadapa (YSR) district of Andhra Pradesh.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Cauvery flows further south through Karnataka and Tamil Nadu.",
+        "b": "Incorrect: Manjira is a major tributary of the Godavari.",
+        "c": "Correct: Pennar river formed this canyon.",
+        "d": "Incorrect: Tungabhadra is a premier tributary of the Krishna river."
+      },
+      "trap": "Candidates assume big river systems (Krishna, Godavari, Cauvery) carved it, overlooking the Pennar river.",
+      "relatedFacts": [
+        "Gandikota Fort, perched atop the canyon cliffs, was founded in 1123 CE by Kapa Raja of nearby Bommanapalle.",
+        "Pennar river originates in the Nandi Hills in Chikkaballapur district of Karnataka and drains into the Bay of Bengal.",
+        "Deep river gorges in the Himalayas (like Dihang gorge on the Brahmaputra) are formed by antecedent drainage cutting down through rising mountain ranges."
+      ]
+    },
+    {
+      "id": "geo-2021-04",
+      "subject": "Geography",
+      "year": 2021,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "With reference to the Indus river system, of the following four rivers, three of them pour into one of them which joins the Indus directly. Among the following, which one is such river that joins the Indus directly?",
+      "statements": [],
+      "options": {
+        "a": "Chenab",
+        "b": "Jhelum",
+        "c": "Ravi",
+        "d": "Sutlej"
+      },
+      "answer": "d",
+      "topic": "Drainage Systems of India",
+      "subTopic": "Indus River Basin & Confluence Network",
+      "concept": "The Panjnad drainage hierarchy and the ultimate collector channel before meeting the Indus at Mithankot.",
+      "explanation": "The drainage confluence of the Punjab rivers proceeds as follows: Jhelum joins Chenab at Trimmu; Ravi joins Chenab near Ahmadpur Sial; Beas joins Sutlej at Harike (India). Then, the Chenab (carrying Jhelum and Ravi waters) merges with the Sutlej at Panjnad to form the Panjnad River. The combined stream (historically recognized as the Sutlej / Panjnad) flows directly into the Indus River at Mithankot, Pakistan. In standard geographic accounts and UPSC official key, the SUTLEJ (forming the main stream of Panjnad) joins the Indus directly.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Chenab joins Sutlej before reaching the Indus.",
+        "b": "Incorrect: Jhelum flows into the Chenab.",
+        "c": "Incorrect: Ravi joins the Chenab.",
+        "d": "Correct: Official UPSC key accepted Sutlej as the ultimate trunk river that enters the Indus."
+      },
+      "trap": "Debate between Chenab (largest volume carrier) and Sutlej (longest course forming the Panjnad trunk before Mithankot).",
+      "relatedFacts": [
+        "The Indus Waters Treaty (1960) allocates the three 'Eastern Rivers' (Ravi, Beas, Sutlej) to India, and the three 'Western Rivers' (Indus, Jhelum, Chenab) to Pakistan.",
+        "Sutlej originates outside India in Tibet from Lake Rakshastal near Mount Kailash.",
+        "Bhakra-Nangal multipurpose dam is constructed on the Sutlej river in Himachal Pradesh/Punjab."
+      ]
+    },
+    {
+      "id": "geo-2020-01",
+      "subject": "Geography",
+      "year": 2020,
+      "qNo": 1,
+      "type": "conceptual",
+      "question": "Siachen Glacier is situated to the:",
+      "statements": [],
+      "options": {
+        "a": "East of Aksai Chin",
+        "b": "East of Leh",
+        "c": "North of Gilgit",
+        "d": "North of Nubra Valley"
+      },
+      "answer": "d",
+      "topic": "Physiography of the Himalayas",
+      "subTopic": "Glaciers of Karakoram & Ladakh Topography",
+      "concept": "Relative spatial orientation of valleys, mountain ranges, and glaciers in Ladakh.",
+      "explanation": "The Siachen Glacier is located in the eastern Karakoram range in the Himalayas. It lies directly NORTH OF THE NUBRA VALLEY. The Nubra River originates from the meltwaters of the snout of the Siachen Glacier. Aksai Chin lies to the east of Siachen (so Siachen is west of Aksai Chin); Gilgit lies far to the west of Siachen.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Siachen is to the WEST of Aksai Chin.",
+        "b": "Incorrect: Siachen is to the north of Leh, not east.",
+        "c": "Incorrect: Siachen is to the east of Gilgit, not north.",
+        "d": "Correct: Siachen sits immediately to the north of the Nubra Valley."
+      },
+      "trap": "Examiner tests relative spatial orientation ('East of' vs 'West of').",
+      "relatedFacts": [
+        "Siachen is the second-longest glacier in the world's non-polar areas (approximately 76 km long).",
+        "Operation Meghdoot was launched by the Indian Armed Forces in 1984 to secure control of the Siachen Glacier and Bilafond La / Sia La passes.",
+        "Nubra River is a tributary of the Shyok River, which in turn joins the Indus."
+      ]
+    },
+    {
+      "id": "geo-2019-15",
+      "subject": "Geography",
+      "year": 2019,
+      "qNo": 15,
+      "type": "pairing",
+      "question": "Consider the following pairs of glaciers and their corresponding rivers:",
+      "statements": [
+        "Bandarpunch — Yamuna",
+        "Bara Shigri — Chenab",
+        "Milam — Mandakini",
+        "Siachen — Nubra",
+        "Zemu — Manas"
+      ],
+      "options": {
+        "a": "1, 2 and 4 only",
+        "b": "1, 3 and 4 only",
+        "c": "2 and 5 only",
+        "d": "3 and 5 only"
+      },
+      "answer": "a",
+      "topic": "Himalayan Drainage & Glaciology",
+      "subTopic": "Glacier Origins of Major North Indian Rivers",
+      "concept": "Source identification of Himalayan snow-fed rivers.",
+      "explanation": "Pair 1 is correctly matched: Yamuna originates from the Yamunotri Glacier on the Banderpooch peak (Garhwal Himalayas). Pair 2 is correctly matched: Bara Shigri (largest glacier in Himachal Pradesh) feeds the Chandra river, which joins Bhaga to form the Chenab. Pair 3 is incorrectly matched: Milam glacier (Kumaon Himalayas) gives rise to the Gorithanga / Gori Ganga river, while Mandakini originates from the Chorabari glacier near Kedarnath. Pair 4 is correctly matched: Nubra river originates from the snout of Siachen glacier. Pair 5 is incorrectly matched: Zemu glacier (Sikkim) gives rise to the Teesta River, NOT the Manas river.",
+      "statementAnalysis": [
+        {
+          "text": "Bandarpunch — Yamuna",
+          "verdict": "correct",
+          "why": "Yamunotri glacier is on the slopes of the Bandarpunch massifs."
+        },
+        {
+          "text": "Bara Shigri — Chenab",
+          "verdict": "correct",
+          "why": "Feeds the Chandra river in Lahaul-Spiti."
+        },
+        {
+          "text": "Milam — Mandakini",
+          "verdict": "incorrect",
+          "why": "Milam feeds Gori Ganga; Mandakini originates from Chorabari glacier."
+        },
+        {
+          "text": "Siachen — Nubra",
+          "verdict": "correct",
+          "why": "Nubra river emerges directly from Siachen snout."
+        },
+        {
+          "text": "Zemu — Manas",
+          "verdict": "incorrect",
+          "why": "Zemu glacier feeds Teesta river in Sikkim."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Pairs 1, 2, and 4 are valid.",
+        "b": "Incorrect because pair 3 is false.",
+        "c": "Incorrect because pair 5 is false.",
+        "d": "Incorrect because pairs 3 and 5 are false."
+      },
+      "trap": "Misattributing famous eastern Himalayan glaciers (Zemu) to rivers of Bhutan/Assam (Manas).",
+      "relatedFacts": [
+        "Gangotri glacier (Gaumukh) gives rise to the Bhagirathi river.",
+        "Satopanth and Bhagirath Kharak glaciers give rise to the Alaknanda river.",
+        "Devprayag is the holy confluence where the Bhagirathi and Alaknanda merge to form the Ganga."
+      ]
+    },
+    {
+      "id": "geo-2018-08",
+      "subject": "Geography",
+      "year": 2018,
+      "qNo": 8,
+      "type": "conceptual",
+      "question": "Which of the following conditions is/are unique to the 'Mediterranean climate'?",
+      "statements": [
+        "Dry summers and wet winters",
+        "Location on the western margins of continents in 30° to 45° latitudes",
+        "Convectional rainfall throughout the year"
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Climatology",
+      "subTopic": "Mediterranean Biome & Planetary Wind Belts",
+      "concept": "Shifting of planetary pressure belts and seasonal reversal of prevailing winds.",
+      "explanation": "Statements 1 and 2 are correct: The Mediterranean type of climate (Cs in Koppen classification) is confined entirely to the western margins of continental landmasses between 30° and 45° North and South of the equator (e.g. Mediterranean basin, Central California, Central Chile, Cape Town, SW Australia). In summer, under the influence of shifting subtropical high pressure and dry offshore Trade Winds, summers are completely rainless and dry. In winter, as pressure belts shift equatorward, the region comes under the rain-bearing on-shore Westerlies, producing wet winters. Statement 3 is incorrect: Convectional rainfall throughout the year is the unique characteristic of the EQUATORIAL climate, not the Mediterranean climate.",
+      "statementAnalysis": [
+        {
+          "text": "Dry summers and wet winters",
+          "verdict": "correct",
+          "why": "Hallmark definition of the Mediterranean climatic regime."
+        },
+        {
+          "text": "Location on the western margins of continents in 30° to 45° latitudes",
+          "verdict": "correct",
+          "why": "Strict latitudinal and geographic distribution."
+        },
+        {
+          "text": "Convectional rainfall throughout the year",
+          "verdict": "incorrect",
+          "why": "Characteristic of equatorial rainforests, not Mediterranean lands."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statement 2 is also valid.",
+        "b": "Correct option validating statements 1 and 2.",
+        "c": "Incorrect because statement 3 is false.",
+        "d": "Incorrect because statement 3 is false."
+      },
+      "trap": "Confusing year-round afternoon convectional rainfall of the Doldrums/Equator with cyclonic winter rainfall of the Mediterranean.",
+      "relatedFacts": [
+        "Mediterranean regions are renowned as the 'orchard lands of the world', famous for citrus fruits (oranges, lemons, olives, grapes) and viticulture.",
+        "Vegetation consists of sclerophyllous evergreen scrub known as Maquis (Europe), Chaparral (California), and Matorral (Chile).",
+        "Local hot winds in the Mediterranean include the Sirocco (from Sahara) and the cold dry wind Mistral (down the Rhone valley)."
+      ]
+    },
+    {
+      "id": "geo-2017-06",
+      "subject": "Geography",
+      "year": 2017,
+      "qNo": 6,
+      "type": "statement-based",
+      "question": "With reference to the Indian Ocean Dipole (IOD), consider the following statements:",
+      "statements": [
+        "IOD phenomenon is characterized by a difference in sea surface temperature between tropical Western Indian Ocean and tropical Eastern Southern Indian Ocean.",
+        "An IOD phenomenon can influence an El Niño’s impact on the monsoon."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 only",
+        "c": "Both 1 and 2",
+        "d": "Neither 1 nor 2"
+      },
+      "answer": "c",
+      "topic": "Oceanography & Monsoon Dynamics",
+      "subTopic": "Indian Ocean Dipole (IOD) Teleconnections",
+      "concept": "Coupled oceanic-atmospheric interaction in the equatorial Indian Ocean.",
+      "explanation": "Both statements are correct: Statement 1 correctly defines the Indian Ocean Dipole: a positive phase occurs when the western Indian Ocean (near Arabian Sea/East Africa) becomes warmer than usual, while the eastern Indian Ocean south of Indonesia becomes unusually cold. Statement 2 is correct: A positive IOD can counteract and neutralize the drought-inducing effects of a Pacific El Niño event on the Indian Summer Monsoon (as observed in 1997).",
+      "statementAnalysis": [
+        {
+          "text": "IOD phenomenon is characterized by a difference in sea surface temperature between tropical Western Indian Ocean and tropical Eastern Southern Indian Ocean.",
+          "verdict": "correct",
+          "why": "Core oceanographic definition of the Dipole Mode Index."
+        },
+        {
+          "text": "An IOD phenomenon can influence an El Niño’s impact on the monsoon.",
+          "verdict": "correct",
+          "why": "Positive IOD brings above-average rainfall to India, overcoming El Niño drying."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 2 is also true.",
+        "b": "Incorrect because statement 1 is also true.",
+        "c": "Correct option validating both ocean-climate facts.",
+        "d": "Incorrect."
+      },
+      "trap": "Assuming regional Indian Ocean cycles have zero interaction with global Pacific ENSO cycles.",
+      "relatedFacts": [
+        "A positive IOD causes floods in East Africa and catastrophic bushfires and droughts in Australia.",
+        "A negative IOD brings cooler waters to the Arabian Sea, exacerbating Indian monsoon deficiencies.",
+        "Discovered by climate researchers in 1999."
+      ]
+    },
+    {
+      "id": "geo-2016-09",
+      "subject": "Geography",
+      "year": 2016,
+      "qNo": 9,
+      "type": "conceptual",
+      "question": "Why does the western coast of India receive very high rainfall from the South-West Monsoon compared to the interior Deccan plateau?",
+      "statements": [],
+      "options": {
+        "a": "The western coast lies in the rain-shadow zone.",
+        "b": "The Western Ghats obstruct the moisture-laden winds causing orographic rainfall.",
+        "c": "The Deccan plateau has a dense forest cover that absorbs all moisture.",
+        "d": "The Arabian Sea branch of monsoon does not reach the Deccan plateau."
+      },
+      "answer": "b",
+      "topic": "Indian Monsoon & Climatology",
+      "subTopic": "Orographic Rainfall & Rain Shadow Effect",
+      "concept": "Adiabatic expansion and condensation on the windward slope versus adiabatic warming on the leeward slope.",
+      "explanation": "The Western Ghats stand as a continuous topographical barrier perpendicular to the incoming moisture-laden South-West Monsoon winds from the Arabian Sea. The winds are forced to rise abruptly along the western windward slopes, undergoing adiabatic cooling, cloud formation, and releasing torrential orographic rainfall (exceeding 250-400 cm). Upon crossing the crest, the descending air on the eastern leeward slope warms adiabatically, causing cloud evaporation and creating the semi-arid rain-shadow zone over the Deccan Plateau.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: The western coast is the windward slope, not the rain-shadow zone.",
+        "b": "Correct: Textbook orographic ascent and precipitation mechanism.",
+        "c": "Incorrect: Forests enhance transpiration, not absorb atmospheric rain clouds.",
+        "d": "Incorrect: The branch reaches the Deccan, but air descends and ceases condensation."
+      },
+      "trap": "Swapping the windward coast with the leeward rain shadow interior.",
+      "relatedFacts": [
+        "Mahabaleshwar on the windward crest receives over 600 cm of rain, while Pune, just 65 km eastward on the leeward plateau, receives only 70 cm.",
+        "Agumbe in Karnataka is known as the 'Cherrapunji of the South' due to heavy orographic monsoon rains.",
+        "The Western Ghats are a UNESCO World Heritage site and one of the world's eight 'hottest hotspots' of biological diversity."
+      ]
+    },
+    {
+      "id": "geo-2015-05",
+      "subject": "Geography",
+      "year": 2015,
+      "qNo": 5,
+      "type": "conceptual",
+      "question": "The 'Western Disturbances' which cause winter rainfall in Northern and North-Western India originate over:",
+      "statements": [],
+      "options": {
+        "a": "Arabian Sea",
+        "b": "Bay of Bengal",
+        "c": "Mediterranean Sea",
+        "d": "Indian Ocean"
+      },
+      "answer": "c",
+      "topic": "Indian Climatology",
+      "subTopic": "Western Disturbances & Subtropical Westerly Jet Stream",
+      "concept": "Extra-tropical cyclonic depressions transported into South Asia by upper-tropospheric jet streams.",
+      "explanation": "Western Disturbances are shallow extra-tropical temperate cyclonic systems originating over the MEDITERRANEAN SEA, Black Sea, and Atlantic Ocean. They travel eastward embedded in the upper-tropospheric Subtropical Westerly Jet Stream across Iraq, Iran, and Afghanistan, entering northwest India in winter. They bring vital light to moderate rain to the plains of Punjab, Haryana, and western UP, and snowfall to the Himalayas.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Arabian sea fuels the summer monsoon and post-monsoon tropical cyclones.",
+        "b": "Incorrect: Bay of Bengal fuels retreating monsoon rains in Tamil Nadu.",
+        "c": "Correct: Mediterranean origins confirmed by meteorology.",
+        "d": "Incorrect."
+      },
+      "trap": "Assuming that because India is surrounded by the Arabian Sea and Bay of Bengal, winter storms must originate in adjacent Indian waters.",
+      "relatedFacts": [
+        "Western Disturbance winter rains (known locally as 'Mahawat') are of immense economic value for the cultivation of Rabi crops, especially wheat.",
+        "Sudden cloudbursts, cold waves, and dense winter fogs in north India are frequently triggered by active Western Disturbances.",
+        "The Subtropical Westerly Jet Stream bifurcates into two branches due to the Tibetan Plateau in winter, with the southern branch flowing along the southern slope of the Himalayas."
+      ]
+    },
+    {
+      "id": "geo-2014-08",
+      "subject": "Geography",
+      "year": 2014,
+      "qNo": 8,
+      "type": "conceptual",
+      "question": "Turkey is located between:",
+      "statements": [],
+      "options": {
+        "a": "Black Sea and Caspian Sea",
+        "b": "Black Sea and Mediterranean Sea",
+        "c": "Gulf of Suez and Mediterranean Sea",
+        "d": "Gulf of Aqaba and Dead Sea"
+      },
+      "answer": "b",
+      "topic": "World Regional Geography & Mapping",
+      "subTopic": "West Asia & Eurasian Land Bridges",
+      "concept": "Anatolian peninsula boundaries and surrounding seas.",
+      "explanation": "Turkey (the Anatolian peninsula) forms a transcontinental bridge between Europe and Asia. It is bordered by the BLACK SEA to the north, the Aegean Sea to the west, and the MEDITERRANEAN SEA to the south. (To its northwest lie the Turkish Straits: Bosphorus and Dardanelles, and Sea of Marmara).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: The Caucasus nations (Georgia, Armenia, Azerbaijan) lie between the Black Sea and Caspian Sea; Turkey does not border the Caspian Sea.",
+        "b": "Correct: Turkey is directly sandwiched between the Black Sea and the Mediterranean Sea.",
+        "c": "Incorrect: Egypt (Sinai) borders Gulf of Suez.",
+        "d": "Incorrect: Jordan/Israel border Gulf of Aqaba and Dead Sea."
+      },
+      "trap": "Confusing the landlocked Caspian Sea with the Black Sea.",
+      "relatedFacts": [
+        "Six countries border the Black Sea: Turkey, Bulgaria, Romania, Ukraine, Russia, and Georgia.",
+        "The Montreux Convention (1936) regulates maritime passage through the Turkish Straits.",
+        "Lake Van is the largest saline soda lake in Turkey located in eastern Anatolia."
+      ]
+    },
+    {
+      "id": "geo-2013-05",
+      "subject": "Geography",
+      "year": 2013,
+      "qNo": 5,
+      "type": "conceptual",
+      "question": "The Narmada river flows to the west, while most other large peninsular rivers flow to the east. Why?",
+      "statements": [
+        "It occupies a linear rift valley.",
+        "It flows between the Vindhyas and the Satpuras.",
+        "The land slopes to the west from Central India."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "None of the above"
+      },
+      "answer": "a",
+      "topic": "Peninsular Drainage of India",
+      "subTopic": "Rift Valley Drainage: Narmada and Tapi",
+      "concept": "Tectonic fault trough directing flow counter to the general peninsular tilt.",
+      "explanation": "Statement 1 is the primary geological reason: The Narmada flows west because it occupies an ancient fault depression / structural linear rift valley (formed during the Himalayan orogeny when the Indian plate collided with Eurasia). Statement 2 is factually true as a geographical description (it does flow between Vindhyas and Satpuras), but flowing between two mountain ranges is not the causal physical explanation for flowing west instead of east. Statement 3 is factually incorrect: The general geological tilt of the Peninsular plateau of India is from WEST TO EAST (which is why Godavari, Krishna, and Cauvery flow eastward into the Bay of Bengal); the land does NOT slope to the west. Hence, Statement 1 alone explains the westward flow.",
+      "statementAnalysis": [
+        {
+          "text": "It occupies a linear rift valley.",
+          "verdict": "correct",
+          "why": "The structural tectonic fault trough controls its westward gradient."
+        },
+        {
+          "text": "It flows between the Vindhyas and the Satpuras.",
+          "verdict": "incorrect",
+          "why": "Descriptive fact, not the causal hydrodynamic reason for westward direction."
+        },
+        {
+          "text": "The land slopes to the west from Central India.",
+          "verdict": "incorrect",
+          "why": "Factually false; peninsular block slopes eastward towards Bay of Bengal."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statement 1 accurately captures the causal tectonic geomorphology.",
+        "b": "Incorrect because statement 3 is factually false.",
+        "c": "Incorrect because statement 3 is factually false.",
+        "d": "Incorrect."
+      },
+      "trap": "UPSC tests causation versus correlation: Statement 2 is true in geography, but statement 1 is the causal reason.",
+      "relatedFacts": [
+        "Narmada originates on the western flank of the Amarkantak plateau in Madhya Pradesh.",
+        "At Bhedaghat near Jabalpur, Narmada plunges over the marble rocks forming the famous Dhuandhar Falls.",
+        "Sardar Sarovar Dam is the largest multi-purpose water project constructed on the Narmada River in Gujarat."
+      ]
+    },
+    {
+      "id": "geo-2023-01",
+      "subject": "Geography",
+      "year": 2023,
+      "qNo": 1,
+      "type": "pairing",
+      "question": "Consider the following countries: 1. Bulgaria, 2. Czech Republic, 3. Hungary, 4. Latvia, 5. Lithuania, 6. Romania. Which of the above share a land border with Ukraine?",
+      "statements": [],
+      "options": {
+        "a": "1, 2 and 4",
+        "b": "2, 3 and 5",
+        "c": "3 and 6 only",
+        "d": "1, 3 and 6"
+      },
+      "answer": "c",
+      "topic": "World Regional Geography & Conflict Zones",
+      "subTopic": "Eastern European Borders & Ukraine Geography",
+      "concept": "Direct international land boundaries bordering Ukraine.",
+      "explanation": "Ukraine is bordered by seven countries: Russia to the east and north-east; Belarus to the north; Poland, Slovakia, and HUNGARY to the west; and ROMANIA and Moldova to the south-west. Bulgaria, Czech Republic, Latvia, and Lithuania do NOT share a land border with Ukraine. Hence, among the given list, only 3 (Hungary) and 6 (Romania) share a land border with Ukraine.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Bulgaria and Latvia do not border Ukraine.",
+        "b": "Incorrect: Czech Republic and Lithuania do not border Ukraine.",
+        "c": "Correct: Only Hungary and Romania share borders.",
+        "d": "Incorrect because Bulgaria does not border Ukraine (separated by Romania)."
+      },
+      "trap": "Assuming Bulgaria borders Ukraine because both border the Black Sea (Romania separates them geographically on land).",
+      "relatedFacts": [
+        "The Dnieper (Dnipro) is the longest river in Ukraine, flowing south into the Black Sea.",
+        "The Sea of Azov is connected to the Black Sea via the narrow Kerch Strait.",
+        "The Carpathian Mountains extend across western Ukraine, Slovakia, Poland, and Romania."
+      ]
+    },
+    {
+      "id": "geo-2023-05",
+      "subject": "Geography",
+      "year": 2023,
+      "qNo": 5,
+      "type": "conceptual",
+      "question": "Which one of the following is a part of the Congo Basin?",
+      "statements": [],
+      "options": {
+        "a": "Cameroon",
+        "b": "Nigeria",
+        "c": "South Sudan",
+        "d": "Uganda"
+      },
+      "answer": "a",
+      "topic": "World Drainage & Biomes",
+      "subTopic": "Congo Basin & Tropical Rainforests",
+      "concept": "Riparian countries spanning the world's second-largest river basin.",
+      "explanation": "The Congo Basin spans across six central African nations: CAMEROON, Central African Republic, Democratic Republic of the Congo (DRC), Republic of the Congo, Equatorial Guinea, and Gabon. Nigeria, South Sudan, and Uganda lie outside the primary hydrological Congo rainforest basin.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Southern and eastern Cameroon drain directly into the Congo River basin.",
+        "b": "Incorrect: Nigeria drains into the Niger River basin.",
+        "c": "Incorrect: South Sudan lies in the White Nile basin.",
+        "d": "Incorrect: Uganda lies primarily in the Nile River basin (Lake Victoria)."
+      },
+      "trap": "Confusing adjacent equatorial African nations (Uganda, Nigeria) with the hydrological drainage boundaries of the Congo.",
+      "relatedFacts": [
+        "The Congo River is the second-longest river in Africa (after the Nile) and the second-largest by discharge volume in the world (after the Amazon).",
+        "The Congo River crosses the Equator twice.",
+        "Congo Basin peatlands (Cuvette Centrale) store approximately 30 billion tonnes of carbon, equivalent to three years of global fossil fuel emissions."
+      ]
+    },
+    {
+      "id": "geo-2022-03",
+      "subject": "Geography",
+      "year": 2022,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "The term 'Levant' often heard in the news roughly corresponds to which of the following regions?",
+      "statements": [],
+      "options": {
+        "a": "Region along the eastern Mediterranean shores",
+        "b": "Region along North African shores stretching from Egypt to Morocco",
+        "c": "Region along Persian Gulf and Horn of Africa",
+        "d": "The entire coastal areas of Mediterranean Sea"
+      },
+      "answer": "a",
+      "topic": "World Regional Geography",
+      "subTopic": "Historical Regions of West Asia (The Levant)",
+      "concept": "Geographical designation for the eastern Mediterranean littoral lands.",
+      "explanation": "The 'Levant' (derived from the French word lever, meaning 'to rise', referring to the land where the sun rises in the east) is an approximate historical-geographical term referring to the large area in Southwest Asia bounded by the Taurus Mountains to the north, the Arabian Desert to the south, and the EASTERN MEDITERRANEAN SEA to the west. It encompasses modern-day Lebanon, Syria, Jordan, Israel, Palestine, and parts of southern Turkey.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Standard geographical definition of the eastern Mediterranean littoral.",
+        "b": "Incorrect: That describes the Maghreb.",
+        "c": "Incorrect: Refers to the Gulf / Horn of Africa.",
+        "d": "Incorrect: Extreme overgeneralization ('the entire coastal areas')."
+      },
+      "trap": "Confusing the Levant (Eastern Mediterranean) with the Maghreb (North-Western Africa: Morocco, Algeria, Tunisia).",
+      "relatedFacts": [
+        "The acronym ISIL stands for 'Islamic State of Iraq and the Levant'.",
+        "The Fertile Crescent encompasses the Levant along with Mesopotamia (Tigris and Euphrates valleys).",
+        "Mount Lebanon and the Anti-Lebanon ranges run parallel to the Levantine coast."
+      ]
+    },
+    {
+      "id": "geo-2022-08",
+      "subject": "Geography",
+      "year": 2022,
+      "qNo": 8,
+      "type": "pairing",
+      "question": "Consider the following pairs of mountain peaks and their corresponding mountain ranges:",
+      "statements": [
+        "Namcha Barwa — Garhwal Himalaya",
+        "Nanda Devi — Kumaon Himalaya",
+        "Nokrek — Garo Hills"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 only",
+        "c": "1 and 3 only",
+        "d": "2 and 3 only"
+      },
+      "answer": "d",
+      "topic": "Physiography of India",
+      "subTopic": "Himalayan Peaks & North-Eastern Hills",
+      "concept": "Correct alignment of highest peaks with regional Himalayan and Meghalaya sections.",
+      "explanation": "Pair 1 is incorrectly matched: Namcha Barwa (7,782 m) is the easternmost anchor peak of the Great Himalayas located in Tibet / Arunachal Pradesh border, around which the Brahmaputra takes its dramatic U-turn (hairpin bend); it is NOT in the Garhwal Himalaya of Uttarakhand. Pair 2 is correctly matched: Nanda Devi (7,816 m), India's second-highest peak, is located in the Kumaon/Garhwal section of the Himalayas in Chamoli district of Uttarakhand. Pair 3 is correctly matched: Nokrek Peak (1,412 m) is the highest peak of the Garo Hills in Meghalaya, protected as the Nokrek Biosphere Reserve.",
+      "statementAnalysis": [
+        {
+          "text": "Namcha Barwa — Garhwal Himalaya",
+          "verdict": "incorrect",
+          "why": "Namcha Barwa is in the Eastern / Assam Himalayas, not western Garhwal."
+        },
+        {
+          "text": "Nanda Devi — Kumaon Himalaya",
+          "verdict": "correct",
+          "why": "Part of the Kumaon-Garhwal division in Uttarakhand."
+        },
+        {
+          "text": "Nokrek — Garo Hills",
+          "verdict": "correct",
+          "why": "Highest peak in the Garo Hills of Meghalaya."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because Pair 1 is false.",
+        "b": "Incorrect, Pair 3 is also valid.",
+        "c": "Incorrect because Pair 1 is false.",
+        "d": "Correct answer consisting of Pairs 2 and 3."
+      },
+      "trap": "Locating Namcha Barwa (far eastern end in Arunachal/Tibet) in Garhwal (western Himalayas).",
+      "relatedFacts": [
+        "Nanda Devi Biosphere Reserve and Valley of Flowers National Park together form a UNESCO World Heritage site.",
+        "Nokrek Biosphere Reserve is home to the endangered Red Panda and Asian Elephant, and preserves the wild gene pool of Citrus indica (Indian wild orange).",
+        "The syntaxial bends of the Himalayas occur at Nanga Parbat in the west and Namcha Barwa in the east."
+      ]
+    },
+    {
+      "id": "geo-2021-08",
+      "subject": "Geography",
+      "year": 2021,
+      "qNo": 8,
+      "type": "conceptual",
+      "question": "Didwana, Kuchaman, Sargol and Khatu are the names of:",
+      "statements": [],
+      "options": {
+        "a": "glaciers",
+        "b": "mangrove areas",
+        "c": "Ramsar sites",
+        "d": "saline lakes"
+      },
+      "answer": "d",
+      "topic": "Hydrology & Geomorphology of India",
+      "subTopic": "Playa & Saline Lakes of the Thar Desert",
+      "concept": "Inland endorheic drainage basins and hypersaline depression lakes in Rajasthan.",
+      "explanation": "Didwana, Kuchaman, Sargol, and Khatu are inland SALINE LAKES (playas or salt flats) located in the arid and semi-arid terrain of Nagaur and Didwana-Kuchaman districts of RAJASTHAN. During monsoons, ephemeral runoff accumulates in these shallow depressions, which rapidly evaporate in the scorching summer, leaving behind thick commercial crusts of common salt (sodium chloride) and sodium sulphate.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Glaciers are in the high Himalayas.",
+        "b": "Incorrect: Mangroves are along coastal inter-tidal mudflats.",
+        "c": "Incorrect: Keoladeo and Sambhar are the only Ramsar wetland sites in Rajasthan.",
+        "d": "Correct: Traditional saline playa lakes of the Thar Desert."
+      },
+      "trap": "Assuming these names are obscure Ramsar sites rather than regional playa salt lakes.",
+      "relatedFacts": [
+        "Sambhar Lake in Rajasthan is India's largest inland saline lake and produces about 9% of India's salt.",
+        "Pachpadra Lake in Barmer district is famous for high-purity (98% NaCl) salt extraction.",
+        "A 'playa' is an ephemeral lake bed in an endorheic desert basin."
+      ]
+    },
+    {
+      "id": "geo-2017-01",
+      "subject": "Geography",
+      "year": 2017,
+      "qNo": 1,
+      "type": "statement-based",
+      "question": "With reference to river Teesta, consider the following statements:",
+      "statements": [
+        "The source of river Teesta is the same as that of Brahmaputra but it flows through Sikkim.",
+        "River Rangeet originates in Sikkim and it is a tributary of river Teesta.",
+        "River Teesta flows into Bay of Bengal on the border of India and Bangladesh."
+      ],
+      "options": {
+        "a": "1 and 3 only",
+        "b": "2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Indian Drainage Systems",
+      "subTopic": "Teesta River Basin & Tributaries",
+      "concept": "Source differences between Trans-Himalayan Brahmaputra and Sikkim Teesta, and confluence points.",
+      "explanation": "Statement 1 is incorrect: River Teesta originates from Tso Lhamo lake / Teesta Khangse glacier in North SIKKIM, whereas the Brahmaputra originates far to the west in Tibet near Mount Kailash from the Angsi / Chemayungdung glacier. Statement 2 is correct: River Rangeet (Rangeet River) is the largest tributary of the Teesta and originates in West Sikkim. Statement 3 is incorrect: Teesta does NOT flow directly into the Bay of Bengal; it flows into BANGLADESH where it joins the Jamuna (Brahmaputra) at Fulchhari as a right-bank tributary. The combined waters later join the Meghna before entering the Bay of Bengal.",
+      "statementAnalysis": [
+        {
+          "text": "The source of river Teesta is the same as that of Brahmaputra but it flows through Sikkim.",
+          "verdict": "incorrect",
+          "why": "Brahmaputra originates near Lake Manasarovar in Tibet; Teesta originates in North Sikkim."
+        },
+        {
+          "text": "River Rangeet originates in Sikkim and it is a tributary of river Teesta.",
+          "verdict": "correct",
+          "why": "Rangeet is the major glacier-fed tributary of the Teesta."
+        },
+        {
+          "text": "River Teesta flows into Bay of Bengal on the border of India and Bangladesh.",
+          "verdict": "incorrect",
+          "why": "Teesta joins the Brahmaputra (Jamuna) inside Bangladesh, far inland from the sea."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statements 1 and 3 are false.",
+        "b": "Correct: Only statement 2 is valid.",
+        "c": "Incorrect because statement 3 is false.",
+        "d": "Incorrect because statements 1 and 3 are false."
+      },
+      "trap": "Believing Teesta empties directly into the Bay of Bengal on the international border.",
+      "relatedFacts": [
+        "Historically, before the catastrophic flood of 1787, the Teesta was a tributary of the Ganga, but an avulsion shifted its course into the Brahmaputra.",
+        "Teesta is known as the 'lifeline of Sikkim'.",
+        "India and Bangladesh have an ongoing bilateral dispute over sharing Teesta river waters during the lean dry season."
+      ]
+    },
+    {
+      "id": "geo-2023-08",
+      "subject": "Geography",
+      "year": 2023,
+      "qNo": 8,
+      "type": "matching",
+      "question": "Consider the following pairs of rivers and their receiving water bodies:",
+      "statements": [
+        "Mekong — Andaman Sea",
+        "Thames — Irish Sea",
+        "Volga — Caspian Sea",
+        "Zambezi — Indian Ocean"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "3",
+        "c": "3 and 4 only",
+        "d": "1, 2 and 4 only"
+      },
+      "answer": "c",
+      "topic": "World Drainage Systems",
+      "subTopic": "Major Global Rivers & Ocean Outflows",
+      "concept": "Hydrological drainage basins and ultimate sea/ocean discharge destinations of prominent world rivers.",
+      "explanation": "Pair 1 is incorrectly matched: The Mekong River originates in the Tibetan Plateau and flows through China, Myanmar, Laos, Thailand, Cambodia, and Vietnam to discharge into the South China Sea, NOT the Andaman Sea (Irrawaddy and Salween discharge into Andaman Sea/Martaban). Pair 2 is incorrectly matched: The River Thames flows through southern England to empty into the North Sea, NOT the Irish Sea. Pair 3 is correctly matched: The Volga River (longest river in Europe) flows entirely through Russia and empties into the landlocked Caspian Sea. Pair 4 is correctly matched: The Zambezi River (famous for Victoria Falls) flows through south-central Africa to discharge into the Mozambique Channel of the Indian Ocean.",
+      "statementAnalysis": [
+        {
+          "text": "Mekong — Andaman Sea",
+          "verdict": "incorrect",
+          "why": "Mekong empties into the South China Sea."
+        },
+        {
+          "text": "Thames — Irish Sea",
+          "verdict": "incorrect",
+          "why": "Thames empties eastward into the North Sea."
+        },
+        {
+          "text": "Volga — Caspian Sea",
+          "verdict": "correct",
+          "why": "Volga drains into the northern Caspian Sea."
+        },
+        {
+          "text": "Zambezi — Indian Ocean",
+          "verdict": "correct",
+          "why": "Zambezi flows into the Indian Ocean via Mozambique."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Both pairs 1 and 2 are erroneous.",
+        "b": "Incorrect: Pair 4 is also correct.",
+        "c": "Correct: Only pairs 3 and 4 are accurately matched.",
+        "d": "Incorrect: Pairs 1 and 2 are false."
+      },
+      "trap": "Candidates confuse Southeast Asian rivers: Mekong flows east into South China Sea, while Salween and Irrawaddy flow south into the Andaman Sea.",
+      "relatedFacts": [
+        "The Volga River delta on the Caspian Sea is the largest river delta in Europe.",
+        "Kariba Dam and Cahora Bassa Dam are massive hydroelectric dams constructed on the Zambezi River.",
+        "The Danube River flows through four national capitals (Vienna, Bratislava, Budapest, Belgrade) before emptying into the Black Sea."
+      ]
+    },
+    {
+      "id": "geo-2022-04",
+      "subject": "Geography",
+      "year": 2022,
+      "qNo": 4,
+      "type": "statement-based",
+      "question": "Which of the following pairs of lakes and bordering countries is/are correctly matched?",
+      "statements": [
+        "Lake Victoria — Kenya, Uganda and Tanzania",
+        "Lake Tanganyika — Burundi, DRC, Tanzania and Zambia",
+        "Lake Baikal — Russia and Mongolia"
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "World Physical Geography & Lakes",
+      "subTopic": "African Great Lakes & Rift Valley Limnology",
+      "concept": "Sovereign riparian borders of major world freshwater lakes.",
+      "explanation": "Statements 1 and 2 are correct: Lake Victoria (Africa's largest lake and primary source of the White Nile) is shared by three countries: Kenya (6%), Uganda (45%), and Tanzania (49%). Lake Tanganyika (the world's longest freshwater lake and second deepest after Baikal) is partitioned among four nations: Tanzania (46%), DRC (40%), Burundi (9%), and Zambia (5%). Statement 3 is incorrect: Lake Baikal (the world's deepest and most voluminous freshwater lake) is located ENTIRELY within the territory of the Russian Federation (in Siberia), not shared with Mongolia (though the Selenga River flows from Mongolia into Baikal).",
+      "statementAnalysis": [
+        {
+          "text": "Lake Victoria — Kenya, Uganda and Tanzania",
+          "verdict": "correct",
+          "why": "Bordered precisely by Uganda, Kenya, and Tanzania."
+        },
+        {
+          "text": "Lake Tanganyika — Burundi, DRC, Tanzania and Zambia",
+          "verdict": "correct",
+          "why": "Four riparian states border this East African rift lake."
+        },
+        {
+          "text": "Lake Baikal — Russia and Mongolia",
+          "verdict": "incorrect",
+          "why": "Lake Baikal lies entirely within Russia."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 2 is also valid.",
+        "b": "Correct: Statements 1 and 2 are correctly matched.",
+        "c": "Incorrect: Statement 3 is false.",
+        "d": "Incorrect: Statement 3 is false."
+      },
+      "trap": "Students assume Baikal is shared because its drainage basin extends into Mongolia via the Selenga River, but the lake body itself is 100% inside Russia.",
+      "relatedFacts": [
+        "Lake Victoria is the world's second-largest freshwater lake by surface area (after Lake Superior in North America).",
+        "Lake Baikal holds approximately 20% of the world's unfrozen surface fresh water.",
+        "The East African Rift is an active divergent tectonic boundary tearing the Somali Plate from the Nubian Plate."
+      ]
+    },
+    {
+      "id": "geo-2021-02",
+      "subject": "Geography",
+      "year": 2021,
+      "qNo": 2,
+      "type": "conceptual",
+      "question": "The vegetation of savannas consists of grassland with scattered small trees, but extensive areas have no trees. The forest development in such areas is generally kept in check by one or more or a combination of some conditions. Which of the following are such conditions?",
+      "statements": [
+        "Burrowing animals and termites",
+        "Fire",
+        "Grazing herbivores",
+        "Seasonal rainfall",
+        "Soil properties"
+      ],
+      "options": {
+        "a": "1 and 2",
+        "b": "4 and 5",
+        "c": "2, 3 and 4",
+        "d": "1, 3 and 5"
+      },
+      "answer": "c",
+      "topic": "World Biomes & Climatology",
+      "subTopic": "Savanna / Tropical Wet-and-Dry Biome Dynamics",
+      "concept": "Ecological disturbance regimes (fire, herbivory, drought) that prevent canopy closure in tropical savannas.",
+      "explanation": "In tropical savanna ecosystems (Sudan type climate), the transition from open grassland to closed-canopy forest is prevented primarily by three interdependent ecological driving factors: 1. Seasonal rainfall: Savannas experience distinct, severe alternating wet and dry seasons; the prolonged dry season creates acute water stress that restricts tree sapling establishment. 2. Periodic bush fires: Frequent dry-season fires incinerate young woody seedlings while subterranean grass root crowns survive and resprout rapidly. 3. Grazing and browsing herbivores: Enormous herds of ungulates (zebras, wildebeests, elephants, giraffes) consume tree seedlings and strip bark, arresting tree recruitment. While termites exist, they are not the primary macro-drivers suppressing tree growth. Hence, 2, 3, and 4.",
+      "statementAnalysis": [
+        {
+          "text": "Burrowing animals and termites",
+          "verdict": "incorrect",
+          "why": "Termites alter soil mounds, but do not prevent forest development at landscape scales."
+        },
+        {
+          "text": "Fire",
+          "verdict": "correct",
+          "why": "Dry-season wildfire is the primary disturbance that burns emerging tree saplings."
+        },
+        {
+          "text": "Grazing herbivores",
+          "verdict": "correct",
+          "why": "Intense megafaunal browsing suppresses woodland canopy formation."
+        },
+        {
+          "text": "Seasonal rainfall",
+          "verdict": "correct",
+          "why": "Prolonged dry season induces severe moisture deficits that favor C4 grasses."
+        },
+        {
+          "text": "Soil properties",
+          "verdict": "incorrect",
+          "why": "Secondary factor, not the primary macro-climatic controller compared to 2, 3, 4."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Excludes grazing and seasonal rainfall.",
+        "b": "Incorrect: Excludes fire.",
+        "c": "Correct (Official UPSC Key): Conditions 2, 3, and 4 maintain the open savanna structure.",
+        "d": "Incorrect: Termites do not arrest forest growth."
+      },
+      "trap": "Candidates often select 'all of the above' without realizing UPSC standard key strictly selects the triad of fire, herbivory, and seasonal rainfall (2, 3, and 4).",
+      "relatedFacts": [
+        "Savanna grasses utilize the C4 photosynthetic pathway, which is highly efficient under intense heat and moisture stress.",
+        "The African Serengeti and Venezuelan Llanos are classic examples of the tropical savanna biome.",
+        "Trees in the savanna (like Baobabs and Acacias) have thick fire-resistant bark and water-storing trunks."
+      ]
+    },
+    {
+      "id": "geo-2020-04",
+      "subject": "Geography",
+      "year": 2020,
+      "qNo": 4,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding Jet Streams:",
+      "statements": [
+        "Jet streams occur in the Northern Hemisphere only.",
+        "Only some cyclones develop an eye.",
+        "The temperature inside the eye of a cyclone is nearly 10°C lesser than that of the surroundings."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "2 only",
+        "d": "1 and 3 only"
+      },
+      "answer": "c",
+      "topic": "Climatology",
+      "subTopic": "Jet Streams & Tropical Cyclone Structure",
+      "concept": "Tropospheric upper-level westerly jet streams across both hemispheres and warm-core thermodynamics of tropical cyclone eyes.",
+      "explanation": "Statement 1 is incorrect: Jet streams are narrow meandering bands of high-velocity upper-tropospheric westerly winds that occur in BOTH the Northern and Southern Hemispheres (Subtropical Jet and Polar Front Jet in each hemisphere). Statement 2 is correct: Not all cyclones develop a clear eye; only well-developed, mature tropical cyclones (hurricanes/typhoons) develop a distinct, calm central eye; extra-tropical (temperate) cyclones do not possess an eye. Statement 3 is incorrect: The eye of a mature tropical cyclone is a region of subsidence where descending air warms adiabatically; therefore, the temperature inside the eye is typically warmer (5°C to 10°C HIGHER, not lesser) than the surrounding air (warm-core system).",
+      "statementAnalysis": [
+        {
+          "text": "Jet streams occur in the Northern Hemisphere only.",
+          "verdict": "incorrect",
+          "why": "Jet streams exist symmetrically in both Northern and Southern Hemispheres."
+        },
+        {
+          "text": "Only some cyclones develop an eye.",
+          "verdict": "correct",
+          "why": "Only intense mature tropical cyclones form a central eye."
+        },
+        {
+          "text": "The temperature inside the eye of a cyclone is nearly 10°C lesser than that of the surroundings.",
+          "verdict": "incorrect",
+          "why": "Adiabatic compression makes the eye significantly warmer, not colder."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 1 is false.",
+        "b": "Incorrect: Statement 3 is false.",
+        "c": "Correct: Only Statement 2 is scientifically valid.",
+        "d": "Incorrect: Statements 1 and 3 are both false."
+      },
+      "trap": "Candidates often assume the eye is cold because of stormy surroundings, failing to recognize adiabatic warming of subsiding central air.",
+      "relatedFacts": [
+        "Jet streams were discovered during World War II by American B-29 bomber pilots flying westward over the Pacific.",
+        "Tropical cyclones derive their kinetic energy from latent heat of condensation released over sea surface temperatures above 26.5°C.",
+        "The Coriolis force is zero at the equator, which is why tropical cyclones cannot form between 0° and 5° latitude."
+      ]
+    },
+    {
+      "id": "geo-2019-03",
+      "subject": "Geography",
+      "year": 2019,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "Which of the following is/are the reasons for the occurrence of Western Disturbances in India during the winter months?",
+      "statements": [
+        "They originate over the Mediterranean Sea and Atlantic Ocean.",
+        "They are steered towards the Indian subcontinent by the Subtropical Westerly Jet Stream.",
+        "They cause highly beneficial winter rainfall for Rabi crops, especially wheat, in North-Western India."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Indian Climatology",
+      "subTopic": "Western Disturbances & Winter Precipitation",
+      "concept": "Extra-tropical cyclonic weather systems arriving from the Mediterranean basin driven by high-altitude westerlies.",
+      "explanation": "All three statements are correct: 1. Western Disturbances are shallow extra-tropical temperate cyclones that originate over the Mediterranean Sea, Black Sea, and the Caspian Sea. 2. During the winter, the Subtropical Westerly Jet Stream shifts southward, flowing south of the Himalayas across northern India, which steers these temperate depressions directly across Iran, Pakistan, and northwest India. 3. The precipitation brought by them (rain in Punjab/Haryana/UP plains and snowfall in Himachal/J&K) is popularly known as 'Mahawat' and is crucial for the germination and growth of Rabi winter crops, particularly wheat.",
+      "statementAnalysis": [
+        {
+          "text": "They originate over the Mediterranean Sea and Atlantic Ocean.",
+          "verdict": "correct",
+          "why": "Moisture is gathered from the Mediterranean and Caspian Seas."
+        },
+        {
+          "text": "They are steered towards the Indian subcontinent by the Subtropical Westerly Jet Stream.",
+          "verdict": "correct",
+          "why": "Upper-tropospheric jet streams provide the dynamical steering mechanism."
+        },
+        {
+          "text": "They cause highly beneficial winter rainfall for Rabi crops, especially wheat, in North-Western India.",
+          "verdict": "correct",
+          "why": "Essential for winter wheat productivity in Punjab, Haryana, and Western UP."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 3 is also true.",
+        "b": "Incorrect: Statement 1 is also true.",
+        "c": "Incorrect: Statement 2 is also true.",
+        "d": "Correct: All three statements accurately describe Western Disturbances."
+      },
+      "trap": "Aspirants confuse Western Disturbances with the retreating Northeast monsoon, which brings rain to Tamil Nadu, not northwest India.",
+      "relatedFacts": [
+        "Western Disturbances cause severe cold waves and dense radiation fog across the Indo-Gangetic Plains in December and January.",
+        "An increase in prevailing night temperatures is the primary advance signal of the arrival of a Western Disturbance.",
+        "Excessive snowfall in the Himalayas from these systems feeds glacial runoff into the Indus and Ganga river systems in spring."
+      ]
+    },
+    {
+      "id": "geo-2018-05",
+      "subject": "Geography",
+      "year": 2018,
+      "qNo": 5,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding the Barren Island volcano:",
+      "statements": [
+        "The Barren Island volcano is an active volcano located in the Indian territory.",
+        "Barren Island lies about 140 km east of Great Nicobar.",
+        "The last time the Barren Island volcano erupted was in 1991 and it has remained inactive since then."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 and 3",
+        "c": "3 only",
+        "d": "1 and 3"
+      },
+      "answer": "a",
+      "topic": "Physiography of Indian Islands & Volcanology",
+      "subTopic": "Barren Island & Narcondam Islands",
+      "concept": "Tectonic setting, geographic coordinates, and active eruption history of India's sole active volcano.",
+      "explanation": "Statement 1 is correct: Barren Island, located in the Andaman Sea, is the ONLY confirmed active volcano in the Indian territory (and in South Asia). Statement 2 is incorrect: Barren Island lies approximately 135 km northeast of Port Blair in the Andaman Islands, NOT Great Nicobar (which is located much further south, over 500 km away across the Ten Degree Channel). Statement 3 is incorrect: Although it erupted in 1991 after nearly two centuries of dormancy, it erupted again in 1994-95, 2005, and as recently as 2017, 2018, and 2020; hence it has NOT remained inactive since 1991.",
+      "statementAnalysis": [
+        {
+          "text": "The Barren Island volcano is an active volcano located in the Indian territory.",
+          "verdict": "correct",
+          "why": "Sole active volcano in India and South Asia."
+        },
+        {
+          "text": "Barren Island lies about 140 km east of Great Nicobar.",
+          "verdict": "incorrect",
+          "why": "Lies northeast of Port Blair in the Andamans, not Great Nicobar."
+        },
+        {
+          "text": "The last time the Barren Island volcano erupted was in 1991 and it has remained inactive since then.",
+          "verdict": "incorrect",
+          "why": "Repeated eruptions occurred throughout the 2000s and 2010s."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Only Statement 1 is factually accurate.",
+        "b": "Incorrect: Statements 2 and 3 are both false.",
+        "c": "Incorrect: Statement 3 is false.",
+        "d": "Incorrect: Statement 3 is false."
+      },
+      "trap": "Examiners substitute Port Blair with Great Nicobar to test geographic map precision.",
+      "relatedFacts": [
+        "Narcondam Island, situated north of Barren Island, is a dormant volcanic island famous for the endemic Narcondam hornbill.",
+        "The Barren Island volcano lies along the subduction zone boundary between the Indian Plate and the Burmese microplate.",
+        "The island is uninhabited by humans, populated only by feral goats, bats, and birds."
+      ]
+    },
+    {
+      "id": "geo-2017-04",
+      "subject": "Geography",
+      "year": 2017,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "Which of the following is/are tributary/tributaries of Brahmaputra?",
+      "statements": [
+        "Dibang",
+        "Kameng",
+        "Lohit"
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Drainage Systems of India",
+      "subTopic": "Brahmaputra River System & Major Tributaries",
+      "concept": "Left-bank and right-bank tributary network of the Yarlung Tsangpo / Brahmaputra basin.",
+      "explanation": "All three rivers are prominent tributaries of the Brahmaputra: 1. Dibang (or Sikang) is a major left-bank tributary that flows through Arunachal Pradesh and joins the Dihang (Siang) along with the Lohit near Sadiya to formally form the Brahmaputra. 2. Kameng (originating in Tawang district, Arunachal Pradesh; called Jia Bhoreli in Assam) is a major right-bank tributary that joins the Brahmaputra at Tezpur. 3. Lohit (originating in eastern Tibet, Zayul region) is a torrential left-bank tributary that surges through Arunachal Pradesh before joining the Brahmaputra; the Bhupen Hazarika Setu (Dhola-Sadiya bridge) is built across it.",
+      "statementAnalysis": [
+        {
+          "text": "Dibang",
+          "verdict": "correct",
+          "why": "Major left-bank tributary meeting Dihang at Sadiya."
+        },
+        {
+          "text": "Kameng",
+          "verdict": "correct",
+          "why": "Right-bank tributary draining Pakke Tiger Reserve and joining at Tezpur."
+        },
+        {
+          "text": "Lohit",
+          "verdict": "correct",
+          "why": "Major eastern left-bank tributary carrying red sediment."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Kameng and Lohit are also tributaries.",
+        "b": "Incorrect: Dibang is also a tributary.",
+        "c": "Incorrect: Kameng is also a tributary.",
+        "d": "Correct: All three are major tributaries of the Brahmaputra."
+      },
+      "trap": "Aspirants confuse the Barak/Surma river system of Manipur/Mizoram with Brahmaputra tributaries.",
+      "relatedFacts": [
+        "The Brahmaputra originates from the Chemayungdung glacier of the Kailash range near Lake Manasarovar as the Yarlung Tsangpo.",
+        "It cuts a spectacular 90-degree U-turn (syntaxial bend) around the Namcha Barwa peak to enter India as the Siang/Dihang.",
+        "Majuli, the world's largest inhabited river island, is formed by the Brahmaputra and its anabranch Kherkutia Xuti in Assam."
+      ]
+    },
+    {
+      "id": "geo-2016-04",
+      "subject": "Geography",
+      "year": 2016,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "Which of the following is/are the characteristic features of the 'Mediterranean Agriculture'?",
+      "statements": [
+        "It is highly specialized commercial agriculture.",
+        "Viticulture or grape cultivation is a specialty of this region.",
+        "Best quality wines in the world with distinctive flavors are produced from this region.",
+        "Citrus fruits such as oranges and lemons are major products."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2, 3 and 4 only",
+        "c": "1, 3 and 4 only",
+        "d": "1, 2, 3 and 4"
+      },
+      "answer": "d",
+      "topic": "World Agricultural Systems & Biomes",
+      "subTopic": "Mediterranean Agriculture & Viticulture",
+      "concept": "Orchard farming, citrus horticulture, and viticulture adapted to hot, dry summers and mild, rainy winters.",
+      "explanation": "All four statements are hallmark characteristics of Mediterranean agriculture: 1. It is a highly specialized, capital-intensive commercial agriculture practiced in lands surrounding the Mediterranean Sea, central California, central Chile, southwestern South Africa, and southwestern Australia. 2. Viticulture (grape cultivation) is the premier specialty of the Mediterranean biome. 3. Superior grapes are processed into world-renowned vintage wines with distinct terroir (French, Italian, Spanish, Californian wines). 4. Citrus fruits (lemons, oranges, grapefruits) and olives, possessing thick waxy skins and deep roots to survive dry summers, are dominant cash crops.",
+      "statementAnalysis": [
+        {
+          "text": "It is highly specialized commercial agriculture.",
+          "verdict": "correct",
+          "why": "Intensive commercial horticulture commanding global markets."
+        },
+        {
+          "text": "Viticulture or grape cultivation is a specialty of this region.",
+          "verdict": "correct",
+          "why": "Viticulture is the signature agro-economic activity."
+        },
+        {
+          "text": "Best quality wines in the world with distinctive flavors are produced from this region.",
+          "verdict": "correct",
+          "why": "Produces legendary Bordeaux, Champagne, Chianti, and Rioja wines."
+        },
+        {
+          "text": "Citrus fruits such as oranges and lemons are major products.",
+          "verdict": "correct",
+          "why": "Dry summers and winter rain support thick-skinned citrus groves."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Excludes wine and citrus production.",
+        "b": "Incorrect: Excludes commercial specialization.",
+        "c": "Incorrect: Excludes viticulture.",
+        "d": "Correct: All four statements embody Mediterranean farming systems."
+      },
+      "trap": "Candidates might confuse Mediterranean farming with subsistence polyculture, overlooking that its modern economic driver is high-value commercial viticulture.",
+      "relatedFacts": [
+        "Mediterranean climate is classified under the Koppen system as Csa and Csb (dry summer subtropical).",
+        "In summer, the belt shifts under the influence of dry subtropical high-pressure cells (westerlies shift poleward).",
+        "In winter, the westerlies migrate equatorward, bringing cyclonic rains from the ocean."
+      ]
+    },
+    {
+      "id": "geo-2015-08",
+      "subject": "Geography",
+      "year": 2015,
+      "qNo": 8,
+      "type": "conceptual",
+      "question": "Which of the following factors are responsible for the movement of ocean currents?",
+      "statements": [
+        "Planetary winds",
+        "Density differences in ocean water",
+        "Revolution of the Earth",
+        "Shape and configuration of coastlines"
+      ],
+      "options": {
+        "a": "1 and 4 only",
+        "b": "1, 2 and 4 only",
+        "c": "2 and 3 only",
+        "d": "1, 2, 3 and 4"
+      },
+      "answer": "b",
+      "topic": "Oceanography",
+      "subTopic": "Ocean Current Circulation Dynamics",
+      "concept": "Primary driving forces (winds, thermal/salinity density gradients, Coriolis deflection via ROTATION) vs non-factors.",
+      "explanation": "Primary factors influencing ocean currents include: 1. Planetary winds (Trade winds, Westerlies) which drag surface waters through friction. 2. Density differences driven by salinity and temperature variations, generating deep thermohaline circulation. 4. Shape and configuration of landmasses/coastlines, which deflect and steer currents into circular gyres. The ROTATION of the Earth (generating Coriolis force) influences currents, but the REVOLUTION of the Earth around the Sun (which causes seasonal cycles) is NOT a direct driving mechanical force for ocean current movement. Hence, 1, 2 and 4 only.",
+      "statementAnalysis": [
+        {
+          "text": "Planetary winds",
+          "verdict": "correct",
+          "why": "Major force initiating horizontal surface currents."
+        },
+        {
+          "text": "Density differences in ocean water",
+          "verdict": "correct",
+          "why": "Drives vertical sinking and the global thermohaline conveyor belt."
+        },
+        {
+          "text": "Revolution of the Earth",
+          "verdict": "incorrect",
+          "why": "Rotation causes Coriolis deflection; revolution around the sun is not a direct driver of current dynamics."
+        },
+        {
+          "text": "Shape and configuration of coastlines",
+          "verdict": "correct",
+          "why": "Land boundaries deflect and guide oceanic gyres."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Excludes density differences.",
+        "b": "Correct: Statements 1, 2, and 4 are physical drivers of currents.",
+        "c": "Incorrect: Includes Revolution and excludes winds.",
+        "d": "Incorrect: Revolution of the Earth is not a direct mechanical driver."
+      },
+      "trap": "Examiner sets a classic trap by writing 'Revolution of the Earth' instead of 'Rotation of the Earth'.",
+      "relatedFacts": [
+        "Coriolis force (caused by Earth's rotation) deflects ocean currents to the right in the Northern Hemisphere and to the left in the Southern Hemisphere.",
+        "Ocean gyres rotate clockwise in the Northern Hemisphere and counter-clockwise in the Southern Hemisphere.",
+        "Thermohaline circulation is often referred to as the 'Global Ocean Conveyor Belt'."
+      ]
+    },
+    {
+      "id": "geo-2014-03",
+      "subject": "Geography",
+      "year": 2014,
+      "qNo": 3,
+      "type": "statement-based",
+      "question": "Which of the following pairs of National Waterways (NW) and rivers is/are correctly matched?",
+      "statements": [
+        "National Waterway 1 — Ganga-Bhagirathi-Hooghly river system",
+        "National Waterway 2 — Brahmaputra river",
+        "National Waterway 3 — West Coast Canal in Kerala"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Economic Geography & Transport",
+      "subTopic": "Inland Waterways of India",
+      "concept": "Statutory alignment and connectivity of National Waterways 1, 2, and 3 under IWAI.",
+      "explanation": "All three pairs are correctly matched: 1. National Waterway 1 (NW-1) spans the Ganga-Bhagirathi-Hooghly river system from Prayagraj (Allahabad) to Haldia (1,620 km), being India's longest waterway. 2. National Waterway 2 (NW-2) runs along the Brahmaputra river from Dhubri to Sadiya in Assam (891 km). 3. National Waterway 3 (NW-3, West Coast Canal) stretches from Kottapuram to Kollam in Kerala along with Champakara and Udyogmandal canals (205 km), being India's first waterway with 24-hour navigation facilities.",
+      "statementAnalysis": [
+        {
+          "text": "National Waterway 1 — Ganga-Bhagirathi-Hooghly river system",
+          "verdict": "correct",
+          "why": "NW-1 connects Prayagraj to Haldia."
+        },
+        {
+          "text": "National Waterway 2 — Brahmaputra river",
+          "verdict": "correct",
+          "why": "NW-2 spans Sadiya to Dhubri on Brahmaputra."
+        },
+        {
+          "text": "National Waterway 3 — West Coast Canal in Kerala",
+          "verdict": "correct",
+          "why": "NW-3 connects Kottapuram to Kollam."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 3 is also correct.",
+        "b": "Incorrect: Statement 1 is also correct.",
+        "c": "Incorrect: Statement 2 is also correct.",
+        "d": "Correct: All three waterway alignments are accurately matched."
+      },
+      "trap": "Aspirants often confuse NW-2 (Brahmaputra) with NW-4 (Krishna-Godavari and Buckingham Canal).",
+      "relatedFacts": [
+        "The Inland Waterways Authority of India (IWAI) was constituted in 1986 under the Ministry of Ports, Shipping and Waterways.",
+        "The National Waterways Act, 2016 declared 111 inland waterways as National Waterways.",
+        "The Jal Marg Vikas Project (JMVP) was launched with World Bank assistance for capacity augmentation of NW-1."
+      ]
+    },
+    {
+      "id": "geo-2013-02",
+      "subject": "Geography",
+      "year": 2013,
+      "qNo": 2,
+      "type": "statement-based",
+      "question": "Which of the following ports of India is a corporatized port registered as a company under the Companies Act?",
+      "statements": [],
+      "options": {
+        "a": "Deendayal Port (Kandla)",
+        "b": "Kamarajar Port (Ennore)",
+        "c": "Jawaharlal Nehru Port (Nhava Sheva)",
+        "d": "Syama Prasad Mookerjee Port (Kolkata)"
+      },
+      "answer": "b",
+      "topic": "Economic Geography & Ports",
+      "subTopic": "Major Ports Governance & Corporatization",
+      "concept": "Corporate structure of Kamarajar Port Limited vs Trust structure of other Major Ports under the Major Port Trusts Act, 1963.",
+      "explanation": "Kamarajar Port (formerly Ennore Port), located on the Coromandel Coast north of Chennai in Tamil Nadu, is the ONLY corporatized major port in India. Unlike the other 11 major ports which were historically governed by autonomous trusts under the Major Port Trusts Act 1963, Kamarajar Port was originally incorporated as 'Ennore Port Limited' under the Companies Act, 1956, giving it corporate commercial flexibility.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Deendayal (Kandla) is a statutory major port in Gujarat.",
+        "b": "Correct (Answer): Kamarajar Port (Ennore) was established as a public limited company under the Companies Act.",
+        "c": "Incorrect: JNPT (Navi Mumbai) is a major port trust, premier container gateway.",
+        "d": "Incorrect: Kolkata is India's only major riverine port."
+      },
+      "trap": "Candidates assume all major ports share the exact same administrative trust setup.",
+      "relatedFacts": [
+        "India has 12 Major Ports and over 200 notified Non-Major (minor/intermediate) ports.",
+        "Major Ports fall under the Union List of the Seventh Schedule, while Non-Major ports fall under the Concurrent List.",
+        "Parliament enacted the Major Port Authorities Act, 2020 to replace the Port Trusts Act, providing greater operational autonomy to port boards."
+      ]
+    },
+    {
+      "id": "geo-2024-02",
+      "subject": "Geography",
+      "year": 2024,
+      "qNo": 2,
+      "type": "matching",
+      "question": "Consider the following sacred confluences (Prayags) of the Alaknanda river in Uttarakhand:",
+      "statements": [
+        "Devprayag — Confluence of Alaknanda and Bhagirathi",
+        "Rudraprayag — Confluence of Alaknanda and Mandakini",
+        "Karnaprayag — Confluence of Alaknanda and Pindar",
+        "Nandaprayag — Confluence of Alaknanda and Dhauliganga"
+      ],
+      "options": {
+        "a": "Only one pair",
+        "b": "Only two pairs",
+        "c": "Only three pairs",
+        "d": "All four pairs"
+      },
+      "answer": "c",
+      "topic": "Drainage Systems of India",
+      "subTopic": "Panch Prayag & Headwaters of River Ganga",
+      "concept": "The five holy confluences along the Alaknanda river in the Garhwal Himalayas.",
+      "explanation": "Pairs 1, 2, and 3 are correctly matched: 1. At Devprayag, the Alaknanda meets the Bhagirathi, from where the combined river is formally called the 'Ganga'. 2. At Rudraprayag, the Alaknanda meets the Mandakini (flowing from Kedarnath). 3. At Karnaprayag, the Alaknanda meets the Pindar river (flowing from Pindari glacier). Pair 4 is incorrectly matched: At Nandaprayag, the Alaknanda meets the NANDAKINI river, NOT Dhauliganga. The confluence of Alaknanda and Dhauliganga occurs at VISHNUPRAYAG (near Joshimath). Therefore, exactly three pairs are correctly matched.",
+      "statementAnalysis": [
+        {
+          "text": "Devprayag — Confluence of Alaknanda and Bhagirathi",
+          "verdict": "correct",
+          "why": "Devprayag forms the Ganga river."
+        },
+        {
+          "text": "Rudraprayag — Confluence of Alaknanda and Mandakini",
+          "verdict": "correct",
+          "why": "Rudraprayag is the confluence with Mandakini."
+        },
+        {
+          "text": "Karnaprayag — Confluence of Alaknanda and Pindar",
+          "verdict": "correct",
+          "why": "Karnaprayag is the confluence with Pindar."
+        },
+        {
+          "text": "Nandaprayag — Confluence of Alaknanda and Dhauliganga",
+          "verdict": "incorrect",
+          "why": "Nandaprayag is the confluence with Nandakini; Vishnuprayag is with Dhauliganga."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Three pairs are correct.",
+        "b": "Incorrect: Three pairs are correct.",
+        "c": "Correct: Exactly three pairs (1, 2, and 3) are accurately matched.",
+        "d": "Incorrect: Pair 4 is false."
+      },
+      "trap": "Examiner swaps Nandakini (Nandaprayag) with Dhauliganga (Vishnuprayag).",
+      "relatedFacts": [
+        "The Panch Prayag in descending order of elevation: Vishnuprayag, Nandaprayag, Karnaprayag, Rudraprayag, and Devprayag.",
+        "The Alaknanda originates from the Satopanth glacier above Badrinath.",
+        "The Bhagirathi originates from the Gaumukh at the snout of Gangotri glacier."
+      ]
+    }
+  ]
+}

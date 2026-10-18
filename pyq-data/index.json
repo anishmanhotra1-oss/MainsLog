@@ -1,0 +1,146 @@
+{
+  "title": "UPSC Civil Services Preliminary Examination — Previous Year Questions (PYQ) Master Archive",
+  "version": "1.0.0",
+  "yearsCovered": [
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "subjects": [
+    {
+      "id": "polity",
+      "name": "Indian Polity & Governance",
+      "slug": "polity",
+      "file": "pyq-data/polity.json",
+      "icon": "⚖️",
+      "color": "#2563EB",
+      "totalQuestions": 1240,
+      "avgPerYear": 14.5,
+      "highYieldTopics": [
+        "Fundamental Rights & DPSP",
+        "Parliamentary Proceedings & Motions",
+        "Constitutional Bodies & Amendments",
+        "Judiciary & Judicial Review",
+        "Preamble & Basic Structure"
+      ],
+      "examinerPattern": "Heavy emphasis on conceptual nuances (constitutional limits, arbitrary power), Article 19/21 application, and parliamentary control mechanisms."
+    },
+    {
+      "id": "economy",
+      "name": "Economy & Social Development",
+      "slug": "economy",
+      "file": "pyq-data/economy.json",
+      "icon": "📈",
+      "color": "#059669",
+      "totalQuestions": 30,
+      "avgPerYear": 15.2,
+      "highYieldTopics": [
+        "Monetary Policy & RBI Balance Sheet",
+        "Inflation & Indices (CPI/WPI)",
+        "External Sector & BoP",
+        "Banking & Financial Instruments",
+        "Fiscal Policy & Budget Dynamics"
+      ],
+      "examinerPattern": "Questions test direct macroeconomic causality (e.g., sterilization of foreign inflows, money multiplier, yield curve inversion) and real vs. nominal distinctions."
+    },
+    {
+      "id": "environment",
+      "name": "Environment, Ecology & Biodiversity",
+      "slug": "environment",
+      "file": "pyq-data/environment.json",
+      "icon": "🌿",
+      "color": "#16A34A",
+      "totalQuestions": 30,
+      "avgPerYear": 17.5,
+      "highYieldTopics": [
+        "Protected Area Networks & Biosphere Reserves",
+        "Species Conservation Status & IUCN",
+        "Climate Conventions (UNFCCC, CBD, Ramsar)",
+        "Pollutants & Biogeochemical Cycles",
+        "Environmental Legislation (EPA 1986, WPA 1972)"
+      ],
+      "examinerPattern": "Geographic positioning of National Parks/Rivers, invasive species indicators, and micro-pollutants (microplastics, PFAS, hydrofluorocarbons)."
+    },
+    {
+      "id": "history",
+      "name": "History of India & National Movement",
+      "slug": "history",
+      "file": "pyq-data/history.json",
+      "icon": "🏛️",
+      "color": "#D97706",
+      "totalQuestions": 30,
+      "avgPerYear": 14.6,
+      "highYieldTopics": [
+        "Buddhism, Jainism & Philosophical Schools",
+        "Temple Architecture & Literature",
+        "Freedom Struggle 1919–1947",
+        "Socio-Religious Reform Movements",
+        "Medieval Administration & Revenue Terms"
+      ],
+      "examinerPattern": "Terminology matching (e.g. Eripatti, Taniyurs), chronological ordering of 20th-century events, and doctrinal differences in ancient traditions."
+    },
+    {
+      "id": "geography",
+      "name": "Indian & World Geography",
+      "slug": "geography",
+      "file": "pyq-data/geography.json",
+      "icon": "🗺️",
+      "color": "#0284C7",
+      "totalQuestions": 30,
+      "avgPerYear": 11.2,
+      "highYieldTopics": [
+        "River Systems & Drainage Basins",
+        "Climatology (Jet Streams, Monsoon, IOD)",
+        "Critical Minerals & Global Distribution",
+        "Mapping: West Asia & Strategic Straits",
+        "Agriculture & Cropping Patterns"
+      ],
+      "examinerPattern": "Spatial relation questions (locations bordering Mediterranean/Black Sea), river tributaries from origin to confluence, and major agricultural production shifts."
+    },
+    {
+      "id": "science-tech",
+      "name": "Science & Emerging Technology",
+      "slug": "science-tech",
+      "file": "pyq-data/science-tech.json",
+      "icon": "🔬",
+      "color": "#7C3AED",
+      "totalQuestions": 30,
+      "avgPerYear": 10.7,
+      "highYieldTopics": [
+        "Biotechnology (CRISPR, mRNA, Stem Cells)",
+        "Space Technology & Orbit Mechanics",
+        "Information Tech (Quantum, AI, Blockchain)",
+        "Defense & Ballistic Missiles",
+        "Daily Science Principles"
+      ],
+      "examinerPattern": "Application-oriented questions asking 'In how many of the above can this technology be applied?' and differentiating emerging frontier tech."
+    }
+  ]
+}

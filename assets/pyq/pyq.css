@@ -1,0 +1,1296 @@
+/* ==========================================================================
+   UPSC Prelims PYQ Analysis Engine — Scoped Stylesheet
+   Strictly scoped under .pyq-x1 (ZERO global pollution, zero collision)
+   ========================================================================== */
+
+.pyq-x1 {
+  /* Design Tokens — Scoped strictly to .pyq-x1 wrapper */
+  --pyq-font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --pyq-font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --pyq-font-mono: 'JetBrains Mono', monospace;
+
+  --pyq-bg-canvas: #FAFAFC;
+  --pyq-bg-card: #FFFFFF;
+  --pyq-bg-card-hover: #F8FAFC;
+  --pyq-bg-subtle: #F1F5F9;
+  --pyq-bg-input: #FFFFFF;
+  
+  --pyq-border: #E2E8F0;
+  --pyq-border-subtle: #EDF2F7;
+  --pyq-border-focus: #3B82F6;
+
+  --pyq-text-primary: #0F172A;
+  --pyq-text-secondary: #334155;
+  --pyq-text-muted: #64748B;
+  --pyq-text-subtle: #94A3B8;
+
+  --pyq-primary: #2563EB;
+  --pyq-primary-hover: #1D4ED8;
+  --pyq-primary-soft: #EFF6FF;
+  --pyq-primary-border: #BFDBFE;
+
+  --pyq-emerald: #059669;
+  --pyq-emerald-soft: #ECFDF5;
+  --pyq-emerald-border: #A7F3D0;
+
+  --pyq-crimson: #DC2626;
+  --pyq-crimson-soft: #FEF2F2;
+  --pyq-crimson-border: #FECACA;
+
+  --pyq-amber: #D97706;
+  --pyq-amber-soft: #FFFBEB;
+  --pyq-amber-border: #FDE68A;
+
+  --pyq-purple: #7C3AED;
+  --pyq-purple-soft: #F5F3FF;
+  --pyq-purple-border: #DDD6FE;
+
+  --pyq-radius-sm: 8px;
+  --pyq-radius-md: 14px;
+  --pyq-radius-lg: 20px;
+  --pyq-radius-full: 9999px;
+
+  --pyq-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --pyq-shadow-md: 0 4px 14px rgba(15, 23, 42, 0.06);
+  --pyq-shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.08);
+
+  display: block;
+  font-family: var(--pyq-font-body);
+  color: var(--pyq-text-primary);
+  background-color: var(--pyq-bg-canvas);
+  line-height: 1.5;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Dark Mode Overrides (Explicit & Media Query) */
+.pyq-x1[data-theme="dark"] {
+  --pyq-bg-canvas: #090D16;
+  --pyq-bg-card: #131B2E;
+  --pyq-bg-card-hover: #18233C;
+  --pyq-bg-subtle: #1E293B;
+  --pyq-bg-input: #101726;
+
+  --pyq-border: #26334D;
+  --pyq-border-subtle: #1C273E;
+  --pyq-border-focus: #60A5FA;
+
+  --pyq-text-primary: #F8FAFC;
+  --pyq-text-secondary: #CBD5E1;
+  --pyq-text-muted: #94A3B8;
+  --pyq-text-subtle: #64748B;
+
+  --pyq-primary: #3B82F6;
+  --pyq-primary-hover: #60A5FA;
+  --pyq-primary-soft: rgba(37, 99, 235, 0.15);
+  --pyq-primary-border: rgba(96, 165, 250, 0.3);
+
+  --pyq-emerald-soft: rgba(5, 150, 105, 0.18);
+  --pyq-emerald-border: rgba(16, 185, 129, 0.35);
+
+  --pyq-crimson-soft: rgba(220, 38, 38, 0.18);
+  --pyq-crimson-border: rgba(248, 113, 113, 0.35);
+
+  --pyq-amber-soft: rgba(217, 119, 6, 0.18);
+  --pyq-amber-border: rgba(251, 191, 36, 0.35);
+
+  --pyq-purple-soft: rgba(124, 58, 237, 0.18);
+  --pyq-purple-border: rgba(167, 139, 250, 0.35);
+
+  --pyq-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --pyq-shadow-md: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --pyq-shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  .pyq-x1:not([data-theme="light"]) {
+    --pyq-bg-canvas: #090D16;
+    --pyq-bg-card: #131B2E;
+    --pyq-bg-card-hover: #18233C;
+    --pyq-bg-subtle: #1E293B;
+    --pyq-bg-input: #101726;
+
+    --pyq-border: #26334D;
+    --pyq-border-subtle: #1C273E;
+    --pyq-border-focus: #60A5FA;
+
+    --pyq-text-primary: #F8FAFC;
+    --pyq-text-secondary: #CBD5E1;
+    --pyq-text-muted: #94A3B8;
+    --pyq-text-subtle: #64748B;
+
+    --pyq-primary: #3B82F6;
+    --pyq-primary-hover: #60A5FA;
+    --pyq-primary-soft: rgba(37, 99, 235, 0.15);
+    --pyq-primary-border: rgba(96, 165, 250, 0.3);
+
+    --pyq-emerald-soft: rgba(5, 150, 105, 0.18);
+    --pyq-emerald-border: rgba(16, 185, 129, 0.35);
+
+    --pyq-crimson-soft: rgba(220, 38, 38, 0.18);
+    --pyq-crimson-border: rgba(248, 113, 113, 0.35);
+
+    --pyq-amber-soft: rgba(217, 119, 6, 0.18);
+    --pyq-amber-border: rgba(251, 191, 36, 0.35);
+
+    --pyq-purple-soft: rgba(124, 58, 237, 0.18);
+    --pyq-purple-border: rgba(167, 139, 250, 0.35);
+  }
+}
+
+/* Reset inner box-sizing */
+.pyq-x1 *,
+.pyq-x1 *::before,
+.pyq-x1 *::after {
+  box-sizing: border-box;
+}
+
+/* Container & Layout */
+.pyq-x1 .pyq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
+}
+
+@media (min-width: 768px) {
+  .pyq-x1 .pyq-container {
+    padding: 36px 24px 100px;
+  }
+}
+
+/* Top App Bar & Back Navigation */
+.pyq-x1 .pyq-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pyq-x1 .pyq-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--pyq-primary);
+  text-decoration: none;
+  background: var(--pyq-primary-soft);
+  border: 1px solid var(--pyq-primary-border);
+  padding: 8px 14px;
+  border-radius: var(--pyq-radius-full);
+  transition: all 0.2s ease;
+}
+
+.pyq-x1 .pyq-back-link:hover {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
+  border-color: var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  color: var(--pyq-text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--pyq-radius-full);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pyq-x1 .pyq-theme-toggle:hover {
+  background: var(--pyq-bg-subtle);
+  color: var(--pyq-text-primary);
+}
+
+/* Hero Section */
+.pyq-x1 .pyq-hero {
+  background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #4338CA 100%);
+  border-radius: var(--pyq-radius-lg);
+  padding: 32px 24px;
+  color: #FFFFFF;
+  margin-bottom: 28px;
+  box-shadow: var(--pyq-shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.pyq-x1 .pyq-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 4px 12px;
+  border-radius: var(--pyq-radius-full);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.pyq-x1 .pyq-hero-title {
+  font-family: var(--pyq-font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .pyq-x1 .pyq-hero-title {
+    font-size: 34px;
+  }
+}
+
+.pyq-x1 .pyq-hero-desc {
+  font-size: 14.5px;
+  color: #DBEAFE;
+  max-width: 780px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.pyq-x1 .pyq-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .pyq-x1 .pyq-hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pyq-x1 .pyq-stat-card {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--pyq-radius-md);
+  padding: 12px 16px;
+  backdrop-filter: blur(8px);
+}
+
+.pyq-x1 .pyq-stat-val {
+  font-family: var(--pyq-font-heading);
+  font-size: 22px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.pyq-x1 .pyq-stat-lbl {
+  font-size: 11.5px;
+  color: #BFDBFE;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Subject Tabs Strip (Horizontal scroll on mobile) */
+.pyq-x1 .pyq-tabs-wrapper {
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.pyq-x1 .pyq-tabs-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.pyq-x1 .pyq-tabs-strip {
+  display: inline-flex;
+  gap: 8px;
+  min-width: 100%;
+}
+
+.pyq-x1 .pyq-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pyq-bg-card);
+  border: 1.5px solid var(--pyq-border);
+  color: var(--pyq-text-secondary);
+  padding: 10px 18px;
+  border-radius: var(--pyq-radius-full);
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.pyq-x1 .pyq-tab-btn:hover {
+  border-color: var(--pyq-primary);
+  color: var(--pyq-primary);
+  background: var(--pyq-primary-soft);
+}
+
+.pyq-x1 .pyq-tab-btn.pyq-active {
+  background: var(--pyq-primary);
+  border-color: var(--pyq-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.pyq-x1 .pyq-tab-count {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: var(--pyq-radius-full);
+  background: var(--pyq-bg-subtle);
+  color: var(--pyq-text-muted);
+}
+
+.pyq-x1 .pyq-tab-btn.pyq-active .pyq-tab-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+/* Subject Insight & High-Yield Banner */
+.pyq-x1 .pyq-subject-banner {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-lg);
+  padding: 20px 22px;
+  margin-bottom: 24px;
+  box-shadow: var(--pyq-shadow-sm);
+}
+
+.pyq-x1 .pyq-banner-title {
+  font-family: var(--pyq-font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-banner-pattern {
+  font-size: 13.5px;
+  color: var(--pyq-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.pyq-x1 .pyq-high-yield-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.pyq-x1 .pyq-hy-tag {
+  background: var(--pyq-primary-soft);
+  color: var(--pyq-primary);
+  border: 1px solid var(--pyq-primary-border);
+  padding: 4px 10px;
+  border-radius: var(--pyq-radius-md);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* Controls & Filter Toolbar */
+.pyq-x1 .pyq-filter-panel {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-lg);
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--pyq-shadow-sm);
+}
+
+.pyq-x1 .pyq-search-box {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.pyq-x1 .pyq-search-input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border: 1.5px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-md);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--pyq-text-primary);
+  background: var(--pyq-bg-input);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.pyq-x1 .pyq-search-input:focus {
+  border-color: var(--pyq-border-focus);
+}
+
+.pyq-x1 .pyq-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: var(--pyq-text-muted);
+  pointer-events: none;
+}
+
+.pyq-x1 .pyq-filter-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .pyq-x1 .pyq-filter-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pyq-x1 .pyq-filter-select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-sm);
+  background: var(--pyq-bg-input);
+  color: var(--pyq-text-secondary);
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.pyq-x1 .pyq-filter-select:focus {
+  border-color: var(--pyq-border-focus);
+}
+
+.pyq-x1 .pyq-toggles-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--pyq-border-subtle);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pyq-x1 .pyq-toggle-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--pyq-text-secondary);
+  user-select: none;
+}
+
+.pyq-x1 .pyq-toggle-pill input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--pyq-primary);
+  cursor: pointer;
+}
+
+.pyq-x1 .pyq-view-switch-btns {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.pyq-x1 .pyq-view-btn {
+  background: var(--pyq-bg-subtle);
+  border: 1px solid var(--pyq-border);
+  color: var(--pyq-text-secondary);
+  padding: 6px 12px;
+  border-radius: var(--pyq-radius-sm);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pyq-x1 .pyq-view-btn.pyq-active {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
+  border-color: var(--pyq-primary);
+}
+
+/* Topic Frequency & Trend Analytics Panel */
+.pyq-x1 .pyq-analytics-card {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-lg);
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--pyq-shadow-sm);
+}
+
+.pyq-x1 .pyq-analytics-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-analytics-title {
+  font-family: var(--pyq-font-heading);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+}
+
+.pyq-x1 .pyq-analytics-sub {
+  font-size: 12.5px;
+  color: var(--pyq-text-muted);
+}
+
+.pyq-x1 .pyq-svg-chart-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.pyq-x1 .pyq-svg-chart {
+  width: 100%;
+  min-width: 480px;
+  height: auto;
+}
+
+/* Frequency Table */
+.pyq-x1 .pyq-freq-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 14px;
+}
+
+.pyq-x1 .pyq-freq-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.pyq-x1 .pyq-freq-table th,
+.pyq-x1 .pyq-freq-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--pyq-border-subtle);
+}
+
+.pyq-x1 .pyq-freq-table th {
+  background: var(--pyq-bg-subtle);
+  font-weight: 800;
+  color: var(--pyq-text-muted);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.pyq-x1 .pyq-freq-table th:hover {
+  color: var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-freq-table tr:hover td {
+  background: var(--pyq-bg-card-hover);
+}
+
+/* Results Status Bar */
+.pyq-x1 .pyq-status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 13.5px;
+  color: var(--pyq-text-muted);
+  font-weight: 600;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-status-count {
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+}
+
+/* Question Card */
+.pyq-x1 .pyq-question-card {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-lg);
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  box-shadow: var(--pyq-shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  position: relative;
+}
+
+.pyq-x1 .pyq-question-card:hover {
+  border-color: var(--pyq-border-focus);
+  box-shadow: var(--pyq-shadow-md);
+}
+
+.pyq-x1 .pyq-question-card.pyq-attempted {
+  border-left: 5px solid var(--pyq-emerald);
+}
+
+.pyq-x1 .pyq-q-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pyq-x1 .pyq-q-meta-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pyq-x1 .pyq-q-tag {
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: var(--pyq-radius-sm);
+  border: 1px solid transparent;
+}
+
+.pyq-x1 .pyq-tag-year {
+  background: var(--pyq-primary-soft);
+  color: var(--pyq-primary);
+  border-color: var(--pyq-primary-border);
+}
+
+.pyq-x1 .pyq-tag-qno {
+  background: var(--pyq-bg-subtle);
+  color: var(--pyq-text-secondary);
+}
+
+.pyq-x1 .pyq-tag-topic {
+  background: var(--pyq-purple-soft);
+  color: var(--pyq-purple);
+  border-color: var(--pyq-purple-border);
+}
+
+.pyq-x1 .pyq-tag-type {
+  background: var(--pyq-amber-soft);
+  color: var(--pyq-amber);
+  border-color: var(--pyq-amber-border);
+}
+
+.pyq-x1 .pyq-q-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-icon-btn {
+  background: var(--pyq-bg-subtle);
+  border: 1px solid var(--pyq-border);
+  color: var(--pyq-text-secondary);
+  padding: 6px 10px;
+  border-radius: var(--pyq-radius-sm);
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.pyq-x1 .pyq-icon-btn:hover {
+  background: var(--pyq-primary-soft);
+  color: var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-icon-btn.pyq-bookmarked {
+  background: #FEF3C7;
+  color: #B45309;
+  border-color: #FDE047;
+}
+
+.pyq-x1 .pyq-icon-btn.pyq-marked-attempted {
+  background: var(--pyq-emerald-soft);
+  color: var(--pyq-emerald);
+  border-color: var(--pyq-emerald-border);
+}
+
+.pyq-x1 .pyq-q-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--pyq-text-primary);
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+/* Statements list */
+.pyq-x1 .pyq-statements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-statement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--pyq-text-secondary);
+  background: var(--pyq-bg-subtle);
+  padding: 10px 14px;
+  border-radius: var(--pyq-radius-sm);
+  border-left: 3px solid var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-stmt-num {
+  font-weight: 800;
+  color: var(--pyq-primary);
+  flex-shrink: 0;
+}
+
+/* Options Grid */
+.pyq-x1 .pyq-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 640px) {
+  .pyq-x1 .pyq-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pyq-x1 .pyq-option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--pyq-bg-card);
+  border: 1.5px solid var(--pyq-border);
+  padding: 10px 14px;
+  border-radius: var(--pyq-radius-md);
+  font-size: 13.5px;
+  color: var(--pyq-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.pyq-x1 .pyq-option-item:hover {
+  background: var(--pyq-bg-card-hover);
+  border-color: var(--pyq-border-focus);
+}
+
+.pyq-x1 .pyq-opt-key {
+  font-weight: 800;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--pyq-radius-full);
+  background: var(--pyq-bg-subtle);
+  color: var(--pyq-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.pyq-x1 .pyq-option-item.pyq-opt-correct {
+  background: var(--pyq-emerald-soft);
+  border-color: var(--pyq-emerald-border);
+  color: var(--pyq-emerald);
+  font-weight: 700;
+}
+
+.pyq-x1 .pyq-option-item.pyq-opt-correct .pyq-opt-key {
+  background: var(--pyq-emerald);
+  color: #FFFFFF;
+}
+
+.pyq-x1 .pyq-option-item.pyq-opt-incorrect {
+  background: var(--pyq-crimson-soft);
+  border-color: var(--pyq-crimson-border);
+  color: var(--pyq-crimson);
+}
+
+.pyq-x1 .pyq-option-item.pyq-opt-incorrect .pyq-opt-key {
+  background: var(--pyq-crimson);
+  color: #FFFFFF;
+}
+
+/* Expand / Reveal Toggle */
+.pyq-x1 .pyq-reveal-btn {
+  background: var(--pyq-primary-soft);
+  border: 1px solid var(--pyq-primary-border);
+  color: var(--pyq-primary);
+  padding: 9px 18px;
+  border-radius: var(--pyq-radius-md);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.pyq-x1 .pyq-reveal-btn:hover {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
+}
+
+/* Analysis Drawer (collapsible) */
+.pyq-x1 .pyq-analysis-drawer {
+  display: none;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1.5px dashed var(--pyq-border);
+}
+
+.pyq-x1 .pyq-analysis-drawer.pyq-open {
+  display: block;
+}
+
+/* Answer banner */
+.pyq-x1 .pyq-ans-banner {
+  background: var(--pyq-emerald-soft);
+  border: 1px solid var(--pyq-emerald-border);
+  border-radius: var(--pyq-radius-md);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-ans-badge {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--pyq-emerald);
+}
+
+.pyq-x1 .pyq-concept-badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: #047857;
+  background: rgba(16, 185, 129, 0.2);
+  padding: 3px 10px;
+  border-radius: var(--pyq-radius-full);
+}
+
+/* Section headings inside drawer */
+.pyq-x1 .pyq-section-title {
+  font-family: var(--pyq-font-heading);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  margin: 16px 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pyq-x1 .pyq-stmt-analysis-item {
+  background: var(--pyq-bg-subtle);
+  border-radius: var(--pyq-radius-md);
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  font-size: 13.5px;
+  border-left: 4px solid var(--pyq-border);
+}
+
+.pyq-x1 .pyq-stmt-analysis-item.pyq-verdict-correct {
+  border-left-color: var(--pyq-emerald);
+}
+
+.pyq-x1 .pyq-stmt-analysis-item.pyq-verdict-incorrect {
+  border-left-color: var(--pyq-crimson);
+}
+
+.pyq-x1 .pyq-verdict-pill {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: var(--pyq-radius-sm);
+  margin-bottom: 6px;
+}
+
+.pyq-x1 .pyq-verdict-pill.pyq-v-correct {
+  background: var(--pyq-emerald-soft);
+  color: var(--pyq-emerald);
+  border: 1px solid var(--pyq-emerald-border);
+}
+
+.pyq-x1 .pyq-verdict-pill.pyq-v-incorrect {
+  background: var(--pyq-crimson-soft);
+  color: var(--pyq-crimson);
+  border: 1px solid var(--pyq-crimson-border);
+}
+
+/* Trap Box */
+.pyq-x1 .pyq-trap-box {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: var(--pyq-radius-md);
+  padding: 14px 16px;
+  margin: 16px 0;
+  font-size: 13.5px;
+  color: #92400E;
+  line-height: 1.5;
+}
+
+.pyq-x1 .pyq-trap-title {
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+/* Related facts */
+.pyq-x1 .pyq-facts-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+}
+
+.pyq-x1 .pyq-facts-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 6px;
+  font-size: 13.5px;
+  color: var(--pyq-text-secondary);
+  line-height: 1.5;
+}
+
+.pyq-x1 .pyq-facts-list li::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  color: var(--pyq-primary);
+  font-weight: bold;
+}
+
+/* Pagination bar */
+.pyq-x1 .pyq-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.pyq-x1 .pyq-page-btn {
+  background: var(--pyq-bg-card);
+  border: 1.5px solid var(--pyq-border);
+  color: var(--pyq-text-primary);
+  padding: 8px 16px;
+  border-radius: var(--pyq-radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pyq-x1 .pyq-page-btn:hover:not(:disabled) {
+  border-color: var(--pyq-primary);
+  color: var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pyq-x1 .pyq-page-info {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pyq-text-muted);
+}
+
+/* Loading Skeleton & Error States */
+.pyq-x1 .pyq-state-box {
+  background: var(--pyq-bg-card);
+  border: 1.5px dashed var(--pyq-border);
+  border-radius: var(--pyq-radius-lg);
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--pyq-text-muted);
+  margin: 20px 0;
+}
+
+.pyq-x1 .pyq-state-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.pyq-x1 .pyq-state-title {
+  font-family: var(--pyq-font-heading);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  margin-bottom: 6px;
+}
+
+.pyq-x1 .pyq-state-desc {
+  font-size: 13.5px;
+  max-width: 480px;
+  margin: 0 auto 16px;
+  line-height: 1.5;
+}
+
+.pyq-x1 .pyq-retry-btn {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--pyq-radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.pyq-x1 .pyq-retry-btn:hover {
+  opacity: 0.9;
+}
+
+/* Loading Spinner */
+.pyq-x1 .pyq-spinner {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 3.5px solid var(--pyq-border);
+  border-top-color: var(--pyq-primary);
+  border-radius: 50%;
+  animation: pyq-spin 0.8s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes pyq-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =====================================================================
+   Original PDF Archive Viewer Styles (Scoped under .pyq-x1)
+   ===================================================================== */
+.pyq-x1 .pyq-pdf-section {
+  animation: pyq-fade-in 0.3s ease;
+}
+
+.pyq-x1 .pyq-pdf-header {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-lg);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--pyq-shadow-sm);
+}
+
+.pyq-x1 .pyq-pdf-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.pyq-x1 .pyq-pdf-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-pdf-badge-total {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--pyq-primary-soft);
+  color: var(--pyq-primary);
+  border: 1px solid var(--pyq-primary-border);
+  padding: 4px 10px;
+  border-radius: var(--pyq-radius-full);
+}
+
+.pyq-x1 .pyq-pdf-desc {
+  font-size: 13.5px;
+  color: var(--pyq-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.pyq-x1 .pyq-pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.pyq-x1 .pyq-pdf-card {
+  background: var(--pyq-bg-subtle);
+  border: 1.5px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-md);
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pyq-x1 .pyq-pdf-card:hover {
+  border-color: var(--pyq-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--pyq-shadow-sm);
+}
+
+.pyq-x1 .pyq-pdf-card.pyq-active {
+  background: var(--pyq-primary-soft);
+  border-color: var(--pyq-primary);
+  box-shadow: 0 0 0 1px var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-pdf-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.pyq-x1 .pyq-pdf-card-icon {
+  font-size: 22px;
+}
+
+.pyq-x1 .pyq-pdf-card-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  line-height: 1.25;
+}
+
+.pyq-x1 .pyq-pdf-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--pyq-text-muted);
+}
+
+.pyq-x1 .pyq-pdf-card-tag {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  padding: 2px 7px;
+  border-radius: var(--pyq-radius-sm);
+}
+
+.pyq-x1 .pyq-pdf-viewer-wrap {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--pyq-shadow-md);
+}
+
+.pyq-x1 .pyq-pdf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: var(--pyq-bg-subtle);
+  border-bottom: 1px solid var(--pyq-border);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pyq-x1 .pyq-pdf-toolbar-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--pyq-text-primary);
+}
+
+.pyq-x1 .pyq-pdf-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pyq-x1 .pyq-pdf-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  color: var(--pyq-text-secondary);
+  padding: 7px 14px;
+  border-radius: var(--pyq-radius-sm);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pyq-x1 .pyq-pdf-action-btn:hover {
+  color: var(--pyq-primary);
+  border-color: var(--pyq-primary);
+  background: var(--pyq-primary-soft);
+}
+
+.pyq-x1 .pyq-pdf-action-btn.pyq-primary {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
+  border-color: var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-pdf-action-btn.pyq-primary:hover {
+  opacity: 0.92;
+}
+
+.pyq-x1 .pyq-pdf-frame {
+  width: 100%;
+  height: 850px;
+  border: none;
+  display: block;
+  background: #2D3748;
+}
+
+@media (max-width: 768px) {
+  .pyq-x1 .pyq-pdf-frame {
+    height: 580px;
+  }
+}

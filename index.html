@@ -7,14 +7,14 @@
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="apple-mobile-web-app-title" content="MainsLog"/>
+<meta name="apple-mobile-web-app-title" content="Saankalp"/>
 <link rel="shortcut icon" href="favicon.ico"/>
 <link rel="icon" type="image/x-icon" href="favicon.ico"/>
 <link rel="icon" type="image/png" sizes="192x192" href="favicon.png"/>
 <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
 <link rel="manifest" href="manifest.json"/>
-<title>MainsLog — EAT OR GET EATEN</title>
+<title>Saankalp — UPSC CSE Command Center</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -320,6 +320,100 @@
   }
 
   .aurora-action-group { display: flex; gap: 10px; align-items: center; }
+
+  /* DUAL MODE PILL SWITCHER */
+  .mode-toggle-wrap {
+    display: inline-flex;
+    background: var(--bg-subtle);
+    padding: 3px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    gap: 3px;
+  }
+  .mode-toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-family: var(--font-body);
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .mode-toggle-btn:hover { color: var(--text-primary); }
+  .mode-toggle-btn.active {
+    background: var(--brand-blue);
+    color: #FFFFFF;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+  }
+  .mode-toggle-btn.mode-prelims.active {
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    color: #FFFFFF;
+    box-shadow: 0 3px 10px rgba(5, 150, 105, 0.35);
+  }
+
+  /* PRELIMS SCHEDULER CARD STYLES */
+  .prelims-scheduler-card {
+    background: #FFFFFF;
+    border: 1.5px solid #A7F3D0;
+    border-radius: 20px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 4px 16px rgba(5, 150, 105, 0.05);
+  }
+
+  /* MOBILE RESPONSIVE OPTIMIZATIONS FOR TARGET BUTTONS & SWITCHERS */
+  @media (max-width: 768px) {
+    .prestige-banner-top {
+      flex-direction: column;
+      align-items: stretch !important;
+      gap: 12px !important;
+    }
+    .prestige-banner-top > div {
+      width: 100% !important;
+      justify-content: space-between !important;
+    }
+    .mode-toggle-wrap {
+      width: 100% !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      padding: 4px !important;
+      border-radius: 20px !important;
+      background: #F1F5F9 !important;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.06) !important;
+    }
+    .mode-toggle-btn {
+      flex: 1 !important;
+      text-align: center !important;
+      padding: 9px 10px !important;
+      font-size: 12px !important;
+      font-weight: 800 !important;
+      border-radius: 16px !important;
+      min-height: 42px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      white-space: nowrap !important;
+    }
+    .prelims-scheduler-card {
+      padding: 16px !important;
+      border-radius: 16px !important;
+    }
+    .habit-input-group {
+      flex-direction: column !important;
+    }
+    .habit-input-group input {
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+    .habit-input-group button {
+      width: 100% !important;
+      min-height: 46px !important;
+      font-weight: 800 !important;
+    }
+  }
 
   .aurora-stat-grid {
     display: grid;
@@ -1143,6 +1237,103 @@
   .prestige-backup-btn:hover {
     background: #F1F5F9;
     border-color: #CBD5E1;
+  }
+
+  /* PRELIMS MODE ACTIVE THEME FOR HOME SECTION (CLEAN WHITE & EMERALD GREEN) */
+  body.prelims-mode-active .prestige-top-banner {
+    background: #FFFFFF !important;
+    border: 1.5px solid #A7F3D0 !important;
+    box-shadow: 0 16px 40px rgba(5, 150, 105, 0.08) !important;
+  }
+
+  body.prelims-mode-active .prestige-tag {
+    background: #ECFDF5 !important;
+    color: #047857 !important;
+    border: 1px solid #A7F3D0 !important;
+  }
+
+  body.prelims-mode-active .prestige-backup-btn {
+    background: #F0FDF4 !important;
+    color: #047857 !important;
+    border: 1px solid #A7F3D0 !important;
+  }
+
+  body.prelims-mode-active .prestige-backup-btn:hover {
+    background: #DCFCE7 !important;
+    border-color: #6EE7B7 !important;
+  }
+
+  body.prelims-mode-active .mode-toggle-wrap {
+    background: #F0FDF4 !important;
+    border: 1px solid #BBF7D0 !important;
+  }
+
+  body.prelims-mode-active .prestige-vertical-bar {
+    background: linear-gradient(180deg, #059669 0%, #10B981 100%) !important;
+  }
+
+  body.prelims-mode-active .prestige-welcome-name {
+    color: #059669 !important;
+  }
+
+  body.prelims-mode-active .prestige-quote-icon {
+    color: #059669 !important;
+  }
+
+  body.prelims-mode-active .prestige-quote-text span {
+    color: #059669 !important;
+    border-bottom-color: #A7F3D0 !important;
+  }
+
+  /* TOP STAT CARDS IN PRELIMS MODE */
+  body.prelims-mode-active .prestige-card {
+    background: #FFFFFF !important;
+    border: 1.5px solid #D1FAE5 !important;
+    box-shadow: 0 4px 14px rgba(5, 150, 105, 0.04) !important;
+  }
+
+  body.prelims-mode-active .prestige-card:hover {
+    border-color: #10B981 !important;
+    box-shadow: 0 8px 20px rgba(5, 150, 105, 0.12) !important;
+  }
+
+  body.prelims-mode-active .prestige-card-lbl {
+    color: #047857 !important;
+    font-weight: 800 !important;
+  }
+
+  body.prelims-mode-active .prestige-card-val {
+    color: #064E3B !important;
+    font-weight: 800 !important;
+  }
+
+  body.prelims-mode-active .prestige-card-sub {
+    color: #059669 !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
+  }
+
+  body.prelims-mode-active .prestige-card-arrow {
+    background: #ECFDF5 !important;
+    color: #047857 !important;
+    border: 1px solid #A7F3D0 !important;
+  }
+
+  body.prelims-mode-active .prestige-card-icon {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25) !important;
+  }
+
+  body.prelims-mode-active .mob-home-hero {
+    background: linear-gradient(135deg, #064E3B 0%, #047857 50%, #059669 100%) !important;
+    box-shadow: 0 16px 36px rgba(5, 150, 105, 0.25) !important;
+  }
+
+  body.prelims-mode-active .r0-home-card {
+    background: linear-gradient(135deg, #065F46 0%, #047857 50%, #10B981 100%) !important;
+    border: 1.5px solid #A7F3D0 !important;
+    box-shadow: 0 12px 32px rgba(5, 150, 105, 0.25) !important;
   }
 
   .prestige-welcome-row {
@@ -3855,9 +4046,1556 @@
     border-color: var(--brand-blue);
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
   }
+
+  /* GLOBAL POPUP MODAL ENHANCEMENTS & MOBILE RESPONSIVE STYLES */
+  .modal-overlay, .deed-modal-overlay, .topper-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(15, 23, 42, 0.78) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .modal-overlay.active, .deed-modal-overlay.active, .topper-modal-overlay.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .popup-card, .poem-card, .deed-modal-card, .topper-modal-card, .rev-modal-card-custom {
+    background: #FFFFFF;
+    border-radius: 24px;
+    width: 94%;
+    max-width: 740px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 30px 70px -15px rgba(15, 23, 42, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    transform: scale(0.94) translateY(16px);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .modal-overlay.active .popup-card,
+  .modal-overlay.active .poem-card,
+  .deed-modal-overlay.active .deed-modal-card,
+  .topper-modal-overlay.active .topper-modal-card,
+  .deed-modal-overlay.active .rev-modal-card-custom {
+    transform: scale(1) translateY(0);
+  }
+
+  .rev-modal-card-custom {
+    max-width: 760px;
+    width: 94%;
+    max-height: 88vh;
+  }
+
+  .rev-modal-header-custom {
+    background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 60%, #3B82F6 100%);
+    color: #FFFFFF;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .rev-modal-tabs-strip {
+    background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 10px 14px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .rev-modal-tabs-strip::-webkit-scrollbar {
+    height: 4px;
+  }
+  .rev-modal-tabs-strip::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+  }
+
+  .rev-modal-tab-btn {
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+  }
+  .rev-modal-tab-btn:hover {
+    background: #F1F5F9;
+    color: #0F172A;
+  }
+  .rev-modal-tab-btn.active {
+    background: var(--brand-blue, #2563EB);
+    color: #FFFFFF;
+    border-color: var(--brand-blue, #2563EB);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  }
+
+  .rev-vault-modal-body,
+  #revisionModalTopicList {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 16px !important;
+    background: #F8FAFC !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #revisionModalTopicList > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-shrink: 0 !important;
+  }
+
+  .rev-item-card {
+    border-radius: 14px !important;
+    padding: 14px 16px !important;
+    margin-bottom: 0px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .rev-item-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  @media (max-width: 600px) {
+    .modal-overlay, .deed-modal-overlay, .topper-modal-overlay {
+      padding: 10px !important;
+    }
+    .popup-card, .poem-card, .deed-modal-card, .topper-modal-card, .rev-modal-card-custom {
+      width: 98% !important;
+      max-height: 93vh !important;
+      border-radius: 18px !important;
+    }
+    .popup-header, .poem-header, .deed-modal-header, .topper-modal-header, .rev-modal-header-custom {
+      padding: 12px 14px !important;
+    }
+    .popup-body, .poem-body, .deed-modal-body, .topper-modal-body {
+      padding: 12px 14px !important;
+    }
+    .deed-modal-title span {
+      font-size: 12.5px !important;
+      letter-spacing: 0.2px !important;
+    }
+    .deed-modal-commit-btn {
+      width: 100% !important;
+      justify-content: center !important;
+      padding: 12px 18px !important;
+      font-size: 13.5px !important;
+    }
+    .rev-modal-tabs-strip {
+      padding: 8px 10px !important;
+      gap: 6px !important;
+    }
+    .rev-modal-tab-btn {
+      padding: 5px 11px !important;
+      font-size: 11px !important;
+    }
+    .rev-item-row {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: stretch !important;
+      width: 100% !important;
+      gap: 10px !important;
+    }
+    .rev-item-action-btn {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-height: 42px !important;
+      border-radius: 10px !important;
+      font-weight: 800 !important;
+    }
+  }
+
+  /* SAANKALP CREATIVE WHITE LANDING / SPLASH SCREEN */
+  .saankalp-splash-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #FFFFFF !important;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .saankalp-splash-overlay.hidden {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  .saankalp-splash-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 460px;
+    width: 100%;
+  }
+
+  .saankalp-typewriter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    margin-bottom: 8px;
+  }
+
+  .saankalp-splash-title {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #2563EB !important;
+    margin: 0;
+    text-transform: uppercase;
+    display: inline;
+  }
+
+  .saankalp-typewriter-cursor {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #2563EB;
+    margin-left: 2px;
+    animation: typewriterBlink 0.7s infinite;
+  }
+
+  @keyframes typewriterBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .saankalp-splash-subtitle {
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #475569;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .saankalp-splash-tagline {
+    font-family: 'Kalam', 'Source Serif 4', serif;
+    font-size: 14.5px;
+    color: #64748B;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  .saankalp-splash-loader-bar {
+    width: 180px;
+    height: 5px;
+    background: #E2E8F0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .saankalp-splash-loader-progress {
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(90deg, #2563EB, #1D4ED8);
+    border-radius: 10px;
+    animation: splashProgress 1.3s infinite ease-in-out;
+  }
+
+  @keyframes splashProgress {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(260%); }
+  }
+
+  /* ============================================================
+   * EXAMPLES BANK SECTION — Premium Modern UI Overhaul
+   * Isolated: no globals overridden, reuses site CSS variables
+   * ============================================================ */
+
+  #tab-examples-bank {
+    animation: tabPop 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .eb-root {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4px 60px;
+  }
+
+  /* ── Modern Hero Section ── */
+  .eb-hero {
+    position: relative;
+    background: linear-gradient(135deg, #090D16 0%, #172554 45%, #1D4ED8 100%);
+    border-radius: var(--radius-lg);
+    padding: 28px 30px 24px;
+    margin-bottom: 22px;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 16px 36px -10px rgba(29, 78, 216, 0.38), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  }
+
+  .eb-hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .eb-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 10%;
+    width: 320px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(147, 51, 234, 0.18) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .eb-hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eb-hero-main {
+    max-width: 640px;
+  }
+
+  .eb-hero-kicker-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 5px 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #93C5FD;
+    margin-bottom: 12px;
+    backdrop-filter: blur(8px);
+  }
+
+  .eb-hero-pulse {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #34D399;
+    box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.3);
+    animation: ebPulse 2s infinite;
+  }
+
+  @keyframes ebPulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+  }
+
+  .eb-hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(22px, 3.8vw, 32px);
+    font-weight: 800;
+    margin: 0 0 8px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    color: #FFFFFF;
+  }
+
+  .eb-hero-sub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Stat cards in hero */
+  .eb-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    min-width: 280px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eb-stat-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 10px 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .eb-stat-card:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .eb-stat-card.active-stat {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: #60A5FA;
+    box-shadow: 0 0 16px rgba(96, 165, 250, 0.35);
+  }
+
+  .eb-stat-num {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+  }
+
+  .eb-stat-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 3px;
+    letter-spacing: 0.5px;
+  }
+
+  .eb-hero-meta-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+    z-index: 1;
+  }
+
+  .eb-type-counts-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .eb-type-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .eb-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eb-btn-hero-add {
+    background: #FFFFFF;
+    color: #1D4ED8;
+    border: none;
+    border-radius: 12px;
+    padding: 9px 20px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+  }
+
+  .eb-btn-hero-add:hover {
+    background: #EFF6FF;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ── Interactive GS Tabs Switcher ── */
+  .eb-tabs-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .eb-tab-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+    width: 100%;
+  }
+
+  .eb-tab-btn:hover {
+    border-color: var(--brand-blue-border);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .eb-tab-btn.eb-tab-active {
+    background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+    border-color: #2563EB;
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px -3px rgba(37, 99, 235, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .eb-tab-btn-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .eb-tab-title {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+  }
+
+  .eb-tab-btn.eb-tab-active .eb-tab-title {
+    color: #FFFFFF;
+  }
+
+  .eb-tab-subtitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .eb-tab-btn.eb-tab-active .eb-tab-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .eb-tab-count {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: var(--bg-subtle);
+    color: var(--brand-blue);
+    border: 1px solid var(--border-color);
+  }
+
+  .eb-tab-btn.eb-tab-active .eb-tab-count {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+  }
+
+  /* ── Form Drawer / Card ── */
+  .eb-form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px 26px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .eb-form-card.collapsed {
+    display: none;
+  }
+
+  .eb-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .eb-form-heading {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -0.3px;
+  }
+
+  .eb-form-close-btn {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .eb-form-close-btn:hover {
+    background: var(--crimson-soft);
+    color: var(--crimson);
+    border-color: #FCA5A5;
+  }
+
+  /* Interactive Type Selector in Form */
+  .eb-type-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .eb-type-pill-btn {
+    background: var(--bg-subtle);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .eb-type-pill-btn:hover {
+    background: #fff;
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+  }
+
+  .eb-type-pill-btn.active[data-type="Example"] {
+    background: var(--brand-blue-light);
+    border-color: var(--brand-blue);
+    color: var(--brand-blue);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  }
+
+  .eb-type-pill-btn.active[data-type="Thinker"] {
+    background: var(--purple-soft);
+    border-color: #7C3AED;
+    color: #6D28D9;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+  }
+
+  .eb-type-pill-btn.active[data-type="Case Study"] {
+    background: var(--mint-soft);
+    border-color: var(--emerald);
+    color: var(--emerald);
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.15);
+  }
+
+  .eb-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .eb-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .eb-form-group.eb-span-2 {
+    grid-column: span 2;
+  }
+
+  .eb-form-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .eb-form-label span.req {
+    color: var(--crimson);
+  }
+
+  .eb-form-input, .eb-form-select, .eb-form-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    color: var(--text-primary);
+    background: #FFFFFF;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+    box-sizing: border-box;
+  }
+
+  .eb-form-input:focus, .eb-form-select:focus, .eb-form-textarea:focus {
+    outline: none;
+    border-color: var(--brand-blue);
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
+
+  .eb-form-textarea {
+    resize: vertical;
+    min-height: 85px;
+    line-height: 1.5;
+  }
+
+  /* Tag quick chips under tag input */
+  .eb-tag-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .eb-tag-chip {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 3px 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+  }
+
+  .eb-tag-chip:hover {
+    background: var(--brand-blue-light);
+    color: var(--brand-blue);
+    border-color: var(--brand-blue-border);
+  }
+
+  .eb-form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .eb-btn-save {
+    background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%);
+    color: #FFFFFF;
+    border: none;
+    padding: 11px 24px;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
+    transition: all 0.2s ease;
+  }
+
+  .eb-btn-save:hover {
+    background: linear-gradient(135deg, #1E40AF 0%, #1D4ED8 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.38);
+  }
+
+  .eb-btn-cancel {
+    background: var(--bg-subtle);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    padding: 11px 20px;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .eb-btn-cancel:hover {
+    background: #fff;
+    color: var(--crimson);
+    border-color: #FCA5A5;
+  }
+
+  /* ── Modern Toolbar (Search + Type Filter + Actions) ── */
+  .eb-toolbar-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .eb-toolbar-row-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .eb-search-wrapper {
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+  }
+
+  .eb-search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 14px;
+    pointer-events: none;
+  }
+
+  .eb-search-input {
+    width: 100%;
+    padding: 10px 36px 10px 36px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    color: var(--text-primary);
+    background: var(--bg-subtle);
+    transition: all 0.2s;
+    box-sizing: border-box;
+  }
+
+  .eb-search-input:focus {
+    background: #FFFFFF;
+    border-color: var(--brand-blue);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
+
+  .eb-search-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 13px;
+    padding: 4px;
+    line-height: 1;
+  }
+
+  .eb-toolbar-row-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    border-top: 1px solid var(--bg-subtle);
+  }
+
+  .eb-type-chips {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .eb-filter-chip {
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background: var(--bg-subtle);
+    color: var(--text-muted);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .eb-filter-chip:hover {
+    background: #FFFFFF;
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+  }
+
+  .eb-filter-chip.active {
+    background: var(--text-primary);
+    color: #FFFFFF;
+    border-color: var(--text-primary);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2);
+  }
+
+  .eb-toolbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .eb-sort-select {
+    padding: 6px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-subtle);
+    cursor: pointer;
+  }
+
+  .eb-view-toggle {
+    display: flex;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2px;
+  }
+
+  .eb-view-btn {
+    background: none;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.15s;
+  }
+
+  .eb-view-btn.active {
+    background: #FFFFFF;
+    color: var(--text-primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ── Export Actions Dropdown / Bar ── */
+  .eb-export-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .eb-btn-export-pill {
+    padding: 6px 13px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background: var(--bg-subtle);
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s;
+  }
+
+  .eb-btn-export-pill:hover:not(:disabled) {
+    background: #FFFFFF;
+    color: var(--brand-blue);
+    border-color: var(--brand-blue-border);
+  }
+
+  .eb-btn-export-pill:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  .eb-btn-export-pill.pdf-active {
+    background: var(--purple-soft);
+    border-color: var(--purple-border);
+    color: #6D28D9;
+  }
+
+  .eb-btn-export-pill.pdf-active:hover:not(:disabled) {
+    background: #6D28D9;
+    color: #FFFFFF;
+  }
+
+  /* ── Cards Grid & List View ── */
+  .eb-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+    align-items: start;
+  }
+
+  .eb-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ── Single Entry Card ── */
+  .eb-entry-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .eb-entry-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--brand-blue);
+    border-radius: 4px 0 0 4px;
+    transition: width 0.2s ease;
+  }
+
+  .eb-entry-card.card-type-example::before {
+    background: linear-gradient(180deg, #2563EB 0%, #3B82F6 100%);
+  }
+
+  .eb-entry-card.card-type-thinker::before {
+    background: linear-gradient(180deg, #7C3AED 0%, #9333EA 100%);
+  }
+
+  .eb-entry-card.card-type-case::before {
+    background: linear-gradient(180deg, #059669 0%, #10B981 100%);
+  }
+
+  .eb-entry-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+  }
+
+  .eb-entry-card:hover::before {
+    width: 6px;
+  }
+
+  .eb-card-top-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .eb-meta-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .eb-entry-type-badge {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .eb-type-example {
+    background: var(--brand-blue-light);
+    color: var(--brand-blue);
+    border: 1px solid var(--brand-blue-border);
+  }
+
+  .eb-type-thinker {
+    background: var(--purple-soft);
+    color: #6D28D9;
+    border: 1px solid var(--purple-border);
+  }
+
+  .eb-type-case {
+    background: var(--mint-soft);
+    color: var(--emerald);
+    border: 1px solid var(--mint-border);
+  }
+
+  .eb-entry-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    padding: 3px 9px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .eb-entry-tag:hover {
+    border-color: var(--brand-blue-border);
+    color: var(--brand-blue);
+  }
+
+  .eb-meta-right {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .eb-entry-title {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+  }
+
+  /* Purpose Block as an UPSC value-add callout */
+  .eb-entry-purpose-box {
+    background: var(--bg-subtle);
+    border-radius: 12px;
+    padding: 12px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    position: relative;
+  }
+
+  .eb-purpose-kicker {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .eb-entry-purpose-text {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* Source info */
+  .eb-entry-source-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .eb-entry-source-line strong {
+    color: var(--text-secondary);
+  }
+
+  /* Card Actions footer */
+  .eb-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-top: 4px;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .eb-card-action-btns {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .eb-btn-card-action {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 5px 11px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .eb-btn-card-action:hover {
+    background: #FFFFFF;
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+  }
+
+  .eb-btn-copy:hover {
+    color: var(--brand-blue);
+    border-color: var(--brand-blue-border);
+  }
+
+  .eb-btn-edit:hover {
+    color: var(--gold);
+    border-color: var(--gold-border);
+  }
+
+  .eb-btn-delete:hover {
+    color: var(--crimson);
+    border-color: #FCA5A5;
+    background: var(--crimson-soft);
+  }
+
+  /* ── List View Style Adjustments ── */
+  .eb-cards-list .eb-entry-card {
+    padding: 16px 20px;
+    gap: 10px;
+  }
+
+  .eb-cards-list .eb-card-footer {
+    padding-top: 8px;
+  }
+
+  /* ── Empty State ── */
+  .eb-empty-state {
+    text-align: center;
+    padding: 42px 24px;
+    background: var(--bg-card);
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    margin: 10px 0;
+  }
+
+  .eb-empty-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--brand-blue-light);
+    color: var(--brand-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0 auto 14px;
+  }
+
+  .eb-empty-title {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .eb-empty-sub {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    max-width: 440px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+  }
+
+  /* Starter seeds in empty state */
+  .eb-starter-box {
+    margin-top: 16px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .eb-starter-title {
+    font-size: 11.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  .eb-starter-grid {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .eb-starter-chip {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .eb-starter-chip:hover {
+    background: #FFFFFF;
+    border-color: var(--brand-blue-border);
+    color: var(--brand-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Spinner */
+  .eb-spinner {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    color: var(--brand-blue);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .eb-spinner-ring {
+    width: 28px;
+    height: 28px;
+    border: 3px solid var(--brand-blue-border);
+    border-top-color: var(--brand-blue);
+    border-radius: 50%;
+    animation: ebSpin 0.8s linear infinite;
+  }
+
+  @keyframes ebSpin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Error banner */
+  .eb-error-banner {
+    display: none;
+    background: var(--crimson-soft);
+    color: var(--crimson);
+    border: 1px solid #FCA5A5;
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* Toast */
+  .eb-toast {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #0F172A;
+    color: #fff;
+    border-radius: 14px;
+    padding: 10px 20px;
+    font-size: 13.5px;
+    font-weight: 600;
+    z-index: 9500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.3);
+  }
+
+  .eb-toast.eb-toast-visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .eb-toast.eb-toast-error {
+    background: var(--crimson);
+  }
+
+  /* PDF group-by toggle */
+  .eb-groupby-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .eb-groupby-label {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .eb-groupby-btn {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background: var(--bg-subtle);
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+  }
+
+  .eb-groupby-btn.active {
+    background: var(--brand-blue);
+    color: #fff;
+    border-color: var(--brand-blue);
+  }
+
+  /* ── Responsive adjustments ── */
+  @media (max-width: 820px) {
+    .eb-hero {
+      padding: 22px 20px;
+    }
+    .eb-hero-stats {
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+    .eb-tabs-strip {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .eb-cards-grid {
+      grid-template-columns: 1fr;
+    }
+    .eb-form-grid {
+      grid-template-columns: 1fr;
+    }
+    .eb-form-group.eb-span-2 {
+      grid-column: span 1;
+    }
+    .eb-type-selector {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .eb-tabs-strip {
+      grid-template-columns: 1fr;
+    }
+  }
+
 </style>
 </head>
 <body>
+
+<!-- SAANKALP CREATIVE WHITE LANDING / SPLASH SCREEN -->
+<div id="saankalpSplashScreen" class="saankalp-splash-overlay">
+  <div class="saankalp-splash-card">
+    <div class="saankalp-typewriter-container">
+      <h1 id="saankalpTypewriterText" class="saankalp-splash-title"></h1>
+      <span class="saankalp-typewriter-cursor">|</span>
+    </div>
+    <div class="saankalp-splash-subtitle">UPSC CSE COMMAND CENTER & REVISION ENGINE</div>
+    <div class="saankalp-splash-tagline">&ldquo;Discipline Today &bull; Dreams Tomorrow&rdquo;</div>
+    <div class="saankalp-splash-loader-bar">
+      <div class="saankalp-splash-loader-progress"></div>
+    </div>
+  </div>
+</div>
 
 <!-- DEED OF PERSONAL COMMITMENT POPUP MODAL -->
 <div id="deedModalOverlay" class="deed-modal-overlay" onclick="closeDeedModalOnBackdrop(event)">
@@ -3881,6 +5619,41 @@
   </div>
 </div>
 
+<!-- REVISION TOPICS POPUP MODAL -->
+<div id="revisionTopicsModalOverlay" class="deed-modal-overlay" onclick="closeRevisionModalOnBackdrop(event)">
+  <div class="deed-modal-card rev-modal-card-custom">
+    <div class="deed-modal-header rev-modal-header-custom">
+      <div class="deed-modal-title" style="color: #FFF; display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 20px; background: rgba(255,255,255,0.2); width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">🔄</span>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: 17px; font-weight: 800; letter-spacing: -0.2px;">REVISION VAULT &amp; TOPICS</div>
+          <div style="font-size: 11.5px; opacity: 0.85; font-weight: 500;">Interactive Spaced-Repetition Checklist</div>
+        </div>
+      </div>
+      <button class="deed-modal-close-btn" onclick="closeRevisionTierModal()" title="Close" style="background: rgba(255,255,255,0.18); color: #FFF; border: 1px solid rgba(255,255,255,0.3);">&times;</button>
+    </div>
+    
+    <div class="rev-modal-tabs-strip">
+      <button class="rev-modal-tab-btn active" id="revTabAll" onclick="switchRevisionModalTier('all')">⚡ All Due</button>
+      <button class="rev-modal-tab-btn" id="revTabR0" onclick="switchRevisionModalTier('r0')">📘 Same-Day R0</button>
+      <button class="rev-modal-tab-btn" id="revTabR7" onclick="switchRevisionModalTier('r7')">📙 Sunday R7</button>
+      <button class="rev-modal-tab-btn" id="revTabMonthly" onclick="switchRevisionModalTier('monthly')">📗 Monthly</button>
+      <button class="rev-modal-tab-btn" id="revTabBiMonthly" onclick="switchRevisionModalTier('bimonthly')">🔮 Bi-Monthly</button>
+    </div>
+
+    <div class="rev-vault-modal-body" id="revisionModalTopicList">
+      <!-- Injected by JS -->
+    </div>
+
+    <div class="deed-modal-footer" style="padding: 12px 18px; background: #F8FAFC; border-top: 1px solid #E2E8F0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+      <span id="revModalFooterStatus" style="font-size: 12px; font-weight: 700; color: #047857; background: #ECFDF5; border: 1px solid #A7F3D0; padding: 4px 12px; border-radius: 12px;">0 topics queued</span>
+      <button onclick="closeRevisionTierModal()" style="background: #1E293B; color: #FFFFFF; border: none; padding: 8px 20px; border-radius: 12px; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#0F172A';" onmouseout="this.style.background='#1E293B';">
+        CLOSE VAULT ✖
+      </button>
+    </div>
+  </div>
+</div>
+
 <div id="appWrapper">
 <div class="app-container">
 
@@ -3896,18 +5669,20 @@
         <path d="M10 78 Q 50 48, 90 78" stroke="#138808" stroke-width="2.5" stroke-linecap="round"/>
       </svg>
 
-      <!-- Top Row: Tag & Backup / Install Buttons -->
+      <!-- Top Row: Tag, Backup Button & Dual Mode Switcher -->
       <div class="prestige-banner-top">
-        <div class="prestige-tag">
-          <span>🎯</span> UPSC CSE 2027
-        </div>
-        <div style="display: flex; gap: 8px; align-items: center;">
-          <button class="prestige-backup-btn" onclick="openDeedModal()" style="background: rgba(255,255,255,0.92); border: 1px solid #BFDBFE; color: #2563EB;">
-            <span>📜</span> Deed
-          </button>
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;">
+          <div class="prestige-tag">
+            <span>🎯</span> UPSC CSE 2027
+          </div>
           <button class="prestige-backup-btn" id="quickExportBtn">
             <span>☁️</span> Backup <span>&rsaquo;</span>
           </button>
+        </div>
+
+        <div class="mode-toggle-wrap" id="headerModeToggle" style="width: 100%;">
+          <button class="mode-toggle-btn active" id="btnModeMains" onclick="switchAppMode('mains')">🏛️ Mains Mode</button>
+          <button class="mode-toggle-btn mode-prelims" id="btnModePrelims" onclick="switchAppMode('prelims')">⚡ Prelims 2027 Mode</button>
         </div>
       </div>
 
@@ -4188,7 +5963,7 @@
       <!-- VISUAL REVISION ANALYTICS DASHBOARD -->
       <div class="rev-analytics-container">
         <!-- R0 Ring Card -->
-        <div class="rev-stat-hero-card card-r0">
+        <div class="rev-stat-hero-card card-r0" onclick="openRevisionTierModal('r0')" style="cursor: pointer;" title="Click to view &amp; revise Same-Day R0 topics">
           <div class="rev-ring-wrapper">
             <svg viewBox="0 0 80 80">
               <circle class="rev-ring-bg" cx="40" cy="40" r="35"></circle>
@@ -4199,12 +5974,12 @@
           <div class="rev-card-details">
             <div class="rev-card-title">Same-Day R0</div>
             <div class="rev-card-sub" id="subRingR0">0 of 0 topics</div>
-            <span class="rev-card-pill pill-r0">Daily Active</span>
+            <span class="rev-card-pill pill-r0">Daily Active &rsaquo;</span>
           </div>
         </div>
 
         <!-- Sunday R7 Ring Card -->
-        <div class="rev-stat-hero-card card-r7">
+        <div class="rev-stat-hero-card card-r7" onclick="openRevisionTierModal('r7')" style="cursor: pointer;" title="Click to view &amp; revise Sunday R7 topics">
           <div class="rev-ring-wrapper">
             <svg viewBox="0 0 80 80">
               <circle class="rev-ring-bg" cx="40" cy="40" r="35"></circle>
@@ -4215,12 +5990,12 @@
           <div class="rev-card-details">
             <div class="rev-card-title">Sunday Vault (R7)</div>
             <div class="rev-card-sub" id="subRingR7">0 of 0 topics</div>
-            <span class="rev-card-pill pill-r7">Weekly Review</span>
+            <span class="rev-card-pill pill-r7">Weekly Review &rsaquo;</span>
           </div>
         </div>
 
         <!-- Monthly Ring Card -->
-        <div class="rev-stat-hero-card card-monthly">
+        <div class="rev-stat-hero-card card-monthly" onclick="openRevisionTierModal('monthly')" style="cursor: pointer;" title="Click to view &amp; revise Monthly Vault topics">
           <div class="rev-ring-wrapper">
             <svg viewBox="0 0 80 80">
               <circle class="rev-ring-bg" cx="40" cy="40" r="35"></circle>
@@ -4231,12 +6006,12 @@
           <div class="rev-card-details">
             <div class="rev-card-title">Monthly Vault</div>
             <div class="rev-card-sub" id="subRingMonthly">0 of 0 topics</div>
-            <span class="rev-card-pill pill-monthly">2-Day Block</span>
+            <span class="rev-card-pill pill-monthly">2-Day Block &rsaquo;</span>
           </div>
         </div>
 
         <!-- Bi-Monthly Ring Card -->
-        <div class="rev-stat-hero-card card-bimonthly">
+        <div class="rev-stat-hero-card card-bimonthly" onclick="openRevisionTierModal('bimonthly')" style="cursor: pointer;" title="Click to view &amp; revise Bi-Monthly Vault topics">
           <div class="rev-ring-wrapper">
             <svg viewBox="0 0 80 80">
               <circle class="rev-ring-bg" cx="40" cy="40" r="35"></circle>
@@ -4247,7 +6022,7 @@
           <div class="rev-card-details">
             <div class="rev-card-title">Bi-Monthly Vault</div>
             <div class="rev-card-sub" id="subRingBiMonthly">0 of 0 topics</div>
-            <span class="rev-card-pill pill-bimonthly">60-Day Review</span>
+            <span class="rev-card-pill pill-bimonthly">60-Day Review &rsaquo;</span>
           </div>
         </div>
       </div>
@@ -4325,12 +6100,77 @@
       <div style="font-family: var(--font-heading); font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px;">
         ⚡ Custom Daily Routine Habits
       </div>
-      <div style="display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;">
-        <input type="text" id="customTargetInput" placeholder="Add custom target (e.g. Running 3km)..." style="flex:2;"/>
+      <div class="habit-input-group" style="display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;">
+        <input type="text" id="customTargetInput" placeholder="Add custom target (e.g. Running 3km)..." style="flex:2; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 12px; font-size: 13.5px; outline: none;"/>
         <button class="btn" id="btnAddHabit" style="flex:1;">+ Add Target</button>
       </div>
 
       <div id="habitsList" class="item-list"></div>
+    </div>
+
+    <!-- PRELIMS 2027 TARGET SCHEDULER (1 DAY PRIOR LOGGING) -->
+    <div class="prelims-scheduler-card">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 18px; font-weight: 800; color: #065F46; margin: 0; display: flex; align-items: center; gap: 8px;">
+            <span>🎯</span> Prelims 2027 Target Scheduler (Log 1 Day Prior)
+          </h3>
+          <div style="font-size: 12.5px; color: #047857; margin-top: 2px;">
+            Log your target 1 day in advance (e.g. log 1 Nov targets on 31 Oct 2026). Scheduled targets automatically reflect on your Prelims Home page.
+          </div>
+        </div>
+        <div style="background: #ECFDF5; border: 1px solid #6EE7B7; color: #047857; font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 20px;">
+          🗓️ Window: 1 Nov 2026 – 22 May 2027
+        </div>
+      </div>
+
+      <!-- FORM TO SCHEDULE TARGET -->
+      <div style="background: #F0FDF4; border: 1px solid #A7F3D0; border-radius: 16px; padding: 18px; margin-bottom: 20px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 12px;">
+          <div>
+            <label style="font-size: 11px; font-weight: 800; color: #065F46; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">Target Date (Day to Execute) *</label>
+            <input type="date" id="pltTargetDate" class="topper-form-input" style="background: #FFF; font-weight: 600;"/>
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 800; color: #065F46; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">Subject *</label>
+            <select id="pltSubject" class="topper-form-select" style="background: #FFF; font-weight: 600;">
+              <option value="Polity">Polity</option>
+              <option value="Economy">Economy</option>
+              <option value="Environment">Environment &amp; Ecology</option>
+              <option value="Modern History">Modern History</option>
+              <option value="Ancient/Medieval">Ancient &amp; Medieval History</option>
+              <option value="Art &amp; Culture">Art &amp; Culture</option>
+              <option value="Geography">Geography</option>
+              <option value="Sci-Tech">Science &amp; Technology</option>
+              <option value="CSAT">CSAT Practice</option>
+              <option value="Current Affairs">Current Affairs</option>
+              <option value="Prelims Test Series">Prelims Test Series</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 800; color: #065F46; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 4px;">Priority Level</label>
+            <select id="pltPriority" class="topper-form-select" style="background: #FFF; font-weight: 600;">
+              <option value="HIGH">🔥 High Priority (Core)</option>
+              <option value="MEDIUM">⚡ Medium Priority</option>
+              <option value="LOW">🌱 Light / Revision</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="habit-input-group" style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <input type="text" id="pltTopicInput" placeholder="Target Topic (e.g. Laxmikanth Ch. 7 Fundamental Rights + 50 MCQs)..." style="flex:3; min-width: 200px; padding: 10px 14px; border: 1px solid #A7F3D0; border-radius: 12px; font-size: 13.5px; outline: none;"/>
+          <button class="btn btn-schedule-target" onclick="schedulePrelimsTarget()" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%); flex:1; min-width: 160px; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);">
+            + Schedule Target
+          </button>
+        </div>
+      </div>
+
+      <!-- LIST OF SCHEDULED TARGETS -->
+      <div style="font-family: var(--font-heading); font-size: 14px; font-weight: 800; color: #065F46; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+        <span>📋 Scheduled Prelims 2027 Targets Ledger</span>
+        <span id="pltListCountBadge" style="font-size: 11px; font-weight: 700; color: #047857;">0 targets logged</span>
+      </div>
+      <div id="pltScheduleListContainer" class="item-list"></div>
     </div>
   </div>
 
@@ -4386,7 +6226,13 @@
       <div class="master-toolbar">
         <div class="master-search-wrap">
           <input type="text" id="masterSearchInput" class="master-search-input" placeholder="🔍 Search topic or subject..."/>
-          <select id="masterFilterSubject" class="master-filter-select">
+          <select id="masterFilterCategory" class="master-filter-select" onchange="renderMasterLog()">
+            <option value="ALL">All Categories</option>
+            <option value="PRELIMS">🎯 Prelims Targets</option>
+            <option value="SANKALP">📘 Sankalp Plan</option>
+            <option value="STUDY">📝 Study Topics</option>
+          </select>
+          <select id="masterFilterSubject" class="master-filter-select" onchange="renderMasterLog()">
             <option value="ALL">All Subjects</option>
           </select>
         </div>
@@ -4512,6 +6358,179 @@
     </div>
   </div>
 
+  <!-- ======================================================
+       TAB: EXAMPLES BANK  (self-contained, eb- prefix)
+       ====================================================== -->
+  <div id="tab-examples-bank" class="tab-view">
+    <div class="eb-root">
+
+      <!-- Toast notification -->
+      <div id="ebToast" class="eb-toast" aria-live="polite"></div>
+
+      <!-- Modern Hero banner -->
+      <div class="eb-hero">
+        <div class="eb-hero-top">
+          <div class="eb-hero-main">
+            <div class="eb-hero-kicker-badge">
+              <span class="eb-hero-pulse"></span>
+              UPSC CSE • REVISION LEDGER
+            </div>
+            <h2 class="eb-hero-title">Examples &amp; Thought Bank</h2>
+            <p class="eb-hero-sub">
+              Your personal repository of high-yield examples, ethical thinkers &amp; case studies for GS1–GS4 answer enrichment.
+            </p>
+          </div>
+          <!-- Hero Stats Strip -->
+          <div class="eb-hero-stats">
+            <div class="eb-stat-card" id="ebStatCardGS1" onclick="EBModule.switchPart('GS1')" title="Switch to GS1">
+              <span class="eb-stat-num" id="ebStatGS1">0</span>
+              <span class="eb-stat-label">GS1</span>
+            </div>
+            <div class="eb-stat-card" id="ebStatCardGS2" onclick="EBModule.switchPart('GS2')" title="Switch to GS2">
+              <span class="eb-stat-num" id="ebStatGS2">0</span>
+              <span class="eb-stat-label">GS2</span>
+            </div>
+            <div class="eb-stat-card" id="ebStatCardGS3" onclick="EBModule.switchPart('GS3')" title="Switch to GS3">
+              <span class="eb-stat-num" id="ebStatGS3">0</span>
+              <span class="eb-stat-label">GS3</span>
+            </div>
+            <div class="eb-stat-card" id="ebStatCardGS4" onclick="EBModule.switchPart('GS4')" title="Switch to GS4">
+              <span class="eb-stat-num" id="ebStatGS4">0</span>
+              <span class="eb-stat-label">GS4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="eb-hero-meta-strip">
+          <div class="eb-type-counts-group">
+            <span class="eb-type-counter">💡 <strong id="ebCountExample">0</strong> Examples</span>
+            <span class="eb-type-counter">🧠 <strong id="ebCountThinker">0</strong> Thinkers</span>
+            <span class="eb-type-counter">📑 <strong id="ebCountCase">0</strong> Case Studies</span>
+          </div>
+          <div class="eb-hero-actions">
+            <button class="eb-btn-hero-add" id="ebHeroAddBtn" onclick="EBModule.toggleForm()">
+              <span id="ebHeroAddIcon">＋</span> <span id="ebHeroAddLabel">Add New Entry</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error banner -->
+      <div id="ebErrorBanner" class="eb-error-banner" role="alert"></div>
+
+      <!-- Loading spinner -->
+      <div id="ebSpinner" class="eb-spinner">
+        <div class="eb-spinner-ring"></div>
+        <span>Syncing with cloud…</span>
+      </div>
+
+      <!-- ── ADD / EDIT ENTRY FORM (Collapsible drawer) ── -->
+      <section id="ebFormSection" class="eb-form-card collapsed" aria-label="Add or edit entry">
+        <div class="eb-form-header">
+          <div class="eb-form-heading">
+            <span id="ebFormIcon">✏️</span>
+            <span id="ebFormHeading">Add New Entry</span>
+          </div>
+          <button type="button" class="eb-form-close-btn" onclick="EBModule.cancelEdit()" title="Close form">✕ Close</button>
+        </div>
+
+        <!-- Interactive Type Pills -->
+        <div class="eb-form-group" style="margin-bottom: 14px;">
+          <label class="eb-form-label">Classification <span class="req">*</span></label>
+          <div class="eb-type-selector">
+            <button type="button" class="eb-type-pill-btn active" data-type="Example" onclick="EBModule.setType('Example')">
+              <span>💡</span> Example / Fact
+            </button>
+            <button type="button" class="eb-type-pill-btn" data-type="Thinker" onclick="EBModule.setType('Thinker')">
+              <span>🧠</span> Thinker / Commission
+            </button>
+            <button type="button" class="eb-type-pill-btn" data-type="Case Study" onclick="EBModule.setType('Case Study')">
+              <span>📑</span> Case Study / Pilot
+            </button>
+          </div>
+          <!-- Synchronized select for form reading compatibility -->
+          <select id="ebFormType" style="display:none;">
+            <option value="Example" selected>Example</option>
+            <option value="Thinker">Thinker</option>
+            <option value="Case Study">Case Study</option>
+          </select>
+        </div>
+
+        <div class="eb-form-grid">
+          <!-- GS Part -->
+          <div class="eb-form-group">
+            <label class="eb-form-label" for="ebFormGsPart">GS Target Paper <span class="req">*</span></label>
+            <select class="eb-form-select" id="ebFormGsPart">
+              <option value="GS1">GS1 — History, Geography &amp; Society</option>
+              <option value="GS2">GS2 — Polity, Governance &amp; IR</option>
+              <option value="GS3">GS3 — Economy, S&amp;T &amp; Environment</option>
+              <option value="GS4">GS4 — Ethics, Integrity &amp; Aptitude</option>
+            </select>
+          </div>
+
+          <!-- Topic Tag -->
+          <div class="eb-form-group">
+            <label class="eb-form-label" for="ebFormTag">Topic Tag (optional)</label>
+            <input type="text" class="eb-form-input" id="ebFormTag"
+                   placeholder="e.g. Poverty, Governance, Climate"
+                   maxlength="80" autocomplete="off"/>
+            <div class="eb-tag-suggestions">
+              <span class="eb-tag-chip" onclick="EBModule.applyTag('Governance')">#Governance</span>
+              <span class="eb-tag-chip" onclick="EBModule.applyTag('Ethics')">#Ethics</span>
+              <span class="eb-tag-chip" onclick="EBModule.applyTag('Federalism')">#Federalism</span>
+              <span class="eb-tag-chip" onclick="EBModule.applyTag('Poverty')">#Poverty</span>
+              <span class="eb-tag-chip" onclick="EBModule.applyTag('Climate')">#Climate</span>
+              <span class="eb-tag-chip" onclick="EBModule.applyTag('Judiciary')">#Judiciary</span>
+            </div>
+          </div>
+
+          <!-- Title -->
+          <div class="eb-form-group eb-span-2">
+            <label class="eb-form-label" for="ebFormTitle">Title / Name <span class="req">*</span></label>
+            <input type="text" class="eb-form-input" id="ebFormTitle"
+                   placeholder="e.g. Amartya Sen / Chipko Movement / 2nd ARC Report"
+                   maxlength="200" autocomplete="off"/>
+          </div>
+
+          <!-- Purpose -->
+          <div class="eb-form-group eb-span-2">
+            <label class="eb-form-label" for="ebFormPurpose">Purpose / Arguments Supported / Where to use <span class="req">*</span></label>
+            <textarea class="eb-form-textarea" id="ebFormPurpose"
+                      placeholder="What does this substantiate in Mains answer writing? Which questions or themes does it enrich?"
+                      maxlength="1000"></textarea>
+          </div>
+
+          <!-- Source -->
+          <div class="eb-form-group eb-span-2">
+            <label class="eb-form-label" for="ebFormSource">Source / Reference (optional)</label>
+            <input type="text" class="eb-form-input" id="ebFormSource"
+                   placeholder="e.g. NCERT, The Hindu, 2nd ARC Report, Economic Survey"
+                   maxlength="150" autocomplete="off"/>
+          </div>
+        </div>
+
+        <div class="eb-form-actions">
+          <button type="button" class="eb-btn-cancel" id="ebFormCancelBtn"
+                  onclick="EBModule.cancelEdit()">
+            Cancel
+          </button>
+          <button type="button" class="eb-btn-save" id="ebFormSaveBtn"
+                  onclick="EBModule.saveEntry()">
+            <span>💾</span> Save Entry
+          </button>
+        </div>
+      </section>
+
+      <!-- ── GS PART TABS (Segmented navigation cards) ── -->
+      <div id="ebPartTabs" class="eb-tabs-strip" role="tablist" aria-label="GS Parts"></div>
+
+      <!-- ── PART PANEL (rendered by JS: search toolbar, filters, view switcher, cards) ── -->
+      <div id="ebPartPanel"></div>
+
+    </div>
+  </div>
+  <!-- /tab-examples-bank -->
+
 <!-- BOTTOM NAVIGATION BAR (INCLUDES SANKALP) -->
 <nav class="bottom-nav-bar" id="mainBottomNav">
   <div class="bottom-nav-container">
@@ -4586,6 +6605,31 @@
         </div>
         <span>Scores</span>
       </button>
+
+      <!-- Examples Bank — added to More menu -->
+      <button class="more-nav-item" data-tab="tab-examples-bank" id="ebNavBtn">
+        <div class="more-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <span>Examples</span>
+      </button>
+
+      <!-- UPSC Prelims PYQ Analysis -->
+      <a href="pyq.html" class="more-nav-item" style="text-decoration:none;">
+        <div class="more-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="11" y1="8" x2="11" y2="14"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+        </div>
+        <span>PYQ Analysis</span>
+      </a>
     </div>
   </div>
 </nav>
@@ -4993,15 +7037,176 @@ async function updateTrackerTaskState(day, key, checked, taskObj) {
   renderAll();
 }
 
+let deletedEntryIds = new Set();
+try {
+  const storedDelEntries = localStorage.getItem('op300_deleted_entry_ids');
+  if (storedDelEntries) JSON.parse(storedDelEntries).forEach(id => deletedEntryIds.add(id));
+} catch(e){}
+
+function getRelatedIds(id) {
+  if (!id) return [];
+  const raw = String(id).trim();
+  let clean = raw;
+  let prev;
+  do {
+    prev = clean;
+    clean = clean.replace(/^(plt_|entry_plt_|entry_|plt_entry_)/, '');
+  } while (clean !== prev);
+
+  if (!clean) return [raw];
+
+  return Array.from(new Set([
+    raw, clean,
+    'plt_' + clean,
+    'entry_' + clean,
+    'entry_plt_' + clean,
+    'entry_plt_plt_' + clean,
+    'plt_entry_' + clean,
+    'plt_entry_entry_plt_' + clean
+  ]));
+}
+
+function recordDeletedEntryId(id) {
+  if (!id) return;
+  const rel = getRelatedIds(id);
+  rel.forEach(r => deletedEntryIds.add(r));
+  try { localStorage.setItem('op300_deleted_entry_ids', JSON.stringify(Array.from(deletedEntryIds))); } catch(e){}
+}
+
+function isEntryDeleted(id) {
+  if (!id) return false;
+  if (!deletedEntryIds || deletedEntryIds.size === 0) return false;
+  const all = getRelatedIds(id);
+  return all.some(rid => deletedEntryIds.has(rid));
+}
+
+function cleanOrphanPrelimsEntries() {
+  const validPltIds = new Set();
+  (PRELIMS_TARGETS_V1 || []).forEach(t => {
+    if (t && t.id && !isEntryDeleted(t.id)) {
+      getRelatedIds(t.id).forEach(rid => validPltIds.add(rid));
+    }
+  });
+
+  ENTRIES = (ENTRIES || []).filter(e => {
+    if (!e || !isValidEntry(e)) return false;
+    if (isEntryDeleted(e.id)) return false;
+    const isPlt = e.isPrelimsTarget || e.prelimsSync || (e.id && String(e.id).startsWith('entry_plt_'));
+    if (isPlt) {
+      const rel = getRelatedIds(e.id);
+      const stillExists = rel.some(rid => validPltIds.has(rid));
+      if (!stillExists) {
+        recordDeletedEntryId(e.id);
+        return false;
+      }
+    }
+    return true;
+  });
+}
+
+function getAllPrelimsTargets() {
+  return (PRELIMS_TARGETS_V1 || []).filter(t => t && t.id && !isEntryDeleted(t.id));
+}
+
 function renderHomeTrackerTargets() {
   const container = document.getElementById('homeTrackerList');
   const tabHabitsContainer = document.getElementById('tabHabitsTrackerList');
   if (!container && !tabHabitsContainer) return;
 
-  const todayEntry = getTodayTrackerEntry();
+  try {
+    const plt = localStorage.getItem('op300_prelims_targets_v1');
+    if (plt) PRELIMS_TARGETS_V1 = JSON.parse(plt);
+  } catch(e){}
+
   const dayBadge = document.getElementById('homeTrackerDayBadge');
   const habitsBadge = document.getElementById('habitsTabTrackerBadge');
 
+  if (APP_MODE === 'prelims') {
+    const today = getTodayStr();
+    (PRELIMS_TARGETS_V1 || []).forEach(t => syncPrelimsTargetToEntries(t));
+    const allPlt = getAllPrelimsTargets();
+    let todayTargets = allPlt.filter(t => t.targetDate === today);
+    const doneCount = todayTargets.filter(t => t.completed).length;
+    const total = todayTargets.length;
+    const pending = Math.max(0, total - doneCount);
+    const pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
+
+    if (dayBadge) dayBadge.textContent = `⚡ Prelims Mode · ${formatDateDisplay(today)}`;
+    if (habitsBadge) habitsBadge.textContent = `Prelims Mode: ${doneCount} / ${total} Done`;
+
+    // 1. UPDATE OVERLAPPING QUICK STAT CARDS FOR PRELIMS MODE
+    const mobTotalEl = document.getElementById('mobStatTotalTasks');
+    if (mobTotalEl) mobTotalEl.textContent = total;
+
+    const mobCompEl = document.getElementById('mobStatCompletedTasks');
+    if (mobCompEl) mobCompEl.textContent = doneCount;
+
+    const mobPendEl = document.getElementById('mobStatPendingTasks');
+    if (mobPendEl) mobPendEl.textContent = pending;
+
+    // 2. UPDATE HERO PROGRESS CARD VALUES
+    const pctValEl = document.getElementById('homeTrackerPctVal');
+    if (pctValEl) {
+      pctValEl.textContent = pct + "%";
+      pctValEl.style.color = pct === 100 ? "#10B981" : "#FFFFFF";
+    }
+
+    const ratioValEl = document.getElementById('homeTrackerRatioVal');
+    if (ratioValEl) ratioValEl.textContent = `${doneCount} of ${total} Completed`;
+
+    const progressBarEl = document.getElementById('homeTrackerProgressBar');
+    if (progressBarEl) progressBarEl.style.width = pct + "%";
+
+    const domBadgeText = document.getElementById('dominanceStatusBadgeText');
+    if (domBadgeText) {
+      if (total === 0) domBadgeText.textContent = "No Advance Targets Scheduled Today";
+      else if (pct === 100) domBadgeText.textContent = "100% Prelims Execution Completed!";
+      else if (pct >= 50) domBadgeText.textContent = "Great Progress! Keep Going";
+      else domBadgeText.textContent = "Fight Back & Complete Targets";
+    }
+
+    if (todayTargets.length === 0) {
+      const emptyHTML = `
+        <div style="background: #F0FDF4; border: 1.5px solid #A7F3D0; padding: 22px 18px; border-radius: 16px; text-align: center; color: #065F46; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.05);">
+          <div style="font-size: 28px; margin-bottom: 6px;">🎯</div>
+          <div style="font-size: 15.5px; font-weight: 800; color: #064E3B; margin-bottom: 4px;">No Prelims Targets Scheduled for Today (${formatDateDisplay(today)})</div>
+          <div style="font-size: 13px; color: #059669; line-height: 1.5;">Log your targets 1 day in advance in <b>Tracker Section &rarr; Log Prelims Target</b> to see them here.</div>
+        </div>
+      `;
+      if (container) container.innerHTML = emptyHTML;
+      if (tabHabitsContainer) tabHabitsContainer.innerHTML = emptyHTML;
+      return;
+    }
+
+    const html = todayTargets.map(t => {
+      const isDone = !!t.completed;
+      const subColor = SUBJECT_COLORS[t.subject] || '#059669';
+
+      return `
+        <div class="mob-task-card" style="border-left: 4px solid ${isDone ? '#10B981' : subColor}; border-radius: 14px; padding: 12px 16px; margin-bottom: 10px; background: #FFFFFF; border: 1px solid #E2E8F0;">
+          <div class="mob-task-icon-box" style="background: #ECFDF5; color: #059669;">
+            🎯
+          </div>
+          <div class="mob-task-details">
+            <div class="mob-task-title" style="${isDone ? 'text-decoration: line-through; opacity: 0.6; color: #10B981;' : ''}">${t.topic}</div>
+            <div class="mob-task-sub" style="color: #047857; font-weight: 700; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+              <span>${t.subject} ${t.priority ? '&middot; ' + t.priority + ' Priority ' : ''}&middot; Prelims 2027</span>
+              <span style="font-size: 10px; font-weight: 800; color: ${t.sundayDone ? '#047857' : '#B45309'}; background: ${t.sundayDone ? '#ECFDF5' : '#FFFBEB'}; border: 1px solid ${t.sundayDone ? '#A7F3D0' : '#FDE68A'}; padding: 1px 7px; border-radius: 6px;">${t.sundayDone ? '⚡ Sunday R7: Done ✓' : '🎯 Sunday R7 Vault'}</span>
+            </div>
+          </div>
+          <div class="mob-task-right">
+            <input type="checkbox" ${isDone ? 'checked' : ''} onchange="togglePrelimsTargetComplete('${t.id}')" style="width: 22px; height: 22px; cursor: pointer; accent-color: #059669;"/>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    if (container) container.innerHTML = html;
+    if (tabHabitsContainer) tabHabitsContainer.innerHTML = html;
+    return;
+  }
+
+  const todayEntry = getTodayTrackerEntry();
   if (!todayEntry || todayEntry.isBeforeStart) {
     const startDateText = (todayEntry && todayEntry.startDate) ? (todayEntry.startDate.split(',')[1] || todayEntry.startDate) : '10 Sep 2026';
     if (dayBadge) dayBadge.textContent = `Starts ${startDateText.trim()}`;
@@ -5182,20 +7387,10 @@ window.addEventListener('storage', () => {
   renderHeaderStats();
 });
 
-let deletedEntryIds = new Set();
-try {
-  const storedDelEntries = localStorage.getItem('op300_deleted_entry_ids');
-  if (storedDelEntries) JSON.parse(storedDelEntries).forEach(id => deletedEntryIds.add(id));
-} catch(e){}
-
-function recordDeletedEntryId(id) {
-  if (!id) return;
-  deletedEntryIds.add(id);
-  try { localStorage.setItem('op300_deleted_entry_ids', JSON.stringify(Array.from(deletedEntryIds))); } catch(e){}
-}
-
 async function pushToCentralServer(extraData = {}) {
-  ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && !deletedEntryIds.has(item.id));
+  cleanOrphanPrelimsEntries();
+  ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && !isEntryDeleted(item.id));
+  PRELIMS_TARGETS_V1 = (PRELIMS_TARGETS_V1 || []).filter(item => item && item.id && !isEntryDeleted(item.id));
   saveData();
   try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
 
@@ -5203,7 +7398,7 @@ async function pushToCentralServer(extraData = {}) {
   const deletedScoreIds = (window.ScoreRegisterModule && window.ScoreRegisterModule.getDeletedIds) ? window.ScoreRegisterModule.getDeletedIds() : [];
 
   const payload = {
-    ENTRIES, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG,
+    ENTRIES, PRELIMS_TARGETS_V1, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG,
     SCORE_REGISTER: scoreState,
     deletedScoreIds: deletedScoreIds,
     deletedEntryIds: Array.from(deletedEntryIds),
@@ -5247,7 +7442,7 @@ function mergeSingleEntry(localItem, serverItem) {
     const localTime = parseTime(localItem[timeKey] || localItem.updatedAt);
     const serverTime = parseTime(serverItem[timeKey] || serverItem.updatedAt);
 
-    if (serverTime >= localTime) {
+    if (serverTime > localTime) {
       res[doneKey] = serverItem[doneKey] !== undefined ? serverItem[doneKey] : localItem[doneKey];
       res[timeKey] = serverTime;
     } else {
@@ -5256,22 +7451,32 @@ function mergeSingleEntry(localItem, serverItem) {
     }
   });
 
-  res.updatedAt = Math.max(parseTime(localItem.updatedAt), parseTime(serverItem.updatedAt));
+  res.updatedAt = Math.max(parseTime(localItem.updatedAt), parseTime(serverItem.updatedAt), Date.now());
   return res;
 }
 
 function mergeEntries(localEntries, serverEntries, cloudDeletedIds = []) {
-  const delSet = new Set([...Array.from(deletedEntryIds), ...(cloudDeletedIds || [])]);
+  const rawDel = [...Array.from(deletedEntryIds), ...(cloudDeletedIds || [])];
+  const delSet = new Set();
+  rawDel.forEach(id => {
+    getRelatedIds(id).forEach(rid => delSet.add(rid));
+  });
   delSet.forEach(id => recordDeletedEntryId(id));
+
+  const isEntryDeleted = (id) => {
+    if (!id) return true;
+    const all = getRelatedIds(id);
+    return all.some(rid => delSet.has(rid));
+  };
 
   const map = new Map();
   (localEntries || []).forEach(e => {
-    if (isValidEntry(e) && !delSet.has(e.id)) {
+    if (isValidEntry(e) && !isEntryDeleted(e.id)) {
       map.set(e.id, e);
     }
   });
   (serverEntries || []).forEach(e => {
-    if (isValidEntry(e) && !delSet.has(e.id)) {
+    if (isValidEntry(e) && !isEntryDeleted(e.id)) {
       if (!map.has(e.id)) {
         map.set(e.id, e);
       } else {
@@ -5292,10 +7497,12 @@ async function pollCentralServer() {
         let updated = false;
         if (Array.isArray(data.deletedEntryIds)) {
           data.deletedEntryIds.forEach(id => {
-            if (id && !deletedEntryIds.has(id)) {
-              deletedEntryIds.add(id);
-              updated = true;
-            }
+            getRelatedIds(id).forEach(rid => {
+              if (rid && !deletedEntryIds.has(rid)) {
+                deletedEntryIds.add(rid);
+                updated = true;
+              }
+            });
           });
           if (updated) {
             try { localStorage.setItem('op300_deleted_entry_ids', JSON.stringify(Array.from(deletedEntryIds))); } catch(e){}
@@ -5330,11 +7537,48 @@ async function pollCentralServer() {
         if (data.SCORE_REGISTER && window.ScoreRegisterModule && typeof window.ScoreRegisterModule.mergeCloudScores === 'function') {
           window.ScoreRegisterModule.mergeCloudScores(data.SCORE_REGISTER, data.deletedScoreIds);
         }
+        if (data.PRELIMS_TARGETS_V1 && Array.isArray(data.PRELIMS_TARGETS_V1)) {
+          const pltMap = new Map();
+          (PRELIMS_TARGETS_V1 || []).forEach(t => {
+            if (t && t.id && !isEntryDeleted(t.id)) {
+              pltMap.set(t.id, t);
+            }
+          });
+          data.PRELIMS_TARGETS_V1.forEach(t => {
+            if (t && t.id && !isEntryDeleted(t.id)) {
+              if (!pltMap.has(t.id)) {
+                pltMap.set(t.id, t);
+              } else {
+                const localPlt = pltMap.get(t.id);
+                const localTime = parseTime(localPlt.updatedAt || localPlt.completedAt);
+                const serverTime = parseTime(t.updatedAt || t.completedAt);
+                const isDone = (serverTime >= localTime) ? t.completed : localPlt.completed;
+                pltMap.set(t.id, {
+                  ...t,
+                  ...localPlt,
+                  completed: isDone,
+                  completedAt: isDone ? (localPlt.completedAt || t.completedAt || Date.now()) : null,
+                  updatedAt: Math.max(localTime, serverTime, Date.now())
+                });
+              }
+            }
+          });
+          const mergedPlt = Array.from(pltMap.values()).filter(t => !isEntryDeleted(t.id));
+          if (JSON.stringify(mergedPlt) !== JSON.stringify(PRELIMS_TARGETS_V1)) {
+            PRELIMS_TARGETS_V1 = mergedPlt;
+            try { localStorage.setItem(STORAGE_KEYS.PRELIMS_TARGETS, JSON.stringify(PRELIMS_TARGETS_V1)); } catch(e){}
+            try { localStorage.setItem('op300_prelims_targets_backup_v1', JSON.stringify(PRELIMS_TARGETS_V1)); } catch(e){}
+            updated = true;
+          }
+        }
+        cleanOrphanPrelimsEntries();
         if (updated) {
           if (data.timestamp) lastLocalSyncTime = data.timestamp;
           saveData();
           renderAll();
+          renderMasterLog();
           renderHomeTrackerTargets();
+          renderPrelimsSchedulerList();
           renderHeaderStats();
           if (document.getElementById('popupModal') && document.getElementById('popupModal').classList.contains('active')) { renderPopupContent(); }
         }
@@ -5347,7 +7591,8 @@ const STORAGE_KEYS = {
   ENTRIES: "op300_entries_v2",
   HABITS: "op300_habits_v2",
   CUSTOM_HABITS: "op300_custom_habits_v2",
-  CONFIG: "op300_config_v2"
+  CONFIG: "op300_config_v2",
+  PRELIMS_TARGETS: "op300_prelims_targets_v1"
 };
 
 const SUBJECT_COLORS = {
@@ -5711,12 +7956,27 @@ function getMonToSatWeekRange(dateStr) {
 function getPendingItemsToday() {
   const today = getTodayStr();
   const weekRange = getMonToSatWeekRange(today);
-  const isSunday = getDayOfWeek(today) === 0;
   const isMonthlyBlock = (today.endsWith("-01") || today.endsWith("-02"));
+  const isSunday = getDayOfWeek(today) === 0;
 
-  const sameDayPending = ENTRIES.filter(e => e.dateStudied === today && !e.r0Done);
-  const sundayPending = ENTRIES.filter(e => !e.sundayDone && e.dateStudied >= weekRange.monStr && e.dateStudied <= weekRange.satStr);
-  const monthlyPending = isMonthlyBlock ? ENTRIES.filter(e => !e.monthlyDone && e.dateStudied < today.slice(0, 7) + "-01") : [];
+  (PRELIMS_TARGETS_V1 || []).forEach(t => syncPrelimsTargetToEntries(t));
+  const pool = ENTRIES;
+
+  let sameDayPending = pool.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return d === today && !e.r0Done;
+  });
+  let sundayPending = isSunday ? pool.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return !e.sundayDone && d <= weekRange.sunStr;
+  }) : [];
+  let monthlyPending = isMonthlyBlock ? pool.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return !e.monthlyDone;
+  }) : [];
 
   if (!HABITS_LOG[today]) HABITS_LOG[today] = {};
   const habitsLeft = CUSTOM_HABITS.filter(h => !HABITS_LOG[today][h]);
@@ -5727,23 +7987,382 @@ function getPendingItemsToday() {
   };
 }
 
+let PRELIMS_TARGETS_V1 = [];
+let APP_MODE = localStorage.getItem('op300_app_mode') || 'mains';
+
+function switchAppMode(mode) {
+  APP_MODE = mode;
+  try { localStorage.setItem('op300_app_mode', mode); } catch(e){}
+
+  const btnMains = document.getElementById('btnModeMains');
+  const btnPrelims = document.getElementById('btnModePrelims');
+
+  if (mode === 'prelims') {
+    if (btnMains) btnMains.classList.remove('active');
+    if (btnPrelims) btnPrelims.classList.add('active');
+    document.body.classList.add('prelims-mode-active');
+  } else {
+    if (btnPrelims) btnPrelims.classList.remove('active');
+    if (btnMains) btnMains.classList.add('active');
+    document.body.classList.remove('prelims-mode-active');
+  }
+
+  renderHeaderStats();
+  renderHomeTrackerTargets();
+}
+
+function syncPrelimsTargetToEntries(t) {
+  if (!t || !t.id) return;
+  const allIds = getRelatedIds(t.id);
+
+  if (allIds.some(id => isEntryDeleted(id))) {
+    PRELIMS_TARGETS_V1 = PRELIMS_TARGETS_V1.filter(x => !allIds.includes(x.id));
+    ENTRIES = ENTRIES.filter(e => !allIds.includes(e.id));
+    return;
+  }
+
+  const entryId = t.id.startsWith('entry_plt_') ? t.id : ('entry_plt_' + t.id);
+  const now = Date.now();
+  const existingIdx = ENTRIES.findIndex(e => allIds.includes(e.id));
+
+  if (existingIdx < 0) {
+    ENTRIES.push({
+      id: entryId,
+      subject: t.subject || 'GS I',
+      topic: t.topic,
+      targetDate: t.targetDate || getTodayStr(),
+      dateStudied: t.targetDate || getTodayStr(),
+      loggedOnDate: t.loggedOnDate || getTodayStr(),
+      r0Done: !!t.completed,
+      sundayDone: !!t.sundayDone,
+      monthlyDone: !!t.monthlyDone,
+      biMonthlyDone: !!t.biMonthlyDone,
+      r0UpdatedAt: t.completed ? (t.completedAt || now) : now,
+      sundayUpdatedAt: t.sundayUpdatedAt || now,
+      monthlyUpdatedAt: t.monthlyUpdatedAt || now,
+      biMonthlyUpdatedAt: t.biMonthlyUpdatedAt || now,
+      updatedAt: now,
+      prelimsSync: true,
+      isPrelimsTarget: true,
+      priority: t.priority || 'MEDIUM'
+    });
+  } else {
+    const entry = ENTRIES[existingIdx];
+    const entryTime = parseTime(entry.r0UpdatedAt || entry.updatedAt);
+    const targetTime = parseTime(t.updatedAt || t.completedAt);
+
+    if (entryTime > targetTime) {
+      t.completed = !!entry.r0Done;
+      t.completedAt = entry.r0Done ? entryTime : null;
+      t.updatedAt = entryTime;
+    } else if (targetTime > entryTime) {
+      entry.r0Done = !!t.completed;
+      entry.r0UpdatedAt = targetTime;
+    } else {
+      entry.r0Done = !!t.completed;
+    }
+
+    // Sunday Vault (R7) milestone sync
+    const eSunTime = parseTime(entry.sundayUpdatedAt || entry.updatedAt);
+    const tSunTime = parseTime(t.sundayUpdatedAt || t.updatedAt);
+    if (eSunTime > tSunTime) {
+      t.sundayDone = !!entry.sundayDone;
+      t.sundayUpdatedAt = eSunTime;
+    } else if (tSunTime > eSunTime) {
+      entry.sundayDone = !!t.sundayDone;
+      entry.sundayUpdatedAt = tSunTime;
+    } else if (entry.sundayDone !== undefined || t.sundayDone !== undefined) {
+      const sunVal = (entry.sundayDone !== undefined) ? !!entry.sundayDone : !!t.sundayDone;
+      entry.sundayDone = sunVal;
+      t.sundayDone = sunVal;
+    }
+
+    // Monthly milestone sync
+    const eMonTime = parseTime(entry.monthlyUpdatedAt || entry.updatedAt);
+    const tMonTime = parseTime(t.monthlyUpdatedAt || t.updatedAt);
+    if (eMonTime > tMonTime) {
+      t.monthlyDone = !!entry.monthlyDone;
+      t.monthlyUpdatedAt = eMonTime;
+    } else if (tMonTime > eMonTime) {
+      entry.monthlyDone = !!t.monthlyDone;
+      entry.monthlyUpdatedAt = tMonTime;
+    } else if (entry.monthlyDone !== undefined || t.monthlyDone !== undefined) {
+      const monVal = (entry.monthlyDone !== undefined) ? !!entry.monthlyDone : !!t.monthlyDone;
+      entry.monthlyDone = monVal;
+      t.monthlyDone = monVal;
+    }
+
+    // BiMonthly milestone sync
+    const eBiTime = parseTime(entry.biMonthlyUpdatedAt || entry.updatedAt);
+    const tBiTime = parseTime(t.biMonthlyUpdatedAt || t.updatedAt);
+    if (eBiTime > tBiTime) {
+      t.biMonthlyDone = !!entry.biMonthlyDone;
+      t.biMonthlyUpdatedAt = eBiTime;
+    } else if (tBiTime > eBiTime) {
+      entry.biMonthlyDone = !!t.biMonthlyDone;
+      entry.biMonthlyUpdatedAt = tBiTime;
+    } else if (entry.biMonthlyDone !== undefined || t.biMonthlyDone !== undefined) {
+      const biVal = (entry.biMonthlyDone !== undefined) ? !!entry.biMonthlyDone : !!t.biMonthlyDone;
+      entry.biMonthlyDone = biVal;
+      t.biMonthlyDone = biVal;
+    }
+
+    entry.subject = t.subject || entry.subject;
+    entry.topic = t.topic || entry.topic;
+    entry.targetDate = t.targetDate || entry.targetDate || entry.dateStudied;
+    entry.dateStudied = t.targetDate || entry.dateStudied;
+    entry.isPrelimsTarget = true;
+    entry.prelimsSync = true;
+    if (t.priority) entry.priority = t.priority;
+  }
+}
+
+function schedulePrelimsTarget() {
+  const dateVal = document.getElementById('pltTargetDate').value;
+  const subjectVal = document.getElementById('pltSubject').value;
+  const topicVal = (document.getElementById('pltTopicInput').value || '').trim();
+  const priorityVal = document.getElementById('pltPriority').value;
+
+  if (!dateVal) {
+    alert('Please select a Target Date for execution.');
+    return;
+  }
+  if (!topicVal) {
+    alert('Please enter a Target Topic title.');
+    return;
+  }
+
+  const now = Date.now();
+  const newTarget = {
+    id: 'plt_' + now + '_' + Math.floor(Math.random() * 1000),
+    targetDate: dateVal,
+    loggedOnDate: getTodayStr(),
+    subject: subjectVal,
+    topic: topicVal,
+    priority: priorityVal,
+    completed: false,
+    completedAt: null,
+    updatedAt: now,
+    isPrelimsTarget: true
+  };
+
+  PRELIMS_TARGETS_V1.push(newTarget);
+  syncPrelimsTargetToEntries(newTarget);
+  document.getElementById('pltTopicInput').value = '';
+
+  saveData();
+  pushToCentralServer({ PRELIMS_TARGETS_V1, ENTRIES });
+  renderAll();
+  renderPrelimsSchedulerList();
+  renderHomeTrackerTargets();
+  renderHeaderStats();
+  renderMasterLog();
+}
+
+window.toggleMilestoneState = function(id, milestoneKey, forcedVal) {
+  if (!id) return;
+  const now = Date.now();
+  const cleanId = String(id).replace('entry_plt_', '').replace('entry_', '');
+
+  // 1. Find or resolve in ENTRIES
+  let entry = ENTRIES.find(e => e.id === id || e.id === 'entry_plt_' + id || e.id === cleanId || e.id === 'entry_plt_' + cleanId);
+
+  // 2. Find or resolve in PRELIMS_TARGETS_V1
+  let pltTarget = PRELIMS_TARGETS_V1.find(t => String(t.id) === String(id) || String(t.id) === cleanId || (entry && t.topic === entry.topic));
+
+  const type = (milestoneKey || 'r0').toLowerCase();
+
+  if (type === 'r0' || type === 'completed') {
+    let nextVal;
+    if (typeof forcedVal === 'boolean') {
+      nextVal = forcedVal;
+    } else if (entry) {
+      nextVal = !entry.r0Done;
+    } else if (pltTarget) {
+      nextVal = !pltTarget.completed;
+    } else {
+      nextVal = true;
+    }
+
+    if (entry) {
+      entry.r0Done = nextVal;
+      entry.r0UpdatedAt = now;
+      entry.updatedAt = now;
+    }
+    if (pltTarget) {
+      pltTarget.completed = nextVal;
+      pltTarget.completedAt = nextVal ? now : null;
+      pltTarget.updatedAt = now;
+      if (entry) {
+        entry.isPrelimsTarget = true;
+        entry.prelimsSync = true;
+      }
+    }
+  } else if (type === 'sunday' || type === 'r7') {
+    const nextVal = (typeof forcedVal === 'boolean') ? forcedVal : (entry ? !entry.sundayDone : (pltTarget ? !pltTarget.sundayDone : true));
+    if (entry) {
+      entry.sundayDone = nextVal;
+      entry.sundayUpdatedAt = now;
+      entry.updatedAt = now;
+    }
+    if (pltTarget) {
+      pltTarget.sundayDone = nextVal;
+      pltTarget.sundayUpdatedAt = now;
+      pltTarget.updatedAt = now;
+    }
+  } else if (type === 'monthly') {
+    const nextVal = (typeof forcedVal === 'boolean') ? forcedVal : (entry ? !entry.monthlyDone : (pltTarget ? !pltTarget.monthlyDone : true));
+    if (entry) {
+      entry.monthlyDone = nextVal;
+      entry.monthlyUpdatedAt = now;
+      entry.updatedAt = now;
+    }
+    if (pltTarget) {
+      pltTarget.monthlyDone = nextVal;
+      pltTarget.monthlyUpdatedAt = now;
+      pltTarget.updatedAt = now;
+    }
+  } else if (type === 'bimonthly') {
+    const nextVal = (typeof forcedVal === 'boolean') ? forcedVal : (entry ? !entry.biMonthlyDone : (pltTarget ? !pltTarget.biMonthlyDone : true));
+    if (entry) {
+      entry.biMonthlyDone = nextVal;
+      entry.biMonthlyUpdatedAt = now;
+      entry.updatedAt = now;
+    }
+    if (pltTarget) {
+      pltTarget.biMonthlyDone = nextVal;
+      pltTarget.biMonthlyUpdatedAt = now;
+      pltTarget.updatedAt = now;
+    }
+  }
+
+  saveData();
+  try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
+  pushToCentralServer({ PRELIMS_TARGETS_V1, ENTRIES });
+  renderAll();
+  renderMasterLog();
+  renderPrelimsSchedulerList();
+  renderHomeTrackerTargets();
+  renderHeaderStats();
+};
+
+window.togglePrelimsTargetComplete = function(id) {
+  toggleMilestoneState(id, 'r0');
+};
+
+function deletePrelimsTarget(id) {
+  if (confirm('Are you sure you want to delete this scheduled target?')) {
+    const allIds = getRelatedIds(id);
+    allIds.forEach(i => recordDeletedEntryId(i));
+
+    const target = PRELIMS_TARGETS_V1.find(t => allIds.includes(t.id));
+    const targetTopic = target ? target.topic : null;
+
+    PRELIMS_TARGETS_V1 = PRELIMS_TARGETS_V1.filter(t => !allIds.includes(t.id) && (!targetTopic || t.topic !== targetTopic));
+    ENTRIES = ENTRIES.filter(e => !allIds.includes(e.id) && (!targetTopic || e.topic !== targetTopic));
+    cleanOrphanPrelimsEntries();
+
+    saveData();
+    try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
+    pushToCentralServer({ deletedIds: allIds, deletedEntryIds: Array.from(deletedEntryIds), PRELIMS_TARGETS_V1, ENTRIES });
+    renderAll();
+    renderPrelimsSchedulerList();
+    renderHomeTrackerTargets();
+    renderHeaderStats();
+    renderMasterLog();
+  }
+}
+
+function renderPrelimsSchedulerList() {
+  const container = document.getElementById('pltScheduleListContainer');
+  const countBadge = document.getElementById('pltListCountBadge');
+  if (!container) return;
+
+  if (countBadge) countBadge.textContent = `${PRELIMS_TARGETS_V1.length} target${PRELIMS_TARGETS_V1.length === 1 ? '' : 's'} logged`;
+
+  if (PRELIMS_TARGETS_V1.length === 0) {
+    container.innerHTML = `
+      <div style="background: #F8FAFC; border: 1.5px dashed #CBD5E1; padding: 20px; border-radius: 14px; text-align: center; color: #64748B; font-size: 13px;">
+        No Prelims targets scheduled yet. Use the form above to log your targets 1 day in advance!
+      </div>
+    `;
+    return;
+  }
+
+  const sorted = [...PRELIMS_TARGETS_V1].sort((a, b) => (a.targetDate < b.targetDate ? 1 : -1));
+
+  container.innerHTML = sorted.map(t => {
+    const isDone = !!t.completed;
+    const prioColor = t.priority === 'HIGH' ? '#DC2626' : (t.priority === 'MEDIUM' ? '#D97706' : '#059669');
+    const subColor = SUBJECT_COLORS[t.subject] || '#2563EB';
+
+    return `
+      <div class="mob-task-card" style="border-left: 4px solid ${isDone ? '#10B981' : subColor}; border-radius: 14px; padding: 12px 16px; margin-bottom: 10px; background: #FFFFFF; border: 1px solid #E2E8F0;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 220px;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap;">
+              <span style="background: #EFF6FF; color: ${subColor}; font-size: 10.5px; font-weight: 800; padding: 2px 8px; border-radius: 8px;">${t.subject}</span>
+              <span style="background: #FEF3C7; color: ${prioColor}; font-size: 10px; font-weight: 800; padding: 2px 7px; border-radius: 8px;">${t.priority}</span>
+              <span style="font-size: 11px; font-weight: 700; color: #047857;">🗓️ Exec Date: ${formatDateDisplay(t.targetDate)}</span>
+              <span style="font-size: 10px; font-weight: 800; color: ${t.sundayDone ? '#047857' : '#B45309'}; background: ${t.sundayDone ? '#ECFDF5' : '#FFFBEB'}; border: 1px solid ${t.sundayDone ? '#A7F3D0' : '#FDE68A'}; padding: 2px 7px; border-radius: 8px;">${t.sundayDone ? '⚡ Sunday R7: Done ✓' : '🎯 Sunday R7 Vault'}</span>
+            </div>
+            <div style="font-size: 14px; font-weight: 700; color: #0F172A; ${isDone ? 'text-decoration: line-through; opacity: 0.6; color: #10B981;' : ''}">
+              ${t.topic}
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <input type="checkbox" ${isDone ? 'checked' : ''} onchange="togglePrelimsTargetComplete('${t.id}')" style="width: 20px; height: 20px; cursor: pointer; accent-color: #059669;"/>
+            <button onclick="deletePrelimsTarget('${t.id}')" style="background: #FEF2F2; border: 1px solid #FCA5A5; color: #DC2626; border-radius: 8px; padding: 4px 8px; font-size: 12px; cursor: pointer;" title="Delete Target">🗑️</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
 function loadData() {
   try {
     const tp = localStorage.getItem('op300_tracker_progress'); if (tp) TRACKER_PROGRESS = JSON.parse(tp);
-    const e = localStorage.getItem(STORAGE_KEYS.ENTRIES); if (e) ENTRIES = JSON.parse(e);
-    ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && !deletedEntryIds.has(item.id));
+    const e = localStorage.getItem(STORAGE_KEYS.ENTRIES);
+    if (e) {
+      try {
+        const parsed = JSON.parse(e);
+        if (Array.isArray(parsed) && parsed.length > 0) ENTRIES = parsed;
+      } catch(err){}
+    }
+    if (!ENTRIES || ENTRIES.length === 0) {
+      const b = localStorage.getItem('op300_entries_backup_v1');
+      if (b) {
+        try {
+          const parsedB = JSON.parse(b);
+          if (Array.isArray(parsedB) && parsedB.length > 0) {
+            ENTRIES = parsedB;
+            localStorage.setItem(STORAGE_KEYS.ENTRIES, JSON.stringify(ENTRIES));
+          }
+        } catch(err){}
+      }
+    }
     const h = localStorage.getItem(STORAGE_KEYS.HABITS); if (h) HABITS_LOG = JSON.parse(h);
     const c = localStorage.getItem(STORAGE_KEYS.CUSTOM_HABITS); if (c) CUSTOM_HABITS = JSON.parse(c);
     const cfg = localStorage.getItem(STORAGE_KEYS.CONFIG); if (cfg) CONFIG = JSON.parse(cfg);
+    const plt = localStorage.getItem(STORAGE_KEYS.PRELIMS_TARGETS); if (plt) PRELIMS_TARGETS_V1 = JSON.parse(plt);
+
+    PRELIMS_TARGETS_V1 = (PRELIMS_TARGETS_V1 || []).filter(item => item && item.id && !isEntryDeleted(item.id));
+    cleanOrphanPrelimsEntries();
+    ENTRIES = (ENTRIES || []).filter(item => isValidEntry(item) && !isEntryDeleted(item.id));
   } catch(err) { console.error(err); }
 }
 
 function saveData() {
   try {
     localStorage.setItem(STORAGE_KEYS.ENTRIES, JSON.stringify(ENTRIES));
+    if (Array.isArray(ENTRIES) && ENTRIES.length > 0) {
+      localStorage.setItem('op300_entries_backup_v1', JSON.stringify(ENTRIES));
+    }
     localStorage.setItem(STORAGE_KEYS.HABITS, JSON.stringify(HABITS_LOG));
     localStorage.setItem(STORAGE_KEYS.CUSTOM_HABITS, JSON.stringify(CUSTOM_HABITS));
     localStorage.setItem(STORAGE_KEYS.CONFIG, JSON.stringify(CONFIG));
+    localStorage.setItem(STORAGE_KEYS.PRELIMS_TARGETS, JSON.stringify(PRELIMS_TARGETS_V1));
   } catch(err) { console.error(err); }
 }
 
@@ -5752,21 +8371,30 @@ function renderHeaderStats() {
   const elDate = document.getElementById('statTodayDate');
   if (elDate) elDate.textContent = formatDateDisplay(today);
 
-  // Independent Exam Countdown: Days remaining until 31st December
   const now = new Date();
-  const targetDec31 = new Date(now.getFullYear(), 11, 31);
   const currentDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const diffDays = Math.ceil((targetDec31 - currentDate) / (1000 * 60 * 60 * 24));
-  // Dynamic Sub Date (e.g. Wednesday • Day 253)
+
+  let targetDateCountdown;
+  if (APP_MODE === 'prelims') {
+    targetDateCountdown = new Date(2027, 4, 22);
+  } else {
+    targetDateCountdown = new Date(now.getFullYear(), 11, 31);
+  }
+
+  const diffDays = Math.ceil((targetDateCountdown - currentDate) / (1000 * 60 * 60 * 24));
   const elSubDate = document.getElementById('statTodaySubDate');
   if (elSubDate) {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const dayName = days[now.getDay()];
-    const startOfYear = new Date(now.getFullYear(), 0, 0);
-    const diff = now - startOfYear;
-    const oneDay = 1000 * 60 * 60 * 24;
-    const dayOfYear = Math.floor(diff / oneDay);
-    elSubDate.textContent = `${dayName} • Day ${dayOfYear}`;
+    if (APP_MODE === 'prelims') {
+      elSubDate.textContent = "⚡ Prelims 2027 Mode";
+    } else {
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const dayName = days[now.getDay()];
+      const startOfYear = new Date(now.getFullYear(), 0, 0);
+      const diff = now - startOfYear;
+      const oneDay = 1000 * 60 * 60 * 24;
+      const dayOfYear = Math.floor(diff / oneDay);
+      elSubDate.textContent = `${dayName} • Day ${dayOfYear}`;
+    }
   }
 
   const elDNum = document.getElementById('statDNum');
@@ -5775,12 +8403,16 @@ function renderHeaderStats() {
   const elLogged = document.getElementById('statLoggedTotal');
   if (elLogged) elLogged.textContent = ENTRIES.length;
 
-  const sameDayDue = ENTRIES.filter(e => e.dateStudied === today && !e.r0Done).length;
+  const sameDayDue = ENTRIES.filter(e => !isEntryDeleted(e.id) && (e.targetDate === today || e.dateStudied === today) && !e.r0Done).length;
   const elDueSame = document.getElementById('statDueSameDay');
   if (elDueSame) elDueSame.textContent = sameDayDue;
 
   const weekRange = getMonToSatWeekRange(today);
-  const sundayDue = ENTRIES.filter(e => e.dateStudied >= weekRange.monStr && e.dateStudied <= weekRange.satStr && !e.sundayDone).length;
+  const sundayDue = ENTRIES.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return !e.sundayDone && d <= weekRange.sunStr;
+  }).length;
 
   const elDueSunday = document.getElementById('statDueSunday');
   if (elDueSunday) elDueSunday.textContent = sundayDue;
@@ -5793,14 +8425,24 @@ function renderHeaderStats() {
 
   if (!HABITS_LOG[today]) HABITS_LOG[today] = {};
 
-  const todayEntry = getTodayTrackerEntry();
-  const isAvailableDay = todayEntry && !todayEntry.isBeforeStart && !todayEntry.isCompletedAll;
-  const todayIndex = isAvailableDay ? TRACKER_PLAN_DATA.findIndex(p => p.day === todayEntry.day) : -1;
-  const todayTasks = isAvailableDay ? getTodayTrackerTasks(todayEntry, todayIndex >= 0 ? todayIndex : 0) : [];
+  let trackerDoneCount = 0;
+  let trackerTotalCount = 0;
 
-  const dayProg = (isAvailableDay && TRACKER_PROGRESS[todayEntry.day] && TRACKER_PROGRESS[todayEntry.day].checks) ? TRACKER_PROGRESS[todayEntry.day].checks : {};
-  const trackerDoneCount = todayTasks.filter(t => !!dayProg[t.key]).length;
-  const trackerTotalCount = todayTasks.length;
+  if (APP_MODE === 'prelims') {
+    const allPlt = getAllPrelimsTargets();
+    const todayTargets = allPlt.filter(t => t.targetDate === today);
+    trackerDoneCount = todayTargets.filter(t => t.completed).length;
+    trackerTotalCount = todayTargets.length;
+  } else {
+    const todayEntry = getTodayTrackerEntry();
+    const isAvailableDay = todayEntry && !todayEntry.isBeforeStart && !todayEntry.isCompletedAll;
+    const todayIndex = isAvailableDay ? TRACKER_PLAN_DATA.findIndex(p => p.day === todayEntry.day) : -1;
+    const todayTasks = isAvailableDay ? getTodayTrackerTasks(todayEntry, todayIndex >= 0 ? todayIndex : 0) : [];
+
+    const dayProg = (isAvailableDay && TRACKER_PROGRESS[todayEntry.day] && TRACKER_PROGRESS[todayEntry.day].checks) ? TRACKER_PROGRESS[todayEntry.day].checks : {};
+    trackerDoneCount = todayTasks.filter(t => !!dayProg[t.key]).length;
+    trackerTotalCount = todayTasks.length;
+  }
 
   const customDoneCount = CUSTOM_HABITS.filter(h => !!HABITS_LOG[today][h]).length;
   const customTotalCount = CUSTOM_HABITS.length;
@@ -5992,7 +8634,14 @@ function renderDashboardQueue() {
   if (!container) return;
   container.innerHTML = "";
   const today = getTodayStr();
-  const todayEntries = ENTRIES.filter(e => e.dateStudied === today);
+
+  (PRELIMS_TARGETS_V1 || []).forEach(t => syncPrelimsTargetToEntries(t));
+
+  const todayEntries = ENTRIES.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return d === today;
+  });
 
   const doneCount = todayEntries.filter(e => e.r0Done).length;
   const totalCount = todayEntries.length;
@@ -6020,7 +8669,7 @@ function renderDashboardQueue() {
   if (todayEntries.length === 0) {
     container.innerHTML = `
       <div style="text-align:center; padding:24px 16px; background:rgba(255, 255, 255, 0.12); border:1px dashed rgba(255, 255, 255, 0.35); border-radius:16px; color:#DBEAFE; font-size:13px; font-weight:500;">
-        No topics logged yet today. Add a topic above to auto-queue for Same-Day R0 revision!
+        No topics logged yet today. Add a topic above or schedule a Prelims target to auto-queue for Same-Day R0 revision!
       </div>
     `;
     return;
@@ -6028,7 +8677,13 @@ function renderDashboardQueue() {
 
   todayEntries.forEach(entry => {
     const color = SUBJECT_COLORS[entry.subject] || "#2563EB";
-    const sug = getSuggestedRevisionDates(entry.dateStudied);
+    const sug = getSuggestedRevisionDates(entry.dateStudied || entry.targetDate);
+    let catTag = '';
+    if (entry.isPrelimsTarget || entry.prelimsSync) {
+      catTag = `<span style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(110, 231, 183, 0.5); color: #A7F3D0; font-size: 9.5px; font-weight: 700; padding: 1px 6px; border-radius: 6px;">🎯 Prelims</span>`;
+    } else if (entry.trackerSync) {
+      catTag = `<span style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(165, 180, 252, 0.5); color: #C7D2FE; font-size: 9.5px; font-weight: 700; padding: 1px 6px; border-radius: 6px;">📘 Sankalp</span>`;
+    }
     const item = document.createElement('div');
     item.className = `r0-item-card ${entry.r0Done ? 'is-done' : ''}`;
     item.innerHTML = `
@@ -6036,6 +8691,7 @@ function renderDashboardQueue() {
         <div class="r0-item-topic" style="${entry.r0Done ? 'text-decoration: line-through; opacity: 0.6;' : ''}">${entry.topic}</div>
         <div class="r0-item-sub">
           <span class="tag" style="background: ${color}; font-size: 10px; padding: 2px 8px;">${entry.subject}</span>
+          ${catTag}
           <span class="r0-item-r7-tag">🎯 Next Sunday (R7): ${formatDateDisplay(sug.r7)}</span>
         </div>
       </div>
@@ -6055,25 +8711,40 @@ function renderRevisionTab() {
   const monthlyRange = getMonthlyVaultRange(today);
   const biMonthlyRange = getBiMonthlyVaultRange(today);
 
+  (PRELIMS_TARGETS_V1 || []).forEach(t => syncPrelimsTargetToEntries(t));
+  const pool = ENTRIES;
+
   // 1. SAME-DAY R0 QUEUE
   const listSame = document.getElementById('listRevSame');
-  const sameEntries = ENTRIES.filter(e => e.dateStudied === today);
+  let sameEntries = pool.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return d === today;
+  });
+
   if (listSame) {
     listSame.innerHTML = "";
     if (sameEntries.length === 0) {
-      listSame.innerHTML = `<div style="text-align:center; padding:20px; color:var(--text-muted); font-size:13px;">No topics logged today for Same-Day revision.</div>`;
+      listSame.innerHTML = `<div style="text-align:center; padding:24px; color:var(--text-muted); font-size:13px; font-weight:600;">🎉 All Same-Day R0 revisions completed for today!</div>`;
     } else {
       sameEntries.forEach(entry => {
         const color = SUBJECT_COLORS[entry.subject] || "#2563EB";
-        const sug = getSuggestedRevisionDates(entry.dateStudied);
+        const sug = getSuggestedRevisionDates(entry.dateStudied || entry.targetDate);
+        let catBadge = '';
+        if (entry.isPrelimsTarget || entry.prelimsSync) {
+          catBadge = `<span style="background: #ECFDF5; color: #047857; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #A7F3D0;">🎯 Prelims</span>`;
+        } else if (entry.trackerSync) {
+          catBadge = `<span style="background: #EEF2FF; color: #4F46E5; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #C7D2FE;">📘 Sankalp</span>`;
+        }
         const div = document.createElement('div');
         div.className = "list-item";
         div.innerHTML = `
           <input type="checkbox" class="list-item-checkbox" ${entry.r0Done ? 'checked' : ''} data-id="${entry.id}" data-type="r0"/>
           <div style="flex:1;">
             <div class="item-title" style="${entry.r0Done ? 'text-decoration: line-through; opacity: 0.5;' : ''}">${entry.topic}</div>
-            <div class="item-sub">
+            <div class="item-sub" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
               <span class="tag" style="background:${color}">${entry.subject}</span>
+              ${catBadge}
               <span style="color:var(--brand-blue)">📅 Target Sunday (R7): ${formatDateDisplay(sug.r7)}</span>
             </div>
           </div>
@@ -6087,9 +8758,11 @@ function renderRevisionTab() {
   // 2. SUNDAY VAULT (R7)
   const listSunday = document.getElementById('listRevSunday');
   const notice = document.getElementById('sundayNoticeBox');
-  const sundayEntries = ENTRIES.filter(e => (
-    e.dateStudied >= weekRange.monStr && e.dateStudied <= weekRange.satStr
-  ));
+  const sundayEntries = pool.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return (d >= weekRange.monStr && d <= weekRange.sunStr) || (!e.sundayDone && d <= weekRange.sunStr);
+  });
   if (listSunday) {
     listSunday.innerHTML = "";
     const isSunday = getDayOfWeek(today) === 0;
@@ -6100,7 +8773,7 @@ function renderRevisionTab() {
           ${isSunday ? '🚨 TODAY IS SUNDAY REVISION DAY (R7)!' : '📅 SUNDAY VAULT (R7) COVERAGE'}
         </div>
         <div>
-          All topics studied from <b>${formatDateDisplay(weekRange.monStr)} (Mon)</b> to <b>${formatDateDisplay(weekRange.satStr)} (Sat)</b> will be revised on <b>${formatDateDisplay(weekRange.sunStr)} (Sun)</b>.
+          All topics studied from <b>${formatDateDisplay(weekRange.monStr)} (Mon)</b> to <b>${formatDateDisplay(weekRange.sunStr)} (Sun)</b> &amp; unrevised backlog are scheduled for Active Recall on <b>${formatDateDisplay(weekRange.sunStr)} (Sun)</b>.
         </div>
       `;
     }
@@ -6110,15 +8783,22 @@ function renderRevisionTab() {
     } else {
       sundayEntries.forEach(entry => {
         const color = SUBJECT_COLORS[entry.subject] || "#2563EB";
+        let catBadge = '';
+        if (entry.isPrelimsTarget || entry.prelimsSync) {
+          catBadge = `<span style="background: #ECFDF5; color: #047857; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #A7F3D0;">🎯 Prelims</span>`;
+        } else if (entry.trackerSync) {
+          catBadge = `<span style="background: #EEF2FF; color: #4F46E5; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #C7D2FE;">📘 Sankalp</span>`;
+        }
         const div = document.createElement('div');
         div.className = "list-item";
         div.innerHTML = `
           <input type="checkbox" class="list-item-checkbox" ${entry.sundayDone ? 'checked' : ''} data-id="${entry.id}" data-type="sunday"/>
           <div style="flex:1;">
             <div class="item-title" style="${entry.sundayDone ? 'text-decoration: line-through; opacity: 0.5;' : ''}">${entry.topic}</div>
-            <div class="item-sub">
+            <div class="item-sub" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
               <span class="tag" style="background:${color}">${entry.subject}</span>
-              <span style="color:var(--text-muted)">Studied: ${formatDateDisplay(entry.dateStudied)}</span>
+              ${catBadge}
+              <span style="color:var(--text-muted)">Studied: ${formatDateDisplay(entry.targetDate || entry.dateStudied)}</span>
             </div>
           </div>
         `;
@@ -6131,10 +8811,11 @@ function renderRevisionTab() {
   // 3. MONTHLY 2-DAY VAULT
   const listMonthly = document.getElementById('listRevMonthly');
   const monthlyNotice = document.getElementById('monthlyNoticeBox');
-  const monthlyEntries = ENTRIES.filter(e => (
-    (e.dateStudied >= monthlyRange.startStr && e.dateStudied <= monthlyRange.endStr) ||
-    (!e.monthlyDone && e.dateStudied <= monthlyRange.endStr)
-  ));
+  const monthlyEntries = pool.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return (d >= monthlyRange.startStr && d <= monthlyRange.endStr) || (!e.monthlyDone && d <= monthlyRange.endStr);
+  });
   if (listMonthly) {
     listMonthly.innerHTML = "";
     if (monthlyNotice) {
@@ -6152,15 +8833,22 @@ function renderRevisionTab() {
     } else {
       monthlyEntries.forEach(entry => {
         const color = SUBJECT_COLORS[entry.subject] || "#2563EB";
+        let catBadge = '';
+        if (entry.isPrelimsTarget || entry.prelimsSync) {
+          catBadge = `<span style="background: #ECFDF5; color: #047857; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #A7F3D0;">🎯 Prelims</span>`;
+        } else if (entry.trackerSync) {
+          catBadge = `<span style="background: #EEF2FF; color: #4F46E5; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #C7D2FE;">📘 Sankalp</span>`;
+        }
         const div = document.createElement('div');
         div.className = "list-item";
         div.innerHTML = `
           <input type="checkbox" class="list-item-checkbox" ${entry.monthlyDone ? 'checked' : ''} data-id="${entry.id}" data-type="monthly"/>
           <div style="flex:1;">
             <div class="item-title" style="${entry.monthlyDone ? 'text-decoration: line-through; opacity: 0.5;' : ''}">${entry.topic}</div>
-            <div class="item-sub">
+            <div class="item-sub" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
               <span class="tag" style="background:${color}">${entry.subject}</span>
-              <span style="color:var(--text-muted)">Studied: ${formatDateDisplay(entry.dateStudied)}</span>
+              ${catBadge}
+              <span style="color:var(--text-muted)">Studied: ${formatDateDisplay(entry.targetDate || entry.dateStudied)}</span>
             </div>
           </div>
         `;
@@ -6173,10 +8861,11 @@ function renderRevisionTab() {
   // 4. BI-MONTHLY 60-DAY VAULT
   const listBiMonthly = document.getElementById('listRevBiMonthly');
   const biMonthlyNotice = document.getElementById('biMonthlyNoticeBox');
-  const biMonthlyEntries = ENTRIES.filter(e => (
-    (e.dateStudied >= biMonthlyRange.startStr && e.dateStudied <= biMonthlyRange.endStr) ||
-    (!e.biMonthlyDone && e.dateStudied <= biMonthlyRange.endStr)
-  ));
+  const biMonthlyEntries = pool.filter(e => {
+    if (isEntryDeleted(e.id)) return false;
+    const d = e.targetDate || e.dateStudied;
+    return (d >= biMonthlyRange.startStr && d <= biMonthlyRange.endStr) || (!e.biMonthlyDone && d <= biMonthlyRange.endStr);
+  });
   if (listBiMonthly) {
     listBiMonthly.innerHTML = "";
     if (biMonthlyNotice) {
@@ -6194,15 +8883,22 @@ function renderRevisionTab() {
     } else {
       biMonthlyEntries.forEach(entry => {
         const color = SUBJECT_COLORS[entry.subject] || "#2563EB";
+        let catBadge = '';
+        if (entry.isPrelimsTarget || entry.prelimsSync) {
+          catBadge = `<span style="background: #ECFDF5; color: #047857; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #A7F3D0;">🎯 Prelims</span>`;
+        } else if (entry.trackerSync) {
+          catBadge = `<span style="background: #EEF2FF; color: #4F46E5; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #C7D2FE;">📘 Sankalp</span>`;
+        }
         const div = document.createElement('div');
         div.className = "list-item";
         div.innerHTML = `
           <input type="checkbox" class="list-item-checkbox" ${entry.biMonthlyDone ? 'checked' : ''} data-id="${entry.id}" data-type="bimonthly"/>
           <div style="flex:1;">
             <div class="item-title" style="${entry.biMonthlyDone ? 'text-decoration: line-through; opacity: 0.5;' : ''}">${entry.topic}</div>
-            <div class="item-sub">
+            <div class="item-sub" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
               <span class="tag" style="background:${color}">${entry.subject}</span>
-              <span style="color:var(--text-muted)">Studied: ${formatDateDisplay(entry.dateStudied)}</span>
+              ${catBadge}
+              <span style="color:var(--text-muted)">Studied: ${formatDateDisplay(entry.targetDate || entry.dateStudied)}</span>
             </div>
           </div>
         `;
@@ -6211,6 +8907,7 @@ function renderRevisionTab() {
       attachCheckboxListeners(listBiMonthly);
     }
   }
+
 
   // Update Visual Analytics Dashboard (Donut Rings, Pie Chart & Subnav Badges)
   updateRevisionVisualAnalytics(sameEntries, sundayEntries, monthlyEntries, biMonthlyEntries);
@@ -6358,14 +9055,19 @@ function renderMasterLog() {
   
   const filterSelect = document.getElementById('masterFilterSubject');
   const filter = filterSelect ? filterSelect.value : "ALL";
+  const catSelect = document.getElementById('masterFilterCategory');
+  const catFilter = catSelect ? catSelect.value : "ALL";
   const searchInput = document.getElementById('masterSearchInput');
   const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
 
+  (PRELIMS_TARGETS_V1 || []).forEach(t => syncPrelimsTargetToEntries(t));
+  const pool = ENTRIES.filter(e => isValidEntry(e) && !isEntryDeleted(e.id));
+
   // Compute Quick Master Stats
-  const totalEntries = ENTRIES.length;
-  const r0DoneCount = ENTRIES.filter(e => e.r0Done).length;
-  const sundayDoneCount = ENTRIES.filter(e => e.sundayDone).length;
-  const monthlyDoneCount = ENTRIES.filter(e => e.monthlyDone).length;
+  const totalEntries = pool.length;
+  const r0DoneCount = pool.filter(e => e.r0Done).length;
+  const sundayDoneCount = pool.filter(e => e.sundayDone).length;
+  const monthlyDoneCount = pool.filter(e => e.monthlyDone).length;
 
   const r0Pct = totalEntries ? Math.round((r0DoneCount / totalEntries) * 100) : 0;
   const sundayPct = totalEntries ? Math.round((sundayDoneCount / totalEntries) * 100) : 0;
@@ -6382,10 +9084,18 @@ function renderMasterLog() {
   const statMonSub = document.getElementById('masterStatMonthlySub'); if (statMonSub) statMonSub.textContent = `${monthlyDoneCount} of ${totalEntries} completed`;
 
   // Filter entries
-  const filtered = ENTRIES.filter(e => {
+  const filtered = pool.filter(e => {
     const matchesSubject = (filter === "ALL" || e.subject === filter);
-    const matchesQuery = !query || e.topic.toLowerCase().includes(query) || e.subject.toLowerCase().includes(query);
-    return matchesSubject && matchesQuery;
+    const matchesQuery = !query || (e.topic && e.topic.toLowerCase().includes(query)) || (e.subject && e.subject.toLowerCase().includes(query));
+    let matchesCat = true;
+    if (catFilter === 'PRELIMS') {
+      matchesCat = !!(e.isPrelimsTarget || e.prelimsSync);
+    } else if (catFilter === 'SANKALP') {
+      matchesCat = !!e.trackerSync;
+    } else if (catFilter === 'STUDY') {
+      matchesCat = !e.isPrelimsTarget && !e.prelimsSync && !e.trackerSync;
+    }
+    return matchesSubject && matchesQuery && matchesCat;
   });
 
   const countBadge = document.getElementById('masterRecordCountBadge');
@@ -6396,83 +9106,109 @@ function renderMasterLog() {
     return;
   }
 
-  filtered.sort((a,b) => b.dateStudied.localeCompare(a.dateStudied)).forEach(e => {
+  filtered.sort((a,b) => (b.dateStudied || '').localeCompare(a.dateStudied || '')).forEach(e => {
     const tr = document.createElement('tr');
     const color = SUBJECT_COLORS[e.subject] || "#2563EB";
 
-    const r0Status = e.r0Done 
-      ? `<span class="rev-status-pill done">✓ Done</span>` 
-      : `<span class="rev-status-pill pending">Pending</span>`;
+    let catBadge = '';
+    if (e.isPrelimsTarget || e.prelimsSync) {
+      catBadge = `<span style="display:inline-block; margin-top:3px; background: #ECFDF5; color: #047857; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #A7F3D0;">🎯 Prelims</span>`;
+    } else if (e.trackerSync) {
+      catBadge = `<span style="display:inline-block; margin-top:3px; background: #EEF2FF; color: #4F46E5; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #C7D2FE;">📘 Sankalp</span>`;
+    } else {
+      catBadge = `<span style="display:inline-block; margin-top:3px; background: #F1F5F9; color: #475569; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #CBD5E1;">📝 Study Topic</span>`;
+    }
 
-    const sundayStatus = e.sundayDone 
-      ? `<span class="rev-status-pill done">✓ Done</span>` 
-      : `<span class="rev-status-pill pending">Pending</span>`;
+    const r0Cell = `
+      <label style="cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+        <input type="checkbox" class="list-item-checkbox master-milestone-cb" ${e.r0Done ? 'checked' : ''} data-id="${e.id}" data-type="r0" />
+        <span class="rev-status-pill ${e.r0Done ? 'done' : 'pending'}" style="font-size:10.5px; padding:2px 6px;">${e.r0Done ? '✓ Done' : 'Pending'}</span>
+      </label>
+    `;
 
-    const monthlyStatus = e.monthlyDone 
-      ? `<span class="rev-status-pill done">✓ Done</span>` 
-      : `<span class="rev-status-pill pending">Pending</span>`;
+    const sundayCell = `
+      <label style="cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+        <input type="checkbox" class="list-item-checkbox master-milestone-cb" ${e.sundayDone ? 'checked' : ''} data-id="${e.id}" data-type="sunday" />
+        <span class="rev-status-pill ${e.sundayDone ? 'done' : 'pending'}" style="font-size:10.5px; padding:2px 6px;">${e.sundayDone ? '✓ Done' : 'Pending'}</span>
+      </label>
+    `;
 
-    const biMonthlyStatus = e.biMonthlyDone 
-      ? `<span class="rev-status-pill done">✓ Done</span>` 
-      : `<span class="rev-status-pill pending">Pending</span>`;
+    const monthlyCell = `
+      <label style="cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+        <input type="checkbox" class="list-item-checkbox master-milestone-cb" ${e.monthlyDone ? 'checked' : ''} data-id="${e.id}" data-type="monthly" />
+        <span class="rev-status-pill ${e.monthlyDone ? 'done' : 'pending'}" style="font-size:10.5px; padding:2px 6px;">${e.monthlyDone ? '✓ Done' : 'Pending'}</span>
+      </label>
+    `;
+
+    const biMonthlyCell = `
+      <label style="cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+        <input type="checkbox" class="list-item-checkbox master-milestone-cb" ${e.biMonthlyDone ? 'checked' : ''} data-id="${e.id}" data-type="bimonthly" />
+        <span class="rev-status-pill ${e.biMonthlyDone ? 'done' : 'pending'}" style="font-size:10.5px; padding:2px 6px;">${e.biMonthlyDone ? '✓ Done' : 'Pending'}</span>
+      </label>
+    `;
 
     tr.innerHTML = `
-      <td data-label="Subject"><span class="tag" style="background:${color}; font-size:11px; padding:4px 10px; border-radius:12px;">${e.subject}</span></td>
-      <td data-label="Topic">
-        <div style="font-weight: 700; font-size: 13.5px; color: var(--text-primary);">${e.topic}</div>
+      <td data-label="Subject">
+        <span class="tag" style="background:${color}; font-size:11px; padding:3px 9px; border-radius:10px;">${e.subject}</span>
+        <div>${catBadge}</div>
       </td>
-      <td data-label="Date Logged"><span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary);">${formatDateDisplay(e.dateStudied)}</span></td>
-      <td data-label="R0 (Same-Day)">${r0Status}</td>
-      <td data-label="Sunday (R7)">${sundayStatus}</td>
-      <td data-label="Monthly">${monthlyStatus}</td>
-      <td data-label="Bi-Monthly">${biMonthlyStatus}</td>
+      <td data-label="Topic">
+        <div style="font-weight: 700; font-size: 13.5px; color: var(--text-primary); ${e.r0Done ? 'opacity: 0.85;' : ''}">${e.topic}</div>
+      </td>
+      <td data-label="Date Logged"><span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary);">${formatDateDisplay(e.targetDate || e.dateStudied)}</span></td>
+      <td data-label="R0 (Same-Day)" style="text-align:center;">${r0Cell}</td>
+      <td data-label="Sunday (R7)" style="text-align:center;">${sundayCell}</td>
+      <td data-label="Monthly" style="text-align:center;">${monthlyCell}</td>
+      <td data-label="Bi-Monthly" style="text-align:center;">${biMonthlyCell}</td>
       <td data-label="Action" style="text-align: center;">
         <button class="btn btn-outline" style="min-height:28px; padding:2px 10px; font-size:11px; color:var(--crimson); border-color:var(--crimson-soft);" onclick="deleteEntry('${e.id}')">Delete</button>
       </td>
     `;
     tbody.appendChild(tr);
   });
+
+  tbody.querySelectorAll('.master-milestone-cb').forEach(cb => {
+    cb.addEventListener('change', (ev) => {
+      const id = ev.target.getAttribute('data-id');
+      const type = ev.target.getAttribute('data-type') || 'r0';
+      if (id) {
+        toggleMilestoneState(id, type, ev.target.checked);
+      }
+    });
+  });
 }
 
 function deleteEntry(id) {
   if (confirm("Delete topic entry?")) {
-    recordDeletedEntryId(id);
-    ENTRIES = ENTRIES.filter(x => x.id !== id);
+    const allIds = getRelatedIds(id);
+    allIds.forEach(i => recordDeletedEntryId(i));
+
+    const entry = ENTRIES.find(x => allIds.includes(x.id));
+    const entryTopic = entry ? entry.topic : null;
+
+    ENTRIES = ENTRIES.filter(x => !allIds.includes(x.id) && (!entryTopic || x.topic !== entryTopic));
+    PRELIMS_TARGETS_V1 = PRELIMS_TARGETS_V1.filter(t => !allIds.includes(t.id) && (!entryTopic || t.topic !== entryTopic));
+    cleanOrphanPrelimsEntries();
+
     saveData();
     try { syncChannel.postMessage('SYNC_UPDATE'); } catch(e){}
-    pushToCentralServer({ deletedIds: [id], deletedEntryIds: Array.from(deletedEntryIds) });
+    pushToCentralServer({ deletedIds: allIds, deletedEntryIds: Array.from(deletedEntryIds), PRELIMS_TARGETS_V1, ENTRIES });
     renderAll();
+    renderMasterLog();
+    renderPrelimsSchedulerList();
+    renderHomeTrackerTargets();
+    renderHeaderStats();
   }
 }
 
 function attachCheckboxListeners(container) {
+  if (!container) return;
   container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
     cb.addEventListener('change', (e) => {
       const id = e.target.getAttribute('data-id');
-      const type = e.target.getAttribute('data-type');
-      const entry = ENTRIES.find(x => x.id === id);
-      if (entry) {
-        const now = Date.now();
-        entry.updatedAt = now;
-        if (type === 'r0') {
-          entry.r0Done = e.target.checked;
-          entry.r0UpdatedAt = now;
-        }
-        if (type === 'sunday') {
-          entry.sundayDone = e.target.checked;
-          entry.sundayUpdatedAt = now;
-        }
-        if (type === 'monthly') {
-          entry.monthlyDone = e.target.checked;
-          entry.monthlyUpdatedAt = now;
-        }
-        if (type === 'bimonthly') {
-          entry.biMonthlyDone = e.target.checked;
-          entry.biMonthlyUpdatedAt = now;
-        }
-        saveData();
-        pushToCentralServer();
-        renderAll();
+      const type = e.target.getAttribute('data-type') || 'r0';
+      if (id) {
+        toggleMilestoneState(id, type, e.target.checked);
       }
     });
   });
@@ -6513,7 +9249,7 @@ function switchTab(tabId) {
   const targetView = document.getElementById(tabId);
   if (targetView) targetView.classList.add('active');
 
-  const moreTabs = ['tab-timetable', 'tab-habits', 'tab-master', 'tab-scores', 'tab-toppers'];
+  const moreTabs = ['tab-timetable', 'tab-habits', 'tab-master', 'tab-scores', 'tab-toppers', 'tab-examples-bank'];
   const moreBtn = document.getElementById('moreNavBtn');
   if (moreBtn) {
     if (moreTabs.includes(tabId)) {
@@ -6533,8 +9269,184 @@ function switchTab(tabId) {
     renderTopperCopies();
   }
 
+  if (tabId === 'tab-revision') {
+    renderRevisionTab();
+    setTimeout(function() { openRevisionTierModal('all'); }, 150);
+  }
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+let CURRENT_REVISION_MODAL_TIER = 'all';
+
+window.openRevisionTierModal = function(tier) {
+  CURRENT_REVISION_MODAL_TIER = tier || 'all';
+  const overlay = document.getElementById('revisionTopicsModalOverlay');
+  if (overlay) {
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  renderRevisionTierModalList(CURRENT_REVISION_MODAL_TIER);
+};
+
+window.closeRevisionTierModal = function() {
+  const overlay = document.getElementById('revisionTopicsModalOverlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+};
+
+window.closeRevisionModalOnBackdrop = function(e) {
+  if (e.target && e.target.id === 'revisionTopicsModalOverlay') {
+    closeRevisionTierModal();
+  }
+};
+
+window.switchRevisionModalTier = function(tier) {
+  CURRENT_REVISION_MODAL_TIER = tier;
+  renderRevisionTierModalList(tier);
+};
+
+window.toggleRevisionTopicDoneInModal = function(entryId, milestoneKey) {
+  toggleMilestoneState(entryId, milestoneKey);
+  renderRevisionTierModalList(CURRENT_REVISION_MODAL_TIER);
+};
+
+window.renderRevisionTierModalList = function(tier) {
+  const container = document.getElementById('revisionModalTopicList');
+  const footerStatus = document.getElementById('revModalFooterStatus');
+  if (!container) return;
+
+  (PRELIMS_TARGETS_V1 || []).forEach(t => syncPrelimsTargetToEntries(t));
+  const pool = ENTRIES;
+
+  const btnMap = { all: 'revTabAll', r0: 'revTabR0', r7: 'revTabR7', monthly: 'revTabMonthly', bimonthly: 'revTabBiMonthly' };
+  Object.keys(btnMap).forEach(t => {
+    const btn = document.getElementById(btnMap[t]);
+    if (btn) {
+      if (t === tier) btn.classList.add('active');
+      else btn.classList.remove('active');
+    }
+  });
+
+  const today = getTodayStr();
+  const weekRange = getMonToSatWeekRange(today);
+
+  let filtered = [];
+  let milestoneKey = 'r0';
+
+  if (tier === 'r0') {
+    milestoneKey = 'r0';
+    filtered = pool.filter(e => {
+      if (isEntryDeleted(e.id)) return false;
+      const d = e.targetDate || e.dateStudied;
+      return d === today;
+    });
+  } else if (tier === 'r7') {
+    milestoneKey = 'sunday';
+    filtered = pool.filter(e => {
+      if (isEntryDeleted(e.id)) return false;
+      const d = e.targetDate || e.dateStudied;
+      return (d >= weekRange.monStr && d <= weekRange.sunStr) || (!e.sundayDone && d <= weekRange.sunStr);
+    });
+  } else if (tier === 'monthly') {
+    milestoneKey = 'monthly';
+    const mRange = getMonthlyVaultRange(today);
+    filtered = pool.filter(e => {
+      if (isEntryDeleted(e.id)) return false;
+      const d = e.targetDate || e.dateStudied;
+      return (d >= mRange.startStr && d <= mRange.endStr) || (!e.monthlyDone && d <= mRange.endStr);
+    });
+  } else if (tier === 'bimonthly') {
+    milestoneKey = 'bimonthly';
+    const bRange = getBiMonthlyVaultRange(today);
+    filtered = pool.filter(e => {
+      if (isEntryDeleted(e.id)) return false;
+      const d = e.targetDate || e.dateStudied;
+      return (d >= bRange.startStr && d <= bRange.endStr) || (!e.biMonthlyDone && d <= bRange.endStr);
+    });
+  } else {
+    milestoneKey = 'r0';
+    filtered = pool.filter(e => !isEntryDeleted(e.id));
+  }
+
+  filtered.sort((a, b) => ((b.dateStudied || b.targetDate || '')).localeCompare(a.dateStudied || a.targetDate || ''));
+
+  if (footerStatus) {
+    footerStatus.textContent = `${filtered.length} topic${filtered.length === 1 ? '' : 's'} in ${tier.toUpperCase()} Vault`;
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="background: #F8FAFC; border: 1.5px dashed #CBD5E1; padding: 32px 20px; border-radius: 16px; text-align: center; color: #64748B;">
+        <div style="font-size: 32px; margin-bottom: 8px;">📚</div>
+        <div style="font-size: 15px; font-weight: 800; color: #0F172A; margin-bottom: 4px;">No Revision Topics In This Vault</div>
+        <div style="font-size: 13px; color: #64748B;">Log study topics on the Home tab to automatically queue them here for spaced-repetition revision!</div>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(item => {
+    let isDone = false;
+    let badgeText = 'R0 Same-Day';
+    let badgeBg = '#EFF6FF';
+    let badgeColor = '#2563EB';
+
+    if (tier === 'r0') {
+      isDone = !!item.r0Done;
+      badgeText = 'R0 Same-Day';
+    } else if (tier === 'r7') {
+      isDone = !!item.sundayDone;
+      badgeText = 'R7 Sunday Vault';
+      badgeBg = '#FFFBEB'; badgeColor = '#D97706';
+    } else if (tier === 'monthly') {
+      isDone = !!item.monthlyDone;
+      badgeText = 'R30 Monthly Vault';
+      badgeBg = '#ECFDF5'; badgeColor = '#059669';
+    } else if (tier === 'bimonthly') {
+      isDone = !!item.biMonthlyDone;
+      badgeText = 'R60 Bi-Monthly Vault';
+      badgeBg = '#F5F3FF'; badgeColor = '#7C3AED';
+    } else {
+      isDone = !!item.r0Done;
+      badgeText = formatDateDisplay(item.dateStudied || item.targetDate);
+    }
+
+    const subColor = SUBJECT_COLORS[item.subject] || '#2563EB';
+    let catBadge = '';
+    if (item.isPrelimsTarget || item.prelimsSync) {
+      catBadge = `<span style="background: #ECFDF5; color: #047857; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #A7F3D0;">🎯 Prelims</span>`;
+    } else if (item.trackerSync) {
+      catBadge = `<span style="background: #EEF2FF; color: #4F46E5; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; border: 1px solid #C7D2FE;">📘 Sankalp</span>`;
+    }
+
+    return `
+      <div class="rev-item-card" style="border-left: 4px solid ${isDone ? '#10B981' : subColor}; border-radius: 14px; padding: 14px 16px; margin-bottom: 0px; background: ${isDone ? '#F8FAFC' : '#FFFFFF'}; border: 1px solid #E2E8F0; box-shadow: 0 2px 8px rgba(15,23,42,0.03); width: 100%; box-sizing: border-box;">
+        <div class="rev-item-row" style="display: flex; align-items: center; justify-content: space-between; gap: 14px; width: 100%; box-sizing: border-box;">
+          <div style="flex: 1; min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap;">
+              <span style="background: #EFF6FF; color: ${subColor}; font-size: 11px; font-weight: 800; padding: 2.5px 9.5px; border-radius: 8px; border: 1px solid rgba(37, 99, 235, 0.15);">${item.subject}</span>
+              ${catBadge}
+              <span style="background: ${badgeBg}; color: ${badgeColor}; font-size: 10.5px; font-weight: 800; padding: 2.5px 8.5px; border-radius: 8px;">${badgeText}</span>
+              <span style="font-size: 11px; color: #64748B; font-weight: 600;">Studied: ${formatDateDisplay(item.targetDate || item.dateStudied)}</span>
+            </div>
+            <div style="font-size: 14.5px; font-weight: 800; color: #0F172A; line-height: 1.45; word-break: break-word; ${isDone ? 'text-decoration: line-through; opacity: 0.6; color: #10B981;' : ''}">
+              ${item.topic}
+            </div>
+          </div>
+          <div class="rev-item-action-wrap" style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+            <label class="rev-item-action-btn" style="display: flex; align-items: center; gap: 6px; cursor: pointer; background: ${isDone ? '#ECFDF5' : '#F1F5F9'}; padding: 8px 14px; border-radius: 10px; border: 1px solid ${isDone ? '#A7F3D0' : '#CBD5E1'}; font-size: 12px; font-weight: 700; color: ${isDone ? '#047857' : '#475569'}; transition: all 0.2s ease;">
+              <input type="checkbox" ${isDone ? 'checked' : ''} onchange="toggleRevisionTopicDoneInModal('${item.id}', '${milestoneKey}')" style="width: 18px; height: 18px; cursor: pointer; accent-color: #2563EB;"/>
+              ${isDone ? 'Revised ✓' : 'Mark Revised'}
+            </label>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+};
 
 function toggleMoreNavMenu(e) {
   if (e) e.stopPropagation();
@@ -6627,17 +9539,23 @@ function exportCSVBackup() {
       alert("No logged topics found to export.");
       return;
     }
-    const headers = ["ID", "Subject", "Topic", "Date Studied", "R0 Revised", "Sunday (R7) Revised", "Monthly Revised", "Bi-Monthly Revised"];
-    const rows = ENTRIES.map(e => [
-      `"${(e.id || '').toString().replace(/"/g, '""')}"`,
-      `"${(e.subject || '').toString().replace(/"/g, '""')}"`,
-      `"${(e.topic || '').toString().replace(/"/g, '""')}"`,
-      `"${e.dateStudied || ''}"`,
-      e.r0Done ? "Yes" : "No",
-      e.sundayDone ? "Yes" : "No",
-      e.monthlyDone ? "Yes" : "No",
-      e.biMonthlyDone ? "Yes" : "No"
-    ]);
+    const headers = ["ID", "Subject", "Topic", "Category", "Date Studied", "R0 Revised", "Sunday (R7) Revised", "Monthly Revised", "Bi-Monthly Revised"];
+    const rows = ENTRIES.map(e => {
+      let cat = "Study Topic";
+      if (e.isPrelimsTarget || e.prelimsSync) cat = "Prelims Target";
+      else if (e.trackerSync) cat = "Sankalp Plan";
+      return [
+        `"${(e.id || '').toString().replace(/"/g, '""')}"`,
+        `"${(e.subject || '').toString().replace(/"/g, '""')}"`,
+        `"${(e.topic || '').toString().replace(/"/g, '""')}"`,
+        `"${cat}"`,
+        `"${e.dateStudied || ''}"`,
+        e.r0Done ? "Yes" : "No",
+        e.sundayDone ? "Yes" : "No",
+        e.monthlyDone ? "Yes" : "No",
+        e.biMonthlyDone ? "Yes" : "No"
+      ];
+    });
     const csvContent = [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
@@ -8047,6 +10965,14 @@ function deleteTopperCopy(id) {
   try { window.ScoreRegisterModule.init(); } catch(e){}
 
   try {
+    const pltDateEl = document.getElementById('pltTargetDate');
+    if (pltDateEl && !pltDateEl.value) pltDateEl.value = getTodayStr();
+  } catch(e){}
+
+  try { switchAppMode(APP_MODE); } catch(e){}
+  try { renderPrelimsSchedulerList(); } catch(e){}
+
+  try {
     const activeTabFromStorage = localStorage.getItem('MAINS_LOG_ACTIVE_TAB');
     if (activeTabFromStorage) {
       localStorage.removeItem('MAINS_LOG_ACTIVE_TAB');
@@ -8102,6 +11028,7 @@ function deleteTopperCopy(id) {
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       closeDeedModal();
+      if (typeof closeRevisionTierModal === 'function') closeRevisionTierModal();
     }
   });
 
@@ -8112,11 +11039,78 @@ function deleteTopperCopy(id) {
     }
   } catch(e){}
 
+  // TYPEWRITER CONTINUOUS WRITING & BACKSPACING LOOP
+  (function startSplashTypewriter() {
+    var textEl = document.getElementById('saankalpTypewriterText');
+    if (!textEl) return;
+    var word = "SAANKALP";
+    var idx = 0;
+    var isDeleting = false;
+
+    function typeStep() {
+      if (!isDeleting) {
+        textEl.textContent = word.substring(0, idx + 1);
+        idx++;
+        if (idx === word.length) {
+          isDeleting = true;
+          setTimeout(typeStep, 1100);
+          return;
+        }
+        setTimeout(typeStep, 130);
+      } else {
+        textEl.textContent = word.substring(0, idx - 1);
+        idx--;
+        if (idx === 0) {
+          isDeleting = false;
+          setTimeout(typeStep, 400);
+          return;
+        }
+        setTimeout(typeStep, 75);
+      }
+    }
+    typeStep();
+  })();
+
+  // SAANKALP SPLASH SCREEN AUTO-DISMISSAL
+  function hideSaankalpSplash() {
+    var splash = document.getElementById('saankalpSplashScreen');
+    if (splash && !splash.classList.contains('hidden')) {
+      splash.classList.add('hidden');
+      setTimeout(function() {
+        splash.style.display = 'none';
+      }, 450);
+    }
+  }
+
+  // Dismiss on DOM ready / load with fallback safety timeout
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(hideSaankalpSplash, 450);
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(hideSaankalpSplash, 450);
+    });
+  }
+  window.addEventListener('load', function() {
+    setTimeout(hideSaankalpSplash, 350);
+  });
+  setTimeout(hideSaankalpSplash, 1200);
+
+  // Click / tap overlay fallback to dismiss instantly
+  var splashEl = document.getElementById('saankalpSplashScreen');
+  if (splashEl) {
+    splashEl.addEventListener('click', hideSaankalpSplash);
+  }
+
   setInterval(() => {
     try { renderHeaderStats(); } catch(e){}
     try { renderWeeklyDateStrip(); } catch(e){}
   }, 15000);
+
 })();
 </script>
+
+<!-- EXAMPLES BANK MODULE (isolated IIFE, eb- prefix only) -->
+<script src="examples-bank.js"></script>
+
 </body>
 </html>

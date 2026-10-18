@@ -1,0 +1,1282 @@
+{
+  "subject": "History",
+  "total": 30,
+  "questions": [
+    {
+      "id": "history-2024-02",
+      "subject": "History",
+      "year": 2024,
+      "qNo": 2,
+      "type": "conceptual",
+      "question": "With reference to the 'Sacred Ensembles of the Hoysalas' inscribed as UNESCO World Heritage sites, consider the following statements:",
+      "statements": [
+        "The temples are constructed primarily out of chloritic schist (soapstone).",
+        "The temples are characterized by star-shaped (stellate) ground plans erected on raised platforms (jagati).",
+        "The Hoysaleshwara temple at Halebidu was constructed during the reign of King Vishnuvardhana."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Temple Architecture",
+      "subTopic": "Hoysala Vesara School & Stellate Plans",
+      "concept": "Distinctive stone masonry, star-shaped plinths, and dynastic patrons of 12th-century Karnataka.",
+      "explanation": "All three statements are correct: The Hoysala temples (Chennakeshava at Belur, Hoysaleshwara at Halebidu, and Keshava at Somanathapura) inscribed in 2023 as India's 42nd UNESCO World Heritage site are made of chloritic schist (soapstone), which is soft when quarried and hardens on exposure, permitting intricate undercut friezes (Statement 1). They feature characteristic stellate (star-shaped) layout plinths called Jagati that serve as circumambulatory paths (Statement 2). The Hoysaleshwara temple was commissioned in 1121 CE by King Vishnuvardhana and officer Ketamalla (Statement 3).",
+      "statementAnalysis": [
+        {
+          "text": "The temples are constructed primarily out of chloritic schist (soapstone).",
+          "verdict": "correct",
+          "why": "Soapstone allowed microscopic carving detail."
+        },
+        {
+          "text": "The temples are characterized by star-shaped (stellate) ground plans erected on raised platforms (jagati).",
+          "verdict": "correct",
+          "why": "Hallmark architectural feature of Hoysala Vesara temples."
+        },
+        {
+          "text": "The Hoysaleshwara temple at Halebidu was constructed during the reign of King Vishnuvardhana.",
+          "verdict": "correct",
+          "why": "Vishnuvardhana (Bittideva) converted from Jainism to Vaishnavism under Ramanuja and built Halebidu."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statement 3 is also true.",
+        "b": "Incorrect, statement 1 is also true.",
+        "c": "Incorrect, statement 2 is also true.",
+        "d": "Correct option; all three statements accurately reflect Hoysala art."
+      },
+      "trap": "Assuming the temples are made of granite (like Chola temples) rather than soapstone.",
+      "relatedFacts": [
+        "Sculptors signed their names on Hoysala reliefs (e.g. Mallitamma, Dasoja).",
+        "The Keshava temple at Somanathapura is a Trikuta (three-shrine) temple built by General Soma.",
+        "Hoysala emblem depicts Sala slaying a tiger."
+      ]
+    },
+    {
+      "id": "history-2023-05",
+      "subject": "History",
+      "year": 2023,
+      "qNo": 5,
+      "type": "pairing",
+      "question": "In which one of the following regions was Dhanyakataka, which flourished as a prominent Buddhist centre under the Mahasanghikas, located?",
+      "statements": [],
+      "options": {
+        "a": "Andhra",
+        "b": "Gandhara",
+        "c": "Kalinga",
+        "d": "Magadha"
+      },
+      "answer": "a",
+      "topic": "Buddhism & Ancient Topography",
+      "subTopic": "Dhanyakataka & Mahasanghika Strongholds",
+      "concept": "Ancient Satavahana capital, Amaravati stupa site, and Mahayana doctrinal origins.",
+      "explanation": "Dhanyakataka (also known as Dharanikota / Amaravati) is located on the banks of the Krishna River in the Guntur district of ANDHRA PRADESH. It was the premier eastern capital of the Satavahana dynasty and the intellectual stronghold of the Mahasanghika and Chaityaka Buddhist schools, celebrated for the Great Stupa of Amaravati with its white limestone narrative reliefs.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Situated in coastal Andhra along the Krishna river.",
+        "b": "Incorrect: Gandhara is located in northwestern Pakistan/Afghanistan (Taxila).",
+        "c": "Incorrect: Kalinga corresponds to coastal Odisha.",
+        "d": "Incorrect: Magadha corresponds to southern Bihar (Rajgir/Pataliputra)."
+      },
+      "trap": "Confusing Mahasanghika southern strongholds with northwestern Gandhara art centres.",
+      "relatedFacts": [
+        "Nagarjunakonda (Vijayapuri), also in Andhra, was a major Ikshvaku Buddhist monastic hub.",
+        "Amaravati art features white marble-like limestone depicting Jataka tales with dynamic crowd scenes.",
+        "Xuanzang (Hiuen Tsang) visited Dhanyakataka in 639 CE and studied Abhidharma under Mahasanghika teachers."
+      ]
+    },
+    {
+      "id": "history-2022-31",
+      "subject": "History",
+      "year": 2022,
+      "qNo": 31,
+      "type": "statement-based",
+      "question": "With reference to Indian history, consider the following statements:",
+      "statements": [
+        "The Dutch established their factories/warehouses on the east coast on lands granted to them by Gajapati rulers.",
+        "Alfonso de Albuquerque captured Goa from the Bijapur Sultanate.",
+        "The English East India Company established a factory at Madras on a plot of land leased from a representative of the Vijayanagara Empire."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Advent of Europeans",
+      "subTopic": "Early Settlements and Colonial Chronology",
+      "concept": "Historical synchronism between European maritime companies and medieval Indian regional polities.",
+      "explanation": "Statement 1 is incorrect: The Gajapati dynasty of Odisha collapsed in the 1540s, whereas the Dutch East India Company arrived on the east coast in the early 17th century (Pulicat 1610). Statement 2 is correct: Albuquerque captured Goa in 1510 from Ismail Adil Shah, Sultan of Bijapur. Statement 3 is correct: Francis Day acquired Madras in 1639 on a lease granted by Damarla Venkatadri Nayaka, a feudatory under Raja Peda Venkata Raya of the Vijayanagara Empire (Chandragiri).",
+      "statementAnalysis": [
+        {
+          "text": "The Dutch established their factories/warehouses on the east coast on lands granted to them by Gajapati rulers.",
+          "verdict": "incorrect",
+          "why": "Gajapati rule ended 60 years prior to Dutch arrival on the Coromandel coast."
+        },
+        {
+          "text": "Alfonso de Albuquerque captured Goa from the Bijapur Sultanate.",
+          "verdict": "correct",
+          "why": "Conquered Goa in 1510 CE."
+        },
+        {
+          "text": "The English East India Company established a factory at Madras on a plot of land leased from a representative of the Vijayanagara Empire.",
+          "verdict": "correct",
+          "why": "Acquired from the Nayaka governors of Chandragiri in 1639."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 1 is false.",
+        "b": "Correct option as statements 2 and 3 are historically validated.",
+        "c": "Incorrect because statement 1 is false.",
+        "d": "Incorrect because statement 1 is false."
+      },
+      "trap": "Examiners mix dynasties separated by over half a century (Gajapatis vs Dutch) to test temporal accuracy.",
+      "relatedFacts": [
+        "Battle of Colachel (1741): Travancore King Marthanda Varma decisively defeated the Dutch, ending Dutch ambitions in India.",
+        "Fort St. George was built at Madras in 1644 as the English EIC headquarters on the Coromandel coast.",
+        "The first Portuguese factory was established at Calicut/Cochin by Pedro Alvares Cabral in 1500."
+      ]
+    },
+    {
+      "id": "history-2021-12",
+      "subject": "History",
+      "year": 2021,
+      "qNo": 12,
+      "type": "statement-based",
+      "question": "With reference to the history of ancient India, consider the following statements regarding the Mitakshara and Dayabhaga laws:",
+      "statements": [
+        "Mitakshara civil law was for upper castes and Dayabhaga civil law was for lower castes.",
+        "In the Mitakshara system, the sons can claim right to the property during the lifetime of the father, whereas in the Dayabhaga system, it is only after the death of the father that the sons can claim right to the property.",
+        "The Mitakshara system deals with the matters related to the property held by male members only, whereas the Dayabhaga system deals with the matters related to the property held by both male and female members."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 only",
+        "c": "1 and 3 only",
+        "d": "3 only"
+      },
+      "answer": "b",
+      "topic": "Ancient & Medieval Legal Traditions",
+      "subTopic": "Mitakshara vs Dayabhaga Schools of Hindu Law",
+      "concept": "Coparcenary right by birth versus succession upon demise of the patriarch.",
+      "explanation": "Statement 1 is incorrect: Mitakshara (authored by Vijnaneshvara in the Western Chalukya court) and Dayabhaga (authored by Jimutavahana) are regional legal treatises, not caste-based codes. Mitakshara applied across all of India except Bengal and Assam, while Dayabhaga applied in Bengal and Assam. Statement 2 is correct: Under Mitakshara, a son acquires an inchoate right in ancestral property by birth (coparcenary), allowing him to demand partition during the father's lifetime. Under Dayabhaga, right arises only upon the death of the last owner. Statement 3 is incorrect: Both systems deal with property rights of males and females (including Stridhana).",
+      "statementAnalysis": [
+        {
+          "text": "Mitakshara civil law was for upper castes and Dayabhaga civil law was for lower castes.",
+          "verdict": "incorrect",
+          "why": "Both systems were regional schools of jurisprudence, not caste-stratified codes."
+        },
+        {
+          "text": "In the Mitakshara system, the sons can claim right to the property during the lifetime of the father, whereas in the Dayabhaga system, it is only after the death of the father that the sons can claim right to the property.",
+          "verdict": "correct",
+          "why": "Core jurisprudential distinction between the two doctrines."
+        },
+        {
+          "text": "The Mitakshara system deals with the matters related to the property held by male members only, whereas the Dayabhaga system deals with the matters related to the property held by both male and female members.",
+          "verdict": "incorrect",
+          "why": "Both systems address Stridhana and female property succession."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 1 is false.",
+        "b": "Correct: Only statement 2 is legally and historically sound.",
+        "c": "Incorrect because statement 1 and 3 are false.",
+        "d": "Incorrect because statement 3 is false."
+      },
+      "trap": "Fabricating caste-based dichotomies ('upper caste vs lower caste') for geographic legal schools.",
+      "relatedFacts": [
+        "Vijnaneshvara wrote Mitakshara as a commentary on the Yajnavalkya Smriti in the 11th century CE.",
+        "Hindu Succession (Amendment) Act, 2005 made daughters coparceners by birth on an equal footing with sons in Mitakshara coparcenary.",
+        "Vineeta Sharma v. Rakesh Sharma (2020) affirmed that daughters' coparcenary rights apply retroactively."
+      ]
+    },
+    {
+      "id": "history-2020-54",
+      "subject": "History",
+      "year": 2020,
+      "qNo": 54,
+      "type": "statement-based",
+      "question": "With reference to the cultural history of India, consider the following pairs:",
+      "statements": [
+        "Parivrajaka — Renunciant and Wanderer",
+        "Shramana — Priest with a high status",
+        "Upasaka — Lay follower of Buddhism"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "1 and 3 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Heterodox Religions",
+      "subTopic": "Sramanic Traditions & Buddhist Lay Social Classes",
+      "concept": "Rejection of sacrificial priestly hierarchy by ascetic wanderers.",
+      "explanation": "Pair 1 is correctly matched: A Parivrajaka is a wandering ascetic who has severed worldly ties. Pair 2 is incorrectly matched: A Shramana (from shram, meaning toil/strive) is an ascetic in non-Vedic traditions (Buddhism, Jainism, Ajivikas) who deliberately rejected Vedic ritualism and Brahmanical priestly status. Pair 3 is correctly matched: Upasakas (male) and Upasikas (female) are lay followers who take refuge in the Buddha, Dhamma, and Sangha without taking monastic vows.",
+      "statementAnalysis": [
+        {
+          "text": "Parivrajaka — Renunciant and Wanderer",
+          "verdict": "correct",
+          "why": "Classical term for mendicant ascetic."
+        },
+        {
+          "text": "Shramana — Priest with a high status",
+          "verdict": "incorrect",
+          "why": "Shramanas were anti-priestly ascetics; priests were Purohitas/Brahmanas."
+        },
+        {
+          "text": "Upasaka — Lay follower of Buddhism",
+          "verdict": "correct",
+          "why": "Designates householder devotees."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because Shramana is inverted.",
+        "b": "Correct option validating pairs 1 and 3.",
+        "c": "Incorrect because pair 2 is false.",
+        "d": "Incorrect."
+      },
+      "trap": "Pairing 'Shramana' with high priestly status when Shramanas explicitly opposed priestly privilege.",
+      "relatedFacts": [
+        "Ashoka's inscriptions repeatedly emphasize 'Samana-Brahmana' (respect towards both Shramanas and Brahmanas).",
+        "Makkhali Gosala, founder of the Ajivika school, was a renowned Shramana leader contemporaneous with Gautama Buddha.",
+        "Monks who took full ordination were known as Bhikkhus / Bhikshus, distinct from lay Upasakas."
+      ]
+    },
+    {
+      "id": "history-2019-11",
+      "subject": "History",
+      "year": 2019,
+      "qNo": 11,
+      "type": "conceptual",
+      "question": "Building 'Kalyana Mandapas' was a notable feature in the temple construction in the kingdom of:",
+      "statements": [],
+      "options": {
+        "a": "Chalukya",
+        "b": "Chandela",
+        "c": "Rashtrakuta",
+        "d": "Vijayanagara"
+      },
+      "answer": "d",
+      "topic": "Medieval Temple Architecture",
+      "subTopic": "Vijayanagara Style & Monolithic Colonnades",
+      "concept": "Elaborate pillared marriage halls for divine ceremonies in Vijayanagara Dravidian architecture.",
+      "explanation": "In Vijayanagara temple architecture (such as the Virupaksha and Vitthala temples at Hampi), the 'Kalyana Mandapa' was an elaborate, profusely sculpted open pavilion with monolithic carved pillars depicting Yali (hippogryphs), horse-riders, and musical shafts, constructed specifically for celebrating the ceremonial wedding of the presiding deity with his consort.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Chalukya temples (Badami/Aihole) focused on rock-cut shrines and Vesara proto-shikhara.",
+        "b": "Incorrect: Chandelas built Khajuraho temples featuring Nagara pancharatha designs.",
+        "c": "Incorrect: Rashtrakutas built rock-cut monolithic marvels like Kailashanatha at Ellora.",
+        "d": "Correct: Hallmark structural evolution of Vijayanagara architecture."
+      },
+      "trap": "Confusing Mandapa innovations of earlier Chola or Chalukya dynasties with 15th-century Vijayanagara pavilions.",
+      "relatedFacts": [
+        "Vitthala temple at Hampi features the celebrated stone chariot (Garuda shrine) and 56 musical pillars.",
+        "The Vijayanagara style introduced Raya Gopurams (colossal monumental temple gateways).",
+        "Krishnadevaraya built the Maharangamandapa of the Virupaksha temple to commemorate his accession."
+      ]
+    },
+    {
+      "id": "history-2018-03",
+      "subject": "History",
+      "year": 2018,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "With reference to the religious practices in India, the 'Sthanakvasi' sect belongs to:",
+      "statements": [],
+      "options": {
+        "a": "Buddhism",
+        "b": "Jainism",
+        "c": "Vaishnavism",
+        "d": "Shaivism"
+      },
+      "answer": "b",
+      "topic": "Jainism",
+      "subTopic": "Sects of Jainism & Aniconic Traditions",
+      "concept": "Sthanakvasi reform rejection of idol worship and temple construction within the Svetambara fold.",
+      "explanation": "Sthanakvasi is a prominent non-idolatrous sect of SVETAMBARA JAINISM founded in 1653 CE by Lavaji. Sthanakvasis reject idol worship and temple building, believing that ascetic devotion should take place in simple halls called 'Sthanakas' rather than ornate temples, and wear a Muhapatti (white cloth strip) over the mouth.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Buddhist sects include Theravada, Mahayana, Vajrayana, Sarvastivada.",
+        "b": "Correct: Well-established Svetambara Jain reformist sect.",
+        "c": "Incorrect: Vaishnavite sects include Sri Sampradaya, Gaudiya, Vallabha.",
+        "d": "Incorrect: Shaivite sects include Pashupata, Kapalika, Lingayat."
+      },
+      "trap": "Assuming all Jain traditions practice idol worship (Deravasi worship idols, Sthanakvasi and Terapanthi do not).",
+      "relatedFacts": [
+        "Digambara sects include Bisapantha, Terapantha, and Taranapantha (Taranapantha also rejects idol worship).",
+        "Svetambara sub-sects include Murtipujaka (Deravasi), Sthanakvasi, and Terapanthi.",
+        "Sthanakvasis accept only 32 canonical Agamas, rejecting 13 later texts."
+      ]
+    },
+    {
+      "id": "history-2017-09",
+      "subject": "History",
+      "year": 2017,
+      "qNo": 9,
+      "type": "conceptual",
+      "question": "Which of the following was a very important seaport in the Kakatiya kingdom?",
+      "statements": [],
+      "options": {
+        "a": "Kakinada",
+        "b": "Motupalli",
+        "c": "Machilipatnam",
+        "d": "Nellore"
+      },
+      "answer": "b",
+      "topic": "Medieval Kingdoms & Maritime Commerce",
+      "subTopic": "Kakatiya Ports & Motupalli Abhayashasanam",
+      "concept": "Royal charter of trade security granted to international merchants by Ganapatideva.",
+      "explanation": "Motupalli (in modern Prakasam district of Andhra Pradesh) was the premier international sea-port of the Kakatiya Dynasty. King Ganapatideva issued the celebrated Motupalli Abhayashasanam (charter of security) in 1244 CE, drastically reducing customs duties and promising protection to foreign merchants whose ships were shipwrecked in his waters.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Developed much later during British rule.",
+        "b": "Correct: Celebrated Kakatiya port confirmed by royal epigraphs and Marco Polo.",
+        "c": "Incorrect: Machilipatnam was the port of the Golconda Sultanate.",
+        "d": "Incorrect: Nellore was a regional political capital under Cholas and Telugu Chodas."
+      },
+      "trap": "Selecting Machilipatnam due to its familiarity as a famous Coromandel port.",
+      "relatedFacts": [
+        "Venetian traveler Marco Polo visited Motupalli during the reign of Kakatiya Queen Rudramadevi and praised its diamond and fine muslin exports.",
+        "Warangal (Orugallu) was the capital city of the Kakatiya kingdom, famous for its stone toranas.",
+        "Ramappa Temple (Rudreshwara) in Palampet was constructed under Kakatiya general Recharla Rudra and is a UNESCO site."
+      ]
+    },
+    {
+      "id": "history-2016-14",
+      "subject": "History",
+      "year": 2016,
+      "qNo": 14,
+      "type": "pairing",
+      "question": "With reference to the economic history of medieval India, consider the following terms and their definitions:",
+      "statements": [
+        "Eripatti — Land, revenue from which was set apart for the maintenance of the village tank",
+        "Taniyurs — Villages donated to a single Brahmin or a group of Brahmins",
+        "Ghatikas — Colleges generally attached to the temples"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "3 only",
+        "c": "2 and 3 only",
+        "d": "1 and 3 only"
+      },
+      "answer": "d",
+      "topic": "Early Medieval Agrarian & Educational Institutions",
+      "subTopic": "Chola and Pallava Administrative Terminology",
+      "concept": "Specific epigraphic terms for tank endowments and higher collegiate education.",
+      "explanation": "Statement 1 is correct: Eripatti was a special category of land in South India (especially under Cholas and Pallavas) whose revenue was reserved exclusively for the desilting, repair, and maintenance of the village irrigation tank (Eri). Statement 2 is incorrect: Taniyurs were large, self-governing administrative units / independent mega-villages directly under central administration in the Chola empire; villages gifted to Brahmins were called Brahmadeya or Agraharas. Statement 3 is correct: Ghatikas were centres of higher learning and residential colleges (found in Kanchipuram) attached to prominent temples.",
+      "statementAnalysis": [
+        {
+          "text": "Eripatti — Land, revenue from which was set apart for the maintenance of the village tank",
+          "verdict": "correct",
+          "why": "Specific tank-endowment tenure in early South Indian village economy."
+        },
+        {
+          "text": "Taniyurs — Villages donated to a single Brahmin or a group of Brahmins",
+          "verdict": "incorrect",
+          "why": "Brahmin gift villages were Brahmadeyas; Taniyur was an independent urban/administrative revenue district."
+        },
+        {
+          "text": "Ghatikas — Colleges generally attached to the temples",
+          "verdict": "correct",
+          "why": "Celebrated higher learning institutions of the Pallava and Kadamba eras."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 2 is false.",
+        "b": "Incorrect because statement 1 is also valid.",
+        "c": "Incorrect because statement 2 is false.",
+        "d": "Correct option encompassing statements 1 and 3."
+      },
+      "trap": "Confusing Taniyur (autonomous administrative township) with Brahmadeya (tax-free Brahmin land grant).",
+      "relatedFacts": [
+        "The Uttaramerur inscription of Parantaka I Chola (919 and 921 CE) details the democratic election procedures of the village sabha.",
+        "Variyam refers to the specialized executive committees (e.g. Eri-variyam for tank management, Thotta-variyam for gardens).",
+        "Ur was the general assembly of the non-Brahmanical village, while Sabha/Mahasabha was the assembly of Brahmadeya villages."
+      ]
+    },
+    {
+      "id": "history-2015-06",
+      "subject": "History",
+      "year": 2015,
+      "qNo": 6,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding the consequences of Babur's arrival in India:",
+      "statements": [
+        "Introduction of gunpowder in the subcontinent",
+        "Introduction of the arch and dome in the region's architecture",
+        "Establishment of the Timurid dynasty in the region"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Mughal Empire",
+      "subTopic": "Babur's Invasions & Military Innovations",
+      "concept": "Correct chronological origins of military technology and architectural forms in the Delhi Sultanate vs Mughals.",
+      "explanation": "Statement 1 is incorrect: Gunpowder was known and used in India (in China-influenced siege warfare, pyrotechnics, and the Bahmani-Vijayanagara conflicts) since the 14th century, long before Babur's 1526 invasion. Babur's real military novelty was the specialized tactical combination of mobile field artillery (cannons) with the Ottoman wheeling flank manoeuvre (Tulghuma). Statement 2 is incorrect: The true arch and dome (Arcuate architecture) were introduced by the Delhi Sultanate in the 12th-13th century (e.g. Alai Darwaza 1311 CE, Balban's tomb). Statement 3 is correct: Babur, being a direct descendant of Timur on his father's side and Genghis Khan on his mother's side, established the Timurid (Mughal) dynasty in Northern India after the First Battle of Panipat (1526).",
+      "statementAnalysis": [
+        {
+          "text": "Introduction of gunpowder in the subcontinent",
+          "verdict": "incorrect",
+          "why": "Gunpowder existed in India well before 1526; Babur introduced matchlock guns and field cannons (Topkhana)."
+        },
+        {
+          "text": "Introduction of the arch and dome in the region's architecture",
+          "verdict": "incorrect",
+          "why": "Arch and dome were introduced 300 years earlier by Delhi Sultanate rulers."
+        },
+        {
+          "text": "Establishment of the Timurid dynasty in the region",
+          "verdict": "correct",
+          "why": "Babur founded the Indian branch of the Timurid dynasty."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statements 1 and 2 are anachronisms.",
+        "b": "Correct: Only statement 3 is historically accurate.",
+        "c": "Incorrect because statement 1 is false.",
+        "d": "Incorrect because statements 1 and 2 are false."
+      },
+      "trap": "Common myth that Babur introduced gunpowder and arches/domes to India, which actually predate him by centuries.",
+      "relatedFacts": [
+        "First Battle of Panipat (1526): Babur defeated Ibrahim Lodi utilizing the Tulghuma formation and Rumi (cart-chain) defense.",
+        "Babur wrote his candid autobiography Tuzuk-i-Baburi (Baburnama) in Chagatai Turkic.",
+        "Battle of Khanwa (1527): Babur defeated Rana Sanga of Mewar, declaring it a Jihad and assuming the title Ghazi."
+      ]
+    },
+    {
+      "id": "history-2014-04",
+      "subject": "History",
+      "year": 2014,
+      "qNo": 4,
+      "type": "conceptual",
+      "question": "What is the difference between a 'Chaitya' and a 'Vihara'?",
+      "statements": [],
+      "options": {
+        "a": "Vihara is a place of worship, while Chaitya is the dwelling place of the monks.",
+        "b": "Chaitya is a place of worship, while Vihara is the dwelling place of the monks.",
+        "c": "Chaitya is the stupa at the far end of the cave, while Vihara is the hall prefixed to it.",
+        "d": "There is no material difference between the two."
+      },
+      "answer": "b",
+      "topic": "Buddhist Architecture",
+      "subTopic": "Rock-cut Caves: Chaitya vs Vihara",
+      "concept": "Functional differentiation between prayer halls containing a votive stupa and monastic residential quarters.",
+      "explanation": "In Buddhist rock-cut cave architecture (such as Ajanta, Ellora, Karle, and Bhaja), a 'Chaitya' (Chaityagriha) is an apsidal prayer hall with a vaulted roof and an internal votive stupa used for congregational veneration. A 'Vihara' is a residential monastery comprising a central quadrangle surrounded by small individual monastic cells for the dwelling and meditation of monks during the rainy season (Vassa).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Completely inverts the functions.",
+        "b": "Correct: Accurately distinguishes worship hall (Chaitya) from monk residence (Vihara).",
+        "c": "Incorrect: Conflates the structural components.",
+        "d": "Incorrect: Material functional difference exists."
+      },
+      "trap": "Direct inversion of definitions between Option a and Option b.",
+      "relatedFacts": [
+        "Karle Chaitya in Maharashtra is the largest rock-cut Buddhist Chaitya in India.",
+        "The Barabar and Nagarjuni caves in Bihar (commissioned by Ashoka and Dasharatha for Ajivikas) are the oldest surviving rock-cut caves in India.",
+        "Ajanta Caves comprise 29 rock-cut Buddhist caves (predominantly Viharas, with 4 Chaityas: Caves 9, 10, 19, and 26)."
+      ]
+    },
+    {
+      "id": "history-2013-08",
+      "subject": "History",
+      "year": 2013,
+      "qNo": 8,
+      "type": "conceptual",
+      "question": "With reference to the history of philosophical thought in India, consider the doctrine of 'Anekantavada'. It is a core philosophy and doctrine of which of the following?",
+      "statements": [],
+      "options": {
+        "a": "Buddhism",
+        "b": "Jainism",
+        "c": "Sikhism",
+        "d": "Vaishnavism"
+      },
+      "answer": "b",
+      "topic": "Ancient Philosophy & Jainism",
+      "subTopic": "Epistemology of Jainism (Anekantavada & Syadvada)",
+      "concept": "The metaphysical doctrine of non-absolutism and the multifaceted nature of truth.",
+      "explanation": "Anekantavada (doctrine of many-sidedness or non-absolutism) is one of the most fundamental philosophical concepts of JAINISM. It posits that ultimate truth and reality are complex and have multiple aspects that cannot be fully expressed through any single dogma or human perspective. Its linguistic and epistemological corollary is Syadvada (the doctrine of conditioned predications or 'seven-fold perspectives').",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Buddhism's core doctrines are Pratityasamutpada (dependent origination), Anicca (impermanence), and Anatta (non-self).",
+        "b": "Correct: Hallmark metaphysical doctrine of Jainism.",
+        "c": "Incorrect: Sikhism is founded on monotheistic Ik Onkar and Nam Simran.",
+        "d": "Incorrect: Vaishnavite schools adhere to Vedanta philosophies (Advaita, Vishishtadvaita, Dvaita)."
+      },
+      "trap": "Confusing Buddhist Pratityasamutpada or Madhyamaka with Jain Anekantavada.",
+      "relatedFacts": [
+        "The famous parable of the 'Blind Men and an Elephant' is used in Jainism to illustrate Anekantavada.",
+        "Triratna in Jainism comprises Samyak Darshana (Right Faith), Samyak Jnana (Right Knowledge), and Samyak Charitra (Right Conduct).",
+        "Mahavira preached in Ardhamagadhi Prakrit to reach ordinary people."
+      ]
+    },
+    {
+      "id": "history-2023-01",
+      "subject": "History",
+      "year": 2023,
+      "qNo": 1,
+      "type": "conceptual",
+      "question": "Which one of the following statements about Sangam literature in ancient South India is correct?",
+      "statements": [],
+      "options": {
+        "a": "Sangam poems are devoid of any reference to material culture.",
+        "b": "The social classification of Varna was known to Sangam poets.",
+        "c": "Sangam poems have no reference to warrior ethic.",
+        "d": "Sangam literature refers to magical forces as irrational and absent in society."
+      },
+      "answer": "b",
+      "topic": "Ancient South Indian History",
+      "subTopic": "Sangam Literature & Social Structure",
+      "concept": "Penetration of the Northern Brahmanical Varna concept (Arashar, Anthanar, Vanigar, Vellalar) into early Tamilakam society.",
+      "explanation": "Statement (b) is correct: The four-fold Varna system of northern India was known to Sangam poets, although the local Tamil social stratification remained primarily occupational and clan-based (divided into Arashar/rulers, Anthanar/priests, Vanigar/merchants, and Vellalar/agriculturists). Tolkappiyam mentions these social divisions, confirming that Varna was indeed known. Statement (a) is false because Sangam poems abound in references to pearls, spices, Roman gold coins, and iron tools. Statement (c) is false because the martial hero ethic (Puram poetry) celebrating heroic death on the battlefield and hero stones (Virakkal) is central. Statement (d) is false because belief in magical forces (Ananku) was widespread.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Material culture is richly described in Pattinappalai and Maduraikkanji.",
+        "b": "Correct: Varna concepts were recognized alongside local Tinai classifications.",
+        "c": "Incorrect: Puram poetry is entirely devoted to warfare, valor, and kingly generosity.",
+        "d": "Incorrect: Ancient Tamils believed in immanent sacred power called Ananku."
+      },
+      "trap": "Assuming that because Sangam society had its own unique Tinai eco-zones, it had zero knowledge of northern Varna concepts.",
+      "relatedFacts": [
+        "Sangam literature is divided into two broad genres: Akam (love/interior life) and Puram (war/external public life).",
+        "The Eight Anthologies (Ettuttokai) and Ten Idylls (Pattuppattu) constitute the primary corpus of early classical Tamil poetry.",
+        "Tolkappiyam is the earliest surviving Tamil grammar and poetics treatise, authored by Tolkappiyar."
+      ]
+    },
+    {
+      "id": "history-2022-04",
+      "subject": "History",
+      "year": 2022,
+      "qNo": 4,
+      "type": "statement-based",
+      "question": "With reference to the Kautilya's Arthashastra, consider the following statements:",
+      "statements": [
+        "A person could be a slave as a result of a judicial punishment.",
+        "If a female slave bore her master a son, she was legally free.",
+        "If a son born to a female slave was fathered by her master, the son was entitled to the legal status of the master's son."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Mauryan Administration & Social Laws",
+      "subTopic": "Kautilya's Arthashastra & Status of Dasas (Slaves)",
+      "concept": "Enlightened legal protections and manumission rights for slaves in ancient Indian jurisprudence.",
+      "explanation": "All three statements are correct: In Book III, Chapter 13 of Arthashastra ('Rules regarding Slaves and Laborers'), Kautilya provides comprehensive laws on Dasas: Statement 1 is correct: Judicial penal servitude (Dandapranita) was one of the recognized categories of slavery where a convict served as a slave as a judicial punishment. Statements 2 and 3 are correct: Arthashastra explicitly mandates that when a female slave gives birth to a child fathered by her master, both the mother and the child instantly gain their freedom (manumission), and the child is legally recognized as a legitimate son possessing standard inheritance rights.",
+      "statementAnalysis": [
+        {
+          "text": "A person could be a slave as a result of a judicial punishment.",
+          "verdict": "correct",
+          "why": "Dandapranita category of slaves in Arthashastra."
+        },
+        {
+          "text": "If a female slave bore her master a son, she was legally free.",
+          "verdict": "correct",
+          "why": "Automatic legal liberation of both mother and newborn child."
+        },
+        {
+          "text": "If a son born to a female slave was fathered by her master, the son was entitled to the legal status of the master's son.",
+          "verdict": "correct",
+          "why": "Conferred legitimate sonship and patrimonial rights."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect, statement 3 is also true.",
+        "b": "Incorrect, statement 1 is also true.",
+        "c": "Incorrect, statement 2 is also true.",
+        "d": "Correct option validating all three legal protections in Arthashastra."
+      },
+      "trap": "Applying brutal Greco-Roman chattel slavery assumptions to ancient Indian Dasa jurisprudence, which had clear manumission pathways.",
+      "relatedFacts": [
+        "Megasthenes, the Greek ambassador in Chandragupta Maurya's court, famously wrote in Indica that 'no Indian whatsoever is a slave' because he did not witness Greco-Roman style brutal chattel slavery.",
+        "R. Shamasastry discovered and first translated the palm-leaf manuscript of Arthashastra in 1905.",
+        "Saptanga Theory of State: Swami (King), Amatya (Ministers), Janapada (Territory), Durga (Fort), Kosha (Treasury), Danda (Army), and Mitra (Allies)."
+      ]
+    },
+    {
+      "id": "history-2021-04",
+      "subject": "History",
+      "year": 2021,
+      "qNo": 4,
+      "type": "statement-based",
+      "question": "With reference to the Chausath Yogini Temple situated at Mitawali (Morena), consider the following statements:",
+      "statements": [
+        "It is a circular temple built during the reign of the Kachchhapaghata dynasty.",
+        "It is the only circular temple built in India.",
+        "It was meant to promote the Vaishnava cult in the region.",
+        "Its design has given rise to a popular belief that it was the inspiration for the old Indian Parliament building."
+      ],
+      "options": {
+        "a": "1 and 4 only",
+        "b": "2 and 3 only",
+        "c": "1, 2 and 4 only",
+        "d": "1, 2, 3 and 4"
+      },
+      "answer": "a",
+      "topic": "Temple Architecture & Medieval Cults",
+      "subTopic": "Chausath Yogini Temple (Morena) & Tantric Shaktism",
+      "concept": "Hypaethral (open-air) circular Tantric shrine dedicated to the 64 Yoginis.",
+      "explanation": "Statements 1 and 4 are correct: The Ekattarso Mahadeva / Chausath Yogini Temple at Mitawali (Morena district, MP) was constructed in 1323 CE by King Devapala of the Kachchhapaghata Dynasty. Its striking circular hypaethral colonnaded design is widely believed to have inspired British architects Edwin Lutyens and Herbert Baker when designing the Council House (old Parliament Building / Samvidhan Sadan). Statement 2 is incorrect: It is NOT the 'only' circular temple; other famous circular temples include the Chausath Yogini temples at Bhedaghat (Jabalpur) and Hirapur (near Bhubaneswar, Odisha). Statement 3 is incorrect: It was dedicated to the Tantric SHAKTA and SHAIVITE YOGINI CULT (the 64 Yoginis surrounding a central Shiva shrine), NOT the Vaishnava cult.",
+      "statementAnalysis": [
+        {
+          "text": "It is a circular temple built during the reign of the Kachchhapaghata dynasty.",
+          "verdict": "correct",
+          "why": "Epigraph confirms King Devapala's patronage in 1323 CE."
+        },
+        {
+          "text": "It is the only circular temple built in India.",
+          "verdict": "incorrect",
+          "why": "Extreme word 'only'; Hirapur and Bhedaghat are also circular."
+        },
+        {
+          "text": "It was meant to promote the Vaishnava cult in the region.",
+          "verdict": "incorrect",
+          "why": "Dedicated to esoteric Shakta Yoginis and Lord Shiva."
+        },
+        {
+          "text": "Its design has given rise to a popular belief that it was the inspiration for the old Indian Parliament building.",
+          "verdict": "correct",
+          "why": "Well-documented architectural parallel."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 4 are valid.",
+        "b": "Incorrect because statements 2 and 3 are false.",
+        "c": "Incorrect because statement 2 is false.",
+        "d": "Incorrect because statements 2 and 3 are false."
+      },
+      "trap": "Extreme qualifier trap: 'the ONLY circular temple built in India'.",
+      "relatedFacts": [
+        "The temple has 64 small peripheral chambers along its circular perimeter wall, each housing a Shivalinga and Yogini image.",
+        "The Chausath Yogini temple at Hirapur (Odisha) is made of sandstone and houses exquisite Chlorite stone Yogini sculptures.",
+        "Tantric Yogini worship reached its zenith between the 9th and 12th centuries CE in Central and Eastern India."
+      ]
+    },
+    {
+      "id": "history-2020-08",
+      "subject": "History",
+      "year": 2020,
+      "qNo": 8,
+      "type": "statement-based",
+      "question": "The 'Rukhmabai case' of 1884 revolved around which of the following issues?",
+      "statements": [
+        "Women's right to gain education",
+        "Age of consent",
+        "Restitution of conjugal rights"
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Socio-Religious Reform Movements",
+      "subTopic": "Rukhmabai Defense Committee & Legal Reform",
+      "concept": "Landmark colonial judicial battle challenging child marriage and involuntary spousal cohabitation.",
+      "explanation": "Statements 2 and 3 are correct: In 1884, Dadaji Bhikaji sued his wife Rukhmabai in the Bombay High Court for 'Restitution of Conjugal Rights' after she refused to live with him, pointing out that she was married off as an 11-year-old child without her consent. Justice Pinhey initially ruled in her favor, but on appeal, she was ordered to either cohabit or go to prison. Rukhmabai defiantly declared she preferred prison. The fierce public debate catalyzed Behramji Malabari's reform campaign and directly led to the enactment of the AGE OF CONSENT ACT, 1891 (raising the consent age from 10 to 12 years). Statement 1 is incorrect: The lawsuit was strictly fought over conjugal rights and child marriage consent, NOT her right to gain education (though she later traveled to England and became one of India's first practicing female doctors).",
+      "statementAnalysis": [
+        {
+          "text": "Women's right to gain education",
+          "verdict": "incorrect",
+          "why": "The legal case was strictly about conjugal restitution and non-consensual child marriage."
+        },
+        {
+          "text": "Age of consent",
+          "verdict": "correct",
+          "why": "Triggered the national debate that led directly to the Age of Consent Act 1891."
+        },
+        {
+          "text": "Restitution of conjugal rights",
+          "verdict": "correct",
+          "why": "The formal civil suit filed by her husband Dadaji Bhikaji."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect because statement 1 is false.",
+        "b": "Correct answer consisting of statements 2 and 3.",
+        "c": "Incorrect because statement 1 is false.",
+        "d": "Incorrect because statement 1 is false."
+      },
+      "trap": "Assuming that because Rukhmabai became an educated doctor, the lawsuit itself was about educational rights.",
+      "relatedFacts": [
+        "Bal Gangadhar Tilak opposed the Age of Consent Bill 1891 on the nationalist ground that a foreign colonial government had no right to legislate on Hindu domestic customs.",
+        "Behramji Malabari published his 'Notes on Infant Marriage and Enforced Widowhood' in 1884 to mobilize support for Rukhmabai.",
+        "Dr. Rukhmabai graduated from the London School of Medicine for Women in 1894 and served as Chief Medical Officer in Surat."
+      ]
+    },
+    {
+      "id": "history-2018-01",
+      "subject": "History",
+      "year": 2018,
+      "qNo": 1,
+      "type": "conceptual",
+      "question": "Which one of the following is a very significant aspect of the Champaran Satyagraha (1917)?",
+      "statements": [],
+      "options": {
+        "a": "Active all-India participation of lawyers, students and women in the National Movement",
+        "b": "Active involvement of Dalit and Tribal communities of India in the National Movement",
+        "c": "Joining of peasant unrest to India's National Movement",
+        "d": "Drastic decrease in the cultivation of plantation crops and commercial crops"
+      },
+      "answer": "c",
+      "topic": "Gandhian Freedom Movement",
+      "subTopic": "Champaran Satyagraha (1917) & Agrarian Resistance",
+      "concept": "First successful application of Satyagraha in India linking the nationalist struggle to grassroots peasant grievances.",
+      "explanation": "Champaran Satyagraha (1917) in Bihar was Mahatma Gandhi's first civil disobedience movement in India. Its supreme historical significance lies in the fact that for the first time, the grievances of the rural peasantry (forced cultivation of indigo under the oppressive Tinkathia system, where peasants had to plant 3/20th of their land with indigo) were directly mobilized and integrated into the mainstream Indian National Movement, transforming it from an elite urban lawyer-led campaign into a mass peasant movement.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: All-India mass participation of women and students occurred during Non-Cooperation (1920) and Civil Disobedience (1930).",
+        "b": "Incorrect: Not a distinct feature of Champaran.",
+        "c": "Correct: Paradigm shift linking peasant struggles with the anti-colonial national movement.",
+        "d": "Incorrect: Indigo cultivation was abolished, but commercial crops continued."
+      },
+      "trap": "Generalizing national-scale mass participation (Option a) to what was fundamentally a localized agrarian peasant struggle.",
+      "relatedFacts": [
+        "Raj Kumar Shukla, a local cultivator, persistently persuaded Gandhi at the Lucknow Congress (1916) to visit Champaran.",
+        "Rajendra Prasad, J.B. Kripalani, Mahadev Desai, and Narhari Parikh assisted Gandhi in Champaran.",
+        "The Champaran Agrarian Committee recommended the abolition of the Tinkathia system and 25% refund of illegally extorted dues."
+      ]
+    },
+    {
+      "id": "history-2017-02",
+      "subject": "History",
+      "year": 2017,
+      "qNo": 2,
+      "type": "conceptual",
+      "question": "The painting of Bodhisattva Padmapani is one of the most famous and oft-illustrated paintings at:",
+      "statements": [],
+      "options": {
+        "a": "Ajanta",
+        "b": "Badami",
+        "c": "Bagh",
+        "d": "Ellora"
+      },
+      "answer": "a",
+      "topic": "Ancient Indian Art & Painting",
+      "subTopic": "Ajanta Mural Fresco Tradition",
+      "concept": "Masterpiece of classical Indian painting in Cave 1 dating to the Vakataka period.",
+      "explanation": "The world-renowned mural painting of Bodhisattva Padmapani (the Lotus-Bearer) is located on the back wall of the antechamber in CAVE 1 AT AJANTA (Maharashtra). Datable to the late 5th century CE under the patronage of the Vakataka King Harishena, it depicts the Bodhisattva in gentle Tribhanga stance holding a blue lotus (Nilotpala), embodying boundless Mahayana compassion (Karuna).",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Located in Cave 1 of Ajanta Caves.",
+        "b": "Incorrect: Badami murals are early Chalukyan in Cave 3 (Vaishnava).",
+        "c": "Incorrect: Bagh caves (Madhya Pradesh) have Buddhist paintings on secular themes.",
+        "d": "Incorrect: Ellora is famed for rock-cut sculpture and later Rashtrakuta ceiling paintings."
+      },
+      "trap": "Confusing Ajanta (predominantly painted Buddhist caves) with Ellora (monumental stone sculpture).",
+      "relatedFacts": [
+        "Opposite Bodhisattva Padmapani in Cave 1 stands the companion mural of Bodhisattva Vajrapani (the Thunderbolt-Bearer).",
+        "Ajanta paintings were executed using the Tempera technique (not true Italian Buon Fresco) on a clay, cow dung, and rice-husk plaster base.",
+        "Cave 26 at Ajanta houses the colossal relief sculpture of the Mahaparinirvana of the Buddha."
+      ]
+    },
+    {
+      "id": "history-2023-09",
+      "subject": "History",
+      "year": 2023,
+      "qNo": 9,
+      "type": "matching",
+      "question": "Korkai, Poompuhar and Muchiri were well known as:",
+      "statements": [],
+      "options": {
+        "a": "Ports",
+        "b": "Capitals of empires",
+        "c": "Centres of iron-and-steel making",
+        "d": "Jaina pilgrimage sites"
+      },
+      "answer": "a",
+      "topic": "Ancient India & Sangam Age",
+      "subTopic": "Sangam Ports & Indo-Roman Maritime Trade",
+      "concept": "Ancient coastal emporia that handled trans-oceanic spice and pearl trade mentioned in Sangam literature and the Periplus.",
+      "explanation": "Korkai, Poompuhar (Kaveripattinam), and Muchiri (Muziris) were famous ancient port cities of South India during the Sangam era (300 BCE - 300 CE): 1. Korkai was the primary port and pearl-fishery capital of the Early Pandyas on the mouth of the Thamirabarani river. 2. Poompuhar (Kaveripattinam) was the principal coastal emporium and harbor of the Early Cholas on the Kaveri delta, vividly described in the epic Silappadikaram. 3. Muchiri (Muziris, near modern Kodungallur in Kerala) was the bustling western maritime port of the Cheras, receiving Roman ships laden with gold and wine in exchange for black pepper.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: All three were premier ancient maritime trading ports of the Chera, Chola, and Pandya kingdoms.",
+        "b": "Incorrect: Madurai, Uraiyur, and Vanji were the political inland capitals.",
+        "c": "Incorrect: Kodumanal was known for gemstone and iron smelting, not these ports.",
+        "d": "Incorrect: Sites like Sittanavasal were Jaina centers, not commercial ports."
+      },
+      "trap": "Candidates might confuse the port cities with interior dynastic political capitals (such as Madurai or Karur).",
+      "relatedFacts": [
+        "The Periplus of the Erythraean Sea (written by an anonymous Greek navigator in the 1st century CE) explicitly documents Muziris and Korkai (Colchi).",
+        "Roman gold and silver coins (aurei and denarii) have been excavated in massive hoards along the Malabar and Coromandel coasts.",
+        "Yavanas was the Tamil and Sanskrit term used for Greek and Roman merchants settled in these port towns."
+      ]
+    },
+    {
+      "id": "history-2022-07",
+      "subject": "History",
+      "year": 2022,
+      "qNo": 7,
+      "type": "statement-based",
+      "question": "In medieval India, the term 'Fanam' referred to:",
+      "statements": [],
+      "options": {
+        "a": "Clothing",
+        "b": "Coins",
+        "c": "Ornaments",
+        "d": "Weapons"
+      },
+      "answer": "b",
+      "topic": "Medieval India & Numismatics",
+      "subTopic": "Currency Systems of South India & Vijayanagara",
+      "concept": "Denominations of coinage (Fanam / Panam) circulated in the Vijayanagara Empire and southern principalities.",
+      "explanation": "In medieval South India and the Vijayanagara Empire, 'Fanam' (or Panam in Tamil and Malayalam) was a small gold or silver coin that circulated as currency. The Vijayanagara empire issued coins in gold (Varaha or Pagoda, Pratapa, Kati, and Fanam), silver (Tara), and copper (Jital). The Fanam was a fractional unit of the gold Varaha (usually one-tenth of a Varaha) widely used in daily bazaar transactions.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Not a textile or garment term.",
+        "b": "Correct (Answer): A widespread gold/silver currency coin unit in medieval South India.",
+        "c": "Incorrect: Not a personal jewellery ornament.",
+        "d": "Incorrect: Not a weapon."
+      },
+      "trap": "Terminology questions in medieval history require exact categorization (land revenue, officer rank, textile, or coinage).",
+      "relatedFacts": [
+        "The primary gold coin of the Vijayanagara Empire was the Varaha (also called Pagoda by European merchants) bearing depictions of deities like Vishnu and Garuda.",
+        "Persian traveler Abdur Razzaq, who visited Vijayanagara in 1443 during Devaraya II's reign, provided a detailed record of the imperial mints and currency denominations.",
+        "The word 'Panam' remains the colloquial word for 'money' in modern Tamil and Malayalam."
+      ]
+    },
+    {
+      "id": "history-2021-02",
+      "subject": "History",
+      "year": 2021,
+      "qNo": 2,
+      "type": "statement-based",
+      "question": "With reference to the history of ancient India, Bhavabhuti, Hastimalla and Kshemeshvara were famous:",
+      "statements": [],
+      "options": {
+        "a": "Jain monks",
+        "b": "Playwrights",
+        "c": "Temple architects",
+        "d": "Philosophers"
+      },
+      "answer": "b",
+      "topic": "Ancient Literature & Theatre",
+      "subTopic": "Sanskrit Dramatists and Playwrights",
+      "concept": "Major classical Sanskrit dramatists across early medieval courts.",
+      "explanation": "Bhavabhuti, Hastimalla, and Kshemeshvara were renowned classical Indian dramatists and playwrights: 1. Bhavabhuti (8th century CE) was an illustrious Sanskrit playwright in the court of King Yashovarman of Kannauj; he composed masterpiece plays like 'Malatimadhava', 'Mahaviracharita', and 'Uttararamacharita'. 2. Hastimalla (13th century CE) was a noted Kannada/Sanskrit Jain playwright who authored several plays including 'Vikrantakaurava' and 'Subhadra-harana'. 3. Kshemeshvara (10th century CE) was a Sanskrit dramatist who composed 'Chanda-kaushika' and 'Naishadhananda'.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Although Hastimalla was of Jain faith, his primary fame was as a dramatist/playwright.",
+        "b": "Correct: All three are celebrated classical dramatists/playwrights.",
+        "c": "Incorrect: They were not silpins or temple architects.",
+        "d": "Incorrect: Their primary contribution was in Natyashastra drama and dramaturgy."
+      },
+      "trap": "Because Hastimalla wrote Jain-themed plays, aspirants often get trapped into picking 'Jain monks'.",
+      "relatedFacts": [
+        "Bhavabhuti's 'Uttararamacharita' is considered one of the greatest Sanskrit plays, rivaling the works of Kalidasa in emotional depth (Karuna rasa).",
+        "Classical Indian dramaturgy traces its canonical rules to Bharata Muni's 'Natya Shastra'.",
+        "Sudraka (author of Mrichchhakatika) and Visakhadatta (author of Mudrarakshasa) are other iconic ancient playwrights."
+      ]
+    },
+    {
+      "id": "history-2020-03",
+      "subject": "History",
+      "year": 2020,
+      "qNo": 3,
+      "type": "matching",
+      "question": "With reference to the scholars/literary figures of ancient India, consider the following statements:",
+      "statements": [
+        "Panini is associated with Pushyamitra Shunga.",
+        "Amarasimha is associated with Harshavardhana.",
+        "Kalidasa is associated with Chandragupta II."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "c",
+      "topic": "Ancient Literature & Royal Courts",
+      "subTopic": "Chronology of Sanskrit Grammarians, Lexicographers, and Poets",
+      "concept": "Chronological synchronization of ancient Indian authors with their respective imperial dynasties.",
+      "explanation": "Statement 1 is incorrect: Panini, the master grammarian who composed the 'Ashtadhyayi', lived in the 5th-4th century BCE (pre-Mauryan period). It was Patanjali (author of the Mahabhasya) who was a contemporary of Pushyamitra Shunga (2nd century BCE) and performed Vedic sacrifices for him. Statement 2 is incorrect: Amarasimha, the compiler of the Sanskrit thesaurus 'Amarakosha', was one of the 'Nine Gems' (Navaratnas) in the court of Chandragupta II 'Vikramaditya' of the Gupta Empire (4th-5th century CE), NOT Harshavardhana (7th century CE; whose court poet was Banabhatta). Statement 3 is correct: Kalidasa is traditionally recognized as the foremost jewel among the Navaratnas of Chandragupta II 'Vikramaditya'.",
+      "statementAnalysis": [
+        {
+          "text": "Panini is associated with Pushyamitra Shunga.",
+          "verdict": "incorrect",
+          "why": "Patanjali was associated with Pushyamitra Shunga, while Panini lived centuries earlier."
+        },
+        {
+          "text": "Amarasimha is associated with Harshavardhana.",
+          "verdict": "incorrect",
+          "why": "Amarasimha was a contemporary of Chandragupta II, not Harshavardhana."
+        },
+        {
+          "text": "Kalidasa is associated with Chandragupta II.",
+          "verdict": "correct",
+          "why": "Kalidasa flourished in the Gupta golden age under Chandragupta II Vikramaditya."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statements 1 and 2 are historically anachronistic.",
+        "b": "Incorrect: Statement 2 is false.",
+        "c": "Correct: Only Statement 3 is historically accurate.",
+        "d": "Incorrect: Statements 1 and 2 are false."
+      },
+      "trap": "Examiner swaps Patanjali with Panini, and Harsha's court poet (Banabhatta/Mayura) with the Gupta lexicographer Amarasimha.",
+      "relatedFacts": [
+        "Banabhatta wrote 'Harshacharita' (biography of King Harsha) and 'Kadambari'.",
+        "Pushyamitra Shunga established the Shunga dynasty after assassinating the last Mauryan ruler, Brihadratha, in 185 BCE.",
+        "Patanjali's Mahabhasya is a comprehensive commentary on Panini's Ashtadhyayi and Katyayana's Varttika."
+      ]
+    },
+    {
+      "id": "history-2019-05",
+      "subject": "History",
+      "year": 2019,
+      "qNo": 5,
+      "type": "statement-based",
+      "question": "With reference to the British colonial rule in India, consider the following statements regarding the Hunter Commission of 1882:",
+      "statements": [
+        "It was appointed by Lord Ripon to review the progress of education since Wood's Despatch of 1854.",
+        "It recommended that primary education should be extended and improved, and its control should be transferred to district and municipal boards.",
+        "It recommended complete government withdrawal from secondary and higher education."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Modern India & British Policy",
+      "subTopic": "Colonial Educational Commissions (Hunter Commission 1882)",
+      "concept": "Mandate, primary education devolution, and private enterprise encouragement under the 1882 Hunter Commission.",
+      "explanation": "Statements 1 and 2 are correct: Viceroy Lord Ripon appointed the Education Commission of 1882 under William Wilson Hunter to assess the execution of Wood's Despatch of 1854. The commission strongly emphasized that state efforts should focus primarily on the expansion and improvement of primary education, and that the management of primary schools should be entrusted to newly established District and Municipal Boards. Statement 3 is incorrect: It did not advocate complete government withdrawal; rather, it recommended encouraging private enterprise and grant-in-aid systems for secondary and collegiate education while the government maintained model institutions.",
+      "statementAnalysis": [
+        {
+          "text": "It was appointed by Lord Ripon to review the progress of education since Wood's Despatch of 1854.",
+          "verdict": "correct",
+          "why": "Lord Ripon constituted the Hunter Commission in 1882 for educational review."
+        },
+        {
+          "text": "It recommended that primary education should be extended and improved, and its control should be transferred to district and municipal boards.",
+          "verdict": "correct",
+          "why": "Key institutional recommendation empowering local boards with primary schooling."
+        },
+        {
+          "text": "It recommended complete government withdrawal from secondary and higher education.",
+          "verdict": "incorrect",
+          "why": "It recommended aiding private enterprise, not total abrupt government withdrawal."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Statements 1 and 2 are accurate.",
+        "b": "Incorrect: Statement 3 is false.",
+        "c": "Incorrect: Statement 3 is false.",
+        "d": "Incorrect: Statement 3 is false."
+      },
+      "trap": "Beware of words like 'complete withdrawal'; colonial commissions usually recommended gradual grant-in-aid transitions.",
+      "relatedFacts": [
+        "Do not confuse the Hunter Education Commission (1882) with the Hunter Committee of Inquiry (1919) appointed to investigate the Jallianwala Bagh massacre.",
+        "Wood's Despatch of 1854 is celebrated as the 'Magna Carta of English Education in India'.",
+        "The Sadler University Commission was later appointed in 1917 to study Calcutta University's problems."
+      ]
+    },
+    {
+      "id": "history-2018-04",
+      "subject": "History",
+      "year": 2018,
+      "qNo": 4,
+      "type": "statement-based",
+      "question": "Which one of the following statements about the Champaran Satyagraha of 1917 is NOT correct?",
+      "statements": [],
+      "options": {
+        "a": "It was connected with the peasants who were forced to grow indigo under the tinkathia system.",
+        "b": "It was joined by Dr. Rajendra Prasad and J.B. Kripalani.",
+        "c": "It was the first All-India Movement launched by Mahatma Gandhi.",
+        "d": "Mahatma Gandhi was persuaded by Raj Kumar Shukla to visit Champaran."
+      },
+      "answer": "c",
+      "topic": "Modern History & Gandhian Era",
+      "subTopic": "Champaran Satyagraha (1917)",
+      "concept": "Localized nature of Champaran as Gandhiji's first Civil Disobedience vs the Rowlatt Satyagraha (1919) as the first Pan-India movement.",
+      "explanation": "Statement (c) is NOT correct: Champaran Satyagraha (1917) was a localized struggle confined to Champaran district in North Bihar. The FIRST All-India (pan-Indian) movement launched by Mahatma Gandhi was the Rowlatt Satyagraha in April 1919, followed by the Non-Cooperation Movement (1920-22). Statements (a), (b), and (d) are historically accurate: European planters enforced the tinkathia system (cultivating indigo on 3/20th of land); local peasant leader Raj Kumar Shukla relentlessly persuaded Gandhi at the Lucknow Congress session (1916) to visit Champaran; and eminent leaders like Rajendra Prasad, J.B. Kripalani, Mahadev Desai, and Mazhar-ul-Haq accompanied Gandhi.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct statement: Tinkathia system forced 3/20th indigo cultivation.",
+        "b": "Correct statement: Rajendra Prasad, Kripalani, and Narhari Parikh were key lieutenants.",
+        "c": "Incorrect statement (Answer): Champaran was localized; Rowlatt Satyagraha (1919) was the first All-India mass movement.",
+        "d": "Correct statement: Raj Kumar Shukla brought Gandhiji to Champaran."
+      },
+      "trap": "Aspirants frequently mistake Gandhi's 'first satyagraha in India' (Champaran) for his 'first All-India movement' (Rowlatt Satyagraha).",
+      "relatedFacts": [
+        "Gandhi called Champaran his first experiment in Civil Disobedience in India.",
+        "The Champaran Agrarian Committee, of which Gandhi was made a member, led to the abolition of the tinkathia system and 25% refund of illegally extracted money to peasants.",
+        "Rabindranath Tagore is believed to have conferred the title 'Mahatma' upon Gandhi following the success of Champaran."
+      ]
+    },
+    {
+      "id": "history-2017-05",
+      "subject": "History",
+      "year": 2017,
+      "qNo": 5,
+      "type": "statement-based",
+      "question": "With reference to the Cabinet Mission Plan of 1946, which of the following statements is/are correct?",
+      "statements": [
+        "It recommended a united dominion of India with a loose federal structure.",
+        "It accepted the Muslim League's demand for a full, sovereign Pakistan.",
+        "It enlarged the representation of the Indian Civil Service in the legislature."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Modern History & Independence Struggle",
+      "subTopic": "Cabinet Mission Plan (1946)",
+      "concept": "Rejection of full Pakistan, three-tier federation proposal, and grouping of provinces.",
+      "explanation": "Statement 1 is correct: The Cabinet Mission (comprising Lord Pethick-Lawrence, Sir Stafford Cripps, and A.V. Alexander) recommended an undivided Union of India with a weak Centre controlling only Foreign Affairs, Defence, and Communications, with all residual powers resting with the Provinces and Princely States (loose federal structure). Statement 2 is incorrect: The Mission explicitly rejected the Muslim League's demand for a separate, sovereign Pakistan on administrative, economic, and strategic grounds. Statement 3 is incorrect: It did not concern itself with ICS representation in the legislature; its purpose was framing the machinery for the Constituent Assembly and an Interim Government.",
+      "statementAnalysis": [
+        {
+          "text": "It recommended a united dominion of India with a loose federal structure.",
+          "verdict": "correct",
+          "why": "Proposed three-tier grouping (Section A, B, C) under a minimal union government."
+        },
+        {
+          "text": "It accepted the Muslim League's demand for a full, sovereign Pakistan.",
+          "verdict": "incorrect",
+          "why": "Firmly rejected partition and sovereign Pakistan."
+        },
+        {
+          "text": "It enlarged the representation of the Indian Civil Service in the legislature.",
+          "verdict": "incorrect",
+          "why": "Completely irrelevant to the constitutional transfer-of-power negotiations."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Correct: Only Statement 1 is historically authentic.",
+        "b": "Incorrect: Statements 2 and 3 are completely false.",
+        "c": "Incorrect: Statement 3 is false.",
+        "d": "Incorrect: Statements 2 and 3 are false."
+      },
+      "trap": "Candidates often assume that because Pakistan was ultimately created, British plans from 1946 onward endorsed partition, whereas the Cabinet Mission fiercely opposed it.",
+      "relatedFacts": [
+        "The Cabinet Mission arrived in New Delhi in March 1946.",
+        "The Constituent Assembly of India was elected in 1946 according to the scheme formulated by the Cabinet Mission Plan.",
+        "Grouping of provinces into Section A (Hindu majority), Section B (Muslim majority West), and Section C (Muslim majority East) caused fatal disagreements between Congress and the League."
+      ]
+    },
+    {
+      "id": "history-2016-02",
+      "subject": "History",
+      "year": 2016,
+      "qNo": 2,
+      "type": "conceptual",
+      "question": "The 'Swadeshi' and 'Boycott' were adopted as methods of struggle for the first time during the:",
+      "statements": [],
+      "options": {
+        "a": "Agitation against the Partition of Bengal",
+        "b": "Home Rule Movement",
+        "c": "Non-Cooperation Movement",
+        "d": "Visit of the Simon Commission to India"
+      },
+      "answer": "a",
+      "topic": "Modern History & Freedom Struggle",
+      "subTopic": "Anti-Partition Movement & Swadeshi (1905)",
+      "concept": "Origins of economic boycott and indigenous manufacturing mobilization in modern Indian politics.",
+      "explanation": "The methods of 'Swadeshi' (promotion of indigenous Indian industry, education, and products) and 'Boycott' (mass public burning and refusal to purchase British Manchester cloth, Liverpool salt, and foreign goods) were formally adopted as instruments of political struggle for the first time during the mass agitation against Lord Curzon's Partition of Bengal in 1905. The formal Boycott resolution was passed at the historic Calcutta Town Hall meeting on August 7, 1905.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Adopted on August 7, 1905 at Calcutta Town Hall in response to Bengal partition.",
+        "b": "Incorrect: Home Rule Movement was launched in 1916 by Tilak and Annie Besant.",
+        "c": "Incorrect: Non-Cooperation adopted these methods later in 1920 on an all-India scale.",
+        "d": "Incorrect: Simon Commission visit occurred in 1928 ('Simon Go Back')."
+      },
+      "trap": "Many students select Non-Cooperation because Gandhi popularized boycott across the whole country, forgetting that the tactical origin was Bengal in 1905.",
+      "relatedFacts": [
+        "Rabindranath Tagore composed the song 'Amar Sonar Bangla' during the anti-partition campaign, which later became the national anthem of Bangladesh.",
+        "Raksha Bandhan day (October 16, 1905, when partition took effect) was observed as a day of national mourning and brotherhood by tying rakhis across community lines.",
+        "Acharya P.C. Ray founded the Bengal Chemical Swadeshi Stores to produce indigenous medicines."
+      ]
+    },
+    {
+      "id": "history-2015-03",
+      "subject": "History",
+      "year": 2015,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "With reference to Rowlatt Satyagraha, which of the following statements is/are correct?",
+      "statements": [
+        "The Rowlatt Act was based on the recommendations of the 'Sedition Committee'.",
+        "In Rowlatt Satyagraha, Gandhiji tried to utilize the Home Rule League.",
+        "Demonstrations against the arrival of Simon Commission coincided with Rowlatt Satyagraha."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "b",
+      "topic": "Modern History & Gandhian Struggles",
+      "subTopic": "Rowlatt Act (1919) & Satyagraha Sabha",
+      "concept": "Justice Rowlatt Sedition Committee origins, utilization of existing Home Rule organizational networks, and chronology.",
+      "explanation": "Statement 1 is correct: The Anarchical and Revolutionary Crimes Act of 1919 (popularly known as the Rowlatt Act) was enacted based on the report of the Sedition Committee headed by British judge Sir Sidney Rowlatt to investigate alleged revolutionary conspiracies. Statement 2 is correct: To build a nationwide apparatus for the satyagraha, Gandhi organized the Satyagraha Sabha and actively mobilized members and communication networks of the Home Rule Leagues founded by Annie Besant and B.G. Tilak. Statement 3 is incorrect: The Simon Commission was constituted in November 1927 and arrived in India in February 1928, almost a decade after the Rowlatt Satyagraha (1919).",
+      "statementAnalysis": [
+        {
+          "text": "The Rowlatt Act was based on the recommendations of the 'Sedition Committee'.",
+          "verdict": "correct",
+          "why": "Sidney Rowlatt chaired the 1918 Sedition Committee."
+        },
+        {
+          "text": "In Rowlatt Satyagraha, Gandhiji tried to utilize the Home Rule League.",
+          "verdict": "correct",
+          "why": "Gandhiji tapped into local Home Rule committees to coordinate the April 6 hartal."
+        },
+        {
+          "text": "Demonstrations against the arrival of Simon Commission coincided with Rowlatt Satyagraha.",
+          "verdict": "incorrect",
+          "why": "Rowlatt was in 1919; Simon Commission arrived in 1928."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 2 is also correct.",
+        "b": "Correct: Statements 1 and 2 are historically accurate.",
+        "c": "Incorrect: Statement 3 is anachronistic by nearly a decade.",
+        "d": "Incorrect: Statement 3 is false."
+      },
+      "trap": "Chronological confusion between early post-WWI events (1919) and late 1920s Simon Commission protests (1928).",
+      "relatedFacts": [
+        "The Rowlatt Act authorized the colonial government to imprison any person suspected of terrorism for up to two years without trial or right to legal representation ('no dalil, no vakil, no appeal').",
+        "Protests against the arrest of Dr. Saifuddin Kitchlew and Dr. Satyapal under this Act in Amritsar led directly to the Jallianwala Bagh massacre on April 13, 1919.",
+        "Rabindranath Tagore renounced his British Knighthood in protest against the Jallianwala Bagh atrocities."
+      ]
+    },
+    {
+      "id": "history-2014-02",
+      "subject": "History",
+      "year": 2014,
+      "qNo": 2,
+      "type": "statement-based",
+      "question": "The Ghadr (Ghadar) was a:",
+      "statements": [],
+      "options": {
+        "a": "Revolutionary association of Indians with headquarters at San Francisco",
+        "b": "Nationalist organization operating from Singapore",
+        "c": "Militant organization with headquarters at Berlin",
+        "d": "Communist movement for India's freedom with headquarters at Tashkent"
+      },
+      "answer": "a",
+      "topic": "Modern History & Revolutionary Movement",
+      "subTopic": "Ghadar Movement & Overseas Revolutionaries",
+      "concept": "Organizational origins, diaspora base, and revolutionary objectives of the Ghadar Party in North America.",
+      "explanation": "The Ghadar Party was an Indian revolutionary organization founded in 1913 in the United States and Canada by Punjabi diaspora immigrants, agriculturalists, and ex-soldiers, led by Lala Har Dayal, Sohan Singh Bhakna, Kartar Singh Sarabha, and Bhai Parmanand. Its headquarters was named 'Yugantar Ashram' located at San Francisco, California. They published a weekly revolutionary newspaper called 'The Ghadar' with the masthead 'Angrezi Raj ka Dushman' (Enemy of the British Rule), aiming to orchestrate an armed mutiny within the British Indian Army during World War I.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Correct: Founded in 1913 with headquarters (Yugantar Ashram) at San Francisco.",
+        "b": "Incorrect: Indian National Army (INA) and Mohan Singh were active in Singapore/Malaya, not the Ghadar Party.",
+        "c": "Incorrect: The Berlin Committee for Indian Independence was formed by Virendranath Chattopadhyaya, not Ghadar.",
+        "d": "Incorrect: M.N. Roy founded the Communist Party of India in Tashkent in 1920."
+      },
+      "trap": "Confusing different overseas revolutionary centers: San Francisco (Ghadar), Berlin (Zimmerman Plan / Berlin Committee), and Singapore (INA).",
+      "relatedFacts": [
+        "The Ghadar movement was secular and attracted Sikhs, Hindus, and Muslims alike.",
+        "The Komagata Maru incident (1914), where a chartered Japanese steamship carrying 376 Indian passengers was turned back from Vancouver, triggered intense fury and ignited Ghadar mobilization.",
+        "Vishnu Ganesh Pingle and Rash Behari Bose attempted to execute the February 1915 Ghadar armed uprising in Punjab, which was foiled by British intelligence infiltrators."
+      ]
+    },
+    {
+      "id": "history-2013-03",
+      "subject": "History",
+      "year": 2013,
+      "qNo": 3,
+      "type": "conceptual",
+      "question": "With reference to Quit India Movement of 1942, consider the following statements:",
+      "statements": [
+        "It was a leaderless movement after the arrest of all top Congress leaders under Operation Zero Hour.",
+        "Underground radio networks were operated by Usha Mehta to broadcast uncensored nationalist news.",
+        "Parallel governments (Prati Sarkar) were established in places like Ballia, Tamluk, and Satara."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Modern History & Quit India",
+      "subTopic": "Quit India Movement Dynamics & Underground Operations (1942)",
+      "concept": "Operation Zero Hour, parallel governments, and clandestine communications in the August Kranti.",
+      "explanation": "All three statements are historically accurate: 1. On the early morning of August 9, 1942, the British government launched 'Operation Zero Hour', arresting Mahatma Gandhi, Jawaharlal Nehru, Sardar Patel, and the entire Congress Working Committee. Consequently, the movement spontaneously transformed into a decentralized, leaderless mass uprising led by local cadres and youth. 2. A clandestine underground radio station was operated by Usha Mehta and her associates in Bombay to evade severe British wartime press censorship. 3. Parallel governments were established by local rebels: Chittu Pandey in Ballia (UP), Jatiya Sarkar in Tamluk (Bengal), and the longest-lasting Nana Patil's Prati Sarkar in Satara (Maharashtra).",
+      "statementAnalysis": [
+        {
+          "text": "It was a leaderless movement after the arrest of all top Congress leaders under Operation Zero Hour.",
+          "verdict": "correct",
+          "why": "Top leadership was pre-emptively imprisoned on August 9, 1942."
+        },
+        {
+          "text": "Underground radio networks were operated by Usha Mehta to broadcast uncensored nationalist news.",
+          "verdict": "correct",
+          "why": "Usha Mehta set up the famous Congress Secret Radio."
+        },
+        {
+          "text": "Parallel governments (Prati Sarkar) were established in places like Ballia, Tamluk, and Satara.",
+          "verdict": "correct",
+          "why": "Autonomous administrations functioned in Ballia, Tamluk, and Satara."
+        }
+      ],
+      "optionAnalysis": {
+        "a": "Incorrect: Statement 3 is also true.",
+        "b": "Incorrect: Statement 1 is also true.",
+        "c": "Incorrect: Statement 2 is also true.",
+        "d": "Correct: All three statements reflect historical realities of the 1942 movement."
+      },
+      "trap": "Candidates sometimes believe the Congress Working Committee directed daily actions throughout 1942, unaware they spent the entire movement imprisoned in Ahmednagar Fort and Aga Khan Palace.",
+      "relatedFacts": [
+        "Mahatma Gandhi gave the famous mantra 'Do or Die' (Karo ya Maro) at the Gowalia Tank Maidan (now August Kranti Maidan) in Bombay.",
+        "Aruna Asaf Ali hoisted the Indian National Flag at Gowalia Tank Maidan after the arrests.",
+        "Jayaprakash Narayan, Ram Manohar Lohia, and Aruna Asaf Ali led the underground revolutionary socialist resistance."
+      ]
+    },
+    {
+      "id": "history-2024-03",
+      "subject": "History",
+      "year": 2024,
+      "qNo": 3,
+      "type": "statement-based",
+      "question": "Which one of the following ancient dynasties established their capital at Manyakheta (Malkhed)?",
+      "statements": [],
+      "options": {
+        "a": "Chalukyas of Badami",
+        "b": "Rashtrakutas",
+        "c": "Hoysalas",
+        "d": "Kakatiyas"
+      },
+      "answer": "b",
+      "topic": "Early Medieval India & Deccan Dynasties",
+      "subTopic": "Rashtrakuta Dynasty & Imperial Capitals",
+      "concept": "Founding and relocation of the Deccan imperial capital to Manyakheta by Amoghavarsha I.",
+      "explanation": "The Rashtrakuta dynasty established their imperial capital at Manyakheta (modern Malkhed in Kalaburagi/Gulbarga district, Karnataka). Founded by Dantidurga, the dynasty rose to supreme imperial stature under rulers like Govinda III and Amoghavarsha I (814–878 CE), who shifted the dynastic capital from Mayurkhandi to the newly constructed grand city of Manyakheta. Arab traveler Sulaiman described the Rashtrakuta empire as one of the four great empires of the world, on par with the Roman (Byzantine), Arab, and Chinese empires.",
+      "statementAnalysis": [],
+      "optionAnalysis": {
+        "a": "Incorrect: Badami Chalukyas ruled from Vatapi (Badami).",
+        "b": "Correct (Answer): Rashtrakutas ruled from Manyakheta (Malkhed).",
+        "c": "Incorrect: Hoysalas ruled from Dwarasamudra (Halebidu).",
+        "d": "Incorrect: Kakatiyas ruled from Orugallu (Warangal)."
+      },
+      "trap": "Deccan dynasties often have distinctive capital cities that UPSC matches (Vatapi, Manyakheta, Dwarasamudra, Kalyani, Warangal).",
+      "relatedFacts": [
+        "Amoghavarsha I authored 'Kavirajamarga', the earliest extant literary work in Kannada, and 'Prashnottara Ratnamalika' in Sanskrit.",
+        "Krishna I, another prominent Rashtrakuta emperor, excavated the world-famous monolithic rock-cut Kailasa Temple at Ellora (Cave 16).",
+        "The Rashtrakutas were active participants in the historic tripartite struggle for Kannauj against the Gurjara-Pratiharas and Palas."
+      ]
+    }
+  ]
+}

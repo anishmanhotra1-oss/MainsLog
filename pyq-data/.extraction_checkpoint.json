@@ -1,0 +1,29 @@
+{
+  "lastUpdated": "2026-10-18T05:03:23.990Z",
+  "books": {
+    "polity": {
+      "lastPage": 24,
+      "extractedCount": 42
+    },
+    "economy": {
+      "lastPage": 0,
+      "extractedCount": 0
+    },
+    "environment": {
+      "lastPage": 0,
+      "extractedCount": 0
+    },
+    "geography": {
+      "lastPage": 0,
+      "extractedCount": 0
+    },
+    "history": {
+      "lastPage": 0,
+      "extractedCount": 0
+    },
+    "amac": {
+      "lastPage": 0,
+      "extractedCount": 0
+    }
+  }
+}

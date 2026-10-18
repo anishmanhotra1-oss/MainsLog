@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  <meta name="theme-color" content="#2563EB"/>
+  <title>UPSC Prelims PYQ Analysis &amp; Topic Frequency Matrix | Saankalp</title>
+  <meta name="description" content="In-depth UPSC Civil Services Preliminary Examination Previous Year Questions (PYQ) analysis with topic frequency distributions, statement-by-statement verdicts, examiner traps, and revision facts."/>
+  
+  <link rel="shortcut icon" href="favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+
+  <!-- Typography matching host site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Scoped Stylesheet for PYQ Section -->
+  <link rel="stylesheet" href="assets/pyq/pyq.css">
+
+  <style>
+    /* Minimal reset for standalone pyq.html page to prevent white margin flashes */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #FAFAFC;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    @media (prefers-color-scheme: dark) {
+      html, body {
+        background: #090D16;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =====================================================================
+       UPSC PRELIMS PYQ ANALYSIS SECTION
+       All markup, styles, and scripts are strictly isolated inside .pyq-x1
+       ===================================================================== -->
+  <div class="pyq-x1" id="pyqRoot">
+    <div class="pyq-container">
+      
+      <!-- Top Navigation & Controls -->
+      <nav class="pyq-top-bar" aria-label="PYQ Module Navigation">
+        <a href="index.html" class="pyq-back-link" title="Return to Saankalp Command Center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          <span>Command Center</span>
+        </a>
+
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <a href="tracker.html" class="pyq-theme-toggle" style="text-decoration:none;">
+            <span>🎯</span>
+            <span>100-Day Tracker</span>
+          </a>
+          <button class="pyq-theme-toggle" id="pyqThemeToggle" aria-label="Toggle Light and Dark Theme">
+            <span>🌓</span>
+            <span>Theme</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Hero Header Section -->
+      <header class="pyq-hero">
+        <div class="pyq-hero-badge">UPSC CSE Preliminary Examination Archive</div>
+        <h1 class="pyq-hero-title">Prelims PYQ Analysis &amp; Topic Matrix</h1>
+        <p class="pyq-hero-desc">
+          Systematic Active Recall of UPSC Civil Services General Studies Paper-I questions. Explore empirical topic weightages, statement-by-statement logical dissections, examiner trap warnings, and core conceptual foundations.
+        </p>
+
+        <!-- Quick Metrics -->
+        <div class="pyq-hero-stats">
+          <div class="pyq-stat-card">
+            <div class="pyq-stat-val" id="pyqHeroTotalPyqs">1,000+</div>
+            <div class="pyq-stat-lbl">Questions Analyzed</div>
+          </div>
+          <div class="pyq-stat-card">
+            <div class="pyq-stat-val" id="pyqHeroYears">1995–2024</div>
+            <div class="pyq-stat-lbl">Year Span</div>
+          </div>
+          <div class="pyq-stat-card">
+            <div class="pyq-stat-val" id="pyqHeroAttempted">0</div>
+            <div class="pyq-stat-lbl">Attempted by You</div>
+          </div>
+          <div class="pyq-stat-card">
+            <div class="pyq-stat-val" id="pyqHeroBookmarked">0</div>
+            <div class="pyq-stat-lbl">Bookmarked for R7/R30</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Subject Tabs Strip -->
+      <div class="pyq-tabs-wrapper">
+        <div class="pyq-tabs-strip" id="pyqTabsContainer" role="tablist" aria-label="UPSC General Studies Subject Tabs">
+          <!-- Populated dynamically via pyq-data/index.json -->
+        </div>
+      </div>
+
+      <!-- Subject Overview & High-Yield Strategy Banner -->
+      <section class="pyq-subject-banner" id="pyqSubjectBanner" aria-live="polite">
+        <!-- Dynamically rendered based on active subject -->
+      </section>
+
+      <!-- Filter, Search & Display Controls -->
+      <section class="pyq-filter-panel" id="pyqFilterPanel" aria-label="Question Search and Filters">
+        <div class="pyq-search-box">
+          <svg class="pyq-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="search" class="pyq-search-input" id="pyqSearchInput" placeholder="Search keywords (e.g. Fundamental Rights, Money Multiplier, Miyawaki, Article 21)..." aria-label="Search questions by keyword or topic"/>
+        </div>
+
+        <div class="pyq-filter-row">
+          <div>
+            <label for="pyqFilterYear" style="display:block; font-size:11px; font-weight:800; color:var(--pyq-text-muted); margin-bottom:4px; text-transform:uppercase;">Year</label>
+            <select class="pyq-filter-select" id="pyqFilterYear">
+              <option value="ALL">All Years</option>
+            </select>
+          </div>
+          <div>
+            <label for="pyqFilterTopic" style="display:block; font-size:11px; font-weight:800; color:var(--pyq-text-muted); margin-bottom:4px; text-transform:uppercase;">Syllabus Topic</label>
+            <select class="pyq-filter-select" id="pyqFilterTopic">
+              <option value="ALL">All Topics</option>
+            </select>
+          </div>
+          <div>
+            <label for="pyqFilterType" style="display:block; font-size:11px; font-weight:800; color:var(--pyq-text-muted); margin-bottom:4px; text-transform:uppercase;">Question Format</label>
+            <select class="pyq-filter-select" id="pyqFilterType">
+              <option value="ALL">All Question Types</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Toggles & View Mode Switch -->
+        <div class="pyq-toggles-row">
+          <div style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap;">
+            <label class="pyq-toggle-pill">
+              <input type="checkbox" id="pyqToggleShowAnswers"/>
+              <span>Show All Answers &amp; Detailed Analysis</span>
+            </label>
+            <label class="pyq-toggle-pill">
+              <input type="checkbox" id="pyqToggleBookmarked"/>
+              <span>★ Bookmarked Only</span>
+            </label>
+            <label class="pyq-toggle-pill">
+              <input type="checkbox" id="pyqToggleAttempted"/>
+              <span>✓ Attempted Only</span>
+            </label>
+          </div>
+
+          <div class="pyq-view-switch-btns" role="group" aria-label="Display View Mode">
+            <button class="pyq-view-btn pyq-active" id="pyqViewQuestions">Questions View</button>
+            <button class="pyq-view-btn" id="pyqViewAnalytics">Topic Frequency Matrix</button>
+            <button class="pyq-view-btn" id="pyqViewPdfs">📖 Original PDFs (2,376 Pgs)</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results Count Status Bar -->
+      <div class="pyq-status-bar" id="pyqStatusBar" aria-live="polite">
+        <div>
+          Showing <span class="pyq-status-count" id="pyqStatusCount">0</span> PYQs in <span id="pyqStatusSubject" style="color:var(--pyq-primary);">Polity</span>
+        </div>
+      </div>
+
+      <!-- Main Question List View -->
+      <main id="pyqQuestionList" role="region" aria-label="PYQ Question Stream">
+        <!-- Rendered dynamically by assets/pyq/pyq.js -->
+      </main>
+
+      <!-- Topic Frequency & Analytics View (Toggled) -->
+      <section id="pyqAnalyticsView" style="display:none;" aria-label="Topic Frequency and Year-Wise Analysis">
+        <!-- Rendered dynamically by assets/pyq/pyq.js -->
+      </section>
+
+      <!-- Original PDF Compilations & Full Book Viewer (Toggled) -->
+      <section id="pyqPdfView" style="display:none;" aria-label="Original UPSC Prelims PDF Archive Viewer">
+        <!-- Rendered dynamically by assets/pyq/pyq.js -->
+      </section>
+
+      <!-- Pagination Navigation -->
+      <nav class="pyq-pagination" id="pyqPagination" aria-label="Question Pagination Navigation">
+        <!-- Rendered dynamically -->
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- Isolated Scoped JavaScript Module -->
+  <script src="assets/pyq/pyq.js" defer></script>
+</body>
+</html>

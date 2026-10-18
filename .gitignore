@@ -3,3 +3,5 @@ node_modules/
 .DS_Store
 *.log
 data/
+pdf_inputs/
+eng.traineddata

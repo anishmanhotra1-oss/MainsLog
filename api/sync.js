@@ -1,6 +1,6 @@
 const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a0898aa8da600d';
 
-let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
+let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, PRELIMS_TARGETS_V1: [], deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
 
 async function fetchCloudSyncData() {
   try {
@@ -15,6 +15,7 @@ async function fetchCloudSyncData() {
           CUSTOM_HABITS: json.data.CUSTOM_HABITS || memorySyncData.CUSTOM_HABITS,
           CONFIG: json.data.CONFIG || memorySyncData.CONFIG,
           SCORE_REGISTER: json.data.SCORE_REGISTER || memorySyncData.SCORE_REGISTER,
+          PRELIMS_TARGETS_V1: Array.isArray(json.data.PRELIMS_TARGETS_V1) ? json.data.PRELIMS_TARGETS_V1 : memorySyncData.PRELIMS_TARGETS_V1,
           deletedScoreIds: Array.isArray(json.data.deletedScoreIds) ? json.data.deletedScoreIds : memorySyncData.deletedScoreIds,
           deletedEntryIds: Array.isArray(json.data.deletedEntryIds) ? json.data.deletedEntryIds : memorySyncData.deletedEntryIds,
           timestamp: json.data.timestamp || memorySyncData.timestamp
@@ -213,12 +214,39 @@ module.exports = async (req, res) => {
       return res.status(200).json({ success: true, ...resetData });
     }
 
+    function getRelatedIds(id) {
+      if (!id) return [];
+      const raw = String(id).trim();
+      let clean = raw;
+      let prev;
+      do {
+        prev = clean;
+        clean = clean.replace(/^(plt_|entry_plt_|entry_|plt_entry_)/, '');
+      } while (clean !== prev);
+
+      if (!clean) return [raw];
+
+      return Array.from(new Set([
+        raw, clean,
+        'plt_' + clean,
+        'entry_' + clean,
+        'entry_plt_' + clean,
+        'entry_plt_plt_' + clean,
+        'plt_entry_' + clean,
+        'plt_entry_entry_plt_' + clean
+      ]));
+    }
+
     const incomingEntries = body.ENTRIES || [];
     const incomingDeletedEntryIds = body.deletedIds || body.deletedEntryIds || [];
-    const delEntrySet = new Set([
+    const rawDel = [
       ...(currentData.deletedEntryIds || []),
       ...(incomingDeletedEntryIds || [])
-    ]);
+    ];
+    const delEntrySet = new Set();
+    rawDel.forEach(id => {
+      getRelatedIds(id).forEach(rid => delEntrySet.add(rid));
+    });
 
     // Merge entries using milestone timestamps so ticking & unticking sync perfectly cross-device
     const entryMap = new Map();
@@ -234,6 +262,129 @@ module.exports = async (req, res) => {
         } else {
           const oldItem = entryMap.get(e.id);
           entryMap.set(e.id, mergeSingleEntry(oldItem, e));
+        }
+      }
+    });
+
+    // Prelims Targets merging with timestamp comparison
+    let mergedPrelimsTargets = (currentData.PRELIMS_TARGETS_V1 || []).filter(t => {
+      if (!t || !t.id) return false;
+      const entryId = t.id.startsWith('entry_plt_') ? t.id : 'entry_plt_' + t.id;
+      return !delEntrySet.has(t.id) && !delEntrySet.has(entryId);
+    });
+    if (Array.isArray(body.PRELIMS_TARGETS_V1)) {
+      const pltMap = new Map();
+      mergedPrelimsTargets.forEach(t => {
+        if (t && t.id) pltMap.set(t.id, t);
+      });
+      body.PRELIMS_TARGETS_V1.forEach(t => {
+        if (!t || !t.id) return;
+        const entryId = t.id.startsWith('entry_plt_') ? t.id : 'entry_plt_' + t.id;
+        if (delEntrySet.has(t.id) || delEntrySet.has(entryId)) return;
+        if (!pltMap.has(t.id)) {
+          pltMap.set(t.id, t);
+        } else {
+          const existing = pltMap.get(t.id);
+          const existingTime = parseTime(existing.updatedAt || existing.completedAt);
+          const incomingTime = parseTime(t.updatedAt || t.completedAt);
+          const isDone = incomingTime >= existingTime ? t.completed : existing.completed;
+
+          const oldSunTime = parseTime(existing.sundayUpdatedAt || existingTime);
+          const incSunTime = parseTime(t.sundayUpdatedAt || incomingTime);
+          const isSunDone = incSunTime >= oldSunTime ? (t.sundayDone !== undefined ? t.sundayDone : existing.sundayDone) : existing.sundayDone;
+
+          const oldMonTime = parseTime(existing.monthlyUpdatedAt || existingTime);
+          const incMonTime = parseTime(t.monthlyUpdatedAt || incomingTime);
+          const isMonDone = incMonTime >= oldMonTime ? (t.monthlyDone !== undefined ? t.monthlyDone : existing.monthlyDone) : existing.monthlyDone;
+
+          const oldBiTime = parseTime(existing.biMonthlyUpdatedAt || existingTime);
+          const incBiTime = parseTime(t.biMonthlyUpdatedAt || incomingTime);
+          const isBiDone = incBiTime >= oldBiTime ? (t.biMonthlyDone !== undefined ? t.biMonthlyDone : existing.biMonthlyDone) : existing.biMonthlyDone;
+
+          pltMap.set(t.id, {
+            ...existing,
+            ...t,
+            completed: isDone,
+            completedAt: isDone ? (t.completedAt || existing.completedAt || Date.now()) : null,
+            sundayDone: !!isSunDone,
+            sundayUpdatedAt: Math.max(oldSunTime, incSunTime),
+            monthlyDone: !!isMonDone,
+            monthlyUpdatedAt: Math.max(oldMonTime, incMonTime),
+            biMonthlyDone: !!isBiDone,
+            biMonthlyUpdatedAt: Math.max(oldBiTime, incBiTime),
+            updatedAt: Math.max(existingTime, incomingTime, Date.now())
+          });
+        }
+      });
+      mergedPrelimsTargets = Array.from(pltMap.values());
+    }
+
+    // Two-way reconciliation between entryMap and mergedPrelimsTargets (matched strictly by related ID)
+    mergedPrelimsTargets.forEach(t => {
+      const allTargetIds = getRelatedIds(t.id);
+      let entry = null;
+      for (const rid of allTargetIds) {
+        if (entryMap.has(rid)) {
+          entry = entryMap.get(rid);
+          break;
+        }
+      }
+      if (entry) {
+        // R0 / Completed sync
+        const eTime = parseTime(entry.r0UpdatedAt || entry.updatedAt);
+        const tTime = parseTime(t.updatedAt || t.completedAt);
+        if (eTime > tTime) {
+          t.completed = !!entry.r0Done;
+          t.completedAt = entry.r0Done ? eTime : null;
+          t.updatedAt = eTime;
+        } else if (tTime > eTime) {
+          entry.r0Done = !!t.completed;
+          entry.r0UpdatedAt = tTime;
+        }
+
+        // Sunday Vault (R7) milestone sync
+        const eSunTime = parseTime(entry.sundayUpdatedAt || entry.updatedAt);
+        const tSunTime = parseTime(t.sundayUpdatedAt || t.updatedAt);
+        if (eSunTime > tSunTime) {
+          t.sundayDone = !!entry.sundayDone;
+          t.sundayUpdatedAt = eSunTime;
+        } else if (tSunTime > eSunTime) {
+          entry.sundayDone = !!t.sundayDone;
+          entry.sundayUpdatedAt = tSunTime;
+        } else if (entry.sundayDone !== undefined || t.sundayDone !== undefined) {
+          const sunVal = (entry.sundayDone !== undefined) ? !!entry.sundayDone : !!t.sundayDone;
+          entry.sundayDone = sunVal;
+          t.sundayDone = sunVal;
+        }
+
+        // Monthly milestone sync
+        const eMonTime = parseTime(entry.monthlyUpdatedAt || entry.updatedAt);
+        const tMonTime = parseTime(t.monthlyUpdatedAt || t.updatedAt);
+        if (eMonTime > tMonTime) {
+          t.monthlyDone = !!entry.monthlyDone;
+          t.monthlyUpdatedAt = eMonTime;
+        } else if (tMonTime > eMonTime) {
+          entry.monthlyDone = !!t.monthlyDone;
+          entry.monthlyUpdatedAt = tMonTime;
+        } else if (entry.monthlyDone !== undefined || t.monthlyDone !== undefined) {
+          const monVal = (entry.monthlyDone !== undefined) ? !!entry.monthlyDone : !!t.monthlyDone;
+          entry.monthlyDone = monVal;
+          t.monthlyDone = monVal;
+        }
+
+        // BiMonthly milestone sync
+        const eBiTime = parseTime(entry.biMonthlyUpdatedAt || entry.updatedAt);
+        const tBiTime = parseTime(t.biMonthlyUpdatedAt || t.updatedAt);
+        if (eBiTime > tBiTime) {
+          t.biMonthlyDone = !!entry.biMonthlyDone;
+          t.biMonthlyUpdatedAt = eBiTime;
+        } else if (tBiTime > eBiTime) {
+          entry.biMonthlyDone = !!t.biMonthlyDone;
+          entry.biMonthlyUpdatedAt = tBiTime;
+        } else if (entry.biMonthlyDone !== undefined || t.biMonthlyDone !== undefined) {
+          const biVal = (entry.biMonthlyDone !== undefined) ? !!entry.biMonthlyDone : !!t.biMonthlyDone;
+          entry.biMonthlyDone = biVal;
+          t.biMonthlyDone = biVal;
         }
       }
     });
@@ -255,6 +406,7 @@ module.exports = async (req, res) => {
       HABITS_LOG: mergedHabits,
       TRACKER_PROGRESS: mergedTrackerProgress,
       SCORE_REGISTER: mergedScores,
+      PRELIMS_TARGETS_V1: mergedPrelimsTargets,
       deletedScoreIds: mergedDeletedScoreIds,
       deletedEntryIds: Array.from(delEntrySet),
       timestamp: Date.now()
@@ -271,6 +423,7 @@ module.exports = async (req, res) => {
       CUSTOM_HABITS: updatedData.CUSTOM_HABITS,
       CONFIG: updatedData.CONFIG,
       SCORE_REGISTER: updatedData.SCORE_REGISTER,
+      PRELIMS_TARGETS_V1: updatedData.PRELIMS_TARGETS_V1,
       deletedScoreIds: updatedData.deletedScoreIds,
       deletedEntryIds: updatedData.deletedEntryIds
     });
