@@ -66,29 +66,48 @@
 
       <!-- Hero Header Section -->
       <header class="pyq-hero">
-        <div class="pyq-hero-badge">UPSC CSE Preliminary Examination Archive</div>
+        <div class="pyq-hero-glow"></div>
+        <div class="pyq-hero-topline">
+          <div class="pyq-hero-badge">
+            <span class="pyq-live-dot"></span>
+            <span>UPSC CSE Prelims Master Archive</span>
+          </div>
+          <span class="pyq-hero-edition">1993–2024 Exam Matrix</span>
+        </div>
         <h1 class="pyq-hero-title">Prelims PYQ Analysis &amp; Topic Matrix</h1>
         <p class="pyq-hero-desc">
           Systematic Active Recall of UPSC Civil Services General Studies Paper-I questions. Explore empirical topic weightages, statement-by-statement logical dissections, examiner trap warnings, and core conceptual foundations.
         </p>
 
-        <!-- Quick Metrics -->
+        <!-- Quick Metrics Cards -->
         <div class="pyq-hero-stats">
           <div class="pyq-stat-card">
-            <div class="pyq-stat-val" id="pyqHeroTotalPyqs">1,000+</div>
-            <div class="pyq-stat-lbl">Questions Analyzed</div>
+            <div class="pyq-stat-icon">📚</div>
+            <div class="pyq-stat-body">
+              <div class="pyq-stat-val" id="pyqHeroTotalPyqs">2,470</div>
+              <div class="pyq-stat-lbl">Questions Analyzed</div>
+            </div>
           </div>
           <div class="pyq-stat-card">
-            <div class="pyq-stat-val" id="pyqHeroYears">1995–2024</div>
-            <div class="pyq-stat-lbl">Year Span</div>
+            <div class="pyq-stat-icon">📅</div>
+            <div class="pyq-stat-body">
+              <div class="pyq-stat-val" id="pyqHeroYears">1993–2024</div>
+              <div class="pyq-stat-lbl">Year Span Covered</div>
+            </div>
           </div>
           <div class="pyq-stat-card">
-            <div class="pyq-stat-val" id="pyqHeroAttempted">0</div>
-            <div class="pyq-stat-lbl">Attempted by You</div>
+            <div class="pyq-stat-icon">🎯</div>
+            <div class="pyq-stat-body">
+              <div class="pyq-stat-val" id="pyqHeroAttempted">0</div>
+              <div class="pyq-stat-lbl">Attempted by You</div>
+            </div>
           </div>
           <div class="pyq-stat-card">
-            <div class="pyq-stat-val" id="pyqHeroBookmarked">0</div>
-            <div class="pyq-stat-lbl">Bookmarked for R7/R30</div>
+            <div class="pyq-stat-icon">★</div>
+            <div class="pyq-stat-body">
+              <div class="pyq-stat-val" id="pyqHeroBookmarked">0</div>
+              <div class="pyq-stat-lbl">Bookmarked (R7/R30)</div>
+            </div>
           </div>
         </div>
       </header>
@@ -109,7 +128,19 @@
       <section class="pyq-filter-panel" id="pyqFilterPanel" aria-label="Question Search and Filters">
         <div class="pyq-search-box">
           <svg class="pyq-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-          <input type="search" class="pyq-search-input" id="pyqSearchInput" placeholder="Search keywords (e.g. Fundamental Rights, Money Multiplier, Miyawaki, Article 21)..." aria-label="Search questions by keyword or topic"/>
+          <input type="search" class="pyq-search-input" id="pyqSearchInput" placeholder="Search keywords (e.g. Fundamental Rights, Money Multiplier, Miyawaki, Article 21, MGNREGA)..." aria-label="Search questions by keyword or topic"/>
+          <span class="pyq-search-kbd" id="pyqSearchKbd" title="Press '/' or 'Ctrl+K' to search">/</span>
+          <button class="pyq-search-clear" id="pyqSearchClear" style="display:none;" aria-label="Clear search">✕</button>
+        </div>
+
+        <!-- Rapid Interactive Smart Filter Chips -->
+        <div class="pyq-quick-chips" id="pyqQuickChips" role="group" aria-label="Quick Filter Chips">
+          <button type="button" class="pyq-chip-btn pyq-chip-active" data-chip="all">All PYQs</button>
+          <button type="button" class="pyq-chip-btn" data-chip="recent">⚡ 2013–2024</button>
+          <button type="button" class="pyq-chip-btn" data-chip="statements">🧩 Statement-Based</button>
+          <button type="button" class="pyq-chip-btn" data-chip="traps">⚠️ Examiner Traps</button>
+          <button type="button" class="pyq-chip-btn" data-chip="bookmarked">★ Bookmarked</button>
+          <button type="button" class="pyq-chip-btn" data-chip="unattempted">🎯 Unattempted</button>
         </div>
 
         <div class="pyq-filter-row">
@@ -151,9 +182,19 @@
           </div>
 
           <div class="pyq-view-switch-btns" role="group" aria-label="Display View Mode">
-            <button class="pyq-view-btn pyq-active" id="pyqViewQuestions">Questions View</button>
-            <button class="pyq-view-btn" id="pyqViewAnalytics">Topic Frequency Matrix</button>
-            <button class="pyq-view-btn" id="pyqViewPdfs">📖 Original PDFs (2,376 Pgs)</button>
+            <button type="button" class="pyq-view-btn pyq-active" id="pyqViewQuestions">
+              <span>📝</span>
+              <span>Questions View</span>
+            </button>
+            <button type="button" class="pyq-view-btn" id="pyqViewAnalytics">
+              <span>📊</span>
+              <span>Topic Frequency Matrix</span>
+              <span class="pyq-view-badge">Interactive</span>
+            </button>
+            <button type="button" class="pyq-view-btn" id="pyqViewPdfs">
+              <span>📖</span>
+              <span>PDF Archive (2,376 Pgs)</span>
+            </button>
           </div>
         </div>
       </section>

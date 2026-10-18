@@ -214,52 +214,109 @@
 
 /* Hero Section */
 .pyq-x1 .pyq-hero {
-  background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #4338CA 100%);
+  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 35%, #1E3A8A 70%, #064E3B 100%);
   border-radius: var(--pyq-radius-lg);
-  padding: 32px 24px;
+  padding: 34px 26px;
   color: #FFFFFF;
   margin-bottom: 28px;
-  box-shadow: var(--pyq-shadow-md);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.35);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pyq-x1 .pyq-hero-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(16, 185, 129, 0.25) 50%, transparent 75%);
+  filter: blur(50px);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: pyq-pulse-glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes pyq-pulse-glow {
+  0% { transform: scale(0.9) translate(0, 0); opacity: 0.7; }
+  100% { transform: scale(1.15) translate(-20px, 20px); opacity: 1; }
+}
+
+.pyq-x1 .pyq-hero-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
 }
 
 .pyq-x1 .pyq-hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 4px 12px;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 5px 14px;
   border-radius: var(--pyq-radius-full);
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(8px);
+}
+
+.pyq-x1 .pyq-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+  box-shadow: 0 0 10px #10B981;
+  display: inline-block;
+  animation: pyq-dot-pulse 1.8s infinite;
+}
+
+@keyframes pyq-dot-pulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.25); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.pyq-x1 .pyq-hero-edition {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #93C5FD;
+  background: rgba(30, 58, 138, 0.4);
+  padding: 4px 10px;
+  border-radius: var(--pyq-radius-full);
+  border: 1px solid rgba(147, 197, 253, 0.25);
 }
 
 .pyq-x1 .pyq-hero-title {
   font-family: var(--pyq-font-heading);
   font-size: 28px;
   font-weight: 800;
-  line-height: 1.25;
-  margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, #FFFFFF 30%, #E2E8F0 70%, #93C5FD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 768px) {
   .pyq-x1 .pyq-hero-title {
-    font-size: 34px;
+    font-size: 36px;
   }
 }
 
 .pyq-x1 .pyq-hero-desc {
   font-size: 14.5px;
-  color: #DBEAFE;
+  color: #CBD5E1;
   max-width: 780px;
-  line-height: 1.55;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
 }
 
 .pyq-x1 .pyq-hero-stats {
@@ -275,25 +332,55 @@
 }
 
 .pyq-x1 .pyq-stat-card {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--pyq-radius-md);
-  padding: 12px 16px;
-  backdrop-filter: blur(8px);
+  padding: 12px 14px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.pyq-x1 .pyq-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.pyq-x1 .pyq-stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--pyq-radius-sm);
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.pyq-x1 .pyq-stat-body {
+  min-width: 0;
 }
 
 .pyq-x1 .pyq-stat-val {
   font-family: var(--pyq-font-heading);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   color: #FFFFFF;
+  line-height: 1.1;
 }
 
 .pyq-x1 .pyq-stat-lbl {
-  font-size: 11.5px;
-  color: #BFDBFE;
+  font-size: 11px;
+  color: #94A3B8;
   font-weight: 600;
-  margin-top: 2px;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Subject Tabs Strip (Horizontal scroll on mobile) */
@@ -409,19 +496,19 @@
   background: var(--pyq-bg-card);
   border: 1px solid var(--pyq-border);
   border-radius: var(--pyq-radius-lg);
-  padding: 18px 20px;
+  padding: 20px 22px;
   margin-bottom: 24px;
-  box-shadow: var(--pyq-shadow-sm);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
 }
 
 .pyq-x1 .pyq-search-box {
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .pyq-x1 .pyq-search-input {
   width: 100%;
-  padding: 12px 16px 12px 42px;
+  padding: 13px 48px 13px 44px;
   border: 1.5px solid var(--pyq-border);
   border-radius: var(--pyq-radius-md);
   font-size: 14px;
@@ -429,26 +516,115 @@
   color: var(--pyq-text-primary);
   background: var(--pyq-bg-input);
   outline: none;
-  transition: border-color 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .pyq-x1 .pyq-search-input:focus {
   border-color: var(--pyq-border-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 .pyq-x1 .pyq-search-icon {
   position: absolute;
   top: 50%;
-  left: 14px;
+  left: 15px;
   transform: translateY(-50%);
   color: var(--pyq-text-muted);
   pointer-events: none;
 }
 
+.pyq-x1 .pyq-search-kbd {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--pyq-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--pyq-text-muted);
+  background: var(--pyq-bg-subtle);
+  border: 1px solid var(--pyq-border);
+  padding: 2px 7px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.pyq-x1 .pyq-search-clear {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: var(--pyq-bg-subtle);
+  color: var(--pyq-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pyq-x1 .pyq-search-clear:hover {
+  background: var(--pyq-crimson-soft);
+  color: var(--pyq-crimson);
+}
+
+/* Quick Smart Filter Chips */
+.pyq-x1 .pyq-quick-chips {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px 14px 2px;
+  margin-bottom: 12px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pyq-x1 .pyq-quick-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.pyq-x1 .pyq-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--pyq-radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--pyq-border);
+  background: var(--pyq-bg-card);
+  color: var(--pyq-text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.pyq-x1 .pyq-chip-btn:hover {
+  border-color: var(--pyq-primary);
+  color: var(--pyq-primary);
+  background: var(--pyq-primary-soft);
+  transform: translateY(-1px);
+}
+
+.pyq-x1 .pyq-chip-btn.pyq-chip-active {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
+  border-color: var(--pyq-primary);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
+}
+
 .pyq-x1 .pyq-filter-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 12px;
 }
 
 @media (min-width: 640px) {
@@ -459,9 +635,9 @@
 
 .pyq-x1 .pyq-filter-select {
   width: 100%;
-  padding: 9px 12px;
+  padding: 10px 14px;
   border: 1.5px solid var(--pyq-border);
-  border-radius: var(--pyq-radius-sm);
+  border-radius: var(--pyq-radius-md);
   background: var(--pyq-bg-input);
   color: var(--pyq-text-secondary);
   font-size: 13px;
@@ -469,18 +645,20 @@
   font-weight: 600;
   outline: none;
   cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .pyq-x1 .pyq-filter-select:focus {
   border-color: var(--pyq-border-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
 }
 
 .pyq-x1 .pyq-toggles-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 14px;
-  padding-top: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
   border-top: 1px solid var(--pyq-border-subtle);
   flex-wrap: wrap;
   gap: 12px;
@@ -495,6 +673,14 @@
   font-weight: 700;
   color: var(--pyq-text-secondary);
   user-select: none;
+  padding: 4px 8px;
+  border-radius: var(--pyq-radius-sm);
+  transition: background 0.15s ease;
+}
+
+.pyq-x1 .pyq-toggle-pill:hover {
+  background: var(--pyq-bg-subtle);
+  color: var(--pyq-text-primary);
 }
 
 .pyq-x1 .pyq-toggle-pill input {
@@ -506,74 +692,385 @@
 
 .pyq-x1 .pyq-view-switch-btns {
   display: inline-flex;
-  gap: 6px;
+  background: var(--pyq-bg-subtle);
+  padding: 4px;
+  border-radius: var(--pyq-radius-md);
+  border: 1px solid var(--pyq-border);
+  gap: 4px;
 }
 
 .pyq-x1 .pyq-view-btn {
-  background: var(--pyq-bg-subtle);
-  border: 1px solid var(--pyq-border);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
   color: var(--pyq-text-secondary);
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: var(--pyq-radius-sm);
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.pyq-x1 .pyq-view-btn:hover:not(.pyq-active) {
+  color: var(--pyq-text-primary);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .pyq-x1 .pyq-view-btn.pyq-active {
-  background: var(--pyq-primary);
-  color: #FFFFFF;
-  border-color: var(--pyq-primary);
+  background: var(--pyq-bg-card);
+  color: var(--pyq-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Topic Frequency & Trend Analytics Panel */
+.pyq-x1 .pyq-view-badge {
+  font-size: 9.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: #FFFFFF;
+}
+
+/* Topic Frequency & Trend Analytics Dashboard (Modern & Creative) */
 .pyq-x1 .pyq-analytics-card {
   background: var(--pyq-bg-card);
   border: 1px solid var(--pyq-border);
   border-radius: var(--pyq-radius-lg);
-  padding: 22px 24px;
+  padding: 26px 28px;
   margin-bottom: 24px;
-  box-shadow: var(--pyq-shadow-sm);
+  box-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.06);
 }
 
 .pyq-x1 .pyq-analytics-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
+  border-bottom: 1px solid var(--pyq-border-subtle);
+  padding-bottom: 16px;
 }
 
 .pyq-x1 .pyq-analytics-title {
   font-family: var(--pyq-font-heading);
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 800;
   color: var(--pyq-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .pyq-x1 .pyq-analytics-sub {
-  font-size: 12.5px;
+  font-size: 13px;
+  color: var(--pyq-text-muted);
+  margin-top: 4px;
+}
+
+/* 4-KPI Overview Row */
+.pyq-x1 .pyq-analytics-kpis {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .pyq-x1 .pyq-analytics-kpis {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pyq-x1 .pyq-kpi-card {
+  background: var(--pyq-bg-subtle);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pyq-x1 .pyq-kpi-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-kpi-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pyq-x1 .pyq-kpi-icon {
+  font-size: 18px;
+}
+
+.pyq-x1 .pyq-kpi-chip {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: var(--pyq-radius-full);
+  text-transform: uppercase;
+}
+
+.pyq-x1 .pyq-kpi-val {
+  font-family: var(--pyq-font-heading);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  margin-top: 2px;
+}
+
+.pyq-x1 .pyq-kpi-lbl {
+  font-size: 11.5px;
+  color: var(--pyq-text-muted);
+  font-weight: 600;
+}
+
+/* Year Trend Bar Matrix */
+.pyq-x1 .pyq-year-trend-wrap {
+  background: var(--pyq-bg-subtle);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-md);
+  padding: 18px 20px;
+  margin-bottom: 24px;
+}
+
+.pyq-x1 .pyq-chart-heading {
+  font-family: var(--pyq-font-heading);
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-year-bars-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 140px;
+  padding: 10px 0 24px;
+  overflow-x: auto;
+  border-bottom: 1.5px solid var(--pyq-border);
+}
+
+.pyq-x1 .pyq-year-bar-col {
+  flex: 1;
+  min-width: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+  cursor: pointer;
+}
+
+.pyq-x1 .pyq-year-bar-col:hover .pyq-year-bar {
+  opacity: 1;
+  filter: brightness(1.15);
+  transform: scaleY(1.05);
+}
+
+.pyq-x1 .pyq-year-bar-col:hover .pyq-year-val-tip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pyq-x1 .pyq-year-bar {
+  width: 100%;
+  max-width: 22px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, var(--pyq-primary) 0%, rgba(37, 99, 235, 0.7) 100%);
+  transition: all 0.2s ease;
+  transform-origin: bottom;
+  min-height: 4px;
+}
+
+.pyq-x1 .pyq-year-bar.pyq-bar-highlight {
+  background: linear-gradient(180deg, #10B981 0%, #059669 100%);
+}
+
+.pyq-x1 .pyq-year-val-tip {
+  position: absolute;
+  top: -24px;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  background: var(--pyq-bg-card);
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid var(--pyq-border);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: all 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.pyq-x1 .pyq-year-lbl {
+  position: absolute;
+  bottom: -20px;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--pyq-text-muted);
+  font-family: var(--pyq-font-mono);
+}
+
+/* Top Topics Ranked Cards */
+.pyq-x1 .pyq-ranked-topics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pyq-x1 .pyq-ranked-topic-item {
+  background: var(--pyq-bg-card);
+  border: 1.5px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  transition: all 0.2s ease;
+}
+
+.pyq-x1 .pyq-ranked-topic-item:hover {
+  border-color: var(--pyq-border-focus);
+  transform: translateX(3px);
+  box-shadow: 0 4px 14px -2px rgba(15, 23, 42, 0.06);
+}
+
+.pyq-x1 .pyq-rank-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.pyq-x1 .pyq-rank-1 {
+  background: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FCD34D;
+}
+
+.pyq-x1 .pyq-rank-2 {
+  background: #F1F5F9;
+  color: #475569;
+  border: 1px solid #CBD5E1;
+}
+
+.pyq-x1 .pyq-rank-3 {
+  background: #FFEDD5;
+  color: #C2410C;
+  border: 1px solid #FDBA74;
+}
+
+.pyq-x1 .pyq-rank-other {
+  background: var(--pyq-bg-subtle);
   color: var(--pyq-text-muted);
 }
 
-.pyq-x1 .pyq-svg-chart-wrap {
-  width: 100%;
-  overflow-x: auto;
+.pyq-x1 .pyq-ranked-topic-body {
+  flex: 1;
+  min-width: 0;
 }
 
-.pyq-x1 .pyq-svg-chart {
-  width: 100%;
-  min-width: 480px;
-  height: auto;
+.pyq-x1 .pyq-ranked-topic-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--pyq-text-primary);
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pyq-x1 .pyq-ranked-topic-bar {
+  height: 7px;
+  border-radius: 99px;
+  background: var(--pyq-border-subtle);
+  overflow: hidden;
+  position: relative;
+}
+
+.pyq-x1 .pyq-ranked-topic-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #3B82F6 0%, #10B981 100%);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pyq-x1 .pyq-ranked-topic-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.pyq-x1 .pyq-count-badge {
+  font-family: var(--pyq-font-heading);
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-weightage-pill {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--pyq-text-muted);
+  background: var(--pyq-bg-subtle);
+  padding: 3px 8px;
+  border-radius: var(--pyq-radius-full);
+}
+
+.pyq-x1 .pyq-topic-filter-btn {
+  background: var(--pyq-primary-soft);
+  color: var(--pyq-primary);
+  border: 1px solid var(--pyq-primary-border);
+  padding: 5px 12px;
+  border-radius: var(--pyq-radius-sm);
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.pyq-x1 .pyq-topic-filter-btn:hover {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
 }
 
 /* Frequency Table */
 .pyq-x1 .pyq-freq-table-wrap {
   width: 100%;
   overflow-x: auto;
-  margin-top: 14px;
+  border-radius: var(--pyq-radius-md);
+  border: 1px solid var(--pyq-border);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
 }
 
 .pyq-x1 .pyq-freq-table {
@@ -585,7 +1082,7 @@
 
 .pyq-x1 .pyq-freq-table th,
 .pyq-x1 .pyq-freq-table td {
-  padding: 10px 14px;
+  padding: 12px 16px;
   border-bottom: 1px solid var(--pyq-border-subtle);
 }
 
@@ -595,9 +1092,10 @@
   color: var(--pyq-text-muted);
   text-transform: uppercase;
   font-size: 11px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   cursor: pointer;
   user-select: none;
+  white-space: nowrap;
 }
 
 .pyq-x1 .pyq-freq-table th:hover {
@@ -606,6 +1104,10 @@
 
 .pyq-x1 .pyq-freq-table tr:hover td {
   background: var(--pyq-bg-card-hover);
+}
+
+.pyq-x1 .pyq-freq-table tr:last-child td {
+  border-bottom: none;
 }
 
 /* Results Status Bar */

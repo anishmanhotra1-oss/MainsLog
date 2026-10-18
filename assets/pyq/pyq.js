@@ -231,7 +231,7 @@
       banner.style.display = 'block';
 
       const highYieldTags = (meta.highYieldTopics || []).map(t =>
-        `<span class="pyq-hy-tag">🎯 ${t}</span>`
+        `<button type="button" class="pyq-hy-tag" data-tag="${encodeURIComponent(t)}" title="Filter questions on ${t}">🎯 ${t}</button>`
       ).join('');
 
       banner.innerHTML = `
@@ -243,10 +243,27 @@
           <strong>Examiner Mindset:</strong> ${meta.examinerPattern || 'Focus on fundamental principles and contemporary applications.'}
         </div>
         <div class="pyq-high-yield-strip">
-          <span style="font-size: 12px; font-weight: 800; color: var(--pyq-text-muted); margin-right: 4px;">HIGH YIELD:</span>
+          <span style="font-size: 11px; font-weight: 800; color: var(--pyq-text-muted); margin-right: 4px; text-transform:uppercase; letter-spacing:0.04em;">HIGH YIELD FOCUS:</span>
           ${highYieldTags}
         </div>
       `;
+
+      banner.querySelectorAll('.pyq-hy-tag').forEach(tagBtn => {
+        tagBtn.addEventListener('click', () => {
+          const raw = tagBtn.getAttribute('data-tag');
+          if (raw) {
+            const topic = decodeURIComponent(raw);
+            const searchInput = $('#pyqSearchInput');
+            if (searchInput) {
+              searchInput.value = topic;
+              state.filters.searchQuery = topic;
+              const clr = $('#pyqSearchClear');
+              if (clr) clr.style.display = 'flex';
+            }
+            switchToQuestionsView();
+          }
+        });
+      });
     }
 
     // 5. Hero Stats
@@ -333,6 +350,9 @@
         if (f.type !== 'ALL' && q.type !== f.type) return false;
         if (f.bookmarkedOnly && !state.bookmarks.has(q.id)) return false;
         if (f.attemptedOnly && !state.attempted.has(q.id)) return false;
+        if (f.recentOnly && (q.year < 2013)) return false;
+        if (f.trapsOnly && (!q.trap || q.trap.length < 5)) return false;
+        if (f.unattemptedOnly && state.attempted.has(q.id)) return false;
 
         if (qLower) {
           const matchQuestion = q.question && q.question.toLowerCase().includes(qLower);
@@ -552,8 +572,13 @@
 
           <div class="pyq-analysis-drawer ${isGlobalShow ? 'pyq-open' : ''}" id="drawer-${q.id}">
             <div class="pyq-ans-banner">
-              <div class="pyq-ans-badge">Official Key: Option (${String(q.answer).toUpperCase()})</div>
-              ${q.concept ? `<div class="pyq-concept-badge">Concept: ${q.concept}</div>` : ''}
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <span style="font-size: 16px;">🎯</span>
+                <div class="pyq-ans-badge">Official Key: Option (${String(q.answer).toUpperCase()})</div>
+                <span style="font-size: 11px; font-weight: 800; background: rgba(5, 150, 105, 0.18); color: var(--pyq-emerald); padding: 2px 8px; border-radius: 99px; border: 1px solid var(--pyq-emerald-border);">+2.0 Marks</span>
+                <span style="font-size: 10.5px; font-weight: 700; color: var(--pyq-text-muted);">-0.66 Neg.</span>
+              </div>
+              ${q.concept ? `<div class="pyq-concept-badge">💡 Concept: ${q.concept}</div>` : ''}
             </div>
 
             ${q.explanation ? `<div style="font-size: 14px; line-height: 1.55; color: var(--pyq-text-secondary); margin-bottom: 14px;">${q.explanation}</div>` : ''}
@@ -692,7 +717,7 @@
       topTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // 11. Topic Frequency View & SVG Charts
+    // 11. Topic Frequency View & Interactive Analytics Dashboard
     function renderTopicFrequencyAnalytics() {
       const listContainer = $('#pyqQuestionList');
       const analyticsContainer = $('#pyqAnalyticsView');
@@ -708,18 +733,33 @@
 
       // Aggregate topic stats
       const topicStats = {};
-      state.filteredQuestions.forEach(q => {
+      const yearStats = {};
+      let statementQuestionsCount = 0;
+      let recentYearsCount = 0;
+
+      const totalCount = state.questions.length || 1;
+
+      state.questions.forEach(q => {
+        // Topic aggregation
         const t = q.topic || 'General';
         if (!topicStats[t]) {
-          topicStats[t] = { topic: t, count: 0, years: new Set() };
+          topicStats[t] = { topic: t, count: 0, years: new Set(), subTopics: new Set() };
         }
         topicStats[t].count++;
-        if (q.year) topicStats[t].years.add(q.year);
+        if (q.year) {
+          topicStats[t].years.add(q.year);
+          yearStats[q.year] = (yearStats[q.year] || 0) + 1;
+          if (q.year >= 2013) recentYearsCount++;
+        }
+        if (q.subTopic) topicStats[t].subTopics.add(q.subTopic);
+        if (q.type === 'statement-based' || (Array.isArray(q.statements) && q.statements.length > 0)) {
+          statementQuestionsCount++;
+        }
       });
 
       let topicList = Object.values(topicStats);
 
-      // Sort
+      // Sort topics
       if (state.sortFreqBy === 'topic') {
         topicList.sort((a, b) => state.sortFreqAsc ? a.topic.localeCompare(b.topic) : b.topic.localeCompare(a.topic));
       } else {
@@ -727,53 +767,148 @@
       }
 
       const maxCount = topicList.reduce((m, item) => Math.max(m, item.count), 1);
-      const totalCount = state.filteredQuestions.length || 1;
+      const top3Count = topicList.slice(0, 3).reduce((sum, item) => sum + item.count, 0);
+      const top3Pct = Math.round((top3Count / totalCount) * 100);
+      const stmtPct = Math.round((statementQuestionsCount / totalCount) * 100);
+      const recentPct = Math.round((recentYearsCount / totalCount) * 100);
 
-      // Pure SVG Bar Chart (Top 8 Topics)
-      const topTopics = topicList.slice(0, 8);
-      const chartHeight = Math.max(220, topTopics.length * 36 + 40);
-      const chartWidth = 600;
-      const barHeight = 20;
+      // 1. KPI Cards HTML
+      const kpisHtml = `
+        <div class="pyq-analytics-kpis">
+          <div class="pyq-kpi-card">
+            <div class="pyq-kpi-top">
+              <span class="pyq-kpi-icon">📊</span>
+              <span class="pyq-kpi-chip" style="background:var(--pyq-primary-soft); color:var(--pyq-primary);">Archive</span>
+            </div>
+            <div class="pyq-kpi-val">${totalCount.toLocaleString()}</div>
+            <div class="pyq-kpi-lbl">Total ${getSubjectName(state.currentSubjectId)} PYQs</div>
+          </div>
 
-      const svgBars = topTopics.map((item, idx) => {
-        const y = 30 + idx * 36;
-        const barWidth = Math.max(8, Math.round((item.count / maxCount) * 360));
-        const cleanTitle = item.topic.length > 24 ? item.topic.slice(0, 22) + '…' : item.topic;
-        const pct = Math.round((item.count / totalCount) * 100);
+          <div class="pyq-kpi-card">
+            <div class="pyq-kpi-top">
+              <span class="pyq-kpi-icon">🏆</span>
+              <span class="pyq-kpi-chip" style="background:var(--pyq-amber-soft); color:var(--pyq-amber);">Core Yield</span>
+            </div>
+            <div class="pyq-kpi-val">${top3Pct}%</div>
+            <div class="pyq-kpi-lbl">Top 3 Topics Concentration</div>
+          </div>
+
+          <div class="pyq-kpi-card">
+            <div class="pyq-kpi-top">
+              <span class="pyq-kpi-icon">🧩</span>
+              <span class="pyq-kpi-chip" style="background:var(--pyq-purple-soft); color:var(--pyq-purple);">Format</span>
+            </div>
+            <div class="pyq-kpi-val">${stmtPct}%</div>
+            <div class="pyq-kpi-lbl">Statement-Based Questions</div>
+          </div>
+
+          <div class="pyq-kpi-card">
+            <div class="pyq-kpi-top">
+              <span class="pyq-kpi-icon">⚡</span>
+              <span class="pyq-kpi-chip" style="background:var(--pyq-emerald-soft); color:var(--pyq-emerald);">Recency</span>
+            </div>
+            <div class="pyq-kpi-val">${recentPct}%</div>
+            <div class="pyq-kpi-lbl">2013–2024 Question Share</div>
+          </div>
+        </div>
+      `;
+
+      // 2. Year-by-Year Trend Bar Matrix (2013 to 2024)
+      const trendYears = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      const maxYearCount = trendYears.reduce((m, y) => Math.max(m, yearStats[y] || 0), 1);
+
+      const yearBarsHtml = trendYears.map(y => {
+        const cnt = yearStats[y] || 0;
+        const heightPct = Math.max(10, Math.round((cnt / maxYearCount) * 100));
+        const isSelected = String(state.filters.year) === String(y);
 
         return `
-          <g class="pyq-svg-group" transform="translate(0, ${y})">
-            <text x="180" y="15" text-anchor="end" font-size="12" font-weight="700" fill="currentColor" opacity="0.85">${cleanTitle}</text>
-            <rect x="195" y="0" width="${barWidth}" height="${barHeight}" rx="4" fill="#2563EB" opacity="0.9"></rect>
-            <text x="${195 + barWidth + 8}" y="15" font-size="11.5" font-weight="800" fill="currentColor">${item.count} (${pct}%)</text>
-          </g>
+          <div class="pyq-year-bar-col" data-year="${y}" title="Click to filter ${cnt} questions from ${y}">
+            <div class="pyq-year-val-tip">${cnt} Qs</div>
+            <div class="pyq-year-bar ${isSelected ? 'pyq-bar-highlight' : ''}" style="height:${heightPct}%;"></div>
+            <span class="pyq-year-lbl">'${String(y).slice(2)}</span>
+          </div>
         `;
       }).join('');
 
-      const svgChartHtml = `
-        <svg class="pyq-svg-chart" viewBox="0 0 ${chartWidth} ${chartHeight}" xmlns="http://www.w3.org/2000/svg">
-          <text x="10" y="18" font-size="13" font-weight="800" fill="currentColor">Top High-Yield Topics Frequency Distribution</text>
-          ${svgBars}
-        </svg>
+      const yearTrendHtml = `
+        <div class="pyq-year-trend-wrap">
+          <div class="pyq-chart-heading">
+            <span>📈 Annual Question Frequency Distribution (2013–2024)</span>
+            <span style="font-size:11.5px; font-weight:600; color:var(--pyq-text-muted);">💡 Click any bar to drill down into that year's questions</span>
+          </div>
+          <div class="pyq-year-bars-container">
+            ${yearBarsHtml}
+          </div>
+        </div>
       `;
 
-      // Frequency Table HTML
-      const tableRows = topicList.map(item => {
+      // 3. Top Ranked Topic Cards (Top 6)
+      const topRanked = topicList.slice(0, 6);
+      const rankedCardsHtml = `
+        <div style="margin-bottom: 24px;">
+          <div class="pyq-chart-heading">
+            <span>🎯 High-Yield Syllabus Topics Leaderboard</span>
+            <span style="font-size:11.5px; font-weight:600; color:var(--pyq-text-muted);">Ranked by historical frequency</span>
+          </div>
+          <div class="pyq-ranked-topics-list">
+            ${topRanked.map((item, idx) => {
+              const rank = idx + 1;
+              const rankClass = rank === 1 ? 'pyq-rank-1' : (rank === 2 ? 'pyq-rank-2' : (rank === 3 ? 'pyq-rank-3' : 'pyq-rank-other'));
+              const medal = rank === 1 ? '🥇' : (rank === 2 ? '🥈' : (rank === 3 ? '🥉' : `#${rank}`));
+              const weightage = Math.round((item.count / totalCount) * 100);
+
+              return `
+                <div class="pyq-ranked-topic-item">
+                  <div class="pyq-rank-badge ${rankClass}">${medal}</div>
+                  <div class="pyq-ranked-topic-body">
+                    <div class="pyq-ranked-topic-title" title="${item.topic}">${item.topic}</div>
+                    <div class="pyq-ranked-topic-bar">
+                      <div class="pyq-ranked-topic-fill" style="width:${weightage}%;"></div>
+                    </div>
+                  </div>
+                  <div class="pyq-ranked-topic-meta">
+                    <span class="pyq-count-badge">${item.count} Qs</span>
+                    <span class="pyq-weightage-pill">${weightage}%</span>
+                    <button type="button" class="pyq-topic-filter-btn" data-topic="${encodeURIComponent(item.topic)}">
+                      Explore Qs &rarr;
+                    </button>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+
+      // 4. Complete Topic Frequency Table HTML
+      const tableRows = topicList.map((item, idx) => {
         const sortedYears = Array.from(item.years).sort((a, b) => b - a);
         const weightage = Math.round((item.count / totalCount) * 100);
+        const rank = idx + 1;
+        const medal = rank === 1 ? '🥇 #1' : (rank === 2 ? '🥈 #2' : (rank === 3 ? '🥉 #3' : `#${rank}`));
+
         return `
-          <tr>
+          <tr class="pyq-freq-row" data-topic="${encodeURIComponent(item.topic)}" style="cursor:pointer;" title="Click row to filter questions for ${item.topic}">
+            <td style="font-weight:800; color:var(--pyq-text-muted); font-size:12px;">${medal}</td>
             <td style="font-weight: 700; color: var(--pyq-text-primary);">${item.topic}</td>
-            <td style="font-weight: 800; color: var(--pyq-primary);">${item.count}</td>
+            <td style="font-weight: 800; color: var(--pyq-primary); font-size:14px;">${item.count}</td>
             <td>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <div style="flex: 1; height: 6px; background: var(--pyq-border); border-radius: 99px; overflow: hidden; max-width: 100px;">
-                  <div style="width: ${weightage}%; height: 100%; background: var(--pyq-primary);"></div>
+                <div style="flex: 1; height: 6px; background: var(--pyq-border); border-radius: 99px; overflow: hidden; max-width: 90px;">
+                  <div style="width: ${weightage}%; height: 100%; background: linear-gradient(90deg, #3B82F6, #10B981);"></div>
                 </div>
-                <span>${weightage}%</span>
+                <span style="font-weight:700; font-size:12px;">${weightage}%</span>
               </div>
             </td>
-            <td style="color: var(--pyq-text-secondary); font-size: 12px;">${sortedYears.join(', ')}</td>
+            <td style="color: var(--pyq-text-secondary); font-size: 12px; max-width: 220px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              ${sortedYears.slice(0, 8).join(', ')}${sortedYears.length > 8 ? '…' : ''}
+            </td>
+            <td>
+              <button type="button" class="pyq-topic-filter-btn" data-topic="${encodeURIComponent(item.topic)}">
+                View
+              </button>
+            </td>
           </tr>
         `;
       }).join('');
@@ -782,23 +917,36 @@
         <div class="pyq-analytics-card">
           <div class="pyq-analytics-header">
             <div>
-              <div class="pyq-analytics-title">📊 Topic Frequency &amp; Weightage Matrix</div>
+              <div class="pyq-analytics-title">
+                <span>📊</span>
+                <span>Topic Frequency &amp; Weightage Matrix</span>
+              </div>
               <div class="pyq-analytics-sub">Empirical analysis across ${totalCount} questions in ${getSubjectName(state.currentSubjectId)}</div>
             </div>
+            <button type="button" class="pyq-topic-filter-btn" id="pyqBackToQuestionsBtn" style="padding:8px 16px;">
+              &larr; Back to Questions View
+            </button>
           </div>
 
-          <div class="pyq-svg-chart-wrap">
-            ${svgChartHtml}
+          ${kpisHtml}
+          ${yearTrendHtml}
+          ${rankedCardsHtml}
+
+          <div class="pyq-chart-heading">
+            <span>📋 Complete Topic Frequency &amp; Year Ledger</span>
+            <span style="font-size:11.5px; font-weight:600; color:var(--pyq-text-muted);">Click any row or topic button to filter</span>
           </div>
 
           <div class="pyq-freq-table-wrap">
             <table class="pyq-freq-table">
               <thead>
                 <tr>
+                  <th style="width:60px;">Rank</th>
                   <th id="pyqSortTopic">Topic Name ⇕</th>
-                  <th id="pyqSortCount">Times Asked ⇕</th>
+                  <th id="pyqSortCount">Questions ⇕</th>
                   <th>Weightage</th>
-                  <th>Years Asked</th>
+                  <th>Recent Years Asked</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -808,6 +956,55 @@
           </div>
         </div>
       `;
+
+      // Event Listeners for Year Bars (Drill down)
+      analyticsContainer.querySelectorAll('.pyq-year-bar-col').forEach(col => {
+        col.addEventListener('click', () => {
+          const y = col.getAttribute('data-year');
+          if (y) {
+            state.filters.year = y;
+            const ySelect = $('#pyqFilterYear');
+            if (ySelect) ySelect.value = y;
+            switchToQuestionsView();
+          }
+        });
+      });
+
+      // Event Listeners for Topic Filter Buttons & Rows
+      analyticsContainer.querySelectorAll('.pyq-topic-filter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const tRaw = btn.getAttribute('data-topic');
+          if (tRaw) {
+            const topic = decodeURIComponent(tRaw);
+            state.filters.topic = topic;
+            const tSelect = $('#pyqFilterTopic');
+            if (tSelect) tSelect.value = topic;
+            switchToQuestionsView();
+          }
+        });
+      });
+
+      analyticsContainer.querySelectorAll('.pyq-freq-row').forEach(row => {
+        row.addEventListener('click', () => {
+          const tRaw = row.getAttribute('data-topic');
+          if (tRaw) {
+            const topic = decodeURIComponent(tRaw);
+            state.filters.topic = topic;
+            const tSelect = $('#pyqFilterTopic');
+            if (tSelect) tSelect.value = topic;
+            switchToQuestionsView();
+          }
+        });
+      });
+
+      // Back to Questions button
+      const backBtn = $('#pyqBackToQuestionsBtn');
+      if (backBtn) {
+        backBtn.addEventListener('click', () => {
+          switchToQuestionsView();
+        });
+      }
 
       // Sorting event listeners
       const sortTopicEl = $('#pyqSortTopic');
@@ -836,6 +1033,19 @@
           renderTopicFrequencyAnalytics();
         });
       }
+    }
+
+    function switchToQuestionsView() {
+      state.currentView = 'questions';
+      state.pagination.page = 1;
+      const qBtn = $('#pyqViewQuestions');
+      const aBtn = $('#pyqViewAnalytics');
+      const pBtn = $('#pyqViewPdfs');
+      if (qBtn) qBtn.classList.add('pyq-active');
+      if (aBtn) aBtn.classList.remove('pyq-active');
+      if (pBtn) pBtn.classList.remove('pyq-active');
+      applyFiltersAndRender();
+      scrollToTopList();
     }
 
     // 12. Original PDF Question Bank Viewer
@@ -932,6 +1142,7 @@
     // 13. Filter Event Listeners
     function attachFilterListeners() {
       const searchInput = $('#pyqSearchInput');
+      const searchClear = $('#pyqSearchClear');
       const yearSelect = $('#pyqFilterYear');
       const topicSelect = $('#pyqFilterTopic');
       const subTopicSelect = $('#pyqFilterSubTopic');
@@ -948,10 +1159,70 @@
       if (searchInput) {
         searchInput.addEventListener('input', (e) => {
           state.filters.searchQuery = e.target.value;
+          if (searchClear) searchClear.style.display = e.target.value.length > 0 ? 'flex' : 'none';
           state.pagination.page = 1;
           applyFiltersAndRender();
         });
+
+        if (searchClear) {
+          searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            searchClear.style.display = 'none';
+            state.filters.searchQuery = '';
+            state.pagination.page = 1;
+            applyFiltersAndRender();
+            searchInput.focus();
+          });
+        }
+
+        // Global hotkey: Press '/' or 'Ctrl+K' to focus search
+        document.addEventListener('keydown', (e) => {
+          if ((e.key === '/' || (e.ctrlKey && e.key === 'k') || (e.metaKey && e.key === 'k')) && document.activeElement !== searchInput) {
+            if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
+              e.preventDefault();
+              searchInput.focus();
+              searchInput.select();
+            }
+          }
+        });
       }
+
+      // Quick Smart Filter Chips
+      const quickChips = root.querySelectorAll('#pyqQuickChips .pyq-chip-btn');
+      quickChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          quickChips.forEach(c => c.classList.remove('pyq-chip-active'));
+          chip.classList.add('pyq-chip-active');
+          const chipType = chip.getAttribute('data-chip');
+
+          // Reset smart flags
+          state.filters.recentOnly = false;
+          state.filters.trapsOnly = false;
+          state.filters.unattemptedOnly = false;
+          state.filters.bookmarkedOnly = false;
+          state.filters.type = 'ALL';
+
+          const tySel = $('#pyqFilterType'); if (tySel) tySel.value = 'ALL';
+          const bmToggle = $('#pyqToggleBookmarked'); if (bmToggle) bmToggle.checked = false;
+
+          if (chipType === 'recent') {
+            state.filters.recentOnly = true;
+          } else if (chipType === 'statements') {
+            state.filters.type = 'statement-based';
+            if (tySel) tySel.value = 'statement-based';
+          } else if (chipType === 'traps') {
+            state.filters.trapsOnly = true;
+          } else if (chipType === 'bookmarked') {
+            state.filters.bookmarkedOnly = true;
+            if (bmToggle) bmToggle.checked = true;
+          } else if (chipType === 'unattempted') {
+            state.filters.unattemptedOnly = true;
+          }
+
+          state.pagination.page = 1;
+          applyFiltersAndRender();
+        });
+      });
 
       if (yearSelect) {
         yearSelect.addEventListener('change', (e) => {
