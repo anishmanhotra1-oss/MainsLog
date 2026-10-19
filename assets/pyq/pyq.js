@@ -680,9 +680,11 @@
       const analyticsContainer = $('#pyqAnalyticsView');
       const paginationContainer = $('#pyqPagination');
       const pdfContainer = $('#pyqPdfView');
+      const statusBar = $('#pyqStatusBar');
 
       if (analyticsContainer) analyticsContainer.style.display = 'none';
       if (pdfContainer) pdfContainer.style.display = 'none';
+      if (statusBar) statusBar.style.display = 'block';
       if (listContainer) listContainer.style.display = 'block';
 
       if (!listContainer) return;
@@ -1017,6 +1019,28 @@
     function renderTopicFrequencyAnalytics() {
       const analyticsContainer = $('#pyqAnalyticsView');
       if (!analyticsContainer) return;
+
+      const listContainer = $('#pyqQuestionList');
+      const pdfContainer = $('#pyqPdfView');
+      const paginationContainer = $('#pyqPagination');
+      const statusBar = $('#pyqStatusBar');
+
+      if (listContainer) listContainer.style.display = 'none';
+      if (pdfContainer) pdfContainer.style.display = 'none';
+      if (paginationContainer) paginationContainer.style.display = 'none';
+      if (statusBar) statusBar.style.display = 'none';
+      analyticsContainer.style.display = 'block';
+
+      if (!state.questions || state.questions.length === 0) {
+        analyticsContainer.innerHTML = `
+          <div class="pyq-state-box">
+            <div class="pyq-spinner"></div>
+            <div class="pyq-state-title">Loading Frequency Matrix...</div>
+            <div class="pyq-state-desc">Aggregating empirical topic repetitions and annual distribution metrics...</div>
+          </div>
+        `;
+        return;
+      }
 
       const topicStats = {};
       const subTopicStats = {};
@@ -1655,10 +1679,12 @@
       const analyticsContainer = $('#pyqAnalyticsView');
       const paginationContainer = $('#pyqPagination');
       const pdfContainer = $('#pyqPdfView');
+      const statusBar = $('#pyqStatusBar');
 
       if (listContainer) listContainer.style.display = 'none';
       if (analyticsContainer) analyticsContainer.style.display = 'none';
       if (paginationContainer) paginationContainer.style.display = 'none';
+      if (statusBar) statusBar.style.display = 'none';
       if (!pdfContainer) return;
 
       pdfContainer.style.display = 'block';
