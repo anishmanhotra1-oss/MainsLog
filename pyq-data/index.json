@@ -77,7 +77,7 @@
       "file": "pyq-data/environment.json",
       "icon": "🌿",
       "color": "#16A34A",
-      "totalQuestions": 30,
+      "totalQuestions": 627,
       "avgPerYear": 17.5,
       "highYieldTopics": [
         "Protected Area Networks & Biosphere Reserves",
@@ -131,7 +131,7 @@
       "file": "pyq-data/science-tech.json",
       "icon": "🔬",
       "color": "#7C3AED",
-      "totalQuestions": 30,
+      "totalQuestions": 1280,
       "avgPerYear": 10.7,
       "highYieldTopics": [
         "Biotechnology (CRISPR, mRNA, Stem Cells)",
