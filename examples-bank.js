@@ -183,11 +183,11 @@
         const lo = map.get(e.id);
         const loTime = new Date(lo.updated_at || lo.created_at || 0).getTime();
         const reTime = new Date(e.updated_at  || e.created_at  || 0).getTime();
-        map.set(e.id, reTime >= loTime ? e : lo);
+        map.set(e.id, reTime >= loTime ? { ...lo, ...e } : { ...e, ...lo });
       }
     });
     return Array.from(map.values())
-      .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+      .sort((a, b) => new Date(b.created_at || b.updated_at || 0) - new Date(a.created_at || a.updated_at || 0));
   }
 
   async function eb_pullCloud() {
@@ -198,6 +198,10 @@
       if (data && Array.isArray(data.EB_ENTRIES)) {
         eb_state.entries = eb_mergeEntries(eb_state.entries, data.EB_ENTRIES);
         eb_saveToLS();
+        eb_updateHeroStats();
+        if (eb_el('tab-examples-bank') && !eb_el('tab-examples-bank').classList.contains('hidden')) {
+          eb_renderCurrentPart();
+        }
       }
     } catch (e) {
       console.warn('[EB] Cloud pull failed:', e);
@@ -206,14 +210,38 @@
 
   async function eb_pushCloud() {
     try {
-      await fetch(SYNC_URL, {
+      const res = await fetch(SYNC_URL, {
         method : 'POST',
         headers: { 'Content-Type': 'application/json' },
         body   : JSON.stringify({ EB_ENTRIES: eb_state.entries })
       });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && Array.isArray(data.EB_ENTRIES)) {
+          eb_state.entries = eb_mergeEntries(eb_state.entries, data.EB_ENTRIES);
+          eb_saveToLS();
+          eb_updateHeroStats();
+        }
+      }
     } catch (e) {
       console.warn('[EB] Cloud push failed:', e);
     }
+  }
+
+  function eb_addExternalEntry(entry) {
+    if (!entry || !entry.title) return false;
+    eb_loadFromLS();
+    const existingIdx = eb_state.entries.findIndex(e => e.id === entry.id || (entry.pyq_id && e.pyq_id === entry.pyq_id));
+    if (existingIdx >= 0) {
+      eb_state.entries[existingIdx] = { ...eb_state.entries[existingIdx], ...entry, updated_at: new Date().toISOString() };
+    } else {
+      eb_state.entries.unshift(entry);
+    }
+    eb_saveToLS();
+    eb_updateHeroStats();
+    eb_pushCloud();
+    eb_renderCurrentPart();
+    return true;
   }
 
   /* ─── HERO STATS SYNCHRONIZER ────────────────────────────── */
@@ -672,7 +700,19 @@
     const tagHtml = entry.tag
       ? `<span class="eb-entry-tag" onclick="EBModule.updateFilter('${entry.gs_part}', 'tag', '${eb_escape(entry.tag)}')">#${eb_escape(entry.tag)}</span>`
       : '';
-    const srcHtml = entry.source
+    
+    const pyqBridgeHtml = entry.pyq_id ? `
+      <div class="eb-entry-pyq-box" style="margin: 10px 0; padding: 8px 12px; background: rgba(37, 99, 235, 0.06); border: 1px dashed rgba(37, 99, 235, 0.35); border-radius: 8px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+        <span style="font-size: 11.5px; font-weight: 700; color: var(--brand-blue, #2563EB); display: flex; align-items: center; gap: 5px;">
+          <span>🎯</span>
+          <span>Linked UPSC Prelims PYQ (${eb_escape(entry.source || 'Prelims')})</span>
+        </span>
+        <a href="pyq.html?subject=${encodeURIComponent(entry.pyq_subject || 'polity')}&search=${encodeURIComponent(entry.pyq_id)}" class="eb-btn-card-action" style="text-decoration:none; display:inline-flex; align-items:center; gap:4px; font-size:11px; font-weight:700; background:#FFFFFF; color:#2563EB; border:1px solid #BFDBFE; padding:3px 9px; border-radius:6px;">
+          <span>View in PYQ Analysis &rarr;</span>
+        </a>
+      </div>
+    ` : '';
+const srcHtml = entry.source
       ? `<div class="eb-entry-source-line"><span>📖</span> <span>${eb_escape(entry.source)}</span></div>`
       : '';
     const dateHtml = entry.created_at
@@ -697,6 +737,7 @@
         </div>
 
         ${srcHtml}
+        ${pyqBridgeHtml}
 
         <div class="eb-card-footer">
           <span style="font-size:11px; font-weight:800; color:var(--text-muted);">${entry.gs_part}</span>
@@ -929,6 +970,9 @@
   /* ─── PUBLIC API (attached to window.EBModule) ───────────── */
 
   window.EBModule = {
+    addExternalEntry: eb_addExternalEntry,
+    getEntries      : function() { return eb_state.entries; },
+    hasPyqEntry     : function(pyqId) { return eb_state.entries.some(e => e.pyq_id === pyqId); },
     init            : eb_init,
     switchPart      : eb_switchPart,
     updateFilter    : eb_updateFilter,
@@ -982,5 +1026,30 @@
       }, 300);
     }
   });
+
+
+  // Auto-sync across devices & tabs
+  window.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      eb_pullCloud();
+    }
+  });
+  window.addEventListener('focus', () => {
+    eb_pullCloud();
+  });
+  window.addEventListener('storage', (e) => {
+    if (e.key === LS_KEY && e.newValue) {
+      try {
+        eb_state.entries = JSON.parse(e.newValue);
+        eb_updateHeroStats();
+        eb_renderCurrentPart();
+      } catch (err) {}
+    }
+  });
+  setInterval(() => {
+    if (document.visibilityState === 'visible') {
+      eb_pullCloud();
+    }
+  }, 45000);
 
 })();

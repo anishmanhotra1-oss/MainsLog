@@ -61,6 +61,7 @@ function readSyncData() {
     PRELIMS_TARGETS_V1: [],
     TRACKER_PROGRESS: {},
     EB_ENTRIES: [],
+    PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 },
     deletedScoreIds: [],
     deletedEntryIds: [],
     timestamp: 0
@@ -74,6 +75,9 @@ function readSyncData() {
     if (!Array.isArray(data.PRELIMS_TARGETS_V1)) data.PRELIMS_TARGETS_V1 = [];
     if (!data.TRACKER_PROGRESS || typeof data.TRACKER_PROGRESS !== 'object') data.TRACKER_PROGRESS = {};
     if (!Array.isArray(data.EB_ENTRIES)) data.EB_ENTRIES = [];
+    if (!data.PYQ_USER_DATA || typeof data.PYQ_USER_DATA !== 'object') {
+      data.PYQ_USER_DATA = { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 };
+    }
     if (!Array.isArray(data.deletedEntryIds)) data.deletedEntryIds = [];
     return data;
   } catch (e) {
@@ -267,6 +271,107 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
   };
 }
 
+function mergeEbEntries(existing, incoming) {
+  const map = new Map();
+  (existing || []).forEach(e => {
+    if (e && e.id) map.set(e.id, e);
+  });
+  (incoming || []).forEach(e => {
+    if (!e || !e.id) return;
+    if (!map.has(e.id)) {
+      map.set(e.id, e);
+    } else {
+      const old = map.get(e.id);
+      const oldTime = parseTime(old.updated_at || old.created_at || old.updatedAt);
+      const incTime = parseTime(e.updated_at || e.created_at || e.updatedAt);
+      map.set(e.id, incTime >= oldTime ? { ...old, ...e } : { ...e, ...old });
+    }
+  });
+  return Array.from(map.values()).sort((a, b) => parseTime(b.created_at || b.updated_at) - parseTime(a.created_at || a.updated_at));
+}
+
+function mergePyqUserData(existing, incoming) {
+  const ex = existing || { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 };
+  const inc = incoming || {};
+
+  const exBmMeta = ex.bookmarkMeta || {};
+  const incBmMeta = inc.bookmarkMeta || {};
+  const mergedBmMeta = { ...exBmMeta };
+
+  Object.keys(incBmMeta).forEach(qid => {
+    const incItem = incBmMeta[qid];
+    const exItem = mergedBmMeta[qid];
+    if (!exItem) {
+      mergedBmMeta[qid] = incItem;
+    } else {
+      const incT = parseTime(incItem.updatedAt || incItem.timestamp);
+      const exT = parseTime(exItem.updatedAt || exItem.timestamp);
+      mergedBmMeta[qid] = incT >= exT ? incItem : exItem;
+    }
+  });
+
+  if (Array.isArray(inc.bookmarks)) {
+    inc.bookmarks.forEach(qid => {
+      if (!mergedBmMeta[qid]) {
+        mergedBmMeta[qid] = { active: true, updatedAt: parseTime(inc.updatedAt) || Date.now() };
+      }
+    });
+  }
+
+  const exAttMeta = ex.attemptedMeta || {};
+  const incAttMeta = inc.attemptedMeta || {};
+  const mergedAttMeta = { ...exAttMeta };
+
+  Object.keys(incAttMeta).forEach(qid => {
+    const incItem = incAttMeta[qid];
+    const exItem = mergedAttMeta[qid];
+    if (!exItem) {
+      mergedAttMeta[qid] = incItem;
+    } else {
+      const incT = parseTime(incItem.updatedAt || incItem.timestamp);
+      const exT = parseTime(exItem.updatedAt || exItem.timestamp);
+      mergedAttMeta[qid] = incT >= exT ? incItem : exItem;
+    }
+  });
+
+  if (Array.isArray(inc.attempted)) {
+    inc.attempted.forEach(qid => {
+      if (!mergedAttMeta[qid]) {
+        mergedAttMeta[qid] = { active: true, updatedAt: parseTime(inc.updatedAt) || Date.now() };
+      }
+    });
+  }
+
+  const bookmarks = Object.keys(mergedBmMeta).filter(k => mergedBmMeta[k] && mergedBmMeta[k].active !== false);
+  const attempted = Object.keys(mergedAttMeta).filter(k => mergedAttMeta[k] && mergedAttMeta[k].active !== false);
+
+  const answers = { ...(ex.answers || {}) };
+  if (inc.answers && typeof inc.answers === 'object') {
+    Object.keys(inc.answers).forEach(qid => {
+      const incAns = inc.answers[qid];
+      const exAns = answers[qid];
+      if (!exAns) {
+        answers[qid] = incAns;
+      } else {
+        const incT = parseTime(typeof incAns === 'object' ? (incAns.updatedAt || incAns.timestamp) : 0);
+        const exT = parseTime(typeof exAns === 'object' ? (exAns.updatedAt || exAns.timestamp) : 0);
+        answers[qid] = incT >= exT ? incAns : exAns;
+      }
+    });
+  }
+
+  const updatedAt = Math.max(parseTime(ex.updatedAt), parseTime(inc.updatedAt), Date.now());
+
+  return {
+    bookmarks,
+    bookmarkMeta: mergedBmMeta,
+    attempted,
+    attemptedMeta: mergedAttMeta,
+    answers,
+    updatedAt
+  };
+}
+
   // API Endpoints
   if (reqPath === '/api/sync') {
     if (req.method === 'GET') {
@@ -288,6 +393,7 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
             SCORE_REGISTER: { gs: {}, csat: {} },
             PRELIMS_TARGETS_V1: [],
             EB_ENTRIES: [],
+            PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 },
             deletedScoreIds: [],
             deletedEntryIds: [],
             timestamp: Date.now()
@@ -473,13 +579,16 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
         const mergedEntries = Array.from(entryMap.values());
         const mergedHabits = { ...(existingData.HABITS_LOG || {}), ...(body.HABITS_LOG || {}) };
         const mergedTrackerProgress = mergeTrackerProgress(existingData.TRACKER_PROGRESS, body.TRACKER_PROGRESS || body.progress);
-        const { mergedScores, deletedScoreIds: mergedDeletedScoreIds } = mergeScoreRegister(
+        const mergedScoresObj = mergeScoreRegister(
           existingData.SCORE_REGISTER,
           body.SCORE_REGISTER,
           body.deletedScoreIds,
           existingData.deletedScoreIds
         );
-        const mergedEbEntries = body.EB_ENTRIES || existingData.EB_ENTRIES || [];
+        const mergedScores = mergedScoresObj.mergedScores;
+        const mergedDeletedScoreIds = mergedScoresObj.deletedScoreIds;
+        const mergedEbEntries = mergeEbEntries(existingData.EB_ENTRIES, body.EB_ENTRIES);
+        const mergedPyqUserData = mergePyqUserData(existingData.PYQ_USER_DATA, body.PYQ_USER_DATA);
 
         const updated = {
           ...existingData,
@@ -490,6 +599,7 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
           TRACKER_PROGRESS: mergedTrackerProgress,
           SCORE_REGISTER: mergedScores,
           EB_ENTRIES: mergedEbEntries,
+          PYQ_USER_DATA: mergedPyqUserData,
           deletedScoreIds: mergedDeletedScoreIds,
           deletedEntryIds: Array.from(delEntrySet)
         };

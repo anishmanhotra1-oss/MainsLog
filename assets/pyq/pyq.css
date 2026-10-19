@@ -2100,3 +2100,405 @@
     margin-bottom: 4px;
   }
 }
+
+/* =====================================================================
+   Frequency Matrix Interactive Pie Chart & Cross-Section Sync Styles
+   Strictly scoped under .pyq-x1
+   ===================================================================== */
+
+.pyq-x1 .pyq-pie-section {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--pyq-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.pyq-x1 .pyq-pie-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--pyq-border);
+}
+
+.pyq-x1 .pyq-pie-live-badge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--pyq-emerald-soft);
+  color: var(--pyq-emerald);
+  border: 1px solid var(--pyq-emerald-border);
+  padding: 3px 8px;
+  border-radius: var(--pyq-radius-full);
+}
+
+.pyq-x1 .pyq-pie-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--pyq-bg-subtle);
+  border: 1px solid var(--pyq-border);
+  padding: 3px;
+  border-radius: var(--pyq-radius-full);
+  gap: 4px;
+}
+
+.pyq-x1 .pyq-pie-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--pyq-text-muted);
+  font-family: var(--pyq-font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--pyq-radius-full);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.pyq-x1 .pyq-pie-toggle-btn:hover {
+  color: var(--pyq-text-primary);
+}
+
+.pyq-x1 .pyq-pie-toggle-btn.active {
+  background: var(--pyq-bg-card);
+  color: var(--pyq-primary);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* #1 Most Repeated Banner */
+.pyq-x1 .pyq-top-repeater-banner {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.08) 0%, rgba(220, 38, 38, 0.06) 100%);
+  border: 1.5px solid rgba(217, 119, 6, 0.28);
+  border-radius: var(--pyq-radius-md);
+  padding: 16px 20px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pyq-x1 .pyq-repeater-icon {
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.pyq-x1 .pyq-repeater-content {
+  flex: 1;
+  min-width: 240px;
+}
+
+.pyq-x1 .pyq-repeater-headline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.pyq-x1 .pyq-repeater-tag {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+  padding: 2px 8px;
+  border-radius: 99px;
+}
+
+.pyq-x1 .pyq-repeater-name {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+}
+
+.pyq-x1 .pyq-repeater-meta {
+  font-size: 13px;
+  color: var(--pyq-text-secondary);
+  line-height: 1.5;
+}
+
+.pyq-x1 .pyq-repeater-action-btn {
+  background: var(--pyq-primary);
+  color: #FFFFFF !important;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: var(--pyq-radius-md);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.pyq-x1 .pyq-repeater-action-btn:hover {
+  background: var(--pyq-primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Pie Grid 2-Column Layout */
+.pyq-x1 .pyq-pie-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 360px) 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .pyq-x1 .pyq-pie-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* SVG Donut Canvas Column */
+.pyq-x1 .pyq-pie-canvas-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pyq-x1 .pyq-pie-svg-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+}
+
+.pyq-x1 .pyq-pie-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.pyq-x1 .pyq-pie-slice {
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease, opacity 0.2s ease;
+  transform-origin: 0 0;
+}
+
+.pyq-x1 .pyq-pie-slice:hover,
+.pyq-x1 .pyq-pie-slice.slice-hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.16));
+  opacity: 1;
+}
+
+/* Center Readout */
+.pyq-x1 .pyq-pie-center-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  text-align: center;
+  max-width: 140px;
+}
+
+.pyq-x1 .pyq-pie-center-val {
+  font-family: var(--pyq-font-heading);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  line-height: 1.1;
+  transition: color 0.15s ease;
+}
+
+.pyq-x1 .pyq-pie-center-lbl {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--pyq-text-muted);
+  margin-top: 3px;
+}
+
+.pyq-x1 .pyq-pie-center-sub {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--pyq-text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+
+.pyq-x1 .pyq-pie-hint {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--pyq-text-muted);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Legend Column */
+.pyq-x1 .pyq-pie-legend-col {
+  width: 100%;
+}
+
+.pyq-x1 .pyq-pie-legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-pie-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-md);
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pyq-x1 .pyq-pie-legend-item:hover,
+.pyq-x1 .pyq-pie-legend-item.legend-hover {
+  border-color: var(--pyq-primary);
+  background: var(--pyq-bg-card-hover);
+  transform: translateX(3px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pyq-x1 .pyq-legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.pyq-x1 .pyq-legend-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.pyq-x1 .pyq-legend-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--pyq-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.pyq-x1 .pyq-legend-bar-wrap {
+  height: 5px;
+  border-radius: 99px;
+  background: var(--pyq-bg-subtle);
+  overflow: hidden;
+}
+
+.pyq-x1 .pyq-legend-bar {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.pyq-x1 .pyq-legend-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.pyq-x1 .pyq-legend-count {
+  font-family: var(--pyq-font-heading);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--pyq-primary);
+}
+
+.pyq-x1 .pyq-legend-pct {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--pyq-text-muted);
+  background: var(--pyq-bg-subtle);
+  padding: 2px 6px;
+  border-radius: var(--pyq-radius-full);
+}
+
+.pyq-x1 .pyq-legend-btn {
+  background: var(--pyq-primary-soft);
+  color: var(--pyq-primary);
+  border: 1px solid var(--pyq-primary-border);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--pyq-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pyq-x1 .pyq-legend-btn:hover {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
+}
+
+/* Examples Bank Bridge Button on PYQ Cards */
+.pyq-x1 .pyq-btn-add-example {
+  background: var(--pyq-primary-soft);
+  color: var(--pyq-primary);
+  border: 1px solid var(--pyq-primary-border);
+}
+
+.pyq-x1 .pyq-btn-add-example:hover {
+  background: var(--pyq-primary);
+  color: #FFFFFF;
+}
+
+.pyq-x1 .pyq-btn-add-example.pyq-is-saved-example {
+  background: var(--pyq-emerald-soft);
+  color: var(--pyq-emerald);
+  border-color: var(--pyq-emerald-border);
+}
+
+.pyq-x1 .pyq-btn-add-example.pyq-is-saved-example:hover {
+  background: var(--pyq-emerald);
+  color: #FFFFFF;
+}
+
+/* Toast Notifications */
+.pyq-x1 .pyq-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0F172A;
+  color: #F8FAFC;
+  padding: 12px 20px;
+  border-radius: var(--pyq-radius-md);
+  font-size: 13.5px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pyq-x1 .pyq-toast.pyq-toast-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

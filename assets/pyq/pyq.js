@@ -17,8 +17,64 @@
     const $ = (sel) => root.querySelector(sel);
     const $$ = (sel) => root.querySelectorAll(sel);
 
+    // Constants & Sync Storage Helpers
+    const SYNC_URL = '/api/sync';
+    const EB_LS_KEY = 'EB_ENTRIES_v1';
+
+    function loadMeta(key) {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : {};
+      } catch (e) { return {}; }
+    }
+
+    function saveMeta(key, val) {
+      try {
+        localStorage.setItem(key, JSON.stringify(val));
+      } catch (e) {}
+    }
+
+    function loadEbEntries() {
+      try {
+        const raw = localStorage.getItem(EB_LS_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) { return []; }
+    }
+
+    function getGsPartForSubject(subjectId) {
+      switch (subjectId) {
+        case 'polity': return 'GS2';
+        case 'economy': return 'GS3';
+        case 'environment': return 'GS3';
+        case 'science-tech': return 'GS3';
+        case 'geography': return 'GS1';
+        case 'history': return 'GS1';
+        default: return 'GS2';
+      }
+    }
+
+    function showPyqToast(msg) {
+      let toast = $('#pyqToast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'pyqToast';
+        toast.className = 'pyq-toast';
+        root.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.classList.add('pyq-toast-visible');
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(() => {
+        toast.classList.remove('pyq-toast-visible');
+      }, 3000);
+    }
+
     // State
     const state = {
+      bookmarkMeta: loadMeta('pyq_bookmarks_meta'),
+      attemptedMeta: loadMeta('pyq_attempted_meta'),
+      ebEntries: loadEbEntries(),
+      pieMode: 'topics', // 'topics' | 'subtopics'
       indexData: null,
       currentSubjectId: 'polity',
       subjectCache: {}, // { polity: { ... }, economy: { ... } }
@@ -42,7 +98,7 @@
         page: 1,
         pageSize: 20
       },
-      userAnswers: {}, // { [qId]: 'a' | 'b' ... }
+      userAnswers: loadMeta('pyq_answers'),
       bookmarks: loadSet('pyq_bookmarks'),
       attempted: loadSet('pyq_attempted')
     };
@@ -118,6 +174,237 @@
     function saveSet(key, set) {
       try {
         localStorage.setItem(key, JSON.stringify(Array.from(set)));
+      } catch (e) {}
+    }
+
+    // Cross-Device Cloud Sync Engine
+    let syncPushTimer = null;
+    function syncPushPyqData() {
+      clearTimeout(syncPushTimer);
+      syncPushTimer = setTimeout(async () => {
+        try {
+          await fetch(SYNC_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              PYQ_USER_DATA: {
+                bookmarks: Array.from(state.bookmarks),
+                bookmarkMeta: state.bookmarkMeta,
+                attempted: Array.from(state.attempted),
+                attemptedMeta: state.attemptedMeta,
+                answers: state.userAnswers,
+                updatedAt: Date.now()
+              }
+            })
+          });
+        } catch (e) {
+          console.warn('[PYQ] Cloud sync push failed:', e);
+        }
+      }, 350);
+    }
+
+    async function syncPullPyqData() {
+      try {
+        const res = await fetch(SYNC_URL, { method: 'GET' });
+        if (!res.ok) return;
+        const data = await res.json();
+
+        // 1. Reconcile PYQ User Data
+        if (data && data.PYQ_USER_DATA && typeof data.PYQ_USER_DATA === 'object') {
+          const remote = data.PYQ_USER_DATA;
+          let changed = false;
+
+          if (remote.bookmarkMeta && typeof remote.bookmarkMeta === 'object') {
+            Object.keys(remote.bookmarkMeta).forEach(qid => {
+              const rItem = remote.bookmarkMeta[qid];
+              const lItem = state.bookmarkMeta[qid];
+              if (!lItem || (rItem.updatedAt || 0) > (lItem.updatedAt || 0)) {
+                state.bookmarkMeta[qid] = rItem;
+                changed = true;
+              }
+            });
+          }
+          if (Array.isArray(remote.bookmarks)) {
+            remote.bookmarks.forEach(qid => {
+              if (!state.bookmarkMeta[qid]) {
+                state.bookmarkMeta[qid] = { active: true, updatedAt: remote.updatedAt || Date.now() };
+                changed = true;
+              }
+            });
+          }
+
+          if (remote.attemptedMeta && typeof remote.attemptedMeta === 'object') {
+            Object.keys(remote.attemptedMeta).forEach(qid => {
+              const rItem = remote.attemptedMeta[qid];
+              const lItem = state.attemptedMeta[qid];
+              if (!lItem || (rItem.updatedAt || 0) > (lItem.updatedAt || 0)) {
+                state.attemptedMeta[qid] = rItem;
+                changed = true;
+              }
+            });
+          }
+          if (Array.isArray(remote.attempted)) {
+            remote.attempted.forEach(qid => {
+              if (!state.attemptedMeta[qid]) {
+                state.attemptedMeta[qid] = { active: true, updatedAt: remote.updatedAt || Date.now() };
+                changed = true;
+              }
+            });
+          }
+
+          if (remote.answers && typeof remote.answers === 'object') {
+            Object.keys(remote.answers).forEach(qid => {
+              const rAns = remote.answers[qid];
+              const lAns = state.userAnswers[qid];
+              if (!lAns) {
+                state.userAnswers[qid] = rAns;
+                changed = true;
+              } else {
+                const rTime = typeof rAns === 'object' ? (rAns.updatedAt || 0) : 0;
+                const lTime = typeof lAns === 'object' ? (lAns.updatedAt || 0) : 0;
+                if (rTime > lTime) {
+                  state.userAnswers[qid] = rAns;
+                  changed = true;
+                }
+              }
+            });
+          }
+
+          state.bookmarks = new Set(Object.keys(state.bookmarkMeta).filter(k => state.bookmarkMeta[k] && state.bookmarkMeta[k].active !== false));
+          state.attempted = new Set(Object.keys(state.attemptedMeta).filter(k => state.attemptedMeta[k] && state.attemptedMeta[k].active !== false));
+
+          saveSet('pyq_bookmarks', state.bookmarks);
+          saveSet('pyq_attempted', state.attempted);
+          saveMeta('pyq_bookmarks_meta', state.bookmarkMeta);
+          saveMeta('pyq_attempted_meta', state.attemptedMeta);
+          saveMeta('pyq_answers', state.userAnswers);
+
+          if (changed) {
+            renderHeroStats();
+            if (state.currentView === 'questions') {
+              renderQuestionList();
+            }
+          }
+        }
+
+        // 2. Reconcile EB_ENTRIES
+        if (data && Array.isArray(data.EB_ENTRIES)) {
+          state.ebEntries = data.EB_ENTRIES;
+          try { localStorage.setItem(EB_LS_KEY, JSON.stringify(data.EB_ENTRIES)); } catch (e) {}
+          if (state.currentView === 'questions') {
+            renderQuestionList();
+          }
+        }
+      } catch (e) {
+        console.warn('[PYQ] Sync pull failed:', e);
+      }
+    }
+
+    function toggleBookmark(qId) {
+      const isCurrentlyBookmarked = state.bookmarks.has(qId);
+      const now = Date.now();
+      if (isCurrentlyBookmarked) {
+        state.bookmarks.delete(qId);
+        state.bookmarkMeta[qId] = { active: false, updatedAt: now };
+      } else {
+        state.bookmarks.add(qId);
+        state.bookmarkMeta[qId] = { active: true, updatedAt: now };
+      }
+      saveSet('pyq_bookmarks', state.bookmarks);
+      saveMeta('pyq_bookmarks_meta', state.bookmarkMeta);
+      renderHeroStats();
+      applyFiltersAndRender();
+      syncPushPyqData();
+    }
+
+    function toggleAttempted(qId) {
+      const isCurrentlyAttempted = state.attempted.has(qId);
+      const now = Date.now();
+      if (isCurrentlyAttempted) {
+        state.attempted.delete(qId);
+        state.attemptedMeta[qId] = { active: false, updatedAt: now };
+      } else {
+        state.attempted.add(qId);
+        state.attemptedMeta[qId] = { active: true, updatedAt: now };
+      }
+      saveSet('pyq_attempted', state.attempted);
+      saveMeta('pyq_attempted_meta', state.attemptedMeta);
+      renderHeroStats();
+      applyFiltersAndRender();
+      syncPushPyqData();
+    }
+
+    function saveQuestionToExamples(qId) {
+      const q = state.questions.find(x => x.id === qId);
+      if (!q) return;
+
+      const gsPart = getGsPartForSubject(state.currentSubjectId);
+      const title = (q.concept || q.topic || 'UPSC Prelims ' + q.year) + ' (' + q.year + ' PYQ)';
+      const purpose = (q.concept ? q.concept + ' — ' : '') + 
+        (q.explanation ? q.explanation.slice(0, 240) + '...' : q.question.slice(0, 220) + '...');
+      const tag = q.topic ? q.topic.split(/[,&]/)[0].trim() : getSubjectName(state.currentSubjectId);
+      const source = 'UPSC Prelims ' + q.year + (q.qNo ? ' (Q.' + q.qNo + ')' : '');
+
+      const entry = {
+        id: 'eb_pyq_' + q.id,
+        gs_part: gsPart,
+        type: 'Example',
+        title: title,
+        purpose: purpose,
+        tag: tag,
+        source: source,
+        pyq_id: q.id,
+        pyq_subject: state.currentSubjectId,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      };
+
+      state.ebEntries = loadEbEntries();
+      const existingIdx = state.ebEntries.findIndex(e => e.id === entry.id || e.pyq_id === entry.pyq_id);
+      if (existingIdx >= 0) {
+        state.ebEntries[existingIdx] = { ...state.ebEntries[existingIdx], ...entry, updated_at: new Date().toISOString() };
+      } else {
+        state.ebEntries.unshift(entry);
+      }
+
+      try {
+        localStorage.setItem(EB_LS_KEY, JSON.stringify(state.ebEntries));
+      } catch (e) {}
+
+      try {
+        fetch(SYNC_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ EB_ENTRIES: state.ebEntries })
+        }).catch(() => {});
+      } catch (e) {}
+
+      showPyqToast('💡 Added to Examples Bank under ' + gsPart + '!');
+
+      const card = $('#card-' + qId);
+      if (card) {
+        const btn = card.querySelector('.pyq-btn-add-example');
+        if (btn) {
+          btn.classList.add('pyq-is-saved-example');
+          btn.innerHTML = '<span>✓ In Examples (' + gsPart + ')</span>';
+          btn.title = 'Saved in Examples Bank — Click to view in Examples Bank';
+        }
+      }
+    }
+
+    function handleInitialUrlParams() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const subjParam = params.get('subject');
+        const searchParam = params.get('search');
+        if (subjParam && ['polity', 'economy', 'geography', 'history', 'science-tech', 'environment'].includes(subjParam)) {
+          state.currentSubjectId = subjParam;
+        }
+        if (searchParam) {
+          state.filters.searchQuery = searchParam;
+          const sInput = $('#pyqSearchInput');
+          if (sInput) sInput.value = searchParam;
+        }
       } catch (e) {}
     }
 
@@ -547,7 +834,14 @@
               ${q.type ? `<span class="pyq-q-tag pyq-tag-type">${formatType(q.type)}</span>` : ''}
             </div>
 
+            ` + (() => {
+        const gsPart = getGsPartForSubject(state.currentSubjectId);
+        const isSavedInExamples = state.ebEntries && state.ebEntries.some(e => e.id === 'eb_pyq_' + q.id || e.pyq_id === q.id);
+        return `
             <div class="pyq-q-actions">
+              <button class="pyq-icon-btn pyq-btn-add-example ${isSavedInExamples ? 'pyq-is-saved-example' : ''}" data-qid="${q.id}" title="${isSavedInExamples ? 'Saved in Examples Bank — Click to view in Examples Bank' : 'Save this PYQ concept & analysis to Examples Bank'}">
+                <span>${isSavedInExamples ? '✓ In Examples (' + gsPart + ')' : '💡 Add to Examples'}</span>
+              </button>
               <button class="pyq-icon-btn pyq-btn-attempt ${isAttempted ? 'pyq-marked-attempted' : ''}" data-qid="${q.id}" title="Toggle Attempted Status">
                 <span>${isAttempted ? '✓ Attempted' : 'Mark Attempted'}</span>
               </button>
@@ -555,6 +849,8 @@
                 <span>${isBookmarked ? '★ Saved' : '☆ Bookmark'}</span>
               </button>
             </div>
+        `;
+      })() + `
           </div>
 
           <div class="pyq-q-text">${q.question}</div>
@@ -593,6 +889,20 @@
 
     // 9. Card Event Delegation
     function attachQuestionCardEvents(container) {
+      // Add to Examples Bank button
+      container.querySelectorAll('.pyq-btn-add-example').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const qId = btn.getAttribute('data-qid');
+          if (!qId) return;
+          if (btn.classList.contains('pyq-is-saved-example')) {
+            window.location.href = 'index.html#examples-bank';
+          } else {
+            saveQuestionToExamples(qId);
+          }
+        });
+      });
+
       // Option Selection (Mock attempt)
       container.querySelectorAll('.pyq-option-item').forEach(opt => {
         opt.addEventListener('click', (e) => {
@@ -601,10 +911,14 @@
           const qId = grid.getAttribute('data-qid');
           const key = opt.getAttribute('data-key');
           if (qId && key) {
-            state.userAnswers[qId] = key;
+            state.userAnswers[qId] = { answer: key, updatedAt: Date.now() };
             state.attempted.add(qId);
+            state.attemptedMeta[qId] = { active: true, updatedAt: Date.now() };
             saveSet('pyq_attempted', state.attempted);
+            saveMeta('pyq_attempted_meta', state.attemptedMeta);
+            saveMeta('pyq_answers', state.userAnswers);
             renderHeroStats();
+            syncPushPyqData();
 
             // Auto reveal drawer upon answering
             const drawer = $(`#drawer-${qId}`);
@@ -627,16 +941,7 @@
       container.querySelectorAll('.pyq-btn-bookmark').forEach(btn => {
         btn.addEventListener('click', () => {
           const qId = btn.getAttribute('data-qid');
-          if (qId) {
-            if (state.bookmarks.has(qId)) {
-              state.bookmarks.delete(qId);
-            } else {
-              state.bookmarks.add(qId);
-            }
-            saveSet('pyq_bookmarks', state.bookmarks);
-            renderHeroStats();
-            applyFiltersAndRender();
-          }
+          if (qId) toggleBookmark(qId);
         });
       });
 
@@ -644,16 +949,7 @@
       container.querySelectorAll('.pyq-btn-attempt').forEach(btn => {
         btn.addEventListener('click', () => {
           const qId = btn.getAttribute('data-qid');
-          if (qId) {
-            if (state.attempted.has(qId)) {
-              state.attempted.delete(qId);
-            } else {
-              state.attempted.add(qId);
-            }
-            saveSet('pyq_attempted', state.attempted);
-            renderHeroStats();
-            applyFiltersAndRender();
-          }
+          if (qId) toggleAttempted(qId);
         });
       });
 
@@ -719,31 +1015,21 @@
 
     // 11. Topic Frequency View & Interactive Analytics Dashboard
     function renderTopicFrequencyAnalytics() {
-      const listContainer = $('#pyqQuestionList');
       const analyticsContainer = $('#pyqAnalyticsView');
-      const paginationContainer = $('#pyqPagination');
-      const pdfContainer = $('#pyqPdfView');
-
-      if (listContainer) listContainer.style.display = 'none';
-      if (pdfContainer) pdfContainer.style.display = 'none';
-      if (paginationContainer) paginationContainer.style.display = 'none';
       if (!analyticsContainer) return;
 
-      analyticsContainer.style.display = 'block';
-
-      // Aggregate topic stats
       const topicStats = {};
+      const subTopicStats = {};
       const yearStats = {};
       let statementQuestionsCount = 0;
       let recentYearsCount = 0;
-
       const totalCount = state.questions.length || 1;
 
       state.questions.forEach(q => {
         // Topic aggregation
         const t = q.topic || 'General';
         if (!topicStats[t]) {
-          topicStats[t] = { topic: t, count: 0, years: new Set(), subTopics: new Set() };
+          topicStats[t] = { topic: t, name: t, count: 0, years: new Set(), subTopics: new Set() };
         }
         topicStats[t].count++;
         if (q.year) {
@@ -752,12 +1038,27 @@
           if (q.year >= 2013) recentYearsCount++;
         }
         if (q.subTopic) topicStats[t].subTopics.add(q.subTopic);
+
+        // Subtopic aggregation
+        let st = q.subTopic;
+        if (!st || st === 'Other' || st === 'General') {
+          if (q.concept) st = q.concept;
+          else st = q.topic || 'General Studies';
+        }
+        st = st.replace(/\s*\(State PCS[^)]*\)/gi, '').trim();
+        if (!subTopicStats[st]) {
+          subTopicStats[st] = { name: st, topic: q.topic, count: 0, years: new Set() };
+        }
+        subTopicStats[st].count++;
+        if (q.year) subTopicStats[st].years.add(q.year);
+
         if (q.type === 'statement-based' || (Array.isArray(q.statements) && q.statements.length > 0)) {
           statementQuestionsCount++;
         }
       });
 
       let topicList = Object.values(topicStats);
+      let subTopicList = Object.values(subTopicStats).sort((a, b) => b.count - a.count);
 
       // Sort topics
       if (state.sortFreqBy === 'topic') {
@@ -766,7 +1067,6 @@
         topicList.sort((a, b) => state.sortFreqAsc ? a.count - b.count : b.count - a.count);
       }
 
-      const maxCount = topicList.reduce((m, item) => Math.max(m, item.count), 1);
       const top3Count = topicList.slice(0, 3).reduce((sum, item) => sum + item.count, 0);
       const top3Pct = Math.round((top3Count / totalCount) * 100);
       const stmtPct = Math.round((statementQuestionsCount / totalCount) * 100);
@@ -813,7 +1113,190 @@
         </div>
       `;
 
-      // 2. Year-by-Year Trend Bar Matrix (2013 to 2024)
+      // 2. Interactive SVG Pie/Donut Chart Component
+      const PIE_COLORS = [
+        '#2563EB', '#059669', '#D97706', '#7C3AED', '#DC2626',
+        '#0891B2', '#EA580C', '#4F46E5', '#0D9488', '#65A30D',
+        '#DB2777', '#64748B'
+      ];
+
+      const isSubMode = state.pieMode === 'subtopics';
+      const rawList = isSubMode ? subTopicList : topicList;
+      const topRepeater = rawList[0] || { name: 'General', count: totalCount, years: new Set() };
+      const topRepeaterPct = ((topRepeater.count / totalCount) * 100).toFixed(1);
+      const topRepeaterYears = topRepeater.years ? topRepeater.years.size : 1;
+
+      // Prepare slices for Pie Chart (Top 8 + Others if more)
+      let chartItems = [];
+      if (rawList.length <= 9) {
+        chartItems = rawList.map((item, idx) => ({
+          name: item.name || item.topic,
+          count: item.count,
+          pct: (item.count / totalCount) * 100,
+          filterVal: item.name || item.topic,
+          isSub: isSubMode,
+          color: PIE_COLORS[idx % PIE_COLORS.length]
+        }));
+      } else {
+        const top8 = rawList.slice(0, 8);
+        top8.forEach((item, idx) => {
+          chartItems.push({
+            name: item.name || item.topic,
+            count: item.count,
+            pct: (item.count / totalCount) * 100,
+            filterVal: item.name || item.topic,
+            isSub: isSubMode,
+            color: PIE_COLORS[idx % PIE_COLORS.length]
+          });
+        });
+        const rest = rawList.slice(8);
+        const othersCount = rest.reduce((s, it) => s + it.count, 0);
+        chartItems.push({
+          name: `Others (${rest.length} ${isSubMode ? 'themes' : 'topics'})`,
+          count: othersCount,
+          pct: (othersCount / totalCount) * 100,
+          filterVal: 'OTHERS',
+          isSub: isSubMode,
+          color: PIE_COLORS[PIE_COLORS.length - 1]
+        });
+      }
+
+      // Generate SVG Pie Slices
+      const R = 145; // outer radius
+      const r = 90;  // inner donut radius
+      let currentAngle = -Math.PI / 2;
+
+      const svgSlicesHtml = chartItems.map((item, idx) => {
+        const sliceAngle = (item.count / totalCount) * 2 * Math.PI;
+        const startAngle = currentAngle;
+        const endAngle = currentAngle + sliceAngle;
+        currentAngle = endAngle;
+
+        const x1 = (R * Math.cos(startAngle)).toFixed(2);
+        const y1 = (R * Math.sin(startAngle)).toFixed(2);
+        const x2 = (R * Math.cos(endAngle)).toFixed(2);
+        const y2 = (R * Math.sin(endAngle)).toFixed(2);
+
+        const ix1 = (r * Math.cos(endAngle)).toFixed(2);
+        const iy1 = (r * Math.sin(endAngle)).toFixed(2);
+        const ix2 = (r * Math.cos(startAngle)).toFixed(2);
+        const iy2 = (r * Math.sin(startAngle)).toFixed(2);
+
+        const largeArc = sliceAngle > Math.PI ? 1 : 0;
+        const pathD = [
+          `M ${x1} ${y1}`,
+          `A ${R} ${R} 0 ${largeArc} 1 ${x2} ${y2}`,
+          `L ${ix1} ${iy1}`,
+          `A ${r} ${r} 0 ${largeArc} 0 ${ix2} ${iy2}`,
+          'Z'
+        ].join(' ');
+
+        return `
+          <path class="pyq-pie-slice"
+                d="${pathD}"
+                fill="${item.color}"
+                data-idx="${idx}"
+                data-name="${encodeURIComponent(item.name)}"
+                data-count="${item.count}"
+                data-pct="${item.pct.toFixed(1)}"
+                data-filter="${encodeURIComponent(item.filterVal)}"
+                data-issub="${item.isSub}"
+                stroke="var(--pyq-bg-card, #FFFFFF)"
+                stroke-width="2.5">
+          </path>
+        `;
+      }).join('');
+
+      // Generate Legend Items
+      const legendItemsHtml = chartItems.map((item, idx) => {
+        const pctStr = item.pct.toFixed(1);
+        const isOthers = item.filterVal === 'OTHERS';
+        return `
+          <div class="pyq-pie-legend-item" data-idx="${idx}" data-filter="${encodeURIComponent(item.filterVal)}" data-issub="${item.isSub}">
+            <div class="pyq-legend-dot" style="background:${item.color};"></div>
+            <div class="pyq-legend-info">
+              <div class="pyq-legend-name" title="${item.name}">${item.name}</div>
+              <div class="pyq-legend-bar-wrap">
+                <div class="pyq-legend-bar" style="width:${Math.max(4, item.pct)}%; background:${item.color};"></div>
+              </div>
+            </div>
+            <div class="pyq-legend-stats">
+              <span class="pyq-legend-count">${item.count} Qs</span>
+              <span class="pyq-legend-pct">${pctStr}%</span>
+              ${!isOthers ? `<button type="button" class="pyq-legend-btn" data-filter="${encodeURIComponent(item.filterVal)}" data-issub="${item.isSub}">Explore &rarr;</button>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const pieChartHtml = `
+        <div class="pyq-pie-section">
+          <div class="pyq-pie-header">
+            <div>
+              <div class="pyq-chart-heading" style="margin-bottom: 3px;">
+                <span>🥧 Empirical Frequency &amp; Weightage Pie Chart</span>
+                <span class="pyq-pie-live-badge">Live Analytics</span>
+              </div>
+              <div style="font-size: 12.5px; color: var(--pyq-text-muted); font-weight: 600;">
+                Empirical repetition breakdown across all ${totalCount} PYQs in ${getSubjectName(state.currentSubjectId)}
+              </div>
+            </div>
+
+            <div class="pyq-pie-mode-toggle">
+              <button type="button" class="pyq-pie-toggle-btn ${!isSubMode ? 'active' : ''}" data-piemode="topics">
+                🎯 Core Syllabus Topics (${topicList.length})
+              </button>
+              <button type="button" class="pyq-pie-toggle-btn ${isSubMode ? 'active' : ''}" data-piemode="subtopics">
+                🔥 Top Repeating Themes (${subTopicList.length})
+              </button>
+            </div>
+          </div>
+
+          <!-- Highlight Banner: #1 Most Repeated -->
+          <div class="pyq-top-repeater-banner">
+            <div class="pyq-repeater-icon">🔥</div>
+            <div class="pyq-repeater-content">
+              <div class="pyq-repeater-headline">
+                <span class="pyq-repeater-tag">#1 Most Repeated ${isSubMode ? 'Theme' : 'Topic'}</span>
+                <span class="pyq-repeater-name" title="${topRepeater.name}">${topRepeater.name}</span>
+              </div>
+              <div class="pyq-repeater-meta">
+                <strong>${topRepeater.count} Questions</strong> (${topRepeaterPct}% weightage) repeating across <strong>${topRepeaterYears} distinct UPSC exam years</strong>. High-yield core priority for revision.
+              </div>
+            </div>
+            <button type="button" class="pyq-topic-filter-btn pyq-repeater-action-btn" data-filter="${encodeURIComponent(topRepeater.name || topRepeater.topic)}" data-issub="${isSubMode}">
+              Explore ${topRepeater.count} Qs &rarr;
+            </button>
+          </div>
+
+          <!-- Donut SVG & Legend 2-Column Grid -->
+          <div class="pyq-pie-grid">
+            <div class="pyq-pie-canvas-col">
+              <div class="pyq-pie-svg-wrapper">
+                <svg viewBox="0 0 360 360" class="pyq-pie-svg" id="pyqDonutSvg">
+                  <g transform="translate(180, 180)">
+                    ${svgSlicesHtml}
+                  </g>
+                </svg>
+                <div class="pyq-pie-center-info" id="pyqPieCenterInfo">
+                  <div class="pyq-pie-center-val" id="pyqCenterVal">${totalCount}</div>
+                  <div class="pyq-pie-center-lbl" id="pyqCenterLbl">Total Questions</div>
+                  <div class="pyq-pie-center-sub" id="pyqCenterSub">1993–2024 Exam Matrix</div>
+                </div>
+              </div>
+              <div class="pyq-pie-hint">💡 Hover slice or legend item for details • Click to filter questions</div>
+            </div>
+
+            <div class="pyq-pie-legend-col">
+              <div class="pyq-pie-legend-list">
+                ${legendItemsHtml}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // 3. Year-by-Year Trend Bar Matrix (2013 to 2024)
       const trendYears = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
       const maxYearCount = trendYears.reduce((m, y) => Math.max(m, yearStats[y] || 0), 1);
 
@@ -843,7 +1326,7 @@
         </div>
       `;
 
-      // 3. Top Ranked Topic Cards (Top 6)
+      // 4. Top Ranked Topic Cards (Top 6)
       const topRanked = topicList.slice(0, 6);
       const rankedCardsHtml = `
         <div style="margin-bottom: 24px;">
@@ -881,7 +1364,7 @@
         </div>
       `;
 
-      // 4. Complete Topic Frequency Table HTML
+      // 5. Complete Topic Frequency Table HTML
       const tableRows = topicList.map((item, idx) => {
         const sortedYears = Array.from(item.years).sort((a, b) => b - a);
         const weightage = Math.round((item.count / totalCount) * 100);
@@ -929,6 +1412,7 @@
           </div>
 
           ${kpisHtml}
+          ${pieChartHtml}
           ${yearTrendHtml}
           ${rankedCardsHtml}
 
@@ -957,6 +1441,123 @@
         </div>
       `;
 
+      // Event Listeners for Pie Mode Toggle (Topics vs Subtopics)
+      analyticsContainer.querySelectorAll('.pyq-pie-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const mode = btn.getAttribute('data-piemode');
+          if (mode && mode !== state.pieMode) {
+            state.pieMode = mode;
+            renderTopicFrequencyAnalytics();
+          }
+        });
+      });
+
+      // Filter trigger helper from pie chart or legend
+      function triggerFilterFromPie(filterVal, isSub) {
+        if (!filterVal || filterVal === 'OTHERS') return;
+        if (isSub === true || isSub === 'true') {
+          state.filters.searchQuery = filterVal;
+          const sInput = $('#pyqSearchInput');
+          if (sInput) sInput.value = filterVal;
+        } else {
+          state.filters.topic = filterVal;
+          const tSelect = $('#pyqFilterTopic');
+          if (tSelect) tSelect.value = filterVal;
+        }
+        switchToQuestionsView();
+      }
+
+      // Event Listeners for Pie Slices (Hover & Click)
+      const centerVal = $('#pyqCenterVal');
+      const centerLbl = $('#pyqCenterLbl');
+      const centerSub = $('#pyqCenterSub');
+
+      analyticsContainer.querySelectorAll('.pyq-pie-slice').forEach(slice => {
+        const rawName = decodeURIComponent(slice.getAttribute('data-name') || '');
+        const count = slice.getAttribute('data-count') || '';
+        const pct = slice.getAttribute('data-pct') || '';
+        const filterVal = decodeURIComponent(slice.getAttribute('data-filter') || '');
+        const isSub = slice.getAttribute('data-issub');
+        const sliceIdx = slice.getAttribute('data-idx');
+
+        slice.addEventListener('mouseenter', () => {
+          slice.classList.add('slice-hover');
+          if (centerVal) { centerVal.textContent = count + ' Qs'; centerVal.style.color = slice.getAttribute('fill'); }
+          if (centerLbl) centerLbl.textContent = pct + '% Share';
+          if (centerSub) centerSub.textContent = rawName;
+
+          const legendItem = analyticsContainer.querySelector(`.pyq-pie-legend-item[data-idx="${sliceIdx}"]`);
+          if (legendItem) legendItem.classList.add('legend-hover');
+        });
+
+        slice.addEventListener('mouseleave', () => {
+          slice.classList.remove('slice-hover');
+          if (centerVal) { centerVal.textContent = totalCount; centerVal.style.color = ''; }
+          if (centerLbl) centerLbl.textContent = 'Total Questions';
+          if (centerSub) centerSub.textContent = '1993–2024 Exam Matrix';
+
+          const legendItem = analyticsContainer.querySelector(`.pyq-pie-legend-item[data-idx="${sliceIdx}"]`);
+          if (legendItem) legendItem.classList.remove('legend-hover');
+        });
+
+        slice.addEventListener('click', () => {
+          triggerFilterFromPie(filterVal, isSub);
+        });
+      });
+
+      // Event Listeners for Legend Items
+      analyticsContainer.querySelectorAll('.pyq-pie-legend-item').forEach(item => {
+        const sliceIdx = item.getAttribute('data-idx');
+        const filterVal = decodeURIComponent(item.getAttribute('data-filter') || '');
+        const isSub = item.getAttribute('data-issub');
+        const slice = analyticsContainer.querySelector(`.pyq-pie-slice[data-idx="${sliceIdx}"]`);
+
+        item.addEventListener('mouseenter', () => {
+          item.classList.add('legend-hover');
+          if (slice) {
+            slice.classList.add('slice-hover');
+            const count = slice.getAttribute('data-count') || '';
+            const pct = slice.getAttribute('data-pct') || '';
+            const rawName = decodeURIComponent(slice.getAttribute('data-name') || '');
+            if (centerVal) { centerVal.textContent = count + ' Qs'; centerVal.style.color = slice.getAttribute('fill'); }
+            if (centerLbl) centerLbl.textContent = pct + '% Share';
+            if (centerSub) centerSub.textContent = rawName;
+          }
+        });
+
+        item.addEventListener('mouseleave', () => {
+          item.classList.remove('legend-hover');
+          if (slice) slice.classList.remove('slice-hover');
+          if (centerVal) { centerVal.textContent = totalCount; centerVal.style.color = ''; }
+          if (centerLbl) centerLbl.textContent = 'Total Questions';
+          if (centerSub) centerSub.textContent = '1993–2024 Exam Matrix';
+        });
+
+        item.addEventListener('click', (e) => {
+          if (!e.target.closest('.pyq-legend-btn')) {
+            triggerFilterFromPie(filterVal, isSub);
+          }
+        });
+      });
+
+      analyticsContainer.querySelectorAll('.pyq-legend-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const filterVal = decodeURIComponent(btn.getAttribute('data-filter') || '');
+          const isSub = btn.getAttribute('data-issub');
+          triggerFilterFromPie(filterVal, isSub);
+        });
+      });
+
+      const repeaterBtn = analyticsContainer.querySelector('.pyq-repeater-action-btn');
+      if (repeaterBtn) {
+        repeaterBtn.addEventListener('click', () => {
+          const filterVal = decodeURIComponent(repeaterBtn.getAttribute('data-filter') || '');
+          const isSub = repeaterBtn.getAttribute('data-issub');
+          triggerFilterFromPie(filterVal, isSub);
+        });
+      }
+
       // Event Listeners for Year Bars (Drill down)
       analyticsContainer.querySelectorAll('.pyq-year-bar-col').forEach(col => {
         col.addEventListener('click', () => {
@@ -971,7 +1572,7 @@
       });
 
       // Event Listeners for Topic Filter Buttons & Rows
-      analyticsContainer.querySelectorAll('.pyq-topic-filter-btn').forEach(btn => {
+      analyticsContainer.querySelectorAll('.pyq-topic-filter-btn:not(.pyq-repeater-action-btn)').forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.stopPropagation();
           const tRaw = btn.getAttribute('data-topic');
