@@ -721,6 +721,130 @@
       attachQuestionCardEvents(listContainer);
     }
 
+    function cleanStr(txt) {
+      if (!txt) return '';
+      return String(txt).replace(/\s+/g, ' ').trim();
+    }
+
+    function escapeHtml(str) {
+      if (typeof str !== 'string') return '';
+      return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function getQuestionPedagogyAnalysis(q) {
+      if (!q) return { whyAsked: '', howAsked: '', expectedQuestion: '' };
+      if (q._pedagogy) return q._pedagogy;
+
+      if (q.whyAsked && q.howAsked && q.expectedQuestion) {
+        q._pedagogy = {
+          whyAsked: q.whyAsked,
+          howAsked: q.howAsked,
+          expectedQuestion: q.expectedQuestion
+        };
+        return q._pedagogy;
+      }
+
+      const subject = cleanStr(q.subject || state.currentSubjectId || 'General Studies');
+      const topic = cleanStr(q.topic || 'Core Syllabus');
+      const subTopic = cleanStr(q.subTopic || topic);
+      const concept = cleanStr(q.concept || q.explanation || '');
+      const trap = cleanStr(q.trap || '');
+      const rawFacts = Array.isArray(q.relatedFacts) ? q.relatedFacts.map(cleanStr).filter(Boolean) : [];
+      const meaningfulFacts = rawFacts.filter(f => !/^question\s*#|^corresponds to|^extracted from|^forumi/i.test(f));
+      const qText = cleanStr(q.question || '');
+      const stmts = Array.isArray(q.statements) ? q.statements.map(cleanStr).filter(Boolean) : [];
+      const qType = cleanStr(q.type || (stmts.length > 0 ? 'statement-based' : 'conceptual'));
+      const sLower = subject.toLowerCase();
+
+      // 1. WHY THAT QUESTION IS ASKED
+      let whyAsked = q.whyAsked || '';
+      if (!whyAsked) {
+        let subjectAnchor = '';
+        if (sLower.includes('polity')) {
+          subjectAnchor = 'Evaluates whether candidates comprehend constitutional architecture, statutory checks & balances, and democratic accountability beyond surface-level article numbers.';
+        } else if (sLower.includes('economy')) {
+          subjectAnchor = 'Tests foundational macroeconomic logic, monetary/fiscal transmission mechanisms, and developmental indicators essential for policy analysis.';
+        } else if (sLower.includes('geography')) {
+          subjectAnchor = 'Assesses spatial distribution, physical geomorphological processes, environmental frontiers, and critical resource corridors shaping regional development.';
+        } else if (sLower.includes('history')) {
+          subjectAnchor = 'Scrutinizes socio-economic transitions, administrative statecraft, institutional legacies, and pivotal turning points of the historical record.';
+        } else if (sLower.includes('environment')) {
+          subjectAnchor = 'Tests understanding of ecological interdependencies, biodiversity conservation regimes, statutory environmental jurisprudence, and international climate treaties.';
+        } else {
+          subjectAnchor = 'Measures technological literacy, frontier scientific innovations, and their practical deployment in public health, governance, and national security.';
+        }
+
+        let conceptCore = '';
+        if (concept) {
+          const firstSentence = concept.split(/(?<=[.!?])\s+/)[0];
+          conceptCore = firstSentence.length > 180 ? firstSentence.slice(0, 177) + '...' : firstSentence;
+        } else {
+          conceptCore = `Core principles, institutional roles, and practical applications of ${subTopic}.`;
+        }
+
+        whyAsked = `${subjectAnchor} Under '${topic}' (${subTopic}), the examiner assesses whether candidates grasp: "${conceptCore}"`;
+      }
+
+      // 2. HOW THAT QUESTION IS ASKED
+      let howAsked = q.howAsked || '';
+      if (!howAsked) {
+        let structuralStyle = '';
+        if (stmts.length > 0) {
+          structuralStyle = `Framed as a ${stmts.length}-statement analytical problem requiring candidates to verify multiple interdependent premises and eliminate distractors.`;
+        } else if (/which of the following is not|incorrect|except/i.test(qText)) {
+          structuralStyle = 'Constructed with a negative premise ("is NOT / incorrect"), directly targeting hasty reading and cognitive confirmation bias under timed exam pressure.';
+        } else if (/pair|match/i.test(qText) || qType === 'match-the-following') {
+          structuralStyle = 'Engineered as a high-precision bilateral match / pairing matrix testing exact one-to-one correspondence.';
+        } else if (/chronological|arrange|order|earliest|latest/i.test(qText) || qType === 'chronology') {
+          structuralStyle = 'Designed as an evolutionary sequence problem requiring candidates to place milestones accurately on a developmental timeline.';
+        } else {
+          structuralStyle = 'Crafted as a direct conceptual definition / application problem with closely calibrated distractors demanding clear distinction between adjacent doctrines.';
+        }
+
+        let trapDeconstruction = '';
+        if (trap) {
+          trapDeconstruction = ` Examiner's Trap: ${trap}`;
+        } else if (stmts.length > 0) {
+          trapDeconstruction = ` Examiner's Trap: Often introduces extreme qualifiers ('always', 'only', 'all') or subtly swaps institutional jurisdictions to test critical vigilance.`;
+        } else {
+          trapDeconstruction = ` Examiner's Trap: Distractors confuse everyday colloquial usage with precise statutory, economic, or scientific definitions.`;
+        }
+
+        howAsked = `${structuralStyle}${trapDeconstruction}`;
+      }
+
+      // 3. EXPECTED OTHER QUESTION SHOULD BE ASKED
+      let expectedQuestion = q.expectedQuestion || '';
+      if (!expectedQuestion) {
+        let variants = [];
+        if (meaningfulFacts.length > 0) {
+          variants.push(`Adjacent Angle: Consider questions testing related factual linkages, e.g., "${meaningfulFacts[0]}"`);
+          if (meaningfulFacts.length > 1) {
+            variants.push(`Comparative Dimension: Framing comparative provisions or counter-mechanisms involving: "${meaningfulFacts[1]}"`);
+          }
+        } else {
+          variants.push(`Adjacent Angle: A multi-statement question exploring statutory exceptions, procedural limits, or institutional mandates under ${subTopic}.`);
+          variants.push(`Comparative Dimension: Cross-comparative analysis between ${subTopic} and corresponding international benchmarks or inter-state frameworks.`);
+        }
+
+        variants.push(`Predictive Prelims Yield: Expect upcoming questions to test reverse applications of ${topic} linked to recent policy reforms, judicial rulings, or global regulatory updates.`);
+        expectedQuestion = variants.join('\n• ');
+        if (!expectedQuestion.startsWith('• ')) expectedQuestion = '• ' + expectedQuestion;
+      }
+
+      q.whyAsked = whyAsked;
+      q.howAsked = howAsked;
+      q.expectedQuestion = expectedQuestion;
+
+      q._pedagogy = { whyAsked, howAsked, expectedQuestion };
+      return q._pedagogy;
+    }
+
     function renderSingleQuestionCard(q) {
       const isBookmarked = state.bookmarks.has(q.id);
       const isAttempted = state.attempted.has(q.id);
@@ -826,6 +950,52 @@
         `;
       }
 
+      // Pedagogical Blueprint: Why asked, How asked, Expected other question should be asked
+      const pedagogy = getQuestionPedagogyAnalysis(q);
+      const expectedLines = (pedagogy.expectedQuestion || '')
+        .split('\n• ')
+        .map(s => s.replace(/^•\s*/, '').trim())
+        .filter(Boolean);
+
+      const formattedExpectedHtml = expectedLines.length > 1
+        ? `<ul class="pyq-pedagogy-list">${expectedLines.map(line => `<li>${escapeHtml(line)}</li>`).join('')}</ul>`
+        : `<div>${escapeHtml(pedagogy.expectedQuestion || '')}</div>`;
+
+      const pedagogyHtml = `
+        <div class="pyq-pedagogy-section">
+          <div class="pyq-pedagogy-header">
+            <span class="pyq-pedagogy-main-title">🎯 Question Architecture &amp; Examiner's Mindset</span>
+            <span class="pyq-pedagogy-badge-tag">Pedagogy Breakdown</span>
+          </div>
+
+          <div class="pyq-pedagogy-grid">
+            <div class="pyq-pedagogy-item pyq-item-why">
+              <div class="pyq-pedagogy-pill pyq-pill-why">
+                <span class="pyq-pill-icon">🎯</span>
+                <span>Why that question is asked</span>
+              </div>
+              <div class="pyq-pedagogy-desc">${escapeHtml(pedagogy.whyAsked)}</div>
+            </div>
+
+            <div class="pyq-pedagogy-item pyq-item-how">
+              <div class="pyq-pedagogy-pill pyq-pill-how">
+                <span class="pyq-pill-icon">📐</span>
+                <span>How that question is asked</span>
+              </div>
+              <div class="pyq-pedagogy-desc">${escapeHtml(pedagogy.howAsked)}</div>
+            </div>
+
+            <div class="pyq-pedagogy-item pyq-item-expected">
+              <div class="pyq-pedagogy-pill pyq-pill-expected">
+                <span class="pyq-pill-icon">🔮</span>
+                <span>Expected other question should be asked</span>
+              </div>
+              <div class="pyq-pedagogy-desc">${formattedExpectedHtml}</div>
+            </div>
+          </div>
+        </div>
+      `;
+
       return `
         <article class="pyq-question-card ${isAttempted ? 'pyq-attempted' : ''}" id="card-${q.id}" data-id="${q.id}">
           <div class="pyq-q-header">
@@ -880,6 +1050,7 @@
             </div>
 
             ${q.explanation ? `<div style="font-size: 14px; line-height: 1.55; color: var(--pyq-text-secondary); margin-bottom: 14px;">${q.explanation}</div>` : ''}
+            ${pedagogyHtml}
             ${stmtAnalysisHtml}
             ${optAnalysisHtml}
             ${trapHtml}

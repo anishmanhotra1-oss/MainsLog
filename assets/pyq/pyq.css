@@ -1403,6 +1403,193 @@
   border-radius: var(--pyq-radius-full);
 }
 
+/* =====================================================================
+   Pedagogical Blueprint Styles (Why asked, How asked, Expected questions)
+   Strictly scoped under .pyq-x1
+   ===================================================================== */
+.pyq-x1 .pyq-pedagogy-section {
+  background: var(--pyq-bg-subtle);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-md);
+  padding: 16px 18px;
+  margin: 16px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+}
+
+.pyq-x1 .pyq-pedagogy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--pyq-border-subtle);
+}
+
+.pyq-x1 .pyq-pedagogy-main-title {
+  font-family: var(--pyq-font-heading);
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--pyq-text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pyq-x1 .pyq-pedagogy-badge-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--pyq-bg-card);
+  color: var(--pyq-text-muted);
+  border: 1px solid var(--pyq-border);
+  padding: 2px 8px;
+  border-radius: var(--pyq-radius-full);
+}
+
+.pyq-x1 .pyq-pedagogy-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pyq-x1 .pyq-pedagogy-item {
+  background: var(--pyq-bg-card);
+  border: 1px solid var(--pyq-border);
+  border-radius: var(--pyq-radius-md);
+  padding: 12px 16px;
+  transition: all 0.15s ease;
+}
+
+.pyq-x1 .pyq-pedagogy-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.pyq-x1 .pyq-pedagogy-item.pyq-item-why {
+  border-left: 4px solid #2563EB;
+}
+
+.pyq-x1 .pyq-pedagogy-item.pyq-item-how {
+  border-left: 4px solid #D97706;
+}
+
+.pyq-x1 .pyq-pedagogy-item.pyq-item-expected {
+  border-left: 4px solid #7C3AED;
+}
+
+.pyq-x1 .pyq-pedagogy-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 9px;
+  border-radius: var(--pyq-radius-sm);
+  margin-bottom: 8px;
+}
+
+.pyq-x1 .pyq-pill-why {
+  background: rgba(37, 99, 235, 0.1);
+  color: #1D4ED8;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.pyq-x1 .pyq-pill-how {
+  background: rgba(217, 119, 6, 0.1);
+  color: #B45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.pyq-x1 .pyq-pill-expected {
+  background: rgba(124, 58, 237, 0.1);
+  color: #6D28D9;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+.pyq-x1 .pyq-pill-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.pyq-x1 .pyq-pedagogy-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--pyq-text-secondary);
+}
+
+.pyq-x1 .pyq-pedagogy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pyq-x1 .pyq-pedagogy-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--pyq-text-secondary);
+}
+
+.pyq-x1 .pyq-pedagogy-list li:last-child {
+  margin-bottom: 0;
+}
+
+.pyq-x1 .pyq-pedagogy-list li::before {
+  content: "•";
+  position: absolute;
+  left: 4px;
+  color: #7C3AED;
+  font-weight: bold;
+}
+
+/* Dark Mode Overrides for Pedagogy */
+.pyq-x1[data-theme="dark"] .pyq-pill-why {
+  background: rgba(59, 130, 246, 0.18);
+  color: #60A5FA;
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.pyq-x1[data-theme="dark"] .pyq-pill-how {
+  background: rgba(245, 158, 11, 0.18);
+  color: #FBBF24;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.pyq-x1[data-theme="dark"] .pyq-pill-expected {
+  background: rgba(168, 85, 247, 0.18);
+  color: #C084FC;
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+.pyq-x1[data-theme="dark"] .pyq-pedagogy-list li::before {
+  color: #C084FC;
+}
+
+@media (max-width: 640px) {
+  .pyq-x1 .pyq-pedagogy-section {
+    padding: 12px 10px;
+    margin: 12px 0;
+  }
+
+  .pyq-x1 .pyq-pedagogy-item {
+    padding: 10px 12px;
+  }
+
+  .pyq-x1 .pyq-pedagogy-desc,
+  .pyq-x1 .pyq-pedagogy-list li {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+}
+
 /* Section headings inside drawer */
 .pyq-x1 .pyq-section-title {
   font-family: var(--pyq-font-heading);
