@@ -2502,3 +2502,403 @@
   transform: translateY(0);
   pointer-events: auto;
 }
+
+/* =====================================================================
+   Frequency Matrix & Interactive Pie Chart Mobile Responsiveness
+   Comprehensive Adaptive Layouts for All Tablets & Phones (<= 768px, <= 480px, <= 380px)
+   ===================================================================== */
+
+/* Table horizontal scroll indicator hint */
+.pyq-x1 .pyq-table-scroll-hint {
+  display: none;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--pyq-text-muted);
+  background: var(--pyq-bg-subtle);
+  border: 1px dashed var(--pyq-border);
+  border-radius: var(--pyq-radius-sm);
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  text-align: center;
+  user-select: none;
+}
+
+@media (max-width: 900px) {
+  .pyq-x1 .pyq-pie-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pyq-x1 #pyqAnalyticsView {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .pyq-x1 .pyq-table-scroll-hint {
+    display: block;
+  }
+
+  .pyq-x1 .pyq-analytics-card {
+    padding: 18px 14px;
+    margin-bottom: 20px;
+    border-radius: var(--pyq-radius-md);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pyq-x1 .pyq-analytics-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+  }
+
+  .pyq-x1 .pyq-analytics-title {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .pyq-x1 .pyq-analytics-sub {
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+
+  .pyq-x1 #pyqBackToQuestionsBtn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 12.5px;
+  }
+
+  .pyq-x1 .pyq-pie-section {
+    padding: 16px 14px;
+    margin-bottom: 20px;
+    border-radius: var(--pyq-radius-md);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pyq-x1 .pyq-pie-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+  }
+
+  .pyq-x1 .pyq-pie-mode-toggle {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: var(--pyq-radius-md);
+    padding: 3px;
+    gap: 4px;
+  }
+
+  .pyq-x1 .pyq-pie-toggle-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 8px 6px;
+    font-size: 11.5px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    border-radius: var(--pyq-radius-sm);
+  }
+
+  .pyq-x1 .pyq-top-repeater-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+    gap: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pyq-x1 .pyq-repeater-content {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .pyq-x1 .pyq-repeater-headline {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .pyq-x1 .pyq-repeater-name {
+    font-size: 15px;
+    word-break: break-word;
+    line-height: 1.35;
+  }
+
+  .pyq-x1 .pyq-repeater-meta {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  .pyq-x1 .pyq-repeater-action-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .pyq-x1 .pyq-pie-canvas-col {
+    width: 100%;
+    align-items: center;
+  }
+
+  .pyq-x1 .pyq-pie-svg-wrapper {
+    max-width: min(280px, 80vw);
+    margin: 0 auto;
+  }
+
+  .pyq-x1 .pyq-pie-center-info {
+    max-width: 120px;
+  }
+
+  .pyq-x1 .pyq-pie-center-val {
+    font-size: 22px;
+  }
+
+  .pyq-x1 .pyq-pie-center-lbl {
+    font-size: 10px;
+  }
+
+  .pyq-x1 .pyq-pie-center-sub {
+    font-size: 11px;
+    max-width: 115px;
+  }
+
+  .pyq-x1 .pyq-pie-hint {
+    font-size: 11px;
+    padding: 0 4px;
+  }
+
+  .pyq-x1 .pyq-pie-legend-col {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pyq-x1 .pyq-pie-legend-item {
+    display: grid;
+    grid-template-columns: 12px 1fr;
+    grid-template-areas:
+      "dot info"
+      "stats stats";
+    gap: 8px 10px;
+    padding: 10px 12px;
+    align-items: center;
+  }
+
+  .pyq-x1 .pyq-legend-dot {
+    grid-area: dot;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  .pyq-x1 .pyq-legend-info {
+    grid-area: info;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pyq-x1 .pyq-legend-name {
+    white-space: normal;
+    word-break: break-word;
+    font-size: 13px;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .pyq-x1 .pyq-legend-stats {
+    grid-area: stats;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px dashed var(--pyq-border-subtle);
+    padding-top: 6px;
+    margin-top: 2px;
+  }
+
+  .pyq-x1 .pyq-legend-btn {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .pyq-x1 .pyq-year-trend-wrap {
+    padding: 14px 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pyq-x1 .pyq-year-bars-container {
+    height: 115px;
+    padding: 10px 2px 22px;
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pyq-x1 .pyq-year-bar-col {
+    min-width: 22px;
+  }
+
+  .pyq-x1 .pyq-ranked-topic-item {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    grid-template-areas:
+      "badge body"
+      "meta meta";
+    gap: 8px 10px;
+    padding: 12px;
+    align-items: center;
+  }
+
+  .pyq-x1 .pyq-rank-badge {
+    grid-area: badge;
+    align-self: flex-start;
+  }
+
+  .pyq-x1 .pyq-ranked-topic-body {
+    grid-area: body;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pyq-x1 .pyq-ranked-topic-title {
+    white-space: normal;
+    word-break: break-word;
+    font-size: 13px;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .pyq-x1 .pyq-ranked-topic-meta {
+    grid-area: meta;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px dashed var(--pyq-border-subtle);
+    padding-top: 8px;
+    margin-top: 2px;
+  }
+
+  .pyq-x1 .pyq-freq-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--pyq-radius-md);
+  }
+
+  .pyq-x1 .pyq-freq-table {
+    min-width: 540px;
+    font-size: 12px;
+  }
+
+  .pyq-x1 .pyq-freq-table th,
+  .pyq-x1 .pyq-freq-table td {
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pyq-x1 .pyq-analytics-card {
+    padding: 14px 10px;
+  }
+
+  .pyq-x1 .pyq-analytics-title {
+    font-size: 16px;
+  }
+
+  .pyq-x1 .pyq-pie-section {
+    padding: 12px 10px;
+  }
+
+  .pyq-x1 .pyq-pie-svg-wrapper {
+    max-width: min(240px, 75vw);
+  }
+
+  .pyq-x1 .pyq-pie-center-val {
+    font-size: 20px;
+  }
+
+  .pyq-x1 .pyq-pie-center-lbl {
+    font-size: 9.5px;
+  }
+
+  .pyq-x1 .pyq-pie-center-sub {
+    font-size: 10px;
+    max-width: 100px;
+  }
+
+  .pyq-x1 .pyq-top-repeater-banner {
+    padding: 12px 10px;
+  }
+
+  .pyq-x1 .pyq-repeater-icon {
+    font-size: 24px;
+  }
+
+  .pyq-x1 .pyq-repeater-name {
+    font-size: 14px;
+  }
+
+  .pyq-x1 .pyq-repeater-meta {
+    font-size: 11.5px;
+  }
+
+  .pyq-x1 .pyq-pie-toggle-btn {
+    font-size: 10.5px;
+    padding: 7px 4px;
+  }
+
+  .pyq-x1 .pyq-kpi-card {
+    padding: 10px 12px;
+  }
+
+  .pyq-x1 .pyq-kpi-val {
+    font-size: 19px;
+  }
+
+  .pyq-x1 .pyq-kpi-lbl {
+    font-size: 10.5px;
+  }
+
+  .pyq-x1 .pyq-chart-heading {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 380px) {
+  .pyq-x1 .pyq-analytics-kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .pyq-x1 .pyq-pie-mode-toggle {
+    flex-direction: column;
+  }
+
+  .pyq-x1 .pyq-pie-toggle-btn {
+    width: 100%;
+  }
+
+  .pyq-x1 .pyq-pie-svg-wrapper {
+    max-width: 210px;
+  }
+}

@@ -1445,6 +1445,8 @@
             <span style="font-size:11.5px; font-weight:600; color:var(--pyq-text-muted);">Click any row or topic button to filter</span>
           </div>
 
+          <div class="pyq-table-scroll-hint"><span>⇄ Swipe table horizontally for all years &amp; ranks</span></div>
+
           <div class="pyq-freq-table-wrap">
             <table class="pyq-freq-table">
               <thead>
