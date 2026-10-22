@@ -1,0 +1,134 @@
+[
+  {
+    "description": "Example 1: Multi-colour highlights (Yellow, Green, Pink) with section & article headings",
+    "user_prompt": "Analyze Page 14 of this Current Affairs magazine. Extract ONLY highlighted, underlined, boxed, handwritten notes, and annotated maps.",
+    "model_response": {
+      "page_number": 14,
+      "magazine_title": "Monthly Current Affairs Dossier",
+      "issue": "September 2026",
+      "articles": [
+        {
+          "heading": "Criminalization of Politics & Disqualification Dynamics",
+          "section": "Polity",
+          "items": [
+            {
+              "type": "highlight",
+              "color": "yellow",
+              "text": "Section 8(3) of Representation of the People Act, 1951 mandates automatic disqualification upon sentencing of two years or more.",
+              "note_attached_to": null,
+              "box_2d": [140, 85, 210, 910],
+              "confidence": 0.99
+            },
+            {
+              "type": "highlight",
+              "color": "green",
+              "text": "Lily Thomas v. Union of India (2013) struck down Section 8(4) which previously granted three months immunity to sitting legislators.",
+              "note_attached_to": null,
+              "box_2d": [235, 90, 295, 895],
+              "confidence": 0.98
+            },
+            {
+              "type": "highlight",
+              "color": "pink",
+              "text": "Association for Democratic Reforms (2024 report): 44% of newly elected Lok Sabha MPs face declared criminal charges.",
+              "note_attached_to": null,
+              "box_2d": [320, 88, 380, 780],
+              "confidence": 0.97
+            }
+          ]
+        }
+      ],
+      "visual_assets": [],
+      "takeaway": "Key statutory provisions (RPA Section 8) and judicial milestones (Lily Thomas) governing legislative disqualifications."
+    }
+  },
+  {
+    "description": "Example 2: Underlines + handwritten margin notes + boxed definitions",
+    "user_prompt": "Analyze Page 28 of this Current Affairs magazine. Extract ONLY marked content.",
+    "model_response": {
+      "page_number": 28,
+      "magazine_title": "Monthly Current Affairs Dossier",
+      "issue": "September 2026",
+      "articles": [
+        {
+          "heading": "Monetary Policy Transmission & Standing Deposit Facility",
+          "section": "Economy",
+          "items": [
+            {
+              "type": "underline",
+              "color": "blue",
+              "text": "SDF functions as an uncollateralized overnight liquidity absorption mechanism placed 25 bps below the policy repo rate.",
+              "note_attached_to": null,
+              "box_2d": [180, 95, 245, 905],
+              "confidence": 0.96
+            },
+            {
+              "type": "handwritten",
+              "color": "blue",
+              "text": "Urjit Patel Committee recommendation (2014) — strengthens statutory floor of LAF corridor without locking G-Sec collateral.",
+              "note_attached_to": "Standing Deposit Facility",
+              "box_2d": [150, 760, 260, 985],
+              "confidence": 0.94
+            },
+            {
+              "type": "boxed",
+              "color": "red",
+              "text": "LAF Corridor: MSF Rate (ceiling) -> Policy Repo Rate -> Standing Deposit Facility (floor). Width: 50 bps.",
+              "note_attached_to": null,
+              "box_2d": [310, 100, 410, 680],
+              "confidence": 0.98
+            }
+          ]
+        }
+      ],
+      "visual_assets": [],
+      "takeaway": "Operational mechanisms of the LAF corridor and uncollateralized SDF absorption."
+    }
+  },
+  {
+    "description": "Example 3: Highlighted and annotated map / diagram, and clean handling of unmarked pages",
+    "user_prompt": "Analyze Page 45 of this Current Affairs magazine. Extract ONLY marked content.",
+    "model_response": {
+      "page_number": 45,
+      "magazine_title": "Monthly Current Affairs Dossier",
+      "issue": "September 2026",
+      "articles": [
+        {
+          "heading": "Maritime Choke Points & Strategic Corridors",
+          "section": "Geography",
+          "items": [
+            {
+              "type": "highlight",
+              "color": "orange",
+              "text": "Bab-el-Mandeb Strait connects the Red Sea to the Gulf of Aden, flanking Yemen and Djibouti with heavy container traffic.",
+              "note_attached_to": null,
+              "box_2d": [160, 90, 220, 890],
+              "confidence": 0.97
+            }
+          ]
+        }
+      ],
+      "visual_assets": [
+        {
+          "type": "map",
+          "caption": "Strategic maritime choke points: Strait of Hormuz, Bab-el-Mandeb, and Malacca Strait showing global crude oil transit shares.",
+          "labels": ["Red Sea", "Gulf of Aden", "Yemen", "Djibouti", "Bab-el-Mandeb"],
+          "box_2d": [260, 100, 680, 900]
+        }
+      ],
+      "takeaway": "Geopolitical choke points governing global energy routes and maritime security."
+    }
+  },
+  {
+    "description": "Example 4: Page with NO student marks (Answer: empty arrays, no hallucination)",
+    "user_prompt": "Analyze Page 60 of this Current Affairs magazine. Extract ONLY marked content.",
+    "model_response": {
+      "page_number": 60,
+      "magazine_title": "Monthly Current Affairs Dossier",
+      "issue": "September 2026",
+      "articles": [],
+      "visual_assets": [],
+      "takeaway": "No annotated or highlighted content found on this page."
+    }
+  }
+]

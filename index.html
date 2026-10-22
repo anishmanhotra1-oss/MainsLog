@@ -5634,8 +5634,7 @@
     </div>
     
     <div class="rev-modal-tabs-strip">
-      <button class="rev-modal-tab-btn active" id="revTabAll" onclick="switchRevisionModalTier('all')">⚡ All Due</button>
-      <button class="rev-modal-tab-btn" id="revTabR0" onclick="switchRevisionModalTier('r0')">📘 Same-Day R0</button>
+      <button class="rev-modal-tab-btn active" id="revTabR0" onclick="switchRevisionModalTier('r0')">📘 Same-Day R0</button>
       <button class="rev-modal-tab-btn" id="revTabR7" onclick="switchRevisionModalTier('r7')">📙 Sunday R7</button>
       <button class="rev-modal-tab-btn" id="revTabMonthly" onclick="switchRevisionModalTier('monthly')">📗 Monthly</button>
       <button class="rev-modal-tab-btn" id="revTabBiMonthly" onclick="switchRevisionModalTier('bimonthly')">🔮 Bi-Monthly</button>
@@ -5895,10 +5894,28 @@
             </span>
           </div>
 
-          <div style="margin-top: 10px;">
-            <button id="btnEnableNotif" onclick="requestNotificationPermission()" style="width: 100%; background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); color: #FFFFFF; border: none; padding: 11px 18px; border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);">
+          <!-- Live Next / Current Slot Alert Status -->
+          <div id="notifNextSlotRow" style="display: none; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 9px 12px; margin-bottom: 12px; font-size: 12px; color: #334155;">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10B981;"></span>
+                <span style="font-weight: 700; color: #1E293B;" id="notifNextSlotName">Active Schedule</span>
+              </div>
+              <span style="font-weight: 700; color: #2563EB; font-family: var(--font-mono, monospace);" id="notifNextSlotTime">--:--</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+            <button id="btnEnableNotif" onclick="requestNotificationPermission()" style="flex: 1 1 180px; background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); color: #FFFFFF; border: none; padding: 11px 16px; border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);">
               ⚡ Enable Mobile Alerts
             </button>
+            <button id="btnTestNotif" onclick="sendTestNotification()" style="flex: 1 1 130px; background: #FFFFFF; color: #334155; border: 1.5px solid #CBD5E1; padding: 11px 14px; border-radius: 12px; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: all 0.2s ease; display: none; align-items: center; justify-content: center; gap: 6px;">
+              🧪 Test Alert
+            </button>
+          </div>
+
+          <div id="notifTroubleshootTip" style="font-size: 11px; color: #64748B; margin-top: 10px; line-height: 1.4; display: none;">
+            💡 <strong>Phone Tips:</strong> Ensure notifications are Allowed in browser app settings and Battery Optimization is set to Unrestricted so alarms fire on lock screen.
           </div>
         </div>
 
@@ -5950,13 +5967,16 @@
     <div class="section-card recall-hero-card">
       <!-- Top Title Header Banner -->
       <div class="recall-header-banner">
-        <div class="recall-title-wrap">
-          <div>
+        <div class="recall-title-wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; width: 100%;">
+          <div style="flex: 1; min-width: 240px;">
             <h2 class="recall-header-title">Multi-Tier Scheduled Revision Engine</h2>
             <div class="recall-header-sub">
               Systematic Active Recall organized by <span class="recall-badge r0">Same-Day R0</span>, <span class="recall-badge r7">Sunday Vault (R7)</span>, <span class="recall-badge r30">Monthly 2-Day</span>, and <span class="recall-badge r60">Bi-Monthly 60-Day</span>.
             </div>
           </div>
+          <button onclick="openRevisionTierModal('r0')" style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); color: #FFF; border: none; padding: 10px 18px; border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px rgba(37,99,235,0.3); transition: all 0.2s ease; white-space: nowrap;">
+            <span>🔄</span> Open Revision Vault Popup
+          </button>
         </div>
       </div>
 
@@ -6571,13 +6591,7 @@
 
     <!-- MORE POPOVER MENU -->
     <div class="more-nav-popover" id="moreNavPopover">
-      <button class="more-nav-item" data-tab="tab-toppers">
-        <div class="more-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><polyline points="9 6 12 9 15 6"/></svg>
-        </div>
-        <span>Copies</span>
-      </button>
-
+      
       <button class="more-nav-item" data-tab="tab-timetable">
         <div class="more-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="2"/></svg>
@@ -6629,6 +6643,17 @@
           </svg>
         </div>
         <span>PYQ Analysis</span>
+      </a>
+
+      <!-- Current Affairs Magazine Notes Extractor -->
+      <a href="/more/current-affairs-magazines" class="more-nav-item" style="text-decoration:none;">
+        <div class="more-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"/>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+        </div>
+        <span>CA Magazines</span>
       </a>
     </div>
   </div>
@@ -7364,6 +7389,11 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js').then(reg => {
       reg.update();
+      if ('periodicSync' in reg) {
+        reg.periodicSync.register('mainslog-study-sync', {
+          minInterval: 15 * 60 * 1000
+        }).catch(() => {});
+      }
     }).catch(err => console.log(err));
   });
 }
@@ -7623,14 +7653,55 @@ const TIMETABLE_SLOTS = [
 ];
 
 // ==========================================
-// PWA STUDY SLOT PUSH NOTIFICATION ENGINE
+// PWA STUDY SLOT PUSH NOTIFICATION ENGINE (ROBUST MOBILE)
 // ==========================================
 let studyNotifInterval = null;
+
+// Synthetic Audio Chime for audible alerts on mobile
+function playNotificationSound() {
+  try {
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+    const ctx = new AudioCtx();
+    const t0 = ctx.currentTime;
+    
+    // Tone 1: 587Hz (D5)
+    const osc1 = ctx.createOscillator();
+    const gain1 = ctx.createGain();
+    osc1.type = 'sine';
+    osc1.frequency.setValueAtTime(587.33, t0);
+    gain1.gain.setValueAtTime(0.2, t0);
+    gain1.gain.exponentialRampToValueAtTime(0.01, t0 + 0.18);
+    osc1.connect(gain1);
+    gain1.connect(ctx.destination);
+    osc1.start(t0);
+    osc1.stop(t0 + 0.18);
+
+    // Tone 2: 880Hz (A5)
+    const osc2 = ctx.createOscillator();
+    const gain2 = ctx.createGain();
+    osc2.type = 'sine';
+    osc2.frequency.setValueAtTime(880, t0 + 0.12);
+    gain2.gain.setValueAtTime(0.25, t0 + 0.12);
+    gain2.gain.exponentialRampToValueAtTime(0.001, t0 + 0.38);
+    osc2.connect(gain2);
+    gain2.connect(ctx.destination);
+    osc2.start(t0 + 0.12);
+    osc2.stop(t0 + 0.38);
+  } catch (e) {
+    // Ignore audio autostart restrictions
+  }
+}
 
 function updateNotificationUI() {
   const badge = document.getElementById('notifStatusBadge');
   const sub = document.getElementById('notifStatusSub');
   const btn = document.getElementById('btnEnableNotif');
+  const testBtn = document.getElementById('btnTestNotif');
+  const nextRow = document.getElementById('notifNextSlotRow');
+  const nextName = document.getElementById('notifNextSlotName');
+  const nextTime = document.getElementById('notifNextSlotTime');
+  const tip = document.getElementById('notifTroubleshootTip');
 
   if (!('Notification' in window)) {
     if (badge) {
@@ -7644,6 +7715,9 @@ function updateNotificationUI() {
       btn.disabled = true;
       btn.style.opacity = '0.6';
     }
+    if (testBtn) testBtn.style.display = 'none';
+    if (nextRow) nextRow.style.display = 'none';
+    if (tip) tip.style.display = 'none';
     return;
   }
 
@@ -7654,11 +7728,66 @@ function updateNotificationUI() {
       badge.style.color = '#059669';
       badge.style.borderColor = 'rgba(16, 185, 129, 0.3)';
     }
-    if (sub) sub.textContent = 'Automatic status bar alerts are active for all scheduled study slots.';
     if (btn) {
-      btn.innerHTML = '✅ Mobile Reminders Active';
+      btn.innerHTML = '✅ Active on Phone';
       btn.style.background = 'linear-gradient(135deg, #059669 0%, #10B981 100%)';
       btn.style.boxShadow = '0 4px 14px rgba(16, 185, 129, 0.25)';
+      btn.onclick = sendTestNotification;
+    }
+    if (testBtn) {
+      testBtn.style.display = 'inline-flex';
+    }
+    if (tip) {
+      tip.style.display = 'block';
+    }
+
+    // Determine currently active or next upcoming slot
+    const now = new Date();
+    const curMins = now.getHours() * 60 + now.getMinutes();
+    let currentSlot = null;
+    let nextSlot = null;
+    let minWait = 999999;
+
+    if (typeof TIMETABLE_SLOTS !== 'undefined' && Array.isArray(TIMETABLE_SLOTS)) {
+      TIMETABLE_SLOTS.forEach(slot => {
+        const [sH, sM] = slot.start.split(':').map(Number);
+        const [eH, eM] = slot.end.split(':').map(Number);
+        let startMins = sH * 60 + sM;
+        let endMins = eH * 60 + eM;
+        if (endMins < startMins) endMins += 24 * 60;
+        let effectiveNow = curMins;
+        if (startMins > 12 * 60 && curMins < 6 * 60) effectiveNow += 24 * 60;
+
+        if (effectiveNow >= startMins && effectiveNow < endMins) {
+          currentSlot = slot;
+        } else {
+          let wait = (startMins - effectiveNow + 1440) % 1440;
+          if (wait < minWait && wait > 0) {
+            minWait = wait;
+            nextSlot = slot;
+          }
+        }
+      });
+    }
+
+    if (nextRow && nextName && nextTime) {
+      nextRow.style.display = 'block';
+      if (currentSlot) {
+        nextName.innerHTML = `<span style="color:#059669;">● In Progress:</span> ${currentSlot.title}`;
+        nextTime.textContent = currentSlot.timeDisplay;
+      } else if (nextSlot) {
+        const hrs = Math.floor(minWait / 60);
+        const mins = minWait % 60;
+        const waitText = hrs > 0 ? `${hrs}h ${mins}m` : `${mins}m`;
+        nextName.innerHTML = `<span>⏳ Next:</span> ${nextSlot.title}`;
+        nextTime.textContent = `${nextSlot.start} (in ${waitText})`;
+      } else {
+        nextRow.style.display = 'none';
+      }
+    }
+
+    if (sub && !sub.innerHTML.includes('Test alert sent to phone')) {
+      sub.textContent = 'Automatic status bar alerts are active for all scheduled study slots.';
     }
   } else if (Notification.permission === 'denied') {
     if (badge) {
@@ -7667,12 +7796,16 @@ function updateNotificationUI() {
       badge.style.color = '#DC2626';
       badge.style.borderColor = 'rgba(239, 68, 68, 0.3)';
     }
-    if (sub) sub.textContent = 'Notification permission is blocked. Allow notifications in browser settings.';
+    if (sub) sub.textContent = 'Notifications blocked. Allow notifications in your phone browser site settings.';
     if (btn) {
       btn.innerHTML = '⚠️ Enable in Browser Settings';
       btn.style.background = 'linear-gradient(135deg, #DC2626 0%, #EF4444 100%)';
       btn.style.boxShadow = '0 4px 14px rgba(220, 38, 38, 0.25)';
+      btn.onclick = () => alert('Please open phone Settings > Apps > Chrome/Safari > Notifications and ensure notifications are enabled.');
     }
+    if (testBtn) testBtn.style.display = 'none';
+    if (nextRow) nextRow.style.display = 'none';
+    if (tip) tip.style.display = 'none';
   } else {
     if (badge) {
       badge.textContent = 'Inactive';
@@ -7685,7 +7818,11 @@ function updateNotificationUI() {
       btn.innerHTML = '⚡ Enable Mobile Alerts';
       btn.style.background = 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)';
       btn.style.boxShadow = '0 4px 14px rgba(37, 99, 235, 0.25)';
+      btn.onclick = requestNotificationPermission;
     }
+    if (testBtn) testBtn.style.display = 'none';
+    if (nextRow) nextRow.style.display = 'none';
+    if (tip) tip.style.display = 'none';
   }
 }
 
@@ -7715,89 +7852,151 @@ async function requestNotificationPermission() {
 function sendNotificationToMobile(title, body, tag) {
   if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
 
-  if (navigator.serviceWorker && navigator.serviceWorker.controller) {
-    navigator.serviceWorker.controller.postMessage({
-      type: 'SHOW_STUDY_NOTIFICATION',
-      title: title,
-      body: body,
-      tag: tag || 'study-slot-reminder',
-      url: window.location.href
-    });
-  } else if ('serviceWorker' in navigator) {
+  playNotificationSound();
+
+  const iconUrl = window.location.origin + '/favicon.png';
+  const notifOptions = {
+    body: body || 'Time to focus on your target study slot!',
+    icon: iconUrl,
+    badge: iconUrl,
+    tag: tag || ('mainslog-slot-' + Date.now()),
+    renotify: true,
+    requireInteraction: true,
+    vibrate: [250, 100, 250, 100, 250],
+    timestamp: Date.now(),
+    data: {
+      url: window.location.href,
+      time: Date.now()
+    },
+    actions: [
+      { action: 'open', title: '📖 View Target' },
+      { action: 'dismiss', title: 'Dismiss' }
+    ]
+  };
+
+  // Primary: ServiceWorkerRegistration.showNotification (Standard for PWA on Android & iOS)
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(reg => {
-      reg.showNotification(title, {
-        body: body,
-        icon: './favicon.png',
-        badge: './favicon.png',
-        vibrate: [200, 100, 200, 100, 200],
-        tag: tag || 'study-slot-reminder',
-        renotify: true,
-        data: { url: window.location.href },
-        actions: [
-          { action: 'open', title: '📖 View Target' },
-          { action: 'dismiss', title: 'Dismiss' }
-        ]
-      });
+      if (reg && reg.showNotification) {
+        reg.showNotification(title, notifOptions).catch(() => {
+          // Fallback if browser rejects actions (e.g. iOS Safari)
+          const fallbackOpts = { ...notifOptions };
+          delete fallbackOpts.actions;
+          reg.showNotification(title, fallbackOpts).catch(() => {
+            dispatchWindowNotification(title, fallbackOpts);
+          });
+        });
+      } else {
+        dispatchWindowNotification(title, notifOptions);
+      }
+    }).catch(() => {
+      dispatchWindowNotification(title, notifOptions);
     });
   } else {
-    try {
-      new Notification(title, {
-        body: body,
-        icon: './favicon.png',
-        tag: tag || 'study-slot-reminder'
-      });
-    } catch(e){}
+    dispatchWindowNotification(title, notifOptions);
   }
 }
 
-function sendTestNotification() {
+function dispatchWindowNotification(title, options) {
+  try {
+    const opts = { ...options };
+    delete opts.actions;
+    new Notification(title, opts);
+  } catch (err) {
+    console.warn('[PWA Notification Error]:', err);
+  }
+}
+
+async function sendTestNotification() {
   if (!('Notification' in window)) {
     alert('Notifications are not supported in your browser.');
     return;
   }
 
   if (Notification.permission !== 'granted') {
-    requestNotificationPermission().then(() => {
-      if (Notification.permission === 'granted') {
-        sendTestNotification();
-      }
-    });
-    return;
+    const res = await Notification.requestPermission();
+    updateNotificationUI();
+    if (res !== 'granted') {
+      alert('Notification permission was not granted. Please enable notifications in your browser settings.');
+      return;
+    }
   }
 
   const now = new Date();
-  const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
   sendNotificationToMobile(
     '🧪 MainsLog Test Notification',
-    `Phone alert tested successfully at ${timeStr}! Study slot reminders are live on your mobile device.`,
+    `🔔 Phone alert verified successfully at ${timeStr}! Status bar reminders and vibration are live.`,
     'test-alert-' + Date.now()
   );
+
+  const sub = document.getElementById('notifStatusSub');
+  if (sub) {
+    sub.innerHTML = '<span style="color:#059669; font-weight:700;">✅ Test alert sent to phone! Check your lock screen / status bar drawer.</span>';
+    setTimeout(() => {
+      updateNotificationUI();
+    }, 4500);
+  }
 }
 
 function checkAndTriggerSlotNotification() {
   if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return;
 
   const now = new Date();
-  const curHours = String(now.getHours()).padStart(2, '0');
-  const curMins = String(now.getMinutes()).padStart(2, '0');
-  const timeKey = `${curHours}:${curMins}`;
-  const todayIso = now.toISOString().slice(0, 10);
+  const todayDate = (typeof formatYMD === 'function') ? formatYMD(now) : now.toLocaleDateString('en-CA');
+  const curMins = now.getHours() * 60 + now.getMinutes();
 
   if (typeof TIMETABLE_SLOTS !== 'undefined' && Array.isArray(TIMETABLE_SLOTS)) {
     TIMETABLE_SLOTS.forEach(slot => {
-      if (slot.start === timeKey) {
-        const storageKey = `notif_sent_${todayIso}_${slot.start}`;
-        if (!localStorage.getItem(storageKey)) {
-          localStorage.setItem(storageKey, 'true');
+      const [sH, sM] = slot.start.split(':').map(Number);
+      const [eH, eM] = slot.end.split(':').map(Number);
+
+      let startMins = sH * 60 + sM;
+      let endMins = eH * 60 + eM;
+      if (endMins < startMins) endMins += 24 * 60;
+
+      let effectiveNow = curMins;
+      // Midnight transition handling
+      if (startMins > 12 * 60 && curMins < 6 * 60) effectiveNow += 24 * 60;
+
+      // 1. PRE-ALERT: 5 minutes before slot starts (e.g. 5m to 1m ahead)
+      if (effectiveNow >= startMins - 5 && effectiveNow < startMins) {
+        const preKey = `mainslog_pre_${todayDate}_${slot.start}`;
+        if (!localStorage.getItem(preKey)) {
+          localStorage.setItem(preKey, 'true');
+          const minsLeft = startMins - effectiveNow;
           sendNotificationToMobile(
-            `📚 Study Slot Starting: ${slot.title}`,
+            `⏳ Starting in ${minsLeft}m: ${slot.title}`,
             `⏰ ${slot.timeDisplay} — ${slot.desc}`,
-            `slot-alert-${slot.start}-${todayIso}`
+            `slot-pre-${slot.start}-${todayDate}`
+          );
+        }
+      }
+
+      // 2. ACTIVE / START ALERT: Fires at start or within the active slot window
+      // Robust against mobile sleep: if phone was locked and woke up 10m into the slot, it still triggers!
+      if (effectiveNow >= startMins && effectiveNow < endMins) {
+        const startKey = `notif_sent_${todayDate}_${slot.start}`;
+        if (!localStorage.getItem(startKey)) {
+          localStorage.setItem(startKey, 'true');
+          const elapsed = effectiveNow - startMins;
+          let title = `📚 Study Slot Starting: ${slot.title}`;
+          let body = `⏰ ${slot.timeDisplay} — ${slot.desc}`;
+          if (elapsed > 2) {
+            title = `📚 Active Study Slot: ${slot.title}`;
+            body = `⏰ Started ${elapsed}m ago (${slot.timeDisplay}) — ${slot.desc}`;
+          }
+          sendNotificationToMobile(
+            title,
+            body,
+            `slot-start-${slot.start}-${todayDate}`
           );
         }
       }
     });
   }
+
+  updateNotificationUI();
 }
 
 function startStudySlotNotifier() {
@@ -7805,6 +8004,16 @@ function startStudySlotNotifier() {
   checkAndTriggerSlotNotification();
   studyNotifInterval = setInterval(checkAndTriggerSlotNotification, 30000);
 }
+
+// Lifecycle listeners to immediately wake up notifications when user picks up or unlocks phone
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') {
+    checkAndTriggerSlotNotification();
+  }
+});
+window.addEventListener('focus', checkAndTriggerSlotNotification);
+window.addEventListener('pageshow', checkAndTriggerSlotNotification);
+window.addEventListener('online', checkAndTriggerSlotNotification);
 
 window.addEventListener('DOMContentLoaded', () => {
   updateNotificationUI();
@@ -9271,16 +9480,16 @@ function switchTab(tabId) {
 
   if (tabId === 'tab-revision') {
     renderRevisionTab();
-    setTimeout(function() { openRevisionTierModal('all'); }, 150);
+    setTimeout(function() { openRevisionTierModal('r0'); }, 150);
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-let CURRENT_REVISION_MODAL_TIER = 'all';
+let CURRENT_REVISION_MODAL_TIER = 'r0';
 
 window.openRevisionTierModal = function(tier) {
-  CURRENT_REVISION_MODAL_TIER = tier || 'all';
+  CURRENT_REVISION_MODAL_TIER = (tier && tier !== 'all') ? tier : 'r0';
   const overlay = document.getElementById('revisionTopicsModalOverlay');
   if (overlay) {
     overlay.classList.add('active');
@@ -9304,8 +9513,8 @@ window.closeRevisionModalOnBackdrop = function(e) {
 };
 
 window.switchRevisionModalTier = function(tier) {
-  CURRENT_REVISION_MODAL_TIER = tier;
-  renderRevisionTierModalList(tier);
+  CURRENT_REVISION_MODAL_TIER = (tier && tier !== 'all') ? tier : 'r0';
+  renderRevisionTierModalList(CURRENT_REVISION_MODAL_TIER);
 };
 
 window.toggleRevisionTopicDoneInModal = function(entryId, milestoneKey) {
@@ -9321,7 +9530,10 @@ window.renderRevisionTierModalList = function(tier) {
   (PRELIMS_TARGETS_V1 || []).forEach(t => syncPrelimsTargetToEntries(t));
   const pool = ENTRIES;
 
-  const btnMap = { all: 'revTabAll', r0: 'revTabR0', r7: 'revTabR7', monthly: 'revTabMonthly', bimonthly: 'revTabBiMonthly' };
+  if (!tier || tier === 'all') tier = 'r0';
+  CURRENT_REVISION_MODAL_TIER = tier;
+
+  const btnMap = { r0: 'revTabR0', r7: 'revTabR7', monthly: 'revTabMonthly', bimonthly: 'revTabBiMonthly' };
   Object.keys(btnMap).forEach(t => {
     const btn = document.getElementById(btnMap[t]);
     if (btn) {
@@ -11111,6 +11323,9 @@ function deleteTopperCopy(id) {
 
 <!-- EXAMPLES BANK MODULE (isolated IIFE, eb- prefix only) -->
 <script src="examples-bank.js"></script>
+
+<!-- VOCAL RECALL & AUDIO VAULT MODULE (isolated IIFE, vr- prefix only) -->
+<script src="voice-recall.js"></script>
 
 </body>
 </html>

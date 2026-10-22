@@ -2,6 +2,25 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
+// Auto-load .env file into process.env if present
+try {
+  const envPath = path.join(__dirname, '.env');
+  if (fs.existsSync(envPath)) {
+    const lines = fs.readFileSync(envPath, 'utf8').split(/\r?\n/);
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (trimmed && !trimmed.startsWith('#')) {
+        const eqIdx = trimmed.indexOf('=');
+        if (eqIdx > 0) {
+          const k = trimmed.slice(0, eqIdx).trim();
+          const v = trimmed.slice(eqIdx + 1).trim();
+          if (!process.env[k]) process.env[k] = v;
+        }
+      }
+    }
+  }
+} catch (e) {}
+
 const PORT = 8080;
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -703,10 +722,32 @@ function mergePyqUserData(existing, incoming) {
     }
   }
 
+  // Current Affairs Notes Extraction Vision API Endpoint
+  if (reqPath === '/api/ca-extract') {
+    const caHandler = require('./api/ca-extract.js');
+    try {
+      if (req.method === 'POST') {
+        req.body = await parseJsonBody(req);
+      }
+      return caHandler(req, res);
+    } catch (err) {
+      return sendJsonResponse(res, 500, { success: false, error: err.message });
+    }
+  }
+
   // Static File Serving
   if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
   if (reqPath === '/tracker') reqPath = '/tracker.html';
   if (reqPath === '/pyq') reqPath = '/pyq.html';
+  if (reqPath === '/more/current-affairs-magazines' || reqPath === '/more/current-affairs-magazines/') {
+    reqPath = '/features/ca-notes/index.html';
+  }
+  if (reqPath === '/more/can.css' || reqPath === '/can.css') {
+    reqPath = '/features/ca-notes/can.css';
+  }
+  if (reqPath === '/more/can.js' || reqPath === '/can.js') {
+    reqPath = '/features/ca-notes/can.js';
+  }
 
   const filePath = path.join(__dirname, reqPath);
   const ext = path.extname(filePath).toLowerCase();
