@@ -163,9 +163,10 @@ window.ENABLE_CA_NOTES = true;
       await initDatabase();
       bindEvents();
       if (window.innerWidth <= 900) {
-        switchMobileTab('notes');
+        switchMobileTab('notes', false);
       }
       await restorePreviousSessionIfAny();
+      updateActiveMagBar();
     } catch (e) {
       console.warn('[THE INK LAB] Initialization note:', e);
     }
@@ -183,6 +184,7 @@ window.ENABLE_CA_NOTES = true;
       renderActivePageCanvas();
       renderNotesPanel();
       renderMapGallery();
+      updateActiveMagBar();
       showToast(`Restored ${pages.length} pages from previous session.`);
     }
   }
@@ -262,6 +264,21 @@ window.ENABLE_CA_NOTES = true;
 
     const themeBtn = document.getElementById('canThemeToggle');
     if (themeBtn) themeBtn.addEventListener('click', toggleDeskTheme);
+
+    const uploadTriggerBtn = document.getElementById('canUploadTriggerBtn');
+    if (uploadTriggerBtn && fileInput) {
+      uploadTriggerBtn.addEventListener('click', () => fileInput.click());
+    }
+
+    const tryDemoBtn = document.getElementById('canTryDemoBtn');
+    if (tryDemoBtn) {
+      tryDemoBtn.addEventListener('click', loadSampleVisionPage);
+    }
+
+    const changeMagBtn = document.getElementById('canChangeMagBtn');
+    if (changeMagBtn && fileInput) {
+      changeMagBtn.addEventListener('click', () => fileInput.click());
+    }
 
     window.addEventListener('resize', () => {
       if (window.innerWidth <= 900) {
@@ -550,6 +567,215 @@ window.ENABLE_CA_NOTES = true;
   // Zoom & Quick Pager Helpers
   let pageZoomScale = 1.0;
 
+  
+  function updateActiveMagBar() {
+    const heroCard = document.getElementById('canHeroCard');
+    const activeMagBar = document.getElementById('canActiveMagBar');
+    const workspaceBody = document.getElementById('canWorkspaceBody');
+    const titleEl = document.getElementById('canActiveMagTitle');
+    const subEl = document.getElementById('canActiveMagSub');
+    const floatingBar = document.getElementById('canMobileFloatingBar');
+
+    const hasPages = state.pageRecords && state.pageRecords.length > 0;
+
+    if (heroCard) heroCard.style.display = hasPages ? 'none' : 'block';
+    if (activeMagBar) activeMagBar.style.display = hasPages ? 'flex' : 'none';
+    if (workspaceBody) workspaceBody.style.display = hasPages ? 'block' : 'none';
+    if (floatingBar) floatingBar.style.display = hasPages ? 'flex' : 'none';
+
+    if (hasPages) {
+      if (titleEl) titleEl.textContent = state.magazineMeta.title || 'Current Affairs Magazine';
+      if (subEl) {
+        subEl.textContent = `${state.pageRecords.length} page${state.pageRecords.length > 1 ? 's' : ''} • ${state.isProcessing ? '⚡ Scanning' : '✓ Ready'}`;
+      }
+    }
+  }
+
+  function loadSampleVisionPage() {
+    state.sessionId = 'sample_demo_' + Date.now();
+    state.magazineMeta = {
+      title: 'Vision IAS Current Affairs — GS-2 Reforms',
+      issue: 'Monthly Revision Dossier'
+    };
+    state.totalPages = 1;
+    state.activePageIndex = 0;
+    state.isProcessing = false;
+    state.isPaused = false;
+    state.isCancelled = false;
+
+    const samplePageSvg = generateSamplePageSvg();
+    const sampleMapSvg = generateSampleMapSvg();
+
+    state.pageRecords = [
+      {
+        key: `${state.sessionId}_p1`,
+        sessionId: state.sessionId,
+        pageNum: 1,
+        status: 'done',
+        imageBlobUrl: samplePageSvg,
+        takeaway: 'Election Commission of India institutional autonomy reinforced by Supreme Court Constitution Bench in Anoop Baranwal v. Union of India.',
+        articles: [
+          {
+            heading: 'Election Commission Independence & Article 324 Reforms',
+            section: 'Polity',
+            pages: [1],
+            takeaway: 'Key focus on appointment procedures, security of tenure for Election Commissioners, and financial autonomy under Consolidated Fund of India.',
+            revisionPoints: [
+              'Anoop Baranwal v. Union of India (2023): SC mandated 3-member panel (PM, CJI, LoP) until Parliamentary law enacted.',
+              'Chief Election Commissioner and other ECs Act, 2023: Committee consists of PM, Union Cabinet Minister, and LoP/Leader of largest Opposition party.',
+              '2nd ARC (4th Report): Recommended collegium-style appointment to insulate ECI from executive discretion.'
+            ],
+            items: [
+              {
+                itemKey: 'p1_a0_i0',
+                type: 'highlight',
+                color: 'yellow',
+                text: 'Article 324 vests superintendence, direction, and control of elections in the Election Commission of India.',
+                confidence: 0.98,
+                pageNum: 1,
+                box_2d: [140, 60, 210, 940]
+              },
+              {
+                itemKey: 'p1_a0_i1',
+                type: 'margin_note',
+                color: 'purple',
+                text: '✍️ Need to link with 2nd ARC 4th Report on Ethics in Governance and Dinesh Goswami Committee (1990) recommendations.',
+                confidence: 0.94,
+                pageNum: 1,
+                box_2d: [210, 60, 270, 940],
+                note_attached_to: 'Article 324(2) Appointments'
+              },
+              {
+                itemKey: 'p1_a0_i2',
+                type: 'highlight',
+                color: 'green',
+                text: 'Expenditure of ECI should be charged on the Consolidated Fund of India rather than voted by Parliament to ensure institutional autonomy.',
+                confidence: 0.96,
+                pageNum: 1,
+                box_2d: [280, 60, 340, 940]
+              },
+              {
+                itemKey: 'p1_a0_i3',
+                type: 'underline',
+                color: 'pink',
+                text: 'Protection under Article 324(5) regarding removal only via impeachment must be extended to other Election Commissioners as well.',
+                confidence: 0.92,
+                pageNum: 1,
+                box_2d: [350, 60, 400, 940]
+              }
+            ]
+          }
+        ],
+        visualAssets: [
+          {
+            caption: 'Comparative Evolution of ECI Appointments (Pre-2023 vs Supreme Court vs 2023 Act)',
+            labels: ['GS-2 Polity', 'Institutional Reforms', 'Constitutional Bodies'],
+            croppedImageUrl: sampleMapSvg,
+            box_2d: [410, 60, 750, 940]
+          }
+        ]
+      }
+    ];
+
+    updateControlsUI();
+    renderTimelineRibbon();
+    renderNotesPanel();
+    renderMapGallery();
+    renderActivePageCanvas();
+    updateMobileTabBadges();
+    updateActiveMagBar();
+    showToast('✨ Loaded sample Vision IAS page with marks & map!');
+
+    if (window.innerWidth <= 900) {
+      switchMobileTab('notes', true);
+    }
+  }
+
+  function generateSamplePageSvg() {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+      <rect width="100%" height="100%" fill="#FDFBF7"/>
+      <rect x="50" y="40" width="700" height="40" fill="#1E3A8A" rx="4"/>
+      <text x="70" y="66" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="16">VISION IAS • CURRENT AFFAIRS MONTHLY DOSSIER</text>
+      <text x="680" y="66" fill="#93C5FD" font-family="sans-serif" font-size="13" text-anchor="end">GS PAPER-2</text>
+      
+      <text x="50" y="120" fill="#0F172A" font-family="serif" font-weight="bold" font-size="20">1.1 Election Commission: Institutional Autonomy &amp; Reforms</text>
+      
+      <rect x="50" y="140" width="700" height="48" fill="#FEF08A" opacity="0.65" rx="3"/>
+      <text x="60" y="170" fill="#0F172A" font-family="sans-serif" font-size="14" font-weight="600">"Article 324 vests superintendence, direction, and control of elections in the ECI."</text>
+      
+      <rect x="50" y="205" width="700" height="50" fill="#F3E8FF" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="4" rx="6"/>
+      <text x="65" y="235" fill="#6B21A8" font-family="sans-serif" font-size="13" font-weight="bold">✍️ Hand Note: Link with 2nd ARC 4th Report &amp; Dinesh Goswami Committee (1990)</text>
+      
+      <rect x="50" y="275" width="700" height="46" fill="#BBF7D0" opacity="0.65" rx="3"/>
+      <text x="60" y="303" fill="#065F46" font-family="sans-serif" font-size="13.5" font-weight="600">"Expenditure of ECI should be charged on the Consolidated Fund of India."</text>
+      
+      <text x="60" y="360" fill="#0F172A" font-family="sans-serif" font-size="13.5">"Protection under Article 324(5) regarding removal only via impeachment for all Commissioners."</text>
+      <line x1="60" y1="366" x2="680" y2="366" stroke="#F43F5E" stroke-width="3" stroke-linecap="round"/>
+      
+      <rect x="50" y="410" width="700" height="340" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2" rx="8"/>
+      <text x="400" y="445" fill="#1E293B" font-family="sans-serif" font-weight="bold" font-size="16" text-anchor="middle">Comparative Evolution of ECI Appointments</text>
+      
+      <rect x="80" y="475" width="180" height="150" fill="#FFFFFF" stroke="#E2E8F0" rx="6"/>
+      <text x="170" y="505" fill="#334155" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Pre-2023</text>
+      <text x="170" y="535" fill="#64748B" font-family="sans-serif" font-size="12" text-anchor="middle">President on Aid</text>
+      <text x="170" y="555" fill="#64748B" font-family="sans-serif" font-size="12" text-anchor="middle">&amp; Advice of PM</text>
+      <text x="170" y="585" fill="#EF4444" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Sole Executive Power</text>
+
+      <rect x="310" y="475" width="180" height="150" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2" rx="6"/>
+      <text x="400" y="505" fill="#1D4ED8" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">SC (Anoop Baranwal)</text>
+      <text x="400" y="535" fill="#1E40AF" font-family="sans-serif" font-size="12" text-anchor="middle">1. Prime Minister</text>
+      <text x="400" y="555" fill="#1E40AF" font-family="sans-serif" font-size="12" text-anchor="middle">2. Chief Justice (CJI)</text>
+      <text x="400" y="575" fill="#1E40AF" font-family="sans-serif" font-size="12" text-anchor="middle">3. Leader of Opp. (LoP)</text>
+      <text x="400" y="605" fill="#2563EB" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Judicial Safeguard</text>
+
+      <rect x="540" y="475" width="180" height="150" fill="#F0FDF4" stroke="#10B981" rx="6"/>
+      <text x="630" y="505" fill="#047857" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Act of 2023</text>
+      <text x="630" y="535" fill="#065F46" font-family="sans-serif" font-size="12" text-anchor="middle">1. Prime Minister</text>
+      <text x="630" y="555" fill="#065F46" font-family="sans-serif" font-size="12" text-anchor="middle">2. Union Minister</text>
+      <text x="630" y="575" fill="#065F46" font-family="sans-serif" font-size="12" text-anchor="middle">3. Leader of Opp.</text>
+      <text x="630" y="605" fill="#059669" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Executive Majority</text>
+
+      <text x="400" y="680" fill="#475569" font-family="sans-serif" font-size="12" text-anchor="middle">Source: Constitution 324 &amp; Anoop Baranwal vs UOI (2023)</text>
+      
+      <line x1="50" y1="800" x2="750" y2="800" stroke="#E2E8F0"/>
+      <text x="50" y="830" fill="#94A3B8" font-family="sans-serif" font-size="11">Vision IAS • October 2024 Edition • Page 1</text>
+    </svg>`;
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  }
+
+  function generateSampleMapSvg() {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" width="640" height="380">
+      <rect width="100%" height="100%" fill="#0F172A" rx="8"/>
+      <text x="320" y="45" fill="#F8FAFC" font-family="sans-serif" font-weight="bold" font-size="17" text-anchor="middle">ECI Appointment Panel Comparison</text>
+      
+      <rect x="30" y="80" width="170" height="220" fill="#1E293B" stroke="#334155" rx="8"/>
+      <text x="115" y="115" fill="#94A3B8" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Pre-2023 Mode</text>
+      <text x="115" y="155" fill="#CBD5E1" font-family="sans-serif" font-size="12" text-anchor="middle">PM &amp; Cabinet</text>
+      <text x="115" y="180" fill="#CBD5E1" font-family="sans-serif" font-size="12" text-anchor="middle">aid President</text>
+      <rect x="45" y="240" width="140" height="32" fill="rgba(239, 68, 68, 0.2)" rx="6"/>
+      <text x="115" y="261" fill="#F87171" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Executive Only</text>
+
+      <rect x="235" y="80" width="170" height="220" fill="#1E293B" stroke="#3B82F6" stroke-width="2" rx="8"/>
+      <text x="320" y="115" fill="#60A5FA" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">SC 2023 Order</text>
+      <text x="320" y="145" fill="#E2E8F0" font-family="sans-serif" font-size="12" text-anchor="middle">1. PM</text>
+      <text x="320" y="170" fill="#E2E8F0" font-family="sans-serif" font-size="12" text-anchor="middle">2. CJI (Chief Justice)</text>
+      <text x="320" y="195" fill="#E2E8F0" font-family="sans-serif" font-size="12" text-anchor="middle">3. LoP (Opp Leader)</text>
+      <rect x="250" y="240" width="140" height="32" fill="rgba(59, 130, 246, 0.25)" rx="6"/>
+      <text x="320" y="261" fill="#93C5FD" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Judicial Balance</text>
+
+      <rect x="440" y="80" width="170" height="220" fill="#1E293B" stroke="#10B981" rx="8"/>
+      <text x="525" y="115" fill="#34D399" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Parliament Act</text>
+      <text x="525" y="145" fill="#E2E8F0" font-family="sans-serif" font-size="12" text-anchor="middle">1. PM</text>
+      <text x="525" y="170" fill="#E2E8F0" font-family="sans-serif" font-size="12" text-anchor="middle">2. Cabinet Minister</text>
+      <text x="525" y="195" fill="#E2E8F0" font-family="sans-serif" font-size="12" text-anchor="middle">3. LoP</text>
+      <rect x="455" y="240" width="140" height="32" fill="rgba(16, 185, 129, 0.2)" rx="6"/>
+      <text x="525" y="261" fill="#6EE7B7" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">2:1 Majority</text>
+
+      <text x="320" y="340" fill="#64748B" font-family="sans-serif" font-size="11" text-anchor="middle">Cropped from Page 1 • Vision IAS GS-2 Editorial</text>
+    </svg>`;
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  }
+
   window.canZoomPage = function(delta) {
     pageZoomScale = Math.min(2.5, Math.max(0.6, pageZoomScale + delta));
     applyPageZoom();
@@ -629,11 +855,7 @@ window.ENABLE_CA_NOTES = true;
     }
 
     // Collapse dropzone if pages loaded
-    const dropzone = document.getElementById('canDropzone');
-    if (dropzone) {
-      if (state.pageRecords.length > 0) dropzone.classList.add('can-has-file');
-      else dropzone.classList.remove('can-has-file');
-    }
+    updateActiveMagBar();
   }
 
   function renderActivePageCanvas() {
@@ -808,9 +1030,9 @@ window.ENABLE_CA_NOTES = true;
           const isLowConfidence = item.confidence && item.confidence < 0.85;
 
           html += `
-            <div class="can-note-item" id="note_${itemKey}" data-key="${itemKey}">
+            <div class="can-note-item can-color-${item.color || 'yellow'}" id="note_${itemKey}" data-key="${itemKey}">
               <div class="can-item-meta-strip">
-                <span class="can-item-type-pill" style="background: rgba(37,99,235,0.08); color: var(--can-primary);">
+                <span class="can-item-type-pill can-pill-${item.color || 'yellow'}">
                   ${item.type}
                 </span>
                 <span style="display:flex; align-items:center; gap:6px;">
@@ -1197,7 +1419,7 @@ window.ENABLE_CA_NOTES = true;
     renderNotesPanel();
   }
 
-  function switchMobileTab(tab) {
+  function switchMobileTab(tab, shouldScroll = true) {
     state.mobileTab = tab;
     document.querySelectorAll('.can-m-tab-btn').forEach(btn => {
       btn.classList.toggle('can-active', btn.getAttribute('data-tab') === tab);
@@ -1211,7 +1433,7 @@ window.ENABLE_CA_NOTES = true;
     if (notesCol) notesCol.classList.toggle('can-tab-hidden', tab !== 'notes');
     if (mapsSection) mapsSection.classList.toggle('can-tab-hidden', tab !== 'maps');
 
-    if (window.innerWidth <= 900) {
+    if (shouldScroll && window.innerWidth <= 900) {
       const activeEl = tab === 'page' ? pageCol : (tab === 'notes' ? notesCol : mapsSection);
       if (activeEl) {
         const topOffset = activeEl.getBoundingClientRect().top + window.pageYOffset - 110;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"/>
   <meta name="theme-color" content="#2563EB"/>
   <title>The Ink Lab — Current Affairs Magazine Notes Extractor | Saankalp</title>
   <meta name="description" content="AI-powered Current Affairs Magazine Notes Extractor. Isolates your handwritten notes, highlighters, underlines, and annotated maps into clean, structured UPSC revision notes."/>
@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Scoped Stylesheet strictly prefixed with can- -->
-  <link rel="stylesheet" href="/features/ca-notes/can.css">
+  <link rel="stylesheet" href="/features/ca-notes/can.css?v=22">
 </head>
 <body style="margin: 0; padding: 0;">
 
@@ -33,7 +33,7 @@
       <div class="can-brand-wrap">
         <a href="/" class="can-back-link" title="Return to Saankalp Command Center">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          <span class="can-back-text">Command Center</span>
+          <span class="can-back-text">Back</span>
         </a>
         <div class="can-brand-title">
           <span>The Ink Lab</span>
@@ -53,189 +53,227 @@
 
     <main class="can-container" role="main">
       
-      <!-- Upload Ritual Dropzone -->
-      <section class="can-upload-section" aria-label="Upload Section">
-        <div class="can-desk-dropzone" id="canDropzone">
-          <input type="file" id="canFileInput" accept=".pdf,image/png,image/jpeg,image/webp" style="display:none;" />
-          
-          <div class="can-card-fan-wrap">
-            <div class="can-fan-card can-card-1"></div>
-            <div class="can-fan-card can-card-2"></div>
-            <div class="can-fan-card can-card-3"></div>
-          </div>
+      <!-- Upload Ritual Dropzone & Hero Section -->
+      <section class="can-upload-section" id="canUploadSection" aria-label="Upload Section">
+        <!-- Hidden file input -->
+        <input type="file" id="canFileInput" accept=".pdf,image/png,image/jpeg,image/webp" style="display:none;" />
 
-          <div class="can-drop-title">Drop your marked Current Affairs magazine</div>
-          <div class="can-drop-desc">
-            Upload your Vision IAS, Insights, Drishti, or ForumIAS monthly magazine (PDF or page photos). 
-            Extracts <strong>only</strong> your highlights, margin notes, underlines, and annotated diagrams.
+        <!-- 1. EMPTY STATE HERO CARD -->
+        <div class="can-hero-card" id="canHeroCard">
+          <div class="can-hero-icon-wrap">
+            <span class="can-hero-icon">🖋️</span>
           </div>
+          <h1 class="can-hero-title">The Ink Lab</h1>
+          <div class="can-hero-badge">AI Current Affairs Notes Extractor</div>
+          <p class="can-hero-desc">
+            Upload your marked Vision IAS, Insights, Drishti, or ForumIAS monthly magazine (PDF or page photos). 
+            AI extracts <strong>only</strong> your handwritten margin notes, highlighters, and annotated diagrams into clean UPSC revision notes.
+          </p>
 
-                    <div style="margin: 12px 0 6px;">
-            <button type="button" class="can-btn-primary can-mobile-upload-btn" onclick="document.getElementById('canFileInput').click()">
-              📁 Select Magazine PDF / Photos
+          <div class="can-hero-actions">
+            <button type="button" class="can-hero-upload-btn" id="canUploadTriggerBtn">
+              📁 Select Magazine PDF or Photos
+            </button>
+            <button type="button" class="can-hero-demo-btn" id="canTryDemoBtn">
+              ✨ Try Sample Vision IAS Page
             </button>
           </div>
-          <div class="can-drop-pills">
-            <span class="can-drop-pill">⚡ 1-Page-at-a-Time Safe Queue</span>
+
+          <div class="can-hero-pills">
+            <span class="can-drop-pill">⚡ 1-Page Safe Queue</span>
             <span class="can-drop-pill">🎨 Multi-color Highlighters</span>
             <span class="can-drop-pill">✍️ Handwritten Margin Notes</span>
-            <span class="can-drop-pill">🗺️ Annotated Maps &amp; Infographics</span>
+            <span class="can-drop-pill">🗺️ Auto-Cropped Maps</span>
+          </div>
+
+          <!-- 3-Step Visual Guide -->
+          <div class="can-how-it-works">
+            <div class="can-step-pill">
+              <span class="can-step-num">1</span>
+              <span><strong>Upload</strong> marked magazine PDF or photos</span>
+            </div>
+            <div class="can-step-pill">
+              <span class="can-step-num">2</span>
+              <span><strong>AI isolates</strong> your ink &amp; highlighters</span>
+            </div>
+            <div class="can-step-pill">
+              <span class="can-step-num">3</span>
+              <span><strong>Revise &amp; Export</strong> as structured PDF / flashcards</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. ACTIVE MAGAZINE STATUS BAR (Shown when file is loaded) -->
+        <div class="can-active-mag-bar" id="canActiveMagBar" style="display:none;">
+          <div class="can-mag-info">
+            <span class="can-mag-icon">📑</span>
+            <div class="can-mag-meta">
+              <div class="can-mag-title" id="canActiveMagTitle">Vision IAS Magazine</div>
+              <div class="can-mag-sub" id="canActiveMagSub">12 pages • Ready</div>
+            </div>
+          </div>
+          <div class="can-mag-actions">
+            <button type="button" class="can-btn-secondary can-btn-sm" id="canChangeMagBtn">
+              <span>Change File</span>
+            </button>
           </div>
         </div>
       </section>
 
-      <!-- Processing & View Controls Bar -->
-      <div class="can-controls-bar">
-        <div class="can-page-quick-pager" id="canQuickPager" style="display:none;">
-          <button class="can-btn-icon" onclick="window.canPrevPage()" title="Previous Page">◀</button>
-          <span class="can-pager-label" id="canQuickPagerText">Page 1 of 1</span>
-          <button class="can-btn-icon" onclick="window.canNextPage()" title="Next Page">▶</button>
-        </div>
-        <div class="can-control-cluster">
-          <button class="can-btn-secondary" id="canPauseBtn" style="display:none;">
-            <span>⏸️ Pause</span>
-          </button>
-          <button class="can-btn-primary" id="canResumeBtn" style="display:none;">
-            <span>▶️ Resume</span>
-          </button>
-          <button class="can-btn-danger" id="canCancelBtn" style="display:none;">
-            <span>⏹️ Cancel</span>
-          </button>
-          <button class="can-btn-secondary" id="canRescanBtn">
-            <span>🔄 Re-scan Page</span>
-          </button>
-        </div>
+      <!-- Active Workspace (Hidden until a magazine is loaded) -->
+      <div class="can-workspace-body" id="canWorkspaceBody" style="display:none;">
 
-        <div class="can-control-cluster">
-          <button class="can-btn-primary" id="canExportBtn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Export Notes (PDF/MD)</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile View Tabs -->
-      <div class="can-mobile-view-tabs" role="tablist">
-        <button class="can-m-tab-btn can-active" data-tab="notes">
-          <span>📝 Notes</span>
-          <span class="can-tab-badge" id="canTabNotesBadge">0</span>
-        </button>
-        <button class="can-m-tab-btn" data-tab="page">
-          <span>📖 Original Page</span>
-        </button>
-        <button class="can-m-tab-btn" data-tab="maps">
-          <span>🗺️ Maps</span>
-          <span class="can-tab-badge" id="canTabMapsBadge">0</span>
-        </button>
-      </div>
-
-      <!-- Split Workspace -->
-      <div class="can-split-workspace">
-        
-        <!-- Left: Original Page & Laser Scan -->
-        <section class="can-page-panel" id="canPageCol" aria-label="Original Page Scan">
-          <div class="can-panel-header">
-            <div class="can-panel-title">
-              <span>📖 Original Page</span>
-            </div>
-            <div class="can-zoom-toolbar">
-              <button class="can-zoom-btn" onclick="window.canZoomPage(-0.25)" title="Zoom Out">−</button>
-              <span class="can-zoom-val" id="canZoomLevel">100%</span>
-              <button class="can-zoom-btn" onclick="window.canZoomPage(0.25)" title="Zoom In">+</button>
-              <button class="can-zoom-btn can-zoom-fit" onclick="window.canResetPageZoom()" title="Reset Zoom">Fit</button>
-            </div>
+        <!-- Processing & View Controls Bar -->
+        <div class="can-controls-bar">
+          <div class="can-page-quick-pager" id="canQuickPager">
+            <button class="can-btn-icon" onclick="window.canPrevPage()" title="Previous Page">◀</button>
+            <span class="can-pager-label" id="canQuickPagerText">Page 1 of 1</span>
+            <button class="can-btn-icon" onclick="window.canNextPage()" title="Next Page">▶</button>
+          </div>
+          <div class="can-control-cluster">
+            <button class="can-btn-secondary" id="canPauseBtn" style="display:none;">
+              <span>⏸️ Pause</span>
+            </button>
+            <button class="can-btn-primary" id="canResumeBtn" style="display:none;">
+              <span>▶️ Resume</span>
+            </button>
+            <button class="can-btn-danger" id="canCancelBtn" style="display:none;">
+              <span>⏹️ Cancel</span>
+            </button>
+            <button class="can-btn-secondary" id="canRescanBtn">
+              <span>🔄 Re-scan Page</span>
+            </button>
           </div>
 
-          <div class="can-canvas-viewport" id="canCanvasViewport">
-            <!-- Canvas/Image rendered dynamically -->
-            <div style="text-align: center; color: var(--can-text-muted); font-size: 13.5px; padding: 40px 16px;">
-              <div style="font-size: 32px; margin-bottom: 8px;">📂</div>
-              <div>Drop a magazine PDF to begin scanning.</div>
-            </div>
+          <div class="can-control-cluster can-desktop-export-wrap">
+            <button class="can-btn-primary" id="canExportBtn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Export Notes (PDF/MD)</span>
+            </button>
           </div>
+        </div>
 
-          <!-- Sweeper Line -->
-          <div class="can-scan-sweeper" id="canScanSweeper"></div>
+        <!-- Mobile View Tabs (Sticky segmented 3-tab pill switcher) -->
+        <div class="can-mobile-view-tabs" role="tablist">
+          <button class="can-m-tab-btn can-active" data-tab="notes">
+            <span>📝 Notes</span>
+            <span class="can-tab-badge" id="canTabNotesBadge">0</span>
+          </button>
+          <button class="can-m-tab-btn" data-tab="page">
+            <span>📖 Original Page</span>
+          </button>
+          <button class="can-m-tab-btn" data-tab="maps">
+            <span>🗺️ Maps</span>
+            <span class="can-tab-badge" id="canTabMapsBadge">0</span>
+          </button>
+        </div>
+
+        <!-- Split Workspace -->
+        <div class="can-split-workspace">
           
-          <!-- Annotation Layer -->
-          <div class="can-overlay-layer" id="canOverlayLayer"></div>
-        </section>
-
-        <!-- Right: Extracted Notes Workspace -->
-        <section class="can-notes-panel" id="canNotesCol" aria-label="Extracted Notes">
-          
-          <!-- Palette Filter & Mode Bar -->
-          <div class="can-palette-filter-strip">
-            <div class="can-color-chips">
-              <button class="can-chip-btn can-active" data-color="ALL">All Marks</button>
-              <button class="can-chip-btn" data-color="yellow">
-                <span class="can-color-dot" style="background:#FACC15;"></span> Yellow
-              </button>
-              <button class="can-chip-btn" data-color="green">
-                <span class="can-color-dot" style="background:#4ADE80;"></span> Green
-              </button>
-              <button class="can-chip-btn" data-color="pink">
-                <span class="can-color-dot" style="background:#F472B6;"></span> Pink
-              </button>
-              <button class="can-chip-btn" data-color="blue">
-                <span class="can-color-dot" style="background:#38BDF8;"></span> Blue
-              </button>
-              <button class="can-chip-btn" data-color="purple">
-                <span class="can-color-dot" style="background:#C084FC;"></span> Purple
-              </button>
+          <!-- Left: Original Page & Laser Scan -->
+          <section class="can-page-panel" id="canPageCol" aria-label="Original Page Scan">
+            <div class="can-panel-header">
+              <div class="can-panel-title">
+                <span>📖 Original Page</span>
+              </div>
+              <div class="can-zoom-toolbar">
+                <button class="can-zoom-btn" onclick="window.canZoomPage(-0.25)" title="Zoom Out">−</button>
+                <span class="can-zoom-val" id="canZoomLevel">100%</span>
+                <button class="can-zoom-btn" onclick="window.canZoomPage(0.25)" title="Zoom In">+</button>
+                <button class="can-zoom-btn can-zoom-fit" onclick="window.canResetPageZoom()" title="Reset Zoom">Fit</button>
+              </div>
             </div>
 
-            <!-- Reading Modes Switcher -->
-            <div class="can-mode-switcher">
-              <button class="can-mode-btn can-active" data-mode="notebook">Notebook</button>
-              <button class="can-mode-btn" data-mode="flashcard">Flashcards</button>
-              <button class="can-mode-btn" data-mode="mindmap">Mind-Map</button>
+            <div class="can-canvas-viewport" id="canCanvasViewport">
+              <!-- Canvas/Image rendered dynamically -->
             </div>
+
+            <!-- Sweeper Line -->
+            <div class="can-scan-sweeper" id="canScanSweeper"></div>
+            
+            <!-- Annotation Layer -->
+            <div class="can-overlay-layer" id="canOverlayLayer"></div>
+          </section>
+
+          <!-- Right: Extracted Notes Workspace -->
+          <section class="can-notes-panel" id="canNotesCol" aria-label="Extracted Notes">
+            
+            <!-- Palette Filter & Mode Bar -->
+            <div class="can-palette-filter-strip">
+              <div class="can-color-chips">
+                <button class="can-chip-btn can-active" data-color="ALL">All Marks</button>
+                <button class="can-chip-btn" data-color="yellow">
+                  <span class="can-color-dot" style="background:#FACC15;"></span> Yellow
+                </button>
+                <button class="can-chip-btn" data-color="green">
+                  <span class="can-color-dot" style="background:#4ADE80;"></span> Green
+                </button>
+                <button class="can-chip-btn" data-color="pink">
+                  <span class="can-color-dot" style="background:#F472B6;"></span> Pink
+                </button>
+                <button class="can-chip-btn" data-color="blue">
+                  <span class="can-color-dot" style="background:#38BDF8;"></span> Blue
+                </button>
+                <button class="can-chip-btn" data-color="purple">
+                  <span class="can-color-dot" style="background:#C084FC;"></span> Purple
+                </button>
+              </div>
+
+              <!-- Reading Modes Switcher -->
+              <div class="can-mode-switcher">
+                <button class="can-mode-btn can-active" data-mode="notebook">Notebook</button>
+                <button class="can-mode-btn" data-mode="flashcard">Flashcards</button>
+                <button class="can-mode-btn" data-mode="mindmap">Mind-Map</button>
+              </div>
+            </div>
+
+            <!-- Dynamic Notes Content -->
+            <div id="canNotesContainer">
+              <!-- Rendered via can.js -->
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Map Gallery Masonry Section -->
+        <section class="can-maps-section" id="canMapsSection">
+          <div class="can-maps-header">
+            <div class="can-maps-title">
+              🗺️ Extracted Annotated Maps &amp; Infographics
+            </div>
+            <span class="can-maps-sub">Cropped automatically with AI captions</span>
           </div>
-
-          <!-- Dynamic Notes Content -->
-          <div id="canNotesContainer">
+          <div class="can-map-gallery-grid" id="canMapGalleryGrid">
             <!-- Rendered via can.js -->
           </div>
         </section>
 
-      </div>
-
-      <!-- Map Gallery Masonry Section -->
-      <section style="margin-top: 32px;" id="canMapsSection">
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-          <div style="font-family: var(--can-font-serif); font-size: 18px; font-weight: 800; color: var(--can-text-primary);">
-            🗺️ Extracted Annotated Maps &amp; Infographics
+        <!-- Page Timeline Ribbon -->
+        <section class="can-timeline-ribbon" aria-label="Page Timeline">
+          <div class="can-ribbon-header">
+            <div class="can-ribbon-title">
+              <span>📑 Page Processing Timeline</span>
+            </div>
+            <div class="can-ribbon-progress" id="canRibbonPct">
+              0% Complete (0/0 pgs)
+            </div>
           </div>
-          <span style="font-size: 11.5px; font-weight: 700; color: var(--can-text-muted);">Cropped automatically with AI captions</span>
-        </div>
-        <div class="can-map-gallery-grid" id="canMapGalleryGrid">
-          <!-- Rendered via can.js -->
-        </div>
-      </section>
-
-      <!-- Page Timeline Ribbon -->
-      <section class="can-timeline-ribbon" aria-label="Page Timeline">
-        <div class="can-ribbon-header">
-          <div class="can-ribbon-title">
-            <span>📑 Page Processing Timeline</span>
+          <div class="can-ribbon-scroll" id="canRibbonScroll">
+            <!-- Thumbnails rendered dynamically -->
           </div>
-          <div class="can-ribbon-progress" id="canRibbonPct">
-            0% Complete (0/0 pgs)
-          </div>
-        </div>
-        <div class="can-ribbon-scroll" id="canRibbonScroll">
-          <!-- Thumbnails rendered dynamically -->
-        </div>
-      </section>
+        </section>
 
-      <!-- Floating Mobile Export Bar -->
-      <div class="can-mobile-floating-bar" id="canMobileFloatingBar">
-        <button class="can-btn-primary can-mobile-float-export" onclick="window.canOpenExportModal()">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>Export Notes PDF</span>
-        </button>
-      </div>
+        <!-- Floating Mobile Export Bar -->
+        <div class="can-mobile-floating-bar" id="canMobileFloatingBar">
+          <button class="can-btn-primary can-mobile-float-export" onclick="window.canOpenExportModal()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Export Notes (PDF/MD)</span>
+          </button>
+        </div>
+
+      </div> <!-- /canWorkspaceBody -->
+
     </main>
 
     <!-- Export Modal -->
@@ -280,7 +318,7 @@
 
   </div>
 
-  <!-- Feature Script -->
-  <script src="/features/ca-notes/can.js"></script>
+  <!-- Feature Script with cache buster -->
+  <script src="/features/ca-notes/can.js?v=22"></script>
 </body>
 </html>

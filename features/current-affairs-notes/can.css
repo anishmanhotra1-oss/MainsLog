@@ -198,114 +198,243 @@ body.dark .can-root {
   transition: all 0.3s ease;
 }
 
-.can-desk-dropzone {
+
+/* Hero Card (Modern Empty State) */
+.can-hero-card {
   background: var(--can-bg-surface);
-  border: 2px dashed var(--can-border-focus);
+  border: 1.5px solid var(--can-border);
   border-radius: var(--can-radius-lg);
-  padding: 48px 24px;
+  padding: 38px 24px 28px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: 680px;
+  margin: 0 auto 20px;
   box-shadow: var(--can-shadow-sm);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.can-desk-dropzone:hover,
-.can-desk-dropzone.can-drag-over {
-  border-color: var(--can-primary);
-  background: rgba(37, 99, 235, 0.02);
-  transform: translateY(-2px);
-  box-shadow: var(--can-shadow-md);
+.can-hero-icon-wrap {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 16px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1.5px solid rgba(37, 99, 235, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
 }
 
-.can-card-fan-wrap {
-  position: relative;
-  width: 140px;
-  height: 90px;
+.can-hero-title {
+  font-family: var(--can-font-serif);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--can-text-primary);
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.can-hero-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--can-primary);
+  background: rgba(37, 99, 235, 0.1);
+  padding: 3px 12px;
+  border-radius: var(--can-radius-full);
+  margin-bottom: 14px;
+}
+
+.can-hero-desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--can-text-secondary);
+  max-width: 520px;
+  margin: 0 auto 22px;
+}
+
+.can-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
   margin: 0 auto 18px;
 }
 
-.can-fan-card {
-  position: absolute;
-  top: 0;
-  left: 20px;
-  width: 100px;
-  height: 80px;
-  background: var(--can-bg-surface);
-  border: 1.5px solid var(--can-border);
-  border-radius: var(--can-radius-sm);
-  box-shadow: var(--can-shadow-sm);
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  display: flex;
-  flex-direction: column;
-  padding: 6px;
-  overflow: hidden;
-}
-
-.can-fan-card::after {
-  content: "";
-  display: block;
-  height: 4px;
-  border-radius: 2px;
-  margin-top: 4px;
-}
-
-.can-fan-card.can-card-1 {
-  transform: rotate(-14deg) translateY(2px);
-}
-.can-fan-card.can-card-1::after { background: var(--can-hl-yellow); }
-
-.can-fan-card.can-card-2 {
-  transform: rotate(0deg);
-  z-index: 2;
-}
-.can-fan-card.can-card-2::after { background: var(--can-hl-pink); }
-
-.can-fan-card.can-card-3 {
-  transform: rotate(14deg) translateY(2px);
-  z-index: 1;
-}
-.can-fan-card.can-card-3::after { background: var(--can-hl-green); }
-
-.can-desk-dropzone:hover .can-card-1 {
-  transform: rotate(-24deg) translate(-14px, -4px);
-}
-.can-desk-dropzone:hover .can-card-3 {
-  transform: rotate(24deg) translate(14px, -4px);
-}
-
-.can-drop-title {
-  font-family: var(--can-font-serif);
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--can-text-primary);
-  margin-bottom: 8px;
-}
-
-.can-drop-desc {
+.can-hero-upload-btn {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  color: #FFFFFF;
   font-size: 14px;
-  color: var(--can-text-muted);
-  max-width: 540px;
-  margin: 0 auto 16px;
-}
-
-.can-drop-pills {
+  font-weight: 800;
+  padding: 13px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s ease;
+}
+
+.can-hero-upload-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+}
+
+.can-hero-demo-btn {
+  background: var(--can-bg-subtle);
+  color: var(--can-primary);
+  border: 1.5px solid rgba(37, 99, 235, 0.3);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.can-hero-demo-btn:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: var(--can-primary);
+}
+
+.can-hero-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .can-drop-pill {
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   padding: 4px 10px;
   border-radius: var(--can-radius-full);
   background: var(--can-bg-subtle);
   color: var(--can-text-secondary);
   border: 1px solid var(--can-border);
+}
+
+.can-how-it-works {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid var(--can-border);
+  text-align: left;
+}
+
+.can-step-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--can-text-secondary);
+  background: var(--can-bg-subtle);
+  padding: 7px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--can-border);
+}
+
+.can-step-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--can-primary);
+  color: #FFFFFF;
+  font-size: 10px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Active Magazine Status Bar */
+.can-active-mag-bar {
+  background: var(--can-bg-surface);
+  border: 1.5px solid var(--can-border);
+  border-radius: var(--can-radius-md);
+  padding: 10px 16px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--can-shadow-sm);
+}
+
+.can-mag-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.can-mag-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.can-mag-meta {
+  min-width: 0;
+}
+
+.can-mag-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--can-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.can-mag-sub {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--can-emerald);
+}
+
+.can-btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Maps section styling */
+.can-maps-section {
+  margin-top: 32px;
+}
+
+.can-maps-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.can-maps-title {
+  font-family: var(--can-font-serif);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--can-text-primary);
+}
+
+.can-maps-sub {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--can-text-muted);
 }
 
 /* Control Hub & State Toolbar */
@@ -711,6 +840,19 @@ body.dark .can-root {
   flex-direction: column;
   gap: 10px;
 }
+
+
+.can-note-item.can-color-yellow { border-left: 4px solid #EAB308; }
+.can-note-item.can-color-green { border-left: 4px solid #22C55E; }
+.can-note-item.can-color-pink { border-left: 4px solid #EC4899; }
+.can-note-item.can-color-blue { border-left: 4px solid #0EA5E9; }
+.can-note-item.can-color-purple { border-left: 4px solid #A855F7; }
+
+.can-item-type-pill.can-pill-yellow { background: rgba(234, 179, 8, 0.12); color: #A16207; }
+.can-item-type-pill.can-pill-green { background: rgba(34, 197, 94, 0.12); color: #15803D; }
+.can-item-type-pill.can-pill-pink { background: rgba(236, 72, 153, 0.12); color: #BE185D; }
+.can-item-type-pill.can-pill-blue { background: rgba(14, 165, 233, 0.12); color: #0369A1; }
+.can-item-type-pill.can-pill-purple { background: rgba(168, 85, 247, 0.12); color: #7E22CE; }
 
 .can-note-item {
   background: var(--can-bg-surface);
@@ -1206,7 +1348,7 @@ body.dark .can-root {
    ===================================================================== */
 @media (max-width: 900px) {
   .can-container {
-    padding: 10px 10px 90px; /* Space for floating bottom bar */
+    padding: 10px 12px 90px; /* Space for floating bottom bar */
   }
 
   /* Compact Sleek Top Bar */
@@ -1221,8 +1363,7 @@ body.dark .can-root {
   }
 
   .can-brand-badge {
-    font-size: 9px;
-    padding: 1.5px 6px;
+    display: none !important;
   }
 
   .can-back-link {
@@ -1231,72 +1372,51 @@ body.dark .can-root {
     gap: 4px;
   }
 
-  /* Hero Upload Card (Compact & Modern on Phone) */
-  .can-desk-dropzone {
-    padding: 18px 14px;
+  .can-desktop-export-wrap {
+    display: none !important;
+  }
+
+  /* Hero Card Compact on Mobile */
+  .can-hero-card {
+    padding: 24px 16px 20px;
     border-radius: 16px;
-    border-width: 1.5px;
     margin-bottom: 12px;
   }
 
-  .can-card-fan-wrap {
-    display: none; /* Hide heavy dummy cards on mobile */
+  .can-hero-icon-wrap {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+    margin-bottom: 12px;
   }
 
-  .can-drop-title {
-    font-size: 16.5px;
-    font-weight: 800;
+  .can-hero-title {
+    font-size: 20px;
     margin-bottom: 4px;
   }
 
-  .can-drop-desc {
-    font-size: 12px;
-    line-height: 1.45;
-    margin-bottom: 10px;
+  .can-hero-desc {
+    font-size: 12.5px;
+    margin-bottom: 16px;
   }
 
-  .can-mobile-upload-btn {
-    display: inline-flex !important;
-    width: 100%;
-    justify-content: center;
-    padding: 11px 16px;
+  .can-hero-actions {
+    max-width: 100%;
+  }
+
+  .can-hero-upload-btn {
+    padding: 12px 16px;
     font-size: 13.5px;
-    font-weight: 800;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
   }
 
-  .can-drop-pills {
-    gap: 4px;
-    margin-top: 8px;
-  }
-
-  .can-drop-pill {
-    font-size: 10px;
-    padding: 2.5px 7px;
-  }
-
-  /* Collapsed Upload Bar When File Is Active */
-  .can-desk-dropzone.can-has-file {
+  .can-hero-demo-btn {
     padding: 10px 14px;
-    background: var(--can-bg-surface);
-    border: 1.5px solid var(--can-emerald);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    margin-bottom: 12px;
+    font-size: 12.5px;
   }
-  .can-desk-dropzone.can-has-file .can-drop-desc,
-  .can-desk-dropzone.can-has-file .can-drop-pills,
-  .can-desk-dropzone.can-has-file .can-mobile-upload-btn {
-    display: none !important;
-  }
-  .can-desk-dropzone.can-has-file .can-drop-title {
-    font-size: 13.5px;
-    margin: 0;
-    color: var(--can-emerald);
+
+  /* Note actions are always visible on mobile since touchscreens have no hover */
+  .can-note-actions {
+    opacity: 1 !important;
   }
 
   /* Sticky Segmented 3-Tab Pill Switcher (Mobile) */
@@ -1310,10 +1430,10 @@ body.dark .can-root {
     border-radius: 16px;
     position: sticky;
     top: 52px;
-    z-index: 90;
+    z-index: 85;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
   }
 
   .can-m-tab-btn {
@@ -1384,17 +1504,9 @@ body.dark .can-root {
 
   .can-control-cluster > button {
     flex: 1;
-    min-width: 110px;
+    min-width: 105px;
     padding: 8px 10px;
     font-size: 12px;
-  }
-
-  #canExportBtn {
-    width: 100%;
-    padding: 10px;
-    font-size: 13px;
-    font-weight: 800;
-    justify-content: center;
   }
 
   /* Page Viewer Panel on Mobile */
@@ -1444,8 +1556,9 @@ body.dark .can-root {
 
   .can-chip-btn {
     flex-shrink: 0;
-    padding: 4px 9px;
+    padding: 6px 10px;
     font-size: 11px;
+    border-radius: 8px;
   }
 
   .can-mode-switcher {
@@ -1476,7 +1589,7 @@ body.dark .can-root {
   }
 
   .can-ai-summary-box {
-    padding: 9px 12px;
+    padding: 10px 12px;
     font-size: 12px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -1508,19 +1621,19 @@ body.dark .can-root {
   }
 
   .can-map-img {
-    height: 180px;
+    height: 190px;
     object-fit: cover;
   }
 
   /* Floating Bottom Export Bar */
   .can-mobile-floating-bar {
     position: fixed;
-    bottom: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom, 12px));
     left: 12px;
     right: 12px;
     z-index: 95;
     display: flex;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     overflow: hidden;
   }
@@ -1549,10 +1662,7 @@ body.dark .can-root {
     display: none;
   }
   .can-brand-title {
-    font-size: 14px;
-  }
-  .can-brand-badge {
-    display: none;
+    font-size: 15px;
   }
   .can-m-tab-btn {
     font-size: 11px;

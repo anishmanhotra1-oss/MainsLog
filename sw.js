@@ -1,5 +1,5 @@
 // MainsLog PWA Service Worker with Push Notifications & Study Slot Reminders
-const CACHE_NAME = 'mainslog-pwa-v20';
+const CACHE_NAME = 'mainslog-pwa-v22';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -54,7 +54,9 @@ self.addEventListener('fetch', (event) => {
                  (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) ||
                  event.request.url.endsWith('.html');
 
-  if (isHtml) {
+  const isLocalAsset = event.request.url.startsWith(self.location.origin);
+
+  if (isHtml || isLocalAsset) {
     event.respondWith(
       fetch(event.request)
         .then((networkResponse) => {
@@ -64,7 +66,7 @@ self.addEventListener('fetch', (event) => {
           }
           return networkResponse;
         })
-        .catch(() => caches.match(event.request).then(res => res || caches.match('./index.html')))
+        .catch(() => caches.match(event.request).then(res => res || (isHtml ? caches.match('./index.html') : null)))
     );
   } else {
     event.respondWith(
