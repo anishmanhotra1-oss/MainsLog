@@ -1102,13 +1102,96 @@ body.dark .can-root {
   z-index: 10000;
 }
 
+
+/* Zoom Toolbar for Page Canvas */
+.can-zoom-toolbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--can-bg-subtle);
+  border: 1px solid var(--can-border);
+  padding: 2px 6px;
+  border-radius: var(--can-radius-sm);
+}
+
+.can-zoom-btn {
+  width: 26px;
+  height: 26px;
+  border: none;
+  background: var(--can-bg-surface);
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--can-text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  box-shadow: var(--can-shadow-sm);
+}
+
+.can-zoom-btn:hover {
+  background: var(--can-primary);
+  color: #FFFFFF;
+}
+
+.can-zoom-val {
+  font-family: var(--can-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 36px;
+  text-align: center;
+  color: var(--can-text-secondary);
+}
+
+.can-zoom-fit {
+  width: auto;
+  padding: 0 6px;
+  font-size: 11px;
+}
+
+/* Quick Page Pager */
+.can-page-quick-pager {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--can-bg-subtle);
+  border: 1px solid var(--can-border);
+  padding: 4px 10px;
+  border-radius: var(--can-radius-md);
+}
+
+.can-pager-label {
+  font-family: var(--can-font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--can-text-primary);
+}
+
+/* Mobile specific elements default hidden on desktop */
+.can-mobile-upload-btn,
+.can-mobile-floating-bar {
+  display: none;
+}
+
+/* Canvas stage container for perfect zoom scaling & overlay anchoring */
+.can-canvas-stage {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: top center;
+}
+
 /* =====================================================================
    RESPONSIVE MOBILE ENGINE (Fully Responsive across 320px - 1440px)
    ===================================================================== */
 
 /* Desktop Mode: All columns and sections visible side-by-side */
 @media (min-width: 901px) {
-  .can-mobile-view-tabs {
+  .can-mobile-view-tabs,
+  .can-mobile-floating-bar {
     display: none !important;
   }
   #canPageCol,
@@ -1118,84 +1201,18 @@ body.dark .can-root {
   }
 }
 
-/* Tablet & Mobile Layout (<= 900px) */
+/* =====================================================================
+   AWARD-WINNING MOBILE & TABLET LAYOUT (<= 900px)
+   ===================================================================== */
 @media (max-width: 900px) {
-  .can-split-workspace {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .can-page-panel {
-    position: static;
-    top: auto;
-  }
-
-  /* Sticky Mobile Tabs Strip */
-  .can-mobile-view-tabs {
-    display: flex !important;
-    gap: 6px;
-    margin-bottom: 16px;
-    background: var(--can-bg-surface);
-    border: 1px solid var(--can-border);
-    padding: 5px;
-    border-radius: var(--can-radius-md);
-    position: sticky;
-    top: 58px;
-    z-index: 85;
-    box-shadow: var(--can-shadow-sm);
-  }
-
-  .can-m-tab-btn {
-    flex: 1;
-    border: none;
-    background: transparent;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--can-text-muted);
-    padding: 9px 8px;
-    border-radius: var(--can-radius-sm);
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.15s ease;
-    white-space: nowrap;
-  }
-
-  .can-m-tab-btn.can-active {
-    background: var(--can-primary);
-    color: #FFFFFF;
-    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
-  }
-
-  .can-tab-hidden {
-    display: none !important;
-  }
-
-  .can-canvas-viewport {
-    min-height: 320px;
-  }
-}
-
-/* Mobile Screens (<= 640px) */
-@media (max-width: 640px) {
-  /* Container & Outer Shell */
   .can-container {
-    padding: 12px 10px 84px; /* extra bottom padding for mobile navigation */
+    padding: 10px 10px 90px; /* Space for floating bottom bar */
   }
 
-  /* Compact Top Bar */
+  /* Compact Sleek Top Bar */
   .can-top-bar {
-    padding: 10px 12px;
-  }
-
-  .can-brand-wrap {
-    gap: 8px;
-  }
-
-  .can-back-link {
-    padding: 5px 8px;
-    font-size: 12px;
-    gap: 4px;
+    padding: 8px 12px;
+    height: 52px;
   }
 
   .can-brand-title {
@@ -1205,117 +1222,222 @@ body.dark .can-root {
 
   .can-brand-badge {
     font-size: 9px;
-    padding: 1px 5px;
-    letter-spacing: 0.04em;
+    padding: 1.5px 6px;
   }
 
-  .can-top-actions {
-    gap: 6px;
+  .can-back-link {
+    padding: 6px 9px;
+    font-size: 12px;
+    gap: 4px;
   }
 
-  .can-btn-icon {
-    width: 32px;
-    height: 32px;
-  }
-
-  /* Compact Upload Dropzone */
+  /* Hero Upload Card (Compact & Modern on Phone) */
   .can-desk-dropzone {
-    padding: 24px 12px;
-    border-radius: var(--can-radius-md);
+    padding: 18px 14px;
+    border-radius: 16px;
+    border-width: 1.5px;
+    margin-bottom: 12px;
   }
 
   .can-card-fan-wrap {
-    width: 100px;
-    height: 60px;
-    margin: 0 auto 12px;
-  }
-
-  .can-fan-card {
-    width: 70px;
-    height: 52px;
-    left: 15px;
+    display: none; /* Hide heavy dummy cards on mobile */
   }
 
   .can-drop-title {
-    font-size: 18px;
-    margin-bottom: 6px;
-    line-height: 1.25;
+    font-size: 16.5px;
+    font-weight: 800;
+    margin-bottom: 4px;
   }
 
   .can-drop-desc {
-    font-size: 12.5px;
-    margin-bottom: 12px;
+    font-size: 12px;
     line-height: 1.45;
+    margin-bottom: 10px;
+  }
+
+  .can-mobile-upload-btn {
+    display: inline-flex !important;
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 13.5px;
+    font-weight: 800;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
   }
 
   .can-drop-pills {
-    gap: 5px;
+    gap: 4px;
+    margin-top: 8px;
   }
 
   .can-drop-pill {
-    font-size: 10.5px;
-    padding: 3px 8px;
+    font-size: 10px;
+    padding: 2.5px 7px;
   }
 
-  /* Full-Width Mobile Action Toolbar */
-  .can-controls-bar {
-    padding: 10px 12px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-  }
-
-  .can-control-cluster {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .can-control-cluster > button {
-    flex: 1 1 calc(50% - 8px);
-    justify-content: center;
-    padding: 9px 10px;
-    font-size: 12px;
-    min-height: 38px;
-  }
-
-  #canExportBtn {
-    flex: 1 1 100%;
-    width: 100%;
-    justify-content: center;
+  /* Collapsed Upload Bar When File Is Active */
+  .can-desk-dropzone.can-has-file {
     padding: 10px 14px;
-    font-size: 13px;
+    background: var(--can-bg-surface);
+    border: 1.5px solid var(--can-emerald);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 12px;
+  }
+  .can-desk-dropzone.can-has-file .can-drop-desc,
+  .can-desk-dropzone.can-has-file .can-drop-pills,
+  .can-desk-dropzone.can-has-file .can-mobile-upload-btn {
+    display: none !important;
+  }
+  .can-desk-dropzone.can-has-file .can-drop-title {
+    font-size: 13.5px;
+    margin: 0;
+    color: var(--can-emerald);
   }
 
-  /* Sticky Tab Switcher */
+  /* Sticky Segmented 3-Tab Pill Switcher (Mobile) */
   .can-mobile-view-tabs {
-    top: 52px;
+    display: flex !important;
+    gap: 4px;
+    margin: 6px 0 14px;
+    background: var(--can-bg-surface);
+    border: 1.5px solid var(--can-border);
     padding: 4px;
+    border-radius: 16px;
+    position: sticky;
+    top: 52px;
+    z-index: 90;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .can-m-tab-btn {
-    font-size: 12px;
-    padding: 8px 4px;
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: var(--can-text-muted);
+    padding: 9px 4px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    white-space: nowrap;
   }
 
-  /* Palette Strip & Filter Controls */
+  .can-m-tab-btn.can-active {
+    background: var(--can-primary);
+    color: #FFFFFF;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.35);
+  }
+
+  .can-tab-badge {
+    background: rgba(255, 255, 255, 0.25);
+    font-size: 9.5px;
+    font-weight: 800;
+    padding: 1px 5px;
+    border-radius: 8px;
+    font-family: var(--can-font-mono);
+  }
+  .can-m-tab-btn:not(.can-active) .can-tab-badge {
+    background: var(--can-bg-subtle);
+    color: var(--can-text-muted);
+    border: 1px solid var(--can-border);
+  }
+
+  .can-tab-hidden {
+    display: none !important;
+  }
+
+  /* Single Column Workspace on Mobile */
+  .can-split-workspace {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  /* Controls Hub on Mobile */
+  .can-controls-bar {
+    padding: 8px 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+  }
+
+  .can-control-cluster {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .can-control-cluster > button {
+    flex: 1;
+    min-width: 110px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  #canExportBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    justify-content: center;
+  }
+
+  /* Page Viewer Panel on Mobile */
+  .can-page-panel {
+    position: static;
+    top: auto;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .can-canvas-viewport {
+    min-height: 280px;
+    max-height: 65vh;
+    overflow: auto;
+    padding: 8px;
+    border-radius: 12px;
+    background: #E8E3DC;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Notes Workspace on Mobile */
+  .can-notes-panel {
+    padding: 12px 10px;
+    border-radius: 16px;
+    min-height: auto;
+  }
+
   .can-palette-filter-strip {
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
+    gap: 8px;
     padding-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .can-color-chips {
     overflow-x: auto;
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
-    padding: 2px 2px 6px;
-    gap: 6px;
+    padding-bottom: 4px;
     scrollbar-width: none;
+    gap: 5px;
   }
-
   .can-color-chips::-webkit-scrollbar {
     display: none;
   }
@@ -1324,99 +1446,55 @@ body.dark .can-root {
     flex-shrink: 0;
     padding: 4px 9px;
     font-size: 11px;
-    white-space: nowrap;
   }
 
   .can-mode-switcher {
     width: 100%;
     display: flex;
     padding: 3px;
+    border-radius: 12px;
   }
 
   .can-mode-btn {
     flex: 1;
     text-align: center;
     padding: 6px 4px;
-    font-size: 11.5px;
+    font-size: 11px;
+    border-radius: 10px;
   }
 
-  /* Page Canvas & Overlays */
-  .can-page-panel {
+  .can-section-group {
     padding: 12px;
-  }
-
-  .can-canvas-viewport {
-    min-height: 240px;
-    max-height: 62vh;
-    border-radius: var(--can-radius-sm);
-  }
-
-  .can-box-marker {
-    min-width: 24px;
-    min-height: 18px;
-  }
-
-  /* Extracted Notes Panel */
-  .can-notes-panel {
-    padding: 12px;
-    border-radius: var(--can-radius-md);
+    border-radius: 14px;
+    margin-bottom: 14px;
   }
 
   .can-article-heading {
-    font-size: 14.5px;
-    flex-direction: column;
-    align-items: flex-start;
+    font-size: 15px;
+    line-height: 1.35;
     gap: 4px;
   }
 
   .can-ai-summary-box {
-    padding: 10px 12px;
+    padding: 9px 12px;
     font-size: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
   }
 
   .can-note-item {
-    padding: 10px 12px;
+    padding: 11px 12px;
+    border-radius: 12px;
     margin-bottom: 8px;
   }
 
-  .can-item-text {
-    font-size: 13px;
-    line-height: 1.45;
+  .can-note-text {
+    font-size: 13.5px;
+    line-height: 1.5;
   }
 
-  /* Flashcards Mode on Mobile */
-  .can-flashcard-wrap {
-    padding: 6px 0;
-    max-width: 100%;
-  }
-
-  .can-flashcard-inner {
-    height: 280px;
-  }
-
-  .can-flashcard-front,
-  .can-flashcard-back {
-    padding: 16px 14px;
-  }
-
-  .can-flashcard-question {
-    font-size: 14px;
-  }
-
-  .can-flashcard-controls {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .can-flashcard-controls > button {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Mind-Map View on Mobile */
-  .can-mindmap-canvas {
-    min-height: 320px;
-    height: 52vh;
+  .can-item-meta-strip {
+    font-size: 10.5px;
   }
 
   /* Maps Gallery on Mobile */
@@ -1425,64 +1503,57 @@ body.dark .can-root {
     gap: 12px;
   }
 
+  .can-map-card {
+    border-radius: 14px;
+  }
+
   .can-map-img {
-    height: 160px;
+    height: 180px;
+    object-fit: cover;
   }
 
-  /* Timeline Ribbon on Mobile */
-  .can-timeline-ribbon {
-    padding: 10px 12px;
-    margin-top: 16px;
+  /* Floating Bottom Export Bar */
+  .can-mobile-floating-bar {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 95;
+    display: flex;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
   }
 
-  .can-ribbon-title {
-    font-size: 12px;
-  }
-
-  .can-ribbon-progress {
-    font-size: 11px;
-  }
-
-  .can-page-thumb-cell {
-    width: 48px;
-    height: 66px;
-  }
-
-  /* Modal Dialogs */
-  .can-modal-overlay {
-    padding: 10px;
+  .can-mobile-float-export {
+    width: 100%;
+    padding: 13px 18px;
+    font-size: 13.5px;
+    font-weight: 800;
+    border-radius: 16px;
+    display: flex;
     align-items: center;
-  }
-
-  .can-modal-card {
-    padding: 18px 14px;
-    max-width: 100%;
-    border-radius: var(--can-radius-md);
-  }
-
-  .can-modal-title {
-    font-size: 16.5px;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
   }
 }
 
 /* Extra Small Phones (<= 380px) */
 @media (max-width: 380px) {
+  .can-top-bar {
+    padding: 6px 10px;
+  }
+  .can-back-text {
+    display: none;
+  }
   .can-brand-title {
     font-size: 14px;
   }
-
   .can-brand-badge {
     display: none;
   }
-
-  .can-back-link span {
-    display: none;
-  }
-
-  .can-back-link {
-    padding: 6px 8px;
-  }
-
   .can-m-tab-btn {
     font-size: 11px;
     padding: 7px 2px;

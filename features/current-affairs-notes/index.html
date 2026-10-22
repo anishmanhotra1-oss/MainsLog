@@ -33,7 +33,7 @@
       <div class="can-brand-wrap">
         <a href="/" class="can-back-link" title="Return to Saankalp Command Center">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          <span>Command Center</span>
+          <span class="can-back-text">Command Center</span>
         </a>
         <div class="can-brand-title">
           <span>The Ink Lab</span>
@@ -70,6 +70,11 @@
             Extracts <strong>only</strong> your highlights, margin notes, underlines, and annotated diagrams.
           </div>
 
+                    <div style="margin: 12px 0 6px;">
+            <button type="button" class="can-btn-primary can-mobile-upload-btn" onclick="document.getElementById('canFileInput').click()">
+              📁 Select Magazine PDF / Photos
+            </button>
+          </div>
           <div class="can-drop-pills">
             <span class="can-drop-pill">⚡ 1-Page-at-a-Time Safe Queue</span>
             <span class="can-drop-pill">🎨 Multi-color Highlighters</span>
@@ -81,6 +86,11 @@
 
       <!-- Processing & View Controls Bar -->
       <div class="can-controls-bar">
+        <div class="can-page-quick-pager" id="canQuickPager" style="display:none;">
+          <button class="can-btn-icon" onclick="window.canPrevPage()" title="Previous Page">◀</button>
+          <span class="can-pager-label" id="canQuickPagerText">Page 1 of 1</span>
+          <button class="can-btn-icon" onclick="window.canNextPage()" title="Next Page">▶</button>
+        </div>
         <div class="can-control-cluster">
           <button class="can-btn-secondary" id="canPauseBtn" style="display:none;">
             <span>⏸️ Pause</span>
@@ -106,9 +116,17 @@
 
       <!-- Mobile View Tabs -->
       <div class="can-mobile-view-tabs" role="tablist">
-        <button class="can-m-tab-btn can-active" data-tab="page">Original Page</button>
-        <button class="can-m-tab-btn" data-tab="notes">Extracted Notes</button>
-        <button class="can-m-tab-btn" data-tab="maps">Maps Gallery</button>
+        <button class="can-m-tab-btn can-active" data-tab="notes">
+          <span>📝 Notes</span>
+          <span class="can-tab-badge" id="canTabNotesBadge">0</span>
+        </button>
+        <button class="can-m-tab-btn" data-tab="page">
+          <span>📖 Original Page</span>
+        </button>
+        <button class="can-m-tab-btn" data-tab="maps">
+          <span>🗺️ Maps</span>
+          <span class="can-tab-badge" id="canTabMapsBadge">0</span>
+        </button>
       </div>
 
       <!-- Split Workspace -->
@@ -118,9 +136,14 @@
         <section class="can-page-panel" id="canPageCol" aria-label="Original Page Scan">
           <div class="can-panel-header">
             <div class="can-panel-title">
-              <span>📖 Original Document Page</span>
+              <span>📖 Original Page</span>
             </div>
-            <span style="font-size: 11px; font-weight: 700; color: var(--can-text-muted);">Interactive Spotlight</span>
+            <div class="can-zoom-toolbar">
+              <button class="can-zoom-btn" onclick="window.canZoomPage(-0.25)" title="Zoom Out">−</button>
+              <span class="can-zoom-val" id="canZoomLevel">100%</span>
+              <button class="can-zoom-btn" onclick="window.canZoomPage(0.25)" title="Zoom In">+</button>
+              <button class="can-zoom-btn can-zoom-fit" onclick="window.canResetPageZoom()" title="Reset Zoom">Fit</button>
+            </div>
           </div>
 
           <div class="can-canvas-viewport" id="canCanvasViewport">
@@ -206,6 +229,13 @@
         </div>
       </section>
 
+      <!-- Floating Mobile Export Bar -->
+      <div class="can-mobile-floating-bar" id="canMobileFloatingBar">
+        <button class="can-btn-primary can-mobile-float-export" onclick="window.canOpenExportModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Export Notes PDF</span>
+        </button>
+      </div>
     </main>
 
     <!-- Export Modal -->

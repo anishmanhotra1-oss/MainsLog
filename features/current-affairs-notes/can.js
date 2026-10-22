@@ -546,6 +546,96 @@ window.ENABLE_CA_NOTES = true;
   }
 
   // UI Renderers
+  
+  // Zoom & Quick Pager Helpers
+  let pageZoomScale = 1.0;
+
+  window.canZoomPage = function(delta) {
+    pageZoomScale = Math.min(2.5, Math.max(0.6, pageZoomScale + delta));
+    applyPageZoom();
+  };
+
+  window.canResetPageZoom = function() {
+    pageZoomScale = 1.0;
+    applyPageZoom();
+  };
+
+  function applyPageZoom() {
+    const stage = document.getElementById('canCanvasStage');
+    const zoomText = document.getElementById('canZoomLevel');
+    if (stage) {
+      stage.style.transform = `scale(${pageZoomScale})`;
+      stage.style.transformOrigin = 'top center';
+    }
+    if (zoomText) {
+      zoomText.textContent = `${Math.round(pageZoomScale * 100)}%`;
+    }
+  }
+
+  window.canPrevPage = function() {
+    if (state.activePageIndex > 0) {
+      window.canJumpToPage(state.activePageIndex - 1);
+    }
+  };
+
+  window.canNextPage = function() {
+    if (state.activePageIndex < state.pageRecords.length - 1) {
+      window.canJumpToPage(state.activePageIndex + 1);
+    }
+  };
+
+  window.canOpenExportModal = function() {
+    openExportModal();
+  };
+
+  window.canCopyNoteText = function(itemKey) {
+    const noteEl = document.getElementById(`note_${itemKey}`);
+    const textEl = noteEl ? noteEl.querySelector('.can-note-text') : null;
+    if (textEl && textEl.innerText) {
+      navigator.clipboard.writeText(textEl.innerText.trim()).then(() => {
+        showToast('📋 Note copied to clipboard!');
+      }).catch(() => {
+        showToast('Note copied!');
+      });
+    }
+  };
+
+  function updateMobileTabBadges() {
+    let totalNotes = 0;
+    state.pageRecords.forEach(p => {
+      p.articles?.forEach(a => {
+        totalNotes += (a.items?.length || 0);
+      });
+    });
+
+    let totalMaps = 0;
+    state.pageRecords.forEach(p => {
+      totalMaps += (p.visualAssets?.length || 0);
+    });
+
+    const notesBadge = document.getElementById('canTabNotesBadge');
+    if (notesBadge) notesBadge.textContent = String(totalNotes);
+
+    const mapsBadge = document.getElementById('canTabMapsBadge');
+    if (mapsBadge) mapsBadge.textContent = String(totalMaps);
+
+    const pagerText = document.getElementById('canQuickPagerText');
+    const quickPager = document.getElementById('canQuickPager');
+    if (state.pageRecords.length > 0) {
+      if (quickPager) quickPager.style.display = 'inline-flex';
+      if (pagerText) pagerText.textContent = `Page ${state.activePageIndex + 1} of ${state.pageRecords.length}`;
+    } else {
+      if (quickPager) quickPager.style.display = 'none';
+    }
+
+    // Collapse dropzone if pages loaded
+    const dropzone = document.getElementById('canDropzone');
+    if (dropzone) {
+      if (state.pageRecords.length > 0) dropzone.classList.add('can-has-file');
+      else dropzone.classList.remove('can-has-file');
+    }
+  }
+
   function renderActivePageCanvas() {
     const canvasWrap = document.getElementById('canCanvasViewport');
     const overlayLayer = document.getElementById('canOverlayLayer');
@@ -563,8 +653,16 @@ window.ENABLE_CA_NOTES = true;
       return;
     }
 
-    canvasWrap.innerHTML = `<img src="${pageRecord.imageBlobUrl}" class="can-page-canvas" id="canActiveImg" alt="Page ${pageRecord.pageNum}">`;
+    canvasWrap.innerHTML = `
+      <div class="can-canvas-stage" id="canCanvasStage">
+        <img src="${pageRecord.imageBlobUrl}" class="can-page-canvas" id="canActiveImg" alt="Page ${pageRecord.pageNum}">
+        <div class="can-scan-sweeper" id="canScanSweeper"></div>
+        <div class="can-overlay-layer" id="canOverlayLayer"></div>
+      </div>
+    `;
+    applyPageZoom();
     renderAnnotationOverlays(pageRecord);
+    updateMobileTabBadges();
   }
 
   // Render Overlays using Gemini box_2d: [ymin, xmin, ymax, xmax]
@@ -657,6 +755,7 @@ window.ENABLE_CA_NOTES = true;
     }
 
     renderNotebookView(container);
+    updateMobileTabBadges();
   }
 
   function renderNotebookView(container) {
@@ -723,6 +822,7 @@ window.ENABLE_CA_NOTES = true;
               ${item.note_attached_to ? `<div style="font-size: 11.5px; font-style: italic; color: var(--can-accent);">Attached to: ${escapeHtml(item.note_attached_to)}</div>` : ''}
               <div class="can-note-actions">
                 <button class="can-item-btn" onclick="window.canFocusPageItem('${itemKey}')">🔍 View on page</button>
+                <button class="can-item-btn" onclick="window.canCopyNoteText('${itemKey}')">📋 Copy</button>
                 <button class="can-item-btn" onclick="window.canDeleteNoteItem('${itemKey}')">Delete</button>
               </div>
             </div>
