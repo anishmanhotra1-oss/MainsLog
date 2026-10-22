@@ -74,22 +74,30 @@ window.ENABLE_CA_NOTES = true;
   function saveDbRecord(storeName, record) {
     if (!dbInstance) return Promise.resolve();
     return new Promise((resolve, reject) => {
-      const tx = dbInstance.transaction(storeName, 'readwrite');
-      const store = tx.objectStore(storeName);
-      store.put(record);
-      tx.oncomplete = () => resolve();
-      tx.onerror = () => reject(tx.error);
+      try {
+        const tx = dbInstance.transaction(storeName, 'readwrite');
+        const store = tx.objectStore(storeName);
+        store.put(record);
+        tx.oncomplete = () => resolve();
+        tx.onerror = () => resolve();
+      } catch (e) {
+        resolve();
+      }
     });
   }
 
   function getAllDbRecords(storeName) {
     if (!dbInstance) return Promise.resolve([]);
     return new Promise((resolve, reject) => {
-      const tx = dbInstance.transaction(storeName, 'readonly');
-      const store = tx.objectStore(storeName);
-      const req = store.getAll();
-      req.onsuccess = () => resolve(req.result || []);
-      req.onerror = () => reject(req.error);
+      try {
+        const tx = dbInstance.transaction(storeName, 'readonly');
+        const store = tx.objectStore(storeName);
+        const req = store.getAll();
+        req.onsuccess = () => resolve(req.result || []);
+        req.onerror = () => resolve([]);
+      } catch (e) {
+        resolve([]);
+      }
     });
   }
 
@@ -160,13 +168,16 @@ window.ENABLE_CA_NOTES = true;
 
   async function initTheInkLab() {
     try {
-      await initDatabase();
+      // 1. Synchronously bind DOM events immediately so buttons & inputs always work!
       bindEvents();
       if (window.innerWidth <= 900) {
         switchMobileTab('notes', false);
       }
-      await restorePreviousSessionIfAny();
       updateActiveMagBar();
+
+      // 2. Initialize database and restore any saved session in background
+      await initDatabase();
+      await restorePreviousSessionIfAny();
     } catch (e) {
       console.warn('[THE INK LAB] Initialization note:', e);
     }
@@ -190,11 +201,24 @@ window.ENABLE_CA_NOTES = true;
   }
 
   function bindEvents() {
-    const dropzone = document.getElementById('canDropzone');
     const fileInput = document.getElementById('canFileInput');
+    const dropzone = document.getElementById('canHeroCard') || document.getElementById('canDropzone');
+
+    // Always attach file input change listener directly
+    if (fileInput) {
+      fileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+          handleIncomingFiles(e.target.files);
+        }
+      });
+    }
 
     if (dropzone && fileInput) {
-      dropzone.addEventListener('click', () => fileInput.click());
+      dropzone.addEventListener('click', (e) => {
+        if (e.target && e.target.tagName !== 'BUTTON' && !e.target.closest('button')) {
+          fileInput.click();
+        }
+      });
 
       ['dragenter', 'dragover'].forEach(name => {
         dropzone.addEventListener(name, (e) => {
@@ -213,12 +237,37 @@ window.ENABLE_CA_NOTES = true;
       });
 
       dropzone.addEventListener('drop', (e) => {
-        const files = e.dataTransfer.files;
-        if (files && files.length > 0) handleIncomingFiles(files);
+        e.preventDefault();
+        e.stopPropagation();
+        dropzone.classList.remove('can-drag-over');
+        const files = e.dataTransfer && e.dataTransfer.files;
+        if (files && files.length > 0) {
+          handleIncomingFiles(files);
+        }
       });
+    }
 
-      fileInput.addEventListener('change', (e) => {
-        if (e.target.files && e.target.files.length > 0) handleIncomingFiles(e.target.files);
+    const uploadTriggerBtn = document.getElementById('canUploadTriggerBtn');
+    if (uploadTriggerBtn && fileInput) {
+      uploadTriggerBtn.addEventListener('click', (e) => {
+        if (e && e.stopPropagation) e.stopPropagation();
+        fileInput.click();
+      });
+    }
+
+    const tryDemoBtn = document.getElementById('canTryDemoBtn');
+    if (tryDemoBtn) {
+      tryDemoBtn.addEventListener('click', (e) => {
+        if (e && e.stopPropagation) e.stopPropagation();
+        loadSampleVisionPage();
+      });
+    }
+
+    const changeMagBtn = document.getElementById('canChangeMagBtn');
+    if (changeMagBtn && fileInput) {
+      changeMagBtn.addEventListener('click', (e) => {
+        if (e && e.stopPropagation) e.stopPropagation();
+        fileInput.click();
       });
     }
 
@@ -246,7 +295,7 @@ window.ENABLE_CA_NOTES = true;
     document.querySelectorAll('.can-m-tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const tab = btn.getAttribute('data-tab');
-        if (tab) switchMobileTab(tab);
+        if (tab) switchMobileTab(tab, true);
       });
     });
 
@@ -265,22 +314,8 @@ window.ENABLE_CA_NOTES = true;
     const themeBtn = document.getElementById('canThemeToggle');
     if (themeBtn) themeBtn.addEventListener('click', toggleDeskTheme);
 
-    const uploadTriggerBtn = document.getElementById('canUploadTriggerBtn');
-    if (uploadTriggerBtn && fileInput) {
-      uploadTriggerBtn.addEventListener('click', () => fileInput.click());
-    }
 
-    const tryDemoBtn = document.getElementById('canTryDemoBtn');
-    if (tryDemoBtn) {
-      tryDemoBtn.addEventListener('click', loadSampleVisionPage);
-    }
-
-    const changeMagBtn = document.getElementById('canChangeMagBtn');
-    if (changeMagBtn && fileInput) {
-      changeMagBtn.addEventListener('click', () => fileInput.click());
-    }
-
-    window.addEventListener('resize', () => {
+        window.addEventListener('resize', () => {
       if (window.innerWidth <= 900) {
         switchMobileTab(state.mobileTab || 'notes');
       } else {
@@ -332,6 +367,7 @@ window.ENABLE_CA_NOTES = true;
           });
         }
 
+        updateActiveMagBar();
         renderTimelineRibbon();
         startSequentialProcessing();
       } catch (err) {
@@ -569,14 +605,14 @@ window.ENABLE_CA_NOTES = true;
 
   
   function updateActiveMagBar() {
-    const heroCard = document.getElementById('canHeroCard');
+    const heroCard = document.getElementById('canHeroCard') || document.getElementById('canDropzone');
     const activeMagBar = document.getElementById('canActiveMagBar');
     const workspaceBody = document.getElementById('canWorkspaceBody');
     const titleEl = document.getElementById('canActiveMagTitle');
     const subEl = document.getElementById('canActiveMagSub');
     const floatingBar = document.getElementById('canMobileFloatingBar');
 
-    const hasPages = state.pageRecords && state.pageRecords.length > 0;
+    const hasPages = Boolean(state.pageRecords && state.pageRecords.length > 0);
 
     if (heroCard) heroCard.style.display = hasPages ? 'none' : 'block';
     if (activeMagBar) activeMagBar.style.display = hasPages ? 'flex' : 'none';
@@ -591,7 +627,7 @@ window.ENABLE_CA_NOTES = true;
     }
   }
 
-  function loadSampleVisionPage() {
+    function loadSampleVisionPage() {
     state.sessionId = 'sample_demo_' + Date.now();
     state.magazineMeta = {
       title: 'Vision IAS Current Affairs — GS-2 Reforms',
