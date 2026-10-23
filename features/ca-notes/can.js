@@ -1488,33 +1488,21 @@ window.ENABLE_CA_NOTES = true;
     if (modal) modal.classList.remove('can-modal-open');
   };
 
-  // Selectable PDF Generation - Compact, High-Yield Editorial Layout
+  // Selectable PDF Generation - Well-Formatted 2-Column UPSC Editorial Format (<= 1/4th Page Budget)
   window.canExportPdf = async function (type) {
-    showToast('Generating clean revision PDF...');
+    showToast('Generating compact 1/4th revision PDF...');
     try {
       const jspdfModule = await ensureJsPdf();
       const { jsPDF } = jspdfModule;
-      const doc = new jsPDF({ unit: 'pt', format: 'a4' });
+      const doc = new jsPDF({ unit: 'pt', format: 'a4', orientation: 'portrait' });
 
       const allArticles = compileAllArticles();
-      const pageWidth = doc.internal.pageSize.getWidth();
-      const pageHeight = doc.internal.pageSize.getHeight();
+      const pageWidth = doc.internal.pageSize.getWidth();   // 595.28 pt
+      const pageHeight = doc.internal.pageSize.getHeight(); // 841.89 pt
 
-      // Printable comfortable margins (0.65 in)
-      const margin = 44;
-      const contentWidth = pageWidth - (margin * 2);
-      const topMargin = 45;
-      const bottomMargin = 45;
-
-      let y = topMargin;
-
-      // Helper: Check space and add page if needed
-      function ensureSpace(neededHeight) {
-        if (y + neededHeight > pageHeight - bottomMargin) {
-          doc.addPage();
-          y = topMargin;
-        }
-      }
+      // Original page count and strict 1/4th page target budget
+      const originalPages = state.totalPages || (state.pageRecords ? state.pageRecords.length : 1) || 1;
+      const targetMaxPages = Math.max(1, Math.ceil(originalPages / 4));
 
       // Robust sanitizer: removes full-width Unicode, smart quotes, rupee symbol, OCR artifacts, and highlighter tags
       function cleanNoteText(str) {
@@ -1527,186 +1515,386 @@ window.ENABLE_CA_NOTES = true;
           .replace(/[\u2013\u2014]/g, ' - ')
           .replace(/!\s*'/g, ': ')
           .replace(/\s+/g, ' ')
-          .replace(/^\[(?:HIGHLIGHT|UNDERLINE|BOXED|HANDWRITTEN|NOTE|HIGHLIGHTED|UNDERLINED)[^\]]*\]\s*/i, '')
-          .replace(/^(?:highlight|underline|boxed|highlighted|underlined|note):\s*/i, '')
+          .replace(/^\[(?:HIGHLIGHT|UNDERLINE|BOXED|HANDWRITTEN|NOTE|MARGIN_NOTE|HIGHLIGHTED|UNDERLINED)[^\]]*\]\s*/i, '')
+          .replace(/^(?:highlight|underline|boxed|handwritten|margin_note|highlighted|underlined|note):\s*/i, '')
           .trim();
       }
 
-      // --- PAGE 1: DOSSIER HEADER ---
-      doc.setFillColor(37, 99, 235);
-      doc.rect(margin, y, contentWidth, 2.5, 'F');
-      y += 12;
+      // 2-Column Editorial Dimensions
+      const marginLeft = 32;
+      const marginRight = 32;
+      const marginTop = 34;
+      const marginBottom = 28;
+      const gutter = 16;
+      const contentWidth = pageWidth - marginLeft - marginRight; // 531.28 pt
+      const colWidth = (contentWidth - gutter) / 2;               // 257.64 pt
+      const colHeight = pageHeight - marginTop - marginBottom;    // 779.89 pt
+      const bottomLimit = pageHeight - marginBottom;
 
-      const titleText = state.magazineMeta.title || 'Current Affairs Notes';
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(15);
-      doc.setTextColor(15, 23, 42);
-      doc.text(titleText, margin, y);
-      y += 14;
+      // Color mapping for highlights
+      const colorMap = {
+        yellow: [234, 179, 8],
+        green: [34, 197, 94],
+        pink: [236, 72, 153],
+        blue: [14, 165, 233],
+        purple: [168, 85, 247],
+        default: [37, 99, 235]
+      };
 
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(8);
-      doc.setTextColor(37, 99, 235);
-      doc.text('UPSC CSE CANDIDATE REVISION DOSSIER', margin, y);
+      // Measure total volume to dynamically pick density tier
+      let totalItemCount = 0;
+      let totalCharCount = 0;
+      allArticles.forEach(sec => {
+        sec.articles.forEach(art => {
+          totalItemCount += (art.items ? art.items.length : 0);
+          art.items?.forEach(it => {
+            totalCharCount += (it.text ? it.text.length : 0);
+          });
+        });
+      });
 
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(7.5);
-      doc.setTextColor(100, 116, 139);
-      const dateStr = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
-      doc.text(`Extracted: ${dateStr}  |  Pages Scanned: ${state.pageRecords.length}`, pageWidth - margin, y, { align: 'right' });
-      y += 10;
+      // Target capacity check to guarantee <= targetMaxPages
+      let densityTier = 'standard';
+      const availableLinesStandard = targetMaxPages * 2 * (colHeight / 10.2);
+      const estimatedLines = (totalCharCount / 48) + (totalItemCount * 1.5);
 
-      doc.setDrawColor(226, 232, 240);
-      doc.setLineWidth(0.75);
-      doc.line(margin, y, pageWidth - margin, y);
-      y += 14;
+      if (estimatedLines > availableLinesStandard * 1.05) {
+        densityTier = 'compact';
+      }
+      if (estimatedLines > availableLinesStandard * 1.4) {
+        densityTier = 'dense';
+      }
 
-      // --- CONTENT ITERATION ---
+      // Typographic configuration per tier
+      const typo = {
+        standard: {
+          bodySize: 8.0,
+          bodyLineH: 9.8,
+          handwrittenSize: 6.5,     // Noticeably reduced as requested
+          handwrittenLineH: 8.2,
+          takeawaySize: 6.8,
+          takeawayLineH: 8.5,
+          headingSize: 8.5,
+          sectionSize: 8.0,
+          itemSpacing: 3.5,
+          artSpacing: 6.5,
+          secSpacing: 9.0
+        },
+        compact: {
+          bodySize: 7.4,
+          bodyLineH: 9.0,
+          handwrittenSize: 6.0,     // Reduced
+          handwrittenLineH: 7.5,
+          takeawaySize: 6.4,
+          takeawayLineH: 7.8,
+          headingSize: 8.0,
+          sectionSize: 7.5,
+          itemSpacing: 2.8,
+          artSpacing: 5.0,
+          secSpacing: 7.5
+        },
+        dense: {
+          bodySize: 6.8,
+          bodyLineH: 8.2,
+          handwrittenSize: 5.5,     // Reduced
+          handwrittenLineH: 6.8,
+          takeawaySize: 5.8,
+          takeawayLineH: 7.2,
+          headingSize: 7.5,
+          sectionSize: 7.0,
+          itemSpacing: 2.2,
+          artSpacing: 4.0,
+          secSpacing: 6.0
+        }
+      }[densityTier];
+
+      // Layout Cursor State
+      let currentPage = 1;
+      let currentCol = 0; // 0 = left, 1 = right
+      let y = marginTop;
+
+      // Page 1 Header Banner (Dossier Title & Condensation Statistics)
+      function drawPage1Header() {
+        doc.setFillColor(37, 99, 235);
+        doc.rect(marginLeft, y, contentWidth, 3, 'F');
+        y += 11;
+
+        // Magazine Title
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(13);
+        doc.setTextColor(15, 23, 42);
+        const titleText = state.magazineMeta.title || 'Current Affairs Magazine Revision Notes';
+        const titleLines = doc.splitTextToSize(titleText, contentWidth - 145);
+        doc.text(titleLines, marginLeft, y);
+
+        // 1/4th Condensation Ratio Badge on Right
+        const badgeW = 135;
+        const badgeH = 22;
+        const badgeX = pageWidth - marginRight - badgeW;
+        doc.setFillColor(239, 246, 255);
+        doc.setDrawColor(191, 219, 254);
+        doc.roundedRect(badgeX, y - 9, badgeW, badgeH, 3, 3, 'FD');
+
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(7.5);
+        doc.setTextColor(29, 78, 216);
+        doc.text('1/4th Page Condensation', badgeX + (badgeW / 2), y + 1, { align: 'center' });
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(6.5);
+        doc.setTextColor(71, 85, 105);
+        doc.text(`${originalPages} pgs original -> ${targetMaxPages} pgs max`, badgeX + (badgeW / 2), y + 9.5, { align: 'center' });
+
+        y += Math.max(titleLines.length * 12, 14);
+
+        // Sub-bar metadata
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(7.5);
+        doc.setTextColor(37, 99, 235);
+        doc.text('UPSC CSE HIGH-YIELD REVISION DOSSIER', marginLeft, y);
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(7);
+        doc.setTextColor(100, 116, 139);
+        const dateStr = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+        doc.text(`Compiled: ${dateStr}  |  Editorial 2-Column Digest`, pageWidth - marginRight, y, { align: 'right' });
+        y += 8;
+
+        // Divider rule
+        doc.setDrawColor(226, 232, 240);
+        doc.setLineWidth(0.65);
+        doc.line(marginLeft, y, pageWidth - marginRight, y);
+        y += 12;
+
+        return y;
+      }
+
+      // Draw header on Page 1
+      const page1ContentTop = drawPage1Header();
+      y = page1ContentTop;
+
+      function getColX() {
+        return currentCol === 0 ? marginLeft : marginLeft + colWidth + gutter;
+      }
+
+      function ensureSpace(neededHeight) {
+        if (y + neededHeight > bottomLimit) {
+          if (currentCol === 0) {
+            currentCol = 1;
+            y = currentPage === 1 ? page1ContentTop : marginTop;
+          } else {
+            if (currentPage < targetMaxPages) {
+              doc.addPage();
+              currentPage++;
+              currentCol = 0;
+              y = marginTop;
+            } else {
+              // At max budget page, pack remaining space tightly without exceeding targetMaxPages
+              currentCol = 1;
+              y = Math.min(y, bottomLimit - neededHeight);
+            }
+          }
+        }
+      }
+
+      function drawColumnDivider(pg) {
+        doc.setPage(pg);
+        const dividerX = marginLeft + colWidth + (gutter / 2);
+        const topY = pg === 1 ? page1ContentTop : marginTop;
+        doc.setDrawColor(241, 245, 249);
+        doc.setLineWidth(0.5);
+        doc.line(dividerX, topY, dividerX, bottomLimit);
+      }
+
+      // --- RENDER CONTENT ---
       allArticles.forEach((secGroup) => {
         if (type !== 'all' && secGroup.section.toLowerCase() !== type.toLowerCase()) return;
 
-        // SECTION HEADER BANNER (e.g. POLITY & GOVERNANCE)
-        ensureSpace(28);
+        // SECTION HEADER BANNER (e.g. POLITY, ECONOMY)
+        ensureSpace(24);
+        const colX = getColX();
+
         doc.setFillColor(241, 245, 249);
-        doc.roundedRect(margin, y, contentWidth, 17, 2, 2, 'F');
+        doc.roundedRect(colX, y, colWidth, 14, 2, 2, 'F');
         doc.setFillColor(37, 99, 235);
-        doc.rect(margin, y, 3.5, 17, 'F');
+        doc.rect(colX, y, 3, 14, 'F');
 
         doc.setFont('helvetica', 'bold');
-        doc.setFontSize(8.5);
+        doc.setFontSize(typo.sectionSize);
         doc.setTextColor(30, 41, 59);
-        doc.text(secGroup.section.toUpperCase(), margin + 10, y + 11.5);
-        y += 24;
+        doc.text(secGroup.section.toUpperCase(), colX + 7, y + 9.5);
+        y += 18;
 
         secGroup.articles.forEach((art) => {
-          // Require at least 65pt space so headings are NEVER printed as orphans at page bottom!
-          ensureSpace(65);
+          ensureSpace(32);
+          const aX = getColX();
 
-          // ARTICLE HEADING
+          // Article Heading
           doc.setFont('helvetica', 'bold');
-          doc.setFontSize(9.5);
+          doc.setFontSize(typo.headingSize);
           doc.setTextColor(15, 23, 42);
-          const headingLines = doc.splitTextToSize(art.heading, contentWidth - 45);
-          doc.text(headingLines, margin, y);
+          const headingLines = doc.splitTextToSize(art.heading, colWidth - 32);
+          doc.text(headingLines, aX, y);
 
+          // Page reference tag
           if (art.pages && art.pages.length > 0) {
             doc.setFont('helvetica', 'normal');
-            doc.setFontSize(7.5);
-            doc.setTextColor(100, 116, 139);
-            doc.text(`p. ${art.pages.join(', ')}`, pageWidth - margin, y, { align: 'right' });
+            doc.setFontSize(6.5);
+            doc.setTextColor(148, 163, 184);
+            doc.text(`p. ${art.pages.join(', ')}`, aX + colWidth, y, { align: 'right' });
           }
-          y += (headingLines.length * 11) + 4;
+          y += (headingLines.length * (typo.headingSize + 1.5)) + 3;
 
-          // AI TAKEAWAY BOX (Compact & clean)
+          // AI Core Takeaway (Compact callout box)
           if (art.takeaway && art.takeaway.trim().length > 5) {
             const takeawayText = cleanNoteText(art.takeaway);
             doc.setFont('helvetica', 'italic');
-            doc.setFontSize(7.5);
-            const takeawayLines = doc.splitTextToSize(takeawayText, contentWidth - 18);
-            const boxHeight = (takeawayLines.length * 9.5) + 11;
+            doc.setFontSize(typo.takeawaySize);
+            const takeawayLines = doc.splitTextToSize(takeawayText, colWidth - 12);
+            const boxH = (takeawayLines.length * typo.takeawayLineH) + 9;
 
-            ensureSpace(boxHeight + 5);
+            ensureSpace(boxH + 4);
+            const tX = getColX();
+
             doc.setFillColor(248, 250, 252);
             doc.setDrawColor(226, 232, 240);
-            doc.roundedRect(margin, y, contentWidth, boxHeight, 2, 2, 'FD');
+            doc.roundedRect(tX, y, colWidth, boxH, 2, 2, 'FD');
 
             doc.setFillColor(16, 185, 129);
-            doc.rect(margin, y, 2.5, boxHeight, 'F');
+            doc.rect(tX, y, 2.5, boxH, 'F');
 
             doc.setFont('helvetica', 'bold');
-            doc.setFontSize(6.5);
+            doc.setFontSize(5.5);
             doc.setTextColor(5, 150, 105);
-            doc.text('CORE TAKEAWAY', margin + 8, y + 7.5);
+            doc.text('KEY TAKEAWAY', tX + 6, y + 6.5);
 
             doc.setFont('helvetica', 'italic');
-            doc.setFontSize(7.5);
+            doc.setFontSize(typo.takeawaySize);
             doc.setTextColor(51, 65, 85);
-            doc.text(takeawayLines, margin + 8, y + 16.5);
-            y += boxHeight + 6;
+            doc.text(takeawayLines, tX + 6, y + 14);
+            y += boxH + 4;
           }
 
-          // EXTRACTED POINTS (RENDERED LINE-BY-LINE: GUARANTEED ZERO CUTOFF AT BOTTOM OR RIGHT!)
+          // EXTRACTED ITEMS (Highlights & Reduced-Size Handwritten Notes)
           art.items.forEach((it) => {
             const rawClean = cleanNoteText(it.text);
             if (!rawClean) return;
 
-            const isHandwritten = it.type === 'handwritten';
-            const prefixOffset = isHandwritten ? 32 : 12;
-            const textWidth = contentWidth - prefixOffset;
+            // Accurate handwritten identification
+            const isHandwritten = it.type === 'handwritten' || 
+                                  it.type === 'margin_note' || 
+                                  (it.text && it.text.includes('✍️'));
 
-            doc.setFont('helvetica', 'normal');
-            doc.setFontSize(8.5);
-            const noteLines = doc.splitTextToSize(rawClean, textWidth);
+            const cColor = colorMap[it.color] || colorMap.default;
 
-            // Render line-by-line with exact page-boundary checks
-            for (let lineIdx = 0; lineIdx < noteLines.length; lineIdx++) {
-              if (y + 11 > pageHeight - bottomMargin) {
-                doc.addPage();
-                y = topMargin;
-              }
+            if (isHandwritten) {
+              // --- HANDWRITTEN MARGIN NOTE: REDUCED SIZE AS REQUESTED ---
+              const prefixW = 26;
+              const textW = colWidth - prefixW;
 
-              // Draw bullet indicator only on the very first line of each note
-              if (lineIdx === 0) {
-                if (isHandwritten) {
-                  // Crisp vector badge for handwritten margin notes (no broken emojis)
-                  doc.setFillColor(239, 246, 255);
-                  doc.roundedRect(margin, y - 7.5, 26, 9.5, 2, 2, 'F');
+              doc.setFont('helvetica', 'italic');
+              doc.setFontSize(typo.handwrittenSize);
+              const noteLines = doc.splitTextToSize(rawClean, textW);
+
+              for (let lineIdx = 0; lineIdx < noteLines.length; lineIdx++) {
+                ensureSpace(typo.handwrittenLineH);
+                const curX = getColX();
+
+                if (lineIdx === 0) {
+                  // Sleek compact [NOTE] badge in 5pt font
+                  doc.setFillColor(243, 232, 255);
+                  doc.setDrawColor(216, 180, 254);
+                  doc.roundedRect(curX, y - 6, 22, 7.5, 1.5, 1.5, 'FD');
                   doc.setFont('helvetica', 'bold');
-                  doc.setFontSize(6.5);
-                  doc.setTextColor(37, 99, 235);
-                  doc.text('NOTE', margin + 4.5, y);
-                } else {
-                  // Crisp vector circle bullet
-                  doc.setFillColor(59, 130, 246);
-                  doc.circle(margin + 4, y - 2.5, 1.8, 'F');
+                  doc.setFontSize(5.0);
+                  doc.setTextColor(126, 34, 206);
+                  doc.text('NOTE', curX + 3.5, y - 0.5);
                 }
+
+                // Handwritten note body text in reduced size
+                doc.setFont('helvetica', 'italic');
+                doc.setFontSize(typo.handwrittenSize);
+                doc.setTextColor(71, 85, 105);
+                doc.text(noteLines[lineIdx], curX + prefixW, y);
+                y += typo.handwrittenLineH;
               }
+              y += typo.itemSpacing * 0.7;
 
-              // Note Line Text
-              doc.setFont('helvetica', isHandwritten ? 'italic' : 'normal');
-              doc.setFontSize(8.5);
-              doc.setTextColor(30, 41, 59);
-              doc.text(noteLines[lineIdx], margin + prefixOffset, y);
-              y += 11;
+            } else {
+              // --- STANDARD HIGHLIGHT ITEM ---
+              const prefixW = 9;
+              const textW = colWidth - prefixW;
+
+              doc.setFont('helvetica', 'normal');
+              doc.setFontSize(typo.bodySize);
+              const noteLines = doc.splitTextToSize(rawClean, textW);
+
+              for (let lineIdx = 0; lineIdx < noteLines.length; lineIdx++) {
+                ensureSpace(typo.bodyLineH);
+                const curX = getColX();
+
+                if (lineIdx === 0) {
+                  // Color-coded circle bullet matching neon highlighter
+                  doc.setFillColor(cColor[0], cColor[1], cColor[2]);
+                  doc.circle(curX + 3, y - 2.5, 1.6, 'F');
+                }
+
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(typo.bodySize);
+                doc.setTextColor(30, 41, 59);
+                doc.text(noteLines[lineIdx], curX + prefixW, y);
+                y += typo.bodyLineH;
+              }
+              y += typo.itemSpacing;
             }
-
-            y += 3.5; // Space between notes
           });
 
-          y += 8; // Spacing between articles
+          y += typo.artSpacing;
         });
 
-        y += 6; // Spacing between sections
+        y += typo.secSpacing;
       });
 
-      // --- RUNNING HEADER & FOOTER ON ALL PAGES ---
+      // Draw vertical column divider on each page
       const totalPages = doc.internal.getNumberOfPages();
+      for (let p = 1; p <= totalPages; p++) {
+        drawColumnDivider(p);
+      }
+
+      // --- RUNNING HEADER & FOOTER ON ALL PAGES ---
       for (let i = 1; i <= totalPages; i++) {
         doc.setPage(i);
 
+        // Header on Pages 2+
         if (i > 1) {
           doc.setFont('helvetica', 'normal');
-          doc.setFontSize(7);
+          doc.setFontSize(6.5);
           doc.setTextColor(148, 163, 184);
-          doc.text(`${state.magazineMeta.title || 'Current Affairs Notes'} • UPSC Revision Dossier`, margin, 26);
-          doc.text('The Ink Lab', pageWidth - margin, 26, { align: 'right' });
+          doc.text(`${state.magazineMeta.title || 'Current Affairs Notes'} • UPSC Revision Dossier`, marginLeft, 22);
+          doc.text('The Ink Lab', pageWidth - marginRight, 22, { align: 'right' });
           doc.setDrawColor(241, 245, 249);
-          doc.line(margin, 30, pageWidth - margin, 30);
+          doc.setLineWidth(0.5);
+          doc.line(marginLeft, 25, pageWidth - marginRight, 25);
         }
 
+        // Footer on all pages
         doc.setDrawColor(241, 245, 249);
-        doc.line(margin, pageHeight - 26, pageWidth - margin, pageHeight - 26);
+        doc.setLineWidth(0.5);
+        doc.line(marginLeft, pageHeight - 20, pageWidth - marginRight, pageHeight - 20);
 
         doc.setFont('helvetica', 'normal');
-        doc.setFontSize(7);
+        doc.setFontSize(6.5);
         doc.setTextColor(148, 163, 184);
-        doc.text('Extracted with The Ink Lab (Google Gemini Vision)', margin, pageHeight - 14);
-        doc.text(`Page ${i} of ${totalPages}`, pageWidth - margin, pageHeight - 14, { align: 'right' });
+        doc.text('Extracted with The Ink Lab (Google Gemini Vision)', marginLeft, pageHeight - 11);
+
+        const reductionPct = Math.round((1 - (totalPages / originalPages)) * 100);
+        const condStr = `Original: ${originalPages} pgs -> Revision: ${totalPages} pgs (${Math.max(0, reductionPct)}% reduction)`;
+        doc.text(`${condStr}  |  Page ${i} of ${totalPages}`, pageWidth - marginRight, pageHeight - 11, { align: 'right' });
       }
 
-      const filename = `${(state.magazineMeta.title || 'Current_Affairs').replace(/[^a-zA-Z0-9_-]/g, '_')}_Revision_Notes.pdf`;
+      const filename = `${(state.magazineMeta.title || 'Current_Affairs').replace(/[^a-zA-Z0-9_-]/g, '_')}_1-4th_Revision_Notes.pdf`;
       doc.save(filename);
-      showToast('PDF downloaded successfully with complete text!');
+      showToast(`PDF downloaded: ${totalPages} pages (within 1/4th page budget)!`);
       window.canCloseModal('canExportModal');
     } catch (err) {
       console.error('[PDF Gen Error]', err);

@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Scoped Stylesheet strictly prefixed with can- -->
-  <link rel="stylesheet" href="/features/ca-notes/can.css?v=23">
+  <link rel="stylesheet" href="/features/ca-notes/can.css?v=24">
 </head>
 <body style="margin: 0; padding: 0;">
 
@@ -148,7 +148,7 @@
           <div class="can-control-cluster can-desktop-export-wrap">
             <button class="can-btn-primary" id="canExportBtn">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              <span>Export Notes (PDF/MD)</span>
+              <span>Export 1/4th Notes PDF</span>
             </button>
           </div>
         </div>
@@ -268,7 +268,7 @@
         <div class="can-mobile-floating-bar" id="canMobileFloatingBar">
           <button class="can-btn-primary can-mobile-float-export" onclick="window.canOpenExportModal()">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Export Notes (PDF/MD)</span>
+            <span>Export 1/4th Notes PDF</span>
           </button>
         </div>
 
@@ -285,12 +285,12 @@
         </div>
         <div style="display: flex; flex-direction: column; gap: 14px;">
           <div style="font-size: 13.5px; color: var(--can-text-secondary); line-height: 1.5;">
-            Choose your preferred export format. PDFs are rendered with selectable text, high-yield metadata, and embedded maps.
+            Download your high-yield revision PDF formatted in an ultra-compact 2-column editorial format strictly capped at <strong>&le; 1/4th the pages</strong> of your original magazine with compact handwritten margin annotations.
           </div>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 8px;">
             <button class="can-btn-primary" onclick="window.canExportPdf('all')" style="justify-content: center; padding: 12px;">
-              📄 Download Full PDF
+              📄 Download 1/4th Revision PDF
             </button>
             <button class="can-btn-secondary" onclick="window.canExportMarkdown()" style="justify-content: center; padding: 12px;">
               📝 Download Markdown (.md)
@@ -319,6 +319,6 @@
   </div>
 
   <!-- Feature Script with cache buster -->
-  <script src="/features/ca-notes/can.js?v=23"></script>
+  <script src="/features/ca-notes/can.js?v=24"></script>
 </body>
 </html>
