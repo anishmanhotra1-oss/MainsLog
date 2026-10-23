@@ -1,7 +1,245 @@
 {
   "subject": "Science-Tech",
-  "total": 1280,
+  "total": 1290,
   "questions": [
+    {
+      "id": "sci-upsc-2021-nfc",
+      "subject": "Science-Tech",
+      "year": 2021,
+      "qNo": 68,
+      "type": "statement-based",
+      "question": "With reference to 'Near Field Communication' (NFC) technology, which of the following statements is/are correct?",
+      "statements": [
+        "It is a contactless communication technology that operates at high frequency within a short distance of a few centimeters.",
+        "It can be used in contactless card payment terminals and smartphone digital wallets.",
+        "It requires active battery power on both transmitting and receiving devices to establish a connection."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Wireless Technology",
+      "subTopic": "Short-Range Wireless Protocols",
+      "concept": "NFC operating at 13.56 MHz over distances <= 4 cm via electromagnetic induction; passive NFC tags require no battery power.",
+      "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: NFC operates on electromagnetic induction, enabling an active reader to power unpowered passive tags (such as transit cards, metro tokens, or smart posters) without any battery on the receiving tag.",
+      "trap": "Assuming both devices require batteries; passive NFC cards and key fobs are entirely unpowered."
+    },
+    {
+      "id": "sci-upsc-2023-fusion",
+      "subject": "Science-Tech",
+      "year": 2023,
+      "qNo": 62,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding Nuclear Fusion and Nuclear Fission:",
+      "statements": [
+        "Nuclear fission splits heavy atomic nuclei, while nuclear fusion combines light atomic nuclei.",
+        "Nuclear fusion produces virtually no long-lived radioactive nuclear waste compared to fission.",
+        "The International Thermonuclear Experimental Reactor (ITER) in France uses a Tokamak magnetic confinement device to achieve controlled fusion."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Nuclear Physics & Energy",
+      "subTopic": "Fusion vs Fission & ITER",
+      "concept": "Deuterium-Tritium fusion producing helium and energetic neutrons without high-level transuranic actinides, confined by magnetic fields in a Tokamak.",
+      "explanation": "All three statements are correct. Fission splits heavy elements like Uranium-235 yielding radioactive fission products. Fusion joins isotopes of hydrogen (Deuterium and Tritium) to create Helium, producing 4 times more energy per mass without long-lived radioactive waste or risk of runaway meltdown. ITER in Cadarache, France (in which India is a full partner) is the world's largest magnetic confinement Tokamak.",
+      "trap": "Thinking fusion causes radioactive waste like spent uranium rods; its primary byproduct is non-toxic helium."
+    },
+    {
+      "id": "sci-upsc-2022-lifi",
+      "subject": "Science-Tech",
+      "year": 2022,
+      "qNo": 59,
+      "type": "conceptual",
+      "question": "With reference to 'LiFi' (Light Fidelity) technology, which of the following statements is/are correct?",
+      "statements": [
+        "It uses light-emitting diodes (LEDs) for wireless transmission of data.",
+        "It can transmit data at speeds significantly higher than conventional WiFi.",
+        "It cannot pass through opaque walls, providing enhanced physical security against unauthorized interception."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Communications Technology",
+      "subTopic": "Visible Light Communication (VLC)",
+      "concept": "LiFi modulates light waves from LEDs at gigabit speeds; optical spectrum is 10,000 times broader than radio frequencies and cannot penetrate opaque walls.",
+      "explanation": "All three statements are correct. LiFi uses the visible light spectrum from LEDs pulsing at imperceptible microsecond rates to transmit binary data. Because light cannot penetrate opaque barriers, LiFi signals cannot be intercepted outside the room, making it highly secure in defense, hospitals, and aircraft cabins.",
+      "trap": "Thinking the inability to pass through walls is a weakness; in secure communication, optical confinement is an intentional security asset."
+    },
+    {
+      "id": "sci-upsc-2020-blockchain",
+      "subject": "Science-Tech",
+      "year": 2020,
+      "qNo": 54,
+      "type": "statement-based",
+      "question": "With reference to 'Blockchain Technology', consider the following statements:",
+      "statements": [
+        "It is a public ledger that everyone can inspect, but which no single user controls.",
+        "The structure and design of blockchain is such that all the data in it are about cryptocurrency only.",
+        "Applications that depend on basic features of blockchain can be developed without anybody's permission."
+      ],
+      "options": {
+        "a": "1 only",
+        "b": "1 and 2 only",
+        "c": "2 only",
+        "d": "1 and 3 only"
+      },
+      "answer": "d",
+      "topic": "Information Technology",
+      "subTopic": "Distributed Ledger Technology",
+      "concept": "Permissionless distributed consensus ledger applicable beyond cryptocurrency to land records, voting, intellectual property, and supply chains.",
+      "explanation": "Statements 1 and 3 are correct. Statement 2 is incorrect: While cryptocurrency (like Bitcoin) was the first major application of blockchain, the technology itself is an immutable distributed database applicable to supply chains, health records, smart contracts, voting systems, and property registries.",
+      "trap": "Statement 2 contains the extreme limiter 'only'; blockchain is definitely not limited solely to cryptocurrencies."
+    },
+    {
+      "id": "sci-upsc-2023-cart",
+      "subject": "Science-Tech",
+      "year": 2023,
+      "qNo": 47,
+      "type": "conceptual",
+      "question": "The term 'CAR-T Cell Therapy', recently approved in India as 'NexCAR19', is used in the treatment of:",
+      "statements": [],
+      "options": {
+        "a": "Certain types of blood cancer like leukemia and lymphoma",
+        "b": "Advanced drug-resistant tuberculosis",
+        "c": "Autoimmune neurodegenerative disorders like Alzheimer's",
+        "d": "Chronic viral hepatitis B and C"
+      },
+      "answer": "a",
+      "topic": "Biotechnology & Health",
+      "subTopic": "Immunotherapy & Oncology",
+      "concept": "Chimeric Antigen Receptor T-cell therapy genetically modifying a patient's own T-lymphocytes to express receptors targeting CD19 proteins on malignant B-cells.",
+      "explanation": "CAR-T (Chimeric Antigen Receptor T-cell) therapy is a breakthrough living drug immunotherapy where a patient's own T-cells are harvested, genetically modified in a laboratory to produce chimeric receptors that target cancer cells, and re-infused. India's CDSCO approved NexCAR19 for treating relapsed B-cell lymphomas and leukemia.",
+      "trap": "Assuming CAR-T is an antibiotic for bacterial infections like tuberculosis."
+    },
+    {
+      "id": "sci-upsc-2022-solidstate",
+      "subject": "Science-Tech",
+      "year": 2022,
+      "qNo": 43,
+      "type": "statement-based",
+      "question": "With reference to 'Solid-State Batteries', consider the following statements:",
+      "statements": [
+        "They replace the liquid electrolyte found in conventional lithium-ion batteries with a solid electrolyte.",
+        "They have higher energy density and faster charging capabilities compared to liquid lithium-ion batteries.",
+        "They have a substantially lower risk of catching fire because they do not contain flammable volatile liquid solvents."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Energy Storage",
+      "subTopic": "Next-Gen Battery Technology",
+      "concept": "Solid-state electrolyte (ceramic/polymer) eliminating thermal runaway fire risks while permitting lithium metal anodes with double the energy density.",
+      "explanation": "All three statements are correct. Conventional Li-ion batteries use liquid organic electrolytes that are flammable and can cause thermal runaway. Solid-state batteries use solid electrolytes (ceramics, sulfides, or solid polymers), drastically improving fire safety, allowing higher packing density, and facilitating ultra-fast charging.",
+      "trap": "Assuming solid-state batteries are slower to charge; solid electrolytes actually support higher current densities without dendrite short-circuits."
+    },
+    {
+      "id": "sci-upsc-2021-crispr",
+      "subject": "Science-Tech",
+      "year": 2021,
+      "qNo": 36,
+      "type": "conceptual",
+      "question": "What is the Cas9 protein that is frequently mentioned in biotechnology and medical science news?",
+      "statements": [],
+      "options": {
+        "a": "A molecular scissors used in targeted gene editing",
+        "b": "A biosensor used in the early detection of infectious diseases",
+        "c": "A gene that makes plants resistant to pest attacks",
+        "d": "A structural protein used in tissue regeneration"
+      },
+      "answer": "a",
+      "topic": "Biotechnology",
+      "subTopic": "CRISPR-Cas9 Gene Editing",
+      "concept": "CRISPR-Cas9 endonuclease guided by synthetic guide RNA (gRNA) to introduce double-stranded breaks at specific DNA sequences.",
+      "explanation": "Cas9 (CRISPR-associated protein 9) is an endonuclease enzyme that acts as molecular scissors, cutting DNA strands at specific locations specified by a guide RNA sequence. This allows genes to be altered, deleted, or replaced with extreme precision, earning Emmanuelle Charpentier and Jennifer Doudna the 2020 Nobel Prize in Chemistry.",
+      "trap": "Thinking Cas9 is a plant gene or vaccine antigen."
+    },
+    {
+      "id": "sci-upsc-2023-greenhydrogen",
+      "subject": "Science-Tech",
+      "year": 2023,
+      "qNo": 32,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding 'Green Hydrogen':",
+      "statements": [
+        "It is produced by the electrolysis of water utilizing renewable electricity.",
+        "It emits zero greenhouse gas emissions at the point of production.",
+        "It can be directly blended with natural gas for city gas distribution pipelines."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Energy Technology",
+      "subTopic": "Hydrogen Economy",
+      "concept": "Electrolysis of water powered by solar/wind energy yielding H2 and O2 with zero emissions, with blending capability up to 15-20% in existing natural gas networks.",
+      "explanation": "All three statements are correct. Green hydrogen is produced by splitting water (H2O) into hydrogen and oxygen through electrolysis powered by renewable energy (solar, wind). At production, only pure oxygen is released as a byproduct. NTPC and other utilities have demonstrated blending green hydrogen up to 8-15% into piped natural gas (PNG) networks.",
+      "trap": "Confusing Green hydrogen with Blue hydrogen (produced from natural gas with carbon capture) or Grey hydrogen (unmitigated natural gas reforming)."
+    },
+    {
+      "id": "sci-upsc-2022-web3",
+      "subject": "Science-Tech",
+      "year": 2022,
+      "qNo": 24,
+      "type": "statement-based",
+      "question": "With reference to 'Web 3.0', consider the following statements:",
+      "statements": [
+        "Web 3.0 technology enables people to control their own data through decentralized ledger protocols.",
+        "In Web 3.0 world, there can be blockchain-based social networks.",
+        "Web 3.0 is operated by a consortium of major multinational tech conglomerates rather than individual users."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "a",
+      "topic": "Information Technology",
+      "subTopic": "Web 3.0 & Decentralization",
+      "concept": "Evolution from Web 1.0 (read-only) and Web 2.0 (read-write centralized platforms) to Web 3.0 (read-write-own decentralized blockchain ecosystem).",
+      "explanation": "Statements 1 and 2 are correct. Statement 3 is incorrect: Web 3.0 is explicitly built on decentralized peer-to-peer networks to eliminate the monopoly of centralized tech conglomerates (Big Tech) that dominate Web 2.0. Users retain cryptographic custody of their personal data and identity.",
+      "trap": "Statement 3 directly inverts the core philosophical premise of Web 3.0, which is anti-monopoly decentralization."
+    },
+    {
+      "id": "sci-upsc-2023-quantum",
+      "subject": "Science-Tech",
+      "year": 2023,
+      "qNo": 21,
+      "type": "conceptual",
+      "question": "Which of the following principles forms the foundation of 'Quantum Key Distribution' (QKD)?",
+      "statements": [],
+      "options": {
+        "a": "Quantum entanglement and the No-Cloning Theorem",
+        "b": "Superconductivity at room temperature",
+        "c": "Electromagnetic induction in silicon chips",
+        "d": "Radioactive decay of unstable isotopes"
+      },
+      "answer": "a",
+      "topic": "Emerging Tech",
+      "subTopic": "Quantum Cryptography",
+      "concept": "QKD uses quantum mechanics principles (superposition and no-cloning theorem) to transmit cryptographic keys. Any eavesdropping attempt irrevocably alters the quantum states and is instantly detected.",
+      "explanation": "Quantum Key Distribution relies on quantum physics principles, primarily quantum entanglement and the No-Cloning theorem (which states that an unknown quantum state cannot be copied without alteration). If a third party attempts to intercept the quantum key photons, the quantum wave function collapses, instantly alerting the communicators.",
+      "trap": "Option B sounds scientific but room-temperature superconductivity is unrelated to cryptographic encryption."
+    },
     {
       "id": "scitech-2024-06",
       "subject": "Science-Tech",

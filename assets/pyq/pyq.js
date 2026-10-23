@@ -101,7 +101,20 @@
       userAnswers: loadMeta('pyq_answers'),
       quizHistory: (function() {
         const h = loadMeta('pyq_daily_quiz_history_v1');
-        return Array.isArray(h) ? h : [];
+        if (!Array.isArray(h)) return [];
+        // Strictly filter out any old corrupted record containing dummy placeholder options
+        const filtered = h.filter(record => {
+          if (!record.questions || !record.questions.length) return true;
+          return record.questions.every(q => {
+            const a = (q.options && q.options.a) || '';
+            const qT = (q.question || '').trim();
+            return !a.toLowerCase().includes('as stated in') && !a.toLowerCase().includes('as mentioned in') && !qT.startsWith('Question ');
+          });
+        });
+        if (filtered.length !== h.length) {
+          saveMeta('pyq_daily_quiz_history_v1', filtered);
+        }
+        return filtered;
       })(),
       activeQuiz: null,
       quizTab: 'take', // 'take' | 'results' | 'history'
@@ -2040,6 +2053,58 @@
       }
     }
 
+    function cleanQuizStr(str) {
+      if (!str) return '';
+      return str
+        .replace(/\|\s*/g, ' ')
+        .replace(/ForumIAS\s*/gi, '')
+        .replace(/PYQ\s*Workbook\s*/gi, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function sanitizeQuestion(q) {
+      if (!q) return null;
+      const rawQ = (q.question || '').trim();
+      if (rawQ.length < 25) return null;
+      // Strictly discard generic placeholders like "Question 54 on Geomorphology..."
+      if (/^Question\s+\d+\s+on\s+/i.test(rawQ) && rawQ.length < 130) return null;
+
+      const opts = q.options;
+      if (!opts || typeof opts !== 'object') return null;
+
+      const a = cleanQuizStr(opts.a);
+      const b = cleanQuizStr(opts.b);
+      const c = cleanQuizStr(opts.c);
+      const d = cleanQuizStr(opts.d);
+
+      if (!a || !b || !c || !d) return null;
+
+      const isPlaceholder = str => {
+        const s = str.toLowerCase();
+        return s.includes('as stated in') ||
+               s.includes('as mentioned in') ||
+               (s.startsWith('option a') && s.length < 18) ||
+               (s.startsWith('option b') && s.length < 18) ||
+               (s.startsWith('option c') && s.length < 18) ||
+               (s.startsWith('option d') && s.length < 18) ||
+               s.length < 2;
+      };
+
+      if (isPlaceholder(a) || isPlaceholder(b) || isPlaceholder(c) || isPlaceholder(d)) return null;
+
+      const ans = (q.answer || '').toLowerCase().trim();
+      if (!['a', 'b', 'c', 'd'].includes(ans)) return null;
+
+      const qText = cleanQuizStr(rawQ);
+      return {
+        ...q,
+        question: qText,
+        options: { a, b, c, d },
+        answer: ans
+      };
+    }
+
     async function generateDailyQuizQuestions(dateStr) {
       const cacheKey = 'pyq_daily_quiz_cache_' + dateStr;
       try {
@@ -2047,12 +2112,18 @@
         if (cached) {
           const parsed = JSON.parse(cached);
           if (Array.isArray(parsed) && parsed.length === 20) {
-            return parsed;
+            // Verify all 20 questions in cache are 100% genuine (evict old dummy cache)
+            const allClean = parsed.every(q => sanitizeQuestion(q) !== null);
+            if (allClean) {
+              return parsed;
+            } else {
+              localStorage.removeItem(cacheKey);
+            }
           }
         }
       } catch (e) {}
 
-      // Distribution across all 8,265+ questions:
+      // Authentic UPSC Prelims distribution:
       // Polity: 4, Economy: 4, History: 4, Geography: 3, Environment: 3, Science-Tech: 2 = 20 Qs
       const plan = [
         { subject: 'polity', count: 4 },
@@ -2069,16 +2140,17 @@
       const selected = [];
       plan.forEach((p, idx) => {
         const qs = allSubjectData[idx] || [];
-        if (!qs.length) return;
+        const cleanPool = qs.map(sanitizeQuestion).filter(Boolean);
+        if (!cleanPool.length) return;
         const picked = new Set();
         let attempts = 0;
-        while (picked.size < p.count && attempts < 150) {
+        while (picked.size < p.count && attempts < 350) {
           attempts++;
-          const rIdx = Math.floor(rand() * qs.length);
+          const rIdx = Math.floor(rand() * cleanPool.length);
           picked.add(rIdx);
         }
         picked.forEach(rIdx => {
-          selected.push(qs[rIdx]);
+          selected.push(cleanPool[rIdx]);
         });
       });
 
@@ -2151,9 +2223,16 @@
           if (savedActive) {
             const parsed = JSON.parse(savedActive);
             if (parsed && parsed.dateStr && Array.isArray(parsed.questions) && parsed.questions.length === 20 && parsed.status === 'in_progress') {
-              state.activeQuiz = parsed;
-              state.activeQuiz.flags = new Set(parsed.flags || []);
-              startQuizTimer();
+              // Ensure all questions are 100% genuine, evict corrupted session if any
+              const allClean = parsed.questions.every(q => sanitizeQuestion(q) !== null);
+              if (allClean) {
+                state.activeQuiz = parsed;
+                state.activeQuiz.flags = new Set(parsed.flags || []);
+                startQuizTimer();
+              } else {
+                localStorage.removeItem('pyq_active_quiz_session');
+                localStorage.removeItem('pyq_daily_quiz_cache_' + parsed.dateStr);
+              }
             }
           }
         } catch (e) {}

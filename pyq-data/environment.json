@@ -1,7 +1,237 @@
 {
   "subject": "Environment",
-  "total": 627,
+  "total": 637,
   "questions": [
+    {
+      "id": "env-upsc-2021-gphotovoltaic",
+      "subject": "Environment",
+      "year": 2021,
+      "qNo": 52,
+      "type": "conceptual",
+      "question": "Which of the following pollutants are commonly released into the atmosphere by coal-fired thermal power plants?",
+      "statements": [],
+      "options": {
+        "a": "Oxides of nitrogen, Oxides of sulphur, and Mercury",
+        "b": "Carbon dioxide, Methane, and Ozone only",
+        "c": "Chlorofluorocarbons and Lead only",
+        "d": "Cadmium and Asbestos only"
+      },
+      "answer": "a",
+      "topic": "Pollution",
+      "subTopic": "Thermal Power Emissions & Heavy Metals",
+      "concept": "Combustion of high-ash Indian coal emitting SO2, NOx, particulate fly ash, and volatile trace heavy metals like mercury (Hg).",
+      "explanation": "Coal-fired thermal power plants emit substantial quantities of sulfur dioxide (SOx), nitrogen oxides (NOx), and fly ash particulates. Additionally, because coal contains natural trace quantities of heavy metals, coal combustion is the single largest anthropogenic source of atmospheric mercury (Hg) pollution in India.",
+      "trap": "Overlooking Mercury (Hg) as a major coal-fired power plant emission."
+    },
+    {
+      "id": "env-upsc-2022-mondeur",
+      "subject": "Environment",
+      "year": 2022,
+      "qNo": 48,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding the Montreal Protocol and its Kigali Amendment:",
+      "statements": [
+        "The Montreal Protocol was designed to phase out Chlorofluorocarbons (CFCs) and Halons.",
+        "The Kigali Amendment aims to phase down Hydrofluorocarbons (HFCs), which are potent greenhouse gases despite not being ozone-depleting.",
+        "India has agreed to phase down its HFC consumption by 80% by the year 2047."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Climate Change",
+      "subTopic": "International Protocols",
+      "concept": "Montreal Protocol 1987 (ozone layer preservation) and Kigali Amendment 2016 (phasing down high-GWP HFC coolants).",
+      "explanation": "All statements are correct. The original 1987 Montreal Protocol successfully eliminated major ozone-depleting substances. The 2016 Kigali Amendment extended the treaty to HFCs, which were adopted as non-ozone-depleting substitutes for CFCs but possess global warming potentials thousands of times higher than CO2. India belongs to Group 2 developing countries with an 80% reduction target by 2047.",
+      "trap": "Assuming HFCs damage ozone layer; HFCs do not deplete ozone, but their severe greenhouse warming potency necessitated the Kigali Amendment."
+    },
+    {
+      "id": "env-upsc-2023-wpa2022",
+      "subject": "Environment",
+      "year": 2023,
+      "qNo": 41,
+      "type": "statement-based",
+      "question": "With reference to the Wild Life (Protection) Amendment Act, 2022, consider the following statements:",
+      "statements": [
+        "The number of schedules has been reduced from six to four.",
+        "Schedule I provides the highest level of legal protection for specially protected animals.",
+        "A dedicated schedule has been introduced to implement the CITES convention regarding specimen regulation."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Environmental Governance",
+      "subTopic": "Wildlife Legislation",
+      "concept": "Rationalization of Wildlife Protection Act schedules: Schedule I (highest protection), Schedule II (lesser protection), Schedule III (protected plants), Schedule IV (CITES specimens).",
+      "explanation": "All three statements are correct. The 2022 Amendment restructured the schedules from 6 to 4: Schedule I for animal species enjoying highest protection; Schedule II for animal species with lesser protection; Schedule III for protected plant species; and Schedule IV for specimens listed in the Appendices of CITES.",
+      "trap": "Thinking vermin (formerly Schedule V) still has its own schedule; vermin designation is now handled by central notification."
+    },
+    {
+      "id": "env-upsc-2020-bod",
+      "subject": "Environment",
+      "year": 2020,
+      "qNo": 35,
+      "type": "conceptual",
+      "question": "Biochemical Oxygen Demand (BOD) is a standard criterion for:",
+      "statements": [],
+      "options": {
+        "a": "Measuring oxygen levels in blood",
+        "b": "Computing-oxygen levels in forest ecosystems",
+        "c": "Pollution assay in aquatic ecosystems",
+        "d": "Assessing oxygen levels in high altitude regions"
+      },
+      "answer": "c",
+      "topic": "Pollution",
+      "subTopic": "Water Quality Parameters",
+      "concept": "BOD measures the amount of dissolved oxygen consumed by aerobic microorganisms to decompose organic matter in a water sample over 5 days at 20°C.",
+      "explanation": "Biochemical Oxygen Demand (BOD) is the fundamental empirical parameter used to assess organic pollution in aquatic ecosystems. Higher BOD indicates greater organic pollution, as decomposing microbes rapidly consume dissolved oxygen, threatening aquatic life.",
+      "trap": "Confusing BOD with chemical oxygen demand (COD) or medical blood oxygen tests."
+    },
+    {
+      "id": "env-upsc-2023-invasive",
+      "subject": "Environment",
+      "year": 2023,
+      "qNo": 31,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding Invasive Alien Species in India:",
+      "statements": [
+        "Lantana camara has invaded large tracts of forest understories across central and peninsular India.",
+        "Prosopis juliflora was originally introduced to combat desertification and fuel shortages.",
+        "Water hyacinth (Eichhornia crassipes) is known as the 'Terror of Bengal' because it drains oxygen from water bodies causing fish mortality."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Ecology & Biodiversity",
+      "subTopic": "Invasive Alien Flora",
+      "concept": "Ecological impacts of introduced exotic species outcompeting native flora, reducing herbivore forage, and eutrophying aquatic systems.",
+      "explanation": "All three statements are correct. Lantana camara suppresses native grass regeneration across 40% of Indian tiger reserves. Prosopis juliflora was introduced from tropical America to stabilize sand dunes in arid zones. Water hyacinth rapidly multiplies in water bodies, blocks sunlight, depletes dissolved oxygen (BOD surge), and decimates aquatic fauna.",
+      "trap": "Believing Water Hyacinth is native to Bengal rather than an introduced Amazonian weed."
+    },
+    {
+      "id": "env-upsc-2022-carbonfert",
+      "subject": "Environment",
+      "year": 2022,
+      "qNo": 25,
+      "type": "conceptual",
+      "question": "Which of the following statements best describes the phenomenon of 'Carbon Fertilization'?",
+      "statements": [],
+      "options": {
+        "a": "Increased plant growth due to increased concentration of carbon dioxide in the atmosphere",
+        "b": "Increased temperature of Earth due to increased concentration of greenhouse gases",
+        "c": "Increased acidity of oceans as a result of increased absorption of carbon dioxide",
+        "d": "Adaptation of all living beings on Earth to the climate change brought about by greenhouse emissions"
+      },
+      "answer": "a",
+      "topic": "Climate Change",
+      "subTopic": "Plant Physiology & Atmospheric CO2",
+      "concept": "Enhanced photosynthetic efficiency in C3 plants under elevated atmospheric CO2 levels, leading to increased biomass accumulation.",
+      "explanation": "Carbon fertilization refers to the accelerated rate of photosynthesis and enhanced plant growth resulting from elevated levels of atmospheric carbon dioxide. Because CO2 is a limiting substrate for Rubisco enzyme in C3 plants, higher concentrations spur higher biomass yield (though often reducing micronutrient density).",
+      "trap": "Option C describes ocean acidification, not carbon fertilization."
+    },
+    {
+      "id": "env-upsc-2020-biochar",
+      "subject": "Environment",
+      "year": 2020,
+      "qNo": 29,
+      "type": "statement-based",
+      "question": "With reference to 'Biochar' in farming, which of the following statements is/are correct?",
+      "statements": [
+        "Biochar can be used as a part of the growing medium in vertical farming.",
+        "When biochar is a part of the growing medium, it promotes the growth of nitrogen-fixing microorganisms.",
+        "When biochar is a part of the growing medium, it enables the growing medium to retain water for a longer time."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Agriculture & Soil Science",
+      "subTopic": "Sustainable Agriculture & Carbon Sinks",
+      "concept": "Pyrolysis of biomass producing high-surface-area porous carbon that enhances water retention, nutrient cation exchange, and microbial habitats.",
+      "explanation": "All three statements are correct. Biochar is highly porous and retains moisture and nutrients, making it ideal for vertical farming and hydroponic media. Its porous architecture creates protective micro-habitats for beneficial soil microorganisms including mycorrhizae and nitrogen-fixing bacteria.",
+      "trap": "Assuming biochar is toxic to soil bacteria because it is produced through charcoal-like pyrolysis."
+    },
+    {
+      "id": "env-upsc-2021-bluecarbon",
+      "subject": "Environment",
+      "year": 2021,
+      "qNo": 23,
+      "type": "conceptual",
+      "question": "What is 'Blue Carbon'?",
+      "statements": [],
+      "options": {
+        "a": "Carbon captured by oceans and coastal ecosystems",
+        "b": "Carbon sequestered in forest biomass and agricultural soils",
+        "c": "Carbon contained in petroleum and natural gas deposits",
+        "d": "Carbon present in the atmosphere causing oceanic warming"
+      },
+      "answer": "a",
+      "topic": "Climate Change",
+      "subTopic": "Carbon Sequestration",
+      "concept": "Coastal vegetated ecosystems (mangroves, tidal marshes, seagrass meadows) sequestering carbon at rates up to 10 times higher than terrestrial forests.",
+      "explanation": "Blue carbon is the carbon stored in coastal and marine ecosystems such as mangroves, tidal marshes, and seagrasses. These ecosystems sequester and store large quantities of carbon in both their biomass and sediment, mitigating climate change.",
+      "trap": "Confusing blue carbon with oceanic pollution or petroleum deposits."
+    },
+    {
+      "id": "env-upsc-2022-biorock",
+      "subject": "Environment",
+      "year": 2022,
+      "qNo": 18,
+      "type": "conceptual",
+      "question": "The term 'Biorock technology' is talked about in which of the following contexts?",
+      "statements": [],
+      "options": {
+        "a": "Restoration of damaged coral reefs",
+        "b": "Development of building materials using plant residues",
+        "c": "Identification of areas for exploration of shale gas",
+        "d": "Providing salt licks for wild animals in protected areas"
+      },
+      "answer": "a",
+      "topic": "Marine Ecology",
+      "subTopic": "Coral Reef Conservation",
+      "concept": "Mineral Accretion Technology (Seament / Biorock) applying low-voltage direct current through seawater to precipitate calcium carbonate onto steel structures, speeding up coral growth.",
+      "explanation": "Biorock is the trademark name for mineral accretion technology used to restore degraded coral reefs. Low voltage electrical currents are passed through seawater, precipitating dissolved calcium and magnesium onto steel mesh, creating a limestone structure upon which corals grow 3 to 5 times faster than normal.",
+      "trap": "Candidates often confuse Biorock with building materials or eco-friendly concrete due to the word 'rock'."
+    },
+    {
+      "id": "env-upsc-2023-ramsar",
+      "subject": "Environment",
+      "year": 2023,
+      "qNo": 17,
+      "type": "statement-based",
+      "question": "Consider the following statements regarding the Ramsar Convention on Wetlands:",
+      "statements": [
+        "India is a signatory to the Ramsar Convention and has designated over 75 wetlands of international importance.",
+        "The Montreux Record is a register of wetland sites on the List of Ramsar wetlands where changes in ecological character have occurred, are occurring, or are likely to occur.",
+        "Keoladeo National Park and Loktak Lake are currently included in the Montreux Record."
+      ],
+      "options": {
+        "a": "1 and 2 only",
+        "b": "2 and 3 only",
+        "c": "1 and 3 only",
+        "d": "1, 2 and 3"
+      },
+      "answer": "d",
+      "topic": "Ecology & Biodiversity",
+      "subTopic": "Wetlands & International Conventions",
+      "concept": "Ramsar Convention criteria and Montreux Record mechanisms for endangered wetlands.",
+      "explanation": "All three statements are correct. India currently has 85 Ramsar sites. The Montreux Record is maintained as part of the Ramsar List to highlight sites facing acute ecological threats. Keoladeo National Park (Rajasthan) and Loktak Lake (Manipur) remain on the Montreux Record (Chilika Lake was successfully removed in 2002 after ecological restoration).",
+      "trap": "Candidates often assume Chilika Lake is still on the Montreux Record, forgetting it was removed in 2002 due to successful desiltation."
+    },
     {
       "id": "env-2024-05",
       "subject": "Environment",
