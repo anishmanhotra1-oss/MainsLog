@@ -834,6 +834,7 @@
 
   // Export for external callers (e.g. from gs.html or sociology.html)
   const rootObj = typeof window !== 'undefined' ? window : globalThis;
+  rootObj.mountValueAddition = mountValueAddition;
   rootObj.TOPPER_VALUE_ADDITION = {
     mount: mountValueAddition,
     renderInto: renderInto,

@@ -506,5 +506,41 @@
   .fw-root { padding: 1.2rem; }
   .fw-grid-2 { grid-template-columns: 1fr; }
   .fw-comp-grid { grid-template-columns: 1fr; }
-  .topper-framework-banner { padding: 1.5rem; }
+  .topper-framework-banner {
+    padding: 1.35rem 1rem !important;
+    border-radius: 16px !important;
+  }
+  .tf-title {
+    font-size: 1.35rem !important;
+  }
+  .tf-desc {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.2rem !important;
+  }
+  .tf-cta-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+  }
+  .tf-btn {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    min-height: 44px !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    text-decoration: none !important;
+  }
+  .tf-drawer {
+    margin-top: 1.2rem !important;
+    padding: 1rem !important;
+    border-radius: 14px !important;
+  }
 }

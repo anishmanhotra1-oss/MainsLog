@@ -1,5 +1,5 @@
 // MainsLog PWA Service Worker with Push Notifications & Study Slot Reminders
-const CACHE_NAME = 'mainslog-pwa-v33';
+const CACHE_NAME = 'mainslog-pwa-v34';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -24,16 +24,23 @@ const ASSETS_TO_CACHE = [
   './favicon.ico',
   './favicon.png',
   './favicon.svg',
-  './apple-touch-icon.png',
-  'https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap'
+  './apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('[PWA SW] Pre-caching static assets');
-      return cache.addAll(ASSETS_TO_CACHE);
+    caches.open(CACHE_NAME).then(async (cache) => {
+      console.log('[PWA SW] Pre-caching static assets for', CACHE_NAME);
+      await Promise.allSettled(
+        ASSETS_TO_CACHE.map(async (url) => {
+          try {
+            await cache.add(url);
+          } catch (err) {
+            console.warn('[PWA SW] Skipped non-critical asset:', url);
+          }
+        })
+      );
     })
   );
 });

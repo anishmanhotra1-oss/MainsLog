@@ -825,13 +825,28 @@
     loadState();
     buildActiveDeck();
     renderUI();
+    if ((!window.FLASHCARDS_DATA || !window.FLASHCARDS_DATA.polity) && typeof window !== 'undefined') {
+      let attempts = 0;
+      const retryTimer = setInterval(() => {
+        attempts++;
+        if (window.FLASHCARDS_DATA && window.FLASHCARDS_DATA.polity) {
+          clearInterval(retryTimer);
+          buildActiveDeck();
+          renderUI();
+        } else if (attempts > 60) {
+          clearInterval(retryTimer);
+        }
+      }, 80);
+    }
   };
 
-  // Auto-init on DOMContentLoaded
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', window.initFlashcardsModule);
-  } else {
-    setTimeout(window.initFlashcardsModule, 50);
+  // Auto-init on DOMContentLoaded or immediately
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', window.initFlashcardsModule);
+    } else {
+      setTimeout(window.initFlashcardsModule, 10);
+    }
   }
 
 })();

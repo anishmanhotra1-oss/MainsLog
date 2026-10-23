@@ -910,14 +910,46 @@
    ============================================================ */
 @media (max-width: 768px) {
   .recall-mode-switcher-wrap {
-    padding: 4px;
-    gap: 4px;
+    display: flex !important;
+    padding: 5px !important;
+    gap: 6px !important;
+    background: #F8FAFC !important;
+    border: 1.5px solid #CBD5E1 !important;
+    border-radius: 14px !important;
+    margin-bottom: 16px !important;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
   }
 
   .recall-mode-btn {
-    padding: 10px 12px;
-    font-size: 12px;
-    gap: 6px;
+    flex: 1 !important;
+    padding: 10px 8px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    min-height: 44px !important;
+    border-radius: 10px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+  }
+
+  .recall-mode-btn.active {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 3px 10px rgba(37, 99, 235, 0.35) !important;
+    border: 1px solid #2563EB !important;
+  }
+
+  .recall-mode-btn:not(.active) {
+    background: #FFFFFF !important;
+    color: #475569 !important;
+    border: 1px solid #E2E8F0 !important;
+  }
+
+  .recall-mode-badge-new {
+    display: none !important;
   }
 
   .fc-header-card {
