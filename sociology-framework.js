@@ -26,6 +26,7 @@
         <button class="fw-nav-btn" data-sub="diagrams">📊 10 Diagram Archetypes</button>
         <button class="fw-nav-btn" data-sub="walkthrough">🔍 Model Walkthrough</button>
         <button class="fw-nav-btn" data-sub="thinkers">🧠 Top 25 Thinkers Matrix</button>
+        <button class="fw-nav-btn" data-sub="va-engine" style="background:rgba(5,150,105,0.12); border-color:#10b981; color:#047857; font-weight:700;">💎 Value Addition Engine</button>
       </div>
 
       <!-- SECTION 1: TRIANGULATION ENGINE -->
@@ -336,6 +337,11 @@
           </table>
         </div>
       </div>
+
+      <!-- SECTION 7: VALUE ADDITION ENGINE -->
+      <div class="fw-section" id="soc-sub-va-engine">
+        <div id="socFwVaMount"></div>
+      </div>
     </div>
   `;
 
@@ -352,6 +358,9 @@
             document.querySelectorAll('#socFrameworkContainer .fw-section').forEach(sec => {
               sec.classList.toggle('active', sec.id === 'soc-sub-' + sub);
             });
+            if (sub === 'va-engine' && window.TOPPER_VALUE_ADDITION) {
+              window.TOPPER_VALUE_ADDITION.renderInto(document.getElementById('socFwVaMount'));
+            }
           });
         });
       }

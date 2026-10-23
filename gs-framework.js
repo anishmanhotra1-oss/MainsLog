@@ -29,6 +29,7 @@
         <button class="fw-nav-btn" data-sub="gs4">🧭 GS-4 (Ethics & Cases)</button>
         <button class="fw-nav-btn" data-sub="walkthrough">🔍 Model Walkthrough</button>
         <button class="fw-nav-btn" data-sub="checklist">✅ 15-Sec Checklist</button>
+        <button class="fw-nav-btn" data-sub="va-engine" style="background:rgba(217,119,6,0.12); border-color:#f59e0b; color:#b45309; font-weight:700;">💎 Value Addition Engine</button>
       </div>
 
       <!-- SECTION 1: UNIVERSAL ARCHITECTURE -->
@@ -467,6 +468,11 @@
           </div>
         </div>
       </div>
+
+      <!-- SECTION 9: VALUE ADDITION ENGINE -->
+      <div class="fw-section" id="sub-va-engine">
+        <div id="gsFwVaMount"></div>
+      </div>
     </div>
   `;
 
@@ -488,6 +494,9 @@
             document.querySelectorAll('#gsFrameworkContainer .fw-section').forEach(sec => {
               sec.classList.toggle('active', sec.id === 'sub-' + sub);
             });
+            if (sub === 'va-engine' && window.TOPPER_VALUE_ADDITION) {
+              window.TOPPER_VALUE_ADDITION.renderInto(document.getElementById('gsFwVaMount'));
+            }
           });
         });
       }

@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="framework.css">
+<link rel="stylesheet" href="topper-value-addition.css">
 <style>
 :root{
   --bg:#F8FAFC; --bg2:#FFFFFF; --card:#FFFFFF;
@@ -171,6 +172,7 @@ footer{max-width:1180px; margin:0 auto; padding:1.5rem 1.5rem 3rem; color:#64748
       <button id="btn-cards" class="active">Cards</button>
       <button id="btn-table">Sheet view</button>
       <button id="btn-framework">🎯 Topper Framework</button>
+      <button id="btn-va-engine" style="color:#047857; font-weight:700;">💎 Value Addition</button>
     </div>
   </div>
   <div class="chiprow" id="paperChips">
@@ -189,6 +191,7 @@ footer{max-width:1180px; margin:0 auto; padding:1.5rem 1.5rem 3rem; color:#64748
     </table>
   </div>
   <div id="frameworkView" class="hidden"></div>
+  <div id="vaEngineView" class="hidden" style="padding-top:0.5rem;"></div>
   <div class="empty hidden" id="emptyState">No entries match that search.</div>
 </main>
 
@@ -241,30 +244,50 @@ document.getElementById('btn-cards').onclick = ()=> switchView('cards');
 document.getElementById('btn-table').onclick = ()=> switchView('table');
 const btnFramework = document.getElementById('btn-framework');
 if (btnFramework) btnFramework.onclick = () => switchView('framework');
+const btnVaEngine = document.getElementById('btn-va-engine');
+if (btnVaEngine) btnVaEngine.onclick = () => switchView('va-engine');
 
 function switchView(v){
   state.view=v;
   document.getElementById('btn-cards').classList.toggle('active', v==='cards');
   document.getElementById('btn-table').classList.toggle('active', v==='table');
   if (btnFramework) btnFramework.classList.toggle('active', v==='framework');
+  if (btnVaEngine) btnVaEngine.classList.toggle('active', v==='va-engine');
   document.getElementById('cardsView').classList.toggle('hidden', v!=='cards');
   document.getElementById('loadMoreBtn').classList.toggle('hidden', v!=='cards');
   document.getElementById('tableWrap').classList.toggle('hidden', v!=='table');
   const fwView = document.getElementById('frameworkView');
+  const vaView = document.getElementById('vaEngineView');
   const paperChips = document.getElementById('paperChips');
+
   if (fwView) {
     fwView.classList.toggle('hidden', v!=='framework');
     if (v === 'framework') {
       if (paperChips) paperChips.classList.add('hidden');
+      if (vaView) vaView.classList.add('hidden');
       countEl.textContent = 'Master Sociology Optional Framework';
       fwView.innerHTML = window.SOCIOLOGY_FRAMEWORK ? window.SOCIOLOGY_FRAMEWORK.html : '<p>Loading Framework...</p>';
       if (window.SOCIOLOGY_FRAMEWORK) window.SOCIOLOGY_FRAMEWORK.init();
       emptyEl.classList.add('hidden');
       return;
-    } else {
-      if (paperChips) paperChips.classList.remove('hidden');
     }
   }
+
+  if (vaView) {
+    vaView.classList.toggle('hidden', v!=='va-engine');
+    if (v === 'va-engine') {
+      if (paperChips) paperChips.classList.add('hidden');
+      if (fwView) fwView.classList.add('hidden');
+      countEl.textContent = 'Topper Value-Addition Engine & Distinct Edge Generator';
+      if (window.TOPPER_VALUE_ADDITION) {
+        window.TOPPER_VALUE_ADDITION.renderInto(vaView);
+      }
+      emptyEl.classList.add('hidden');
+      return;
+    }
+  }
+
+  if (paperChips) paperChips.classList.remove('hidden');
   render();
 }
 
@@ -370,6 +393,8 @@ if (initSearch) {
 const initView = urlParams.get('view');
 if (initView === 'framework' || window.location.hash === '#framework') {
   switchView('framework');
+} else if (initView === 'va' || initView === 'value-addition' || window.location.hash === '#value-addition' || window.location.hash === '#va') {
+  switchView('va-engine');
 } else if (!initView && !initSearch) {
   // Default to framework so users immediately see the master blueprint!
   switchView('framework');
@@ -382,5 +407,6 @@ if (initSub && window.SOCIOLOGY_FRAMEWORK) {
   window.SOCIOLOGY_FRAMEWORK.switchSub(initSub);
 }
 </script>
+<script src="topper-value-addition.js"></script>
 </body>
 </html>
