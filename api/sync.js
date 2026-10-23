@@ -1,6 +1,6 @@
 const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a0898aa8da600d';
 
-let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, PRELIMS_TARGETS_V1: [], EB_ENTRIES: [], PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
+let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, PRELIMS_TARGETS_V1: [], EB_ENTRIES: [], PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, quizHistory: [], updatedAt: 0 }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
 
 async function fetchCloudSyncData() {
   try {
@@ -17,7 +17,7 @@ async function fetchCloudSyncData() {
           SCORE_REGISTER: json.data.SCORE_REGISTER || memorySyncData.SCORE_REGISTER,
           PRELIMS_TARGETS_V1: Array.isArray(json.data.PRELIMS_TARGETS_V1) ? json.data.PRELIMS_TARGETS_V1 : memorySyncData.PRELIMS_TARGETS_V1,
           EB_ENTRIES: Array.isArray(json.data.EB_ENTRIES) ? json.data.EB_ENTRIES : (memorySyncData.EB_ENTRIES || []),
-          PYQ_USER_DATA: json.data.PYQ_USER_DATA || memorySyncData.PYQ_USER_DATA || { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 },
+          PYQ_USER_DATA: json.data.PYQ_USER_DATA || memorySyncData.PYQ_USER_DATA || { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, quizHistory: [], updatedAt: 0 },
           deletedScoreIds: Array.isArray(json.data.deletedScoreIds) ? json.data.deletedScoreIds : memorySyncData.deletedScoreIds,
           deletedEntryIds: Array.isArray(json.data.deletedEntryIds) ? json.data.deletedEntryIds : memorySyncData.deletedEntryIds,
           timestamp: json.data.timestamp || memorySyncData.timestamp
@@ -271,6 +271,22 @@ function mergePyqUserData(existing, incoming) {
     });
   }
 
+  const quizHistoryMap = new Map();
+  if (Array.isArray(ex.quizHistory)) {
+    ex.quizHistory.forEach(q => { if (q && q.id) quizHistoryMap.set(q.id, q); });
+  }
+  if (Array.isArray(inc.quizHistory)) {
+    inc.quizHistory.forEach(q => {
+      if (q && q.id) {
+        const existing = quizHistoryMap.get(q.id);
+        if (!existing || (q.completedAt || 0) >= (existing.completedAt || 0)) {
+          quizHistoryMap.set(q.id, q);
+        }
+      }
+    });
+  }
+  const quizHistory = Array.from(quizHistoryMap.values()).sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0));
+
   const updatedAt = Math.max(parseTime(ex.updatedAt), parseTime(inc.updatedAt), Date.now());
 
   return {
@@ -279,6 +295,7 @@ function mergePyqUserData(existing, incoming) {
     attempted,
     attemptedMeta: mergedAttMeta,
     answers,
+    quizHistory,
     updatedAt
   };
 }
@@ -311,7 +328,7 @@ module.exports = async (req, res) => {
         SCORE_REGISTER: { gs: {}, csat: {} },
         PRELIMS_TARGETS_V1: [],
         EB_ENTRIES: [],
-        PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 },
+        PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, quizHistory: [], updatedAt: 0 },
         deletedScoreIds: [],
         deletedEntryIds: [],
         timestamp: Date.now()

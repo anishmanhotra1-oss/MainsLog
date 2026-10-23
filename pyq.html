@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Scoped Stylesheet for PYQ Section -->
-  <link rel="stylesheet" href="assets/pyq/pyq.css">
+  <link rel="stylesheet" href="assets/pyq/pyq.css?v=25">
 
   <style>
     /* Minimal reset for standalone pyq.html page to prevent white margin flashes */
@@ -88,15 +88,15 @@
           <div class="pyq-stat-card">
             <div class="pyq-stat-icon">📚</div>
             <div class="pyq-stat-body">
-              <div class="pyq-stat-val" id="pyqHeroTotalPyqs">2,470</div>
+              <div class="pyq-stat-val" id="pyqHeroTotalPyqs">8,265</div>
               <div class="pyq-stat-lbl">Questions Analyzed</div>
             </div>
           </div>
-          <div class="pyq-stat-card">
-            <div class="pyq-stat-icon">📅</div>
+          <div class="pyq-stat-card pyq-hero-daily-card" id="pyqHeroDailyQuizCard" style="cursor:pointer;" title="Click to open Today's 20-Question Mixed Quiz">
+            <div class="pyq-stat-icon" style="background:var(--pyq-amber-soft); color:var(--pyq-amber);">⚡</div>
             <div class="pyq-stat-body">
-              <div class="pyq-stat-val" id="pyqHeroYears">1993–2024</div>
-              <div class="pyq-stat-lbl">Year Span Covered</div>
+              <div class="pyq-stat-val" id="pyqHeroDailyQuizVal" style="color:var(--pyq-amber);">20 Qs</div>
+              <div class="pyq-stat-lbl" id="pyqHeroDailyQuizLbl">Daily Mixed Quiz</div>
             </div>
           </div>
           <div class="pyq-stat-card">
@@ -190,6 +190,11 @@
               <span>📝</span>
               <span class="pyq-btn-label">Questions</span>
             </button>
+            <button type="button" class="pyq-view-btn" id="pyqViewQuiz">
+              <span>⚡</span>
+              <span class="pyq-btn-label">Daily Quiz</span>
+              <span class="pyq-view-badge" style="background:#FEF3C7; color:#92400E; font-weight:700;">20 Qs</span>
+            </button>
             <button type="button" class="pyq-view-btn" id="pyqViewAnalytics">
               <span>📊</span>
               <span class="pyq-btn-label">Frequency Matrix</span>
@@ -225,6 +230,11 @@
         <!-- Rendered dynamically by assets/pyq/pyq.js -->
       </section>
 
+      <!-- Daily 20-Question Mixed Quiz & Performance Analytics View (Toggled) -->
+      <section id="pyqQuizView" style="display:none;" aria-label="Daily 20-Question Mixed PYQ Quiz and Performance Analytics">
+        <!-- Rendered dynamically by assets/pyq/pyq.js -->
+      </section>
+
       <!-- Pagination Navigation -->
       <nav class="pyq-pagination" id="pyqPagination" aria-label="Question Pagination Navigation">
         <!-- Rendered dynamically -->
@@ -234,6 +244,6 @@
   </div>
 
   <!-- Isolated Scoped JavaScript Module -->
-  <script src="assets/pyq/pyq.js" defer></script>
+  <script src="assets/pyq/pyq.js?v=25" defer></script>
 </body>
 </html>
