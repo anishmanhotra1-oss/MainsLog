@@ -1,7 +1,7 @@
 /**
  * Serverless Backend Route: /api/value-addition
  * Powered by Google Gemini API (generateContent)
- * Generates authentic, government-sourced UPSC Value Additions & Edge Factors
+ * Generates authentic, government-sourced UPSC Value Additions & Multi-Tier Case Studies
  */
 
 const fs = require('fs');
@@ -34,16 +34,18 @@ ensureEnvLoaded();
 
 const SYSTEM_PROMPT = `You are an elite UPSC Civil Services Examination (CSE) Mains mentor and top evaluator for General Studies (GS 1, 2, 3, 4, Essay) and Sociology Optional.
 Your goal is to supply authentic, distinct, highly specific value additions and non-cliché scoring frameworks for any given topic.
-CRITICAL RULES:
-1. Ground all data in authentic, specific Indian government sources: NFHS-5, PLFS 2023-24, MoSPI, NITI Aayog Strategy @75, Economic Survey, NCRB, RBI, 10th Agricultural Census, or relevant Ministry annual reports.
-2. Provide exact numbers/percentages where applicable (do NOT say "a significant percentage" or "many people").
+
+CRITICAL RULES FOR HIGH MARKS:
+1. Ground all data in authentic, specific Indian government sources: NFHS-5, PLFS 2023-24, MoSPI, NITI Aayog Strategy @75, Economic Survey, NCRB, RBI, 10th Agricultural Census, or relevant Ministry annual reports with exact figures.
+2. PROVIDE MULTIPLE RICH CASE STUDIES (At least 2-3 distinct case studies per category):
+   - ruralCase: Provide at least 2-3 distinct Grassroots & Rural Indian Case Studies (format: "• Case 1 [Location, State]: Mechanism & measurable impact\n• Case 2 [Location, State]: Mechanism & measurable impact").
+   - adminCase: Provide 1-2 District Collector / Urban Governance / Administrative Innovations (format: "• Innovation 1 [District/City, State]: Leadership initiative & systemic outcome").
+   - globalCase: Provide at least 2 distinct International Benchmark Case Studies from different countries (format: "• Benchmark 1 [Country]: Specific policy mechanism & result\n• Benchmark 2 [Country]: Specific policy mechanism & result").
 3. Thinkers must be legitimate academic authorities (Amartya Sen, Elinor Ostrom, Bina Agarwal, M.N. Srinivas, Andre Beteille, Ulrich Beck, John Rawls, etc.) with their concepts applied directly to this topic.
-4. Rural case study must be a real Indian grassroots, panchayat, or district administration innovation (e.g. Hiware Bazar, Kudumbashree, Mendha Lekha, Tingvissing, Piplantri, Odanthurai).
-5. Global case study must be a specific international benchmark (Singapore, Costa Rica, Rwanda, EU, Japan, etc.).
-6. Committee recommendations must cite real high-level committees (Ashok Dalwai, Punchhi, Sarkaria, Shanta Kumar, Kasturirangan, Shekatkar, etc.).
-7. Commission reports must cite 2nd ARC (specify report number), Law Commission (specify report number), or Finance Commission.
-8. The "edge" factor MUST explain the subtle institutional paradox or policy blind spot that average aspirants miss, and the concrete structural reform used by toppers (AIR 1-20) to score maximum marks.
-9. Output MUST be valid JSON adhering strictly to the requested schema.`;
+4. Committee recommendations must cite real high-level committees (Ashok Dalwai, Punchhi, Sarkaria, Shanta Kumar, Kasturirangan, Shekatkar, etc.).
+5. Commission reports must cite 2nd ARC (specify report number), Law Commission (specify report number), or Finance Commission.
+6. The "edge" factor MUST explain the subtle institutional paradox or policy blind spot that average aspirants miss, and the concrete structural reform used by toppers (AIR 1-20) to score maximum marks.
+7. Output MUST be valid JSON adhering strictly to the requested schema.`;
 
 const VA_RESPONSE_SCHEMA = {
   type: "OBJECT",
@@ -57,6 +59,7 @@ const VA_RESPONSE_SCHEMA = {
     thinker: { type: "STRING" },
     examples: { type: "STRING" },
     ruralCase: { type: "STRING" },
+    adminCase: { type: "STRING" },
     globalCase: { type: "STRING" },
     committee: { type: "STRING" },
     commission: { type: "STRING" },
@@ -66,7 +69,7 @@ const VA_RESPONSE_SCHEMA = {
   },
   required: [
     "title", "category", "data", "dataSource", "quote", "quoteSource",
-    "thinker", "examples", "ruralCase", "globalCase", "committee",
+    "thinker", "examples", "ruralCase", "adminCase", "globalCase", "committee",
     "commission", "laws", "schemes", "edge"
   ]
 };
@@ -115,7 +118,12 @@ module.exports = async function valueAdditionHandler(req, res) {
   ];
 
   const userPrompt = `Topic: "${topic}"
-Generate the full 11-dimension Topper Value Addition Dossier for UPSC Mains for this specific topic. Every point must be concrete, authoritative, and grounded in Indian governance and scholarship. Return valid JSON only.`;
+Generate the full 12-dimension Topper Value Addition Dossier for UPSC Mains for this specific topic.
+CRITICAL: Include multiple distinct, high-impact case studies for:
+- ruralCase (2-3 distinct rural Indian grassroots/panchayat cases with location and outcome)
+- adminCase (1-2 district collector or municipal administrative innovations)
+- globalCase (2 distinct international policy benchmarks with country and lesson)
+Ground every single point in authentic Indian governance, official statistics, and scholarship. Return valid JSON only.`;
 
   let lastError = null;
   for (const modelName of candidateModels) {
