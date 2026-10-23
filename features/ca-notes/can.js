@@ -1504,19 +1504,62 @@ window.ENABLE_CA_NOTES = true;
       const originalPages = state.totalPages || (state.pageRecords ? state.pageRecords.length : 1) || 1;
       const targetMaxPages = Math.max(1, Math.ceil(originalPages / 4));
 
-      // Robust sanitizer: removes full-width Unicode, smart quotes, rupee symbol, OCR artifacts, and highlighter tags
-      function cleanNoteText(str) {
+      // Comprehensive cleaner for LaTeX math, OCR artifacts, full-width characters, and tags
+      function cleanLatexAndArtifacts(str) {
         if (!str) return '';
         return str
+          // Math delimiters
+          .replace(/\$\$([\s\S]*?)\$\$/g, '$1')
+          .replace(/\$([^\$]+)\$/g, '$1')
+          .replace(/\\\[([\s\S]*?)\\\]/g, '$1')
+          .replace(/\\\(([\s\S]*?)\\\)/g, '$1')
+          // LaTeX fractions: \frac{A}{B} or \dfrac{A}{B} -> (A / B)
+          .replace(/\\d?frac\{([^}]+)\}\{([^}]+)\}/g, '($1 / $2)')
+          // LaTeX arrays & matrices: \begin{array}... \end{array} -> clean inline text
+          .replace(/\\begin\{[a-z]*array\}[^}]*\}([\s\S]*?)\\end\{[a-z]*array\}/g, (m, inner) => {
+            return inner.replace(/\\\\/g, '; ').replace(/&/g, ' ').trim();
+          })
+          .replace(/\\begin\{[^}]+\}([\s\S]*?)\\end\{[^}]+\}/g, '$1')
+          .replace(/\\left\s*([(\[{|.\\])/g, '$1')
+          .replace(/\\right\s*([)\]}|.\\])/g, '$1')
+          .replace(/\\left\b/g, '')
+          .replace(/\\right\b/g, '')
+          // LaTeX math symbols
+          .replace(/\\rightarrow\b/g, ' -> ')
+          .replace(/\\leftarrow\b/g, ' <- ')
+          .replace(/\\leftrightarrow\b/g, ' <-> ')
+          .replace(/\\Rightarrow\b/g, ' => ')
+          .replace(/\\Leftarrow\b/g, ' <= ')
+          .replace(/\\uparrow\b/g, ' ^ ')
+          .replace(/\\downarrow\b/g, ' v ')
+          .replace(/\\ge(?:q)?\b/g, ' >= ')
+          .replace(/\\le(?:q)?\b/g, ' <= ')
+          .replace(/\\pm\b/g, ' +/- ')
+          .replace(/\\approx\b/g, ' ~ ')
+          .replace(/\\neq\b/g, ' != ')
+          .replace(/\\times\b/g, ' x ')
+          .replace(/\\div\b/g, ' / ')
+          .replace(/\\cdot\b/g, ' . ')
+          // Greek letters
+          .replace(/\\(alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|pi|rho|sigma|tau|upsilon|phi|chi|psi|omega)\b/gi, '$1')
+          // Text commands and escaped punctuation
+          .replace(/\\(?:text|mathbf|mathit|mathrm)\{([^}]+)\}/g, '$1')
+          .replace(/\\([%&_#])/g, '$1')
+          .replace(/\\[a-zA-Z]+/g, ' ')
+          // Common Unicode & typography
           .replace(/[\uFF01-\uFF5E]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0))
           .replace(/₹/g, 'Rs. ')
           .replace(/[\u2018\u2019]/g, "'")
           .replace(/[\u201C\u201D]/g, '"')
           .replace(/[\u2013\u2014]/g, ' - ')
           .replace(/!\s*'/g, ': ')
-          .replace(/\s+/g, ' ')
+          // Strip leading punctuation artifacts like ", UPS" or "- Poor" but preserve "->"
+          .replace(/^[\s,;:]+/, '')
+          .replace(/^-(?!>)\s*/, '')
+          // Strip tags
           .replace(/^\[(?:HIGHLIGHT|UNDERLINE|BOXED|HANDWRITTEN|NOTE|MARGIN_NOTE|HIGHLIGHTED|UNDERLINED)[^\]]*\]\s*/i, '')
           .replace(/^(?:highlight|underline|boxed|handwritten|margin_note|highlighted|underlined|note):\s*/i, '')
+          .replace(/\s+/g, ' ')
           .trim();
       }
 
@@ -1544,7 +1587,10 @@ window.ENABLE_CA_NOTES = true;
       // Measure total volume to dynamically pick density tier
       let totalItemCount = 0;
       let totalCharCount = 0;
+      let totalArticleCount = 0;
       allArticles.forEach(sec => {
+        if (type !== 'all' && sec.section.toLowerCase() !== type.toLowerCase()) return;
+        totalArticleCount += sec.articles.length;
         sec.articles.forEach(art => {
           totalItemCount += (art.items ? art.items.length : 0);
           art.items?.forEach(it => {
@@ -1554,57 +1600,81 @@ window.ENABLE_CA_NOTES = true;
       });
 
       // Target capacity check to guarantee <= targetMaxPages
-      let densityTier = 'standard';
-      const availableLinesStandard = targetMaxPages * 2 * (colHeight / 10.2);
-      const estimatedLines = (totalCharCount / 48) + (totalItemCount * 1.5);
+      const page1HeaderAllowance = 40; // lines reserved by header on page 1
+      const stdLinesPerPage = Math.floor((colHeight / 9.6) * 2);  // ~162 lines
+      const compLinesPerPage = Math.floor((colHeight / 8.8) * 2); // ~177 lines
+      const denseLinesPerPage = Math.floor((colHeight / 8.0) * 2); // ~195 lines
 
-      if (estimatedLines > availableLinesStandard * 1.05) {
+      const availStd = (targetMaxPages * stdLinesPerPage) - page1HeaderAllowance;
+      const availComp = (targetMaxPages * compLinesPerPage) - page1HeaderAllowance;
+      const availDense = (targetMaxPages * denseLinesPerPage) - page1HeaderAllowance;
+
+      const estimatedLines = Math.ceil((totalCharCount / 46) + (totalItemCount * 1.8) + (totalArticleCount * 5));
+
+      let densityTier = 'standard';
+      if (estimatedLines > availStd) {
         densityTier = 'compact';
       }
-      if (estimatedLines > availableLinesStandard * 1.4) {
+      if (estimatedLines > availComp) {
         densityTier = 'dense';
+      }
+      if (estimatedLines > availDense) {
+        densityTier = 'pocket';
       }
 
       // Typographic configuration per tier
       const typo = {
         standard: {
-          bodySize: 8.0,
-          bodyLineH: 9.8,
-          handwrittenSize: 6.5,     // Noticeably reduced as requested
-          handwrittenLineH: 8.2,
-          takeawaySize: 6.8,
-          takeawayLineH: 8.5,
-          headingSize: 8.5,
-          sectionSize: 8.0,
-          itemSpacing: 3.5,
-          artSpacing: 6.5,
-          secSpacing: 9.0
+          bodySize: 7.8,
+          bodyLineH: 9.6,
+          handwrittenSize: 6.4,     // Noticeably reduced as requested
+          handwrittenLineH: 8.0,
+          takeawaySize: 6.6,
+          takeawayLineH: 8.4,
+          headingSize: 8.2,
+          sectionSize: 7.8,
+          itemSpacing: 3.0,
+          artSpacing: 6.0,
+          secSpacing: 8.0
         },
         compact: {
-          bodySize: 7.4,
-          bodyLineH: 9.0,
-          handwrittenSize: 6.0,     // Reduced
-          handwrittenLineH: 7.5,
-          takeawaySize: 6.4,
+          bodySize: 7.2,
+          bodyLineH: 8.8,
+          handwrittenSize: 5.8,     // Reduced
+          handwrittenLineH: 7.3,
+          takeawaySize: 6.2,
           takeawayLineH: 7.8,
-          headingSize: 8.0,
-          sectionSize: 7.5,
-          itemSpacing: 2.8,
-          artSpacing: 5.0,
-          secSpacing: 7.5
+          headingSize: 7.8,
+          sectionSize: 7.2,
+          itemSpacing: 2.4,
+          artSpacing: 4.8,
+          secSpacing: 6.8
         },
         dense: {
-          bodySize: 6.8,
-          bodyLineH: 8.2,
-          handwrittenSize: 5.5,     // Reduced
-          handwrittenLineH: 6.8,
+          bodySize: 6.6,
+          bodyLineH: 8.0,
+          handwrittenSize: 5.4,     // Reduced
+          handwrittenLineH: 6.6,
           takeawaySize: 5.8,
           takeawayLineH: 7.2,
-          headingSize: 7.5,
-          sectionSize: 7.0,
-          itemSpacing: 2.2,
-          artSpacing: 4.0,
-          secSpacing: 6.0
+          headingSize: 7.2,
+          sectionSize: 6.8,
+          itemSpacing: 1.8,
+          artSpacing: 3.8,
+          secSpacing: 5.5
+        },
+        pocket: {
+          bodySize: 6.0,
+          bodyLineH: 7.2,
+          handwrittenSize: 5.0,     // Reduced
+          handwrittenLineH: 6.0,
+          takeawaySize: 5.4,
+          takeawayLineH: 6.6,
+          headingSize: 6.8,
+          sectionSize: 6.2,
+          itemSpacing: 1.4,
+          artSpacing: 3.0,
+          secSpacing: 4.5
         }
       }[densityTier];
 
@@ -1617,7 +1687,7 @@ window.ENABLE_CA_NOTES = true;
       function drawPage1Header() {
         doc.setFillColor(37, 99, 235);
         doc.rect(marginLeft, y, contentWidth, 3, 'F');
-        y += 11;
+        y += 12;
 
         // Magazine Title
         doc.setFont('helvetica', 'bold');
@@ -1645,7 +1715,7 @@ window.ENABLE_CA_NOTES = true;
         doc.setTextColor(71, 85, 105);
         doc.text(`${originalPages} pgs original -> ${targetMaxPages} pgs max`, badgeX + (badgeW / 2), y + 9.5, { align: 'center' });
 
-        y += Math.max(titleLines.length * 12, 14);
+        y += Math.max(titleLines.length * 13, 14);
 
         // Sub-bar metadata
         doc.setFont('helvetica', 'bold');
@@ -1664,7 +1734,7 @@ window.ENABLE_CA_NOTES = true;
         doc.setDrawColor(226, 232, 240);
         doc.setLineWidth(0.65);
         doc.line(marginLeft, y, pageWidth - marginRight, y);
-        y += 12;
+        y += 14;
 
         return y;
       }
@@ -1677,22 +1747,17 @@ window.ENABLE_CA_NOTES = true;
         return currentCol === 0 ? marginLeft : marginLeft + colWidth + gutter;
       }
 
+      // Safe space assurer: ALWAYS advances to next column or page, never clobbers or clamps y
       function ensureSpace(neededHeight) {
         if (y + neededHeight > bottomLimit) {
           if (currentCol === 0) {
             currentCol = 1;
-            y = currentPage === 1 ? page1ContentTop : marginTop;
+            y = (currentPage === 1) ? page1ContentTop : marginTop;
           } else {
-            if (currentPage < targetMaxPages) {
-              doc.addPage();
-              currentPage++;
-              currentCol = 0;
-              y = marginTop;
-            } else {
-              // At max budget page, pack remaining space tightly without exceeding targetMaxPages
-              currentCol = 1;
-              y = Math.min(y, bottomLimit - neededHeight);
-            }
+            doc.addPage();
+            currentPage++;
+            currentCol = 0;
+            y = marginTop;
           }
         }
       }
@@ -1700,7 +1765,7 @@ window.ENABLE_CA_NOTES = true;
       function drawColumnDivider(pg) {
         doc.setPage(pg);
         const dividerX = marginLeft + colWidth + (gutter / 2);
-        const topY = pg === 1 ? page1ContentTop : marginTop;
+        const topY = (pg === 1) ? page1ContentTop : marginTop;
         doc.setDrawColor(241, 245, 249);
         doc.setLineWidth(0.5);
         doc.line(dividerX, topY, dividerX, bottomLimit);
@@ -1711,49 +1776,54 @@ window.ENABLE_CA_NOTES = true;
         if (type !== 'all' && secGroup.section.toLowerCase() !== type.toLowerCase()) return;
 
         // SECTION HEADER BANNER (e.g. POLITY, ECONOMY)
-        ensureSpace(24);
+        const bannerH = 15;
+        ensureSpace(bannerH + 45); // Keep banner + first heading + content together
         const colX = getColX();
 
         doc.setFillColor(241, 245, 249);
-        doc.roundedRect(colX, y, colWidth, 14, 2, 2, 'F');
+        doc.roundedRect(colX, y, colWidth, bannerH, 2, 2, 'F');
         doc.setFillColor(37, 99, 235);
-        doc.rect(colX, y, 3, 14, 'F');
+        doc.rect(colX, y, 3.5, bannerH, 'F');
 
         doc.setFont('helvetica', 'bold');
         doc.setFontSize(typo.sectionSize);
         doc.setTextColor(30, 41, 59);
-        doc.text(secGroup.section.toUpperCase(), colX + 7, y + 9.5);
-        y += 18;
+        doc.text(secGroup.section.toUpperCase(), colX + 8, y + 10.5);
+        y += bannerH + 9; // Clean 9pt space below banner
 
         secGroup.articles.forEach((art) => {
-          ensureSpace(32);
+          // Article Heading
+          const headingLines = doc.splitTextToSize(art.heading, colWidth - 32);
+          const headingH = (headingLines.length * 10.5) + 4;
+          ensureSpace(headingH + 25);
           const aX = getColX();
 
-          // Article Heading
           doc.setFont('helvetica', 'bold');
           doc.setFontSize(typo.headingSize);
           doc.setTextColor(15, 23, 42);
-          const headingLines = doc.splitTextToSize(art.heading, colWidth - 32);
-          doc.text(headingLines, aX, y);
 
-          // Page reference tag
+          for (let hIdx = 0; hIdx < headingLines.length; hIdx++) {
+            doc.text(headingLines[hIdx], aX, y + 8 + (hIdx * 10.5));
+          }
+
+          // Page reference tag on the right
           if (art.pages && art.pages.length > 0) {
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(6.5);
             doc.setTextColor(148, 163, 184);
-            doc.text(`p. ${art.pages.join(', ')}`, aX + colWidth, y, { align: 'right' });
+            doc.text(`p. ${art.pages.join(', ')}`, aX + colWidth, y + 8, { align: 'right' });
           }
-          y += (headingLines.length * (typo.headingSize + 1.5)) + 3;
+          y += headingH + 4;
 
-          // AI Core Takeaway (Compact callout box)
+          // AI Core Takeaway (Compact callout box with emerald accent)
           if (art.takeaway && art.takeaway.trim().length > 5) {
-            const takeawayText = cleanNoteText(art.takeaway);
+            const cleanT = cleanLatexAndArtifacts(art.takeaway).replace(/\n+/g, ' ');
             doc.setFont('helvetica', 'italic');
             doc.setFontSize(typo.takeawaySize);
-            const takeawayLines = doc.splitTextToSize(takeawayText, colWidth - 12);
-            const boxH = (takeawayLines.length * typo.takeawayLineH) + 9;
+            const takeawayLines = doc.splitTextToSize(cleanT, colWidth - 14);
+            const boxH = 10 + (takeawayLines.length * 8.5) + 6;
 
-            ensureSpace(boxH + 4);
+            ensureSpace(boxH + 8);
             const tX = getColX();
 
             doc.setFillColor(248, 250, 252);
@@ -1766,21 +1836,22 @@ window.ENABLE_CA_NOTES = true;
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(5.5);
             doc.setTextColor(5, 150, 105);
-            doc.text('KEY TAKEAWAY', tX + 6, y + 6.5);
+            doc.text('KEY TAKEAWAY', tX + 7, y + 7.5);
 
             doc.setFont('helvetica', 'italic');
             doc.setFontSize(typo.takeawaySize);
             doc.setTextColor(51, 65, 85);
-            doc.text(takeawayLines, tX + 6, y + 14);
-            y += boxH + 4;
+            for (let tIdx = 0; tIdx < takeawayLines.length; tIdx++) {
+              doc.text(takeawayLines[tIdx], tX + 7, y + 17 + (tIdx * 8.5));
+            }
+            y += boxH + 6;
           }
 
           // EXTRACTED ITEMS (Highlights & Reduced-Size Handwritten Notes)
           art.items.forEach((it) => {
-            const rawClean = cleanNoteText(it.text);
-            if (!rawClean) return;
+            const cleanText = cleanLatexAndArtifacts(it.text);
+            if (!cleanText) return;
 
-            // Accurate handwritten identification
             const isHandwritten = it.type === 'handwritten' || 
                                   it.type === 'margin_note' || 
                                   (it.text && it.text.includes('✍️'));
@@ -1789,60 +1860,60 @@ window.ENABLE_CA_NOTES = true;
 
             if (isHandwritten) {
               // --- HANDWRITTEN MARGIN NOTE: REDUCED SIZE AS REQUESTED ---
-              const prefixW = 26;
+              const prefixW = 12;
               const textW = colWidth - prefixW;
-
               doc.setFont('helvetica', 'italic');
               doc.setFontSize(typo.handwrittenSize);
-              const noteLines = doc.splitTextToSize(rawClean, textW);
+              const noteLines = doc.splitTextToSize(cleanText, textW);
+              const itemH = (noteLines.length * typo.handwrittenLineH) + 2.5;
 
+              ensureSpace(Math.min(itemH, 120));
+              const curX = getColX();
+
+              // Subtle vertical marginalia bar in purple
+              doc.setFillColor(168, 85, 247);
+              doc.rect(curX + 1, y, 1.5, Math.max(itemH - 2, 8), 'F');
+
+              // Small purple indicator dot
+              doc.setFillColor(168, 85, 247);
+              doc.circle(curX + 5, y + 4.5, 1.3, 'F');
+
+              // Note body text in reduced size (6.4pt italic)
+              doc.setFont('helvetica', 'italic');
+              doc.setFontSize(typo.handwrittenSize);
+              doc.setTextColor(71, 85, 105);
               for (let lineIdx = 0; lineIdx < noteLines.length; lineIdx++) {
                 ensureSpace(typo.handwrittenLineH);
-                const curX = getColX();
-
-                if (lineIdx === 0) {
-                  // Sleek compact [NOTE] badge in 5pt font
-                  doc.setFillColor(243, 232, 255);
-                  doc.setDrawColor(216, 180, 254);
-                  doc.roundedRect(curX, y - 6, 22, 7.5, 1.5, 1.5, 'FD');
-                  doc.setFont('helvetica', 'bold');
-                  doc.setFontSize(5.0);
-                  doc.setTextColor(126, 34, 206);
-                  doc.text('NOTE', curX + 3.5, y - 0.5);
-                }
-
-                // Handwritten note body text in reduced size
-                doc.setFont('helvetica', 'italic');
-                doc.setFontSize(typo.handwrittenSize);
-                doc.setTextColor(71, 85, 105);
-                doc.text(noteLines[lineIdx], curX + prefixW, y);
+                const drawX = getColX();
+                doc.text(noteLines[lineIdx], drawX + prefixW, y + 6.0);
                 y += typo.handwrittenLineH;
               }
-              y += typo.itemSpacing * 0.7;
+              y += 2.5;
 
             } else {
               // --- STANDARD HIGHLIGHT ITEM ---
-              const prefixW = 9;
+              const prefixW = 10;
               const textW = colWidth - prefixW;
-
               doc.setFont('helvetica', 'normal');
               doc.setFontSize(typo.bodySize);
-              const noteLines = doc.splitTextToSize(rawClean, textW);
+              const noteLines = doc.splitTextToSize(cleanText, textW);
+              const itemH = (noteLines.length * typo.bodyLineH) + typo.itemSpacing;
 
+              ensureSpace(Math.min(itemH, 120));
+              const curX = getColX();
+
+              // Color-coded circle bullet matching neon highlighter
+              doc.setFillColor(cColor[0], cColor[1], cColor[2]);
+              doc.circle(curX + 3.5, y + 3.5, 1.6, 'F');
+
+              // Text lines
+              doc.setFont('helvetica', 'normal');
+              doc.setFontSize(typo.bodySize);
+              doc.setTextColor(30, 41, 59);
               for (let lineIdx = 0; lineIdx < noteLines.length; lineIdx++) {
                 ensureSpace(typo.bodyLineH);
-                const curX = getColX();
-
-                if (lineIdx === 0) {
-                  // Color-coded circle bullet matching neon highlighter
-                  doc.setFillColor(cColor[0], cColor[1], cColor[2]);
-                  doc.circle(curX + 3, y - 2.5, 1.6, 'F');
-                }
-
-                doc.setFont('helvetica', 'normal');
-                doc.setFontSize(typo.bodySize);
-                doc.setTextColor(30, 41, 59);
-                doc.text(noteLines[lineIdx], curX + prefixW, y);
+                const drawX = getColX();
+                doc.text(noteLines[lineIdx], drawX + prefixW, y + 5.5);
                 y += typo.bodyLineH;
               }
               y += typo.itemSpacing;
