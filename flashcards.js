@@ -635,20 +635,20 @@
     const prevBtn = document.getElementById('fcPrevBtn');
     const nextBtn = document.getElementById('fcNextBtn');
 
-    const doFlip = () => {
-      state.isFlipped = !state.isFlipped;
-      if (cardEl) cardEl.classList.toggle('fc-flipped', state.isFlipped);
-    };
-
+    // Flip is handled by window.fcFlip(event) on onclick attributes.
+    // We attach an explicit click listener only if onclick is somehow suppressed,
+    // guarded by window.fcFlip's internal 200ms debounce and DOM check.
     if (cardEl) {
-      cardEl.addEventListener('click', (e) => {
-        // Prevent flip if clicking rating button
-        if (e.target.closest('.fc-rate-btn')) return;
-        doFlip();
-      });
+      cardEl.onclick = (e) => {
+        if (e && e.target && e.target.closest && e.target.closest('.fc-rate-btn')) return;
+        window.fcFlip(e);
+      };
     }
-
-    if (flipBtn) flipBtn.addEventListener('click', doFlip);
+    if (flipBtn) {
+      flipBtn.onclick = (e) => {
+        window.fcFlip(e);
+      };
+    }
 
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
@@ -732,30 +732,27 @@
       });
     });
 
-    // Touch Swipe gestures on mobile
+    // Touch Swipe gestures on mobile (with distance and duration validation)
     if (cardEl) {
       let touchStartX = 0;
       let touchStartY = 0;
+      let touchStartTime = 0;
       cardEl.addEventListener('touchstart', (e) => {
         touchStartX = e.changedTouches[0].screenX;
         touchStartY = e.changedTouches[0].screenY;
+        touchStartTime = Date.now();
       }, { passive: true });
 
       cardEl.addEventListener('touchend', (e) => {
         const diffX = e.changedTouches[0].screenX - touchStartX;
         const diffY = e.changedTouches[0].screenY - touchStartY;
-        // Horizontal swipe threshold
-        if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+        const duration = Date.now() - touchStartTime;
+        // Fast horizontal swipe > 55px in under 450ms
+        if (Math.abs(diffX) > 55 && Math.abs(diffX) > Math.abs(diffY) * 1.5 && duration < 450) {
           if (diffX < 0 && state.currentIndex < state.activeDeck.length - 1) {
-            // Swipe left -> Next card
-            state.currentIndex++;
-            state.isFlipped = false;
-            renderUI();
+            window.fcNext();
           } else if (diffX > 0 && state.currentIndex > 0) {
-            // Swipe right -> Previous card
-            state.currentIndex--;
-            state.isFlipped = false;
-            renderUI();
+            window.fcPrev();
           }
         }
       }, { passive: true });
@@ -823,12 +820,27 @@
   // Global init function
   
   // EXPOSE GLOBAL ACTIONS ON WINDOW FOR 100% BULLETPROOF ONCLICK COMPATIBILITY
-  window.fcFlip = function() {
-    state.isFlipped = !state.isFlipped;
-    const cardEl = document.getElementById('fcInteractiveCard');
-    if (cardEl) {
-      cardEl.classList.toggle('fc-flipped', state.isFlipped);
+  let lastFlipTimestamp = 0;
+  window.fcFlip = function(e) {
+    if (e) {
+      // Do not flip if clicking rating button or list buttons
+      if (e.target && e.target.closest && e.target.closest('.fc-rate-btn')) {
+        return;
+      }
     }
+    const now = Date.now();
+    if (now - lastFlipTimestamp < 200) {
+      return; // Ignore duplicate synthetic micro-events
+    }
+    lastFlipTimestamp = now;
+
+    const cardEl = document.getElementById('fcInteractiveCard');
+    if (!cardEl) return;
+
+    // Direct DOM-level check ensures 100% synchronization
+    const currentlyFlipped = cardEl.classList.contains('fc-flipped');
+    state.isFlipped = !currentlyFlipped;
+    cardEl.classList.toggle('fc-flipped', state.isFlipped);
   };
 
   window.fcNext = function() {

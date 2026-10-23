@@ -2339,6 +2339,57 @@
   cursor: pointer !important;
 }
 
+
+/* BULLETPROOF 3D CARD FLIP RULES (Guarantees Back Face Visibility Across All Mobile Engines) */
+.fc-card {
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+}
+.fc-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fc-card.fc-flipped {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.fc-card.fc-flipped .fc-card-front {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.fc-card.fc-flipped .fc-card-back {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
+.fc-card:not(.fc-flipped) .fc-card-front {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 10 !important;
+}
+
+.fc-card:not(.fc-flipped) .fc-card-back {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.fc-card-face {
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
 </style>
 <style>
   :root {
@@ -8445,6 +8496,20 @@
     </div> <!-- /recallQueuesContainer -->
 
     <!-- VIEW B: ACTIVE RECALL FLASHCARDS (POLITY, HISTORY, ECONOMY, GEOGRAPHY) -->
+    
+<script>
+// Early instant flip handler (active even before external scripts finish parsing)
+if (typeof window.fcFlip !== 'function') {
+  window.fcFlip = function(e) {
+    if (e && e.target && e.target.closest && e.target.closest('.fc-rate-btn')) return;
+    const card = document.getElementById('fcInteractiveCard');
+    if (card) {
+      card.classList.toggle('fc-flipped');
+    }
+  };
+}
+</script>
+
     <div id="recallFlashcardsContainer" style="display: none;">
       
       <div class="fc-wrapper">
@@ -8695,7 +8760,7 @@
           
       <div class="fc-card-container">
         <!-- 3D CARD WRAPPER -->
-        <div class="fc-card " id="fcInteractiveCard" role="button" tabindex="0" onclick="window.fcFlip()" aria-label="Flashcard. Press Space to flip.">
+        <div class="fc-card " id="fcInteractiveCard" role="button" tabindex="0" onclick="window.fcFlip(event)" aria-label="Flashcard. Press Space to flip.">
           <div class="fc-card-inner">
             <!-- FRONT FACE (QUESTION) -->
             <div class="fc-card-face fc-card-front">
@@ -8796,7 +8861,7 @@
             <span class="fc-ctrl-lbl">Prev</span>
           </button>
 
-          <button class="fc-flip-btn" id="fcFlipBtn" onclick="window.fcFlip()" title="Flip Card (Space)">
+          <button class="fc-flip-btn" id="fcFlipBtn" onclick="window.fcFlip(event)" title="Flip Card (Space)">
             <span>🔄</span>
             <span>Flip Card</span>
           </button>
