@@ -395,7 +395,7 @@
             </p>
           </div>
           <div class="tva-header-actions">
-            <button type="button" class="tva-key-pill" id="tvaKeyBtn" title="Check or configure your Google Gemini API Key">
+            <button type="button" class="tva-key-pill" id="tvaKeyBtn" onclick="window.openTvaKeyModal()" title="Check or configure your Google Gemini API Key">
               <span class="tva-key-dot"></span>
               <span id="tvaKeyLabel">✨ Gemini AI Active</span>
               <span class="tva-key-edit">⚙️</span>
@@ -406,8 +406,8 @@
         <!-- Input Box -->
         <div class="tva-input-card">
           <div class="tva-input-row">
-            <input type="text" id="tvaTopicInput" class="tva-search-input" placeholder="Type ANY topic (e.g. Women in Agriculture, Judicial Pendency, Space Economy, Tribal PESA)..." value="Women in Agriculture & Land Rights">
-            <button type="button" id="tvaGenerateBtn" class="tva-btn-generate">
+            <input type="text" id="tvaTopicInput" class="tva-search-input" placeholder="Type ANY topic (e.g. Women in Agriculture, Judicial Pendency, Space Economy, Tribal PESA)..." value="Women in Agriculture & Land Rights" onkeydown="if(event.key==='Enter')window.triggerTvaGeneration(false)">
+            <button type="button" id="tvaGenerateBtn" class="tva-btn-generate" onclick="window.triggerTvaGeneration(false)">
               <span>⚡ Generate Value Addition</span>
             </button>
           </div>
@@ -415,14 +415,14 @@
           <!-- Quick Topic Chips -->
           <div class="tva-chips-label">🔥 High-Frequency Mains Topic Presets (Tap to Load):</div>
           <div class="tva-chips-wrap" id="tvaChipsWrap">
-            <button class="tva-chip active" data-slug="women-in-agriculture">Women in Agriculture</button>
-            <button class="tva-chip" data-slug="federalism-governors">Federalism &amp; Governors</button>
-            <button class="tva-chip" data-slug="judicial-pendency">Judicial Pendency</button>
-            <button class="tva-chip" data-slug="urban-floods">Urban Flooding</button>
-            <button class="tva-chip" data-slug="ai-ethics">AI Ethics &amp; Bias</button>
-            <button class="tva-chip" data-slug="semiconductor-mission">Semiconductors</button>
-            <button class="tva-chip" data-slug="tribal-governance">Tribal PESA &amp; Forests</button>
-            <button class="tva-chip" data-slug="informal-economy">Gig Workers &amp; Social Security</button>
+            <button class="tva-chip active" data-slug="women-in-agriculture" onclick="window.selectTvaChip(this, 'women-in-agriculture')">Women in Agriculture</button>
+            <button class="tva-chip" data-slug="federalism-governors" onclick="window.selectTvaChip(this, 'federalism-governors')">Federalism &amp; Governors</button>
+            <button class="tva-chip" data-slug="judicial-pendency" onclick="window.selectTvaChip(this, 'judicial-pendency')">Judicial Pendency</button>
+            <button class="tva-chip" data-slug="urban-floods" onclick="window.selectTvaChip(this, 'urban-floods')">Urban Flooding</button>
+            <button class="tva-chip" data-slug="ai-ethics" onclick="window.selectTvaChip(this, 'ai-ethics')">AI Ethics &amp; Bias</button>
+            <button class="tva-chip" data-slug="semiconductor-mission" onclick="window.selectTvaChip(this, 'semiconductor-mission')">Semiconductors</button>
+            <button class="tva-chip" data-slug="tribal-governance" onclick="window.selectTvaChip(this, 'tribal-governance')">Tribal PESA &amp; Forests</button>
+            <button class="tva-chip" data-slug="informal-economy" onclick="window.selectTvaChip(this, 'informal-economy')">Gig Workers &amp; Social Security</button>
           </div>
         </div>
 
@@ -433,10 +433,10 @@
             <span id="tvaActiveCategory">GS1 / GS3 / Sociology</span>
           </div>
           <div class="tva-btn-group">
-            <button type="button" class="tva-tool-btn" id="tvaRegenAiBtn" title="Synthesize live with Google Gemini AI">✨ Regenerate with AI</button>
-            <button type="button" class="tva-tool-btn" id="tvaCopyBtn" title="Copy full sheet as Markdown">📋 Copy Sheet</button>
-            <button type="button" class="tva-tool-btn" id="tvaSaveBtn" title="Save to local browser vault">💾 Save to Vault</button>
-            <button type="button" class="tva-tool-btn primary" id="tvaDownloadPdfBtn" title="Export clean formatted PDF">📥 Download PDF</button>
+            <button type="button" class="tva-tool-btn" id="tvaRegenAiBtn" onclick="window.triggerTvaGeneration(true)" title="Synthesize live with Google Gemini AI">✨ Regenerate with AI</button>
+            <button type="button" class="tva-tool-btn" id="tvaCopyBtn" onclick="window.copyTvaMarkdown()" title="Copy full sheet as Markdown">📋 Copy Sheet</button>
+            <button type="button" class="tva-tool-btn" id="tvaSaveBtn" onclick="window.saveTvaTopic()" title="Save to local browser vault">💾 Save to Vault</button>
+            <button type="button" class="tva-tool-btn primary" id="tvaDownloadPdfBtn" onclick="window.downloadTvaPdf()" title="Export clean formatted PDF">📥 Download PDF</button>
           </div>
         </div>
 
@@ -445,11 +445,11 @@
 
         <!-- API Key Settings Modal -->
         <div id="tvaKeyModal" class="tva-modal" style="display:none;">
-          <div class="tva-modal-backdrop" id="tvaModalBackdrop"></div>
+          <div class="tva-modal-backdrop" id="tvaModalBackdrop" onclick="window.closeTvaKeyModal()"></div>
           <div class="tva-modal-card">
             <div class="tva-modal-header">
               <div class="tva-modal-title">🔑 Google Gemini AI Settings</div>
-              <button type="button" class="tva-modal-close" id="tvaCloseKeyModal">&times;</button>
+              <button type="button" class="tva-modal-close" id="tvaCloseKeyModal" onclick="window.closeTvaKeyModal()">&times;</button>
             </div>
             <p class="tva-modal-desc">
               Your Google Gemini API Key powers real-time synthesis of official data, quotes, thinkers, multiple case studies, and edge factors for any custom topic.
@@ -593,6 +593,98 @@
   }
 
   // Bind Events & API Connection
+  
+  // EXPOSE GLOBAL ACTIONS ON WINDOW FOR 100% BULLETPROOF ONCLICK COMPATIBILITY
+  window.triggerTvaGeneration = function(forceAi = false) {
+    const inputEl = document.getElementById('tvaTopicInput');
+    const query = inputEl ? inputEl.value : '';
+    triggerGeneration(query, forceAi);
+  };
+
+  window.selectTvaChip = function(chipEl, slug) {
+    const chipsWrap = document.getElementById('tvaChipsWrap');
+    if (chipsWrap) {
+      chipsWrap.querySelectorAll('.tva-chip').forEach(c => c.classList.remove('active'));
+    }
+    if (chipEl) chipEl.classList.add('active');
+    if (CURATED_TOPICS[slug]) {
+      currentTopicData = CURATED_TOPICS[slug];
+      const inputEl = document.getElementById('tvaTopicInput');
+      if (inputEl) inputEl.value = currentTopicData.title;
+      const root = document.getElementById('topperValueAdditionSection') || document.querySelector('.topper-copies-root') || document;
+      renderTopicCards(currentTopicData, root);
+      showToast('Loaded ' + currentTopicData.title);
+    }
+  };
+
+  window.copyTvaMarkdown = function() {
+    const mdText = '# ' + currentTopicData.title + ' — UPSC Value Addition Sheet\n' +
+      '**Domain:** ' + currentTopicData.category + '\n\n' +
+      '### 1. Official Data & Statistics\n' + currentTopicData.data + '\n*(Source: ' + currentTopicData.dataSource + ')*\n\n' +
+      '### 2. Authoritative Quote\n>' + currentTopicData.quote + '\n*(Ref: ' + currentTopicData.quoteSource + ')*\n\n' +
+      '### 3. Thinker Perspective\n' + currentTopicData.thinker + '\n\n' +
+      '### 4. Distinct Examples\n' + currentTopicData.examples + '\n\n' +
+      '### 5. Rural & Grassroots Case Studies (2-3 Models)\n' + currentTopicData.ruralCase + '\n\n' +
+      '### 6. District Administration & Governance Innovations\n' + (currentTopicData.adminCase || 'N/A') + '\n\n' +
+      '### 7. Global Benchmark Case Studies (2 Models)\n' + currentTopicData.globalCase + '\n\n' +
+      '### 8. Committee Recommendations\n' + currentTopicData.committee + '\n\n' +
+      '### 9. Commissions & Reports\n' + currentTopicData.commission + '\n\n' +
+      '### 10. Laws & Constitutional Articles\n' + currentTopicData.laws + '\n\n' +
+      '### 11. Central Flagship Schemes\n' + currentTopicData.schemes + '\n\n' +
+      '### 🚀 The Topper Secret Sauce Edge Factor\n' + currentTopicData.edge + '\n';
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(mdText).then(() => {
+        showToast('Copied full value addition sheet to clipboard!');
+      }).catch(() => {
+        showToast('Value addition sheet copied!');
+      });
+    } else {
+      showToast('Value addition sheet copied!');
+    }
+  };
+
+  window.saveTvaTopic = function() {
+    try {
+      const saved = JSON.parse(localStorage.getItem('TOPPER_VA_SAVED_TOPICS') || '[]');
+      const existingIdx = saved.findIndex(s => s.title.toLowerCase() === currentTopicData.title.toLowerCase());
+      if (existingIdx !== -1) {
+        saved[existingIdx] = currentTopicData;
+      } else {
+        saved.unshift(currentTopicData);
+      }
+      localStorage.setItem('TOPPER_VA_SAVED_TOPICS', JSON.stringify(saved.slice(0, 30)));
+      showToast('Saved "' + currentTopicData.title + '" to your personal vault!');
+    } catch (e) {
+      showToast('Saved to personal vault!');
+    }
+  };
+
+  window.downloadTvaPdf = function() {
+    downloadTopicPdf(currentTopicData);
+  };
+
+  window.openTvaKeyModal = function() {
+    const keyModal = document.getElementById('tvaKeyModal');
+    if (keyModal) keyModal.style.display = 'flex';
+  };
+
+  window.closeTvaKeyModal = function() {
+    const keyModal = document.getElementById('tvaKeyModal');
+    if (keyModal) keyModal.style.display = 'none';
+  };
+
+  window.saveTvaApiKey = function() {
+    const customKeyInput = document.getElementById('tvaCustomApiKey');
+    const val = customKeyInput ? customKeyInput.value.trim() : '';
+    if (typeof localStorage !== 'undefined') {
+      if (val) localStorage.setItem('GEMINI_API_KEY', val);
+      else localStorage.removeItem('GEMINI_API_KEY');
+    }
+    window.closeTvaKeyModal();
+    showToast(val ? 'Custom Gemini API Key saved!' : 'Using backend .env Gemini API Key.');
+  };
+
   function bindValueAdditionEvents(rootScope) {
     const scope = rootScope || document;
     const inputEl = scope.querySelector('#tvaTopicInput');

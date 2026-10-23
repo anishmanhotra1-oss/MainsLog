@@ -215,7 +215,7 @@
             </div>
 
             <div class="fc-quick-actions">
-              <button class="fc-action-btn" id="fcSwitchQueuesBtn" title="Return to Revision Queues">
+              <button class="fc-action-btn" id="fcSwitchQueuesBtn" onclick="window.switchRecallMode('queues')" title="Return to Revision Queues">
                 <span>🔄</span>
                 <span>Scheduled Queues</span>
               </button>
@@ -228,7 +228,7 @@
               const count = s.id === 'review' ? stats.practiceAll : (window.FLASHCARDS_DATA && window.FLASHCARDS_DATA[s.id] ? window.FLASHCARDS_DATA[s.id].length : 0);
               const isActive = s.id === state.currentSubject;
               return `
-                <button class="fc-sub-btn ${isActive ? 'fc-active' : ''}" data-subject="${s.id}" role="tab" aria-selected="${isActive}">
+                <button class="fc-sub-btn ${isActive ? 'fc-active' : ''}" data-subject="${s.id}" role="tab" onclick="window.fcSelectSubject('${s.id}')" aria-selected="${isActive}">
                   <span class="fc-tab-icon">${s.icon}</span>
                   <span class="fc-tab-name">${s.name}</span>
                   <span class="fc-tab-count">${count}</span>
@@ -252,7 +252,7 @@
           <div class="fc-filter-toolbar">
             <div class="fc-filter-group">
               ${state.currentSubject !== 'review' ? `
-                <select class="fc-topic-select" id="fcTopicSelect" aria-label="Filter by Topic / Chapter">
+                <select class="fc-topic-select" id="fcTopicSelect" onchange="window.fcSelectTopic(this.value)" aria-label="Filter by Topic / Chapter">
                   <option value="ALL">All Chapters &amp; Topics (${stats.curTotal})</option>
                   ${chapters.map(ch => `
                     <option value="${ch}" ${state.currentTopic === ch ? 'selected' : ''}>${ch}</option>
@@ -265,26 +265,26 @@
 
             <div class="fc-search-group">
               <span class="fc-search-icon">🔍</span>
-              <input type="text" class="fc-search-input" id="fcSearchInput" placeholder="Search cards (e.g., Preamble, Harappa, Repo)..." value="${escapeHtml(state.searchQuery)}"/>
-              ${state.searchQuery ? `<button class="fc-search-clear" id="fcSearchClearBtn">✕</button>` : ''}
+              <input type="text" class="fc-search-input" id="fcSearchInput" oninput="window.fcSearch(this.value)" placeholder="Search cards (e.g., Preamble, Harappa, Repo)..." value="${escapeHtml(state.searchQuery)}"/>
+              ${state.searchQuery ? `<button class="fc-search-clear" id="fcSearchClearBtn" onclick="window.fcClearSearch()">✕</button>` : ''}
             </div>
 
             <div class="fc-mode-toggles">
-              <button class="fc-toggle-btn ${state.onlyNeedPractice ? 'fc-toggle-on' : ''}" id="fcTogglePracticeOnlyBtn" title="Filter to show only cards needing practice">
+              <button class="fc-toggle-btn ${state.onlyNeedPractice ? 'fc-toggle-on' : ''}" id="fcTogglePracticeOnlyBtn" onclick="window.fcTogglePractice()" title="Filter to show only cards needing practice">
                 <span>🔴</span>
                 <span class="fc-btn-text">Practice Only</span>
               </button>
 
-              <button class="fc-toggle-btn ${state.isShuffled ? 'fc-toggle-on' : ''}" id="fcToggleShuffleBtn" title="Shuffle flashcards order">
+              <button class="fc-toggle-btn ${state.isShuffled ? 'fc-toggle-on' : ''}" id="fcToggleShuffleBtn" onclick="window.fcToggleShuffle()" title="Shuffle flashcards order">
                 <span>🔀</span>
                 <span class="fc-btn-text">Shuffle</span>
               </button>
 
               <div class="fc-view-switch">
-                <button class="fc-view-btn ${state.viewMode === 'card' ? 'fc-view-active' : ''}" id="fcViewCardBtn" title="Single Flashcard Focus Mode">
+                <button class="fc-view-btn ${state.viewMode === 'card' ? 'fc-view-active' : ''}" id="fcViewCardBtn" onclick="window.fcSwitchView('card')" title="Single Flashcard Focus Mode">
                   🗂️ Card
                 </button>
-                <button class="fc-view-btn ${state.viewMode === 'list' ? 'fc-view-active' : ''}" id="fcViewListBtn" title="Browse All Cards in List Mode">
+                <button class="fc-view-btn ${state.viewMode === 'list' ? 'fc-view-active' : ''}" id="fcViewListBtn" onclick="window.fcSwitchView('list')" title="Browse All Cards in List Mode">
                   📋 List
                 </button>
               </div>
@@ -313,7 +313,7 @@
               ? 'Great job! You have no cards marked as "Need Practice". Browse Polity, History, Economy, or Geography to test your recall.'
               : 'Try selecting "All Chapters", clearing your search query, or toggling off "Practice Only".'}
           </div>
-          <button class="fc-reset-filter-btn" id="fcResetFiltersBtn">Reset Filters</button>
+          <button class="fc-reset-filter-btn" id="fcResetFiltersBtn" onclick="window.fcResetFilters()">Reset Filters</button>
         </div>
       `;
     }
@@ -336,7 +336,7 @@
     return `
       <div class="fc-card-container">
         <!-- 3D CARD WRAPPER -->
-        <div class="fc-card ${state.isFlipped ? 'fc-flipped' : ''}" id="fcInteractiveCard" role="button" tabindex="0" aria-label="Flashcard. Press Space to flip.">
+        <div class="fc-card ${state.isFlipped ? 'fc-flipped' : ''}" id="fcInteractiveCard" role="button" tabindex="0" onclick="window.fcFlip()" aria-label="Flashcard. Press Space to flip.">
           <div class="fc-card-inner">
             <!-- FRONT FACE (QUESTION) -->
             <div class="fc-card-face fc-card-front">
@@ -395,11 +395,11 @@
 
               <div class="fc-card-footer fc-back-footer">
                 <div class="fc-rating-buttons">
-                  <button class="fc-rate-btn fc-btn-need-practice ${curRating === 'practice' ? 'fc-rate-selected' : ''}" id="fcRatePracticeBtn" title="Mark for further review (Key 1)">
+                  <button class="fc-rate-btn fc-btn-need-practice ${curRating === 'practice' ? 'fc-rate-selected' : ''}" id="fcRatePracticeBtn" onclick="event.stopPropagation(); window.fcRate('practice')" title="Mark for further review (Key 1)">
                     <span>🔴</span>
                     <span>Need Practice (1)</span>
                   </button>
-                  <button class="fc-rate-btn fc-btn-mastered ${curRating === 'mastered' ? 'fc-rate-selected' : ''}" id="fcRateMasteredBtn" title="Mark as mastered (Key 2)">
+                  <button class="fc-rate-btn fc-btn-mastered ${curRating === 'mastered' ? 'fc-rate-selected' : ''}" id="fcRateMasteredBtn" onclick="event.stopPropagation(); window.fcRate('mastered')" title="Mark as mastered (Key 2)">
                     <span>🟢</span>
                     <span>Mastered (2)</span>
                   </button>
@@ -411,12 +411,12 @@
 
         <!-- CONTROLS TOOLBAR -->
         <div class="fc-controls-bar">
-          <button class="fc-nav-btn" id="fcPrevBtn" ${state.currentIndex === 0 ? 'disabled' : ''} title="Previous Card (←)">
+          <button class="fc-nav-btn" id="fcPrevBtn" ${state.currentIndex === 0 ? 'disabled' : ''} onclick="window.fcPrev()" title="Previous Card (←)">
             <span>◀</span>
             <span class="fc-ctrl-lbl">Prev</span>
           </button>
 
-          <button class="fc-flip-btn" id="fcFlipBtn" title="Flip Card (Space)">
+          <button class="fc-flip-btn" id="fcFlipBtn" onclick="window.fcFlip()" title="Flip Card (Space)">
             <span>🔄</span>
             <span>Flip Card</span>
           </button>
@@ -821,6 +821,130 @@
   });
 
   // Global init function
+  
+  // EXPOSE GLOBAL ACTIONS ON WINDOW FOR 100% BULLETPROOF ONCLICK COMPATIBILITY
+  window.fcFlip = function() {
+    state.isFlipped = !state.isFlipped;
+    const cardEl = document.getElementById('fcInteractiveCard');
+    if (cardEl) {
+      cardEl.classList.toggle('fc-flipped', state.isFlipped);
+    }
+  };
+
+  window.fcNext = function() {
+    if (state.currentIndex < state.activeDeck.length - 1) {
+      state.currentIndex++;
+      state.isFlipped = false;
+      renderUI();
+    }
+  };
+
+  window.fcPrev = function() {
+    if (state.currentIndex > 0) {
+      state.currentIndex--;
+      state.isFlipped = false;
+      renderUI();
+    }
+  };
+
+  window.fcRate = function(rating) {
+    const curCard = state.activeDeck[state.currentIndex];
+    if (curCard) {
+      state.ratings[curCard.id] = rating;
+      saveState();
+      if (state.currentIndex < state.activeDeck.length - 1) {
+        state.currentIndex++;
+        state.isFlipped = false;
+      }
+      renderUI();
+    }
+  };
+
+  window.fcRateCardId = function(cid, rating) {
+    if (cid) {
+      state.ratings[cid] = rating;
+      saveState();
+      renderUI();
+    }
+  };
+
+  window.fcSelectSubject = function(subj) {
+    if (subj && subj !== state.currentSubject) {
+      state.currentSubject = subj;
+      state.currentTopic = 'ALL';
+      state.currentIndex = 0;
+      state.isFlipped = false;
+      buildActiveDeck();
+      saveState();
+      renderUI();
+    }
+  };
+
+  window.fcSelectTopic = function(topic) {
+    state.currentTopic = topic;
+    state.currentIndex = 0;
+    state.isFlipped = false;
+    buildActiveDeck();
+    saveState();
+    renderUI();
+  };
+
+  window.fcSearch = function(query) {
+    state.searchQuery = query || '';
+    state.currentIndex = 0;
+    state.isFlipped = false;
+    buildActiveDeck();
+    renderUI();
+  };
+
+  window.fcClearSearch = function() {
+    state.searchQuery = '';
+    state.currentIndex = 0;
+    state.isFlipped = false;
+    buildActiveDeck();
+    renderUI();
+  };
+
+  window.fcTogglePractice = function() {
+    state.onlyNeedPractice = !state.onlyNeedPractice;
+    state.currentIndex = 0;
+    state.isFlipped = false;
+    buildActiveDeck();
+    renderUI();
+  };
+
+  window.fcToggleShuffle = function() {
+    state.isShuffled = !state.isShuffled;
+    state.currentIndex = 0;
+    state.isFlipped = false;
+    buildActiveDeck();
+    renderUI();
+  };
+
+  window.fcSwitchView = function(view) {
+    state.viewMode = view;
+    saveState();
+    renderUI();
+  };
+
+  window.fcResetFilters = function() {
+    state.currentTopic = 'ALL';
+    state.searchQuery = '';
+    state.onlyNeedPractice = false;
+    state.isShuffled = false;
+    state.currentIndex = 0;
+    state.isFlipped = false;
+    buildActiveDeck();
+    renderUI();
+  };
+
+  window.fcStudyIndex = function(idx) {
+    state.currentIndex = idx;
+    state.viewMode = 'card';
+    state.isFlipped = false;
+    renderUI();
+  };
+
   window.initFlashcardsModule = function() {
     loadState();
     buildActiveDeck();

@@ -1035,3 +1035,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Mobile Touch & Tap Responsiveness Enhancement */
+.fc-card, .fc-flip-btn, .fc-nav-btn, .fc-rate-btn, .fc-sub-btn, .fc-toggle-btn, .fc-view-btn,
+.tva-btn-generate, .tva-chip, .tva-tool-btn, .tva-key-pill, .fw-nav-btn {
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  cursor: pointer !important;
+}
