@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="flashcards.css">
+<link rel="stylesheet" href="framework.css">
 <style>
   :root {
     --bg-main: #FAFAFC;
@@ -6374,17 +6375,59 @@
         </div>
       </div>
 
+      <!-- TOPPER FRAMEWORKS FEATURE BANNER -->
+      <div class="topper-framework-banner">
+        <div class="tf-badge">🔥 EXCLUSIVE ANSWER BLUEPRINT</div>
+        <h3 class="tf-title">Topper Answer Frameworks &amp; Value Addition Vault</h3>
+        <p class="tf-desc">
+          Forensic breakdown of high-scoring techniques distilled from 194+ topper answer copies across GS (Aditya Srivastava AIR 1, Animesh Pradhan AIR 2, Kunal Rastogi AIR 15) and Sociology (Riya Saini AIR 22, Siddharth Singh AIR 143, Saloni Chhabra AIR 29): Demand decoding, 4-Hook intros, PESTLE-S body matrices, micro-diagrams, 2nd ARC/SC case laws, and Sociological Thinker Triangulation.
+        </p>
+        <div class="tf-cta-row">
+          <a href="gs.html?view=framework" class="tf-btn gs-btn">📘 Open GS Frameworks (Essay &amp; GS1–4) &rarr;</a>
+          <a href="sociology.html?view=framework" class="tf-btn soc-btn">📙 Open Sociology Frameworks (P1 &amp; P2) &rarr;</a>
+          <button type="button" class="tf-btn toggle-btn" id="btnToggleQuickFramework">⚡ Quick Preview Frameworks</button>
+        </div>
+
+        <div id="quickFrameworkDrawer" class="tf-drawer" style="display:none;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.2); padding-bottom:0.6rem;">
+            <strong style="font-size:1.05rem; color:#93C5FD;">🎯 Key Framework Formulas At A Glance</strong>
+            <span style="font-size:0.75rem; color:#DBEAFE; font-family:'JetBrains Mono', monospace;">Instant Blueprint</span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.2rem;">
+            <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:1.1rem; border:1px solid rgba(255,255,255,0.15);">
+              <h4 style="margin:0 0 0.5rem; color:#60A5FA; font-size:0.95rem;">📘 General Studies Formula</h4>
+              <p style="font-size:0.84rem; line-height:1.55; color:#E2E8F0; margin:0 0 0.6rem;">
+                <strong>1. Intro:</strong> 4-Hook System (NFHS/PLFS Data, Constitutional Article, Definition, or Legal Trigger).<br>
+                <strong>2. Body:</strong> PESTLE-S Dimensions (Political, Legal, Economic, Social, Tech, Environmental) with 15-sec micro-diagram.<br>
+                <strong>3. Way Forward:</strong> 2nd ARC Report, Law Commission, or NITI Aayog Strategy @75.
+              </p>
+              <a href="gs.html?view=framework" style="color:#93C5FD; font-size:0.82rem; font-weight:700; text-decoration:none;">Open Interactive GS Blueprint &rarr;</a>
+            </div>
+
+            <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:1.1rem; border:1px solid rgba(255,255,255,0.15);">
+              <h4 style="margin:0 0 0.5rem; color:#34D399; font-size:0.95rem;">📙 Sociology Triangulation Formula</h4>
+              <p style="font-size:0.84rem; line-height:1.55; color:#E2E8F0; margin:0 0 0.6rem;">
+                <strong>1. Tier 1 (Classical):</strong> Marx, Weber, Durkheim, or Parsons conceptual foundation.<br>
+                <strong>2. Tier 2 (Contemporary):</strong> Giddens, Beck, Foucault, or Feminist critical contestation.<br>
+                <strong>3. Tier 3 (Empirical):</strong> M.N. Srinivas, Andre Beteille, or Yogendra Singh field view.
+              </p>
+              <a href="sociology.html?view=framework" style="color:#6EE7B7; font-size:0.82rem; font-weight:700; text-decoration:none;">Open Interactive Sociology Blueprint &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- TWO BIG LANDING CARDS FOR GS & SOCIOLOGY -->
       <div class="topper-landing-grid">
         <!-- GS CARD -->
         <a href="gs.html" class="topper-main-card active" id="cardGsCategory" style="text-decoration:none; color:inherit;">
           <div class="topper-card-badge-row">
             <div class="topper-card-icon-lg">📘</div>
-            <span class="topper-pill-count">GS I - IV &amp; Essay</span>
+            <span class="topper-pill-count">GS I - IV &amp; Essay &bull; Frameworks</span>
           </div>
           <div class="topper-main-title">General Studies</div>
           <div class="topper-main-btn">
-            <span>Explore GS Copies</span>
+            <span>Explore GS Copies &amp; Framework</span>
             <span class="btn-arrow">&rarr;</span>
           </div>
         </a>
@@ -6393,11 +6436,11 @@
         <a href="sociology.html" class="topper-main-card card-soc" id="cardSocCategory" style="text-decoration:none; color:inherit;">
           <div class="topper-card-badge-row">
             <div class="topper-card-icon-lg">📙</div>
-            <span class="topper-pill-count">Paper 1 &amp; Paper 2</span>
+            <span class="topper-pill-count">Paper 1 &amp; 2 &bull; Triangulation</span>
           </div>
           <div class="topper-main-title">Sociology Optional</div>
           <div class="topper-main-btn">
-            <span>Explore Sociology Copies</span>
+            <span>Explore Sociology Copies &amp; Framework</span>
             <span class="btn-arrow">&rarr;</span>
           </div>
         </a>
@@ -10936,6 +10979,20 @@ function setFilterSubject(subj, btnEl) {
   }
   renderTopperCopies();
 }
+
+// Toggle Quick Framework Drawer
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('btnToggleQuickFramework');
+  const drawer = document.getElementById('quickFrameworkDrawer');
+  if (toggleBtn && drawer) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isHidden = drawer.style.display === 'none';
+      drawer.style.display = isHidden ? 'block' : 'none';
+      toggleBtn.textContent = isHidden ? '✕ Close Quick Preview' : '⚡ Quick Preview Frameworks';
+    });
+  }
+});
 
 function selectMainCategory(cat) {
   const gsCard = document.getElementById('cardGsCategory');
