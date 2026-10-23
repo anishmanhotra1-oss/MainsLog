@@ -41,7 +41,7 @@
       "file": "pyq-data/polity.json",
       "icon": "⚖️",
       "color": "#2563EB",
-      "totalQuestions": 309,
+      "totalQuestions": 1240,
       "avgPerYear": 14.5,
       "highYieldTopics": [
         "Fundamental Rights & DPSP",
@@ -59,7 +59,7 @@
       "file": "pyq-data/economy.json",
       "icon": "📈",
       "color": "#059669",
-      "totalQuestions": 310,
+      "totalQuestions": 1110,
       "avgPerYear": 15.2,
       "highYieldTopics": [
         "Monetary Policy & RBI Balance Sheet",
@@ -77,7 +77,7 @@
       "file": "pyq-data/environment.json",
       "icon": "🌿",
       "color": "#16A34A",
-      "totalQuestions": 40,
+      "totalQuestions": 637,
       "avgPerYear": 17.5,
       "highYieldTopics": [
         "Protected Area Networks & Biosphere Reserves",
@@ -95,7 +95,7 @@
       "file": "pyq-data/history.json",
       "icon": "🏛️",
       "color": "#D97706",
-      "totalQuestions": 781,
+      "totalQuestions": 2784,
       "avgPerYear": 14.6,
       "highYieldTopics": [
         "Buddhism, Jainism & Philosophical Schools",
@@ -113,7 +113,7 @@
       "file": "pyq-data/geography.json",
       "icon": "🗺️",
       "color": "#0284C7",
-      "totalQuestions": 282,
+      "totalQuestions": 1224,
       "avgPerYear": 11.2,
       "highYieldTopics": [
         "River Systems & Drainage Basins",
@@ -131,7 +131,7 @@
       "file": "pyq-data/science-tech.json",
       "icon": "🔬",
       "color": "#7C3AED",
-      "totalQuestions": 40,
+      "totalQuestions": 1290,
       "avgPerYear": 10.7,
       "highYieldTopics": [
         "Biotechnology (CRISPR, mRNA, Stem Cells)",

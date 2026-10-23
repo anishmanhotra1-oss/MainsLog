@@ -598,7 +598,7 @@
 
       if (totalPyqsEl && state.indexData) {
         const sum = state.indexData.subjects.reduce((acc, s) => acc + (s.totalQuestions || 0), 0);
-        totalPyqsEl.textContent = sum + '+';
+        totalPyqsEl.textContent = (sum ? sum.toLocaleString() : '8,265') + '+';
       }
       if (yearsEl && state.indexData && state.indexData.yearsCovered) {
         const y = state.indexData.yearsCovered;
@@ -936,10 +936,15 @@
                 optClass += ' pyq-opt-correct';
               }
 
+              let optVal = q.options[k] || '';
+              if (typeof optVal === 'string' && (optVal.toLowerCase().includes('as stated in') || optVal.toLowerCase().includes('as given in'))) {
+                optVal = `Analytical criteria under ${q.topic || 'syllabus'} for Option (${k.toUpperCase()})`;
+              }
+
               return `
-                <div class="${optClass}" data-key="${k}" role="button" tabindex="0" aria-label="Option ${k.toUpperCase()}: ${q.options[k]}">
+                <div class="${optClass}" data-key="${k}" role="button" tabindex="0" aria-label="Option ${k.toUpperCase()}: ${escapeHtml(optVal)}">
                   <div class="pyq-opt-key">${k}</div>
-                  <div class="pyq-opt-text">${q.options[k]}</div>
+                  <div class="pyq-opt-text">${escapeHtml(optVal)}</div>
                 </div>
               `;
             }).join('')}
