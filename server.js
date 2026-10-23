@@ -735,6 +735,19 @@ function mergePyqUserData(existing, incoming) {
     }
   }
 
+  // Topper Value Addition AI Generator Endpoint (Powered by Gemini)
+  if (reqPath === '/api/value-addition') {
+    const vaHandler = require('./api/value-addition.js');
+    try {
+      if (req.method === 'POST') {
+        req.body = await parseJsonBody(req);
+      }
+      return vaHandler(req, res);
+    } catch (err) {
+      return sendJsonResponse(res, 500, { success: false, error: err.message });
+    }
+  }
+
   // Static File Serving
   if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
   if (reqPath === '/tracker') reqPath = '/tracker.html';
