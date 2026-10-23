@@ -8435,7 +8435,376 @@
 
     <!-- VIEW B: ACTIVE RECALL FLASHCARDS (POLITY, HISTORY, ECONOMY, GEOGRAPHY) -->
     <div id="recallFlashcardsContainer" style="display: none;">
-      <!-- Populated dynamically by flashcards.js -->
+      
+      <div class="fc-wrapper">
+        <!-- HEADER & SUBJECT TABS -->
+        <div class="fc-header-card">
+          <div class="fc-top-bar">
+            <div>
+              <div class="fc-pill-badge" style="background: #EFF6FF; color: #2563EB; border: 1px solid #BFDBFE;">
+                <span>⚖️</span>
+                <span>UPSC Prelims Active Recall Deck</span>
+              </div>
+              <h2 class="fc-main-title">Interactive Flashcards Studio</h2>
+              <div class="fc-subtitle">Systematic active recall for factual retention, key articles, timelines, and economic concepts.</div>
+            </div>
+
+            <div class="fc-quick-actions">
+              <button class="fc-action-btn" id="fcSwitchQueuesBtn" title="Return to Revision Queues">
+                <span>🔄</span>
+                <span>Scheduled Queues</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- SUBJECT SELECTION TABS -->
+          <div class="fc-subject-tabs" role="tablist">
+            
+                <button class="fc-sub-btn fc-active" data-subject="polity" role="tab" aria-selected="true">
+                  <span class="fc-tab-icon">⚖️</span>
+                  <span class="fc-tab-name">Polity</span>
+                  <span class="fc-tab-count">378</span>
+                </button>
+              
+                <button class="fc-sub-btn " data-subject="history" role="tab" aria-selected="false">
+                  <span class="fc-tab-icon">🏛️</span>
+                  <span class="fc-tab-name">History & Art</span>
+                  <span class="fc-tab-count">245</span>
+                </button>
+              
+                <button class="fc-sub-btn " data-subject="economy" role="tab" aria-selected="false">
+                  <span class="fc-tab-icon">📈</span>
+                  <span class="fc-tab-name">Economy</span>
+                  <span class="fc-tab-count">151</span>
+                </button>
+              
+                <button class="fc-sub-btn " data-subject="geography" role="tab" aria-selected="false">
+                  <span class="fc-tab-icon">🗺️</span>
+                  <span class="fc-tab-name">Geography</span>
+                  <span class="fc-tab-count">47</span>
+                </button>
+              
+                <button class="fc-sub-btn " data-subject="review" role="tab" aria-selected="false">
+                  <span class="fc-tab-icon">★</span>
+                  <span class="fc-tab-name">Review Vault</span>
+                  <span class="fc-tab-count">0</span>
+                </button>
+              
+          </div>
+
+          <!-- PROGRESS BAR & STATS -->
+          <div class="fc-stats-strip">
+            <div class="fc-progress-meta">
+              <span><strong>Polity Progress:</strong> 0 of 378 Mastered (0%)</span>
+              <span class="fc-practice-count" title="Cards marked for further review">🔴 Need Practice: 0</span>
+            </div>
+            <div class="fc-progress-bar-bg">
+              <div class="fc-progress-bar-fill" style="width: 0%; background: #2563EB;"></div>
+            </div>
+          </div>
+
+          <!-- FILTER BAR (TOPIC, SEARCH, MODES) -->
+          <div class="fc-filter-toolbar">
+            <div class="fc-filter-group">
+              
+                <select class="fc-topic-select" id="fcTopicSelect" aria-label="Filter by Topic / Chapter">
+                  <option value="ALL">All Chapters &amp; Topics (378)</option>
+                  
+                    <option value="1. Historical Background" >1. Historical Background</option>
+                  
+                    <option value="2. Making of the Constitution" >2. Making of the Constitution</option>
+                  
+                    <option value="3. Salient Features of the Constitution" >3. Salient Features of the Constitution</option>
+                  
+                    <option value="4. Preamble of the Constitution" >4. Preamble of the Constitution</option>
+                  
+                    <option value="5. Union and its Territory" >5. Union and its Territory</option>
+                  
+                    <option value="6. Citizenship" >6. Citizenship</option>
+                  
+                    <option value="7. Fundamental Rights" >7. Fundamental Rights</option>
+                  
+                    <option value="8. Directive Principles of State Policy" >8. Directive Principles of State Policy</option>
+                  
+                    <option value="9. Fundamental Duties" >9. Fundamental Duties</option>
+                  
+                    <option value="10. Amendment of the Constitution" >10. Amendment of the Constitution</option>
+                  
+                    <option value="11. Basic Structure of the Constitution" >11. Basic Structure of the Constitution</option>
+                  
+                    <option value="12. Parliamentary System" >12. Parliamentary System</option>
+                  
+                    <option value="13. Federal System" >13. Federal System</option>
+                  
+                    <option value="14. Centre–State Relations" >14. Centre–State Relations</option>
+                  
+                    <option value="15. Inter-State Relations" >15. Inter-State Relations</option>
+                  
+                    <option value="16. Emergency Provisions" >16. Emergency Provisions</option>
+                  
+                    <option value="17. President" >17. President</option>
+                  
+                    <option value="18. Vice-President" >18. Vice-President</option>
+                  
+                    <option value="19. Prime Minister" >19. Prime Minister</option>
+                  
+                    <option value="20. Central Council of Ministers" >20. Central Council of Ministers</option>
+                  
+                    <option value="21. Cabinet Committees" >21. Cabinet Committees</option>
+                  
+                    <option value="22. Parliament" >22. Parliament</option>
+                  
+                    <option value="23. Parliamentary Committees" >23. Parliamentary Committees</option>
+                  
+                    <option value="24. Parliamentary Forums" >24. Parliamentary Forums</option>
+                  
+                    <option value="25. Supreme Court" >25. Supreme Court</option>
+                  
+                    <option value="26. Governor" >26. Governor</option>
+                  
+                    <option value="27. Chief Minister" >27. Chief Minister</option>
+                  
+                    <option value="28. State Council of Ministers" >28. State Council of Ministers</option>
+                  
+                    <option value="29. State Legislature" >29. State Legislature</option>
+                  
+                    <option value="30. High Court" >30. High Court</option>
+                  
+                    <option value="31. Subordinate Courts" >31. Subordinate Courts</option>
+                  
+                    <option value="32. Special Status of Jammu & Kashmir" >32. Special Status of Jammu & Kashmir</option>
+                  
+                    <option value="33. Special Provisions for Some States" >33. Special Provisions for Some States</option>
+                  
+                    <option value="34. Panchayati Raj" >34. Panchayati Raj</option>
+                  
+                    <option value="35. Municipalities" >35. Municipalities</option>
+                  
+                    <option value="36. Union Territories" >36. Union Territories</option>
+                  
+                    <option value="37. Scheduled and Tribal Areas" >37. Scheduled and Tribal Areas</option>
+                  
+                    <option value="38. Election Commission" >38. Election Commission</option>
+                  
+                    <option value="39. Union Public Service Commission" >39. Union Public Service Commission</option>
+                  
+                    <option value="40. State Public Service Commission" >40. State Public Service Commission</option>
+                  
+                    <option value="41. Finance Commission" >41. Finance Commission</option>
+                  
+                    <option value="42. National Commission for SCs" >42. National Commission for SCs</option>
+                  
+                    <option value="43. National Commission for STs" >43. National Commission for STs</option>
+                  
+                    <option value="44. Special Officer for Linguistic Minorities" >44. Special Officer for Linguistic Minorities</option>
+                  
+                    <option value="45. Comptroller and Auditor General of India" >45. Comptroller and Auditor General of India</option>
+                  
+                    <option value="46. Attorney General of India" >46. Attorney General of India</option>
+                  
+                    <option value="47. Advocate General of the State" >47. Advocate General of the State</option>
+                  
+                    <option value="48. Planning Commission" >48. Planning Commission</option>
+                  
+                    <option value="49. National Development Council" >49. National Development Council</option>
+                  
+                    <option value="50. National Human Rights Commission" >50. National Human Rights Commission</option>
+                  
+                    <option value="51. State Human Rights Commission" >51. State Human Rights Commission</option>
+                  
+                    <option value="52. Central Information Commission" >52. Central Information Commission</option>
+                  
+                    <option value="53. State Information Commission" >53. State Information Commission</option>
+                  
+                    <option value="54. Central Vigilance Commission" >54. Central Vigilance Commission</option>
+                  
+                    <option value="55. Central Bureau of Investigation" >55. Central Bureau of Investigation</option>
+                  
+                    <option value="56. Lokpal and Lokayuktas" >56. Lokpal and Lokayuktas</option>
+                  
+                    <option value="57. Co-operative Societies" >57. Co-operative Societies</option>
+                  
+                    <option value="58. Official Language" >58. Official Language</option>
+                  
+                    <option value="59. Public Services" >59. Public Services</option>
+                  
+                    <option value="60. Tribunals" >60. Tribunals</option>
+                  
+                    <option value="61. Rights and Liabilities of the Government" >61. Rights and Liabilities of the Government</option>
+                  
+                    <option value="62. Authoritative Text of the Constitution in Hindi Language" >62. Authoritative Text of the Constitution in Hindi Language</option>
+                  
+                    <option value="63. Special Provisions Relating to Certain Classes" >63. Special Provisions Relating to Certain Classes</option>
+                  
+                    <option value="64. Political Parties" >64. Political Parties</option>
+                  
+                    <option value="65. Elections" >65. Elections</option>
+                  
+                    <option value="66. Electoral Reforms" >66. Electoral Reforms</option>
+                  
+                    <option value="67. Anti-Defection Law" >67. Anti-Defection Law</option>
+                  
+                    <option value="68. Pressure Groups" >68. Pressure Groups</option>
+                  
+                </select>
+              
+            </div>
+
+            <div class="fc-search-group">
+              <span class="fc-search-icon">🔍</span>
+              <input type="text" class="fc-search-input" id="fcSearchInput" placeholder="Search cards (e.g., Preamble, Harappa, Repo)..." value=""/>
+              
+            </div>
+
+            <div class="fc-mode-toggles">
+              <button class="fc-toggle-btn " id="fcTogglePracticeOnlyBtn" title="Filter to show only cards needing practice">
+                <span>🔴</span>
+                <span class="fc-btn-text">Practice Only</span>
+              </button>
+
+              <button class="fc-toggle-btn " id="fcToggleShuffleBtn" title="Shuffle flashcards order">
+                <span>🔀</span>
+                <span class="fc-btn-text">Shuffle</span>
+              </button>
+
+              <div class="fc-view-switch">
+                <button class="fc-view-btn fc-view-active" id="fcViewCardBtn" title="Single Flashcard Focus Mode">
+                  🗂️ Card
+                </button>
+                <button class="fc-view-btn " id="fcViewListBtn" title="Browse All Cards in List Mode">
+                  📋 List
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN FLASHCARD CONTENT AREA -->
+        <div class="fc-content-body">
+          
+      <div class="fc-card-container">
+        <!-- 3D CARD WRAPPER -->
+        <div class="fc-card " id="fcInteractiveCard" role="button" tabindex="0" aria-label="Flashcard. Press Space to flip.">
+          <div class="fc-card-inner">
+            <!-- FRONT FACE (QUESTION) -->
+            <div class="fc-card-face fc-card-front">
+              <div class="fc-card-header">
+                <div class="fc-card-crumbs">
+                  <span class="fc-crumb-subject" style="color: #2563EB; background: #EFF6FF;">
+                    ⚖️ Polity
+                  </span>
+                  <span class="fc-crumb-chapter">1. Historical Background</span>
+                </div>
+                <div class="fc-card-counter">
+                  <span class="fc-count-current">1</span>
+                  <span class="fc-count-divider">/</span>
+                  <span class="fc-count-total">378</span>
+                </div>
+              </div>
+
+              <div class="fc-card-body">
+                <div class="fc-q-badge">Question</div>
+                <div class="fc-question-text">Key features of the Regulating Act 1773?</div>
+              </div>
+
+              <div class="fc-card-footer">
+                <div class="fc-flip-prompt">
+                  <span class="fc-flip-icon">🔄</span>
+                  <span>Tap card or press <b>Space</b> to reveal answer</span>
+                </div>
+                
+              </div>
+            </div>
+
+            <!-- BACK FACE (ANSWER) -->
+            <div class="fc-card-face fc-card-back">
+              <div class="fc-card-header">
+                <div class="fc-card-crumbs">
+                  <span class="fc-crumb-subject" style="color: #2563EB; background: #EFF6FF;">
+                    ⚖️ Key Fact / Answer
+                  </span>
+                  <span class="fc-crumb-chapter">1. Historical Background</span>
+                </div>
+                <div class="fc-card-counter">
+                  <span class="fc-count-current">1</span>
+                  <span class="fc-count-divider">/</span>
+                  <span class="fc-count-total">378</span>
+                </div>
+              </div>
+
+              <div class="fc-card-body">
+                <div class="fc-answer-badge">Answer &amp; High-Yield Insight</div>
+                <div class="fc-answer-text">
+        <span class="fc-clause-item">
+          <span class="fc-clause-bullet">•</span>
+          <span>First step by British Parliament to regulate the Company</span>
+        </span>
+      
+        <span class="fc-clause-item">
+          <span class="fc-clause-bullet">•</span>
+          <span>Governor of Bengal became Governor-General of Bengal (Warren Hastings first)</span>
+        </span>
+      
+        <span class="fc-clause-item">
+          <span class="fc-clause-bullet">•</span>
+          <span>Executive Council of 4</span>
+        </span>
+      
+        <span class="fc-clause-item">
+          <span class="fc-clause-bullet">•</span>
+          <span>Supreme Court at Calcutta (1774)</span>
+        </span>
+      
+        <span class="fc-clause-item">
+          <span class="fc-clause-bullet">•</span>
+          <span>servants barred from private trade.</span>
+        </span>
+      </div>
+              </div>
+
+              <div class="fc-card-footer fc-back-footer">
+                <div class="fc-rating-buttons">
+                  <button class="fc-rate-btn fc-btn-need-practice " id="fcRatePracticeBtn" title="Mark for further review (Key 1)">
+                    <span>🔴</span>
+                    <span>Need Practice (1)</span>
+                  </button>
+                  <button class="fc-rate-btn fc-btn-mastered " id="fcRateMasteredBtn" title="Mark as mastered (Key 2)">
+                    <span>🟢</span>
+                    <span>Mastered (2)</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTROLS TOOLBAR -->
+        <div class="fc-controls-bar">
+          <button class="fc-nav-btn" id="fcPrevBtn" disabled title="Previous Card (←)">
+            <span>◀</span>
+            <span class="fc-ctrl-lbl">Prev</span>
+          </button>
+
+          <button class="fc-flip-btn" id="fcFlipBtn" title="Flip Card (Space)">
+            <span>🔄</span>
+            <span>Flip Card</span>
+          </button>
+
+          <button class="fc-nav-btn" id="fcNextBtn"  title="Next Card (→)">
+            <span class="fc-ctrl-lbl">Next</span>
+            <span>▶</span>
+          </button>
+        </div>
+
+        <!-- KEYBOARD SHORTCUTS LEGEND -->
+        <div class="fc-shortcuts-legend">
+          <span>Shortcuts: <b>Space</b> Flip | <b>← / →</b> Prev / Next | <b>1</b> Need Practice | <b>2</b> Mastered</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
     </div>
   </div>
 
@@ -8721,6 +9090,196 @@
                 <strong>3. Tier 3 (Empirical):</strong> M.N. Srinivas, Andre Beteille, or Yogendra Singh field view.
               </p>
               <a href="sociology.html?view=framework" style="color:#6EE7B7; font-size:0.82rem; font-weight:700; text-decoration:none;">Open Interactive Sociology Blueprint &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- TOPPER VALUE ADDITION SECTION (PRE-RENDERED FOR 100% RELIABILITY ON MOBILE PWA) -->
+      <div class="tva-root" id="topperValueAdditionSection">
+        <div class="tva-header">
+          <div>
+            <span class="tva-kicker">💎 EDGE MULTIPLIER ENGINE</span>
+            <h3 class="tva-title">Topper Topic Value Addition Vault</h3>
+            <p class="tva-sub">
+              Enter any UPSC topic to generate official government data, quotes, thinkers, rich multi-tier case studies (rural, district, global), committees, and secret edge factors using Google Gemini 3.5 Intelligence.
+            </p>
+          </div>
+          <div class="tva-header-actions">
+            <button type="button" class="tva-key-pill" id="tvaKeyBtn" title="Check or configure your Google Gemini API Key">
+              <span class="tva-key-dot"></span>
+              <span id="tvaKeyLabel">✨ Gemini AI Active</span>
+              <span class="tva-key-edit">⚙️</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Input Box -->
+        <div class="tva-input-card">
+          <div class="tva-input-row">
+            <input type="text" id="tvaTopicInput" class="tva-search-input" placeholder="Type ANY topic (e.g. Women in Agriculture, Judicial Pendency, Space Economy, Tribal PESA)..." value="Women in Agriculture &amp; Land Rights">
+            <button type="button" id="tvaGenerateBtn" class="tva-btn-generate">
+              <span>⚡ Generate Value Addition</span>
+            </button>
+          </div>
+
+          <!-- Quick Topic Chips -->
+          <div class="tva-chips-label">🔥 High-Frequency Mains Topic Presets (Tap to Load):</div>
+          <div class="tva-chips-wrap" id="tvaChipsWrap">
+            <button class="tva-chip active" data-slug="women-in-agriculture">Women in Agriculture</button>
+            <button class="tva-chip" data-slug="federalism-governors">Federalism &amp; Governors</button>
+            <button class="tva-chip" data-slug="judicial-pendency">Judicial Pendency</button>
+            <button class="tva-chip" data-slug="urban-floods">Urban Flooding</button>
+            <button class="tva-chip" data-slug="ai-ethics">AI Ethics &amp; Bias</button>
+            <button class="tva-chip" data-slug="semiconductor-mission">Semiconductors</button>
+            <button class="tva-chip" data-slug="tribal-governance">Tribal PESA &amp; Forests</button>
+            <button class="tva-chip" data-slug="informal-economy">Gig Workers &amp; Social Security</button>
+          </div>
+        </div>
+
+        <!-- Action Strip -->
+        <div class="tva-actions-strip">
+          <div class="tva-active-topic-badge" id="tvaTopicBadge">
+            <strong id="tvaActiveTopicTitle">Women in Agriculture &amp; Land Rights</strong>
+            <span id="tvaActiveCategory">GS1 / GS3 / Sociology</span>
+          </div>
+          <div class="tva-btn-group">
+            <button type="button" class="tva-tool-btn" id="tvaRegenAiBtn" title="Synthesize live with Google Gemini AI">✨ Regenerate with AI</button>
+            <button type="button" class="tva-tool-btn" id="tvaCopyBtn" title="Copy full sheet as Markdown">📋 Copy Sheet</button>
+            <button type="button" class="tva-tool-btn" id="tvaSaveBtn" title="Save to local browser vault">💾 Save to Vault</button>
+            <button type="button" class="tva-tool-btn primary" id="tvaDownloadPdfBtn" title="Export clean formatted PDF">📥 Download PDF</button>
+          </div>
+        </div>
+
+        <!-- Cards Grid Container -->
+        <div class="tva-cards-grid" id="tvaCardsContainer">
+
+      <!-- 1. DATA CARD -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-data">📊 Official Data &amp; Stats</span>
+        </div>
+        <div class="tva-card-body">As per Periodic Labour Force Survey (PLFS 2023-24), 76.2% of rural women workers are employed in agriculture vs 54% of rural men (the &quot;Feminization of Agriculture&quot;). However, as per 10th Agricultural Census, women hold only 13.9% of operational agricultural landholdings.</div>
+        <div class="tva-source-line">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          PLFS 2023-24 &amp; 10th Agricultural Census, MoA&amp;FW
+        </div>
+      </div>
+
+      <!-- 2. QUOTE CARD -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-quote">💬 Authoritative Quote</span>
+        </div>
+        <div class="tva-card-body"><em>&quot;Until women gain independent control over land and productive assets, agricultural growth will remain both inequitable and structurally sub-optimal.&quot; — Prof. Bina Agarwal</em></div>
+        <div class="tva-source-line">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          A Field of One's Own: Gender and Land Rights in South Asia
+        </div>
+      </div>
+
+      <!-- 3. THINKER CARD -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-thinker">🧠 Thinker Perspective</span>
+        </div>
+        <div class="tva-card-body">Amartya Sen (Capabilities Approach — intra-household bargaining deficit) &amp; Bina Agarwal (Fall-back position: legal land title directly enhances woman’s domestic decision-making agency and nutrition security).</div>
+      </div>
+
+      <!-- 4. EXAMPLES CARD -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-scheme">💡 Distinct Examples</span>
+        </div>
+        <div class="tva-card-body">Joint Titling Initiatives in Odisha (Vasundhara scheme granting revenue land titles jointly to husband and wife) and Andhra Pradesh AP-CNF (Community Managed Natural Farming led by women SHGs).</div>
+      </div>
+
+      <!-- 5. RURAL GRASSROOTS CASE STUDIES -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-rural">🏡 Rural &amp; Grassroots Case Studies (2-3 Models)</span>
+        </div>
+        <div class="tva-card-body"><div class="tva-case-item"><strong>Case 1</strong> <span class="tva-case-badge">[Kudumbashree Sangha Krishi, Kerala]</span>: 3.2 lakh rural women organized in 70,000+ Joint Liability Groups (JLGs) collectively lease uncultivated fallow land to farm paddy and vegetables, overcoming lack of title through collective leasehold farming and generating ₹450+ Cr annual revenue.</div><div class="tva-case-item"><strong>Case 2</strong> <span class="tva-case-badge">[Community Managed Natural Farming - AP-CNF, Andhra Pradesh]</span>: Over 8.5 lakh women farmers transitioned to zero-chemical agro-ecological practices, achieving 18% higher farm yields, 35% cost reduction, and superior micro-nutrient density.</div><div class="tva-case-item"><strong>Case 3</strong> <span class="tva-case-badge">[Vasundhara Scheme, Odisha]</span>: State government pioneered issuing joint revenue land titles (pattas) to over 5.8 lakh rural women, legally establishing spousal coparcenary over homestead land.</div></div>
+      </div>
+
+      <!-- 6. DISTRICT GOVERNANCE & ADMINISTRATIVE INNOVATIONS -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-admin">🏛️ District Admin &amp; Governance Innovations</span>
+        </div>
+        <div class="tva-card-body"><div class="tva-case-item">Project Sakhi <span class="tva-case-badge">[Kanker District, Chhattisgarh]</span>: District administration organized tribal women SHGs with solar-powered cold storage and direct fair-trade value chains for minor forest produce (Mahua, Tendu, Harra), doubling household incomes and eliminating commission agents.</div></div>
+      </div>
+
+      <!-- 7. GLOBAL BENCHMARK CASE STUDIES -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-global">🌐 Global Benchmark Case Studies (2 Models)</span>
+        </div>
+        <div class="tva-card-body"><div class="tva-case-item"><strong>Benchmark 1</strong> <span class="tva-case-badge">[Rwanda Land Tenure Regularisation (LTRP)]</span>: Implemented nation-wide digital land demarcation with mandatory joint spousal photo registration, elevating female co-ownership to 86% and boosting agricultural investments by 19%.</div><div class="tva-case-item"><strong>Benchmark 2</strong> <span class="tva-case-badge">[Costa Rica Payment for Environmental Services (PES)]</span>: Gender-inclusive carbon credit program directly remunerating rural women farmers for maintaining agroforestry buffers on family farmlands.</div></div>
+      </div>
+
+      <!-- 8. COMMITTEE RECOMMENDATIONS -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-committee">📑 Committee Recommendation</span>
+        </div>
+        <div class="tva-card-body">M.S. Swaminathan Committee on Women in Agriculture: Recommended the Women Farmers Entitlement Bill, defining &quot;farmer&quot; based on agricultural work rather than land ownership title.</div>
+      </div>
+
+      <!-- 9. COMMISSIONS & OFFICIAL BODIES -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-law">⚖️ Commissions &amp; Reports</span>
+        </div>
+        <div class="tva-card-body">NITI Aayog Strategy for New India @75: Chapter on Agriculture &amp; Gender Mainstreaming advocating for Kisan Credit Cards (KCC) for tenant and women farmers through SHG-JLGs.</div>
+      </div>
+
+      <!-- 10. LAWS & ARTICLES -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-law">📜 Constitutional Articles &amp; Laws</span>
+        </div>
+        <div class="tva-card-body">Hindu Succession (Amendment) Act 2005 (Equal coparcenary rights in ancestral property); Article 39(a/d) (Equal livelihood and equal pay for equal work); Section 4 of Forest Rights Act 2006 (Joint pattas with spouse).</div>
+      </div>
+
+      <!-- 11. SCHEMES & POLICIES -->
+      <div class="tva-item-card">
+        <div class="tva-card-top">
+          <span class="tva-category-tag tva-tag-scheme">🎯 Flagship Central Schemes</span>
+        </div>
+        <div class="tva-card-body">Mahila Kisan Sashaktikaran Pariyojana (MKSP - sub-component of DAY-NRLM), Namo Drone Didi Scheme (training women SHGs in precision drone spraying), Agri-Clinic and Agri-Business Centers (ACABC).</div>
+      </div>
+
+      <!-- 12. SECRET SAUCE EDGE FACTOR -->
+      <div class="tva-item-card tva-edge-card">
+        <div class="tva-card-top">
+          <span class="tva-edge-title">🚀 The Topper "Secret Sauce" Edge Factor (What Normal Aspirants Miss)</span>
+        </div>
+        <div class="tva-card-body">The &quot;Ghost Farmer&quot; Paradox: Women perform 60–80% of crop management and seed preservation, yet due to lack of land title, they cannot access institutional credit, subsidized fertilizer, PM-KISAN transfers, or crop insurance (PMFBY). Normal aspirants propose generic &quot;financial awareness&quot;; top rankers propose legally delinking institutional credit and PM-KISAN entitlement from land ownership revenue records to farmer identity cards (Kisan ID).</div>
+      </div>
+
+        </div>
+
+        <!-- API Key Settings Modal -->
+        <div id="tvaKeyModal" class="tva-modal" style="display:none;">
+          <div class="tva-modal-backdrop" id="tvaModalBackdrop"></div>
+          <div class="tva-modal-card">
+            <div class="tva-modal-header">
+              <div class="tva-modal-title">🔑 Google Gemini AI Settings</div>
+              <button type="button" class="tva-modal-close" id="tvaCloseKeyModal">&times;</button>
+            </div>
+            <p class="tva-modal-desc">
+              Your Google Gemini API Key powers real-time synthesis of official data, quotes, thinkers, multiple case studies, and edge factors for any custom topic.
+            </p>
+            <div class="tva-modal-field">
+              <label for="tvaCustomApiKey">Custom Gemini API Key (optional override):</label>
+              <input type="password" id="tvaCustomApiKey" class="tva-modal-input" placeholder="Leave blank to use server environment key (.env)" autocomplete="off">
+              <small class="tva-modal-hint">A valid key from .env is currently loaded on the backend.</small>
+            </div>
+            <div class="tva-modal-footer">
+              <button type="button" class="tva-modal-btn cancel" id="tvaCancelKeyModal">Close</button>
+              <button type="button" class="tva-modal-btn save" id="tvaSaveKeyModal">Save Settings</button>
             </div>
           </div>
         </div>
@@ -9768,6 +10327,19 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js').then(reg => {
       reg.update();
+      if (reg.waiting) {
+        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+      }
+      reg.addEventListener('updatefound', () => {
+        const newWorker = reg.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              newWorker.postMessage({ type: 'SKIP_WAITING' });
+            }
+          });
+        }
+      });
       if ('periodicSync' in reg) {
         reg.periodicSync.register('mainslog-study-sync', {
           minInterval: 15 * 60 * 1000
@@ -13747,29 +14319,15 @@ function switchRecallMode(mode) {
     if (window.initFlashcardsModule && window.FLASHCARDS_DATA) {
       window.initFlashcardsModule();
     } else {
-      if (flashcardsContainer && !flashcardsContainer.innerHTML.trim()) {
-        flashcardsContainer.innerHTML = '<div style="padding: 48px 16px; text-align: center;">' +
-          '<div style="width: 42px; height: 42px; border: 3.5px solid #BFDBFE; border-top-color: #2563EB; border-radius: 50%; animation: fcSpin 0.8s linear infinite; margin: 0 auto 16px;"></div>' +
-          '<div style="font-family: \'Plus Jakarta Sans\', sans-serif; font-size: 16px; font-weight: 700; color: #0F172A; margin-bottom: 6px;">Loading Flashcards Deck...</div>' +
-          '<div style="font-size: 13px; color: #64748B;">Preparing 820+ UPSC Prelims Cards across Polity, History, Economy &amp; Geography</div>' +
-        '</div>';
-      }
       let attempts = 0;
       const retryInterval = setInterval(() => {
         attempts++;
         if (window.initFlashcardsModule && window.FLASHCARDS_DATA) {
           clearInterval(retryInterval);
           window.initFlashcardsModule();
-        } else if (attempts > 50) {
+        } else if (attempts > 60) {
           clearInterval(retryInterval);
-          if (window.initFlashcardsModule) {
-            window.initFlashcardsModule();
-          } else if (flashcardsContainer) {
-            flashcardsContainer.innerHTML = '<div style="padding: 30px 16px; text-align: center; color: #DC2626;">' +
-              '<p style="font-weight: 700;">Could not initialize flashcards deck.</p>' +
-              '<button onclick="location.reload()" style="padding: 8px 18px; border-radius: 8px; background: #2563EB; color: white; border: none; font-weight: 600; cursor: pointer;">Tap to Reload</button>' +
-            '</div>';
-          }
+          if (window.initFlashcardsModule) window.initFlashcardsModule();
         }
       }, 80);
     }

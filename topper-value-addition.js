@@ -813,7 +813,11 @@
     const targetParent = document.querySelector('.topper-copies-root');
     if (!targetParent) return;
 
-    if (document.getElementById('topperValueAdditionSection')) return;
+    const existing = document.getElementById('topperValueAdditionSection');
+    if (existing) {
+      bindValueAdditionEvents(existing);
+      return;
+    }
 
     const wrapper = document.createElement('div');
     wrapper.innerHTML = buildValueAdditionHtml();

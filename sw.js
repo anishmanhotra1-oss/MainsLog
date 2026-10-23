@@ -1,5 +1,5 @@
 // MainsLog PWA Service Worker with Push Notifications & Study Slot Reminders
-const CACHE_NAME = 'mainslog-pwa-v34';
+const CACHE_NAME = 'mainslog-pwa-v35';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -60,9 +60,15 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Network-first strategy for HTML pages so updates show instantly
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
+// Resilient fetch strategy: never crash respondWith with null
 self.addEventListener('fetch', (event) => {
-  // Never intercept or cache API requests
+  // Never intercept or cache backend API endpoints
   if (event.request.url.includes('/api/')) {
     return;
   }
@@ -71,33 +77,48 @@ self.addEventListener('fetch', (event) => {
                  (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) ||
                  event.request.url.endsWith('.html');
 
-  const isLocalAsset = event.request.url.startsWith(self.location.origin);
-
-  if (isHtml || isLocalAsset) {
+  if (isHtml) {
+    // HTML pages: Network-first with cached index.html offline fallback
     event.respondWith(
       fetch(event.request)
         .then((networkResponse) => {
-          if (networkResponse.status === 200) {
+          if (networkResponse && networkResponse.status === 200) {
             const responseToCache = networkResponse.clone();
             caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
           }
           return networkResponse;
         })
-        .catch(() => caches.match(event.request).then(res => res || (isHtml ? caches.match('./index.html') : null)))
+        .catch(async () => {
+          const matched = await caches.match(event.request);
+          if (matched) return matched;
+          const fallback = await caches.match('./index.html');
+          return fallback || Response.error();
+        })
     );
   } else {
+    // Static assets (JS, CSS, images): Cache-first with network revalidation
     event.respondWith(
       caches.match(event.request).then((cachedResponse) => {
         if (cachedResponse) {
+          // Revalidate in background
+          fetch(event.request).then((netRes) => {
+            if (netRes && netRes.status === 200 && event.request.method === 'GET') {
+              const copy = netRes.clone();
+              caches.open(CACHE_NAME).then((c) => c.put(event.request, copy));
+            }
+          }).catch(() => {});
           return cachedResponse;
         }
-        return fetch(event.request).then((networkResponse) => {
-          if (event.request.method === 'GET' && networkResponse.status === 200) {
-            const responseToCache = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
-          }
-          return networkResponse;
-        });
+
+        return fetch(event.request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200 && event.request.method === 'GET') {
+              const copy = networkResponse.clone();
+              caches.open(CACHE_NAME).then((c) => c.put(event.request, copy));
+            }
+            return networkResponse;
+          })
+          .catch(() => Response.error());
       })
     );
   }
