@@ -11207,8 +11207,8 @@ function getPendingItemsToday() {
   });
   let sundayPending = isSunday ? pool.filter(e => {
     if (isEntryDeleted(e.id)) return false;
-    const d = e.targetDate || e.dateStudied;
-    return !e.sundayDone && d <= weekRange.sunStr;
+    const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+    return !e.sundayDone && !!(d && d >= weekRange.monStr && d <= weekRange.sunStr);
   }) : [];
   let monthlyPending = isMonthlyBlock ? pool.filter(e => {
     if (isEntryDeleted(e.id)) return false;
@@ -11648,8 +11648,8 @@ function renderHeaderStats() {
   const weekRange = getMonToSatWeekRange(today);
   const sundayDue = ENTRIES.filter(e => {
     if (isEntryDeleted(e.id)) return false;
-    const d = e.targetDate || e.dateStudied;
-    return !e.sundayDone && d <= weekRange.sunStr;
+    const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+    return !e.sundayDone && !!(d && d >= weekRange.monStr && d <= weekRange.sunStr);
   }).length;
 
   const elDueSunday = document.getElementById('statDueSunday');
@@ -11998,8 +11998,8 @@ function renderRevisionTab() {
   const notice = document.getElementById('sundayNoticeBox');
   const sundayEntries = pool.filter(e => {
     if (isEntryDeleted(e.id)) return false;
-    const d = e.targetDate || e.dateStudied;
-    return (d >= weekRange.monStr && d <= weekRange.sunStr) || (!e.sundayDone && d <= weekRange.sunStr);
+    const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+    return !!(d && d >= weekRange.monStr && d <= weekRange.sunStr);
   });
   if (listSunday) {
     listSunday.innerHTML = "";
@@ -12011,7 +12011,7 @@ function renderRevisionTab() {
           ${isSunday ? '🚨 TODAY IS SUNDAY REVISION DAY (R7)!' : '📅 SUNDAY VAULT (R7) COVERAGE'}
         </div>
         <div>
-          All topics studied from <b>${formatDateDisplay(weekRange.monStr)} (Mon)</b> to <b>${formatDateDisplay(weekRange.sunStr)} (Sun)</b> &amp; unrevised backlog are scheduled for Active Recall on <b>${formatDateDisplay(weekRange.sunStr)} (Sun)</b>.
+          All topics studied from <b>${formatDateDisplay(weekRange.monStr)} (Mon)</b> to <b>${formatDateDisplay(weekRange.sunStr)} (Sun)</b> are scheduled for Active Recall on <b>${formatDateDisplay(weekRange.sunStr)} (Sun)</b>.
         </div>
       `;
     }
@@ -12593,8 +12593,8 @@ window.renderRevisionTierModalList = function(tier) {
     milestoneKey = 'sunday';
     filtered = pool.filter(e => {
       if (isEntryDeleted(e.id)) return false;
-      const d = e.targetDate || e.dateStudied;
-      return (d >= weekRange.monStr && d <= weekRange.sunStr) || (!e.sundayDone && d <= weekRange.sunStr);
+      const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+      return !!(d && d >= weekRange.monStr && d <= weekRange.sunStr);
     });
   } else if (tier === 'monthly') {
     milestoneKey = 'monthly';
