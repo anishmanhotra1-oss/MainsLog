@@ -1,7 +1,7 @@
 /**
  * UPSC CSE Active Recall Flashcards Master Database
  * Auto-compiled from syllabus and curated high-yield revision sets
- * Total: 821 Flashcards
+ * Total: 1393 Flashcards (Polity: 378, History: 245, Economy: 151, Geography: 619)
  */
 
 (function(root) {
@@ -6207,380 +6207,4956 @@
   ],
   "geography": [
     {
-      "id": "geography_1",
+      "id": "geo_A1-01",
       "subject": "geography",
-      "part": "Part I — Physical Geography & Geomorphology",
-      "chapter": "1. Earth Interior & Tectonics",
-      "q": "Layers of the Earth's interior and discontinuities?",
-      "a": "Crust (continental granitic SIAL, oceanic basaltic SIMA), Mantle (Asthenosphere semi-molten upper mantle), Core (Outer liquid nickel-iron, Inner solid NIFE). Discontinuities: Conrad (upper/lower crust), Mohorovicic (crust/mantle), Repetti (upper/lower mantle), Gutenberg (mantle/outer core), Lehmann (outer/inner core)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "How far does India's territorial limit extend into the sea?",
+      "a": "Up to 12 nautical miles (about 21.9 km) from the coast."
     },
     {
-      "id": "geography_2",
+      "id": "geo_A1-02",
       "subject": "geography",
-      "part": "Part I — Physical Geography & Geomorphology",
-      "chapter": "1. Earth Interior & Tectonics",
-      "q": "Continental Drift Theory and evidence?",
-      "a": "Proposed by Alfred Wegener (1912). Evidence: Jig-saw fit of Atlantic coastlines, matching fossil distribution (Glossopteris flora, Mesosaurus), tillite glacial deposits in peninsular India and Gondwanaland, placer gold deposits in Ghana from Brazilian veins."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Statute mile vs nautical mile in km?",
+      "a": "Statute mile ≈ 1.6 km (1.584 km); nautical mile ≈ 1.8 km (1.852 km)."
     },
     {
-      "id": "geography_3",
+      "id": "geo_A1-03",
       "subject": "geography",
-      "part": "Part I — Physical Geography & Geomorphology",
-      "chapter": "1. Earth Interior & Tectonics",
-      "q": "Plate Tectonics and three boundary types?",
-      "a": "Lithospheric plates moving over the asthenosphere. Divergent (constructive, Mid-Atlantic Ridge), Convergent (destructive, ocean-continent trenches/volcanic arcs, continent-continent Himalayas), Transform (conservative, San Andreas Fault, strike-slip earthquakes)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Where does India's southern boundary extend in the Bay of Bengal?",
+      "a": "Up to 6°45' N latitude."
     },
     {
-      "id": "geography_4",
+      "id": "geo_A1-04",
       "subject": "geography",
-      "part": "Part I — Physical Geography & Geomorphology",
-      "chapter": "1. Earth Interior & Tectonics",
-      "q": "Seismic waves: P-waves vs S-waves?",
-      "a": "P-waves: primary, longitudinal/compressional, travel through solid, liquid, gas, fastest. S-waves: secondary, transverse/shear, propagate only through solids, produce greater ground displacement. Shadow zones: S-wave shadow zone beyond 105° on both sides; P-wave shadow zone between 105° and 145°."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "What are the north–south and east–west distances of India's mainland?",
+      "a": "North–south 3,214 km; east–west 2,933 km (both extents are roughly 30° of latitude/longitude)."
     },
     {
-      "id": "geography_5",
+      "id": "geo_A1-05",
       "subject": "geography",
-      "part": "Part I — Physical Geography & Geomorphology",
-      "chapter": "1. Earth Interior & Tectonics",
-      "q": "Major volcanic types and intrusive igneous bodies?",
-      "a": "Shield volcanoes (basaltic fluid lava, Hawaiian), Composite/Stratovolcanoes (pyroclastic, steep, Fuji/Vesuvius), Caldera (collapsed magma chamber). Intrusive: Batholith (massive granite core), Laccolith (dome-shaped with conduit pipe), Lopolith (saucer-shaped), Phacolith (anticline crests/syncline troughs), Sills (horizontal sheets), Dykes (vertical wall-like)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Why does the 30° latitudinal extent cover more distance than the 30° longitudinal extent?",
+      "a": "The distance between longitudes decreases towards the poles, while the distance between latitudes stays the same everywhere."
     },
     {
-      "id": "geography_6",
+      "id": "geo_A1-06",
       "subject": "geography",
-      "part": "Part I — Physical Geography & Geomorphology",
-      "chapter": "1. Earth Interior & Tectonics",
-      "q": "Weathering processes and Karst topography?",
-      "a": "Physical (frost wedging, thermal exfoliation), Chemical (carbonation, hydration, oxidation). Karst (limestone terrain): Lapies, Sinkholes, Swallow holes, Doline, Uvala, Polje, Caves, Stalactites (hanging), Stalagmites (rising), Pillars/Columns."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Which part of India lies in the tropics and which in the sub-tropical (warm temperate) zone?",
+      "a": "The southern part lies within the tropics; the northern part lies in the sub-tropical (warm temperate) zone. This causes large variations in landforms, climate, soils and natural vegetation."
     },
     {
-      "id": "geography_7",
+      "id": "geo_A1-07",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "2. Climatology & Atmospheric Dynamics",
-      "q": "Vertical structure of the atmosphere?",
-      "a": "Troposphere (up to 8 km poles, 18 km equator; temperature falls at normal lapse rate 6.5°C/km; all weather), Stratosphere (contains ozone layer 15-35 km; temperature inversion; ideal for jets), Mesosphere (coldest layer -100°C; meteors burn), Thermosphere/Ionosphere (D, E, F layers reflect radio waves; auroras), Exosphere (rarefied gas merging with space)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "What is the time difference between India's easternmost and westernmost parts?",
+      "a": "Nearly two hours (longitudinal variation of nearly 30°)."
     },
     {
-      "id": "geography_8",
+      "id": "geo_A1-08",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "2. Climatology & Atmospheric Dynamics",
-      "q": "Planetary wind belts and Coriolis force?",
-      "a": "Coriolis force acts perpendicular to pressure gradient, deflects winds to the right in Northern Hemisphere and left in Southern Hemisphere (Ferrel's Law). Planetary winds: Equatorial low (Doldrums), Trade winds (NE & SE into ITCZ), Subtropical highs (Horse latitudes 30°-35°), Westerlies (Roaring Forties, Furious Fifties in Southern oceans), Polar easterlies."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "What is India's standard meridian, and how does IST relate to GMT?",
+      "a": "82°30' E; IST is ahead of GMT by 5 hours 30 minutes."
     },
     {
-      "id": "geography_9",
+      "id": "geo_A1-09",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "2. Climatology & Atmospheric Dynamics",
-      "q": "Jet streams and Rossby waves?",
-      "a": "Narrow bands of high-altitude meandering westerly geostrophic winds in upper troposphere (9-12 km). Polar front jet (30°-60°) and Subtropical westerly jet (20°-35°). Tropical easterly jet over Indian peninsula in summer induces Indian monsoon depression development."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Why was 82°30' E chosen as the standard meridian?",
+      "a": "Countries generally select standard meridians in multiples of 7°30' of longitude."
     },
     {
-      "id": "geography_10",
+      "id": "geo_A1-10",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "2. Climatology & Atmospheric Dynamics",
-      "q": "Tropical vs Extra-tropical (Temperate) cyclones?",
-      "a": "Tropical: originate over warm oceans (SST > 27°C), driven by latent heat of condensation, calm central 'eye', symmetrical isobars, no fronts, move east to west. Extra-tropical: originate along polar front due to cold-warm air mass convergence, have warm and cold fronts, move west to east under Westerlies, affect larger area."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "How many time zones does the USA have?",
+      "a": "Seven."
     },
     {
-      "id": "geography_11",
+      "id": "geo_A1-11",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "2. Climatology & Atmospheric Dynamics",
-      "q": "El Niño, La Niña and Indian Ocean Dipole (IOD)?",
-      "a": "El Niño: abnormal warming of eastern equatorial Pacific off Peru coast; weakens Walker circulation and suppresses Indian southwest monsoon. La Niña: cooler eastern Pacific; strengthens Indian monsoon. Positive IOD: western Indian Ocean warmer than eastern Indian Ocean; boosts Indian rainfall; Negative IOD suppresses rainfall."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "What is India's area and world rank?",
+      "a": "3.28 million sq. km; 2.4% of world land area; seventh largest country."
     },
     {
-      "id": "geography_12",
+      "id": "geo_A1-12",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "3. Oceanography & Marine Relief",
-      "q": "Major ocean floor relief divisions?",
-      "a": "Continental Shelf (shallow, gentle slope, rich fishing grounds e.g. Grand Banks, Dogger Bank, offshore petroleum), Continental Slope (steep gradient), Continental Rise, Deep Sea Abyssal Plain (extensive flat floor), Oceanic Trenches/Deeps (subduction zones e.g. Mariana Trench)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Which countries form the Indian subcontinent?",
+      "a": "Pakistan, Nepal, Bhutan, Bangladesh and India."
     },
     {
-      "id": "geography_13",
+      "id": "geo_A1-13",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "3. Oceanography & Marine Relief",
-      "q": "Factors determining ocean salinity?",
-      "a": "Evaporation and precipitation, freshwater influx from rivers and melting ice, wind circulation. Highest salinity in enclosed seas in subtropical high pressure belts (Red Sea, Mediterranean, Lake Van ~330‰, Dead Sea ~240‰); lower salinity in equatorial doldrums and polar seas."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "What bounds the Indian subcontinent?",
+      "a": "Himalayas in the north; Hindukush and Sulaiman ranges in the north-west; Purvachal hills in the north-east; Indian Ocean in the south."
     },
     {
-      "id": "geography_14",
+      "id": "geo_A1-14",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "3. Oceanography & Marine Relief",
-      "q": "Major ocean currents of Atlantic and Pacific?",
-      "a": "Atlantic Warm: Gulf Stream, North Atlantic Drift, Brazil Current. Atlantic Cold: Canary, Benguela, Labrador, Falkland Current. Pacific Warm: Kuroshio, North Pacific, East Australian. Pacific Cold: Oyashio/Kuril, California, Humboldt/Peru Current. Meeting of warm and cold currents produces dense fog and prime fishing banks."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Name the mountain passes mentioned that cross the Himalayan/north-western barrier.",
+      "a": "Khyber, Bolan, Shipkila, Nathula, Bomdila."
     },
     {
-      "id": "geography_15",
+      "id": "geo_A1-15",
       "subject": "geography",
-      "part": "Part II — Climatology & Oceanography",
-      "chapter": "3. Oceanography & Marine Relief",
-      "q": "Coral reef types and bleaching causes?",
-      "a": "Fringing reef (adjacent to shore), Barrier reef (separated by lagoon e.g. Great Barrier Reef), Atoll (ring-shaped reef enclosing lagoon). Coral bleaching: expulsion of symbiotic zooxanthellae algae due to elevated sea surface temperatures (>1°C above summer max), ocean acidification, pollution, sedimentation."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "What is the length of India's coastline?",
+      "a": "6,100 km on the mainland; 7,517 km including the island groups."
     },
     {
-      "id": "geography_16",
+      "id": "geo_A1-16",
       "subject": "geography",
-      "part": "Part III — Indian Physiography & Drainage",
-      "chapter": "4. Indian Physiography & Mountain Passes",
-      "q": "Geological divisions of India?",
-      "a": "1. Peninsular Block (ancient Archean shield, stable, relict hills, faults like Narmada-Tapi). 2. Extra-Peninsular/Himalayan Fold Belt (young, folded, tectonic instability, deep gorges, youth stage rivers). 3. Indo-Gangetic-Brahmaputra Alluvial Plain (geosynclinal depression filled by Pleistocene-Holocene alluvium)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Which two island countries are India's neighbours in the Indian Ocean?",
+      "a": "Sri Lanka and Maldives."
     },
     {
-      "id": "geography_17",
+      "id": "geo_A1-17",
       "subject": "geography",
-      "part": "Part III — Indian Physiography & Drainage",
-      "chapter": "4. Indian Physiography & Mountain Passes",
-      "q": "Longitudinal divisions of the Himalayas?",
-      "a": "Trans-Himalayas (Karakoram, Ladakh, Zaskar; K2 Godwin-Austen 8611m), Greater Himalayas/Himadri (highest peaks e.g. Everest, Kanchenjunga; central crystalline axis), Lesser Himalayas/Himachal (Pir Panjal, Dhauladhar, Nag Tibba, Mussoorie), Outer Himalayas/Shiwaliks (youngest sedimentary fold, Duns and Duars)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "What separates Sri Lanka from India?",
+      "a": "The Gulf of Mannar and the Palk Strait."
     },
     {
-      "id": "geography_18",
+      "id": "geo_A1-18",
       "subject": "geography",
-      "part": "Part III — Indian Physiography & Drainage",
-      "chapter": "4. Indian Physiography & Mountain Passes",
-      "q": "Strategic Himalayan mountain passes?",
-      "a": "Ladakh/J&K: Zoji La (Srinagar-Leh), Khardung La (Leh-Nubra), Banihal (Jawahar Tunnel). Himachal: Rohtang (Kullu-Lahaul), Shipki La (Sutlej gorge to Tibet), Bara-lacha La. Uttarakhand: Lipulekh, Mana, Niti (Kailash Mansarovar route). Sikkim: Nathu La, Jelep La (Chumbi valley). Arunachal: Bomdi La, Dihang, Diphu."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Where is India located within Asia?",
+      "a": "South-central Asia, bordering the Indian Ocean and its two arms, the Bay of Bengal and the Arabian Sea."
     },
     {
-      "id": "geography_19",
+      "id": "geo_A1-19",
       "subject": "geography",
-      "part": "Part III — Indian Physiography & Drainage",
-      "chapter": "4. Indian Physiography & Mountain Passes",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "Which two island groups belong to India and where are they?",
+      "a": "Andaman and Nicobar in the Bay of Bengal; Lakshadweep in the Arabian Sea."
+    },
+    {
+      "id": "geo_A1-20",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A1. India — Location",
+      "q": "What is School Bhuvan NCERT?",
+      "a": "A portal for map-based learning on the country's natural resources, environment and sustainable development; an initiative of Bhuvan-NRSC/ISRO based on the NCERT syllabus."
+    },
+    {
+      "id": "geo_A2-01",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Approximate age of the Earth per the text?",
+      "a": "About 4,600 million years."
+    },
+    {
+      "id": "geo_A2-02",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which forces shaped the Earth's surface and subsurface features?",
+      "a": "Endogenic and exogenic forces (together with lateral movements of plates)."
+    },
+    {
+      "id": "geo_A2-03",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "How did the Indian plate move historically?",
+      "a": "It lay south of the equator, was much larger and included the Australian plate; it broke up, the Australian plate moved south-east and the Indian plate moved north. The northward movement is still continuing."
+    },
+    {
+      "id": "geo_A2-04",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Name the three geological divisions of India.",
+      "a": "(i) The Peninsular Block; (ii) the Himalayas and other Peninsular mountains; (iii) the Indo-Ganga-Brahmaputra Plain."
+    },
+    {
+      "id": "geo_A2-05",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What is the northern boundary of the Peninsular Block?",
+      "a": "An irregular line from Kachchh along the western flank of the Aravali near Delhi, then roughly parallel to the Yamuna and Ganga up to the Rajmahal Hills and the Ganga delta."
+    },
+    {
+      "id": "geo_A2-06",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which areas are extensions of the Peninsular Block?",
+      "a": "Karbi Anglong and the Meghalaya Plateau in the north-east, and Rajasthan in the west."
+    },
+    {
+      "id": "geo_A2-07",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What separates the Meghalaya plateau from the Chotanagpur plateau?",
+      "a": "The Malda fault in West Bengal."
+    },
+    {
+      "id": "geo_A2-08",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What forms the Peninsula and since when has it been a rigid block?",
+      "a": "A great complex of very ancient gneisses and granites; it has stood as a rigid block since the Cambrian period (except parts of the western coast submerged under the sea)."
+    },
+    {
+      "id": "geo_A2-09",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Give examples of vertical movements/block faulting in the Peninsula.",
+      "a": "The rift valleys of the Narmada, Tapi and Mahanadi, and the Satpura block mountains."
+    },
+    {
+      "id": "geo_A2-10",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Name relict/residual mountains of the Peninsula.",
+      "a": "Aravali, Nallamala, Javadi, Veliconda, Palkonda and Mahendragiri hills."
+    },
+    {
+      "id": "geo_A2-11",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which east-flowing rivers form deltas before entering the Bay of Bengal?",
+      "a": "Mahanadi, Krishna, Kaveri and Godavari."
+    },
+    {
+      "id": "geo_A2-12",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "How do the Himalayas differ in structure from the Peninsular Block?",
+      "a": "The Himalayas and other Peninsular mountains are young, weak and flexible (unlike the rigid, stable Peninsular Block) and still show faults, folds and thrust plains from endogenic and exogenic forces."
+    },
+    {
+      "id": "geo_A2-13",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which landforms indicate the youthful stage of Himalayan rivers?",
+      "a": "Gorges, V-shaped valleys, rapids and waterfalls."
+    },
+    {
+      "id": "geo_A2-14",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "How did the Indo-Ganga-Brahmaputra Plain originate?",
+      "a": "As a geo-synclinal depression which attained maximum development in the third phase of Himalayan mountain formation (about 64 million years ago), later filled by sediments from Himalayan and Peninsular rivers; alluvium depth is 1,000–2,000 m."
+    },
+    {
+      "id": "geo_A2-15",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "How does the text define 'physiography'?",
+      "a": "The outcome of structure, process and stage of development."
+    },
+    {
+      "id": "geo_A2-16",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "List the six physiographic divisions of India.",
+      "a": "(1) Northern and North-eastern Mountains; (2) Northern Plain; (3) Peninsular Plateau; (4) Indian Desert; (5) Coastal Plains; (6) Islands."
+    },
+    {
+      "id": "geo_A2-17",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What are the length and width of the Great Himalayan range (central axial range)?",
+      "a": "About 2,500 km east to west; 160–400 km north to south."
+    },
+    {
+      "id": "geo_A2-18",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Orientation of Himalayan ranges in different regions?",
+      "a": "NW–SE in north-western India; east–west in Darjiling and Sikkim; north–south in Nagaland, Manipur and Mizoram."
+    },
+    {
+      "id": "geo_A2-19",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "In what ways are the Himalayas a divide?",
+      "a": "They are a physical barrier and also a climatic, drainage and cultural divide."
+    },
+    {
+      "id": "geo_A2-20",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What is the extent and width of the Northern Plains?",
+      "a": "About 3,200 km east to west; width 150–300 km; alluvium depth 1,000–2,000 m."
+    },
+    {
+      "id": "geo_A2-21",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Name the three north-to-south zones of the Northern Plain.",
+      "a": "Bhabar, Tarai and the alluvial plains (divided into Khadar and Bhangar)."
+    },
+    {
+      "id": "geo_A2-22",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What is the Bhabar?",
+      "a": "A narrow belt of 8–10 km parallel to the Shiwalik foothills at the break-up of slope, where streams deposit heavy rocks and boulders and at times disappear."
+    },
+    {
+      "id": "geo_A2-23",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What is the Tarai?",
+      "a": "A belt 10–20 km wide south of Bhabar where streams re-emerge without proper channels, creating marshy conditions with luxuriant vegetation and varied wildlife."
+    },
+    {
+      "id": "geo_A2-24",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Bhangar vs Khadar?",
+      "a": "Bhangar is old alluvium; Khadar is new alluvium."
+    },
+    {
+      "id": "geo_A2-25",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which fluvial landforms characterise the Northern Plain?",
+      "a": "Sand bars, meanders, ox-bow lakes and braided channels."
+    },
+    {
+      "id": "geo_A2-26",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What are the Brahmaputra plains known for?",
+      "a": "Riverine islands and sand bars; areas are subject to periodic floods and shifting courses forming braided streams."
+    },
+    {
+      "id": "geo_A2-27",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which states form the water divide between the Indus and Ganga systems?",
+      "a": "Haryana and Delhi."
+    },
+    {
+      "id": "geo_A2-28",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Where does the Brahmaputra take a ~90° southward turn?",
+      "a": "At Dhubri, before entering Bangladesh."
+    },
+    {
+      "id": "geo_A2-29",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What is the general elevation of the Northern Plain and which crops grow here?",
+      "a": "50–150 m above mean sea level; wheat, rice, sugarcane and jute."
+    },
+    {
+      "id": "geo_A2-30",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What are the outer limits of the Peninsular plateau?",
+      "a": "Delhi ridge (NW), Rajmahal hills (E), Gir range (W) and Cardamom hills (S); extends in the NE as the Shillong and Karbi-Anglong plateau. Elevation 600–900 m."
+    },
+    {
+      "id": "geo_A2-31",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Name the patland plateaus of Peninsular India.",
+      "a": "Hazaribagh, Palamu, Ranchi, Malwa, Coimbatore and Karnataka plateaus."
+    },
+    {
+      "id": "geo_A2-32",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which direction does the Peninsular plateau slope and how is this shown?",
+      "a": "General elevation is from west to east, proved by the flow pattern of rivers."
+    },
+    {
+      "id": "geo_A2-33",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Name typical physiographic features of the Peninsular plateau.",
+      "a": "Tors, block mountains, rift valleys, spurs, bare rocky structures, hummocky hills and wall-like quartzite dykes."
+    },
+    {
+      "id": "geo_A2-34",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which soil dominates the western and north-western Peninsular plateau?",
+      "a": "Black soil."
+    },
+    {
+      "id": "geo_A2-35",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which fault is notable for recurrent seismic activity in the Peninsular plateau?",
+      "a": "The Bhima fault."
+    },
+    {
+      "id": "geo_A2-36",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Name the ravines of the north-western Peninsular plateau.",
+      "a": "Ravines of Chambal, Bhind and Morena."
+    },
+    {
+      "id": "geo_A2-37",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Three broad groups of the Peninsular plateau?",
+      "a": "The Deccan Plateau, the Central Highlands and the Northeastern Plateau."
+    },
+    {
+      "id": "geo_A2-38",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What borders the Deccan Plateau?",
+      "a": "Western Ghats (west), Eastern Ghats (east), and Satpura, Maikal range and Mahadeo hills (north)."
+    },
+    {
+      "id": "geo_A2-39",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Local names of the Western Ghats?",
+      "a": "Sahyadri (Maharashtra); Nilgiri hills (Karnataka and Tamil Nadu); Anaimalai and Cardamom hills (Kerala)."
+    },
+    {
+      "id": "geo_A2-40",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
       "q": "Western Ghats vs Eastern Ghats?",
-      "a": "Western Ghats (Sahyadri): continuous escarpment, higher (avg 1200m; Anamudi 2695m highest in South India), origin of Godavari, Krishna, Cauvery; passes: Thalghat, Bhorghat, Palghat Gap. Eastern Ghats: discontinuous, dissected by rivers, lower (avg 600m; Jindhagada/Arma Konda highest), meet Western Ghats at Nilgiri Hills (Doda Betta)."
+      "a": "Western Ghats are higher (average about 1,500 m, rising north to south) and more continuous; Eastern Ghats are discontinuous low hills eroded by the Mahanadi, Godavari, Krishna and Kaveri."
     },
     {
-      "id": "geography_20",
+      "id": "geo_A2-41",
       "subject": "geography",
-      "part": "Part III — Indian Physiography & Drainage",
-      "chapter": "5. Indian River Systems",
-      "q": "Indus river system and tributaries?",
-      "a": "Originates from Bokhar Chu glacier near Lake Mansarovar in Tibet (Singi Khamban). Tributaries: Shyok, Gilgit, Zaskar, Hunza. Major Panjnad: Jhelum (Verinag, flows through Wular Lake), Chenab (Chandra-Bhaga confluence near Tandi, largest Indus tributary), Ravi (Rohtang Pass), Beas (Beas Kund, entirely in India), Sutlej (Rakas Lake near Mansarovar, feeds Bhakra Nangal)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Highest peak of the Peninsular plateau?",
+      "a": "Anaimudi (2,695 m) on the Anaimalai hills; next is Dodabetta (2,637 m) on the Nilgiri hills."
     },
     {
-      "id": "geography_21",
+      "id": "geo_A2-42",
       "subject": "geography",
-      "part": "Part III — Indian Physiography & Drainage",
-      "chapter": "5. Indian River Systems",
-      "q": "Ganga river system: Panch Prayag and tributaries?",
-      "a": "Confluences: Vishnuprayag (Alaknanda + Dhauliganga), Nandaprayag (Alaknanda + Nandakini), Karnaprayag (Alaknanda + Pindar), Rudraprayag (Alaknanda + Mandakini), Devprayag (Alaknanda + Bhagirathi = Ganga). Left-bank tributaries: Ramganga, Gomti, Ghaghara, Gandak, Kosi (Sorrow of Bihar), Mahananda. Right-bank: Yamuna (largest tributary, from Yamunotri), Son, Punpun."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Where do the Eastern and Western Ghats meet?",
+      "a": "At the Nilgiri hills."
     },
     {
-      "id": "geography_22",
+      "id": "geo_A2-43",
       "subject": "geography",
-      "part": "Part III — Indian Physiography & Drainage",
-      "chapter": "5. Indian River Systems",
-      "q": "Brahmaputra river system?",
-      "a": "Originates from Chemayungdung glacier in Tibet (named Yarlung Tsangpo). Enters Arunachal Pradesh through deep gorge at Namcha Barwa as Siang/Dihang. Confluence with Dibang and Lohit forms Brahmaputra in Assam valley. Major tributaries: Subansiri, Kameng, Manas, Sankosh, Teesta (right bank); Burhi Dihing, Dhansiri, Kopili (left bank). Majuli is the world's largest inhabited river island."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Name the main ranges of the Eastern Ghats.",
+      "a": "Javadi hills, Palconda range, Nallamala hills and Mahendragiri hills."
     },
     {
-      "id": "geography_23",
+      "id": "geo_A2-44",
       "subject": "geography",
-      "part": "Part III — Indian Physiography & Drainage",
-      "chapter": "5. Indian River Systems",
-      "q": "Peninsular rivers: East-flowing vs West-flowing?",
-      "a": "East-flowing (form deltas): Mahanadi (Dandakaranya, Hirakud Dam), Godavari (Dakshin Ganga, Trimbakeshwar, largest peninsular river), Krishna (Mahabaleshwar, Nagarjuna Sagar/Almatti), Cauvery (Talakaveri in Brahmagiri, Shivanasamudra falls, Mettur Dam). West-flowing (flow in rift valleys, form estuaries): Narmada (Amarkantak, Dhuandhar falls, Sardar Sarovar), Tapi (Multai in Betul), Sabarmati, Mahi (crosses Tropic of Cancer twice), Periyar, Mandovi, Zuari."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Where do most Peninsular rivers originate?",
+      "a": "In the Western Ghats."
     },
     {
-      "id": "geography_24",
+      "id": "geo_A2-45",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "6. Monsoons, Soils and Natural Vegetation",
-      "q": "Mechanism of Southwest Monsoon onset?",
-      "a": "Differential heating of land and sea, shifting of ITCZ over Ganga plain in summer, withdrawal of subtropical westerly jet north of Himalayas, establishment of Tropical Easterly Jet (TEJ), intense heating of Tibetan Plateau acting as thermal engine, high-pressure cell over Mascarene basin in southern Indian Ocean pushing Somali jet."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What bounds the Central Highlands and what is the Satpura range?",
+      "a": "Aravali range bounds it on the west; the Satpura range is a series of scarped plateaus (600–900 m) forming the northernmost boundary of the Deccan plateau."
     },
     {
-      "id": "geography_25",
+      "id": "geo_A2-46",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "6. Monsoons, Soils and Natural Vegetation",
-      "q": "Retreating monsoon and winter rainfall in India?",
-      "a": "Retreating Monsoon (Oct-Nov): ITCZ shifts south; clear skies and high humidity cause 'October Heat'; tropical cyclones strike Andhra and Tamil Nadu coast. Winter rainfall: Northwest India gets precipitation from Western Disturbances (Mediterranean extra-tropical depressions, crucial for Rabi wheat); Coromandel Coast gets northeast monsoon rains."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What features show the Central Highlands' metamorphic history?",
+      "a": "Metamorphic rocks such as marble, slate and gneiss; elevation 700–1,000 m, sloping north and north-east."
     },
     {
-      "id": "geography_26",
+      "id": "geo_A2-47",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "6. Monsoons, Soils and Natural Vegetation",
-      "q": "Major Indian soil types and characteristics?",
-      "a": "Alluvial: largest area (40%), azonal, fertile, deficient in nitrogen and humus, rich in potash; Khadar (new, sandy) vs Bhangar (old, contains kankar nodules). Black (Regur): volcanic Deccan trap basalt, clayey, self-ploughing, cracks on drying, ideal for cotton. Red and Yellow: crystalline metamorphic rocks, ferric oxide gives red color, porous. Laterite: high rainfall and high temp with intense leaching, rich in iron/aluminum, poor in nitrogen/lime, cashewnut and plantation crops."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which ranges give rise to most tributaries of the Yamuna?",
+      "a": "Vindhyan and Kaimur ranges."
     },
     {
-      "id": "geography_27",
+      "id": "geo_A2-48",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "6. Monsoons, Soils and Natural Vegetation",
-      "q": "Forest types of India?",
-      "a": "Tropical Wet Evergreen (Western Ghats, NE hills, rainfall >250cm; Rosewood, Mahogany, Ebony), Tropical Moist Deciduous (most widespread, 100-200cm rainfall; Teak, Sal, Sandalwood), Tropical Dry Deciduous (70-100cm; Tendur, Palas, Amaltas), Thorn Forest (<50cm; Acacia, Euphorbia, Babool), Montane/Alpine (oak, chestnut, pine, deodar), Mangrove/Tidal (Sundari trees in deltaic regions)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which is the only significant Chambal tributary originating from the Aravalli?",
+      "a": "The Banas."
     },
     {
-      "id": "geography_28",
+      "id": "geo_A2-49",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "7. Minerals, Energy & Agriculture",
-      "q": "Major mineral belts of India?",
-      "a": "North-Eastern Peninsular Belt (Chotanagpur plateau: 'Ruhr of India', rich in coal, iron ore, mica, bauxite), South-Western Plateau (Karnataka, Goa, Tamil Nadu: iron ore, bauxite, limestone, manganese), North-Western Belt (Aravallis in Rajasthan/Gujarat: non-ferrous copper, lead, zinc, gypsum, marble, sandstone), Southern Belt (Neyveli lignite, bauxite)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "How did the north-eastern plateau become detached from the main Peninsular block?",
+      "a": "A huge fault between the Rajmahal hills and the Meghalaya plateau, created by the north-eastward movement of the Indian plate, was later filled by river deposition."
     },
     {
-      "id": "geography_29",
+      "id": "geo_A2-50",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "7. Minerals, Energy & Agriculture",
-      "q": "Iron ore and Bauxite reserves?",
-      "a": "Iron ore: Hematite (high grade, 60-70% Fe, Odisha and Jharkhand e.g. Mayurbhanj, Badampahar, Noamundi; Chhattisgarh e.g. Bailadila; Karnataka e.g. Kudremukh, Bellary); Magnetite (black ore, magnetic, southern belt). Bauxite (aluminum ore): Odisha is largest producer (Panchpatmali in Koraput, Kalahandi), Madhya Pradesh (Amarkantak), Gujarat."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Sub-divisions of the Meghalaya plateau?",
+      "a": "Garo, Khasi and Jaintia Hills (named after tribal groups)."
     },
     {
-      "id": "geography_30",
+      "id": "geo_A2-51",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "7. Minerals, Energy & Agriculture",
-      "q": "Coal and Petroleum fields in India?",
-      "a": "Coal: Gondwana coal (98% of reserves, 250 million yrs old, bituminous, non-coking/coking; Damodar Valley: Raniganj, Jharia, Bokaro; Mahanadi, Son, Godavari valleys); Tertiary coal (15-60 million yrs, high sulfur and moisture; Assam, Meghalaya, Arunachal). Petroleum: Oldest oilfield Digboi (Assam); Mumbai High (offshore, largest producer); Bassein; KG Basin (onshore/offshore natural gas); Barmer basin (Mangala field, Rajasthan)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Minerals of the Meghalaya plateau?",
+      "a": "Coal, iron ore, sillimanite, limestone and uranium."
     },
     {
-      "id": "geography_31",
+      "id": "geo_A2-52",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "7. Minerals, Energy & Agriculture",
-      "q": "Cropping patterns: Foodgrains and Cash crops?",
-      "a": "Rice: leading food crop, Kharif, high rainfall (>100cm), alluvial clay (West Bengal, UP, Punjab). Wheat: second major crop, Rabi, moderate temp (10-15°C sowing, 21-26°C ripening), 75cm rainfall, loamy soil (UP, MP, Punjab, Haryana). Millets/Shree Anna (Jowar, Bajra, Ragi): drought-resistant, rainfed, arid zones (Rajasthan, Maharashtra, Karnataka). Cotton: Kharif, black soil, 210 frost-free days (Gujarat, Maharashtra). Sugarcane: tropical/subtropical, water-intensive (UP, Maharashtra, Karnataka). Tea: plantation, well-drained acid soil, shade (Assam, Darjeeling, Nilgiris)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Why is Cherrapunji's surface bare rocky?",
+      "a": "The plateau gets maximum rainfall from the south-west monsoon, so it is highly eroded and Cherrapunji lacks permanent vegetation cover."
     },
     {
-      "id": "geography_32",
+      "id": "geo_A2-53",
       "subject": "geography",
-      "part": "Part IV — Climate, Soils, Resources & Agriculture",
-      "chapter": "7. Minerals, Energy & Agriculture",
-      "q": "Strategic maritime straits and choke points?",
-      "a": "Malacca Strait (connects Andaman Sea/Indian Ocean with South China Sea), Bab-el-Mandeb ('Gate of Tears', Red Sea to Gulf of Aden), Hormuz Strait (Persian Gulf to Gulf of Oman/Arabian Sea, critical crude oil choke point), Bosporus and Dardanelles (Black Sea to Mediterranean), Suez Canal (Red Sea to Mediterranean), Mozambique Channel (Madagascar and Africa), Palk Strait (Gulf of Mannar to Bay of Bengal)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What features and rainfall characterise the Indian Desert (Marusthali)?",
+      "a": "Undulating topography with longitudinal dunes and barchans; rainfall below 150 mm per year; arid climate."
     },
     {
-      "id": "geography_extra_1",
+      "id": "geo_A2-54",
       "subject": "geography",
-      "part": "Part V — Biosphere Reserves & National Parks",
-      "chapter": "8. Protected Areas & Biodiversity Hotspots",
-      "q": "First Biosphere Reserve of India and states covered?",
-      "a": "Nilgiri Biosphere Reserve (established 1986); covers parts of Tamil Nadu, Kerala, and Karnataka; includes Mudumalai, Mukurthi, Wayanad, Bandipur, and Silent Valley national parks."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What is the evidence that the desert region was under the sea in the Mesozoic era?",
+      "a": "Wood Fossils Park at Aakal and marine deposits around Brahmsar near Jaisalmer (wood fossils about 180 million years old)."
     },
     {
-      "id": "geography_extra_2",
+      "id": "geo_A2-55",
       "subject": "geography",
-      "part": "Part V — Biosphere Reserves & National Parks",
-      "chapter": "8. Protected Areas & Biodiversity Hotspots",
-      "q": "Keibul Lamjao National Park key features?",
-      "a": "World's only floating national park, located on Loktak Lake in Manipur; famous for floating phumdis (heterogeneous mass of vegetation, soil, and organic matter) and the endangered Sangai (brow-antlered dancing deer)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Desert landforms and drainage?",
+      "a": "Mushroom rocks, shifting dunes and oasis; northern part slopes to Sindh, southern to the Rann of Kachchh; rivers are ephemeral (Luni is significant); brackish lakes/playas are a source of salt."
     },
     {
-      "id": "geography_extra_3",
+      "id": "geo_A2-56",
       "subject": "geography",
-      "part": "Part V — Biosphere Reserves & National Parks",
-      "chapter": "8. Protected Areas & Biodiversity Hotspots",
-      "q": "UNESCO World Network of Biosphere Reserves from India?",
-      "a": "12 out of 18 Biosphere Reserves in India are under UNESCO MAB program: Nilgiri, Gulf of Mannar, Sunderbans, Nanda Devi, Nokrek, Pachmarhi, Similipal, Achanakmar-Amarkantak, Great Nicobar, Agasthyamala, Khangchendzonga, and Panna."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Western vs eastern coastal plains?",
+      "a": "Western: submerged, narrow (broader in north and south), natural harbours, no deltas. Eastern: broader, emergent coast, well-developed deltas, fewer ports (continental shelf extends up to 500 km)."
     },
     {
-      "id": "geography_extra_4",
+      "id": "geo_A2-57",
       "subject": "geography",
-      "part": "Part V — Biosphere Reserves & National Parks",
-      "chapter": "8. Protected Areas & Biodiversity Hotspots",
-      "q": "Four Biodiversity Hotspots in India?",
-      "a": "1. Western Ghats (and Sri Lanka); 2. Himalayas (entire Indian Himalayan region); 3. Indo-Burma (North-Eastern India except Assam and Andaman Islands); 4. Sundaland (includes Nicobar group of Islands)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Natural ports of the west coast?",
+      "a": "Kandla, Mazagaon, JLN Port Nhava Sheva, Marmagao, Mangalore and Cochin."
     },
     {
-      "id": "geography_extra_5",
+      "id": "geo_A2-58",
       "subject": "geography",
-      "part": "Part V — Biosphere Reserves & National Parks",
-      "chapter": "8. Protected Areas & Biodiversity Hotspots",
-      "q": "Kaziranga National Park and Corbett National Park locations and flagship species?",
-      "a": "Kaziranga (Assam): flood plains of Brahmaputra; host to two-thirds of world's Great One-horned Rhinoceroses. Corbett (Uttarakhand, Ramganga river): India's oldest national park (est. 1936 as Hailey NP), Project Tiger launch site (1973)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Divisions of the western coast from north to south?",
+      "a": "Kachchh and Kathiawar (Gujarat), Konkan (Maharashtra), Goan coast, Malabar coast (Karnataka and Kerala)."
     },
     {
-      "id": "geography_extra_6",
+      "id": "geo_A2-59",
       "subject": "geography",
-      "part": "Part VI — Major Lakes & Wetlands",
-      "chapter": "9. Water Bodies & Ramsar Sites",
-      "q": "Major saltwater vs freshwater lakes in India?",
-      "a": "Chilika Lake (Odisha): largest coastal lagoon/brackish water lake in India, first Ramsar site (1981); Wular Lake (J&K): largest freshwater lake, formed by tectonic activity on Jhehlum; Sambhar Lake (Rajasthan): largest inland salt lake; Lonar Lake (Maharashtra): crater lake in basaltic rock; Vembanad (Kerala): longest lake in India."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "What are Kayals?",
+      "a": "Backwaters of the Malabar coast, used for fishing and inland navigation and as a tourist attraction; Nehru Trophy Vallamkali is held at Punnamada Kayal in Kerala."
     },
     {
-      "id": "geography_extra_7",
+      "id": "geo_A2-60",
       "subject": "geography",
-      "part": "Part VI — Major Lakes & Wetlands",
-      "chapter": "9. Water Bodies & Ramsar Sites",
-      "q": "Bhoj Wetland and Deepor Beel locations?",
-      "a": "Bhoj Wetland: Bhopal (Madhya Pradesh), consists of Upper and Lower lakes, Ramsar site. Deepor Beel: Kamrup (Assam), permanent freshwater lake in a former channel of Brahmaputra river."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Describe the Bay of Bengal island group.",
+      "a": "About 572 islands/islets at 6°N–14°N and 92°E–94°E; Andaman in the north, Nicobar in the south, separated by the Ten Degree Channel; elevated portions of submarine mountains, some volcanic."
     },
     {
-      "id": "geography_extra_8",
+      "id": "geo_A2-61",
       "subject": "geography",
-      "part": "Part VII — World Geography & Strategic Hotspots",
-      "chapter": "10. Global Deserts & Ocean Trenches",
-      "q": "Why are hot deserts located on western margins of continents in trade wind belts?",
-      "a": "1. Offshore trade winds blowing from land to sea carry no moisture; 2. Cold ocean currents along western coasts (Canary, Benguela, California, Peru/Humboldt, West Australian) stabilize air and prevent convectional rain; 3. Subtropical high-pressure descending air."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which is India's only active volcano?",
+      "a": "Barren Island in the Andaman and Nicobar Islands."
     },
     {
-      "id": "geography_extra_9",
+      "id": "geo_A2-62",
       "subject": "geography",
-      "part": "Part VII — World Geography & Strategic Hotspots",
-      "chapter": "10. Global Deserts & Ocean Trenches",
-      "q": "Countries bordering the Mediterranean Sea and Black Sea?",
-      "a": "Mediterranean: 21 countries including Spain, France, Italy, Greece, Turkey, Syria, Lebanon, Israel, Egypt, Libya, Tunisia, Algeria, Morocco. Black Sea: Turkey, Georgia, Russia, Ukraine, Romania, Bulgaria (mnemonic: 'T-BURGER')."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Peaks of Andaman and Nicobar Islands?",
+      "a": "Saddle Peak (North Andaman, 738 m), Mount Diavolo (Middle Andaman, 515 m), Mount Koyob (South Andaman, 460 m), Mount Thuiller (Great Nicobar, 642 m)."
     },
     {
-      "id": "geography_extra_10",
+      "id": "geo_A2-63",
       "subject": "geography",
-      "part": "Part VII — World Geography & Strategic Hotspots",
-      "chapter": "10. Global Deserts & Ocean Trenches",
-      "q": "Countries bordering the Caspian Sea and Red Sea?",
-      "a": "Caspian Sea (largest inland water body): Kazakhstan, Russia, Azerbaijan, Iran, Turkmenistan (mnemonic: 'KRAIT'). Red Sea: Egypt, Sudan, Eritrea, Djibouti, Saudi Arabia, Yemen (mnemonic: 'DESSEY')."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Climate and vegetation of Andaman and Nicobar?",
+      "a": "Convectional rainfall and equatorial type of vegetation."
     },
     {
-      "id": "geography_extra_11",
+      "id": "geo_A2-64",
       "subject": "geography",
-      "part": "Part VII — World Geography & Strategic Hotspots",
-      "chapter": "10. Global Deserts & Ocean Trenches",
-      "q": "Major world mountain ranges and their highest peaks?",
-      "a": "Andes (South America, longest continental range ~7000km; Aconcagua 6961m); Rockies (North America; Mt Elbert); Alps (Europe; Mont Blanc); Urals (Russia, divides Europe and Asia); Great Dividing Range (Australia; Mt Kosciuszko); Atlas (North-West Africa; Toubkal)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Describe the Arabian Sea island group.",
+      "a": "Lakshadweep and Minicoy at 8°N–12°N and 71°E–74°E, 220–440 km off the Kerala coast; entirely built of coral deposits; about 36 islands (11 inhabited); Minicoy is the largest (453 sq. km)."
     },
     {
-      "id": "geography_extra_12",
+      "id": "geo_A2-65",
       "subject": "geography",
-      "part": "Part VII — World Geography & Strategic Hotspots",
-      "chapter": "10. Global Deserts & Ocean Trenches",
-      "q": "Great Rift Valley of Africa features and lakes?",
-      "a": "Tectonic divergent boundary extending from Red Sea south through East Africa to Mozambique; includes Lake Victoria (largest tropical lake, non-rift), Lake Tanganyika (second deepest lake globally), Lake Malawi/Nyasa, and volcanic peaks Mt Kilimanjaro and Mt Kenya."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A2. Structure and Physiography",
+      "q": "Which channel divides the Lakshadweep group?",
+      "a": "The Nine Degree Channel (Amini Island to the north, Canannore Island to the south)."
     },
     {
-      "id": "geography_extra_13",
+      "id": "geo_A3-01",
       "subject": "geography",
-      "part": "Part VIII — Indian Economic Geography",
-      "chapter": "11. Nuclear & Energy Infrastructure",
-      "q": "Major operational nuclear power stations in India?",
-      "a": "Kudankulam (Tamil Nadu, VVER pressurized water reactors built with Russia, largest); Tarapur (Maharashtra, oldest 1969); Rawatbhata (Rajasthan); Kaiga (Karnataka, Kali river); Kakrapar (Gujarat, Tapi river); Narora (Uttar Pradesh, Ganga); Kalpakkam/MAPS (Tamil Nadu, prototype fast breeder reactor)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Define 'drainage' and 'drainage system'.",
+      "a": "The flow of water through well-defined channels is drainage; the network of such channels is a drainage system."
     },
     {
-      "id": "geography_extra_14",
+      "id": "geo_A3-02",
       "subject": "geography",
-      "part": "Part VIII — Indian Economic Geography",
-      "chapter": "11. Nuclear & Energy Infrastructure",
-      "q": "National Waterways 1, 2, and 3 in India?",
-      "a": "NW-1: Ganga-Bhagirathi-Hooghly river system (Haldia to Prayagraj, 1620 km, longest); NW-2: Brahmaputra river (Dhubri to Sadiya, 891 km); NW-3: West Coast Canal (Kottapuram to Kollam, Kerala, 205 km, includes Champakara and Udyogmandal canals)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "What does a drainage pattern depend on?",
+      "a": "Geological time period, nature and structure of rocks, topography, slope, amount of water flowing and periodicity of flow."
     },
     {
-      "id": "geography_extra_15",
+      "id": "geo_A3-03",
       "subject": "geography",
-      "part": "Part VIII — Indian Economic Geography",
-      "chapter": "11. Nuclear & Energy Infrastructure",
-      "q": "Major commercial ports of India (West Coast vs East Coast)?",
-      "a": "West Coast: Deendayal/Kandla (tidal port, Gujarat), Mumbai (largest natural harbor), JNPT/Nhava Sheva (largest container port), Mormugao (Goa, iron ore export), New Mangalore (Karnataka), Cochin (Kerala, natural harbor on Willingdon Island). East Coast: Tuticorin/V.O. Chidambaranar, Chennai (oldest artificial port), Kamarajar/Ennore (first corporate port), Visakhapatnam (deepest landlocked port), Paradip (Odisha), Syama Prasad Mookerjee/Kolkata-Haldia (riverine port)."
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Define catchment area, drainage basin and watershed.",
+      "a": "Catchment area: the area from which a river drains water. Drainage basin: area drained by a river and its tributaries. Watershed: the boundary line separating one drainage basin from another."
+    },
+    {
+      "id": "geo_A3-04",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "River basin vs watershed?",
+      "a": "Watersheds are small in area (catchments of small rivulets and rills); basins cover larger areas (catchments of large rivers). Both are accepted as micro, meso or macro planning regions."
+    },
+    {
+      "id": "geo_A3-05",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Dendritic drainage pattern?",
+      "a": "Resembles the branches of a tree; example: rivers of the northern plain."
+    },
+    {
+      "id": "geo_A3-06",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Radial drainage pattern?",
+      "a": "Rivers originate from a hill and flow in all directions; example: rivers from the Amarkantak range."
+    },
+    {
+      "id": "geo_A3-07",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Trellis drainage pattern?",
+      "a": "Primary tributaries flow parallel to each other and secondary tributaries join them at right angles."
+    },
+    {
+      "id": "geo_A3-08",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Centripetal drainage pattern?",
+      "a": "Rivers discharge their waters from all directions into a lake or depression."
+    },
+    {
+      "id": "geo_A3-09",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "What separates the Arabian Sea and Bay of Bengal drainage?",
+      "a": "The Delhi ridge, the Aravalis and the Sahyadris."
+    },
+    {
+      "id": "geo_A3-10",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "What share of India's drainage goes to each sea?",
+      "a": "About 77% to the Bay of Bengal (Ganga, Brahmaputra, Mahanadi, Krishna, etc.); about 23% to the Arabian Sea (Indus, Narmada, Tapi, Mahi, Periyar)."
+    },
+    {
+      "id": "geo_A3-11",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Classification of Indian river basins by size?",
+      "a": "Major: over 20,000 sq. km (14 basins, e.g. Ganga, Brahmaputra, Krishna, Tapi, Narmada, Mahi, Pennar, Sabarmati, Barak). Medium: 2,000–20,000 sq. km (44 basins, e.g. Kalindi, Periyar, Meghna). Minor: under 2,000 sq. km."
+    },
+    {
+      "id": "geo_A3-12",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Which two large Peninsular rivers are exceptions in draining to the Arabian Sea?",
+      "a": "The Narmada and Tapi."
+    },
+    {
+      "id": "geo_A3-13",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Which classification does the book follow and what is its problem?",
+      "a": "Himalayan vs Peninsular drainage (by origin and nature); it wrongly groups the older Chambal, Betwa and Son with Himalayan rivers, but it is the most accepted basis."
+    },
+    {
+      "id": "geo_A3-14",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Why are Himalayan rivers perennial and what features do they form?",
+      "a": "They are fed by snowmelt and rain. Features: gorges, V-shaped valleys, rapids, waterfalls in the mountains; flat valleys, ox-bow lakes, flood plains, braided channels and deltas in the plains."
+    },
+    {
+      "id": "geo_A3-15",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Why is the Kosi called the 'sorrow of Bihar'?",
+      "a": "It brings huge sediment from its upper reaches, blocks its own course and frequently changes it."
+    },
+    {
+      "id": "geo_A3-16",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Describe the Kosi river.",
+      "a": "An antecedent river rising north of Mount Everest in Tibet (main stream Arun); joined by Son Kosi (west) and Tamur Kosi (east); forms Sapt Kosi after uniting with the Arun."
+    },
+    {
+      "id": "geo_A3-17",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "What was the Shiwalik (Indo-Brahma) river?",
+      "a": "A mighty river believed to have flowed from Assam to Punjab and Sind into the Gulf of Sind during the Miocene (5–24 million years ago); supported by the continuity and lacustrine/alluvial deposits of the Shiwalik."
+    },
+    {
+      "id": "geo_A3-18",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Into which systems was the Indo-Brahma river dismembered?",
+      "a": "Indus and its five tributaries (west); Ganga and its Himalayan tributaries (centre); Brahmaputra in Assam and its Himalayan tributaries (east)."
+    },
+    {
+      "id": "geo_A3-19",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "What caused the dismemberment of the Indo-Brahma river and the eastward turn of Ganga–Brahmaputra?",
+      "a": "Pleistocene upheaval in the western Himalayas (uplift of the Potwar Plateau/Delhi Ridge, the Indus–Ganga divide); downthrusting of the Malda gap between Rajmahal hills and Meghalaya plateau in the mid-Pleistocene diverted Ganga and Brahmaputra to the Bay of Bengal."
+    },
+    {
+      "id": "geo_A3-20",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Indus: area and length?",
+      "a": "Basin 11,65,000 sq. km (321,289 sq. km in India); length 2,880 km (1,114 km in India)."
+    },
+    {
+      "id": "geo_A3-21",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Source of the Indus?",
+      "a": "A glacier near Bokhar Chu (31°15' N, 81°40' E) in Tibet at 4,164 m in the Kailash range; called Singi Khamban (Lion's mouth) in Tibet."
+    },
+    {
+      "id": "geo_A3-22",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Course of the Indus?",
+      "a": "Flows north-west between the Ladakh and Zaskar ranges through Ladakh and Baltistan; gorge near Gilgit; enters Pakistan near Chilas (Dardistan); receives the Kabul river near Attock; joined by Panjnad above Mithankot; reaches the Arabian Sea east of Karachi."
+    },
+    {
+      "id": "geo_A3-23",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Which Indian regions does the Indus flow through?",
+      "a": "The Union Territories of Ladakh and Jammu and Kashmir."
+    },
+    {
+      "id": "geo_A3-24",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "What is Panjnad?",
+      "a": "The combined five rivers of Punjab — Satluj, Beas, Ravi, Chenab and Jhelum."
+    },
+    {
+      "id": "geo_A3-25",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Right-bank tributaries of the Indus from the Sulaiman ranges?",
+      "a": "Khurram, Tochi, Gomal, Viboa and Sangar (Kabul river joins near Attock)."
+    },
+    {
+      "id": "geo_A3-26",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Jhelum: source and course?",
+      "a": "Rises from a spring at Verinag at the foot of the Pir Panjal; flows through Srinagar and Wular lake; enters Pakistan via a deep gorge; joins the Chenab near Jhang."
+    },
+    {
+      "id": "geo_A3-27",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Chenab: facts?",
+      "a": "Largest tributary of the Indus; formed by Chandra and Bhaga at Tandi near Keylong (Himachal Pradesh), hence Chandrabhaga; 1,180 km before entering Pakistan."
+    },
+    {
+      "id": "geo_A3-28",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Ravi: facts?",
+      "a": "Rises west of Rohtang pass in the Kullu hills; flows through the Chamba valley; joins Chenab near Sarai Sidhu in Pakistan."
+    },
+    {
+      "id": "geo_A3-29",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Beas: facts?",
+      "a": "Originates at Beas Kund near Rohtang Pass (4,000 m); flows through Kullu valley; gorges at Kati and Largi in the Dhauladhar range; meets Satluj near Harike."
+    },
+    {
+      "id": "geo_A3-30",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Satluj: facts?",
+      "a": "Originates in Raksas tal near Mansarovar (4,555 m), known as Langchen Khambab in Tibet; flows ~400 km parallel to the Indus; gorge at Rupar; passes Shipki La; antecedent river; feeds the Bhakra Nangal canal system."
+    },
+    {
+      "id": "geo_A3-31",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Source and headstreams of the Ganga?",
+      "a": "Gangotri glacier near Gaumukh (3,900 m), Uttarkashi, as the Bhagirathi; meets the Alaknanda at Devprayag and becomes the Ganga."
+    },
+    {
+      "id": "geo_A3-32",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Alaknanda and its confluences?",
+      "a": "Source: Satopanth glacier above Badrinath. Dhauli and Vishnu Ganga meet at Joshimath (Vishnu Prayag); Pindar joins at Karna Prayag; Mandakini (Kali Ganga) at Rudra Prayag."
+    },
+    {
+      "id": "geo_A3-33",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Ganga: length, shares and basin?",
+      "a": "Length 2,525 km: Uttarakhand 110 km, UP 1,450 km, Bihar 445 km, West Bengal 520 km. Basin about 8.6 lakh sq. km in India. Enters the plains at Haridwar; splits into distributaries Bhagirathi and Padma."
+    },
+    {
+      "id": "geo_A3-34",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Major tributaries of the Ganga?",
+      "a": "Right bank: Son. Left bank: Ramganga, Gomati, Ghaghara, Gandak, Kosi, Mahananda. It enters the Bay of Bengal near Sagar Island."
+    },
+    {
+      "id": "geo_A3-35",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Namami Gange Programme?",
+      "a": "Approved June 2014 as a Flagship Programme: Integrated Conservation Mission with twin aims of pollution abatement and conservation/rejuvenation of the Ganga. Pillars include sewerage treatment, river-front development, river-surface cleaning, bio-diversity, afforestation, public awareness, industrial effluent monitoring and Ganga Gram."
+    },
+    {
+      "id": "geo_A3-36",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Yamuna: source and course?",
+      "a": "Rises from the Yamunotri glacier on the western slopes of the Banderpunch range (6,316 m); westernmost and longest tributary of the Ganga; joins it at Prayag (Allahabad)."
+    },
+    {
+      "id": "geo_A3-37",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Tributaries of the Yamuna?",
+      "a": "Right bank (Peninsular origin): Chambal, Sind, Betwa, Ken. Left bank: Hindan, Rind, Sengar, Varuna."
+    },
+    {
+      "id": "geo_A3-38",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Chambal: facts?",
+      "a": "Rises near Mhow in the Malwa plateau; Gandhisagar dam near Kota; flows via Bundi, Sawai Madhopur, Dholpur to join the Yamuna; famous for Chambal ravines (badlands)."
+    },
+    {
+      "id": "geo_A3-39",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Gandak: facts?",
+      "a": "Formed by Kaligandak and Trishulganga; rises in Nepal Himalayas between Dhaulagiri and Mount Everest; enters Bihar in Champaran; joins Ganga at Sonpur near Patna."
+    },
+    {
+      "id": "geo_A3-40",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Ghaghara: facts?",
+      "a": "Originates in glaciers of Mapchachungo; tributaries Tila, Seti, Beri; gorge at Shishapani; Sarda joins in the plain; meets Ganga at Chhapra."
+    },
+    {
+      "id": "geo_A3-41",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Ramganga: facts?",
+      "a": "Small river rising in the Garhwal hills near Gairsain; enters UP plains near Najibabad; joins the Ganga near Kannauj."
+    },
+    {
+      "id": "geo_A3-42",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Damodar: facts?",
+      "a": "Occupies eastern margins of the Chotanagpur Plateau, flows through a rift valley and joins the Hugli; Barakar is the main tributary; once the 'sorrow of Bengal', tamed by the Damodar Valley Corporation."
+    },
+    {
+      "id": "geo_A3-43",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Sarda (Saryu): facts?",
+      "a": "Rises in the Milam glacier in the Nepal Himalayas (Goriganga); called Kali or Chauk along the Indo-Nepal border; joins the Ghaghara."
+    },
+    {
+      "id": "geo_A3-44",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Mahananda and Son?",
+      "a": "Mahananda: rises in Darjiling hills; last left-bank tributary of the Ganga in West Bengal. Son: large south-bank tributary from the Amarkantak plateau; forms waterfalls; joins Ganga at Arrah west of Patna."
+    },
+    {
+      "id": "geo_A3-45",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Source and Tibetan course of the Brahmaputra?",
+      "a": "Chemayungdung glacier in the Kailash range near Mansarovar; flows ~1,200 km eastward in southern Tibet as the Tsangpo ('the purifier'); Rango Tsangpo is the major right-bank tributary."
+    },
+    {
+      "id": "geo_A3-46",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Brahmaputra's entry into India?",
+      "a": "Carves a deep gorge in the Central Himalayas near Namcha Barwa (7,755 m); emerges as Siang/Dihang; enters India west of Sadiya (Arunachal Pradesh); after receiving Dibang (Sikang) and Lohit it is called Brahmaputra."
+    },
+    {
+      "id": "geo_A3-47",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Brahmaputra in Assam and Bangladesh?",
+      "a": "750 km through the Assam valley. Left-bank tributaries: Burhi Dihing, Dhansari (South). Right-bank: Subansiri (antecedent), Kameng, Manas, Sankosh. Enters Bangladesh near Dhubri; Tista joins it and it is known as Jamuna; merges with Padma into the Bay of Bengal."
+    },
+    {
+      "id": "geo_A3-48",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Why is the Brahmaputra known for floods, channel shifting and bank erosion?",
+      "a": "Most tributaries are large and bring heavy sediment owing to heavy rainfall in the catchment."
+    },
+    {
+      "id": "geo_A3-49",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Peninsular drainage vs Himalayan drainage?",
+      "a": "Peninsular drainage is older (broad, graded, shallow valleys; mature rivers). Rivers have fixed courses, no meanders and non-perennial flow; Narmada and Tapi (rift valley) are exceptions. Most flow west to east except Narmada and Tapi."
+    },
+    {
+      "id": "geo_A3-50",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Which Peninsular rivers belong to the Ganga system?",
+      "a": "Chambal, Sind, Betwa, Ken and Son (from the northern Peninsula)."
+    },
+    {
+      "id": "geo_A3-51",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Three geological events that shaped Peninsular drainage?",
+      "a": "(i) Subsidence of the western flank (early Tertiary); (ii) Himalayan upheaval causing subsidence and trough faulting of the northern flank (Narmada and Tapi flow in trough faults, so lack alluvial/deltaic deposits); (iii) slight tilt of the Peninsular block from north-west to south-east orienting drainage to the Bay of Bengal."
+    },
+    {
+      "id": "geo_A3-52",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Mahanadi: facts?",
+      "a": "Rises near Sihawa in Raipur district (Chhattisgarh); flows through Odisha; 851 km; catchment 1.42 lakh sq. km (53% Madhya Pradesh/Chhattisgarh, 47% Odisha); some navigation in lower course."
+    },
+    {
+      "id": "geo_A3-53",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Godavari: facts?",
+      "a": "Largest Peninsular river system (Dakshin Ganga); rises in Nasik district; 1,465 km; catchment 3.13 lakh sq. km (49% Maharashtra, 20% MP and Chhattisgarh, rest Andhra Pradesh). Tributaries: Penganga, Indravati, Pranhita, Manjra. Gorge south of Polavaram; navigable only in the delta; splits after Rajamundri."
+    },
+    {
+      "id": "geo_A3-54",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Krishna: facts?",
+      "a": "Second largest east-flowing Peninsular river; rises near Mahabaleshwar in Sahyadri; 1,401 km; tributaries Koyna, Tungabhadra, Bhima; catchment 27% Maharashtra, 44% Karnataka, 29% Andhra Pradesh and Telangana."
+    },
+    {
+      "id": "geo_A3-55",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Kaveri: facts?",
+      "a": "Rises in Brahmagiri hills (1,341 m), Kogadu district, Karnataka; 800 km; drains 81,155 sq. km; flows throughout the year with less fluctuation (upper catchment gets SW monsoon, lower gets NE monsoon); basin 3% Kerala, 41% Karnataka, 56% Tamil Nadu; tributaries Kabini, Bhavani, Amravati."
+    },
+    {
+      "id": "geo_A3-56",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Narmada: facts?",
+      "a": "Originates on the western flank of the Amarkantak plateau (~1,057 m); flows in a rift valley between Satpura and Vindhyan ranges; marble-rock gorge and Dhuandhar waterfall near Jabalpur; 1,312 km; 27 km long estuary south of Bharuch; catchment 98,796 sq. km; Sardar Sarovar Project."
+    },
+    {
+      "id": "geo_A3-57",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Tapi: facts?",
+      "a": "Westward-flowing; originates at Multai in Betul district (MP); 724 km; drains 65,145 sq. km; basin 79% Maharashtra, 15% MP, 6% Gujarat."
+    },
+    {
+      "id": "geo_A3-58",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Luni: facts?",
+      "a": "Largest river system of Rajasthan west of the Aravali; starts near Pushkar as Saraswati and Sabarmati which join at Govindgarh; flows west till Telwara then south-west into the Rann of Kuchchh; entirely ephemeral."
+    },
+    {
+      "id": "geo_A3-59",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Problem with the usability of India's river water?",
+      "a": "Huge volumes of water but unevenly distributed in time and space; floods waste water in the rainy season while other areas face drought."
+    },
+    {
+      "id": "geo_A3-60",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Schemes named for water transfer/inter-basin linkage?",
+      "a": "Periyar Diversion Scheme, Indira Gandhi Canal Project, Kurnool–Cuddapah Canal, Beas–Satluj Link Canal, Ganga–Kaveri Link Canal."
+    },
+    {
+      "id": "geo_A3-61",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A3. Drainage System",
+      "q": "Causes of river pollution mentioned?",
+      "a": "City sewage, industrial effluents and wastes, cremation and disposal of bodies, immersion of flowers and statues, large-scale bathing and washing; Ganga Action Plan and Yamuna cleaning campaign are mentioned as responses."
+    },
+    {
+      "id": "geo_A4-01",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Weather vs climate?",
+      "a": "Weather is the momentary state of the atmosphere (changes within a day or week); climate is the average of weather conditions over a longer period (changes imperceptibly, noticeable after 50 years or more)."
+    },
+    {
+      "id": "geo_A4-02",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "What does 'monsoon' connote?",
+      "a": "The climate associated with a seasonal reversal in the direction of winds. India has a hot monsoonal climate, prevalent in south and south-east Asia."
+    },
+    {
+      "id": "geo_A4-03",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Give examples of India's temperature extremes.",
+      "a": "Western Rajasthan can touch 55 °C in summer; around Leh it can fall to −45 °C in winter. Churu may reach 50 °C in June while Tawang hardly reaches 19 °C; Drass can drop to −45 °C on a December night while Thiruvananthapuram/Chennai record 20–22 °C."
+    },
+    {
+      "id": "geo_A4-04",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Day–night temperature range: Kerala/Andaman vs Thar?",
+      "a": "Kerala and the Andaman Islands: only about 7–8 °C difference. Thar desert: day around 50 °C can drop at night to 15–20 °C."
+    },
+    {
+      "id": "geo_A4-05",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Which places receive extremely high and low rainfall?",
+      "a": "Cherrapunji and Mawsynram (Khasi Hills) receive over 1,080 cm a year; Jaisalmer rarely gets more than 9 cm. Annual precipitation is under 10 cm in the NW Himalayas and western deserts and over 400 cm in Meghalaya."
+    },
+    {
+      "id": "geo_A4-06",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "How does Tura's single-day rainfall compare with Jaisalmer?",
+      "a": "Tura (Garo Hills) can get in a day what Jaisalmer gets in 10 years."
+    },
+    {
+      "id": "geo_A4-07",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Which part of India gets rain at the beginning of winter?",
+      "a": "The coastal areas of Tamil Nadu (most of India gets rain in June–September)."
+    },
+    {
+      "id": "geo_A4-08",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Factors controlling the climate of India?",
+      "a": "Latitude, the Himalayan Mountains, distribution of land and water, distance from the sea, altitude and relief."
+    },
+    {
+      "id": "geo_A4-09",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "How does latitude influence India's climate?",
+      "a": "The Tropic of Cancer passes through the centre of India. The part south of it is tropical (high temperatures all year, small daily and annual range); the north is sub-tropical/temperate with extreme climate and high daily and annual range."
+    },
+    {
+      "id": "geo_A4-10",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Role of the Himalayas in climate?",
+      "a": "An effective climatic divide: shields the subcontinent from cold northern winds that originate near the Arctic circle, and traps monsoon winds so they shed moisture within the subcontinent."
+    },
+    {
+      "id": "geo_A4-11",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "How does land–water distribution affect monsoon winds?",
+      "a": "Land heats and cools faster than water; differential heating creates different air-pressure zones in different seasons, and the pressure difference reverses the direction of monsoon winds."
+    },
+    {
+      "id": "geo_A4-12",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Effect of distance from the sea?",
+      "a": "Coastal areas have an equable climate (e.g. Mumbai, Konkan); interiors (Delhi, Kanpur, Amritsar) are far from the sea's moderating influence and have climatic extremes."
+    },
+    {
+      "id": "geo_A4-13",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Altitude example in the text?",
+      "a": "Agra and Darjiling lie on the same latitude, but January temperature is 16 °C in Agra and only 4 °C in Darjiling."
+    },
+    {
+      "id": "geo_A4-14",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Relief and rainfall?",
+      "a": "Windward sides of the Western Ghats and Assam get high rainfall in June–September; the southern plateau remains dry due to its leeward position."
+    },
+    {
+      "id": "geo_A4-15",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "What is the ITCZ?",
+      "a": "The Inter Tropical Convergence Zone: a low-pressure zone at the equator where trade winds converge and air ascends. In July it lies around 20°N–25°N over the Gangetic plain (the monsoon trough)."
+    },
+    {
+      "id": "geo_A4-16",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "How does ITCZ shift produce monsoons?",
+      "a": "The monsoon trough encourages thermal low over north and NW India; southern-hemisphere trade winds cross the equator between 40° and 60° E, and the Coriolis force turns them SW to NE as the southwest monsoon. In winter the ITCZ moves south and winds reverse as the northeast monsoon."
+    },
+    {
+      "id": "geo_A4-17",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Onset of monsoon: the classical (thermal) explanation?",
+      "a": "In April–May the sun is vertical over the Tropic of Cancer; the landmass heats and an intense low forms in the NW subcontinent, while pressure is high over the Indian Ocean, so the low attracts south-east trades across the equator."
+    },
+    {
+      "id": "geo_A4-18",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Role of jet streams in the monsoon burst?",
+      "a": "The ITCZ shift is related to withdrawal of the westerly jet stream from north India; the easterly jet stream sets in along 15°N only after it has withdrawn and is held responsible for the burst of the monsoon."
+    },
+    {
+      "id": "geo_A4-19",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Monsoon entry dates into India?",
+      "a": "Kerala coast by 1 June; Mumbai and Kolkata between 10 and 13 June; entire subcontinent by mid-July."
+    },
+    {
+      "id": "geo_A4-20",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "What is a 'break in the monsoon'?",
+      "a": "Failure of rain for one or more weeks after rain for a few days. In north India it is due to infrequent rain-bearing storms along the monsoon trough/ITCZ; on the west coast it is when winds blow parallel to the coast."
+    },
+    {
+      "id": "geo_A4-21",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "What are El Nino's features?",
+      "a": "A complex weather system appearing once every 3–7 years; warm currents off Peru replace the cold Peruvian (Humboldt) current, raising water temperature by about 10 °C; distorts equatorial circulation, makes evaporation irregular and reduces plankton and fish."
+    },
+    {
+      "id": "geo_A4-22",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Meaning and Indian use of El Nino?",
+      "a": "'Child Christ' (it appears around Christmas). Used in India for long-range monsoon forecasting; in 1990–91 a wild El Nino delayed the monsoon onset by 5–12 days."
+    },
+    {
+      "id": "geo_A4-23",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "How is the Southern Oscillation measured?",
+      "a": "By the pressure difference between Tahiti (~20°S, 140°W) and Port Darwin (12°30'S, 131°E). The IMD forecasts monsoon behaviour using 16 indicators."
+    },
+    {
+      "id": "geo_A4-24",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Four seasons recognised by meteorologists in India?",
+      "a": "Cold weather season, hot weather season, southwest monsoon season and retreating monsoon season."
+    },
+    {
+      "id": "geo_A4-25",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Cold weather season: timing and temperature?",
+      "a": "Sets in by mid-November; December and January are the coldest months; mean daily temperature below 21 °C in most of north India; night temperature may fall below freezing in Punjab and Rajasthan."
+    },
+    {
+      "id": "geo_A4-26",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Three reasons for excessive cold in north India in winter?",
+      "a": "(i) Continental climate in Punjab, Haryana, Rajasthan (far from the sea); (ii) snowfall in nearby Himalayan ranges causes cold waves; (iii) around February cold winds from the Caspian Sea and Turkmenistan bring cold wave, frost and fog."
+    },
+    {
+      "id": "geo_A4-27",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Winter pressure and winds?",
+      "a": "Feeble high pressure over the northern plain (isobars 1019 mb in NW India and 1013 mb in far south); light winds of 3–5 km/h blow outwards; westerly/north-westerly down the Ganga valley, northerly in the Ganga–Brahmaputra delta, north-easterly over the Bay of Bengal."
+    },
+    {
+      "id": "geo_A4-28",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "What are the western disturbances?",
+      "a": "Shallow cyclonic depressions originating over the east Mediterranean and travelling east across West Asia, Iran, Afghanistan and Pakistan to NW India, gaining moisture from the Caspian Sea and Persian Gulf."
+    },
+    {
+      "id": "geo_A4-29",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Winter rainfall in NW India and its importance?",
+      "a": "Weak temperate cyclones bring meagre rain to Punjab, Haryana, Delhi and western UP, highly beneficial for rabi crops; snow in the lower Himalayas sustains Himalayan rivers in summer. Delhi about 53 mm, Punjab 25 mm, Bihar 18 mm; precipitation falls from west to east (plains) and north to south (mountains)."
+    },
+    {
+      "id": "geo_A4-30",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Why do winter monsoon winds not cause rain?",
+      "a": "They move from land to sea, have little humidity, and anticyclonic circulation over land reduces the chance of rain."
+    },
+    {
+      "id": "geo_A4-31",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Other winter rainfall exceptions?",
+      "a": "Central India and the north Peninsula get occasional winter rain; Arunachal Pradesh and Assam get 25–50 mm; in October–November the north-east monsoon picks up moisture over the Bay of Bengal and gives torrential rain to the Tamil Nadu coast, south Andhra Pradesh, south-east Karnataka and south-east Kerala."
+    },
+    {
+      "id": "geo_A4-32",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Hot weather season temperature pattern?",
+      "a": "March: ~38 °C on the Deccan Plateau. April: 38–43 °C in Gujarat and Madhya Pradesh. May: around 48 °C in NW India. South India stays 26–32 °C; the Western Ghats hills stay below 25 °C."
+    },
+    {
+      "id": "geo_A4-33",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Pressure and winds in the hot season?",
+      "a": "ITCZ moves north, centred at 25°N in July; the elongated monsoon trough extends from Thar desert (NW) to Patna and the Chotanagpur plateau (ESE). Hot dry afternoon winds called 'Loo' blow in the ITCZ heart; dust storms are common in May in Punjab, Haryana, east Rajasthan and UP."
+    },
+    {
+      "id": "geo_A4-34",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Mango Shower and Blossom Shower?",
+      "a": "Mango showers: pre-monsoon showers in Kerala and coastal Karnataka that help early ripening of mangoes. Blossom showers: make coffee flowers blossom in Kerala and nearby areas."
+    },
+    {
+      "id": "geo_A4-35",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Nor'Westers?",
+      "a": "Dreaded evening thunderstorms in Bengal and Assam, called Kalbaisakhi ('calamity of Baisakh'); useful for tea, jute and rice; known as Bardoisila in Assam."
+    },
+    {
+      "id": "geo_A4-36",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Loo?",
+      "a": "Hot, dry, oppressive winds in the northern plains from Punjab to Bihar, strongest between Delhi and Patna."
+    },
+    {
+      "id": "geo_A4-37",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "What happens at the monsoon burst?",
+      "a": "Moisture-laden winds with thunder and lightning bring abrupt rain; day temperature falls by 5–8 °C between mid-June and mid-July. Burst occurs in the first week of June on the Kerala–Maharashtra coast and may be delayed to the first week of July in the interior."
+    },
+    {
+      "id": "geo_A4-38",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Why are they called southwest monsoons?",
+      "a": "South-east trade winds cross the equator, enter the Bay of Bengal and Arabian Sea, and then follow a south-westerly direction. The monsoon has two branches: Arabian Sea and Bay of Bengal."
+    },
+    {
+      "id": "geo_A4-39",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Arabian Sea branch — Western Ghats arm?",
+      "a": "Winds climb the Western Ghats (900–1,200 m); the windward Sahyadris and coastal plain receive 250–400 cm; east of the Ghats is a rain-shadow area."
+    },
+    {
+      "id": "geo_A4-40",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Arabian Sea branch — other two arms?",
+      "a": "One strikes north of Mumbai and moves along Narmada and Tapi valleys to central India (Chotanagpur gets 15 cm), then mingles with the Bay of Bengal branch. The third strikes Saurashtra and Kachchh, passes west Rajasthan and the Aravalis with scanty rain, and joins the Bay of Bengal branch in Punjab and Haryana, causing rain in the western Himalayas."
+    },
+    {
+      "id": "geo_A4-41",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Bay of Bengal branch?",
+      "a": "Strikes Myanmar and south-east Bangladesh; the Arakan Hills deflect much of it towards India, so it enters West Bengal and Bangladesh from south/south-east. It splits: one arm along the Ganga plains to Punjab; the other up the Brahmaputra valley (a sub-branch hits the Garo and Khasi hills)."
+    },
+    {
+      "id": "geo_A4-42",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Where is the highest average annual rainfall in the world?",
+      "a": "Mawsynram, on the crest of the Khasi hills."
+    },
+    {
+      "id": "geo_A4-43",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Why does the Tamil Nadu coast remain dry in the southwest monsoon?",
+      "a": "It lies parallel to the Bay of Bengal branch and in the rain shadow of the Arabian Sea branch."
+    },
+    {
+      "id": "geo_A4-44",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Retreating monsoon: timeline?",
+      "a": "October–November. Retreats from western Rajasthan by the first week of September and from Rajasthan, Gujarat, western Ganga plain and Central Highlands by the end of the month; low pressure over north Bay of Bengal by early October, Karnataka and Tamil Nadu by early November, gone from the Peninsula by mid-December."
+    },
+    {
+      "id": "geo_A4-45",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "What is 'October heat'?",
+      "a": "Clear skies, high temperature and humidity (land still moist) during the retreating monsoon make the weather oppressive; temperatures fall rapidly in north India in the second half of October."
+    },
+    {
+      "id": "geo_A4-46",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Retreating monsoon rainfall in the east Peninsula?",
+      "a": "October–November are the rainiest months, from cyclonic depressions originating over the Andaman Sea; they hit the deltas of Godavari, Krishna and Kaveri; the Coromandel coast gets most of its rain from them; Arabian Sea cyclones are less frequent."
+    },
+    {
+      "id": "geo_A4-47",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Six traditional Indian seasons?",
+      "a": "Vasanta (March–April), Grishma (May–June), Varsha (July–August), Sharada (September–October), Hemanta (November–December), Shishira (January–February)."
+    },
+    {
+      "id": "geo_A4-48",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Average annual rainfall in India and the high-rainfall belts?",
+      "a": "About 125 cm. Above 200 cm: west coast, Western Ghats, sub-Himalayan north-east and Meghalaya (over 1,000 cm in parts of Khasi and Jaintia hills)."
+    },
+    {
+      "id": "geo_A4-49",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Medium, low and inadequate rainfall zones?",
+      "a": "Medium (100–200 cm): south Gujarat, east Tamil Nadu, Odisha, Jharkhand, Bihar, east MP, northern Ganga plain, Cachar valley, Manipur. Low (50–100 cm): west UP, Delhi, Haryana, Punjab, J&K, east Rajasthan, Gujarat, Deccan. Inadequate (<50 cm): parts of AP, Karnataka, Maharashtra, Ladakh and west Rajasthan."
+    },
+    {
+      "id": "geo_A4-50",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Monsoon and economic life?",
+      "a": "About 64% of people depend on agriculture, which is based on the southwest monsoon; regional variations allow varied crops; variability brings droughts and floods; sudden burst causes soil erosion; winter cyclonic rain helps rabi crops."
+    },
+    {
+      "id": "geo_A4-51",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A4. Climate",
+      "q": "Global warming: gases and projections in the text?",
+      "a": "Greenhouse gases: carbon dioxide (from fossil fuels), methane, CFCs, nitrous oxide. Global temperature projected to rise by about 2 °C by 2100; sea level is predicted to rise by 48 cm by the end of the 21st century."
+    },
+    {
+      "id": "geo_A5-01",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Define natural vegetation.",
+      "a": "A plant community left undisturbed over a long time so that its species adjust to climate and soil conditions as fully as possible."
+    },
+    {
+      "id": "geo_A5-02",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "List the five types of Indian forests.",
+      "a": "(i) Tropical Evergreen and Semi Evergreen; (ii) Tropical Deciduous; (iii) Tropical Thorn; (iv) Montane; (v) Littoral and Swamp."
+    },
+    {
+      "id": "geo_A5-03",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Where are tropical evergreen forests found and under what conditions?",
+      "a": "Western slope of the Western Ghats, hills of the north-east and the Andaman and Nicobar Islands; annual precipitation over 200 cm and mean annual temperature above 22 °C."
+    },
+    {
+      "id": "geo_A5-04",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Features and species of tropical evergreen forests?",
+      "a": "Well stratified; trees reach 60 m or more; no definite time for leaf shedding, flowering or fruiting, so green all year. Species: rosewood, mahogany, aini, ebony."
+    },
+    {
+      "id": "geo_A5-05",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Semi-evergreen forests?",
+      "a": "Found in the less rainy parts of evergreen regions; a mixture of evergreen and moist deciduous trees with undergrowing climbers. Species: white cedar, hollock, kail."
+    },
+    {
+      "id": "geo_A5-06",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "How did the British change India's forests?",
+      "a": "They exploited forests commercially; oak forests of Garhwal and Kumaon were replaced by pine (chir) for railway lines; forests were cleared for tea, rubber and coffee plantations; protective use gave way to commercial use."
+    },
+    {
+      "id": "geo_A5-07",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Which are the most widespread forests in India and what are they called?",
+      "a": "Tropical deciduous forests, also called monsoon forests, in regions with 70–200 cm rainfall; divided into moist and dry deciduous."
+    },
+    {
+      "id": "geo_A5-08",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Moist deciduous forests: rainfall, location and species?",
+      "a": "Rainfall 100–200 cm; north-eastern states along the Himalayan foothills, eastern slopes of the Western Ghats and Odisha. Species: teak, sal, shisham, hurra, mahua, amla, semul, kusum, sandalwood."
+    },
+    {
+      "id": "geo_A5-09",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Dry deciduous forests: rainfall, location and species?",
+      "a": "Rainfall 70–100 cm; rainier parts of the Peninsula and plains of UP and Bihar; transition to moist deciduous on the wetter margin and to thorn forests on the drier margin; parkland landscape with teak and grass patches. Species: tendu, palas, amaltas, bel, khair, axlewood."
+    },
+    {
+      "id": "geo_A5-10",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Where is vegetation very scanty due to low rainfall and overgrazing?",
+      "a": "The western and southern parts of Rajasthan."
+    },
+    {
+      "id": "geo_A5-11",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Tropical thorn forests: rainfall, location, species?",
+      "a": "Rainfall below 50 cm; semi-arid south-west Punjab, Haryana, Rajasthan, Gujarat, MP and UP; plants leafless for most of the year (scrub look). Species: babool, ber, wild date palm, khair, neem, khejri, palas; tussocky grass up to 2 m."
+    },
+    {
+      "id": "geo_A5-12",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Himalayan forest succession with altitude?",
+      "a": "Deciduous forests in the foothills; wet temperate forests at 1,000–2,000 m (oak, chestnut); pine forests at 1,500–1,750 m (chir pine); blue pine and spruce at 2,225–3,048 m; silver fir, juniper, pine, birch and rhododendron at 3,000–4,000 m; then mosses and lichens (tundra)."
+    },
+    {
+      "id": "geo_A5-13",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Deodar and Kashmir handicraft trees?",
+      "a": "Deodar is a highly valued endemic species of the western Himalaya, a durable wood used in construction. Chinar and walnut sustain the Kashmir handicrafts."
+    },
+    {
+      "id": "geo_A5-14",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Which tribes use Himalayan alpine pastures for transhumance?",
+      "a": "Gujjars, Bakarwals, Bhotiyas and Gaddis."
+    },
+    {
+      "id": "geo_A5-15",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Why do the southern Himalayan slopes carry thicker vegetation?",
+      "a": "They receive higher precipitation than the drier north-facing slopes."
+    },
+    {
+      "id": "geo_A5-16",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Southern mountain forests and Sholas?",
+      "a": "Found in the Western Ghats, Vindhyas and Nilgiris; temperate in higher regions and sub-tropical in lower. The temperate forests are called Sholas in the Nilgiris, Anaimalai and Palani hills (magnolia, laurel, cinchona, wattle); also found in the Satpura and Maikal ranges."
+    },
+    {
+      "id": "geo_A5-17",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Wetland facts in India?",
+      "a": "About 70% of wetlands are under paddy cultivation; total wetland area is 3.9 million hectares."
+    },
+    {
+      "id": "geo_A5-18",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Which two Indian sites are Ramsar wetlands protected as water-fowl habitats per the text?",
+      "a": "Chilika Lake (Odisha) and Keoladeo National Park (Bharatpur), under the Convention on Wetlands of International Importance (Ramsar)."
+    },
+    {
+      "id": "geo_A5-19",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Into how many categories are Indian wetlands grouped?",
+      "a": "Eight, e.g. Deccan reservoirs and southern west-coast lagoons; saline expanses of Rajasthan, Gujarat and Gulf of Kachchh; east-coast deltaic wetlands and lagoons (Chilika); Gangetic freshwater marshes; Brahmaputra floodplains; Kashmir and Ladakh montane lakes and rivers; and mangroves of Andaman and Nicobar."
+    },
+    {
+      "id": "geo_A5-20",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Mangroves: habitat and extent?",
+      "a": "Grow in salt marshes, tidal creeks, mud flats and estuaries; salt-tolerant species. India has 4,992 sq. km, about 7% of the world's mangroves; best developed in Andaman and Nicobar and the Sunderbans, also the Mahanadi, Godavari and Krishna deltas."
+    },
+    {
+      "id": "geo_A5-21",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Forest policy of India: year and key target?",
+      "a": "Adopted in 1952 and modified in 1988; aims to bring 33% of the geographical area under forest cover."
+    },
+    {
+      "id": "geo_A5-22",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Other aims of the forest policy?",
+      "a": "Maintain environmental stability and restore ecological balance; conserve natural heritage, biodiversity and genetic pool; check soil erosion, desert extension, floods and droughts; increase forest cover via social forestry and afforestation; raise forest productivity; create a people's movement involving women."
+    },
+    {
+      "id": "geo_A5-23",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "What is social forestry and its three categories?",
+      "a": "Management and protection of forests and afforestation on barren lands for environmental, social and rural development. The National Commission on Agriculture (1976) classified it into Urban, Rural and Farm forestry."
+    },
+    {
+      "id": "geo_A5-24",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Urban forestry vs rural forestry?",
+      "a": "Urban: trees on public/private land in and around cities (green belts, parks, avenues). Rural: agro-forestry and community forestry."
+    },
+    {
+      "id": "geo_A5-25",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Agro-forestry vs community forestry vs farm forestry?",
+      "a": "Agro-forestry: trees and crops on the same land. Community forestry: trees on public/community land (village pasture, temple land, roadsides, canal banks, railway strips, schools), including landless people. Farm forestry: farmers grow trees on their own lands; state forest departments give free seedlings to small and medium farmers."
+    },
+    {
+      "id": "geo_A5-26",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Share of the world's species found in India?",
+      "a": "About 4–5% of all known plant and animal species."
+    },
+    {
+      "id": "geo_A5-27",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Reasons for the decline of wildlife?",
+      "a": "Exploitation of forest resources, clearing land for agriculture/settlement/roads/mining/reservoirs, lopping for fodder and fuelwood, cattle grazing, hunting and commercial poaching, and forest fires."
+    },
+    {
+      "id": "geo_A5-28",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Wildlife Act: year, objectives, amendment?",
+      "a": "Enacted in 1972; protects endangered species listed in its schedule and gives legal support to national parks, sanctuaries and closed areas; amended in 1991 with stricter punishment and protection for specified plants."
+    },
+    {
+      "id": "geo_A5-29",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Number of national parks and sanctuaries?",
+      "a": "107 National Parks and 573 wildlife sanctuaries."
+    },
+    {
+      "id": "geo_A5-30",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "What is a Biosphere Reserve?",
+      "a": "A unique and representative ecosystem of terrestrial and coastal areas recognised internationally under UNESCO's Man and Biosphere (MAB) Programme. India has 18 reserves; 12 are in UNESCO's World Network of Biosphere Reserves."
+    },
+    {
+      "id": "geo_A5-31",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "List India's 18 Biosphere Reserves with states.",
+      "a": "Nilgiri (TN, Kerala, Karnataka); Nanda Devi (Uttarakhand); Nokrek (Meghalaya); Manas (Assam); Sunderban (West Bengal); Gulf of Mannar (TN); Great Nicobar (A&N); Similipal (Odisha); Dibru-Saikhowa (Assam); Dehang Debang (Arunachal Pradesh); Pachmarhi (MP); Khangchendzonga (Sikkim); Agasthyamalai (TN, Kerala); Achanakmar-Amarkantak (MP, Chhattisgarh); Kachchh (Gujarat); Cold Desert (Himachal Pradesh); Seshachalam (Andhra Pradesh); Panna (MP)."
+    },
+    {
+      "id": "geo_A5-32",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Project Tiger: year and objectives?",
+      "a": "Launched 1973 to maintain viable tiger populations and preserve areas of biological importance as natural heritage. Began with 9 reserves (16,339 sq. km); now 58 reserves covering 84,487 sq. km of core habitat in 18 states."
+    },
+    {
+      "id": "geo_A5-33",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Tiger population trend in the text?",
+      "a": "Rose from 1,411 in 2006 to 3,682 in 2023, more than 75% of the global tiger population."
+    },
+    {
+      "id": "geo_A5-34",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Project Elephant?",
+      "a": "Launched 1992 to assist states with free-ranging wild elephants and ensure long-term survival of viable populations in their natural habitat; implemented in 18 states."
+    },
+    {
+      "id": "geo_A5-35",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A5. Natural Vegetation",
+      "q": "Other conservation projects named?",
+      "a": "Crocodile Breeding Project, Project Hangul and conservation of the Himalayan Musk deer."
+    },
+    {
+      "id": "geo_A6-01",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "How does the text view change in nature vs for humans?",
+      "a": "From nature's perspective changes are value-neutral; from the human perspective they are value-loaded (good or bad)."
+    },
+    {
+      "id": "geo_A6-02",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "How is a 'disaster' defined in the text?",
+      "a": "An undesirable occurrence from forces largely outside human control that strikes quickly with little warning, seriously disrupts life and property (including death and injury to many), and needs efforts beyond those normally provided by statutory emergency services."
+    },
+    {
+      "id": "geo_A6-03",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Examples of disasters directly caused by human actions?",
+      "a": "Bhopal Gas tragedy, Chernobyl nuclear disaster, wars, release of CFCs and increase of greenhouse gases, and noise/air/water/soil pollution."
+    },
+    {
+      "id": "geo_A6-04",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Examples of human activities that indirectly intensify disasters?",
+      "a": "Landslides and floods due to deforestation, unscientific land use and construction in fragile areas."
+    },
+    {
+      "id": "geo_A6-05",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Steps taken to reduce disasters mentioned in the text?",
+      "a": "National Institute of Disaster Management (India), the Earth Summit at Rio de Janeiro, and the World Conference on Disaster Management (May 1994, Yokohama)."
+    },
+    {
+      "id": "geo_A6-06",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Natural hazard vs natural disaster?",
+      "a": "Hazards are elements of the natural environment with potential to harm people or property (e.g. ocean currents, steep slopes and unstable structures in the Himalayas, extreme climate). Disasters are relatively sudden events causing large-scale death, loss of property and social disruption when the magnitude of damage is very high."
+    },
+    {
+      "id": "geo_A6-07",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Why have disasters become more damaging according to the text?",
+      "a": "Technology lets humans intensify activities in disaster-prone areas: colonisation of river flood plains and coastal cities and ports (e.g. Mumbai, Chennai) increase vulnerability to floods, cyclones and tsunamis."
+    },
+    {
+      "id": "geo_A6-08",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "What is the Yokohama Strategy?",
+      "a": "Adopted at the World Conference on Natural Disaster Reduction, Yokohama, 23–27 May 1994 (issue first raised at the UN General Assembly in 1989); a Plan of Action for a Safer World. The decade 1990–2000 was declared the International Decade for Natural Disaster Reduction (IDNDR)."
+    },
+    {
+      "id": "geo_A6-09",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Key resolutions of the Yokohama conference?",
+      "a": "Each country has sovereign responsibility to protect its citizens; priority to developing, least developed, land-locked and small island states; strengthen national capacities, legislation and community/NGO participation; promote regional and international cooperation (capacity-building, technology sharing, resource mobilisation)."
+    },
+    {
+      "id": "geo_A6-10",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Four categories of natural disasters (Table 6.1)?",
+      "a": "Atmospheric (blizzards, thunderstorms, lightning, tornadoes, tropical cyclones, drought, hailstorm, frost, heat/cold waves); Terrestrial (earthquakes, volcanic eruptions, landslides, avalanches, subsidence, soil erosion); Aquatic (floods, tidal waves, storm surge, tsunami); Biological (locusts, insect infestation, bird flu, dengue etc.)."
+    },
+    {
+      "id": "geo_A6-11",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Which earthquakes are most devastating?",
+      "a": "Earthquakes of tectonic origin (sudden release of energy in the crust). Those linked to volcanoes, rock falls, landslides, mining subsidence or reservoirs have limited area and damage."
+    },
+    {
+      "id": "geo_A6-12",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Why do earthquakes occur along the Himalayan arc?",
+      "a": "The Indian plate moves about 1 cm per year north/north-east and is obstructed by the Eurasian plate; the plates lock, energy accumulates, and stress breaks the lock with sudden release."
+    },
+    {
+      "id": "geo_A6-13",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Most earthquake-vulnerable regions?",
+      "a": "Jammu and Kashmir, Ladakh, Himachal Pradesh, Uttarakhand, Sikkim, Darjeeling subdivision of West Bengal and all seven north-eastern states."
+    },
+    {
+      "id": "geo_A6-14",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Earthquakes outside the Himalayas mentioned?",
+      "a": "Gujarat (1819, 1956, 2001) and Maharashtra (1967, 1993); a fault along the Bhima (Krishna) near Latur and Osmanabad has been theorised."
+    },
+    {
+      "id": "geo_A6-15",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "How many earthquake risk zones does India have?",
+      "a": "Five: very high, high, moderate, low and very low damage risk, based on analysis of 1,200+ earthquakes by the National Geophysical Laboratory, GSI, Department of Meteorology and NIDM."
+    },
+    {
+      "id": "geo_A6-16",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Which areas are in the Very High Damage Risk Zone?",
+      "a": "North-east states, areas north of Darbhanga and Araria along the Indo-Nepal border in Bihar, Uttarakhand, western Himachal Pradesh (around Dharamshala), Kashmir Valley and Kuchchh (Gujarat)."
+    },
+    {
+      "id": "geo_A6-17",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Which areas are in the High Damage Risk Zone?",
+      "a": "Remaining parts of J&K, Ladakh and Himachal Pradesh, northern Punjab, eastern Haryana, Delhi, western UP and northern Bihar. The stable Deccan plateau is largely safe."
+    },
+    {
+      "id": "geo_A6-18",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Socio-environmental consequences of earthquakes?",
+      "a": "Destroy settlements, infrastructure, transport and communication; render people homeless; relief is hard; surface seismic waves cause fissures with water gushing out; trigger landslides, river blockages (new reservoirs) and river course changes causing floods."
+    },
+    {
+      "id": "geo_A6-19",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Earthquake hazard mitigation measures?",
+      "a": "Seismological monitoring centres (GPS for plate movement); vulnerability maps and public education; modified house types and building designs, discouraging high-rises and big industries in vulnerable areas; mandatory earthquake-resistant designs and light materials."
+    },
+    {
+      "id": "geo_A6-20",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "What is a tsunami?",
+      "a": "Earthquakes or volcanic eruptions that abruptly move the sea floor, causing sudden displacement of ocean water as high vertical waves; also called harbour waves or seismic sea waves. A series of after-waves oscillates between crest and trough."
+    },
+    {
+      "id": "geo_A6-21",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Why is a tsunami hard to detect in the deep ocean but destructive near coasts?",
+      "a": "Wave speed depends on depth. In deep water the wavelength is very long and wave height small (a ship rises only a metre or two over several minutes). In shallow water the wavelength shortens, the period remains unchanged and height increases (up to 15 m or more), so they are called shallow-water waves."
+    },
+    {
+      "id": "geo_A6-22",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Where are tsunamis frequent?",
+      "a": "Along the Pacific Ring of Fire (Alaska, Japan, Philippines, South-east Asian islands, Indonesia, Malaysia, Myanmar, Sri Lanka, India etc.)."
+    },
+    {
+      "id": "geo_A6-23",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "2004 tsunami facts in the text?",
+      "a": "On 26 December 2004 more than 300,000 people lost their lives; India joined the International Tsunami Warning System afterwards."
+    },
+    {
+      "id": "geo_A6-24",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "What is a tropical cyclone?",
+      "a": "An intense low-pressure area between 30°N and 30°S with high-velocity winds; extends 500–1,000 km horizontally and 12–14 km vertically; acts as a heat engine energised by latent heat released by condensation."
+    },
+    {
+      "id": "geo_A6-25",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Conditions for tropical cyclone formation?",
+      "a": "(i) Large continuous supply of warm, moist air; (ii) strong Coriolis force (absent between 0°–5° latitude); (iii) unstable conditions through the troposphere; (iv) absence of strong vertical wind wedge."
+    },
+    {
+      "id": "geo_A6-26",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Where and when do cyclones originate around India?",
+      "a": "In the Bay of Bengal and Arabian Sea; most originate between 10°–15°N in the monsoon season; Bay of Bengal cyclones mostly in October–November, shifting by July to around 18°N and west of 90°E near the Sunderban delta."
+    },
+    {
+      "id": "geo_A6-27",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Cyclone consequences?",
+      "a": "Force decreases inland (energy comes from the sea); coastal areas hit by winds averaging 180 km/h; cause storm surge — an abnormal rise in sea level — inundating settlements and crops."
+    },
+    {
+      "id": "geo_A6-28",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Cyclone mitigation?",
+      "a": "Cyclones are more predictable than earthquakes or tsunamis; use cyclone shelters, embankments, dykes, reservoirs and afforestation to reduce wind speed; high coastal vulnerability explains continued losses in India, Bangladesh and Myanmar."
+    },
+    {
+      "id": "geo_A6-29",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "What causes floods and how do they differ from other disasters?",
+      "a": "Surface run-off exceeds the carrying capacity of channels; also storm surge, prolonged intense rainfall, snow melt, reduced infiltration and heavy sediment. Causes are well established; floods are slow and occur in known regions and times."
+    },
+    {
+      "id": "geo_A6-30",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Human factors increasing floods?",
+      "a": "Deforestation, unscientific agriculture, disturbances to natural drainage channels, and colonisation of flood plains and river beds."
+    },
+    {
+      "id": "geo_A6-31",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "How much land is flood-prone in India and which states are worst hit?",
+      "a": "40 million hectares identified by Rashtriya Barh Ayog (National Flood Commission); Assam, West Bengal and Bihar are highly flood-prone."
+    },
+    {
+      "id": "geo_A6-32",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Other flood situations in India?",
+      "a": "Punjab and UP rivers occasionally flood; Rajasthan, Gujarat, Haryana and Punjab suffer flash floods due to monsoon pattern and blocked channels; Tamil Nadu floods in November–January due to the retreating monsoon."
+    },
+    {
+      "id": "geo_A6-33",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Positive effect of floods and the Majuli example?",
+      "a": "Floods deposit fertile silt; Majuli (Assam), the world's largest riverine island, grows good paddy after annual Brahmaputra floods."
+    },
+    {
+      "id": "geo_A6-34",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Flood control measures?",
+      "a": "Embankments, dams, afforestation, discouraging construction in the upper reaches, removing encroachments from channels and depopulating flood plains, cyclone centres in coastal areas."
+    },
+    {
+      "id": "geo_A6-35",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Define drought.",
+      "a": "An extended period of water shortage due to inadequate precipitation, excessive evaporation and over-utilisation of reservoirs and groundwater."
+    },
+    {
+      "id": "geo_A6-36",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Four types of drought?",
+      "a": "Meteorological (prolonged inadequate, mal-distributed rainfall); Agricultural/soil-moisture (low soil moisture, crop failure); Hydrological (storages fall below what precipitation can replenish); Ecological (failure of ecosystem productivity due to water shortage)."
+    },
+    {
+      "id": "geo_A6-37",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Irrigation criterion for drought-prone areas?",
+      "a": "An area with more than 30% of gross cropped area under irrigation is excluded from the drought-prone category."
+    },
+    {
+      "id": "geo_A6-38",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Extent of drought in India?",
+      "a": "About 19% of area and 12% of population suffer every year; about 30% of total area (around 50 million people) is drought prone."
+    },
+    {
+      "id": "geo_A6-39",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Extreme drought-affected areas?",
+      "a": "Most of Rajasthan west of the Aravali (Marusthali) and Kachchh; districts like Jaisalmer and Barmer receive under 90 mm average annual rainfall."
+    },
+    {
+      "id": "geo_A6-40",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Severe and moderate drought areas?",
+      "a": "Severe: parts of east Rajasthan, most of MP, east Maharashtra, interior Andhra Pradesh and Karnataka plateau, north interior Tamil Nadu, south Jharkhand, interior Odisha. Moderate: north Rajasthan, Haryana, south UP, rest of Gujarat, Maharashtra except Konkan, Jharkhand, Coimbatore plateau, interior Karnataka."
+    },
+    {
+      "id": "geo_A6-41",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Akal, trinkal, jalkal and trikal?",
+      "a": "Scarcity of food grains (akal), of fodder (trinkal), of water (jalkal), and of all three (trikal) — the most devastating."
+    },
+    {
+      "id": "geo_A6-42",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Drought mitigation measures?",
+      "a": "Immediate: safe drinking water, medicines, fodder, shifting people and livestock. Long-term: groundwater/aquifer mapping, transfer of river water and inter-linking, reservoirs and dams, remote sensing, drought-resistant crops, rainwater harvesting."
+    },
+    {
+      "id": "geo_A6-43",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "What is a landslide and why is it hard to monitor?",
+      "a": "Rapid sliding of a large mass of bedrock. Controlled by highly localised factors (geology, slope, land use, vegetation, human activity), so monitoring is difficult and costly."
+    },
+    {
+      "id": "geo_A6-44",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Very high and high landslide vulnerability zones?",
+      "a": "Very high: young unstable Himalayas, Andaman and Nicobar, steep high-rainfall Western Ghats and Nilgiris, north-east, quake-prone and intense construction areas. High: all Himalayan states and north-eastern states except the Assam plains."
+    },
+    {
+      "id": "geo_A6-45",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Moderate-to-low and safe landslide zones?",
+      "a": "Moderate–low: Trans-Himalayan Ladakh and Spiti, Aravali, rain-shadow areas of the Western and Eastern Ghats and Deccan; mining/subsidence slides in Jharkhand, Odisha, Chhattisgarh, MP, Maharashtra, AP, Karnataka, TN, Goa, Kerala. Safe: Rajasthan, Haryana, UP, Bihar, West Bengal (except Darjiling), Assam (except Karbi Anglong), southern coastal regions."
+    },
+    {
+      "id": "geo_A6-46",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Landslide mitigation?",
+      "a": "Restrict roads, dams and large settlements in high-vulnerability zones; limit agriculture to valleys and moderate slopes; afforestation and bunds; terrace farming in the north-eastern states where jhumming (slash-and-burn) persists."
+    },
+    {
+      "id": "geo_A6-47",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "How does the Disaster Management Bill, 2005 define disaster?",
+      "a": "A catastrophe, mishap, calamity or grave occurrence from natural or man-made causes, accident or negligence, causing substantial loss of life, suffering or environmental damage, beyond the coping capacity of the affected community."
+    },
+    {
+      "id": "geo_A6-48",
+      "subject": "geography",
+      "part": "Part A — India: Physical Environment",
+      "chapter": "A6. Natural Hazards and Disasters",
+      "q": "Three stages of disaster management?",
+      "a": "Pre-disaster (data, vulnerability maps, awareness, planning); during disaster (rescue, relief, evacuation, shelters, water, food, medical aid); post-disaster (rehabilitation, recovery, capacity-building). About two-thirds of India's area and population are vulnerable to disasters."
+    },
+    {
+      "id": "geo_B1-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Who coined the term 'geography' and what does it mean?",
+      "a": "Eratosthenes, a Greek scholar (276–194 BC); from geo (earth) + graphos (description) — description of the earth. Scholars defined it as 'the description of the earth as the abode of human beings'."
+    },
+    {
+      "id": "geo_B1-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "What is 'areal differentiation'?",
+      "a": "Geography as the study of phenomena that vary over space (Hartshorne: description and explanation of the areal differentiation of the earth's surface; Hettner: differences of related phenomena in different parts of the surface)."
+    },
+    {
+      "id": "geo_B1-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "What causal approach does geography take?",
+      "a": "It finds causal relationships between phenomena (e.g. cropping patterns relate to soils, climate, market demand, farmer's investment capacity and technology) in a cause-and-effect frame, helping interpretation and foresight."
+    },
+    {
+      "id": "geo_B1-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Three sets of questions in geography?",
+      "a": "What? (patterns of natural and cultural features), Where? (distribution), and Why? (causal explanation). The first two gave inventory-type information popular in the colonial period; the third made geography a scientific discipline."
+    },
+    {
+      "id": "geo_B1-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Why is geography called an integrating discipline?",
+      "a": "It attempts spatial synthesis (history attempts temporal synthesis), takes a holistic approach, draws data from natural and social sciences, and sees the world as a system of interdependencies."
+    },
+    {
+      "id": "geo_B1-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Why is time the 'fourth dimension' in geography?",
+      "a": "Geographical phenomena change through time; time can be converted to space and space to time (e.g. a place 1,500 km away is also two hours by plane)."
+    },
+    {
+      "id": "geo_B1-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "What does geography study about nature and humans?",
+      "a": "Nature–human interactions as an integrated whole: 'humanised nature and naturalised human beings'; technology helped humans move from necessity to freedom."
+    },
+    {
+      "id": "geo_B1-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "What do geographers mean by links and nodes?",
+      "a": "Links are routes (transport and communication); nodes are settlements of all types and hierarchies. Together they integrate space; geography studies 'spatial organisation' and 'spatial integration'."
+    },
+    {
+      "id": "geo_B1-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Examples of geography shaping history in the text?",
+      "a": "Spatial depth provided defence; oceans protected the new world from wars on its soil; the Himalayas were a barrier but their passes allowed migrants and invaders; navigation technology allowed European colonisation of Asia and Africa."
+    },
+    {
+      "id": "geo_B1-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Systematic vs regional approach — founders?",
+      "a": "Systematic (general) geography was introduced by Alexander von Humboldt (1769–1859); regional geography by Karl Ritter (1779–1859)."
+    },
+    {
+      "id": "geo_B1-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "How do the systematic and regional approaches work?",
+      "a": "Systematic: a phenomenon is studied worldwide first, then typologies/patterns identified (e.g. natural vegetation types). Regional: the world is divided into regions at hierarchical levels (natural, political or designated) and all phenomena in a region are studied holistically."
+    },
+    {
+      "id": "geo_B1-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Branches of physical geography?",
+      "a": "Geomorphology (landforms), climatology (atmosphere, weather, climate), hydrology (water realm) and soil geography (soil formation, types, fertility, distribution)."
+    },
+    {
+      "id": "geo_B1-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Branches of human geography?",
+      "a": "Social/cultural, population and settlement, economic, historical and political geography."
+    },
+    {
+      "id": "geo_B1-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "What is biogeography and its parts?",
+      "a": "The interface of physical and human geography: plant geography, zoo geography, ecology/ecosystem and environmental geography."
+    },
+    {
+      "id": "geo_B1-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Branches under the regional approach?",
+      "a": "Regional studies/area studies (macro, meso, micro), regional planning (country/rural and town/urban), regional development and regional analysis."
+    },
+    {
+      "id": "geo_B1-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Two aspects common to every discipline in geography's classification?",
+      "a": "(i) Philosophy (geographical thought; land–human interaction/human ecology); (ii) methods and techniques (cartography, quantitative methods, field survey, geo-informatics: remote sensing, GIS, GPS)."
+    },
+    {
+      "id": "geo_B1-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "What does physical geography study?",
+      "a": "The lithosphere, atmosphere, hydrosphere and biosphere."
+    },
+    {
+      "id": "geo_B1-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "What does soil formation (pedogenesis) depend on?",
+      "a": "Parent rock, climate, biological activity and time (time gives maturity and soil profiles)."
+    },
+    {
+      "id": "geo_B1-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B1. Geography as a Discipline",
+      "q": "Why is physical geography important per the text?",
+      "a": "It evaluates and manages natural resources; landforms, climate, oceans (India collects manganese nodules from the ocean bed) and soils support human activity; understanding the environment is essential for sustainable development."
+    },
+    {
+      "id": "geo_B2-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "Nebular Hypothesis — who proposed and revised it?",
+      "a": "Proposed by Immanuel Kant; revised by Laplace in 1796. Planets formed from a cloud of material associated with a slowly rotating youthful sun."
+    },
+    {
+      "id": "geo_B2-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "1950 revision of the nebular hypothesis?",
+      "a": "Otto Schmidt (Russia) and Carl Weizsacker (Germany): the sun was surrounded by a solar nebula of mostly hydrogen and helium plus dust; friction and collision formed a disk-shaped cloud and planets formed by accretion."
+    },
+    {
+      "id": "geo_B2-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "What is the Big Bang Theory?",
+      "a": "The most popular theory of the universe's origin (expanding universe hypothesis). Edwin Hubble provided evidence in 1920 that galaxies move further apart."
+    },
+    {
+      "id": "geo_B2-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "Stages of the Big Bang?",
+      "a": "All matter was in a 'tiny ball' (singular atom) of infinite temperature and density; it exploded about 13.7 billion years ago; within 3 minutes the first atom formed; within 300,000 years temperature fell to 4,500 K and the universe became transparent."
+    },
+    {
+      "id": "geo_B2-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "What is Hoyle's alternative to the Big Bang?",
+      "a": "The steady state concept: the universe is roughly the same at any point of time."
+    },
+    {
+      "id": "geo_B2-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "Why is the balloon analogy only partly correct?",
+      "a": "Space between galaxies increases, but galaxies themselves do not expand (unlike points on an inflating balloon)."
+    },
+    {
+      "id": "geo_B2-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "How do galaxies and stars form?",
+      "a": "Uneven early matter distribution led to gravitational differences; a galaxy starts as a large hydrogen cloud (nebula), localised clumps become denser and form stars (about 5–6 billion years ago). Galaxy diameters range from 80,000–150,000 light years."
+    },
+    {
+      "id": "geo_B2-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "What is a light year?",
+      "a": "A measure of distance, not time: the distance light (300,000 km/s) travels in a year, 9.461 × 10^12 km. The sun–earth mean distance is 149,598,000 km (8.311 light minutes)."
+    },
+    {
+      "id": "geo_B2-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "Stages of planet formation?",
+      "a": "A rotating gas-and-dust disc forms around a core; the cloud condenses into small rounded objects that cohere into planetesimals; collisions and gravity build larger bodies; planetesimals accrete into a few large planets."
+    },
+    {
+      "id": "geo_B2-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "Age and early state of the earth?",
+      "a": "About 4,600 million years; initially barren, rocky and hot with a thin atmosphere of hydrogen and helium."
+    },
+    {
+      "id": "geo_B2-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "How did the earth's layered structure form?",
+      "a": "Differentiation: heavier materials (e.g. iron) sank to the centre and lighter ones rose; it cooled to form a crust. The moon-forming giant impact heated the earth further. Layers: crust, mantle, outer core, inner core; density increases towards the core."
+    },
+    {
+      "id": "geo_B2-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "Three stages in the evolution of the atmosphere?",
+      "a": "(1) Loss of the primordial hydrogen–helium atmosphere (stripped by solar winds); (2) degassing: gases and water vapour from the hot interior (volcanic eruptions); (3) modification by photosynthesis."
+    },
+    {
+      "id": "geo_B2-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "Composition of the early atmosphere and what is degassing?",
+      "a": "Mostly water vapour, nitrogen, carbon dioxide, methane, ammonia and very little free oxygen. Degassing is the outpouring of gases from the interior."
+    },
+    {
+      "id": "geo_B2-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "How did oceans form and how old are they?",
+      "a": "Water vapour condensed, CO2 dissolved in rainwater, and rain collected in depressions; oceans formed within 500 million years of the earth's formation (about 4,000 million years old)."
+    },
+    {
+      "id": "geo_B2-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "Timeline of life and oxygen?",
+      "a": "Life began around 3,800 million years ago; photosynthesis evolved 2,500–3,000 million years ago; oceans became saturated with oxygen and oxygen flooded the atmosphere around 2,000 million years ago."
+    },
+    {
+      "id": "geo_B2-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B2. The Origin and Evolution of the Earth",
+      "q": "How does the text describe the origin of life?",
+      "a": "A chemical reaction producing complex organic molecules that could duplicate themselves, turning inanimate matter into living substance; fossils in rocks record it; blue-algae-like microstructures are over 3,000 million years old."
+    },
+    {
+      "id": "geo_B3-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "What is the Earth's radius and how do we know its interior?",
+      "a": "About 6,378 km; knowledge comes mostly from estimates and inferences (indirect evidence) plus some direct observations."
+    },
+    {
+      "id": "geo_B3-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Direct sources of information about the interior?",
+      "a": "Surface and mined rocks (South African gold mines are 3–4 km deep), deep drilling (Deep Ocean Drilling Project, Integrated Ocean Drilling Project; the Kola drill has reached 12 km) and volcanic eruptions (magma)."
+    },
+    {
+      "id": "geo_B3-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Indirect sources of information about the interior?",
+      "a": "Increase of temperature, pressure and density with depth; meteors (similar material to the earth); gravitation, magnetic field and seismic activity."
+    },
+    {
+      "id": "geo_B3-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Gravity variation and gravity anomaly?",
+      "a": "Gravity is greater at the poles and less at the equator (greater distance from the centre). The difference between observed and expected values is a gravity anomaly, which reveals uneven mass distribution in the crust."
+    },
+    {
+      "id": "geo_B3-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "What is an earthquake and what causes it?",
+      "a": "Shaking of the earth caused by release of energy along a fault (a sharp break in crustal rocks); blocks overcome friction, slide past each other and energy waves travel in all directions."
+    },
+    {
+      "id": "geo_B3-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Focus (hypocentre) vs epicentre?",
+      "a": "Focus: the point of energy release. Epicentre: the point on the surface nearest to (directly above) the focus, first to experience the waves."
+    },
+    {
+      "id": "geo_B3-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Where do natural earthquakes occur and what records the waves?",
+      "a": "In the lithosphere (up to about 200 km depth); recorded by a seismograph."
+    },
+    {
+      "id": "geo_B3-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Two types of earthquake waves?",
+      "a": "Body waves (generated at the focus, travel through the earth's body) and surface waves (generated when body waves interact with surface rocks)."
+    },
+    {
+      "id": "geo_B3-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "P-waves vs S-waves?",
+      "a": "P (primary) waves are faster, arrive first, travel through solids, liquids and gases, and vibrate parallel to the wave direction (like sound waves). S (secondary) waves arrive later, travel only through solids, and vibrate perpendicular to the direction."
+    },
+    {
+      "id": "geo_B3-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Which waves are most destructive?",
+      "a": "Surface waves, which are last to arrive and cause displacement of rocks and collapse of structures."
+    },
+    {
+      "id": "geo_B3-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "How does density affect wave velocity?",
+      "a": "The denser the material, the higher the velocity; waves reflect or refract at boundaries between materials of different density."
+    },
+    {
+      "id": "geo_B3-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "What is the shadow zone?",
+      "a": "The area where waves are not recorded. Both P and S waves are recorded within 105° of the epicentre; beyond 145° only P waves arrive. The shadow zone for P-waves is a band between 105° and 145°; S-waves are not received beyond 105° (a little over 40% of earth's surface)."
+    },
+    {
+      "id": "geo_B3-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Types of earthquakes?",
+      "a": "Tectonic (sliding along a fault plane; most common), volcanic, collapse (mine roofs), explosion (chemical/nuclear), and reservoir-induced."
+    },
+    {
+      "id": "geo_B3-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Richter vs Mercalli scales?",
+      "a": "Richter measures magnitude (energy released), expressed 0–10. Mercalli (Italian seismologist) measures intensity based on visible damage, range 1–12."
+    },
+    {
+      "id": "geo_B3-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Immediate hazardous effects of earthquakes?",
+      "a": "Ground shaking, differential settlement, land and mud slides, soil liquefaction, ground lurching, avalanches, ground displacement, floods from dam/levee failure, fires, structural collapse, falling objects and tsunami."
+    },
+    {
+      "id": "geo_B3-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "When can an earthquake cause a tsunami?",
+      "a": "Only if the epicentre is below oceanic waters and magnitude is sufficiently high; tsunamis are waves generated by tremors, not earthquakes themselves."
+    },
+    {
+      "id": "geo_B3-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Frequency of earthquakes?",
+      "a": "Quakes above magnitude 5 can be devastating; magnitude 8+ occurs about once in 1–2 years; tiny quakes occur almost every minute."
+    },
+    {
+      "id": "geo_B3-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Crust: nature and thickness?",
+      "a": "Outermost brittle solid part; oceanic crust mean thickness 5 km; continental crust about 30 km, up to 70 km under the Himalayas."
+    },
+    {
+      "id": "geo_B3-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Mantle: extent and asthenosphere?",
+      "a": "From Moho's discontinuity to 2,900 km. The upper mantle's weak zone, the asthenosphere (extends up to about 400 km), is the main source of magma. The lower mantle is solid."
+    },
+    {
+      "id": "geo_B3-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "What is the lithosphere?",
+      "a": "Crust plus the uppermost part of the mantle; thickness 10–200 km."
+    },
+    {
+      "id": "geo_B3-21",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Core: boundary, state and composition?",
+      "a": "Core–mantle boundary at 2,900 km; outer core is liquid, inner core is solid; mostly nickel and iron (the 'nife' layer)."
+    },
+    {
+      "id": "geo_B3-22",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Magma vs lava?",
+      "a": "Material in the upper mantle is magma; once it moves towards or reaches the surface it is lava."
+    },
+    {
+      "id": "geo_B3-23",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Shield volcanoes?",
+      "a": "Largest volcanoes after basalt flows; made of very fluid basalt so not steep; low explosivity (explosive if water enters the vent); Hawaiian volcanoes are the best-known example."
+    },
+    {
+      "id": "geo_B3-24",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Composite volcanoes?",
+      "a": "Erupt cooler, more viscous lavas than basalt; explosive; pyroclastic material and ash build up in layers around the vent."
+    },
+    {
+      "id": "geo_B3-25",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Caldera?",
+      "a": "The most explosive volcanoes; they collapse on themselves forming depressions (calderas), indicating a huge, nearby magma chamber."
+    },
+    {
+      "id": "geo_B3-26",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Flood basalt provinces and the Deccan Traps?",
+      "a": "Highly fluid lava flows long distances; flows can exceed 50 m thick and spread hundreds of km. The Deccan Traps cover most of the Maharashtra plateau and once covered a larger area."
+    },
+    {
+      "id": "geo_B3-27",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Mid-ocean ridge volcanoes?",
+      "a": "Occur on a system of mid-ocean ridges more than 70,000 km long through all ocean basins; the central portion erupts frequently."
+    },
+    {
+      "id": "geo_B3-28",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Volcanic vs plutonic rocks?",
+      "a": "Volcanic: lava cooled at the surface. Plutonic: cooled in the crust (intrusive forms)."
+    },
+    {
+      "id": "geo_B3-29",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Batholith?",
+      "a": "A large granitic body that cools deep in the crust as domes, exposed after denudation; the cooled portion of magma chambers."
+    },
+    {
+      "id": "geo_B3-30",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Laccolith?",
+      "a": "Large dome-shaped intrusive body with a level base, fed by a pipe-like conduit; the Karnataka plateau has domal granite hills that are laccoliths or batholiths."
+    },
+    {
+      "id": "geo_B3-31",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Lapolith and phacolith?",
+      "a": "Lapolith: saucer-shaped intrusive body, concave to the sky. Phacolith: wavy mass at the base of synclines or top of anticlines in folded igneous country."
+    },
+    {
+      "id": "geo_B3-32",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B3. Interior of the Earth",
+      "q": "Sill vs sheet vs dyke?",
+      "a": "Near-horizontal intrusive bodies: thick ones are sills, thin ones are sheets. Dykes solidify almost perpendicular to the ground in cracks, forming wall-like structures; common in western Maharashtra and feeders of the Deccan traps."
+    },
+    {
+      "id": "geo_B4-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "What share of the earth's surface do continents cover?",
+      "a": "29%; the rest is under oceanic waters."
+    },
+    {
+      "id": "geo_B4-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Who proposed continental drift and when?",
+      "a": "Alfred Wegener, a German meteorologist, in 1912."
+    },
+    {
+      "id": "geo_B4-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "What were Pangaea and Panthalassa?",
+      "a": "Pangaea ('all earth') was the single super continent; Panthalassa ('all water') was the surrounding mega-ocean."
+    },
+    {
+      "id": "geo_B4-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "How did Pangaea break up?",
+      "a": "Around 200 million years ago it split into Laurasia (north) and Gondwanaland (south), which then broke into the present continents."
+    },
+    {
+      "id": "geo_B4-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Who first suggested the continents were once joined?",
+      "a": "Abraham Ortelius, a Dutch map maker, in 1596; Antonio Pellegrini drew a map showing the continents together."
+    },
+    {
+      "id": "geo_B4-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Evidence: jig-saw fit?",
+      "a": "Matching Atlantic coastlines; Bullard (1964) used a computer to find the best fit at the 1,000-fathom line, which was nearly perfect."
+    },
+    {
+      "id": "geo_B4-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Evidence: rocks of the same age?",
+      "a": "Radiometric dating matches a 2,000-million-year-old rock belt from the Brazil coast with western Africa; earliest marine deposits along South America and Africa are Jurassic."
+    },
+    {
+      "id": "geo_B4-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Evidence: tillite?",
+      "a": "Sedimentary rock from glacier deposits; the Gondwana system of India has counterparts in Africa, Falkland Island, Madagascar, Antarctica and Australia, showing prolonged glaciation and drifting of continents."
+    },
+    {
+      "id": "geo_B4-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Evidence: placer deposits?",
+      "a": "Rich gold placers on the Ghana coast without source rock; the gold veins are in Brazil, so Ghana's gold came from the Brazil plateau when the continents were adjacent."
+    },
+    {
+      "id": "geo_B4-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Evidence: fossils?",
+      "a": "Lemurs in India, Madagascar and Africa (suggested 'Lemuria'); Mesosaurus, a small reptile of shallow brackish water, found only in South Africa's Southern Cape province and Brazil, 4,800 km apart."
+    },
+    {
+      "id": "geo_B4-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Forces Wegener proposed for drifting and why rejected?",
+      "a": "Pole-fleeing force (earth's rotation causing the equatorial bulge) and tidal force (moon and sun); considered totally inadequate."
+    },
+    {
+      "id": "geo_B4-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "What is the convection current theory?",
+      "a": "Arthur Holmes (1930s): convection currents in the mantle, generated by radioactive-element heat differences, could drive drifting."
+    },
+    {
+      "id": "geo_B4-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Ocean floor divisions?",
+      "a": "Continental margins, deep-sea basins (abyssal plains) and mid-ocean ridges."
+    },
+    {
+      "id": "geo_B4-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "What do continental margins include?",
+      "a": "Continental shelf, slope, rise and deep-oceanic trenches."
+    },
+    {
+      "id": "geo_B4-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Abyssal plains and mid-oceanic ridges?",
+      "a": "Abyssal plains: extensive plains between margins and ridges where continental sediments settle. Mid-oceanic ridge: interconnected submerged chain, the longest mountain chain on earth, with a central rift of intense volcanic activity."
+    },
+    {
+      "id": "geo_B4-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Pattern of earthquakes and volcanoes?",
+      "a": "Concentrated along mid-oceanic ridges (shallow foci), the Alpine–Himalayan belt and the Pacific rim (deep-seated foci); the Pacific rim is the 'rim of fire'."
+    },
+    {
+      "id": "geo_B4-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Who proposed sea floor spreading and what is it?",
+      "a": "Hess, 1961: eruptions at ridge crests rupture oceanic crust and new lava pushes it apart on either side; the older crust sinks and is consumed at oceanic trenches."
+    },
+    {
+      "id": "geo_B4-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Key facts supporting sea floor spreading?",
+      "a": "Rocks equidistant from the ridge crest are alike in age, composition and magnetism; rocks nearest the ridge are youngest (normal polarity); oceanic crust is nowhere older than 200 million years (continental rocks up to 3,200 million); ocean sediments are thin; trenches have deep quakes."
+    },
+    {
+      "id": "geo_B4-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Who proposed plate tectonics?",
+      "a": "In 1967 McKenzie and Parker, and Morgan, independently."
+    },
+    {
+      "id": "geo_B4-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "What is a tectonic plate?",
+      "a": "A massive irregular slab of solid rock (continental and oceanic lithosphere) that moves horizontally over the asthenosphere; lithosphere thickness is 5–100 km (oceanic) and about 200 km (continental)."
+    },
+    {
+      "id": "geo_B4-21",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "List the seven major plates.",
+      "a": "Antarctica and surrounding oceanic; North American; South American; Pacific; India–Australia–New Zealand; Africa with eastern Atlantic floor; Eurasia and adjacent oceanic."
+    },
+    {
+      "id": "geo_B4-22",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Name the important minor plates.",
+      "a": "Cocos (Central America–Pacific), Nazca (South America–Pacific), Arabian, Philippine (Asiatic–Pacific) and Caroline (Philippine–Indian, north of New Guinea)."
+    },
+    {
+      "id": "geo_B4-23",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "What actually moves — continents or plates?",
+      "a": "Plates move, not continents; continents are parts of plates. Pangaea was formed by the convergence of continental masses."
+    },
+    {
+      "id": "geo_B4-24",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Three types of plate boundaries?",
+      "a": "Divergent (new crust, e.g. Mid-Atlantic Ridge), convergent (crust destroyed; subduction zone) and transform (plates slide past; crust neither made nor destroyed; faults perpendicular to ridges)."
+    },
+    {
+      "id": "geo_B4-25",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Three ways convergence occurs?",
+      "a": "Oceanic–continental, oceanic–oceanic and continental–continental plates."
+    },
+    {
+      "id": "geo_B4-26",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Rates of plate movement?",
+      "a": "Determined from magnetic strips parallel to ridges. Slowest: Arctic Ridge (under 2.5 cm/yr). Fastest: East Pacific Rise near Easter Island (over 15 cm/yr)."
+    },
+    {
+      "id": "geo_B4-27",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "What drives plate movement?",
+      "a": "Convection cells in the hot, softened mantle; heat comes from radioactive decay and residual heat."
+    },
+    {
+      "id": "geo_B4-28",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Boundaries of the Indian plate?",
+      "a": "North: Himalayan subduction zone (continent–continent convergence). East: Rakinyoma Mountains (Myanmar) to the Java Trench; eastern margin a spreading ridge east of Australia. West: Kirthar Mountains of Pakistan and Makran coast to the Red Sea rift/Chagos. South: Antarctic plate ridge."
+    },
+    {
+      "id": "geo_B4-29",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B4. Distribution of Oceans and Continents",
+      "q": "Timeline of the Indian plate's journey?",
+      "a": "Separated from Asia by the Tethys Sea till about 225 million years ago; northward journey began ~200 million years ago; ~140 million years ago at 50°S; Deccan Traps from ~60 million years ago; collided with Asia 40–50 million years ago raising the Himalayas, which are still rising."
+    },
+    {
+      "id": "geo_B5-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Exogenic vs endogenic forces?",
+      "a": "Exogenic forces originate in the atmosphere (energy from the sun) and mainly wear land down; endogenic forces originate within the earth and mainly build land up. Their opposing actions keep relief variations alive."
+    },
+    {
+      "id": "geo_B5-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Define degradation, aggradation and gradation.",
+      "a": "Degradation: wearing down of relief. Aggradation: filling up of basins/depressions. Gradation: wearing down of relief variations through erosion."
+    },
+    {
+      "id": "geo_B5-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "What are geomorphic processes?",
+      "a": "Endogenic and exogenic forces causing physical stresses and chemical actions on earth materials, changing the configuration of the surface. Endogenic: diastrophism and volcanism. Exogenic: weathering, mass wasting, erosion and deposition."
+    },
+    {
+      "id": "geo_B5-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Geomorphic process vs geomorphic agent?",
+      "a": "A process is a force applied on earth materials. An agent is a mobile medium (running water, groundwater, glaciers, wind, waves, currents) that removes, transports and deposits materials."
+    },
+    {
+      "id": "geo_B5-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Why is gravity important in geomorphology?",
+      "a": "It is the directional force that activates all downslope movement and causes stresses; without gravity and gradients there is no mobility, hence no erosion, transport or deposition."
+    },
+    {
+      "id": "geo_B5-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Sources of endogenic energy?",
+      "a": "Radioactivity, rotational and tidal friction, and primordial heat from the earth's origin, expressed through geothermal gradients."
+    },
+    {
+      "id": "geo_B5-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "What is diastrophism and what does it include?",
+      "a": "All processes that move, elevate or build up the crust: orogenic (mountain building by folding), epeirogenic (uplift/warping of large parts), earthquakes and plate tectonics. They cause PVT (pressure, volume, temperature) changes that induce metamorphism."
+    },
+    {
+      "id": "geo_B5-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Orogeny vs epeirogeny?",
+      "a": "Orogeny is a mountain-building process (severe folding in long, narrow belts); epeirogeny is a continent-building process (simple deformation)."
+    },
+    {
+      "id": "geo_B5-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "What is denudation?",
+      "a": "The general term for all exogenic processes: weathering, mass wasting/movements, erosion and transportation ('denude' means to strip off)."
+    },
+    {
+      "id": "geo_B5-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Which two climatic elements chiefly control exogenic processes?",
+      "a": "Temperature and precipitation."
+    },
+    {
+      "id": "geo_B5-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Define stress and shear stress.",
+      "a": "Stress is force per unit area. Shear stresses act along faces of earth materials (separating forces) and cause breaking and slippage."
+    },
+    {
+      "id": "geo_B5-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Define weathering.",
+      "a": "Mechanical disintegration and chemical decomposition of rocks by weather and climate; it is an in-situ (on-site) process with little or no motion of material."
+    },
+    {
+      "id": "geo_B5-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Three groups of weathering processes?",
+      "a": "Chemical, physical/mechanical and biological."
+    },
+    {
+      "id": "geo_B5-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Chemical weathering processes?",
+      "a": "Solution, carbonation, hydration, oxidation and reduction; need water, air (oxygen and CO2) and heat."
+    },
+    {
+      "id": "geo_B5-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Physical weathering forces?",
+      "a": "Gravitational forces (overburden pressure, load, shearing stress); expansion forces (temperature changes, crystal growth, animal activity); water pressures (wetting and drying). Most is caused by thermal expansion and pressure release."
+    },
+    {
+      "id": "geo_B5-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Biological weathering examples?",
+      "a": "Burrowing and wedging by earthworms, termites and rodents; plant roots exerting pressure; decaying matter forming humic and carbonic acids; human ploughing and cultivation."
+    },
+    {
+      "id": "geo_B5-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Significance of weathering?",
+      "a": "Prepares regolith and soils, aids erosion and mass movement, supports biodiversity via the weathering mantle, and concentrates ores of iron, manganese, aluminium and copper."
+    },
+    {
+      "id": "geo_B5-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Exfoliation and enrichment?",
+      "a": "Exfoliation is a result, not a process: curved sheets flake off bedrock leaving smooth rounded surfaces (exfoliation domes from unloading; tors from thermal expansion). Enrichment: removal of some materials by leaching raises the concentration of valuable materials."
+    },
+    {
+      "id": "geo_B5-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "What are mass movements?",
+      "a": "Transfer of rock debris down slopes under the direct influence of gravity (creep, flow, slide, fall); no geomorphic agent carries the debris, so they are not erosion. Weathering helps but is not a prerequisite."
+    },
+    {
+      "id": "geo_B5-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Conditions and causes favouring mass movements?",
+      "a": "Weak unconsolidated materials, thin bedding, faults, steep slopes, heavy rain, scarce vegetation; triggers include removal of support, steeper slopes, overloading, earthquakes/explosions, seepage, water drawdown and vegetation removal."
+    },
+    {
+      "id": "geo_B5-21",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Types of landslides listed?",
+      "a": "Slump (backward rotation), debris slide (no backward rotation), debris fall (near free fall from a vertical face), rockslide (along bedding/joint/fault surfaces; deep) and rock fall (free fall from superficial layers)."
+    },
+    {
+      "id": "geo_B5-22",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Why are landslides frequent in the Himalayas vs Nilgiris/Western Ghats?",
+      "a": "Himalayas: tectonically active, weak sedimentary and unconsolidated rocks, steep slopes. Nilgiris/Western Ghats: relatively stable hard rocks but steep escarpments, temperature-driven weathering and heavy short bursts of rain cause rock falls and landslides, less frequently."
+    },
+    {
+      "id": "geo_B5-23",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Define erosion and deposition.",
+      "a": "Erosion is acquisition and transportation of rock debris by running water, groundwater, glaciers, wind and waves (with abrasion). Deposition follows when agents lose energy on gentler slopes; coarser material settles first."
+    },
+    {
+      "id": "geo_B5-24",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Which erosion agents are climate-controlled?",
+      "a": "Wind (gaseous), running water (liquid) and glaciers (solid). Waves depend on the coastal location; groundwater depends on lithology (karst needs permeable, soluble rock)."
+    },
+    {
+      "id": "geo_B5-25",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "What is soil formation (pedogenesis) and its first step?",
+      "a": "Soil formation depends first on weathering (the weathering mantle). The mantle is colonised by bacteria, mosses and lichens; humus accumulates; plants and burrowing animals make it porous to form mature soil. Pedology is soil science."
+    },
+    {
+      "id": "geo_B5-26",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Five soil-forming factors?",
+      "a": "Parent material, topography, climate, biological activity and time. Parent material, topography and time are passive; climate and biological activity are active."
+    },
+    {
+      "id": "geo_B5-27",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Role of topography in soil formation?",
+      "a": "Soils are thin on steep slopes and thick over flat uplands; gentle slopes with slow erosion and good percolation favour soil formation; flat areas can develop thick, dark clay-rich soils."
+    },
+    {
+      "id": "geo_B5-28",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Eluviation, illuviation and desilication?",
+      "a": "Eluviation: downward transport of soil components by excess water; illuviation: their deposition below; desilication: removal of silica in wet equatorial climates."
+    },
+    {
+      "id": "geo_B5-29",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Hardpan and kanker?",
+      "a": "In dry climates evaporation draws groundwater up by capillarity leaving salts that form a crust called hardpan; in tropical and intermediate-rainfall areas calcium carbonate nodules (kanker) form."
+    },
+    {
+      "id": "geo_B5-30",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "Biological activity and soil in cold vs hot climates?",
+      "a": "Cold climates accumulate humus (slow bacteria) and peat forms in subarctic/tundra; humid tropical climates oxidise dead vegetation fast, leaving little humus."
+    },
+    {
+      "id": "geo_B5-31",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "What is nitrogen fixation?",
+      "a": "Conversion of gaseous nitrogen from the air into a usable chemical form by bacteria; Rhizobium lives in root nodules of leguminous plants."
+    },
+    {
+      "id": "geo_B5-32",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B5. Geomorphic Processes",
+      "q": "How does time affect soils?",
+      "a": "Time determines maturation and profile development; soils from recent alluvium or glacial till are young with no or poorly developed horizons; no absolute time can be fixed."
+    },
+    {
+      "id": "geo_B6-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Landform vs landscape?",
+      "a": "A landform is a small to medium tract of the earth's surface shaped by specific processes and agents; several related landforms together make up a landscape (large tracts)."
+    },
+    {
+      "id": "geo_B6-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "How do landmasses evolve?",
+      "a": "They pass through stages comparable to life — youth, mature and old age; landforms change due to continued processes, climate change and vertical/horizontal land movements."
+    },
+    {
+      "id": "geo_B6-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "How does running water erode the land?",
+      "a": "Overland flow causes sheet erosion; it forms rills, which become gullies and then a network of valleys. Early down-cutting dominates; later lateral erosion lowers valley sides and divides."
+    },
+    {
+      "id": "geo_B6-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Peneplain and monadnock?",
+      "a": "A peneplain ('almost plain') is the lowland of faint relief formed by stream erosion; monadnocks are low resistant remnants standing out on it."
+    },
+    {
+      "id": "geo_B6-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Youth stage of a river landscape?",
+      "a": "Few streams with poor integration; shallow V-shaped valleys; no or narrow floodplains; broad flat divides with marshes, swamps and lakes; waterfalls and rapids where hard rock is exposed."
+    },
+    {
+      "id": "geo_B6-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Mature stage?",
+      "a": "Plenty of well-integrated streams; deep V-shaped valleys; wider floodplains with confined meanders; sharp divides; marshes, waterfalls and rapids disappear."
+    },
+    {
+      "id": "geo_B6-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Old stage?",
+      "a": "Few tributaries with gentle gradients; streams meander freely over vast floodplains with natural levees and ox-bow lakes; broad flat divides; land at or just above sea level."
+    },
+    {
+      "id": "geo_B6-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Gorge vs canyon?",
+      "a": "A gorge is a deep valley with steep, straight sides and equal width at top and bottom (forms in hard rocks). A canyon has steep step-like sides, is wider at the top (forms in horizontally bedded sedimentary rocks)."
+    },
+    {
+      "id": "geo_B6-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Potholes and plunge pools?",
+      "a": "Potholes: circular depressions on rocky stream beds formed by abrasion by rotating fragments. Plunge pools: large, deep holes at the base of waterfalls."
+    },
+    {
+      "id": "geo_B6-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Incised (entrenched) meanders and river terraces?",
+      "a": "Incised meanders: deep, wide meanders cut into hard rock by steep-gradient streams. River terraces: old valley-floor/floodplain levels formed by vertical erosion into the stream's own floodplain (paired terraces at equal elevation on both sides)."
+    },
+    {
+      "id": "geo_B6-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Alluvial fans?",
+      "a": "Cone-shaped deposits formed where mountain streams break into low-gradient foot slope plains; channels shift forming distributaries; low cones in humid areas, high steep cones in arid/semi-arid areas."
+    },
+    {
+      "id": "geo_B6-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Deltas vs alluvial fans?",
+      "a": "Deltas form where river load is dumped into the sea; unlike fans, deltas are well sorted and stratified (coarsest settles first); distributaries lengthen as the delta grows."
+    },
+    {
+      "id": "geo_B6-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Floodplains, natural levees and point bars?",
+      "a": "Floodplain: major depositional landform (active bed and inactive above-bank plain with flood and channel deposits). Natural levees: low parallel ridges of coarse deposits along banks. Point (meander) bars: linear sediment deposits on the meander's inner bank of large rivers."
+    },
+    {
+      "id": "geo_B6-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Why do meanders form?",
+      "a": "Water on very gentle gradients works laterally; unconsolidated alluvial banks; Coriolis force. Deposition occurs on the convex bank and undercutting on the concave (cut-off) bank; loops cut off to form ox-bow lakes. A meander is a channel pattern, not a landform."
+    },
+    {
+      "id": "geo_B6-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "What is karst topography?",
+      "a": "Landforms produced by groundwater through solution and precipitation in limestone or dolomite regions; named after the Karst region in the Balkans adjacent to the Adriatic Sea."
+    },
+    {
+      "id": "geo_B6-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Karst erosional landforms?",
+      "a": "Swallow holes and sinkholes (solution sinks and collapse sinks/dolines), valley sinks or uvalas, lapies (grooves and ridges) and limestone pavements."
+    },
+    {
+      "id": "geo_B6-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Caves and tunnels?",
+      "a": "Caves form along bedding planes where limestone dissolves, especially in thick limestone or alternating beds; caves open at both ends are tunnels."
+    },
+    {
+      "id": "geo_B6-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Stalactites, stalagmites and pillars?",
+      "a": "Stalactites hang like icicles from cave roofs; stalagmites rise from the floor from dripping water; when they fuse they form columns/pillars. Calcium carbonate is deposited as the water evaporates or loses CO2."
+    },
+    {
+      "id": "geo_B6-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Types of glaciers?",
+      "a": "Continental or piedmont glaciers (ice sheets over land/foot of mountains) and mountain/valley glaciers (linear flows in trough-like valleys); they move slowly under gravity."
+    },
+    {
+      "id": "geo_B6-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Cirque and tarn?",
+      "a": "Cirques are deep, wide basins with steep walls at glacial valley heads; the lake left after ice disappears is a cirque or tarn lake."
+    },
+    {
+      "id": "geo_B6-21",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Horns and arêtes?",
+      "a": "Horns: sharp pointed peaks formed where three or more cirques erode headward and meet (Matterhorn, Everest). Arêtes: saw-toothed ridges between cirque walls."
+    },
+    {
+      "id": "geo_B6-22",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Glacial valleys, hanging valleys and fjords?",
+      "a": "Glacial valleys are U-shaped with broad floors and steep sides; hanging valleys open high on the main valley's sides; very deep glacial troughs filled by the sea in high latitudes are fjords."
+    },
+    {
+      "id": "geo_B6-23",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Till vs outwash deposits?",
+      "a": "Till: unassorted, angular debris dropped directly by melting ice. Outwash: roughly stratified, assorted, somewhat rounded debris deposited by meltwater streams."
+    },
+    {
+      "id": "geo_B6-24",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Types of moraines?",
+      "a": "Terminal (at the glacier's toe), lateral (along the sides), ground (irregular till sheet over valley floors) and medial (centre of the valley, between lateral moraines)."
+    },
+    {
+      "id": "geo_B6-25",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Eskers, outwash plains and drumlins?",
+      "a": "Esker: sinuous ridge of coarse material deposited by streams beneath glaciers. Outwash plain: gravel, silt, sand and clay plain at the glacier foot. Drumlin: oval ridge of till parallel to ice flow (up to 1 km long, 30 m high) with a blunter, steeper stoss end."
+    },
+    {
+      "id": "geo_B6-26",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Which Himalayan rivers are fed by glaciers per the text?",
+      "a": "Bhagirathi from the Gangotri glacier snout (Gaumukh); Alkapuri glacier feeds the Alaknanda; they join near Deoprayag to form the Ganga."
+    },
+    {
+      "id": "geo_B6-27",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "High rocky vs low sedimentary coasts?",
+      "a": "High rocky (submerged) coasts: indented, drowned rivers, fjords, cliffs; erosion dominates. Low sedimentary (emerged) coasts: smooth, rivers build coastal plains and deltas; lagoons, marshes; deposition dominates. India's west coast is high rocky and retreating; the east coast is low sedimentary."
+    },
+    {
+      "id": "geo_B6-28",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Coastal erosional landforms?",
+      "a": "Sea cliffs, wave-cut platforms/terraces, sea caves and sea stacks (isolated resistant remnants)."
+    },
+    {
+      "id": "geo_B6-29",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Coastal depositional landforms?",
+      "a": "Beaches and dunes; offshore bars, barrier bars (exposed bars), spits (barriers attached to a bay end or headland) and lagoons (formed when barriers close a bay mouth) which later fill to give coastal plains."
+    },
+    {
+      "id": "geo_B6-30",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "How do coastal landforms protect against storms and tsunamis?",
+      "a": "Offshore bars absorb most force first, followed by barriers, beaches, dunes and mangroves; disturbing sediment budget and mangroves exposes settlements."
+    },
+    {
+      "id": "geo_B6-31",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Wind erosion processes in deserts?",
+      "a": "Deflation (removal of fine particles), abrasion (sand-blasting) and impact; sheet floods and sheet wash also do much of the erosion in deserts."
+    },
+    {
+      "id": "geo_B6-32",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Pediments, pediplains and inselbergs?",
+      "a": "Pediments: gently inclined rocky floors at mountain foot formed by lateral stream erosion and sheet floods; they extend by parallel retreat of slopes (backwasting), leaving an inselberg (mountain remnant) and finally low pediplains."
+    },
+    {
+      "id": "geo_B6-33",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Playas and alkali flats?",
+      "a": "Playas: shallow temporary lakes at the centre of desert basins with inward drainage; salt-covered playa plains are alkali flats."
+    },
+    {
+      "id": "geo_B6-34",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Deflation hollows, blowouts and rock forms?",
+      "a": "Deflation hollows: shallow depressions from wind removal of weathered mantle; blowouts are pits that can deepen to caves; wind-worn rocks form mushroom, table and pedestal rocks."
+    },
+    {
+      "id": "geo_B6-35",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B6. Landforms and Their Evolution",
+      "q": "Types of sand dunes?",
+      "a": "Barchans: crescent-shaped, wings downwind (constant moderate wind); parabolic: reversed barchans (partly vegetated surfaces); seif: barchan with only one wing (shifting wind); longitudinal: long, low ridges (poor sand supply, constant wind); transverse: perpendicular to wind (elongated sand source)."
+    },
+    {
+      "id": "geo_B7-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "How much of the atmosphere's mass lies within what height?",
+      "a": "99% of the total mass lies within 32 km of the earth's surface."
+    },
+    {
+      "id": "geo_B7-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Up to what heights are oxygen, CO2 and water vapour found?",
+      "a": "Oxygen becomes negligible at about 120 km; carbon dioxide and water vapour occur only up to about 90 km."
+    },
+    {
+      "id": "geo_B7-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Why is carbon dioxide meteorologically important?",
+      "a": "It is transparent to incoming solar radiation but opaque to outgoing terrestrial radiation, so it absorbs and re-radiates heat back (greenhouse effect). Its volume is rising mainly because of burning fossil fuels."
+    },
+    {
+      "id": "geo_B7-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Where is ozone found and what does it do?",
+      "a": "Between 10 and 50 km above the surface; it filters and absorbs the sun's ultra-violet rays."
+    },
+    {
+      "id": "geo_B7-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Water vapour in the atmosphere?",
+      "a": "A variable gas that decreases with altitude and from the equator to the poles: up to 4% by volume in the warm wet tropics, below 1% in deserts and polar regions. It acts like a blanket and contributes to stability/instability of air."
+    },
+    {
+      "id": "geo_B7-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "What are the dust particles in the atmosphere and their role?",
+      "a": "Sea salts, fine soil, smoke-soot, ash, pollen, dust and meteor fragments; concentrated in lower layers, more in subtropical and temperate regions. They act as hygroscopic nuclei around which water vapour condenses into clouds."
+    },
+    {
+      "id": "geo_B7-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Name the five atmospheric layers (by temperature).",
+      "a": "Troposphere, stratosphere, mesosphere, thermosphere and exosphere."
+    },
+    {
+      "id": "geo_B7-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Troposphere: height, features and lapse rate?",
+      "a": "Average height 13 km (about 8 km at the poles, 18 km at the equator, thickest at the equator due to strong convection); contains dust and water vapour; all weather and climate changes occur here; temperature falls 1 °C per 165 m."
+    },
+    {
+      "id": "geo_B7-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "What is the tropopause?",
+      "a": "The zone separating the troposphere and stratosphere with nearly constant temperature: about −80 °C over the equator and about −45 °C over the poles."
+    },
+    {
+      "id": "geo_B7-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Stratosphere?",
+      "a": "Lies above the tropopause up to 50 km; contains the ozone layer that absorbs harmful ultra-violet radiation."
+    },
+    {
+      "id": "geo_B7-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Mesosphere and mesopause?",
+      "a": "Extends to 80 km; temperature again falls with height, reaching about −100 °C at 80 km; its upper limit is the mesopause."
+    },
+    {
+      "id": "geo_B7-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Ionosphere?",
+      "a": "Located between 80 and 400 km above the mesopause; contains electrically charged ions and reflects radio waves back to earth; temperature rises with height."
+    },
+    {
+      "id": "geo_B7-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Exosphere?",
+      "a": "The uppermost layer; extremely rarefied and gradually merging with outer space."
+    },
+    {
+      "id": "geo_B7-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B7. Composition and Structure of the Atmosphere",
+      "q": "Elements of weather and climate?",
+      "a": "Temperature, pressure, winds, humidity, clouds and precipitation."
+    },
+    {
+      "id": "geo_B8-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "What is insolation and how much does the earth receive?",
+      "a": "Incoming solar radiation, mostly in short wavelengths; on average 1.94 calories per sq. cm per minute at the top of the atmosphere."
+    },
+    {
+      "id": "geo_B8-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Aphelion vs perihelion?",
+      "a": "Aphelion: earth farthest from the sun (152 million km) on 4 July. Perihelion: nearest (147 million km) on 3 January. The effect on weather is masked by other factors."
+    },
+    {
+      "id": "geo_B8-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Factors causing variation in insolation?",
+      "a": "Earth's rotation on its axis, angle of inclination of the sun's rays, length of the day, transparency of the atmosphere and aspect of land (the last two less influential). The earth's axis makes 66½° with the orbital plane."
+    },
+    {
+      "id": "geo_B8-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Why do slant rays at high latitudes give less energy?",
+      "a": "They cover a larger area, so energy per unit area falls, and they pass through a greater depth of atmosphere with more absorption, scattering and diffusion."
+    },
+    {
+      "id": "geo_B8-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Why is the sky blue and the sun red at sunrise and sunset?",
+      "a": "Scattering of visible light by very small suspended particles in the troposphere."
+    },
+    {
+      "id": "geo_B8-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Spatial distribution of insolation?",
+      "a": "About 320 W/m² in the tropics to about 70 W/m² at the poles; maximum over subtropical deserts (least cloud); the equator gets less than the tropics; more over continents than oceans at the same latitude."
+    },
+    {
+      "id": "geo_B8-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Conduction, convection and advection?",
+      "a": "Conduction: heat flow between bodies in contact (heats lower layers). Convection: vertical heating by rising air currents (only in the troposphere). Advection: horizontal transfer of heat by air movement (the 'loo' of northern India)."
+    },
+    {
+      "id": "geo_B8-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "What is terrestrial radiation?",
+      "a": "The earth, heated by short-wave insolation, radiates long-wave energy that is absorbed by atmospheric gases (CO2 and other greenhouse gases), indirectly heating the atmosphere from below."
+    },
+    {
+      "id": "geo_B8-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Heat budget: how is the 100 units of insolation split?",
+      "a": "35 units are reflected to space (27 from cloud tops, 2 from snow and ice) — the albedo; 65 are absorbed: 14 by the atmosphere and 51 by the earth's surface."
+    },
+    {
+      "id": "geo_B8-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "How is the heat budget balanced?",
+      "a": "The surface radiates 51 units (17 directly to space; 34 absorbed by the atmosphere: 6 directly, 9 via convection and turbulence, 19 via latent heat of condensation). The atmosphere radiates 48 units; 17 + 48 = 65, which balances the 65 absorbed."
+    },
+    {
+      "id": "geo_B8-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Latitudinal heat balance?",
+      "a": "Net radiation is in surplus between 40°N and 40°S and in deficit near the poles; surplus heat is redistributed polewards so the tropics do not keep heating and the poles do not freeze permanently."
+    },
+    {
+      "id": "geo_B8-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Heat vs temperature?",
+      "a": "Heat represents the molecular movement of particles; temperature measures in degrees how hot or cold a thing or place is."
+    },
+    {
+      "id": "geo_B8-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Factors controlling temperature?",
+      "a": "Latitude, altitude, distance from the sea, air masses and ocean currents, and local aspects."
+    },
+    {
+      "id": "geo_B8-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Normal lapse rate?",
+      "a": "Temperature decreases with height at 6.5 °C per 1,000 m."
+    },
+    {
+      "id": "geo_B8-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "How does distance from the sea influence temperature?",
+      "a": "Sea heats and cools slowly; land heats and cools quickly; coastal places have a moderating influence from sea and land breezes."
+    },
+    {
+      "id": "geo_B8-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "How do air masses and ocean currents affect temperature?",
+      "a": "Places under warm air masses/warm currents are warmer; those under cold air masses/cold currents are cooler."
+    },
+    {
+      "id": "geo_B8-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "What are isotherms?",
+      "a": "Lines joining places of equal temperature; generally parallel to latitudes."
+    },
+    {
+      "id": "geo_B8-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "January isotherm pattern in the northern hemisphere?",
+      "a": "Isotherms bend north over oceans (warm Gulf Stream and North Atlantic Drift) and south over continents (sharp cooling in Europe and the Siberian plain). Mean January temperature is about −20 °C along 60°E at both 80°N and 50°N."
+    },
+    {
+      "id": "geo_B8-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Southern hemisphere isotherms?",
+      "a": "More or less parallel to latitudes with gradual variation (ocean effect): 20 °C, 10 °C and 0 °C isotherms run along 35°S, 45°S and 60°S."
+    },
+    {
+      "id": "geo_B8-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "July temperature pattern?",
+      "a": "Isotherms generally run parallel to latitudes; equatorial oceans exceed 27 °C; over 30 °C over subtropical continental Asia along 30°N."
+    },
+    {
+      "id": "geo_B8-21",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Temperature range extremes between January and July?",
+      "a": "Highest range: over 60 °C in north-eastern Eurasia (continentality). Least range: 3 °C between 20°S and 15°N."
+    },
+    {
+      "id": "geo_B8-22",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "What is inversion of temperature?",
+      "a": "Normal lapse rate is reversed (temperature increases with height). Ideal conditions: long winter night, clear sky, still air. It is normal year-round over polar areas."
+    },
+    {
+      "id": "geo_B8-23",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Effects of surface inversion?",
+      "a": "Promotes stability in lower layers; smoke and dust accumulate beneath it; dense morning fogs in winter."
+    },
+    {
+      "id": "geo_B8-24",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "What is air drainage?",
+      "a": "In hills and mountains, cold dense air flows down slopes at night and piles up in valleys with warm air above; it protects plants from frost damage."
+    },
+    {
+      "id": "geo_B8-25",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B8. Solar Radiation, Heat Balance and Temperature",
+      "q": "Planck's law and specific heat?",
+      "a": "Planck's law: the hotter a body, the more energy it radiates and the shorter the wavelength. Specific heat is the energy needed to raise one gram of a substance by one Celsius."
+    },
+    {
+      "id": "geo_B9-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Define atmospheric pressure and its units/instruments.",
+      "a": "The weight of a column of air in a unit area from mean sea level to the top of the atmosphere, in millibars; average at sea level 1,013.2 mb. Measured with a mercury barometer or aneroid barometer."
+    },
+    {
+      "id": "geo_B9-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "How does pressure change with height?",
+      "a": "It decreases with height, about 1 mb for each 10 m in the lower atmosphere. Standard values: 1,013.25 mb (15.2 °C) at sea level; 898.76 mb (8.7 °C) at 1 km; 540.48 mb (−17.3 °C) at 5 km; 265.00 mb (−49.7 °C) at 10 km."
+    },
+    {
+      "id": "geo_B9-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Why do we not feel strong upward winds?",
+      "a": "The vertical pressure gradient force is much larger than the horizontal one but is balanced by an almost equal and opposite gravitational force."
+    },
+    {
+      "id": "geo_B9-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "What are isobars?",
+      "a": "Lines connecting places of equal pressure (reduced to sea level to remove altitude effects)."
+    },
+    {
+      "id": "geo_B9-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "World pressure belts?",
+      "a": "Equatorial low; subtropical highs along 30°N and 30°S; subpolar lows along 60°N and 60°S; polar highs. The belts oscillate with the sun's apparent movement (north in summer, south in winter in the northern hemisphere)."
+    },
+    {
+      "id": "geo_B9-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Three forces on horizontal winds near the surface?",
+      "a": "Pressure gradient force, frictional force and Coriolis force (gravity acts downward)."
+    },
+    {
+      "id": "geo_B9-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Pressure gradient force?",
+      "a": "Force from differences in pressure; the gradient is strong where isobars are close and weak where they are far apart."
+    },
+    {
+      "id": "geo_B9-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Frictional force on wind?",
+      "a": "Greatest at the surface, extends up to 1–3 km elevation, minimal over the sea."
+    },
+    {
+      "id": "geo_B9-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Coriolis force properties?",
+      "a": "Due to earth's rotation; described by a French physicist in 1844; deflects wind to the right in the northern hemisphere and left in the southern; proportional to latitude (maximum at the poles, zero at the equator); acts perpendicular to the pressure gradient force."
+    },
+    {
+      "id": "geo_B9-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Why are tropical cyclones not formed near the equator?",
+      "a": "Coriolis force is zero there, so wind blows perpendicular to the isobars and the low pressure gets filled rather than intensified."
+    },
+    {
+      "id": "geo_B9-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Cyclonic vs anticyclonic circulation?",
+      "a": "Around a low (cyclone): anticlockwise in the northern hemisphere, clockwise in the southern; air converges and rises. Around a high (anticyclone): clockwise in the northern hemisphere, anticlockwise in the southern; air subsides and diverges."
+    },
+    {
+      "id": "geo_B9-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "What is a geostrophic wind?",
+      "a": "In the upper atmosphere (2–3 km up, free of friction) with straight isobars, the pressure gradient force is balanced by the Coriolis force and the wind blows parallel to the isobars."
+    },
+    {
+      "id": "geo_B9-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "What does the pattern of planetary winds depend on?",
+      "a": "Latitudinal heating variation, emergence of pressure belts, their migration with the sun, distribution of continents and oceans, and earth's rotation."
+    },
+    {
+      "id": "geo_B9-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Describe the Hadley cell.",
+      "a": "At the ITCZ air rises by convection (to about 14 km) and moves poleward, accumulating at 30°N and S where part sinks forming the subtropical high; surface easterlies flow back to the ITCZ. This tropical circulation is the Hadley cell."
+    },
+    {
+      "id": "geo_B9-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Ferrel and polar cells?",
+      "a": "Ferrel cell: mid-latitude circulation of sinking cold polar air and rising warm subtropical air; surface winds are westerlies. Polar cell: cold dense air subsides at the poles and blows to middle latitudes as polar easterlies."
+    },
+    {
+      "id": "geo_B9-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "What is ENSO?",
+      "a": "El Nino (warm water from the central Pacific replacing the cool Peruvian current off Peru) combined with the Southern Oscillation (pressure changes over the Pacific and Australia). Strong ENSO years bring heavy rain to arid west South America, drought in Australia (sometimes India) and floods in China."
+    },
+    {
+      "id": "geo_B9-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Land and sea breezes?",
+      "a": "Day: land heats faster, low pressure over land, so wind blows sea to land (sea breeze). Night: land cools faster, wind blows land to sea (land breeze)."
+    },
+    {
+      "id": "geo_B9-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Valley breeze, mountain wind and katabatic wind?",
+      "a": "Day: slopes heat and air moves upslope, with valley air blowing up the valley (valley breeze). Night: cooled dense air descends as mountain wind. Katabatic wind: cool air of high plateaus and ice fields draining into valleys."
+    },
+    {
+      "id": "geo_B9-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Warm leeward mountain wind?",
+      "a": "Moist air condenses and precipitates crossing mountains; on the leeward side the dry air descends and warms adiabatically, possibly melting snow quickly."
+    },
+    {
+      "id": "geo_B9-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "What is an air mass and its source regions?",
+      "a": "A large body of air with little horizontal variation in temperature and moisture. Five source regions: warm tropical/subtropical oceans, subtropical hot deserts, relatively cold high-latitude oceans, very cold snow-covered high-latitude continents, and permanently ice-covered Arctic/Antarctic continents."
+    },
+    {
+      "id": "geo_B9-21",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Types of air masses?",
+      "a": "Maritime tropical (mT), continental tropical (cT), maritime polar (mP), continental polar (cP) and continental arctic (cA); tropical air masses are warm and polar ones cold."
+    },
+    {
+      "id": "geo_B9-22",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "What is a front?",
+      "a": "The boundary zone between two different air masses (frontogenesis is its formation); fronts occur in the middle latitudes with steep temperature and pressure gradients and cause abrupt weather changes."
+    },
+    {
+      "id": "geo_B9-23",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Four types of fronts?",
+      "a": "Cold front (cold air advances on warm), warm front (warm air advances on cold), stationary front, and occluded front (air mass fully lifted above the land surface)."
+    },
+    {
+      "id": "geo_B9-24",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "How does an extra tropical cyclone develop?",
+      "a": "Forms along the polar front; the stationary front becomes cyclonic as pressure drops; warm air forms a warm sector between cold sectors; the cold front moves faster, overtakes the warm front, lifts the warm air (occlusion) and the cyclone dissipates."
+    },
+    {
+      "id": "geo_B9-25",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Extra tropical vs tropical cyclones?",
+      "a": "Extra tropical: have a frontal system, larger area, can originate over land or sea, move west to east, weaker winds. Tropical: no fronts, originate only over seas and dissipate on land, move east to west, stronger winds and more destructive."
+    },
+    {
+      "id": "geo_B9-26",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Regional names of tropical cyclones?",
+      "a": "Cyclones (Indian Ocean), Hurricanes (Atlantic), Typhoons (western Pacific and South China Sea) and Willy-willies (Western Australia)."
+    },
+    {
+      "id": "geo_B9-27",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Conditions for tropical cyclone formation and intensification?",
+      "a": "Large sea surface above 27 °C; Coriolis force; small variations in vertical wind speed; a pre-existing weak low-pressure area or cyclonic circulation; upper divergence above the sea-level system."
+    },
+    {
+      "id": "geo_B9-28",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Energy source and landfall of tropical cyclones?",
+      "a": "Energy comes from condensation in towering cumulonimbus clouds around the centre, fed by moisture from the sea; on reaching land the supply is cut off and the storm dissipates. Landfall is where it crosses the coast; cyclones crossing 20°N generally recurve and are more destructive."
+    },
+    {
+      "id": "geo_B9-29",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Structure of a mature tropical cyclone?",
+      "a": "The eye is a calm region of subsiding air; around it the eye wall has strong spiralling ascent reaching the tropopause with maximum winds (up to 250 km/h) and torrential rain; rain bands radiate outward."
+    },
+    {
+      "id": "geo_B9-30",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Size and movement of tropical cyclones in the Indian region?",
+      "a": "The circulating system diameter is 150–250 km in the text's general description; storms over the Bay of Bengal, Arabian Sea and Indian Ocean are 600–1,200 km across and move slowly, about 300–500 km per day, creating storm surges."
+    },
+    {
+      "id": "geo_B9-31",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Thunderstorm and hailstorm?",
+      "a": "A thunderstorm is a well-grown cumulonimbus cloud producing thunder and lightning, caused by intense convection on moist hot days; hail forms where clouds extend to sub-zero temperatures; with insufficient moisture it generates duststorms."
+    },
+    {
+      "id": "geo_B9-32",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B9. Atmospheric Circulation and Weather Systems",
+      "q": "Tornado and water spout?",
+      "a": "A spiralling wind descending like an elephant's trunk from a severe thunderstorm, with very low pressure at the centre; mostly in middle latitudes. Over the sea it is a water spout."
+    },
+    {
+      "id": "geo_B10-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "How much water vapour does air hold and in what forms is water present?",
+      "a": "Zero to 4% by volume; present as gas, liquid and solid. Moisture comes from evaporation and plant transpiration."
+    },
+    {
+      "id": "geo_B10-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Absolute vs relative humidity?",
+      "a": "Absolute humidity: weight of water vapour per unit volume of air (g/m³). Relative humidity: percentage of moisture present compared with the air's full capacity at a given temperature; greater over oceans, least over continents."
+    },
+    {
+      "id": "geo_B10-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "What are saturated air and dew point?",
+      "a": "Saturated air holds moisture to its full capacity at a given temperature; dew point is the temperature at which saturation occurs."
+    },
+    {
+      "id": "geo_B10-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "What causes evaporation and what is latent heat of vaporisation?",
+      "a": "Heat is the main cause; latent heat of vaporisation is the heat needed to convert a unit mass of liquid into vapour without a temperature change. Air movement increases evaporation."
+    },
+    {
+      "id": "geo_B10-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "How does condensation occur?",
+      "a": "Through loss of heat; moist air cools below its capacity; in free air it forms around hygroscopic condensation nuclei (dust, smoke, ocean salt). The most favourable condition is a decrease in air temperature."
+    },
+    {
+      "id": "geo_B10-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Dew?",
+      "a": "Water droplets on cool solid surfaces (grass, leaves, stones); ideal conditions are clear sky, calm air, high relative humidity and cold, long nights; dew point must be above freezing."
+    },
+    {
+      "id": "geo_B10-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Frost?",
+      "a": "Forms when condensation occurs at or below 0 °C (dew point at or below freezing), depositing minute ice crystals; conditions are like dew formation but at or below freezing."
+    },
+    {
+      "id": "geo_B10-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Fog vs mist vs smog?",
+      "a": "Fog reduces visibility to under 1 km; mist limits it to 1–2 km and contains more moisture than fog. Fog mixed with smoke is smog. Fog is a cloud with its base at or near the ground; mists are frequent over mountains."
+    },
+    {
+      "id": "geo_B10-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "What is a cloud and its four basic types?",
+      "a": "A mass of tiny water droplets or ice crystals formed by condensation in free air at height: cirrus, cumulus, stratus and nimbus."
+    },
+    {
+      "id": "geo_B10-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Cirrus and cumulus clouds?",
+      "a": "Cirrus: high (8,000–12,000 m), thin, detached, feathery, always white. Cumulus: cotton-wool look, 4,000–7,000 m, patchy with a flat base."
+    },
+    {
+      "id": "geo_B10-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Stratus and nimbus clouds?",
+      "a": "Stratus: layered clouds covering large parts of the sky (loss of heat or mixing of air masses). Nimbus: black or dark grey, dense, shapeless, opaque, at middle levels or very near the ground."
+    },
+    {
+      "id": "geo_B10-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Cloud groups by height?",
+      "a": "High: cirrus, cirrostratus, cirrocumulus. Middle: altostratus, altocumulus. Low: stratocumulus, nimbostratus. Extensive vertical development: cumulus and cumulonimbus."
+    },
+    {
+      "id": "geo_B10-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "What is precipitation and its forms?",
+      "a": "Release of moisture after condensation: rainfall (liquid), snowfall (below 0 °C, hexagonal crystals), sleet (frozen raindrops or refrozen melt water) and hail (layered ice pieces)."
+    },
+    {
+      "id": "geo_B10-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Sleet vs hail?",
+      "a": "Sleet forms when raindrops from a warm layer pass through a sub-freezing layer near the ground, becoming small ice pellets. Hailstones are solidified raindrops with several concentric ice layers."
+    },
+    {
+      "id": "geo_B10-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Three types of rainfall by origin?",
+      "a": "Convectional, orographic (relief) and cyclonic (frontal)."
+    },
+    {
+      "id": "geo_B10-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Convectional rain?",
+      "a": "Heated air rises, expands and cools; cumulus clouds form; heavy, short-lived rain with thunder; common in summer or the hotter part of the day, in equatorial regions and continental interiors."
+    },
+    {
+      "id": "geo_B10-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Orographic rain and rain shadow?",
+      "a": "Saturated air forced up a mountain cools and condenses, giving heavy rain on windward slopes; the descending leeward air warms and stays dry, forming a rain-shadow area."
+    },
+    {
+      "id": "geo_B10-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "General pattern of world rainfall?",
+      "a": "Decreases from equator to poles; coasts get more than interiors; oceans more than land. Between 35°–40° rain is heavier on eastern coasts; between 45°–65° westerlies bring more rain to western margins."
+    },
+    {
+      "id": "geo_B10-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "World precipitation regimes?",
+      "a": "Over 200 cm: equatorial belt, windward western-coast mountain slopes of cool temperate zones, monsoon coasts. 100–200 cm: continental interiors (per the text). 50–100 cm: central tropical lands and eastern/interior temperate lands. Under 50 cm: rain-shadow interiors and high latitudes."
+    },
+    {
+      "id": "geo_B10-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B10. Water in the Atmosphere",
+      "q": "Where is rainfall evenly distributed across the year?",
+      "a": "In the equatorial belt and the western parts of cool temperate regions."
+    },
+    {
+      "id": "geo_B11-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Three approaches to classifying climate?",
+      "a": "Empirical (observed temperature and precipitation data), genetic (by causes) and applied (for a specific purpose)."
+    },
+    {
+      "id": "geo_B11-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Koeppen's scheme?",
+      "a": "The most widely used empirical classification (developed 1918), linking vegetation distribution to temperature and precipitation using capital and small letters. It has five groups, four based on temperature and one on precipitation."
+    },
+    {
+      "id": "geo_B11-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Koeppen's five groups?",
+      "a": "A Tropical (coldest month 18 °C or higher); B Dry (potential evaporation exceeds precipitation); C Warm temperate (coldest month between −3 °C and 18 °C); D Cold snow forest (coldest month −3 °C or below); E Cold (all months below 10 °C). A, C, D, E are humid; B is dry."
+    },
+    {
+      "id": "geo_B11-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Meaning of Koeppen's small letters?",
+      "a": "f: no dry season; m: monsoon; w: winter dry; s: summer dry. a, b, c, d: severity of temperature. In group B, S = steppe (semi-arid) and W = desert."
+    },
+    {
+      "id": "geo_B11-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Koeppen climatic types and codes?",
+      "a": "Af tropical wet; Am tropical monsoon; Aw tropical wet and dry; BSh subtropical steppe; BWh subtropical desert; BSk mid-latitude steppe; BWk mid-latitude desert; Cfa humid subtropical; Cs Mediterranean; Cfb marine west coast; Df humid continental; Dw subarctic; ET tundra; EF polar ice cap."
+    },
+    {
+      "id": "geo_B11-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Tropical wet climate (Af)?",
+      "a": "Near the equator: Amazon Basin, western equatorial Africa and islands of the East Indies; afternoon thunder showers all year; maximum around 30 °C, minimum around 20 °C; tropical evergreen forests."
+    },
+    {
+      "id": "geo_B11-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Tropical monsoon climate (Am)?",
+      "a": "Found over the Indian subcontinent, north-eastern South America and northern Australia; heavy rain mostly in summer, dry winter."
+    },
+    {
+      "id": "geo_B11-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Tropical wet and dry (Aw)?",
+      "a": "North and south of Af (Brazil, Bolivia, Paraguay, Sudan, south-central Africa); less and more variable rain, short wet and long dry season; deciduous forest and tree-shredded grasslands."
+    },
+    {
+      "id": "geo_B11-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Where do dry climates (B) occur?",
+      "a": "Between 15°–60° N and S; at 15°–30° in the subtropical high (subsidence and inversion prevent rain), more equatorward on west coasts beside cold currents, and at 35°–60° in continental interiors. Subtropical BSh/BWh at 15°–35°; mid-latitude BSk/BWk at 35°–60°."
+    },
+    {
+      "id": "geo_B11-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Features of deserts and steppes?",
+      "a": "Steppe gets slightly more rain than desert (sparse grassland) but rainfall is highly variable; desert rain is in short intense showers; coastal deserts near cold currents have fog; highest shade temperature 58 °C at Al Aziziyah, Libya (13 September 1922)."
+    },
+    {
+      "id": "geo_B11-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Warm temperate (C) climate types and extent?",
+      "a": "Between 30°–50° latitude on eastern and western continental margins; types: Cwa, Cs (Mediterranean), Cfa and Cfb."
+    },
+    {
+      "id": "geo_B11-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Humid subtropical (Cwa)?",
+      "a": "Poleward of the tropics in the North Indian plains and South China interior plains; like Aw but with warm winters."
+    },
+    {
+      "id": "geo_B11-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Mediterranean climate (Cs)?",
+      "a": "West coasts at 30°–40°: Mediterranean, central California, central Chile, SE and SW Australia; hot dry summer (subtropical high) and mild rainy winter (westerlies); annual rainfall 35–90 cm."
+    },
+    {
+      "id": "geo_B11-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Humid subtropical (Cfa)?",
+      "a": "Eastern parts of continents: eastern USA, southern and eastern China, southern Japan, NE Argentina, coastal South Africa, east Australia; rain all year (75–150 cm); summer thunderstorms and winter frontal rain."
+    },
+    {
+      "id": "geo_B11-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Marine west coast (Cfb)?",
+      "a": "Poleward of the Mediterranean on west coasts: NW Europe, west coast of North America north of California, southern Chile, SE Australia, New Zealand; moderate temperatures; precipitation all year (50–250 cm)."
+    },
+    {
+      "id": "geo_B11-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Cold snow forest climates (D)?",
+      "a": "Northern hemisphere continents at 40°–70°N. Df: cold, humid winters, short frost-free season. Dw: mainly NE Asia, monsoon-like wind reversal, 12–15 cm rain in summer, below freezing up to seven months."
+    },
+    {
+      "id": "geo_B11-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Polar climates (E)?",
+      "a": "Beyond 70° latitude. Tundra (ET): permafrost, low mosses and lichens, long summer daylight. Ice cap (EF): interior Greenland and Antarctica (e.g. Plateau Station, 79°S), always below freezing."
+    },
+    {
+      "id": "geo_B11-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Evidence of past climate change?",
+      "a": "Glacial advances and retreats, glacial lake sediments, tree rings and historical records; change is natural and continuous."
+    },
+    {
+      "id": "geo_B11-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Climate change in India's past per the text?",
+      "a": "The Rajasthan desert was wet and cool around 8,000 BC; 3,000–1,700 BC had higher rainfall; the region hosted the Harappan civilisation around 2,000–1,700 BC; dry conditions increased afterwards."
+    },
+    {
+      "id": "geo_B11-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Geological climate timeline?",
+      "a": "Earth was warm 500–300 million years ago (Cambrian, Ordovician, Silurian); Pleistocene glacial and inter-glacial periods; last major glacial peak about 18,000 years ago; present inter-glacial began 10,000 years ago."
+    },
+    {
+      "id": "geo_B11-21",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Recent climate events named?",
+      "a": "Sahel drought 1967–77; US dust bowl in the 1930s; warm dry 10th–11th centuries when Vikings settled Greenland; Little Ice Age 1550–1850; warming 1885–1940; 1990s warmest of the century."
+    },
+    {
+      "id": "geo_B11-22",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Astronomical causes of climate change?",
+      "a": "Sunspot cycles (more sunspots: cooler, wetter, stormier; findings not statistically significant) and Milankovitch oscillations (orbit variations, earth's wobble and axial tilt altering insolation)."
+    },
+    {
+      "id": "geo_B11-23",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Volcanism and climate?",
+      "a": "Eruptions throw aerosols into the atmosphere, reducing solar radiation; temperatures fell for some years after the Pinatubo and El Chichon eruptions."
+    },
+    {
+      "id": "geo_B11-24",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "What is the greenhouse effect?",
+      "a": "The atmosphere transmits incoming shortwave solar radiation but absorbs most long-wave radiation emitted by the earth, like glass in a greenhouse or a closed car in summer."
+    },
+    {
+      "id": "geo_B11-25",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Primary greenhouse gases?",
+      "a": "Carbon dioxide, CFCs, methane, nitrous oxide and ozone (nitric oxide and carbon monoxide affect their concentration). Effectiveness depends on concentration increase, atmospheric lifetime and the wavelength absorbed; CFCs are highly effective."
+    },
+    {
+      "id": "geo_B11-26",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Carbon dioxide facts?",
+      "a": "Largest GHG concentration; emitted mainly by burning fossil fuels; forests and oceans are sinks (deforestation raises CO2); adjustment takes 20–50 years; rising about 0.5% annually; doubling over pre-industrial levels is used as a climate-model index."
+    },
+    {
+      "id": "geo_B11-27",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "What is the ozone hole?",
+      "a": "CFCs drifting into the stratosphere destroy ozone, with large depletion over Antarctica, letting ultra-violet rays reach the troposphere."
+    },
+    {
+      "id": "geo_B11-28",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Kyoto Protocol?",
+      "a": "Proclaimed 1997, in force 2005, ratified by 141 nations; bound 35 industrialised countries to cut emissions by 2012 to 5% below 1990 levels."
+    },
+    {
+      "id": "geo_B11-29",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B11. World Climate and Climate Change",
+      "q": "Global warming trends in the text?",
+      "a": "Average near-surface air temperature is about 14 °C; warming of about 0.4 °C in each of 1901–44 and 1977–99; end of 20th century about 0.6 °C above end of 19th; 1998 the warmest year; sea-level rise from melting ice and thermal expansion would inundate coasts and islands."
+    },
+    {
+      "id": "geo_B12-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Why is the earth called the 'Blue Planet'?",
+      "a": "It has an abundant supply of surface water, while there is no water on the sun or elsewhere in the solar system."
+    },
+    {
+      "id": "geo_B12-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "What is the hydrological cycle?",
+      "a": "The circulation of water within the hydrosphere in liquid, solid and gaseous phases, with continuous exchange between oceans, atmosphere, land surface and subsurface, and organisms."
+    },
+    {
+      "id": "geo_B12-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Key water-cycle shares in the text?",
+      "a": "About 91% of planetary water is in the oceans; nearly 59% of water falling on land returns to the atmosphere by evaporation; renewable water is constant while demand rises."
+    },
+    {
+      "id": "geo_B12-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Components and processes of the water cycle?",
+      "a": "Evaporation, evapotranspiration, sublimation, condensation, precipitation, snowmelt runoff, surface runoff, stream flow, infiltration, groundwater storage and discharge (springs)."
+    },
+    {
+      "id": "geo_B12-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "How many oceans and how deep is most of the ocean floor?",
+      "a": "Five oceans: Pacific, Atlantic, Indian, Southern and Arctic; most of the floor lies 3–6 km below sea level."
+    },
+    {
+      "id": "geo_B12-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Four major divisions of the ocean floor?",
+      "a": "Continental shelf, continental slope, deep sea plain and oceanic deeps; plus minor features like ridges, seamounts, guyots, trenches and canyons."
+    },
+    {
+      "id": "geo_B12-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Continental shelf facts?",
+      "a": "Extended continental margin of shallow seas; average gradient 1° or less, ends at the shelf break; average width about 80 km; depth 30–600 m; absent or narrow off Chile and west Sumatra; the Siberian shelf (Arctic) is the largest, up to 1,500 km wide. Thick sediments become a source of fossil fuels."
+    },
+    {
+      "id": "geo_B12-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Continental slope?",
+      "a": "Connects shelf and ocean basin; gradient 2–5°; depth 200–3,000 m; marks the end of the continents; canyons and trenches occur here."
+    },
+    {
+      "id": "geo_B12-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Deep sea plains?",
+      "a": "Gently sloping, the flattest and smoothest regions of the world; depths 3,000–6,000 m; covered with clay and silt."
+    },
+    {
+      "id": "geo_B12-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Oceanic deeps (trenches)?",
+      "a": "The deepest parts, steep-sided narrow basins 3–5 km deeper than the surrounding floor, at the base of continental slopes and island arcs, linked to volcanoes and earthquakes; of 57 explored deeps, 32 are in the Pacific, 19 in the Atlantic and 6 in the Indian Ocean."
+    },
+    {
+      "id": "geo_B12-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Mid-oceanic ridge?",
+      "a": "Two chains of mountains separated by a large depression; peaks up to 2,500 m, some above sea level (Iceland is part of the Mid-Atlantic Ridge)."
+    },
+    {
+      "id": "geo_B12-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Seamount, guyot and atoll?",
+      "a": "Seamount: volcanic mountain with a pointed summit that does not reach the surface (3,000–4,500 m; Emperor seamount). Guyot: flat-topped seamount (over 10,000 seamounts and guyots in the Pacific). Atoll: low coral island ring around a central depression/lagoon."
+    },
+    {
+      "id": "geo_B12-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Submarine canyons?",
+      "a": "Deep valleys, some comparable to the Grand Canyon, cutting across shelves and slopes, often from mouths of large rivers; Hudson Canyon is the best known."
+    },
+    {
+      "id": "geo_B12-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Factors affecting ocean temperature distribution?",
+      "a": "Latitude; unequal distribution of land and water (northern oceans warmer); prevailing winds (offshore winds cause upwelling of cold water, onshore winds pile up warm water); ocean currents (Gulf Stream warm, Labrador cold)."
+    },
+    {
+      "id": "geo_B12-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "What is the thermocline?",
+      "a": "The boundary region from about 100–400 m depth where temperature falls rapidly; about 90% of ocean water lies below it, with temperatures near 0 °C."
+    },
+    {
+      "id": "geo_B12-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Three-layer temperature structure?",
+      "a": "Warm top layer about 500 m thick at 20–25 °C (year-round in the tropics, only in summer in mid-latitudes); thermocline layer 500–1,000 m thick; very cold deep layer. In polar regions there is only one cold layer."
+    },
+    {
+      "id": "geo_B12-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Surface temperature patterns?",
+      "a": "Average about 27 °C, falling about 0.5 °C per latitude: ~22 °C at 20°, ~14 °C at 40°, ~0 °C near poles; northern hemisphere oceans average about 19 °C vs 16 °C in the south; the maximum lies slightly north of the equator. Temperature falls very rapidly up to 200 m."
+    },
+    {
+      "id": "geo_B12-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Define salinity and brackish water.",
+      "a": "Total dissolved salts in sea water, expressed in grams per 1,000 g (parts per thousand, ppt). 24.7 ppt is the upper limit for brackish water."
+    },
+    {
+      "id": "geo_B12-19",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Factors affecting ocean salinity?",
+      "a": "Evaporation and precipitation; river inflow in coasts; freezing/thawing of ice in polar regions; winds; ocean currents; salinity, temperature and density are interrelated."
+    },
+    {
+      "id": "geo_B12-20",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Water bodies with highest salinity?",
+      "a": "Lake Van, Turkey (330 ppt), Dead Sea (238 ppt), Great Salt Lake (220 ppt)."
+    },
+    {
+      "id": "geo_B12-21",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Typical open ocean salinity and extremes?",
+      "a": "Open ocean 33–37 ppt; land-locked Red Sea up to 41 ppt; hot dry regions up to 70 ppt; estuaries and Arctic vary 0–35 ppt."
+    },
+    {
+      "id": "geo_B12-22",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Salinity of the Atlantic and Indian Oceans?",
+      "a": "Atlantic average about 36 ppt, maximum 37 ppt at 20°–30°N and 20°–60°W; North Sea is salty due to the North Atlantic Drift; Baltic and Black Seas are low (river inflow); Mediterranean high (evaporation). Indian Ocean average 35 ppt; Bay of Bengal low, Arabian Sea high."
+    },
+    {
+      "id": "geo_B12-23",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B12. Water (Oceans)",
+      "q": "Vertical salinity: halocline?",
+      "a": "Salinity generally increases with depth; the zone where it increases sharply is the halocline. Saltier water is denser and sinks, causing stratification."
+    },
+    {
+      "id": "geo_B13-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Horizontal vs vertical motion of ocean water?",
+      "a": "Horizontal: ocean currents and waves. Vertical: tides (rise and fall twice a day), upwelling of cold water and sinking of surface water."
+    },
+    {
+      "id": "geo_B13-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "What moves in a wave?",
+      "a": "Energy, not water; water particles move in small circles. A wave breaks when water depth is less than half its wavelength."
+    },
+    {
+      "id": "geo_B13-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "What do wave size and shape tell?",
+      "a": "Steep waves are young, formed by local wind; slow steady waves come from far away. Maximum wave height depends on wind strength, duration and the area it blows over in one direction."
+    },
+    {
+      "id": "geo_B13-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Wave terms?",
+      "a": "Crest/trough: highest/lowest points; height: vertical distance trough to crest; amplitude: half the height; period: time between successive crests; wavelength: horizontal distance between crests; speed: in knots; frequency: waves passing a point per second."
+    },
+    {
+      "id": "geo_B13-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "What is a tide and what is a surge?",
+      "a": "A tide is the periodic rise and fall of sea level once or twice a day due mainly to the moon and sun; surges are irregular water movements caused by winds and atmospheric pressure changes."
+    },
+    {
+      "id": "geo_B13-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "How do two tidal bulges form?",
+      "a": "Moon's gravitational pull creates a bulge on the side facing the moon; on the opposite side centrifugal force dominates and creates a second bulge. Horizontal tide-generating forces matter more than vertical ones."
+    },
+    {
+      "id": "geo_B13-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Where are the highest tides?",
+      "a": "Bay of Fundy, Nova Scotia, Canada, with a 15–16 m tidal bulge; funnel-shaped bays magnify tides."
+    },
+    {
+      "id": "geo_B13-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Types of tides by frequency?",
+      "a": "Semi-diurnal (two highs and two lows daily, similar heights; most common), diurnal (one high, one low) and mixed (varying heights; west coast of North America and Pacific islands)."
+    },
+    {
+      "id": "geo_B13-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Spring vs neap tides?",
+      "a": "Spring tides: sun, moon and earth in a line (full and new moon), twice a month, higher tides. Neap tides: sun and moon at right angles, about seven days later, forces partly cancel."
+    },
+    {
+      "id": "geo_B13-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Perigee, apogee, perihelion and aphelion effects on tides?",
+      "a": "Moon at perigee gives unusually high and low tides; at apogee smaller ranges. Earth at perihelion (around 3 January) gives greater tidal ranges; at aphelion (around 4 July) much less."
+    },
+    {
+      "id": "geo_B13-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Ebb and flood?",
+      "a": "Ebb: time when water level is falling between high and low tide. Flow/flood: time when it is rising."
+    },
+    {
+      "id": "geo_B13-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Importance of tides?",
+      "a": "Predictable, helping navigators and fishermen; important for harbour entry over shallow bars; desilt estuaries and remove pollution; generate power (Canada, France, Russia, China; a 3 MW project at Durgaduani, Sunderbans, is under way)."
+    },
+    {
+      "id": "geo_B13-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Primary and secondary forces on ocean currents?",
+      "a": "Primary: solar heating, wind, gravity and Coriolis force. Secondary forces influence how currents flow (density differences). Heating makes equatorial water about 8 cm higher than mid-latitudes."
+    },
+    {
+      "id": "geo_B13-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "What are gyres?",
+      "a": "Large accumulations of water and the flow around them, producing large circular currents in all ocean basins (Coriolis deflects water to the right in the northern and left in the southern hemisphere)."
+    },
+    {
+      "id": "geo_B13-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Current speed and drift?",
+      "a": "Speed is called drift, measured in knots; strongest at the surface (over five knots possible) and slower at depth (under 0.5 knots); most currents are 5 knots or less."
+    },
+    {
+      "id": "geo_B13-16",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Surface vs deep water currents?",
+      "a": "Surface currents: about 10% of ocean water, in the upper 400 m. Deep water currents: the other 90%, driven by density and gravity; deep waters sink at high latitudes where cold water is denser."
+    },
+    {
+      "id": "geo_B13-17",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Cold vs warm currents locations?",
+      "a": "Cold currents: west coasts of continents in low and middle latitudes, and east coasts in higher latitudes in the northern hemisphere. Warm currents: east coasts in low and middle latitudes (west coasts in high latitudes in the northern hemisphere)."
+    },
+    {
+      "id": "geo_B13-18",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B13. Movements of Ocean Water",
+      "q": "Effects of ocean currents?",
+      "a": "Tropical west coasts: cool water, fog and aridity. Middle/high-latitude west coasts: warm water, marine climate with cool summers and mild winters. Tropical east coasts: warm and rainy. Mixing of warm and cold currents brings plankton and the world's best fishing grounds."
+    },
+    {
+      "id": "geo_B14-01",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "How old is today's biodiversity and how many species exist?",
+      "a": "The result of 2.5–3.5 billion years of evolution; estimates range from 2 million to 100 million species, with 10 million the best estimate."
+    },
+    {
+      "id": "geo_B14-02",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Species half-life and extinction share?",
+      "a": "Average half-life of a species is 1–4 million years; 99% of species that ever lived are extinct."
+    },
+    {
+      "id": "geo_B14-03",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Where is biodiversity richest?",
+      "a": "In the tropics (tropical forests); towards the poles there are larger populations of fewer species."
+    },
+    {
+      "id": "geo_B14-04",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Define biodiversity.",
+      "a": "The number and variety of organisms in a region: plants, animals and micro-organisms, their genes and the ecosystems they form (Bio = life, diversity = variety)."
+    },
+    {
+      "id": "geo_B14-05",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Three levels of biodiversity?",
+      "a": "Genetic diversity (variation of genes within species), species diversity (variety and number of species in an area) and ecosystem diversity (variety of habitats and ecological processes)."
+    },
+    {
+      "id": "geo_B14-06",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "What are hotspots of diversity?",
+      "a": "Areas rich in species diversity. IUCN has identified biodiversity hotspots (defined by vegetation, since plants determine primary productivity) as priority areas for the most vulnerable regions."
+    },
+    {
+      "id": "geo_B14-07",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Which countries are mega-diversity centres?",
+      "a": "Twelve: Mexico, Colombia, Ecuador, Peru, Brazil, Democratic Republic of Congo, Madagascar, China, India, Malaysia, Indonesia and Australia."
+    },
+    {
+      "id": "geo_B14-08",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Hotspot examples in the text?",
+      "a": "Madagascar (about 85% of plants and animals found nowhere else) and Hawaii (unique species threatened by introduced species and land development)."
+    },
+    {
+      "id": "geo_B14-09",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Roles of biodiversity?",
+      "a": "Ecological (species capture energy, decompose, cycle water and nutrients, fix gases, regulate climate; more diversity gives more stable ecosystems), economic (agro-biodiversity: food crops, livestock, forests, fish, medicines) and scientific."
+    },
+    {
+      "id": "geo_B14-10",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "IUCN categories of threatened species?",
+      "a": "Endangered (in danger of extinction; IUCN Red List), vulnerable (likely to become endangered soon) and rare (small populations confined to limited areas or thinly scattered)."
+    },
+    {
+      "id": "geo_B14-11",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Causes of loss of biodiversity?",
+      "a": "Population growth and over-consumption; deforestation; natural calamities (earthquakes, floods, fires, droughts); pesticides and pollutants; exotic (introduced) species; poaching of tigers, elephants, rhinos, crocodiles etc."
+    },
+    {
+      "id": "geo_B14-12",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Why are tropical forests critical?",
+      "a": "Tropical regions are about one-fourth of the world's area but hold about three-fourths of world population; tropical rain forests hold about 50% of earth's species."
+    },
+    {
+      "id": "geo_B14-13",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "Convention on Biodiversity?",
+      "a": "Signed at the Earth Summit, Rio de Janeiro, June 1992, by India and 155 other nations."
+    },
+    {
+      "id": "geo_B14-14",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "World conservation strategy steps?",
+      "a": "Preserve endangered species; plan to prevent extinction; preserve crop varieties, forage plants, timber trees, livestock and wild relatives; identify and protect habitats of wild relatives; safeguard feeding/breeding/resting habitats; regulate international trade in wild plants and animals."
+    },
+    {
+      "id": "geo_B14-15",
+      "subject": "geography",
+      "part": "Part B — Fundamentals of Physical Geography",
+      "chapter": "B14. Biodiversity and Conservation",
+      "q": "India's law for protecting species?",
+      "a": "The Wild Life (Protection) Act, 1972, under which national parks and sanctuaries were established and biosphere reserves declared."
     }
   ]
 };
