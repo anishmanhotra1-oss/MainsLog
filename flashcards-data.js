@@ -1,7 +1,7 @@
 /**
  * UPSC CSE Active Recall Flashcards Master Database
  * Auto-compiled from syllabus and curated high-yield revision sets
- * Total: 1393 Flashcards (Polity: 378, History: 245, Economy: 151, Geography: 619)
+ * Total: 2043 Flashcards (Polity: 1028, History: 245, Economy: 151, Geography: 619)
  */
 
 (function(root) {
@@ -3031,6 +3031,5206 @@
       "chapter": "68. Pressure Groups",
       "q": "Techniques?",
       "a": "Electioneering, lobbying, propaganda, strikes, litigation (PILs), demonstrations."
+    },
+    {
+      "id": "polity_ak_0001",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are federal features of the Constitution of India?\n\n  1. Division of Powers\n\n  2. Separation of Powers\n\n  3. Single Constitution for Union and States\n\n  4. Upper House in Parliament\n\n  5. Independence of Judiciary\n\n     *(a.* 1, 2 & 4 only | b. 1, 4 & 5 only | c. 1, 2, 3 & 5 only | d. 2, 4 & 5 *only)*",
+      "a": "**b (1, 4 & 5 only)** — Division of Powers, an Upper House representing states (Rajya Sabha), and an Independent Judiciary to adjudicate federal disputes are core federal features. A Single Constitution is a unitary feature, while Separation of Powers is a feature of Presidential government."
+    },
+    {
+      "id": "polity_ak_0002",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statement(s) is/are NOT correct regarding the Preamble of the Constitution of India?\n\n  1. It is a limitation on the powers of Government.\n\n  2. It is not a part of the Constitution.\n\n  3. It is part of the basic structure of the Constitution.\n\n     *(a.* 1 & *2 only | b. 2 & 3 only | c. 2 only | d. All of these)*",
+      "a": "**a (1 & 2 only)** — The Preamble is neither a source of power nor a limitation upon the powers of the government (1 is incorrect). In the *Kesavananda Bharati* case (1973), the Supreme Court held that the Preamble is an integral part of the Constitution (2 is incorrect) and embodies its Basic Structure (3 is correct)."
+    },
+    {
+      "id": "polity_ak_0003",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is correct regarding the Constitution of India?\n\n  *(a.* It was enacted on 26th January, 1950 | *b. It repeals Govt. of India Act, 1919 and Govt. of India Act, 1935 | c. The original Constitution is handwritten in Urdu, Hindi and English | d. The original Constitution had 29 States in the First Schedule)*",
+      "a": "**b (Note on Article 395)** — The Constitution was enacted/adopted on 26th November, 1949 (and came into force on 26th January, 1950). The original Constitution was calligraphed in Hindi and English only, and the First Schedule originally classified territories into Parts A, B, C, and D. Under Article 395, the Constitution repealed the Government of India Act, 1935 and the Indian Independence Act, 1947 (the 1935 Act had earlier repealed the 1919 Act)."
+    },
+    {
+      "id": "polity_ak_0004",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "\"To uphold and protect the Sovereignty, Unity and Integrity of India\" is a provision made in the:\n\n  *(a. Preamble of the Constitution of India | b. Fundamental Rights | c. Fundamental Duties | d. Directive Principles of State Policy)*",
+      "a": "**c (Fundamental Duties)** — Article 51A(c) under Part IVA explicitly lays down the Fundamental Duty of every citizen \"to uphold and protect the sovereignty, unity and integrity of India\"."
+    },
+    {
+      "id": "polity_ak_0005",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "**(Q):** Which of the following Articles of the Constitution of India confers the power to State to acquire a foreign territory as well as to cede national territory in favour of a foreign State?\n\n  *(a. Article 1 | b. Article 2 | c. Article 3 | d. NOTA)*",
+      "a": "**d (NOTA - None of the Above)** — As held by the Supreme Court in the *Berubari Union* case (1960), acquiring foreign territory is an inherent sovereign power under international law, while ceding Indian territory to a foreign nation requires a Constitutional Amendment under Article 368 (not Articles 1, 2, or 3)."
+    },
+    {
+      "id": "polity_ak_0006",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following words have been added in the Preamble of Constitution of India through amendment?\n\n  *(a. Socialist, Secular and Unity | b. Socialist and Integrity | c. Secular, Unity and Integrity | d. Socialist, Unity and Integrity)*",
+      "a": "**b (Socialist and Integrity)** — The 42nd Constitutional Amendment Act, 1976 added three words to the Preamble: *Socialist*, *Secular*, and *Integrity*. The word *Unity* was already present in the original text."
+    },
+    {
+      "id": "polity_ak_0007",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Arrange the steps to reorganise a state of India in sequence:\n\n  1. President refers the Bill to state for opinion\n\n  2. Parliament votes on the Bill\n\n  3. State legislature votes on a resolution for/against the Bill\n\n  4. President recommends the Bill for introducing in the Parliament\n\n     *(a. 1-3-4-2 | b. 4-1-3-2 | c. 4-2-1-3 | d. 1-4-3-2)*",
+      "a": "**a (1-3-4-2)** — Under the proviso to Article 3, before recommending the introduction of the Bill in Parliament, the President refers the draft Bill to the concerned State Legislature for its views within a specified period (1), the State Legislature deliberates/votes on its views (3), the President recommends the Bill's introduction (4), and Parliament votes on the Bill (2)."
+    },
+    {
+      "id": "polity_ak_0008",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is correct regarding Parliamentary system of governance?\n\n  *(a. Head of the State is not elected by the people | b. Real Executive powers are vested with the Prime Minister | c. There is an upper House in the Parliament | d. NOTA)*",
+      "a": "**d (NOTA)** — In a Parliamentary system, real executive powers are vested in the *Council of Ministers* collectively (headed by the Prime Minister), the legislature may be unicameral or bicameral, and the nominal Head of State may be hereditary or elected (e.g., indirectly as in India or directly as in Ireland)."
+    },
+    {
+      "id": "polity_ak_0009",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "**(Q):** Which of the following statement(s) is/are correct?\n\n  1. Cession of territory of India to a foreign State requires amending the Constitution of India under Article 368.\n\n  2. Acquisition of a foreign territory by India requires amending the Constitution of India under Article 368.\n\n     *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Per the *Berubari Union* case (1960), ceding national territory to a foreign state requires a Constitutional Amendment under Article 368. Acquisition and admission of foreign territory can be done via sovereign executive action / ordinary law under Article 2 (which is exempted from Article 368 by Article 4)."
+    },
+    {
+      "id": "polity_ak_0010",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following was NOT a feature of Government of India Act, 1935?\n\n  *(a. Establishment of Reserve Bank of India | b. Establishment of Provincial Public Service Commissions | c. Establishment of a Federal Court | d. Dyarchy at Centre)*",
+      "a": "**a (Establishment of Reserve Bank of India)** — The Reserve Bank of India was established on 1 April 1935 under a separate statute, the *Reserve Bank of India Act, 1934* (though envisaged in the 1935 constitutional scheme). Provincial PSCs, a Federal Court, and Dyarchy at the Centre were direct features of the GOI Act, 1935."
+    },
+    {
+      "id": "polity_ak_0011",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following conditions will make a child born within the territory of India today a citizen of India?\n\n  *(a. Both the parents are Indian citizens at the time of birth of the child | b. Parents are not citizens of India at the time of birth, but acquire citizenship while the child is minor | c. Both of the above | d. NOTA)*",
+      "a": "**a (Both the parents are Indian citizens at the time of birth of the child)** — Under Section 3(1)(c) of the Citizenship Act, 1955 (for births on or after 3 December 2004), a child born in India is a citizen by birth only if both parents are citizens of India, or one parent is a citizen of India and the other is not an illegal migrant at the time of birth."
+    },
+    {
+      "id": "polity_ak_0012",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements regarding citizenship of India is correct?\n\n  *(a. The provisions of citizenship in Constitution of India came to force on 26 November 1949 | b. Passport to Indian citizens is issued by Ministry of Home Affairs | c. Overseas Citizens of India (OCI Cardholders) can vote in India by registering as an overseas voter | d. A citizen who acquired citizenship by naturalisation is ineligible for any Constitutional post)*",
+      "a": "**a** (The provisions of citizenship **in Constitution of India came to force on 26 November 1949)** — Under Article 394, Articles 5, 6, 7, 8, and 9 relating to citizenship came into force immediately on 26 November 1949. Passports are issued by the Ministry of External Affairs, OCI cardholders cannot vote, and naturalised citizens are eligible for all constitutional posts in India."
+    },
+    {
+      "id": "polity_ak_0013",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements regarding the linguistic reorganisation of states is/are correct?\n\n  a. Linguistic principle as basis of formation of states was accepted during national freedom movement\n\n  b. Some states were bilingual even after the linguistic reorganisation of India in 1956\n\n  *(c. Both of above | d. NOTA)*",
+      "a": "**c (Both of above)** — The Indian National Congress accepted linguistic reorganisation of Provincial Congress Committees at its 1920 Nagpur Session. Even after the States Reorganisation Act, 1956, states such as Bombay (Marathi & Gujarati, until 1960) and Punjab (Punjabi & Hindi, until 1966) remained bilingual."
+    },
+    {
+      "id": "polity_ak_0014",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following were the reasons for the 'Federal with strong centre' nature of the Constitution of India?\n\n  a. To stem disintegration and integrate the princely states\n\n  b. To solve the socio-economic problems of India through planning and coordination\n\n  *(c. Both of above | d. British legacy of centralised control)*",
+      "a": "**c (Both of above)** — The Constituent Assembly adopted a federation with a strong Centre both to safeguard national unity and integrate princely states after Partition, and to address socio-economic backwardness through coordinated national planning."
+    },
+    {
+      "id": "polity_ak_0015",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In which of the following systems of Government is bicameralism an essential feature?\n\n  *(a. Unitary System | b. Federal System | c. Presidential System | d. Parliamentary System)*",
+      "a": "**b (Federal System)** — Bicameralism is essential to a federal system because an Upper Chamber (such as the Senate in the USA or Rajya Sabha in India) is necessary to provide representation to the constituent States/units at the federal level."
+    },
+    {
+      "id": "polity_ak_0016",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The National Emergency declared in 1975 was in reaction to the call for 'Total Revolution'. What do you understand by 'Total Revolution'?\n\n  *(a. A revolution that was pan India to overthrow the Government of India | b. A revolution to overthrow the then Government of Bihar | c. A student's movement to protest against rising prices, food scarcity, unemployment and corruption | d. A revolution in the social, economic and political spheres to establish true democracy)*",
+      "a": "**d (A revolution in the social, economic and political spheres to establish true democracy)** — Jayaprakash Narayan's 1974 call for *Sampoorna Kranti* (Total Revolution) envisioned a comprehensive transformation across social, economic, educational, cultural, and political spheres to establish true participatory democracy."
+    },
+    {
+      "id": "polity_ak_0017",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statement(s) was/were declared as part of the judgment in Keshavananda Bharati case, 1973?\n\n  *(a. Parliament cannot abrogate the basic structure of Constitution | b. Right to property is not part of the basic structure of Constitution | c. Supreme Court has the right to decide what constitutes basic structure of the Constitution | d. All of the above)*",
+      "a": "**d (All of the above)** — In *Kesavananda Bharati v. State of Kerala* (1973), the Supreme Court held that Parliament cannot alter or destroy the Basic Structure under Article 368, ruled that the Right to Property is not part of the Basic Structure, and retained judicial authority to determine what elements constitute the Basic Structure."
+    },
+    {
+      "id": "polity_ak_0018",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A 10 year old child is forced to work whole day in a firecracker factory in India. Which of the following fundamental rights are being violated?\n\n  1. Article 19\n\n  2. Article 21\n\n  3. Article 21A\n\n  4. Article 23\n\n     *(a. 1, 2 & 3 Only | b. 2, 3 & 4 Only | c. 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** *(or **b: 2, 3 & 4 Only**)* — Forced labour of a 10-year-old child in a hazardous factory violates Article 23 (prohibition of forced labour), Article 24 (prohibition of child labour in factories), Article 21A (right to free and compulsory education for ages 6–14), Article 21 (right to life with dignity and health), and Article 19 (freedom of movement and expression curtailed by forced servitude)."
+    },
+    {
+      "id": "polity_ak_0019",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following ideals in the Preamble of Constitution of India have been borrowed from the French Constitution?\n\n  1. Justice\n\n  2. Liberty\n\n  3. Equality\n\n  4. Fraternity\n\n     *(a. 1, 2 & 3 Only | b. 2 & 3 Only | c. 2, 3 & 4 Only | d. 3 & 4 Only)*",
+      "a": "**c (2, 3 & 4 Only)** — The ideals of *Liberty, Equality, and Fraternity* were borrowed from the French Constitution/Revolution, whereas the ideal of *Justice* (social, economic, and political) was inspired by the Soviet (Russian) Revolution/Constitution."
+    },
+    {
+      "id": "polity_ak_0020",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "When a new state is carved out of an existing state of India, which of the following provisions of the Constitution of India require an amendment?\n\n  1. Article 1\n\n  2. Article 3\n\n  3. First Schedule\n\n  4. Fourth Schedule\n\n     *(a. 1, 2 & 3 Only | b. 2, 3 & 4 Only | c. 3 & 4 Only | d. No amendment is required)*",
+      "a": "**c (3 & 4 Only)** — Under Article 4(1), any law made under Article 3 to form a new State makes supplemental amendments to the **First Schedule** (names and territories of States) and the **Fourth Schedule** (allocation of seats in the Rajya Sabha), though such a law is not deemed an amendment under Article 368."
+    },
+    {
+      "id": "polity_ak_0021",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "**(Q):** Federalism in India is based on the pattern of:\n\n  *(a. United States of America | b. Canada | c. Australia | d. Switzerland)*",
+      "a": "**b (Canada)** — India's federal system—featuring a strong Centre, indestructible Union, residuary powers vested in the Union, and appointment of State Governors by the Centre—is based on the Canadian model."
+    },
+    {
+      "id": "polity_ak_0022",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n\n  a. Board of Control for Cricket in India (BCCI) is not a State within the meaning of Article 12\n\n  b. The Flag Code of India is not a law within the meaning given under Article 13\n\n  *(c. Both of the above | d. NOTA)*",
+      "a": "**c (Both of the above)** — In *Zee Telefilms Ltd. v. Union of India* (2005), the Supreme Court held that BCCI is not a 'State' under Article 12. In *Union of India v. Naveen Jindal* (2004), the Court held that the Flag Code of India is a set of executive instructions and not a 'law' within the meaning of Article 13(3)(a)."
+    },
+    {
+      "id": "polity_ak_0023",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n\n  a. Doctrine of basic structure applies only to Amendment Acts made after the Keshavananda Bharati case, 1973\n\n  b. When the constitutionality of an Act is challenged in the Court, there's a presumption in favour of the law\n\n  *(c. Both of the above | d. NOTA)*",
+      "a": "**c (Both of the above)** — In *Waman Rao v. Union of India* (1981), the Supreme Court ruled that the Basic Structure doctrine applies prospectively to constitutional amendments enacted after 24 April 1973. Moreover, a settled principle of judicial review is that there is always a presumption in favour of the constitutionality of a statute."
+    },
+    {
+      "id": "polity_ak_0024",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following rights can be read within Article 21 of the Constitution of India?\n\n  1. To travel abroad\n\n  2. Against solitary confinement\n\n  3. Against handcuffing\n\n  4. Against delayed execution\n\n     *(a. 1 & 4 Only | b. 2 & 3 Only | c. 2, 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — The Supreme Court has declared all four to be implicit Fundamental Rights under Article 21: right to travel abroad (*Maneka Gandhi*), right against solitary confinement (*Sunil Batra*), right against routine handcuffing (*Prem Shankar Shukla*), and right against inordinate delay in execution (*T.V. Vatheeswaran* / *Shatrughan Chauhan*)."
+    },
+    {
+      "id": "polity_ak_0025",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions of the Constitution promote Fraternity among the people of India assuring the dignity of individual, and unity and integrity of nation?\n\n  1. Article 1\n\n  2. Article 17\n\n  3. Article 18\n\n  4. Article 51A\n\n     *(a. 1 & 4 Only | b. 2 & 3 Only | c. 2, 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Article 1 (Union of States — unity and integrity), Article 17 (abolition of untouchability — individual dignity), Article 18 (abolition of titles — social equality and brotherhood), and Article 51A (Fundamental Duties to uphold sovereignty, unity, integrity, and common brotherhood) all promote Fraternity."
+    },
+    {
+      "id": "polity_ak_0026",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT implicit in the idea of 'Constitutionalism'?\n\n  *(a. Authority of the Government derived from a body of fundamental law | b. Limitations on the powers of the Government | c. Reasonable limitations on the rights of the people | d. Separation of Power)*",
+      "a": "**c (Reasonable limitations on the rights of the people)** — Constitutionalism means 'limited government' (checking arbitrary state power through fundamental law and separation of powers), not limiting the rights of citizens."
+    },
+    {
+      "id": "polity_ak_0027",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are an evidence of democracy in India?\n\n  1. Universal Suffrage\n\n  2. Equality among all citizens\n\n  3. Ministerial responsibility to the directly elected House\n\n     *(a. 1 Only | b. 1 & 2 Only | c. 1 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Universal adult franchise (Art 326), civic equality (Arts 14–18), and collective responsibility of the Executive to the directly elected Lok Sabha (Art 75(3)) are all core manifestations of democracy in India."
+    },
+    {
+      "id": "polity_ak_0028",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is the most appropriate meaning of 'Secular' as enshrined in the Preamble of the Constitution of India?\n\n  *(a. There is no religion of the State | b. People of India have religious freedom | c. Religion is a private affair of individuals | d. India accommodates all religions)*",
+      "a": "**d (India accommodates all religions)** *(alongside **a**)* — Unlike Western negative secularism (strict wall of separation where religion is purely private), Indian secularism is positive (*Sarva Dharma Sambhava*): the State has no religion of its own and equally respects, accommodates, and protects all religions."
+    },
+    {
+      "id": "polity_ak_0029",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, Juvenile Justice has been in the news. What is the minimum age of a person who can be charged for a crime (age of criminal responsibility)?\n\n  *(a. 7 Years | b. 12 Years | c. 14 Years | d. 16 Years)*",
+      "a": "**a (7 Years)** — Under Section 82 of the Indian Penal Code (now Section 20 of the Bharatiya Nyaya Sanhita), nothing is an offence which is done by a child under 7 years of age (*doli incapax*)."
+    },
+    {
+      "id": "polity_ak_0030",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are valid grounds to impose restrictions on the exercise of the freedom of speech and expression?\n\n  1. Security of State\n\n  2. Public morality and health\n\n  3. Contempt of Court\n\n  4. Defamation\n\n     *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2 & 4 Only | d. All of these)*",
+      "a": "**b (1, 3 & 4 Only)** — Article 19(2) specifies 8 grounds: sovereignty and integrity of India, security of the State, friendly relations with foreign States, public order, decency or morality, contempt of court, defamation, and incitement to an offence. *Health* is not a ground under Article 19(2)."
+    },
+    {
+      "id": "polity_ak_0031",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding a Constitutional Amendment Bill?\n\n  a. It can be introduced in the Parliament only with a prior recommendation of the President of India.\n\n  b. In case of a deadlock between the two Houses of Parliament, President may summon a joint sitting.\n\n  *(c. Both of the above | d. NOTA)*",
+      "a": "**d (NOTA)** — A Constitutional Amendment Bill under Article 368 does NOT require the prior recommendation of the President for introduction, and there is NO provision for a joint sitting in case of a deadlock between the two Houses."
+    },
+    {
+      "id": "polity_ak_0032",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "According to the Constitution of India, which of the following are fundamental for the governance of the country?\n\n  *(a. Fundamental Rights | b. Fundamental Duties | c. Directive Principles of State Policy | d. Both Fundamental Rights and Fundamental Duties)*",
+      "a": "**c (Directive Principles of State Policy)** — Article 37 explicitly declares that the Directive Principles of State Policy are \"fundamental in the governance of the country\"."
+    },
+    {
+      "id": "polity_ak_0033",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following rights cannot be suspended/taken away during an emergency in India?\n\n  1. Free movement\n\n  2. Freedom of speech\n\n  3. Life and liberty\n\n  4. Freedom to organise peacefully and without arms\n\n     *(a. 1, 2 & 3 Only | b. 2 & 3 Only | c. 3 Only | d. All of these)*",
+      "a": "**c (3 Only)** — Under Article 359 (as amended by the 44th Constitutional Amendment Act, 1978), the enforcement of Fundamental Rights guaranteed by Articles 20 and 21 (Protection of life and personal liberty) can never be suspended during an Emergency."
+    },
+    {
+      "id": "polity_ak_0034",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is described by Dr. Ambedkar as the 'heart and soul' of the Constitution of India?\n\n  *(a. Right to equality | b. Right to freedom of speech | c. Right to life | d. Right to constitutional remedies)*",
+      "a": "**d (Right to constitutional remedies)** — Dr. B.R. Ambedkar called Article 32 (Right to Constitutional Remedies) the very heart and soul of the Constitution because it provides effective machinery for enforcing Fundamental Rights."
+    },
+    {
+      "id": "polity_ak_0035",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Fundamental Rights is/are available to a foreigner on Indian soil?\n\n  1. Article 15\n\n  2. Article 16\n\n  3. Article 19\n\n  4. Article 21\n\n     *(a. 1 & 4 Only | b. 3 & 4 Only | c. 4 Only | d. All of these)*",
+      "a": "**c (4 Only)** — Articles 15, 16, 19, 29, and 30 are available exclusively to citizens of India. Article 21 (Protection of life and personal liberty) is available to all persons, citizens and foreigners alike."
+    },
+    {
+      "id": "polity_ak_0036",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Ministries publishes the Gazette of India?\n\n  *(a. Ministry of Housing and Urban Affairs | b. Ministry of Information & Broadcasting | c. Ministry of Law & Justice | d. Ministry of Home Affairs)*",
+      "a": "**(A):** **a (Ministry of Housing and Urban Affairs)** — The Gazette of India is published by the Department of Publication (headed by the Controller of Publication), which functions under the Ministry of Housing and Urban Affairs."
+    },
+    {
+      "id": "polity_ak_0037",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who is regarded as the 'Father of Civil Services in India'?\n\n  *(a. Warren Hastings | b. Charles Cornwallis | c. Vallabhbhai Patel | d. Satyendranath Tagore)*",
+      "a": "**b (Charles Cornwallis)** — Lord Cornwallis reorganised and modernised the Covenanted Civil Services in India and is known as the 'Father of Civil Services in India' (while Sardar Vallabhbhai Patel is regarded as the 'Father of All India Services')."
+    },
+    {
+      "id": "polity_ak_0038",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, the Presidential election in the USA has been in news. In this regard, what do 'primaries' and 'caucuses' refer to?\n\n  *(a. Method used by different states of USA to elect the President of USA | b. Methods used by the political parties to select their candidate for the election | c. Method to elect the 'Electoral College' of the President of USA | d. Method to regulate and conduct the Presidential election debates in the states of USA)*",
+      "a": "**b (Methods used by the political parties to select their candidate for the election)** — Primaries (state-run secret ballot elections) and caucuses (party-run local meetings) are processes used in the US states to select party delegates who nominate the party's presidential candidate at the national convention."
+    },
+    {
+      "id": "polity_ak_0039",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is the motto of the Supreme Court of India?\n\n  *(a. Satyamev Jayate - Truth only triumphs | b. Dharmo Rakshati Rakshitah - Justice, when protected, protects | c. Yato Dharmas-Tato Jayah - Where there is Dharma, there is victory | d. Yogakshemam Vahamyaham - I shall take care of welfare)*",
+      "a": "**c** (Yato Dharmas-Tato Jayah - Where there **is Dharma, there is victory)** — *Yato Dharmastato Jayah* is the official Sanskrit motto inscribed on the emblem of the Supreme Court of India."
+    },
+    {
+      "id": "polity_ak_0040",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Right to die with dignity is considered a fundamental right. In this regard, which of the following statements is/are correct regarding a 'Living Will' in India?\n\n  a. It's a person's wish on how to be treated for serious illness, especially passive euthanasia\n\n  b. Every citizen has a right to make a Living Will in India\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**c (Both of these)** — In *Common* Cause v. *Union of India* (2018), the Supreme Court recognised that the right to die with dignity is a Fundamental Right under Article 21 and permitted adult citizens of sound mind to execute Advance Medical Directives ('Living Wills') for passive euthanasia."
+    },
+    {
+      "id": "polity_ak_0041",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions of the Constitution of India have a bearing on public health?\n\n  1. Directive Principles of State Policy\n\n  2. Rural and Urban Local Bodies\n\n  3. Fifth Schedule\n\n  4. Sixth Schedule\n\n  5. Seventh Schedule\n\n     *(a.* 1, 2 & 5 Only | b. 3 & 4 Only | c. 1, 2, 4 & 5 Only *| d. All of these)*",
+      "a": "**c (1, 2, 4 & 5 Only)** — Public health finds mention in DPSPs (Article 47), Rural and Urban Local Bodies (11th Schedule Entry 23 & 12th Schedule Entry 6), the Sixth Schedule (Para 6 empowers District Councils to establish dispensaries and manage public health), and the Seventh Schedule (State List Entry 6). The Fifth Schedule does not specifically mention public health."
+    },
+    {
+      "id": "polity_ak_0042",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT a convention in the Indian Constitutional system?\n\n  *(a.* Resignation of the Prime Minister on passage of no-confidence motion in the Lok Sabha | *b. Three sessions of Parliament each year | c. Appointment of the senior most member of Lok Sabha as pro tem Speaker | d. NOTA)*",
+      "a": "**d (NOTA)** — All three are constitutional conventions rather than explicit constitutional text: the Constitution does not mention a 'No-Confidence Motion', does not mandate three fixed sessions a year (only a max 6-month gap under Art 85), and does not codify that the senior-most member must be appointed Pro-tem Speaker."
+    },
+    {
+      "id": "polity_ak_0043",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In the Constitution of India, which of the following makes provision for 'promoting international peace and security'?\n\n  *(a. Directive Principles of State Policy | b. Fundamental Duties | c. Seventh Schedule | d. NOTA)*",
+      "a": "**a (Directive Principles of State Policy)** — Article 51 in Part IV (DPSPs) directs the State to endeavour to promote international peace and security."
+    },
+    {
+      "id": "polity_ak_0044",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements about the Constitution of India is/are correct?\n\n  a. It is more flexible than rigid.\n\n  b. It provides certain justiciable rights as well as certain non-justiciable rights\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**c (Both of these)** — The bulk of the Constitution can be amended by Parliament alone without state ratification (making it more flexible than rigid), and it provides both justiciable rights (Part III Fundamental Rights) and non-justiciable rights (Part IV DPSPs)."
+    },
+    {
+      "id": "polity_ak_0045",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following relate to the concept of 'Separation of Powers'?\n\n  *(a. Separation of powers between the Governments at Federal and Provincial levels | b. Separation of Legislative, Executive and Judicial powers of a Government | c. Both of these | d. None of these)*",
+      "a": "**b (Separation of Legislative, Executive and Judicial powers of a Government)** — Horizontal distribution among the Legislature, Executive, and Judiciary is 'Separation of Powers', whereas vertical distribution between Federal and Provincial governments is 'Division of Powers'."
+    },
+    {
+      "id": "polity_ak_0046",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are discretionary powers of the President of India?\n\n  1. Pardon of death sentence\n\n  2. Promulgate Ordinance\n\n  3. Proclaim National Emergency\n\n  4. Address to Parliament's first session every year\n\n  5. Dissolve Lok Sabha\n\n     *(a. 1, 2, 3 & 5 Only | b. 2, 3, 4 & 5 Only | c. 1, 4 & 5 Only | d. None of these)*",
+      "a": "**d (None of these)** — Under Article 74, pardoning power, ordinance promulgation, proclamation of National Emergency (on written Cabinet recommendation), and the annual address to Parliament are exercised strictly on the aid and advice of the Council of Ministers (dissolution of Lok Sabha enjoys situational discretion only when the Council of Ministers has lost majority)."
+    },
+    {
+      "id": "polity_ak_0047",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of these events would result in immediate collapse of the Council of Ministers of the Union?\n\n  1. Resignation of the Prime Minister\n\n  2. Death of the Prime Minister\n\n  3. Imposition of President's Rule\n\n  4. Withdrawal of support from alliance members of the ruling coalition\n\n     *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1, 2 & 4 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Because the Prime Minister heads the Council of Ministers, his/her resignation or death automatically dissolves the entire Council of Ministers. Withdrawal of coalition support does not automatically dissolve the Council unless the PM resigns or loses a floor test."
+    },
+    {
+      "id": "polity_ak_0048",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of these advices tendered by the Council of Ministers may be required by the President for their reconsideration?\n\n  1. Commute the death sentence of a convict\n\n  2. Withhold assent to a Bill\n\n  3. Promulgate Ordinance\n\n  4. Appointment of the Governor of a state\n\n     *(a.* 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. *2 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under the proviso to Article 74(1), the President may require the Council of Ministers to reconsider *any* advice tendered by them, generally or otherwise, before acting on the reconsidered advice."
+    },
+    {
+      "id": "polity_ak_0049",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "After the passage of a No Confidence Motion in the Lok Sabha, to whom shall the Prime Minister submit his/her resignation?\n\n  *(a. Speaker of Lok Sabha | b. President of India | c. President of Ruling Party | d. Chairperson, Parliamentary Affairs Committee)*",
+      "a": "**b (President of India)** — Under Article 75, the Prime Minister is appointed by and holds office during the pleasure of the President, and therefore always submits his/her resignation to the President of India."
+    },
+    {
+      "id": "polity_ak_0050",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Prime Minister as the head of Council of Ministers:\n\n  1. has a free hand in the distribution of portfolios\n\n  2. can reshuffle the Ministers and ask any Minister to resign\n\n  3. is bound by the advice of the Ministers\n\n  4. advises the Ministers in their day-to-day affairs\n\n     *(a. 1 & 2 Only | b. 2 & 3 Only | c. 3 & 4 Only | d. 1, 2 & 4 Only)*",
+      "a": "**d (1, 2 & 4 Only)** *(or **a:*** 1 & ***2 Only**)* — The Prime Minister has a free hand in allocating and reshuffling portfolios (1), can ask a Minister to resign or advise the President to dismiss him/her (2), and guides, directs, and advises Ministers in their activities (4). The PM is never bound by the advice of individual Ministers (3 is false).\n\n## Part 2: Questions AK 0051 to AK 0100"
+    },
+    {
+      "id": "polity_ak_0051",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is correct regarding the Union Council of Ministers?\n\n  *(a.* Ministers of State cannot attend a Cabinet meeting | b. Cabinet takes decisions through consensus | c. There is no limit on the member strength of Cabinet | d. *Only the President of India shall administer the oath of office to the Minister)*",
+      "a": "**c (There is no limit on the member strength of Cabinet)** *(Note: **b** and **d** are also notable — while Article 75(1A) caps the total strength of the **Council of Ministers** at 15% of Lok Sabha's strength, the Constitution places no specific sub-limit on the strength of the **Cabinet**; Cabinet decisions are also reached by consensus).*"
+    },
+    {
+      "id": "polity_ak_0052",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A person can enter which of the following offices by subscribing to an oath/affirmation before ONLY the President of India?\n\n  1. Vice President of India\n\n  2. Judge of Supreme Court of India\n\n  3. Minister of the Union\n\n  4. Comptroller & Auditor General\n\n     *(a. 1, 2 & 3 Only | b. 2 & 4 Only | c. 3 Only | d. All of these)*",
+      "a": "**c (3 Only)** — Under Article 75(4), the oath of a Union Minister is administered strictly by \"the President\" (without the delegating phrase *\"or some person appointed in that behalf by him\"*, which appears in Article 69 for the Vice-President, Article 124(6) for SC Judges, and Article 148(2) for the CAG)."
+    },
+    {
+      "id": "polity_ak_0053",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n\n  a. Dissolution of the Council of Ministers leads to the dissolution of the House of People.\n\n  b. Dissolution of the House of People leads to the dissolution of the Council of Ministers.\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**d (None of these)** — Collapse/dissolution of the Council of Ministers does not necessarily dissolve the Lok Sabha (an alternative government can be formed). Conversely, when the Lok Sabha is dissolved, the Council of Ministers does not dissolve—under Article 74(1) (*U.N.R. Rao v. Indira Gandhi*, 1971), it continues in office until the new Lok Sabha is constituted and a new Ministry is sworn in."
+    },
+    {
+      "id": "polity_ak_0054",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT among the Fundamental Duties of citizens laid down in the Constitution of India?\n\n  *(a. Renouncing practices derogatory to the dignity of women | b. Abjuring violence | c. Protecting monuments | d. Following the noble ideals that inspired the national struggle for freedom)*",
+      "a": "**c (Protecting monuments)** — Protecting monuments and places of national importance is a Directive Principle of State Policy under **Article 49** (whereas Article 51A(f) of Fundamental Duties states *\"to value and preserve the rich heritage of our composite culture\"*)."
+    },
+    {
+      "id": "polity_ak_0055",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "An amendment to which of the following Schedules of the Constitution of India is not deemed as an amendment under Article 368?\n\n  1. Second Schedule\n\n  2. Fourth Schedule\n\n  3. Fifth Schedule\n\n  4. Sixth Schedule\n\n     *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1, 3 & 4 Only | d. 2, 3 & 4 Only)*",
+      "a": "**d (2, 3 & 4 Only)** *(or **c: 1, 3 & 4 Only**)* — The Fourth Schedule (under Article 4(2)), Fifth Schedule (under Para 7(2)), and Sixth Schedule (under Para 21(2)) each contain an explicit constitutional clause stating that amendments made to them by ordinary law shall not be deemed amendments under Article 368 (emoluments in the Second Schedule can also be modified by Parliament by law)."
+    },
+    {
+      "id": "polity_ak_0056",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of these is/are correct regarding Ordinance making power of President?\n\n  1. It can be retrospective\n\n  2. It can modify/repeal an Act of Parliament\n\n  3. It can amend Constitution of India\n\n  4. It can be promulgated only when Lok Sabha is not in session\n\n     *(a. 1 & 2 Only | b. 1, 2 & 3 Only | c. 2 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — An Ordinance under Article 123 has the same force as an Act of Parliament: it can operate retrospectively (1) and can modify or repeal any Act of Parliament (2). However, it cannot amend the Constitution (3), and it can be promulgated whenever *either* House (not just Lok Sabha) is not in session (4)."
+    },
+    {
+      "id": "polity_ak_0057",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the members of Council of Ministers of the Union?\n\n  a. A person who is not a member of either House of Parliament can be appointed member of Council of Ministers\n\n  b. Nominated members of Parliament cannot become a member of the Council of Ministers\n\n  *(c.* Both of these | d. None of *these)*",
+      "a": "**a** — Under Article 75(5), a non-MP can be appointed as a Minister for up to 6 months. Nominated members of Parliament are fully eligible to be appointed as Ministers (b is false)."
+    },
+    {
+      "id": "polity_ak_0058",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n\n  a. The Office of 'Leader of the House' is not a statutory position\n\n  b. The Office of 'Leader of Opposition' is a statutory position\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**c (Both of these)** — 'Leader of the House' is provided for in the *Rules of Procedure* of the respective Houses (not in the Constitution or a statute), whereas 'Leader of the Opposition' was given statutory recognition through the *Salary and Allowances of Leaders of Opposition in Parliament Act, 1977*."
+    },
+    {
+      "id": "polity_ak_0059",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is correct regarding the Vice-President of India?\n\n  a. An election to fill a vacancy in the office of VP can be held beyond six months of occurring of the vacancy\n\n  b. During vacancy in the office of VP, his/her functions are discharged by the Chief Justice of India\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**a** — Under Article 68(2), an election to fill a casual vacancy in the office of Vice-President is to be held *\"as soon as possible\"* after the occurrence of the vacancy (there is no mandatory 6-month deadline as there is for the President under Article 62(2)). No person acts as Vice-President during a vacancy."
+    },
+    {
+      "id": "polity_ak_0060",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are prescribed in the Constitution of India?\n\n  1. Election to the office of the President to be held by secret ballot\n\n  2. Election of members of the Rajya Sabha to be held by open ballot\n\n  3. Election of members of the Lok Sabha to be held by secret ballot\n\n     *(a.* 1 Only | b. 1 & 2 Only | c. 2 *& 3 Only | d. All of these)*",
+      "a": "**a (1 Only)** — Article 55(3) of the Constitution explicitly prescribes that voting at the Presidential election shall be by secret ballot. Open ballot for Rajya Sabha elections and secret ballot for Lok Sabha elections are prescribed by the *Representation of the People Act, 1951* (Section 59), not the Constitution."
+    },
+    {
+      "id": "polity_ak_0061",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the nominated membership in Parliament?\n\n  a. To nominate, or not to nominate, members in Lok Sabha is a matter of discretion for the Government\n\n  b. To nominate, or not to nominate, members in Rajya Sabha is a matter of discretion for the Government\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**a** — Under erstwhile Article 331 (prior to its discontinuation by the 104th Amendment), nominating 2 Anglo-Indians to the Lok Sabha was discretionary (*\"the President may, if he is of opinion...\"*), whereas under Article 80(1)(a), nominating 12 members to the Rajya Sabha is mandatory (*\"shall consist of twelve members to be nominated by the President\"*)."
+    },
+    {
+      "id": "polity_ak_0062",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of these categories of citizens are NOT eligible to contest elections to Parliament?\n\n  1. Undertrials\n\n  2. Persons detained under Preventive Detention laws\n\n  3. Persons convicted of any offence\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 3 Only | d. None of these)*",
+      "a": "**d (None of these)** — Undertrials and persons under preventive detention remain registered 'electors' and are eligible to contest elections. Even for convicted persons, Section 8 of the RPA, 1951 disqualifies only those convicted of specified offences or sentenced to imprisonment of **not less than 2 years**—not persons convicted of *any* minor offence."
+    },
+    {
+      "id": "polity_ak_0063",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is NOT implied by the proportional representation system of election for the President of India?\n\n  *(a. All the MPs have equal value of their vote | b. The MPs and MLAs representing the same state have equal value of their vote | c. All the MLAs from a state have equal value of their vote | d. The value of vote of all the MLAs is equal to the value of vote of all MPs)*",
+      "a": "**b (The MPs and MLAs representing the same state have equal value of their vote)** — Under Article 55(2), every elected MP across India has the same vote value (\\~700), whereas an MLA's vote value varies from state to state based on the state's 1971 population and assembly strength."
+    },
+    {
+      "id": "polity_ak_0064",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions are mentioned in the Constitution of India?\n\n  1. Motion of no-confidence\n\n  2. Vice President to hold office for a term of five years\n\n  3. Vice President shall discharge the functions of the President while the President is unable to do so due to illness\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**c (2 & 3 Only)** — Article 67 specifies the 5-year term of the Vice-President (2), and Article 65(2) provides for the Vice-President discharging the functions of the President during absence or illness (3). 'Motion of no-confidence' is not mentioned in the Constitution (it is in Rule 198 of the Lok Sabha Rules)."
+    },
+    {
+      "id": "polity_ak_0065",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following hold office during the pleasure of President of India?\n\n  a. Members of the civil service of the Union\n\n  b. Members of the defence service\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**c (Both of these)** — Article 310(1) explicitly states that every person who is a member of a defence service or of a civil service of the Union or of an all-India service holds office during the pleasure of the President."
+    },
+    {
+      "id": "polity_ak_0066",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Directive Principles of the State Policy (DPSPs) are reflection of Gandhian principles?\n\n  1. Promoting cooperative societies\n\n  2. Promoting cottage industries in rural areas\n\n  3. Securing participation of workers in management of industries\n\n  4. Providing legal aid to poor\n\n     *(a. 1 & 2 Only | b. 1, 2 & 4 Only | c. 2 & 3 Only | d. 1, 3 & 4 Only)*",
+      "a": "**a (1 & 2 Only)** — Promoting cooperative societies (Art 43 & 43B) and cottage industries in rural areas (Art 43) reflect Gandhian ideology. Workers' participation in management of industries (Art 43A) and free legal aid to the poor (Art 39A) are Socialist principles."
+    },
+    {
+      "id": "polity_ak_0067",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is NOT correct regarding an 'Office of Profit' under the Government of India?\n\n  *(a. Members of Parliament are not holding an office of profit | b. Vice-Chancellor of a University of the state is not an office of profit | c. President does not act on advice of Council of Ministers on question regarding disqualification of MPs | d. NOTA)*",
+      "a": "**b** (Vice-Chancellor of a University of the state **is not an office of profit)** — A Vice-Chancellor appointed by the Governor/State Government with attached remuneration holds an office of profit under the State unless specifically exempted by law. MPs are exempted under the Parliament (Prevention of Disqualification) Act, 1959, and the President acts on the opinion of the Election Commission (not the Council of Ministers) under Article 103."
+    },
+    {
+      "id": "polity_ak_0068",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements describes a Private Member's Bill in Parliament of India?\n\n  *(a.* A Bill introduced by any member of the House other than the members of the ruling party/coalition | b. A Bill introduced by any member of the House who is not a Minister | c. A Bill that has been introduced *in the House with a recommendation of President | d. A Bill that is certified by the Speaker as a Private Member's Bill)*",
+      "a": "**b (A Bill introduced by any member of the House who is not a Minister)** — Any Member of Parliament who is not a Minister (even if belonging to the ruling party) is a Private Member, and a Bill introduced by such a member is a Private Member's Bill."
+    },
+    {
+      "id": "polity_ak_0069",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements best explains a 'two-party political system'?\n\n  *(a.* Only two political parties allowed to contest elections under the Constitution of the country | b. There is no restriction on the number of parties under *the Constitution, but only two parties exist | c. Several parties may exist, but only two parties dominate the Government | d. One party forms the Government and another party forms the opposition)*",
+      "a": "**c (Several parties may exist, but only two parties dominate the Government)** — In a two-party system (such as in the USA or UK), multiple smaller parties may legally exist and contest elections, but political power and government formation alternate between two dominant major parties."
+    },
+    {
+      "id": "polity_ak_0070",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions have NOT been expressly provided in the Constitution of India?\n\n  *(a.* Number of members of the Finance Commission | b. Number of judges in the Supreme Court of *India | c. Number of members of the Union Public Service Commission | d. NOTA)*",
+      "a": "**c (Number of members of the Union Public Service Commission)** — Under Article 318, the Constitution does not fix the strength of the UPSC and leaves it to the President to determine by regulation. By contrast, Article 280(1) specifies a Chairman and 4 other members for the Finance Commission, and Article 124(1) specified the initial strength of the Supreme Court."
+    },
+    {
+      "id": "polity_ak_0071",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Union Executive?\n\n  a. Its powers extend to the matters with respect to which Parliament has the power to make laws\n\n  b. Every Executive action must have a legislative sanction\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**a** — Article 73(1)(a) states that the executive power of the Union extends to matters with respect to which Parliament has power to make laws. As held in *Ram Jawaya Kapur v. State of Punjab* (1955), prior legislative sanction is not required for every executive action unless it infringes Fundamental Rights or contradicts an existing statute."
+    },
+    {
+      "id": "polity_ak_0072",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Presidents of India had the shortest term in office?\n\n  *(a.* Shri V. V. Giri *| b. Shri Fakhruddin Ali Ahmed | c. Shri Zakir Hussain | d. Shri R. Venkataraman)*",
+      "a": "**c (Shri Zakir Hussain)** — Dr. Zakir Hussain served as the 3rd President of India from 13 May 1967 until his demise in office on 3 May 1969 (1 year, 355 days), the shortest tenure among elected Presidents of India."
+    },
+    {
+      "id": "polity_ak_0073",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the office of Prime Minister?\n\n  1. PM has a term of 5 years\n\n  2. PM must be an elected member from either House of Parliament, or shall become so within six months\n\n  3. PM is the leader of both the Houses of Parliament\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. None of these)*",
+      "a": "**d (None of these)** — The PM does not have a fixed 5-year term (holds office during the pleasure of the President / Lok Sabha confidence), can be either an *elected* or *nominated* member of either House within 6 months, and is the Leader of the House only in the House to which he/she belongs."
+    },
+    {
+      "id": "polity_ak_0074",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements regarding the office of Vice President of India is NOT correct?\n\n  *(a. All members of Parliament vote in the election of the Vice President of India | b. No woman has ever held the office | c. In case of vacancy, election to the office shall be held within six months | d. None of these)*",
+      "a": "**c (In case of vacancy, election to the office shall be held within six months)** — Under Article 68(2), an election to fill a vacancy in the office of Vice-President is to be held *\"as soon as possible\"* (there is no 6-month limit)."
+    },
+    {
+      "id": "polity_ak_0075",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "No demand for a grant is to be made before Parliament except on the recommendation of:\n\n  *(a. Speaker of Lok Sabha | b. Prime Minister | c. Finance Minister | d. President of India)*",
+      "a": "**d (President of India)** — Article 113(3) mandates that no demand for a grant shall be made except on the recommendation of the President."
+    },
+    {
+      "id": "polity_ak_0076",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The tenure of Lok Sabha, normally, shall be five years from the date of:\n\n  *(a. Declaration of the election results | b. Submission of the list of elected members to the President, by the Election Commission | c. First sitting of the newly elected Lok Sabha | d. Taking oath of office by the elected members)*",
+      "a": "**(A):** **c (First sitting of the newly elected Lok Sabha)** — Under Article 83(2), the Lok Sabha, unless sooner dissolved, continues for five years from the date appointed for its first meeting."
+    },
+    {
+      "id": "polity_ak_0077",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements regarding the strength of Judges in the higher Judiciary is correct?\n\n  a. The number of judges of the Supreme Court of India is as decided by the Parliament by law\n\n  b. The number of judges of High Court of a state in India is as decided by the President of India\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**c (Both of these)** — Under Article 124(1), the number of judges in the Supreme Court is determined by Parliament by law. Under Article 216, every High Court consists of a Chief Justice and such other judges as the President may from time to time deem it necessary to appoint."
+    },
+    {
+      "id": "polity_ak_0078",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following principles is NOT considered a part of the Principles of Natural Justice?\n\n  *(a. Audi alteram partem - listen to the other side | b. Nemo debet esse judex in propria causa - No one to be made a judge in their own case | c. Res judicata - a matter judged and settled | d. A reasoned decision)*",
+      "a": "**(A):** **c (Res judicata - a matter judged and settled)** — *Audi alteram partem* (fair hearing), *Nemo judex in causa sua* (rule against bias), and reasoned decisions (speaking orders) are the three pillars of Natural Justice. *Res judicata* is a procedural rule of finality in litigation (Section 11, CPC)."
+    },
+    {
+      "id": "polity_ak_0079",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Parliamentary Committees have members from both the Houses of Parliament?\n\n  1. Public Accounts Committee\n\n  2. Departmentally Related Standing Committee\n\n  3. Estimates Committee\n\n  4. Committee of Privileges\n\n     *(a.* 1 & 2 Only | b. 1, 2 & 3 Only *| c. 1, 3 & 4 Only | d. 2, 3 & 4 Only)*",
+      "a": "**a (1 & 2 Only)** — The Public Accounts Committee (22 members: 15 LS + 7 RS) and Departmentally Related Standing Committees (31 members: 21 LS + 10 RS) are joint committees. The Estimates Committee (30 members) belongs exclusively to the Lok Sabha, and each House has its own separate Committee of Privileges."
+    },
+    {
+      "id": "polity_ak_0080",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A deadlock between the Lok Sabha and the Rajya Sabha calls for a joint sitting of both Houses, for the passage of:\n\n  1. Ordinary Bill\n\n  2. Money Bill\n\n  3. Motion of Thanks to President's Address\n\n  4. Motion to impeach the President of India\n\n     *(a. 1 Only | b. 1, 2 & 3 Only | c. 1, 3 & 4 Only | d. 2, 3 & 4 Only)*",
+      "a": "**a (1 Only)** — Under Article 108, a joint sitting can only be summoned to resolve a deadlock over an Ordinary Bill or a Financial Bill (under Article 117(1)/(3)), never for a Money Bill, Constitutional Amendment Bill, Motion of Thanks, or Impeachment motion."
+    },
+    {
+      "id": "polity_ak_0081",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who, among the following, tables the report of the Public Accounts Committee (PAC) before the Parliament?\n\n  *(a. President of India | b. Finance Minister | c. Speaker of Lok Sabha | d. Chairperson of PAC)*",
+      "a": "**d (Chairperson of PAC)** — The report of the Public Accounts Committee is presented to the House directly by the Chairperson of the PAC."
+    },
+    {
+      "id": "polity_ak_0082",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following departments of Ministry of Finance is responsible for preparation and presentation of the Union Budget to the Parliament?\n\n  *(a. Department of Revenue | b. Department of Economic Affairs | c. Department of Financial Services | d. Department of Expenditure)*",
+      "a": "**b (Department of Economic Affairs)** — The Budget Division within the Department of Economic Affairs (Ministry of Finance) is responsible for preparing and presenting the Union Budget."
+    },
+    {
+      "id": "polity_ak_0083",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are the role(s) of State Finance Commissions?\n\n  a. to recommend grant-in-aid to the Panchayats and the Municipalities from the Consolidated Fund of India\n\n  b. to receive grants directly from the Finance Commissions set up by the Union Government\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**d (None of these)** — Under Articles 243-I and 243-Y, a State Finance Commission recommends grants-in-aid to Panchayats and Municipalities from the **Consolidated Fund of the State** (not the Consolidated Fund of India), and it is an advisory body that does not receive grants directly."
+    },
+    {
+      "id": "polity_ak_0084",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the official languages in India?\n\n  1. Official language of the Union is Hindi\n\n  2. The state legislature shall adopt one or more languages in use in the state as the official language of the state\n\n  3. Official language adopted by the state legislature shall be from the Eighth Schedule\n\n     *(a. 1 Only | b. 1 & 2 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 2 Only)** *(or **a: 1 Only**)* — Under Article 343, the official language of the Union is Hindi in Devanagari script. Under Article 345, a State Legislature may by law adopt any one or more of the languages in use in the State (or Hindi) as official language(s)—and this choice is NOT restricted to languages in the Eighth Schedule (3 is false)."
+    },
+    {
+      "id": "polity_ak_0085",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In the Lok Sabha, the purpose of an Adjournment Motion is:\n\n  *(a. to allow a discussion on a definite matter of urgent public importance | b. to let opposition members collect information from the Ministers | c. to allow a reduction of amount in a demand for grant | d. to postpone the proceedings to check inappropriate or violent behaviour on part of some members)*",
+      "a": "**(A):** **a (to allow a discussion on a definite matter of urgent public importance)** — An Adjournment Motion interrupts the normal business of the Lok Sabha to draw attention to a definite matter of urgent public importance with the support of at least 50 members."
+    },
+    {
+      "id": "polity_ak_0086",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following do NOT hold office during the pleasure of the President of India?\n\n  1. Ministers of the Union Council of Ministers\n\n  2. Ministers in the Council of Ministers for the NCT of Delhi\n\n  3. Solicitor General of India\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. None of these)*",
+      "a": "**d (None of these)** — Union Ministers (Art 75(2)), Ministers of NCT of Delhi (Art 239AA(5)), and the Solicitor General of India (law officer appointed by the Central Government) all hold office during the pleasure of the President/Government."
+    },
+    {
+      "id": "polity_ak_0087",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is the largest Parliamentary Committee in India?\n\n  *(a. Public Accounts Committee | b. Departmentally Related Standing Committee | c. Estimates Committee | d. Privileges Committee)*",
+      "a": "**b (Departmentally Related Standing Committee)** *(31 members: 21 LS + 10 RS)* — Note: Each of the 24 DRSCs has 31 members, making it the largest by total headcount among the options, whereas the **Estimates Committee** (30 members, all from Lok Sabha) is the largest single-Standing Committee of the Lok Sabha."
+    },
+    {
+      "id": "polity_ak_0088",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct?\n\n  1. If a person, having been elected to both the Houses of Parliament, does not intimate within the stipulated time in which House they desire to serve, their seat in the Rajya Sabha becomes vacant.\n\n  2. If a person is elected to the Parliament as well as the state legislature, they shall resign from state legislature within 14 days, else their seat in the Parliament becomes vacant.\n\n  3. If a person is elected to two seats in a House and they do not exercise the option for any one, both seats become vacant.\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Statement 1 is governed by Section 68 of the RPA, 1951 (10-day window, default vacates Rajya Sabha seat); Statement 2 by the *Prohibition of Simultaneous Membership Rules, 1950* under Article 101(2) (14-day window, default vacates Parliament seat); and Statement 3 by Section 70 of the RPA, 1951 (default vacates both seats)."
+    },
+    {
+      "id": "polity_ak_0089",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following can be a ground to remove a judge of Supreme Court of India?\n\n  1. Misbehaviour\n\n  2. Incapacity\n\n  3. Error of judgment\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Under Article 124(4), a Supreme Court Judge can be removed only on the grounds of **proved misbehaviour** or **incapacity**. Mere error of judgment is never a ground for removal."
+    },
+    {
+      "id": "polity_ak_0090",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Supreme Court of India?\n\n  1. During a vacancy in the office of the Chief Justice of India, the senior most judge of the Supreme Court shall perform the duties of the office.\n\n  2. Parliament can enlarge the powers of the Supreme Court.\n\n  3. A judge of the Supreme Court can resign from the office by writing to the Chief Justice of India.\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 Only | d. All of these)*",
+      "a": "**c (2 Only)** — Under Article 126, during a vacancy in the office of CJI, the duties are performed by *such one of the other Judges of the Court as the President may appoint* (1 is incorrect). Under Article 138, Parliament can enlarge the jurisdiction/powers of the SC (2 is correct). Under Article 124(2)(a), a Judge resigns by writing addressed to the **President**, not the CJI (3 is incorrect)."
+    },
+    {
+      "id": "polity_ak_0091",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding elections in India?\n\n  1. To contest an election for the seat allotted to the state of Sikkim in Lok Sabha, the candidate must be an elector for the Parliamentary constituency of Sikkim.\n\n  2. A petition calling in question an election to a seat of Lok Sabha can be presented before the High Court only by any candidate at such election or any elector who voted at such election.\n\n  3. If a candidate is contesting in more than one parliamentary constituency, not more than one of the deposits shall be returned, even if the candidate wins from all the seats.\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — Statement 1 is correct under Section 4(ccc) of the RPA, 1951. Statement 3 is correct under the proviso to Section 158(3) of the RPA, 1951. Statement 2 is incorrect because under Section 81 of the RPA, 1951, an election petition can be filed by any candidate or *any elector* (defined as a person entitled to vote in that election, whether or not they actually voted)."
+    },
+    {
+      "id": "polity_ak_0092",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the writ of Certiorari in India?\n\n  1. It cannot lie against a commission of enquiry\n\n  2. A High Court cannot issue Certiorari to another High Court\n\n  3. While issuing Certiorari, a Court acts within the appellate jurisdiction.\n\n     *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — A Commission of Inquiry is merely a fact-finding body without binding adjudicatory power, and a High Court cannot issue a writ to another High Court of coordinate jurisdiction (1 & 2 are correct). While issuing Certiorari, the Court exercises supervisory/original writ jurisdiction, not appellate jurisdiction (3 is incorrect)."
+    },
+    {
+      "id": "polity_ak_0093",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Regarding the office of the Speaker of Lok Sabha, which of the following statements is/are correct?\n\n  1. (S)he holds office during the pleasure of the President of India\n\n  2. (S)he need not be a member of the House at the time of taking over as Speaker, but has to become a member of the House within six months\n\n  3. If (s)he intends to resign, the letter of resignation shall be addressed to the Deputy Speaker of Lok Sabha\n\n     *(a. 1 & 2 Only | b. 2 & 3 Only | c. 3 Only | d. All of these)*",
+      "a": "**c (3 Only)** — Under Article 93, the Speaker must be a member of the Lok Sabha at the time of election and does not hold office during the pleasure of the President. Under Article 94(b), the Speaker addresses his/her resignation letter to the Deputy Speaker."
+    },
+    {
+      "id": "polity_ak_0094",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following factors can be considered as a restriction on the sovereignty of Parliament in India?\n\n  1. A written Constitution\n\n  2. Federal system of Government\n\n  3. Fundamental Rights\n\n  4. Judicial Review\n\n     *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Unlike the British doctrine of Parliamentary Sovereignty, the Indian Parliament's powers are limited by a written Constitution, federal division of legislative powers, justiciable Fundamental Rights (Art 13), and Judicial Review."
+    },
+    {
+      "id": "polity_ak_0095",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n\n  1. Members of Parliament can make and subscribe oath or affirmation only in any of the languages mentioned in the Eighth Schedule.\n\n  2. Union Ministers can make and subscribe oath or affirmation in either English or Hindi language.\n\n     *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — MPs can take their oath/affirmation in **English** or in any of the 22 languages specified in the Eighth Schedule (so 'only Eighth Schedule languages' is false). Similarly, Union Ministers are not restricted to English or Hindi alone."
+    },
+    {
+      "id": "polity_ak_0096",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements regarding the Parliament of India is/are correct?\n\n  1. President of India is an integral part of the Parliament\n\n  2. The Union Territories in India do not have any representation in Parliament, except Delhi and Puducherry\n\n  3. Rajya Sabha has a term of 6 years.\n\n     *(a. 1 Only | b. 1 & 2 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 Only)** — Under Article 79, the Parliament consists of the President and the two Houses (1 is correct). All Union Territories have representation in the Lok Sabha (2 is false), and the Rajya Sabha is a continuing chamber with no fixed term—only its *members* have a 6-year term (3 is false)."
+    },
+    {
+      "id": "polity_ak_0097",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are correct regarding the judiciary in India?\n\n  a. Supreme Court has administrative control over the High Courts in India\n\n  b. High Court of a state has administrative control over the subordinate courts in that state\n\n  *(c. Both of these | d. None of these)*",
+      "a": "**b** — Under Articles 227 and 235, a High Court has administrative and judicial superintendence over all subordinate courts in its territorial jurisdiction. However, the Supreme Court does NOT exercise administrative control over the High Courts."
+    },
+    {
+      "id": "polity_ak_0098",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In an election, if there is an equality of votes polled in favour of two or more candidates, which of the following statements is correct as per the Representation of People Act, 1951?\n\n  *(a. The returning officer shall exercise a casting vote to decide between such candidates | b. There will be held a re-election between all the contesting candidates | c. There will be held a re-election between such candidates in the tie | d. The returning officer shall decide between such candidates by a lot)*",
+      "a": "**d (The returning officer shall decide between such candidates by a lot)** — Under Section 65 of the Representation of the People Act, 1951, in case of an equality of votes between candidates, the Returning Officer decides between them by drawing lots, and the person on whom the lot falls is deemed to have received an additional vote."
+    },
+    {
+      "id": "polity_ak_0099",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n\n  1. No procedure has been laid down in the Constitution of India for removal of the Governor.\n\n  2. In a Union Territory having a legislative setup, the Chief Minister is appointed by the Lt. Governor on the basis of majority support in the legislature.\n\n  3. The judges of the High Court of a state are appointed by the Governor of that state.\n\n  4. Governor is the final authority to decide if any question arises whether the Governor is required to act in discretion on a matter.\n\n     *(a. 1, 2 & 3 Only | b. 1 & 4 Only | c. 2 & 4 Only | d. 4 Only)*",
+      "a": "**b (1 & 4 Only)** — The Constitution lays down no procedure for removing a Governor (Art 156(1)), and under Article 163(2), the Governor's decision on whether a matter falls within his/her discretion is final (1 & 4 are correct). In UTs with a legislature (Delhi & Puducherry), the Chief Minister is appointed by the **President**, not the Lt. Governor (2 is false), and High Court Judges are appointed by the **President** under Article 217 (3 is"
+    },
+    {
+      "id": "polity_ak_0100",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Comptroller and Auditor General of India can be removed from office by: *(a. President of India, by an order, after an address in both the Houses of Parliament | b. Chief Justice of India, on the recommendation of an enquiry conducted by the Supreme Court of India | c. President of India, on the recommendation of an enquiry conducted by the Supreme Court of India | d. President of India, on the recommendation of the Chief Justice of India)*",
+      "a": "**a (President of India, by an order, after an address in both the Houses of Parliament)** — Under Article 148(1) read with Article 124(4), the CAG is removed by the President on the same grounds (proved misbehaviour or incapacity) and in the same manner as a Judge of the Supreme Court.\n\n## Part 3: Questions AK 0101 to AK 0150"
+    },
+    {
+      "id": "polity_ak_0101",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A Bill dealing exclusively with which of the following matters can be deemed to be a Money Bill? 1. Custody of the Contingency Fund of India. 2. Appropriation of money out of the Contingency Fund of India. 3. Imposition or abolition of any tax by any local authority for local purposes. 4. Declaring certain expenditure as charged expenditure on the Consolidated Fund of India. *(a.* 1 & 3 Only | b. 1 & 4 Only | c. *2 & 4 Only | d. All of these)*",
+      "a": "**b (1 & 4 Only)** — Custody of the Consolidated or Contingency Fund of India (Art 110(1)(c)) and declaring expenditure charged on the Consolidated Fund of India (Art 110(1)(b)) are Money Bill matters. Appropriation under Art 110(1)(d) applies to the Consolidated Fund (not Contingency Fund), and local taxes for local purposes are excluded under Art 110(2)."
+    },
+    {
+      "id": "polity_ak_0102",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is correct regarding the powers of Parliament (with respect to tax proposals in the Budget)? *(a.* It can increase a tax, but *not reduce it. | b. It can increase a tax as well as reduce or abolish it. | c. It cannot increase a tax, but can reduce or abolish it. | d. It can neither increase a tax nor abolish it.)*",
+      "a": "**c (It cannot increase a tax, but can reduce or abolish it)** — Under the proviso to Article 117(1) and parliamentary rules, Parliament cannot increase a tax proposed by the Executive without the President's recommendation, but it can move amendments to reduce or abolish a tax."
+    },
+    {
+      "id": "polity_ak_0103",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct about the Governor of a state? 1. It is not an office of profit. 2. It functions as an agent of the Union in the state. 3. All the discretionary powers associated with the office are mentioned in the Constitution of India. 4. The term of the office is five years. *(a. 1, 2 & 4 Only | b. 1 & 2 Only | c. 2, 3 & 4 Only | d. All of these)*",
+      "a": "**a (1, 2 & 4 Only)** — The Governor's office is exempted from 'office of profit' (Art 158(2)), acts as a link/agent of the Union, and has a normal term of 5 years subject to the President's pleasure (Art 156). Situational discretionary powers (e.g., hung assembly) are not explicitly written in the Constitution (3 is false)."
+    },
+    {
+      "id": "polity_ak_0104",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following items are included in the Union List under the Seventh Schedule of Constitution of India? 1. Criminal Procedure 2. Election to the Legislatures of states 3. Marriage and Divorce 4. Bankruptcy and Insolvency *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2 Only | d. 2, 3 & 4 Only)*",
+      "a": "**c (2 Only)** — Elections to Parliament and State Legislatures fall under Entry 72 of the Union List. Criminal Procedure (Entry 2), Marriage and Divorce (Entry 5), and Bankruptcy and Insolvency (Entry 9) are in the Concurrent List."
+    },
+    {
+      "id": "polity_ak_0105",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions of the Constitution of India promote 'Equality'? 1. Preamble 2. Fundamental Rights 3. Directive Principles of State Policy 4. Elections *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1, 2 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Equality is promoted in the Preamble (equality of status and opportunity), Fundamental Rights (Arts 14–18), DPSPs (Arts 38, 39), and Elections (Arts 325–326 universal adult suffrage without discrimination)."
+    },
+    {
+      "id": "polity_ak_0106",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the privileges of the Members of Parliament in India? a. They cannot be arrested during a session of Parliament. b. They cannot be summoned to give evidence before a court, while the House is in session. *(c. Both of these | d. None of these)*",
+      "a": "**b** — Freedom from arrest applies only to *civil* cases (not criminal or preventive detention cases), making statement 'a' incorrect. However, an MP cannot be summoned without the leave of the House to give evidence in a court while Parliament is in session."
+    },
+    {
+      "id": "polity_ak_0107",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the removal of a judge of Supreme Court? a. The motion of removal of a judge lapses on the dissolution of Lok Sabha. b. Supreme Court cannot restrain the judge, against whom allegations have been made, from functioning. *(c. Both of these | d. None of these)*",
+      "a": "**b** — In *Sub-Committee on Judicial Accountability v. Union of India* (1991), the Supreme Court held that a removal motion does not lapse on the dissolution of Lok Sabha, and the Court cannot judicially restrain a judge from functioning prior to removal."
+    },
+    {
+      "id": "polity_ak_0108",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Arrange the following significant landmarks towards decentralisation in India in the correct\nchronological order.\n1. Ripon's Resolution on Local Self Government\n2. Royal Commission on Decentralisation\n3. Report of Montagu-Chelmsford on Constitutional Reforms\n4. Report of Balwantrai Mehta Committee\nSelect the correct answer using the code given below:\na. 1-2-3-4\nb. 2-1-3-4\nc. 2-3-1-4\nd. 1-3-2-4",
+      "a": "**a (1-2-3-4)** — Chronological landmarks towards decentralisation: 1. Lord Ripon's Resolution on Local Self-Government (1882 — the 'Magna Carta' of local democracy), 2. Royal Commission on Decentralisation (1907, chaired by C.E.H. Hobhouse), 3. Montagu-Chelmsford Report on Constitutional Reforms (1918), and 4. Balwantrai Mehta Committee Report (1957, which recommended the 3-tier Panchayati Raj system)."
+    },
+    {
+      "id": "polity_ak_0109",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding a Bill passed by the state legislature\nand reserved by the Governor of the state for the President's consideration?\n1. If the President returns the Bill for the reconsideration of the state legislature, the legislature\nshall reconsider it within six months.\n2. The President cannot return a Money Bill.\n3. The President has no discretion in deciding on such Bills.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**a (1 & 2 Only)** — Under Article 201, when a State Bill is returned by the President for reconsideration, the state legislature must reconsider it within six months (1 is correct). The President cannot return a Money Bill (2 is correct). The President possesses absolute and pocket veto power over state bills and has full discretion whether to assent or withhold assent (3 is false)."
+    },
+    {
+      "id": "polity_ak_0110",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements regarding the administration of the National Capital\nTerritory of Delhi are correct?\n1. The Chief Minister is appointed by the President of India.\n2. The Lieutenant Governor can act in discretion in a matter which falls outside the purview of\nthe powers conferred on the Legislative Assembly.\n3. The Council of Ministers cannot consist of more than ten per cent of the total number of\nmembers in the Legislative Assembly.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**d (All of these)** — Under Article 239AA of the Constitution, the Chief Minister of Delhi is appointed by the President (1 is correct), the Lt. Governor can exercise discretion on matters outside the Assembly's competence (Police, Public Order, Land) (2 is correct), and the Council of Ministers is capped at 10% (7 ministers) of the 70 MLAs (3 is correct)."
+    },
+    {
+      "id": "polity_ak_0111",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "If an inferior court has violated the principles of natural justice, then which of the following\nwrits is most suitable to be granted by the superior court?\na. Mandamus\nb. Prohibition\nc. Certiorari\nd. Quo Warranto",
+      "a": "**c (Certiorari)** — The writ of Certiorari is issued by a superior court (Supreme Court or High Court) to quash an order already passed by an inferior court, tribunal, or quasi-judicial authority when it has acted without jurisdiction, in excess of jurisdiction, or in violation of the principles of natural justice."
+    },
+    {
+      "id": "polity_ak_0112",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the compulsory provisions of the\n73rd Amendment to the Constitution of India?\n1. At least one-third of the seats reserved for SCs and STs shall be reserved for women.\n2. At least one-third of the total number of offices of chairpersons of Panchayats at each level\nshall be reserved for women.\n3. The legislature of a state shall, by law, make provisions for the audit of accounts of\nPanchayats.\n4. A District Planning Committee shall be constituted in every district.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 1, 2 & 4 Only\nd. 3 & 4 Only",
+      "a": "**a (1 & 2 Only)** — Mandatory/compulsory provisions under the 73rd Amendment (Article 243D) include reserving at least one-third of seats for women (including SC/ST sub-quota) and reserving at least one-third of chairperson offices for women. Provisions for audit of accounts (Art 243J) are voluntary/discretionary, and District Planning Committees fall under the 74th Amendment (Article 243ZD)."
+    },
+    {
+      "id": "polity_ak_0113",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Parliament can make any law for the whole or any part of India for implementing\nInternational treaties\na. with the consent of all the states\nb. with the consent of the majority of states\nc. with the consent of the concerned states\nd. without the consent of any state",
+      "a": "**d (without the consent of any state)** — Under Article 253 of the Constitution of India, Parliament has plenary power to make any law for the whole or any part of the territory of India for implementing any international treaty, agreement, or convention, without needing the consent of any state."
+    },
+    {
+      "id": "polity_ak_0114",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT correct regarding the proclamation of President's Rule in a\nstate?\na. The concerned Chief Minister may not be consulted before imposition of President's Rule\nb. The Governor may not have recommended for the imposition of President's Rule\nc. Lok Sabha may cause revocation of President's Rule in state by passing a resolution to that\neffect\nd. It may be approved by Parliament by a simple majority",
+      "a": "**c (Lok Sabha may cause revocation of President's Rule in state by passing a resolution to that effect)** — A proclamation of President's Rule under Article 356 may be revoked by the President at any time by a subsequent proclamation without requiring any parliamentary resolution (unlike Article 352 National Emergency where Lok Sabha can force revocation under Art 352(8))."
+    },
+    {
+      "id": "polity_ak_0115",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Sixth Schedule of the Constitution of India makes special provisions with regards to the\ntribal areas in which of the following states?\na. Assam, Meghalaya, Nagaland\nb. Arunachala Pradesh, Sikkim, Mizoram\nc. Manipur, Mizoram, Meghalaya\nd. Assam, Tripura, Meghalaya",
+      "a": "**d (Assam, Tripura, Meghalaya)** — Under Article 244(2) and the Sixth Schedule of the Constitution, special administrative provisions for Autonomous District Councils apply to the tribal areas of four north-eastern states: Assam, Meghalaya, Tripura, and Mizoram (AMTM)."
+    },
+    {
+      "id": "polity_ak_0116",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following presides over a joint sitting of the two Houses of Parliament?\na. President of India\nb. Speaker of Lok Sabha\nc. Chairperson of Rajya Sabha\nd. A member of Parliament appointed by the President",
+      "a": "**b (Speaker of Lok Sabha)** — Under Article 118(4), the Speaker of the Lok Sabha presides over a joint sitting of both Houses of Parliament. In the Speaker's absence, the Deputy Speaker presides; if both are absent, the Deputy Chairman of Rajya Sabha presides. The Chairman of Rajya Sabha (Vice President) never presides."
+    },
+    {
+      "id": "polity_ak_0117",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions is NOT correct regarding the proclamation of Emergency\nunder Article 352 of the Constitution of India?\na. The proclamation is valid for a period of six months\nb. Lok Sabha may pass a resolution to disapprove continuation of Emergency & force President\nto revoke it\nc. Such a proclamation has been issued thrice so far.\nd. No such proclamation has ever been issued on the ground of 'war'",
+      "a": "**d (No such proclamation has ever been issued on the ground of 'war')** — Proclamations of National Emergency under Article 352 were issued on the grounds of external aggression/war in October 1962 (Chinese aggression) and December 1971 (Indo-Pakistan War). Only the June 1975 emergency was declared on grounds of 'internal disturbance'."
+    },
+    {
+      "id": "polity_ak_0118",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the National Capital Territory of\nDelhi?\na. An order made by President to declare President's Rule shall expire at the end of one year\nb. The Lieutenant Governor and the Council of Ministers shall be under the general control of\nPresident\nc. Both of these\nd. None of these",
+      "a": "**c (Both of these)** — Under Article 239AB, the President may suspend the administration of Delhi by order for a period of one year (extendable up to three years). Under Article 239, Union Territory administration operates under the overall superintendence and general control of the President through the Lt. Governor."
+    },
+    {
+      "id": "polity_ak_0119",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions provide for the independence of the Supreme Court\nof India?\n1. Officers and servants of the SC are appointed by the Chief Justice\n2. Error of judgment, however gross, cannot amount to misbehaviour or incapacity and the\njudge cannot be removed on that ground.\n3. Power to punish for contempt.\n4. Retired judges are prohibited from pleading or acting in any court or authority in India.\nSelect the correct answer using the code given below:\na. 1 & 3 Only\nb. 2, 3 & 4 Only\nc. 1, 2 & 4 Only\nd. All of these",
+      "a": "**d (All of these)** — Safeguards ensuring the independence of the Supreme Court include appointment of staff by the CJI (Art 146), judicial immunity protecting judges from removal for bona fide errors of judgment (*C. Ravichandran Iyer* case), plenary contempt powers (Arts 129 & 142), and a strict post-retirement prohibition on practicing law before any Indian court (Art 124(7))."
+    },
+    {
+      "id": "polity_ak_0120",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding Special Leave Petitions (SLP)?\n1. Special leave to appeal is provided as a Constitutional right under Article 136 of the\nConstitution.\n2. It can be exercised only when a substantial question of law is involved.\n3. Both Supreme Court and the High Courts exercise the power to grant such a leave.\n4. Matters under SLP can be brought only as an appeal from the lower courts or tribunals.\nSelect the correct answer using the code given below:\na. 1 & 4 Only\nb. 1, 2 & 3 Only\nc. 2, 3 & 4 Only\nd. 4 Only",
+      "a": "**d (4 Only)** — Under Article 136, Special Leave to Appeal is not an ordinary right but an extraordinary discretionary power vested solely in the Supreme Court (not High Courts). It is plenary and can be granted against any judgment, decree, determination, sentence or order in any cause or matter passed by any court or tribunal (except military tribunals)."
+    },
+    {
+      "id": "polity_ak_0121",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Chairperson of Rajya Sabha?\n1. The Chairperson cannot preside over a sitting of the House where a resolution for his/her\nremoval is under consideration.\n2. The Chairperson has the right to speak, and the right to vote in the first instance while a\nresolution for his/her removal is under consideration.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 2 Only\nc. Both 1 & 2\nd. Neither 1 nor 2",
+      "a": "**a (1 Only)** — Under Article 92(1), the Vice President cannot preside over the Rajya Sabha when a resolution for his/her removal is under consideration. Unlike the Lok Sabha Speaker (who can vote in the first instance under Art 96(2)), under Article 92(2) the Rajya Sabha Chairperson can speak and participate but has NO right to vote at all on a removal resolution."
+    },
+    {
+      "id": "polity_ak_0122",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following persons are eligible for appointment as a Judge of a High Court in\nIndia?\n1. A citizen of India who has for at least ten years held a judicial office in India.\n2. A citizen of India who has for at least ten years been an Advocate of a High Court.\n3. A citizen of India who is a distinguished jurist.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**a (1 & 2 Only)** — Under Article 217(2), a person is eligible to be appointed as a High Court judge if they are an Indian citizen who has held judicial office for 10 years or been an advocate in a High Court for 10 years. The 'distinguished jurist' qualification exists only for appointment to the Supreme Court (Art 124(3)(c)), not the High Court."
+    },
+    {
+      "id": "polity_ak_0123",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Governor of a state in India?\na. Governor shall be eligible to be elected as a member of state legislature.\nb. Governor is not eligible to hold any office of profit after retirement or demitting office.\nc. Both of these\nd. None of these",
+      "a": "**d (None of these)** — Under Article 158(1), a Governor cannot be a member of either House of Parliament or a State Legislature (if elected, they are deemed to vacate their seat). The Constitution does not debar a retired Governor from holding further public office or government positions."
+    },
+    {
+      "id": "polity_ak_0124",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The subject of 'Urban Local Government' is managed by which of the following Ministries of\nthe Government of India?\n1. Ministry of Defence\n2. Ministry of Home Affairs\n3. Ministry of Housing and Urban Affairs\n4. Ministry of Panchayati Raj\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 2 & 3 Only\nc. 3 & 4 Only\nd. 1, 2 & 3 Only",
+      "a": "**d (1, 2 & 3 Only)** — Urban local government in India is administered by three Union Ministries: Ministry of Housing and Urban Affairs (general urban municipalities), Ministry of Defence (Cantonment Boards under the Cantonments Act 2006), and Ministry of Home Affairs (municipalities in Union Territories). Ministry of Panchayati Raj handles rural local bodies."
+    },
+    {
+      "id": "polity_ak_0125",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding disqualification of members of\nlegislature under Anti Defection Law?\n1. It is applicable only to the members belonging to the recognised political parties, and the\nnominated and independent members of the House.\n2. It does not apply to mergers but it applies to the splits of legislative parties.\n3. It does not apply to the Speaker of Lok Sabha.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 2 Only\nc. 1 & 3 Only\nd. All of these",
+      "a": "**b (2 Only)** — Under the Tenth Schedule (as amended by the 91st Amendment Act, 2003), the exemption for one-third splits of a political party was deleted, so splits now attract disqualification, while mergers (approved by 2/3rds of legislators) remain protected. The Speaker/Deputy Speaker is exempted from disqualification under Paragraph 5 if they resign from their party on election."
+    },
+    {
+      "id": "polity_ak_0126",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n1. When the office of the Speaker and the Deputy Speaker is vacant, a member from the Panel\nof Chairpersons presides over the session of Lok Sabha.\n2. The oath of office for the Speaker is administered by the President.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 2 Only\nc. Both 1 & 2\nd. Neither 1 nor 2",
+      "a": "**d (Neither 1 nor 2)** — Under Article 95(1), when the offices of both the Speaker and Deputy Speaker are VACANT (as opposed to merely absent), the Panel of Chairpersons cannot preside; the President must appoint an MP to preside. The Speaker takes no separate oath of office as Speaker, taking only the general oath of an MP under Article 99."
+    },
+    {
+      "id": "polity_ak_0127",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n1. Nominated members of Parliament cannot vote in the election of the President of India.\n2. Nominated members of Parliament cannot vote in the impeachment process of the President\nof India.\n3. Nominated members of Parliament cannot vote in the election of the Vice President of India\n4. Nominated members of Parliament cannot vote in the removal process of the Vice President\nof India.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1 & 2 Only\nc. 2, 3 & 4 Only\nd. All of these",
+      "a": "**a (1 Only)** — Under Article 54, nominated members of Parliament cannot vote in the election of the President of India. However, they participate fully in the impeachment of the President (Art 61), the election of the Vice President (Art 66), and the removal resolution of the Vice President."
+    },
+    {
+      "id": "polity_ak_0128",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The term 'Amicus Curiae' is often in the news related to various cases in the Courts of law.\nWhat do you understand by the term 'Amicus Curiae'?\na. A public prosecutor appointed by the Court to assist in litigation process.\nb. An expert in a field who is to provide evidence in a case related to that field.\nc. An impartial advisor to the Court in a case\nd. An advocate who represents a party in the case free of cost",
+      "a": "**c (An impartial advisor to the Court in a case)** — 'Amicus Curiae' literally translates from Latin as 'friend of the court'. It refers to an impartial person or organization not party to the litigation that is invited or permitted by the court to advise on legal questions, technical matters, or public policy aspects of the case."
+    },
+    {
+      "id": "polity_ak_0129",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In the areas covered under the Panchayat (Extension to the Scheduled Areas) Act, 1996, what\nis the role of Gram Sabha?\n1. Gram Sabha has the power to prevent alienation of land in the Scheduled Areas.\n2. Gram Sabha has the ownership of minor forest produce.\n3. Recommendation of Gram Sabha is required for granting prospecting licence or mining lease\nof any mineral in the Scheduled Areas.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1 & 2 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**b (1 & 2 Only)** — Under Section 4 of the PESA Act 1996, the Gram Sabha is endowed with the ownership of minor forest produce and the power to prevent alienation of tribal lands. However, its recommendation is mandatory only for prospecting licences or mining leases of *minor minerals* (not major or all minerals)."
+    },
+    {
+      "id": "polity_ak_0130",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Attorney General (AG) of\nIndia?\n1. AG can take part in the proceedings of Lok Sabha.\n2. AG can be a member of a Committee of Lok Sabha.\n3. AG can speak in Lok Sabha.\n4. AG can vote in Lok Sabha.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1, 2 & 3 Only\nc. 1 & 3 Only\nd. 2 & 4 Only",
+      "a": "**b (1, 2 & 3 Only)** — Under Article 88 of the Constitution, the Attorney General of India has the right to speak and take part in the proceedings of either House of Parliament, any joint sitting, and any parliamentary committee of which he/she may be named a member, but does not possess the right to vote."
+    },
+    {
+      "id": "polity_ak_0131",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding a Bill to amend the Constitution\nof India?\n1. Such a Bill can be introduced only in the Lok Sabha.\n2. If such an amendment seeks to make changes in the federal character of the Constitution, the\namendment also requires to be ratified by the legislature of all the states of India.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 2 Only\nc. Both 1 & 2\nd. Neither 1 nor 2",
+      "a": "**d (Neither 1 nor 2)** — A Constitutional Amendment Bill under Article 368 can be introduced in either House of Parliament (not only Lok Sabha). Amendments affecting federal provisions require ratification by the legislatures of not less than *half* of the States (not all States) by simple majority."
+    },
+    {
+      "id": "polity_ak_0132",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are included in the original jurisdiction of the Supreme Court of\nIndia?\n1. A dispute between the Government of India and one or more states.\n2. A dispute regarding election to either Houses of Parliament.\n3. A dispute between the Government of India and a Union Territory.\n4. A dispute between two or more states.\nSelect the correct answer using the code given below:\na. 1, 2 & 4 Only\nb. 1 & 3 Only\nc. 1, 3 & 4 Only\nd. 1 & 4 Only",
+      "a": "**d (1 & 4 Only)** — Under Article 131, the original jurisdiction of the Supreme Court is restricted to federal inter-governmental disputes: Centre vs one or more States, Centre + State(s) vs other State(s), and inter-State disputes. Election disputes go to High Courts (RPA 1951), and Union Territories are excluded from Article 131."
+    },
+    {
+      "id": "polity_ak_0133",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Writs for the enforcement of Fundamental Rights can be issued by?\na. Supreme Court Only\nb. Supreme Court and High Courts Only\nc. Supreme Court, High Courts and District Courts\nd. Supreme Court, High Courts and Attorney General of India",
+      "a": "**b (Supreme Court and High Courts Only)** — The writ jurisdiction for the enforcement of Fundamental Rights is vested exclusively in the Supreme Court under Article 32 and High Courts under Article 226. Subordinate courts cannot issue constitutional prerogative writs unless specifically empowered by Parliament by law."
+    },
+    {
+      "id": "polity_ak_0134",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Speaker of Lok Sabha?\n1. Speaker may not be a member of the House at the time of his/her election as the Speaker, but\nhe/she shall become a member within six months.\n2. Speaker may be removed by a resolution passed by both Houses of Parliament by a majority\nof all the then members of the Houses.\n3. On the dissolution of Lok Sabha, Speaker shall not vacate the office until before the first\nmeeting of the reconstituted Lok Sabha.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1 & 2\nc. 3 Only\nd. 2 & 3 Only",
+      "a": "**c (3 Only)** — Under the second proviso to Article 94, on the dissolution of Lok Sabha, the Speaker does not vacate his/her office until immediately before the first meeting of the new House. The Speaker must be an elected MP at the time of election (Art 93) and can be removed only by a resolution of the Lok Sabha passed by an effective majority (Art 94(c))."
+    },
+    {
+      "id": "polity_ak_0135",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What do you understand by a 'Vote on Account'?\na. A grant to meet only necessary expenditure during an election year, until election is completed\nb. A grant to meet an unexpected demand during a financial year, when there is time left to next\nbudget\nc. A grant in advance to meet the expenditure until process is completed to enact the\nAppropriation Act\nd. A composite grant covering all expenditure that is charged on the Consolidated Fund of India",
+      "a": "**c (A grant in advance to meet the expenditure until process is completed to enact the Appropriation Act)** — Under Article 116(1)(a), a Vote on Account is an advance grant made by the Lok Sabha to enable the executive government to meet essential expenditures for part of a financial year pending the formal passage of the Appropriation Bill."
+    },
+    {
+      "id": "polity_ak_0136",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Arrange the following Committees in increasing order of their membership strength:\n1. Public Accounts Committee\n2. Department Related Standing Committees\n3. Estimates Committee\nSelect the correct answer using the code given below:\na. 1-2-3\nb. 1-3-2\nc. 2-3-1\nd. 2-1-3",
+      "a": "**b (1-3-2)** — Strength of parliamentary committees in increasing order: 1. Public Accounts Committee (22 members: 15 LS + 7 RS), 3. Estimates Committee (30 members, all from LS), and 2. Department-Related Standing Committees (31 members: 21 LS + 10 RS)."
+    },
+    {
+      "id": "polity_ak_0137",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A leave of the House is required for which of the following?\n1. Adjournment Motion\n2. Introduction of Appropriation Bill in the House\n3. Withdrawal of any Bill from the House\n4. Censure Motion\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 3 & 4 Only\nc. 2 & 4 Only\nd. All of these",
+      "a": "**b (1, 3 & 4 Only)** — Leave of the House is required for an Adjournment Motion (requires leave of 50 members under Rule 60), withdrawal of a Bill after introduction (requires leave under Rule 110), and a Censure Motion. An Appropriation Bill is a Government Bill introduced as of right by the Finance Minister and does not require leave."
+    },
+    {
+      "id": "polity_ak_0138",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is correct regarding the Legislative Council in a state?\n1. It can be created by Parliament through a resolution passed by simple majority.\n2. It cannot amend or reject any Bill passed by the Legislative Assembly.\n3. If it rejects an Ordinary Bill that originated in the Assembly. the Assembly can override the\nCouncil by passing the Bill for second time\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb 2 Only\nc. 3 Only\nd. 2 & 3 Only",
+      "a": "**c (3 Only)** — Under Article 197, if the Legislative Council rejects or delays an ordinary bill passed by the Assembly, the Assembly can pass the bill a second time, overriding the Council. The Council has only a suspensive delay of 4 months total. Creation of a Council requires a special majority resolution by the State Assembly before a simple majority in Parliament (Art 169)."
+    },
+    {
+      "id": "polity_ak_0139",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the legislative relations between\ncentre and states in India?\n1. In case of overlap between the Union List and the State List, the Union List shall have\npredominance.\n2. In case of overlap between the Union List and the Concurrent List, the Union List shall\nprevail.\n3. In case of overlap between the State List and the Concurrent List, the State List shall prevail.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**a (1 & 2 Only)** — Under Article 246, in case of any conflict or overlap, the Union List prevails over the State List and the Concurrent List, and the Concurrent List prevails over the State List. Statement 3 is false because the Concurrent List overrides the State List."
+    },
+    {
+      "id": "polity_ak_0140",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the powers of Gram Sabha under\nThe Panchayats (Extension to Scheduled Areas) Act, 1996?\n1. They shall approve of all plans and programmes for the development of the village.\n2. They shall identify the beneficiaries under poverty alleviation programmes.\n3. They have power to enforce prohibition or to regulate the sale and use of arms in the village.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**a (1 & 2 Only)** — Under PESA 1996 Section 4(e), the Gram Sabha is empowered to approve developmental plans and identify beneficiaries for poverty alleviation programmes. Regulating the manufacture, sale, and use of arms is an exclusive State/Union police power and is not devolved to Gram Sabhas under PESA."
+    },
+    {
+      "id": "polity_ak_0141",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following candidates' nomination may be rejected for election to a seat in the\nState's Legislative Assembly?\n1. A person who is not an elector for any constituency in that State.\n2. A person who failed to lodge an account of election expenses within time.\n3. A person who is convicted in an offence where candidate is disqualified for a sentence of\nminimum 2 years imprisonment. The sentence awarded was of 3 years of imprisonment, but was\nsubsequently remitted to 1.5 years of imprisonment.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**d (All of these)** — Under RPA 1951, an MLA candidate must be a registered elector in that state (Sec 5), failure to lodge election accounts attracts disqualification (Sec 10A), and executive remission of sentence does not reduce the judicial sentence awarded for disqualification purposes (*Sarat Chandra Rabha v. Khagendranath*, 1960)."
+    },
+    {
+      "id": "polity_ak_0142",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions of the Constitution of India CAN NOT be amended by\nthe Parliament of India?\n1. Part III\n2. Part XI\n3. Part XV\n4. Third Schedule\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1, 2 & 3 Only\nc. 1, 2 & 4 Only\nd. None of these",
+      "a": "**d (None of these)** — Post-*Kesavananda Bharati* (1973), Parliament possesses constituent power under Article 368 to amend any part of the Constitution (including Fundamental Rights in Part III, Relations in Part XI, Elections in Part XV, and Schedules), provided the Basic Structure is not violated. No part is wholly unamendable."
+    },
+    {
+      "id": "polity_ak_0143",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The resignation of the Speaker of Lok Sabha shall be addressed to\na. The President of India\nb. The Deputy Speaker of Lok Sabha\nc. The Secretary General of Lok Sabha\nd. The House in the form of a motion",
+      "a": "**b (The Deputy Speaker of Lok Sabha)** — Under Article 94(b) of the Constitution, the Speaker of the Lok Sabha may at any time resign from office by writing under his/her hand addressed to the Deputy Speaker of the Lok Sabha."
+    },
+    {
+      "id": "polity_ak_0144",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements/provisions provide a safeguard for the independence of\nUnion Public Service Commission?\n1. The salaries of members are charged on the Consolidated Fund of India\n2. Members can be removed only on the recommendation of the Chairperson, after an enquiry\nby the Supreme Court of India\n3. Functions of UPSC cannot be altered without an amendment to the Constitution\n4. Members, on ceasing to hold office, are ineligible for further employment under the\nGovernment.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1, 2 & 3 Only\nc. 1 & 4 Only\nd. 2, 3 & 4 Only",
+      "a": "**c (1 & 4 Only)** — Under Article 322, salaries and pensions of UPSC members are charged on the Consolidated Fund of India. Under Article 319, members face strict post-retirement bans on further government employment. Removal is by the President on an inquiry by the Supreme Court (Art 317), and functions can be expanded by ordinary law (Art 321)."
+    },
+    {
+      "id": "polity_ak_0145",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding proclamation of President's Rule in a\nstate?\n1. The resolution of Parliament approving such a proclamation can be passed by simple majority.\n2. It can be revoked by the President only on the advice of Council of Ministers.\n3. The fundamental rights can be suspended by a separate proclamation, except those under\nArticle 20 and 21.\n4. Parliament can delegate the power to make laws for the state to the President or to any\nauthority specified by the President.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 3 & 4 Only\nd. None of these",
+      "a": "**b (1, 2 & 4 Only)** — A proclamation under Article 356 requires approval by simple majority in Parliament (1 is true), the President acts on the aid and advice of the Council of Ministers (2 is true), and Parliament can delegate legislative powers to the President (4 is true). Fundamental Rights are never suspended under President's Rule (statement 3 is false)."
+    },
+    {
+      "id": "polity_ak_0146",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A grant to meet a situation when the authorised amount by the Parliament is found to be\ninsufficient is known as\na. Additional Grant\nb. Excess Grant\nc. Supplementary Grant\nd. Token Grant",
+      "a": "**c (Supplementary Grant)** — Under Article 115(1)(a), a Supplementary Grant is passed when the amount authorized by Parliament for a particular service for the current financial year is found to be insufficient for the purposes of that year."
+    },
+    {
+      "id": "polity_ak_0147",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct?\n1. Citizens of India who obtain their citizenship by Registration are not eligible to hold\nConstitutional Offices.\n2. Citizens of India who obtain their citizenship by Naturalisation are not eligible to hold\nConstitutional Offices.\n3. Only natural citizens of India are allowed to hold Constitutional Offices.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb 3 Only\nc. All of these\nd. None of these",
+      "a": "**c (All of these)** — Under Indian citizenship and constitutional law (Article 58, 66, etc.), both natural-born citizens and citizens by registration or naturalisation are fully eligible to hold all constitutional offices. This contrasts with the US Constitution where only natural-born citizens can become President. Hence, statements 1, 2, and 3 are all NOT correct."
+    },
+    {
+      "id": "polity_ak_0148",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under the provisions of the Constitution of India, a community can be declared a minority\ncommunity on the basis of?\na. Religion only\nb. Either Religion or Language\nc. Either Religion or Language or Caste\nd. Either Religion or Language or Race",
+      "a": "**b (Either Religion or Language)** — Under Articles 29 and 30 of the Constitution, minorities are recognized on two distinct grounds: religion and language (religious and linguistic minorities). Caste and race are not recognized as bases for minority status."
+    },
+    {
+      "id": "polity_ak_0149",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The retired Chief Justice and other Judges of Supreme Court are debarred from pleading or\nacting in\na. any Court other than Supreme Court\nb. in any Court other than High Courts\nc. in any Criminal Court\nd. in any Court of India",
+      "a": "**d (in any Court of India)** — Under Article 124(7) of the Constitution, a retired Judge of the Supreme Court is completely debarred from pleading or acting in any court or before any authority anywhere within the territory of India."
+    },
+    {
+      "id": "polity_ak_0150",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The seat of Supreme Court is Delhi. It can sit in such other place as appointed by\na. The Chief Justice of India\nb. The President of India\nc. The Chief Justice of India, with the approval of the President of India\nd. The Parliament of India, by law",
+      "a": "**c (The Chief Justice of India, with the approval of the President of India)** — Under Article 130 of the Constitution of India, the Supreme Court shall sit in Delhi or in such other place or places as the Chief Justice of India may, with the approval of the President, from time to time, appoint."
+    },
+    {
+      "id": "polity_ak_0151",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The rules for regulating the practice and procedure of the Supreme Court are made by\na. The President of India\nb. The Supreme Court of India\nc. The Supreme Court of India with the approval of the President of India\nd. The Ministry of Law and Justice",
+      "a": "**c (The Supreme Court of India with the approval of the President of India)** — Under Article 145(1) of the Constitution, the Supreme Court may from time to time, with the approval of the President, make rules for regulating generally the practice and procedure of the Court."
+    },
+    {
+      "id": "polity_ak_0152",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are correct regarding the seating arrangement for the Leaders in\nthe Parliament of India?\na. The first seat on right hand side of the Chair in both Houses is reserved for the Prime\nMinister\nb. The first seat on left hand side of the Chair in both Houses is reserved for Leader of\nOpposition\nc. Both of these\nd. None of these",
+      "a": "**c (Both of these)** — By established parliamentary convention and rules of procedure, the front-row seat to the immediate right of the Speaker is reserved for the Leader of the House (the Prime Minister or a designated senior Minister), and the seat to the immediate left of the Chair is reserved for the Leader of the Opposition."
+    },
+    {
+      "id": "polity_ak_0153",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The distribution of powers between Centre and States under the Constitution of India is\nbased on the scheme provided in\na. Morley-Minto Reforms, 1909\nb. Montague-Chelmsford Reforms, 1919\nc. Government of India Act, 1935\nd. Indian Independence Act, 1947",
+      "a": "**c (Government of India Act, 1935)** — The federal scheme of distribution of legislative powers into three lists (Union List, State List, and Concurrent List) in the Seventh Schedule is directly adopted from the Government of India Act, 1935 (which had Federal, Provincial, and Concurrent lists)."
+    },
+    {
+      "id": "polity_ak_0154",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Constituent Assembly of India, which drafted the Constitution of India was constituted\nunder which of the following?\na. Indian Independence Act, 1947\nb. Cabinet Mission Plan, 1946\nc. Mountbatten Plan, 1947\nd. Cripps Mission, 1942",
+      "a": "**b (Cabinet Mission Plan, 1946)** — The Constituent Assembly of India was constituted in November 1946 in accordance with the scheme and recommendations formulated by the British Cabinet Mission Plan of May 1946."
+    },
+    {
+      "id": "polity_ak_0155",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Concurrent List in the Constitution of India has been borrowed from the Constitution\nof which of the following countries?\na. Ireland\nb. Canada\nc. United States of America\nd. Australia",
+      "a": "**d (Australia)** — The concept of the Concurrent List, as well as the freedom of trade, commerce, and intercourse (Part XIII) and joint sittings of Parliament, were borrowed from the Commonwealth of Australia Constitution Act 1900."
+    },
+    {
+      "id": "polity_ak_0156",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "One of the implications of equality in society is the absence of\na. Privileges\nb. Restraints\nc. Reservation of seats in Govt. Jobs\nd. Competition",
+      "a": "**a (Privileges)** — In political theory and constitutional jurisprudence, equality fundamentally implies the absence of special privileges in favour of any section of society, ensuring equal subjection of all classes to the ordinary law of the land (UPSC CSE 2017)."
+    },
+    {
+      "id": "polity_ak_0157",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following principles were added to the Directive Principles of State Policy by\nthe 42nd Amendment to the Constitution of India?\n1. Equal justice and free legal aid.\n2. Participation of workers in the management of industries.\n3. Protection of environment, and safeguarding of forests and wildlife\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**d (All of these)** — The 42nd Constitutional Amendment Act 1976 added four new Directive Principles: Article 39A (equal justice and free legal aid), Article 43A (participation of workers in management of industries), Article 48A (protection of environment, forests, and wildlife), and Article 39(f) (healthy development of children)."
+    },
+    {
+      "id": "polity_ak_0158",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Democracy's superior virtue lies in the fact that it calls into activity\na. superior individuals with dynamism and vision to lead the nation\nb. different ideologies of political parties to compete for people's support\nc. the intelligence and character of ordinary men and women\nd. the views of the majority of the people",
+      "a": "**c (the intelligence and character of ordinary men and women)** — John Stuart Mill articulated that democracy's superior virtue lies in the fact that it fosters and calls into active exercise the civic intelligence, moral character, and responsibility of ordinary citizens through popular participation (UPSC CSE 2017)."
+    },
+    {
+      "id": "polity_ak_0159",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Governor of a state?\na. The emoluments and allowances of the Governor shall not be diminished during his/her term\nof office.\nb. No criminal proceeding shall be instituted against Governor in any court during the term of\noffice.\nc. Both of these\nd. None of these",
+      "a": "**c (Both of these)** — Under Article 158(4), the emoluments and allowances of a Governor cannot be diminished during their term of office. Under Article 361(2), no criminal proceedings whatsoever can be instituted or continued against the Governor in any court during their term of office."
+    },
+    {
+      "id": "polity_ak_0160",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The idea of 'Justice' in the Constitution of India has been borrowed from which of the\nfollowing?\na. Soviet Constitution\nb. French Constitution\nc. Constitution of USA\nd. Constitution of Japan",
+      "a": "**a (Soviet Constitution)** — The constitutional ideals of Justice—social, economic, and political—enshrined in the Preamble were inspired by the Russian Revolution of 1917 and the Soviet constitutional framework, while Liberty, Equality, and Fraternity came from the French Revolution."
+    },
+    {
+      "id": "polity_ak_0161",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The President reduced simple imprisonment awarded to a convict by a Court of law to a fine.\nWhich of the following powers has been used by the President?\na. Commutation\nb. Remission\nc. Respite\nd. Reprieve",
+      "a": "**a (Commutation)** — Commutation denotes the substitution of one form of punishment for a lighter form (e.g., converting rigorous imprisonment to simple imprisonment, or simple imprisonment to a fine). Remission reduces the duration of sentence without altering its nature; respite awards a lesser sentence due to special facts (such as pregnancy); reprieve stays the execution temporarily."
+    },
+    {
+      "id": "polity_ak_0162",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n1. A Bill pending in the Lok Sabha lapses on its prorogation.\n2. A Bill pending in the Rajya Sabha, which has not been passed by the Lok Sabha, shall not\nlapse on dissolution of the Lok Sabha.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 2 Only\nc. Both 1 & 2\nd. Neither 1 nor 2",
+      "a": "**b (2 Only)** — Under Article 107(3), prorogation of a House does not cause any pending bill to lapse. Under Article 107(4), a bill pending in Rajya Sabha that has not yet been passed by Lok Sabha does not lapse upon dissolution of Lok Sabha. Hence only statement 2 is correct."
+    },
+    {
+      "id": "polity_ak_0163",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\na. Advocate General of state is appointed by President of India on recommendation of\nGovernor of state.\nb. High Courts in India have original, appellate and advisory jurisdiction at the state level.\nc. Both of these\nd. None of these",
+      "a": "**d (None of these)** — Under Article 165, the Advocate General for a State is appointed by the Governor of the State (not the President). High Courts possess original, appellate, and writ jurisdictions, but possess NO advisory jurisdiction (advisory jurisdiction under Article 143 is exclusive to the Supreme Court)."
+    },
+    {
+      "id": "polity_ak_0164",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are special power(s) of the Council of States in the Union\nParliament, that are not available with Lok Sabha?\n1. Authorising Parliament to legislate on specified subjects under the State List.\n2. Authorising Parliament for creation of a new All India Service.\n3. Authorising Parliament to create/abolish a state in India.\n4. Passing a resolution for revocation of President's Rule in a state.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1, 2 & 3 Only\nc. 1, 3 & 4 Only\nd. All of these",
+      "a": "**a (1 & 2 Only)** — The exclusive special powers of Rajya Sabha (Council of States) that are not available to Lok Sabha include: authorising Parliament to make laws on a State List subject in national interest by 2/3rds majority (Article 249) and authorising creation of new All India Services (Article 312). Creating states (Art 3) and revoking emergencies are general powers."
+    },
+    {
+      "id": "polity_ak_0165",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Council of Ministers?\na. It shall always be present at the Union level to aid and advise the President.\nb. It shall always be present at the state level to aid and advise the Governor of the state.\nc. Both 1 & 2\nd. Neither 1 nor 2",
+      "a": "**a (It shall always be present at the Union level to aid and advise the President)** — In *U.N.R. Rao v. Indira Gandhi* (1971), the Supreme Court ruled that Article 74(1) is mandatory and a Union Council of Ministers must exist at all times to aid and advise the President. At the state level, when President's Rule (Art 356) is imposed, the State Council of Ministers is dismissed while the Governor administers."
+    },
+    {
+      "id": "polity_ak_0166",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Parliament of India exercises control over the functions of the Council of Ministers\nthrough\n1. Adjournment Motion\n2. Question Hour\n3. Parliamentary Committees\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**d (All of these)** — Parliament exercises continuous legislative oversight and financial accountability over the Council of Ministers through procedural devices such as Adjournment Motions, Question Hour and Zero Hour, and specialized Parliamentary Committees (such as PAC, Estimates Committee, and DRSCs)."
+    },
+    {
+      "id": "polity_ak_0167",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In India, Judicial Review implies\na. the power of Judiciary to pronounce upon the constitutionality of the laws and the Executive\norders.\nb. the power of Judiciary to question the wisdom of the laws enacted by the Legislatures.\nc. the power of Judiciary to review all the legislative enactments before being assented by the\nPresident.\nd. the power of Judiciary to review its own judgments given earlier in similar or different cases.",
+      "a": "**a (the power of Judiciary to pronounce upon the constitutionality of the laws and the Executive orders)** — Judicial Review in the Indian constitutional context denotes the inherent power of the Judiciary (Supreme Court and High Courts) to declare legislative acts and executive orders unconstitutional and void if they violate constitutional provisions or the Basic Structure (UPSC CSE 2017)."
+    },
+    {
+      "id": "polity_ak_0168",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are envisaged by the 'Right against Exploitation' in the Constitution\nof India?\n1. Prohibition of traffic in human beings and forced labour\n2. Abolition of untouchability\n3. Protection of the interests of minorities\n4. Prohibition of employment of children in factories and mines\nSelect the correct answer using the code given below:\na. 1, 2 & 4 Only\nb. 1 & 4 Only\nc. 2, 3 & 4 Only\nd. All of these",
+      "a": "**b (1 & 4 Only)** — The Fundamental Right against Exploitation is enshrined in Articles 23 (prohibition of traffic in human beings and begar/forced labour) and 24 (prohibition of employment of children below 14 years in hazardous occupations). Abolition of untouchability falls under Article 17, and minority rights fall under Articles 29–30."
+    },
+    {
+      "id": "polity_ak_0169",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, Electoral Bonds have been in news. Which of the following statements are correct\nregarding Electoral Bonds?\n1. It can be purchased only by an Indian Citizen or company incorporated in India.\n2. Only the recognised political parties can receive the Electoral Bonds.\n3. Electoral Bonds can be issued by the Public Sector Banks of India.\n4. The validity of Electoral Bonds is 15 days.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 2, 3 & 4 Only\nc. 1 & 4 Only\nd. All of these",
+      "a": "**c (1 & 4 Only)** — Electoral Bonds could be purchased by any Indian citizen or domestic body corporate (1 is true) and had a validity of 15 calendar days from issuance (4 is true). They were sold exclusively by authorized branches of the State Bank of India (not all PSBs) to registered parties with ≥1% vote share in the last election."
+    },
+    {
+      "id": "polity_ak_0170",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are NOT a ground for disqualification of Members of Parliament?\n1. Undertaking private legal practice in the Supreme Court of India.\n2. Holding the post of Managing Director in a private company.\n3. Holding the post of Director in a company in which Government has 25% shares.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**a (1 & 2 Only)** — Practicing as an advocate before the Supreme Court is not an office of profit (*Ashwini Upadhyay* case), and serving as Managing Director of a purely private company does not constitute holding an office of profit under the Government (Art 102(1)(a)). Hence statements 1 and 2 are NOT grounds for disqualification."
+    },
+    {
+      "id": "polity_ak_0171",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following can be inferred from the 'principle of collective responsibility' of the\nCouncil of Ministers?\na. All Ministers are bound by a decision of the Cabinet.\nb. All Ministers have to defend a Cabinet decision in the House and outside.\nc. Both of these\nd. None of these",
+      "a": "**c (Both of these)** — Collective responsibility under Article 75(3) embodies Cabinet solidarity: all Ministers are jointly and severally responsible for government policies, bound by Cabinet decisions, and obligated to defend them both on the floor of the House and in public forums (or resign if they disagree)."
+    },
+    {
+      "id": "polity_ak_0172",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, 'Classical Languages' were in news. Which of the following enjoy the 'Classical'\nstatus?\n1. Sanskrit\n2. Telugu\n3. Odia\n4. Kannada\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 2, 3 & 4 Only\nd. All of these",
+      "a": "**d (All of these)** — Six Indian languages currently enjoy Classical Language status: Tamil (declared in 2004), Sanskrit (2005), Kannada (2008), Telugu (2008), Malayalam (2013), and Odia (2014)."
+    },
+    {
+      "id": "polity_ak_0173",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Departments of the Ministry of Finance is responsible for the\npreparation of Union Budget?\na. Department of Revenue\nb. Department of Expenditure\nc. Department of Economic Affairs\nd. Department of Financial Services",
+      "a": "**c (Department of Economic Affairs)** — The Budget Division of the Department of Economic Affairs (Ministry of Finance) is the nodal executive agency responsible for compiling, preparing, and presenting the Annual Financial Statement (Union Budget) before Parliament."
+    },
+    {
+      "id": "polity_ak_0174",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are the functions of the Cabinet Secretariat?\n1. Secretarial assistance to the Cabinet and its Committees.\n2. Ensuring the President, Vice President and Ministers are kept informed of the major activities\nof all Ministries/Departments.\n3. Management of major crisis situations in the country and coordinating activities of various\nMinistries in such a situation.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd All of these",
+      "a": "**d (All of these)** — Under the Allocation of Business Rules, the Cabinet Secretariat provides secretarial assistance to the Cabinet and its committees, briefs the President and Vice President on key ministerial actions, and coordinates inter-ministerial efforts during major national emergencies and crises."
+    },
+    {
+      "id": "polity_ak_0175",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Comptroller and Auditor General (C&AG), the Supreme Audit Institution of India audits the\nvarious Departments of the Government. Who audits the C&AG?\na. Independent offices within the C&AG.\nb. Independent audit firm, commissioned by the Public Accounts Committee of the Parliament\nof India.\nc. Supreme Audit Institutions of other countries, at the request of C&AG.\nd There is no audit of C&AG.",
+      "a": "**a (Independent offices within the C&AG)** — The audit of the expenditure and accounts of the Comptroller and Auditor General of India itself is carried out internally by an independent, dedicated Director General of Audit (Central Expenditure) within the supreme audit institution."
+    },
+    {
+      "id": "polity_ak_0176",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The fundamental object of the Panchayati Raj System in India is to ensure which among the\nfollowing?\n1. People's participation in development\n2. Political accountability\n3. Democratic Decentralisation\n4. Financial mobilisation\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1 & 3 Only\nc. 2 & 4 Only\nd. All of these",
+      "a": "**b (1 & 3 Only)** — The core constitutional philosophy of the 73rd Amendment and Panchayati Raj is to institutionalize democratic decentralisation at the grassroots and secure active popular participation in local planning and socio-economic development (UPSC CSE 2015)."
+    },
+    {
+      "id": "polity_ak_0177",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The ideal of a 'welfare state' in the Constitution of India is enshrined in the\na. Preamble\nb. Fundamental Rights\nc. Directive Principles of State Policy\nd. Seventh Schedule",
+      "a": "**c (Directive Principles of State Policy)** — The concept of a Welfare State is enshrined in Part IV (Directive Principles of State Policy, Articles 36–51), which enjoins the State to promote the welfare of the people by securing a social order permeated by social, economic, and political justice (UPSC CSE 2015)."
+    },
+    {
+      "id": "polity_ak_0178",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are the discretionary powers of the Governor of a State?\n1. Sending a report to the President of India for imposing the President's Rule in the State.\n2. Appointment of the Ministers.\n3. Reserving certain Bills passed by the State Legislature for the consideration of the President of\nIndia.\n4. Making rules to conduct the business of the State Government.\nSelect the correct answer using the code given below:\na. 1 & 3 Only\nb. 1, 3 & 4 Only\nc. 2, 3 & 4 Only\nd. All of these",
+      "a": "**a (1 & 3 Only)** — The Governor exercises constitutional discretion when submitting a report recommending President's Rule under Article 356 and when reserving State Bills for the President's consideration under Article 200. Ministers are appointed on the advice of the Chief Minister, and business rules (Art 166) are made on Cabinet advice."
+    },
+    {
+      "id": "polity_ak_0179",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Panchayats in India?\na. The minimum age prescribed for any person to be a member of a Panchayat is 21 years.\nb. A Panchayat reconstituted after premature dissolution continues for remainder of the period.\nc. Both of these\nd. None of these",
+      "a": "**c (Both of these)** — Under Article 243F(1)(a), the minimum qualifying age to contest Panchayat elections is 21 years (exempt from the 25-year MLA requirement). Under Article 243E(4), a Panchayat reconstituted upon premature dissolution serves only for the remainder of the original 5-year period."
+    },
+    {
+      "id": "polity_ak_0180",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Election Commission of India?\n1. It calls upon all Parliamentary constituencies to elect members to constitute a new House of\nPeople on the expiration of the existing House.\n2. It decides the date(s) for the Parliamentary constituencies to elect members to the House of\nPeople.\n3. It resolves the disputes relating to splits/mergers of the recognised political parties.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**c (2 & 3 Only)** — The statutory notification calling upon parliamentary constituencies to elect members is issued by the President under Section 14 of the RPA 1951 (not the ECI). The ECI notifies the actual poll dates/schedule (2) and adjudicates disputes over party symbols, splits, and mergers under the Symbols Order 1968 (3)."
+    },
+    {
+      "id": "polity_ak_0181",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The main advantage of Parliamentary form of Government is that\na. the Executive and Legislature work independently\nb. it provides continuity in policy and is more efficient\nc. the Executive remains responsible to the Legislature\nd. the head of the Government can be changed only through elections",
+      "a": "**c (the Executive remains responsible to the Legislature)** — The defining characteristic and principal constitutional advantage of the Parliamentary form of government is the continuous collective responsibility of the Council of Ministers to the popular chamber of the Legislature (UPSC CSE 2017)."
+    },
+    {
+      "id": "polity_ak_0182",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following amendments were made by the 42nd Amendment to the Constitution\nof India?\n1. Education, as a subject, was transferred from the State list to Concurrent list.\n2. Right to property was removed from Part III.\n3. Part XIV A (Tribunals) was introduced.\n4. Provision for the creation of All India Judicial Service was introduced.\nSelect the correct answer using the code given below:\na. 1, 3 & 4 Only\nb. 2 & 3 Only\nc. 2 & 4 Only\nd. All of these",
+      "a": "**a (1, 3 & 4 Only)** — The 42nd Amendment Act 1976 transferred Education, Forests, Weights and Measures, Protection of Wild Animals/Birds, and Administration of Justice to the Concurrent List, inserted Part XIV-A (Tribunals, Arts 323A-323B), and enabled creation of an All-India Judicial Service (Art 312). Right to Property was deleted from Part III by the 44th Amendment 1978."
+    },
+    {
+      "id": "polity_ak_0183",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "IAS, IPS and IFS are the three prestigious All India Services (AIS) in India. Which of the\nfollowing best describes the meaning of the term 'All India Service'?\na. The officers of AIS can be posted to any part of India\nb. The officers of AIS bring an 'all India' perspective in their state cadre\nc. These services are common to both the Union and the States\nd. The officers are centrally recruited for the whole of India",
+      "a": "**c (These services are common to both the Union and the States)** — Under Article 312, an All-India Service (IAS, IPS, IFS) is defined as a service common to both the Union and the States, recruited centrally by the Union with officers allocated to State cadres who serve under both governments."
+    },
+    {
+      "id": "polity_ak_0184",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following would NOT require the provisions of Article 368 to amend the\nConstitution of India?\n1. Increasing the emoluments of the President of India.\n2. Extending the jurisdiction of a High Court to any Union Territory.\n3. Adoption of a language as the official language of a state.\n4. Delimitation of the constituencies for Lok Sabha election.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 3 & 4 Only\nd. All of these",
+      "a": "**d (All of these)** — Amendments to the Second Schedule (President's emoluments), extending High Court jurisdiction to Union Territories (Art 230), adopting official languages of states (Art 345), and constituency delimitation (Art 82) are enacted by Parliament by simple majority and are expressly deemed not to be amendments under Article 368."
+    },
+    {
+      "id": "polity_ak_0185",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Attorney General (AG) of India?\n1. AG can be a member of a Parliamentary Committee.\n2. AG enjoys the same privileges as enjoyed by a Member of Parliament under the Constitution\nof India.\n3. AG receives a remuneration as decided by the President of India.\n4. AG can be removed by the President of India on the same grounds and in the same manner as\na judge of Supreme Court of India.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 3 & 4 Only\nc. 2 & 4 Only\nd. All of these",
+      "a": "**a (1, 2 & 3 Only)** — Under Articles 76, 88, and 105(4), the Attorney General can be appointed to any parliamentary committee, enjoys all parliamentary privileges of an MP, and receives remuneration determined by the President. The AG holds office during the pleasure of the President (not removed like an SC judge)."
+    },
+    {
+      "id": "polity_ak_0186",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently 'Special Session of Parliament' has been in the news. Which of the following\nstatements is/are correct. regarding a special session of Parliament?\n1. No such provision has been made in the Constitution of India.\n2. It can be convened by the President of India to consider any subject.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 2 Only\nc. Both 1 & 2\nd. Neither 1 nor 2",
+      "a": "**c (Both of these)** — The term 'Special Session' is not formally defined or mentioned in the Constitution of India (except special sittings under Art 352(8)). Under Article 85(1), the President has the constitutional prerogative to summon either House to meet at such time and place as he/she thinks fit on Cabinet advice."
+    },
+    {
+      "id": "polity_ak_0187",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are among the stated objectives of The Right to\nInformation Act, 2005?\n1. To provide the citizens secure access to information under the control of public authorities.\n2. To establish an informed citizenry for a well functioning democracy.\n3. To harmonise the conflicting interest of revelation of information with other public interest\nincluding efficient operations of the Governments.\n4. To contain corruption.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 3 & 4 Only\nc. 2 & 4 Only\nd. All of these",
+      "a": "**d (All of these)** — The Preamble of the Right to Information Act 2005 sets forth all four core objectives: providing citizens secure access to public records, establishing an informed citizenry, containing corruption, and harmonising transparency with efficient governance and optimal use of public resources."
+    },
+    {
+      "id": "polity_ak_0188",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under which of the following situations can the Courts interfere in the removal of the\nGovernor of a state?\n1. If the Union Government does not disclose any reason for removal.\n2. If the reasons given by the Union Government are insufficient.\n3. If the removal is on the ground of loss of confidence in the Governor.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**b (1 & 3 Only)** — In *B.P. Singhal v. Union of India* (2010), a Constitution Bench held that while the President need not state reasons when removing a Governor, the court can intervene if removal is arbitrary, mala fide, or based on extraneous grounds such as loss of confidence due to ideological differences or a change of government at the Centre."
+    },
+    {
+      "id": "polity_ak_0189",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under which of the following situations, the President of India may summon a joint sitting of\nboth the Houses of Parliament?\n1. One House passes the Bill and the other House rejects the Bill.\n2. The Houses finally disagree as to the amendments to the Bill.\n3. If the party that enjoys majority in the Lok Sabha does not enjoy majority in Rajya Sabha, and\nthe Government wants to avoid a discussion in Rajya Sabha.\n4. One House passes the Bill and the other House does not pass it within six months from the\ndate it received the Bill.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 1, 3 & 4 Only\nd. All of these",
+      "a": "**b (1, 2 & 4 Only)** — Under Article 108, the President can summon a joint sitting of both Houses only upon three legislative deadlocks: rejection of a bill by the other House, final disagreement over amendments, or passage of more than six months without the other House passing the bill. Political disagreement or avoiding debate is not a valid ground."
+    },
+    {
+      "id": "polity_ak_0190",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, Joint Parliamentary Committees (JPC) have been in news. Which of the following\nstatements are correct regarding JPC in India?\n1. They are ad hoc bodies.\n2. They have members from both the Lok Sabha and the Rajya Sabha, in the ratio of 2:1.\n3. Public Accounts Committee is an example of JPC.\n4. Their recommendations are not binding on the Government.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 1 & 4 Only\nd. 2, 3 & 4",
+      "a": "**b (1, 2 & 4 Only)** — Joint Parliamentary Committees (JPCs) are ad hoc committees constituted by Parliament to investigate specific issues or bills, have members from Lok Sabha and Rajya Sabha in a 2:1 ratio, and submit recommendatory (non-binding) reports. The Public Accounts Committee is a permanent Financial Standing Committee, not an ad hoc JPC."
+    },
+    {
+      "id": "polity_ak_0191",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\n1. The date when the PM or the CM shall prove their majority in the lower House (after taking\nthe oath of office) is decided by the President or the Governor, as the case may be.\n2. The mechanism of voting on the confidence motion (open or secret ballot) is to be decided by\nthe Speaker of the House.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 2 Only\nc. Both 1 & 2\nd. Neither 1 nor 2",
+      "a": "**a (1 Only)** — When a hung assembly or mid-term transition occurs, the President or Governor stipulates a time frame within which the PM or CM must prove their majority on the floor of the House. The Supreme Court has repeatedly held (*Harish Rawat* case, *Shiv Sena* case) that floor tests must be transparent and conducted by open division, not secret ballot."
+    },
+    {
+      "id": "polity_ak_0192",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Lok Adalats in India?\n1. It is an extra-constitutional and extra-statutory mechanism of justice delivery.\n2. It is meant to settle disputes through conciliation and compromise.\n3. It accepts the cases pending before regular courts, except Supreme Court of India.\n4. No appeal lies against its order.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb 1, 2 & 4 Only\nc. 1, 3 & 4 Only\nd. 2 & 4 Only",
+      "a": "**d (2 & 4 Only)** — Lok Adalats have statutory status under the Legal Services Authorities Act 1987 (1 is false). They settle disputes through compromise and conciliation, and under Section 21 of the Act, their award is final, binding, deemed to be a decree of a civil court, and no appeal lies against it to any court."
+    },
+    {
+      "id": "polity_ak_0193",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are NOT mentioned in the Constitution of India?\n1. Motion of No Confidence\n2. Tenure of office of the Attorney General\n3. Oath of the Speaker of Lok Sabha\n4. President's Address to a joint session of Parliament after a general election to the Lok Sabha\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 3 & 4 Only\nd. All of these",
+      "a": "**a (1, 2 & 3 Only)** — A No-Confidence Motion is provided for only under Rule 198 of the Lok Sabha Rules of Procedure (not the Constitution), the Attorney General has no fixed tenure under Article 76(4) (holds office during presidential pleasure), and the Speaker takes no separate oath as Speaker. The President's Address is explicitly mandated under Article 87(1)."
+    },
+    {
+      "id": "polity_ak_0194",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The phenomena of coalition governments in India was brought by the 4th general election\n(1967). The term 'SVD Govt.' became popular. What describes SVD?\na. Anti-Congress Government\nb. Non-Congress Government\nc. Non-Congress parties coming together to form legislative parties\nd. Coalition of left and right parties",
+      "a": "**c (Non-Congress parties coming together to form legislative parties)** — Samyukt Vidhayak Dal (SVD) was a historic coalition of multiple non-Congress parties (Socialists, Swatantra, Jana Sangh, BKD, and defectors) that formed anti-Congress coalition governments across northern Indian states following the 1967 Fourth General Election."
+    },
+    {
+      "id": "polity_ak_0195",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under Article 143 of the Constitution of India, when the President of India refers a matter to\nthe Supreme Court for advice:\na. Supreme Court is bound to give any advice\nb. President is not bound to accept the advice given by the Supreme Court\nc. Both of these\nd. NOTA",
+      "a": "**b (President is not bound to accept the advice given by the Supreme Court)** — Under Article 143, the Supreme Court's advisory jurisdiction is strictly consultative. The opinion rendered by the Court is advisory and does not bind the President or the Government of India."
+    },
+    {
+      "id": "polity_ak_0196",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct?\n1. In all the occasions of joint sitting of both the Houses of Parliament so far, decision has gone\nin favour of Lok Sabha.\n2. No Private Member Bill has been ever passed in Parliament of India.\n3. Presiding officer of the House is the final authority in matters of regulating the business of the\nHouse.\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**b (1 & 3 Only)** — In all three joint sittings held so far (Dowry Prohibition Bill 1961, Banking Service Commission Bill 1978, and POTA 2002), the numerical strength of Lok Sabha prevailed (1 is true). 14 Private Member Bills have been passed by the Indian Parliament (the last in 1970, hence 2 is false), and the Presiding Officer has final authority in regulating House business."
+    },
+    {
+      "id": "polity_ak_0197",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following principles are a part of the principles of Panchsheel?\n1. Respect for territory\n2. Non-aggression\n3. Non-alignment\n4. Equality\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 3 & 4 Only\nd. All of these",
+      "a": "**b (1, 2 & 4 Only)** — The Panchsheel (Five Principles of Peaceful Coexistence) signed between India and China in 1954 consists of: 1. Mutual respect for territorial integrity and sovereignty, 2. Mutual non-aggression, 3. Mutual non-interference in internal affairs, 4. Equality and mutual benefit, and 5. Peaceful coexistence. Non-alignment was not a formal Panchsheel principle."
+    },
+    {
+      "id": "polity_ak_0198",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following territories were integrated into India on the basis of plebiscite?\n1. Punjab\n2. North West Frontier Province\n3. Assam\n4. Manipur\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 2 Only\nc. 2 & 3 Only\nd. None of these",
+      "a": "**d (None of these)** — Junagadh was the princely state integrated into the Indian Union following a plebiscite conducted in February 1948. The referendums in NWFP and Sylhet resulted in their joining Pakistan, while Manipur merged via a Merger Agreement in 1949."
+    },
+    {
+      "id": "polity_ak_0199",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding a motion of No Confidence in the\nLok Sabha?\n1. It can be brought in the House only once per session.\n2. No such motion has ever been passed.\n3. It need not set out any grounds on which it is based.\n4. It has lower precedence than a confidence motion.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1 & 4 Only\nc. 2, 3 & 4 Only\nd. 3 & 4 Only",
+      "a": "**d (3 & 4 Only)** — Under Rule 198 of Lok Sabha Rules, a No-Confidence Motion need not set out any specific grounds on which it is based (unlike a Censure Motion). Government business (including a Confidence Motion) takes precedence over private members' motions."
+    },
+    {
+      "id": "polity_ak_0200",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are extra-Constitutional method(s) for securing cooperation and\ncoordination between the States in India?\n1. Zonal Councils\n2. Governors' Conference\n3. Inter-State Council\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1 & 2 Only\nc. 2 Only\nd. 2 & 3 Only",
+      "a": "**b (1 & 2 Only)** — Zonal Councils are statutory bodies created by an Act of Parliament (States Reorganisation Act 1956) and the Governors' Conference is an administrative forum, making both extra-constitutional. The Inter-State Council is a constitutional body established under Article 263."
+    },
+    {
+      "id": "polity_ak_0201",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct about the Public Accounts Committee of\nParliament of India?\n1. It consists of not more than 25 members.\n2. It scrutinises the Appropriation and Finance Accounts of the Government.\n3. It examines the report of the Comptroller & Auditor General of India.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**c (2 & 3 Only)** — The Public Accounts Committee (PAC) consists of 22 members (15 from Lok Sabha and 7 from Rajya Sabha), not 25. It examines the annual audit reports submitted by the CAG and scrutinises the Appropriation Accounts and Finance Accounts of the Union Government."
+    },
+    {
+      "id": "polity_ak_0202",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct?\n1. The Union Council of Ministers shall be collectively responsible to the Parliament.\n2. The Union Ministers hold office during the pleasure of the President.\n3. The Prime Minister shall communicate to the President about the proposals for legislation.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**c (2 & 3 Only)** — Under Article 75(3), the Union Council of Ministers is collectively responsible specifically to the **House of the People (Lok Sabha)**, not to Parliament as a whole (1 is false). Ministers hold office during the pleasure of the President (Art 75(2)), and the Prime Minister is obligated to communicate all decisions and legislative proposals to the President under Article 78."
+    },
+    {
+      "id": "polity_ak_0203",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the powers of Rajya Sabha with\nrespect to a Money Bill?\na. Rajya Sabha can amend a Money Bill.\nb. Rajya Sabha can reject a Money Bill.\nc. Both of these\nd. NOTA",
+      "a": "**d (NOTA)** — Under Article 109 of the Constitution of India, the Rajya Sabha has severely restricted powers with respect to Money Bills: it cannot amend a Money Bill nor can it reject it; it can only make recommendations, which the Lok Sabha is free to accept or reject in toto."
+    },
+    {
+      "id": "polity_ak_0204",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following instances justify the invoking of Article 356 under the Constitution of\nIndia by the Union Government?\n1. Claim to an independent sovereign status by the state.\n2. Subverting of basic features of the Constitution by the state.\n3. Disregard to a direction issued by the Union Government, under Article 257.\n4. No party or parties are able to secure majority in the state legislature, after a general election in\nthe state.\n\n\n\nIndian\nPolity\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 3 & 4 Only\nc. 2 & 4 Only\nd. All of these",
+      "a": "**d (All of these)** — Under the landmark *S.R. Bommai v. Union of India* (1994) judgment and Article 365, secessionist claims by a state, subversion of secularism/basic structure, defiance of lawful Union administrative directions under Article 257, and a persistent hung assembly where no government can be formed all constitute valid justifications for invoking Article 356."
+    },
+    {
+      "id": "polity_ak_0205",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding a 'Constitutional Bench' of the\nSupreme Court of India?\n1. It must consist of five judges of the Court.\n2. It is set up to decide any case involving a substantial question of law as to the interpretation of\nthe Constitution of India.\n3. It is constituted by the Chief Justice of India.\n4. Its provision is mandated in the Constitution of India.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 2 & 3 Only\nc. 2, 3 & 4 Only\nd. All of these",
+      "a": "**c (2, 3 & 4 Only)** — Under Article 145(3), a Constitution Bench must consist of a **minimum of five judges** (it can be 7, 9, 11, or 13 judges, so it is incorrect to state it 'must consist of five'). It is constituted by the CJI as Master of the Roster to adjudicate substantial questions of constitutional interpretation or Article 143 references."
+    },
+    {
+      "id": "polity_ak_0206",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following has the authority, and by which procedure, to provide for a legislature\nfor the Union Territory of Lakshadweep?\na. President of India, through a regulation.\nb. Parliament, by law.\nc. Parliament, by amending the Constitution of India.\nd. Parliament, by law, only after a resolution is passed by legislature of state of Kerala.",
+      "a": "**b (Parliament, by law)** — Under Article 239A of the Constitution of India, Parliament has the power by law to create a body to function as a Legislature, or a Council of Ministers, or both, for Union Territories (originally enacted for Puducherry, formerly Goa, Himachal Pradesh, etc.)."
+    },
+    {
+      "id": "polity_ak_0207",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the 'Doctrine of Colourable\nLegislation'?\na. The Court looks into the object as well as the effect of the legislation.\nb. The Court considers the questions of bonafides or malafides on the part of the legislature.\nc. Both of these\nd. NOTA\n\n\n\nIndian\nPolity",
+      "a": "**a (The Court looks into the object as well as the effect of the legislation)** — The Doctrine of Colourable Legislation ('what cannot be done directly, cannot be done indirectly') examines the true nature, character, object, and effect of an enactment to determine legislative competence under the Seventh Schedule. The motives, bona fides, or mala fides of the Legislature are wholly irrelevant (*K.C. Gajapati Narayan Deo* case)."
+    },
+    {
+      "id": "polity_ak_0208",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct in respect of 'Zero Hour' discussion in\nParliament?\n1. It is an informal device, not mentioned in the Rules of Procedure of the house.\n2. It is directed against individual Minister.\n3. It covers questions raised over matters of public importance.\n4. It is a device present in both the Houses of Parliament.\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 2, 3 & 4 Only\nc. 1 & 4 Only\nd. All of these",
+      "a": "**c (1 & 4 Only)** — Zero Hour is an informal Indian parliamentary innovation (introduced in 1962) that is not mentioned in the Rules of Procedure of either House (1 is true). It is available in both Lok Sabha and Rajya Sabha (4 is true), allowing members to raise pressing matters without prior ten-day notice."
+    },
+    {
+      "id": "polity_ak_0209",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding The Lokpal and Lokayuktas Act,\n2013?\n1. It seeks to implement the UN Convention Against Corruption.\n2. Chairpersons/members of Lokpal shall not be less than forty-five years of age.\n3. Group 'C' and Group 'D' officials are not under the jurisdiction of Lokpal.\n4. There are provisions to punish false and frivolous complaints under the Act.\nSelect the correct answer using the code given below:\na. 1 & 3 Only\nb. 1, 2 & 4 Only\nc. 2 & 3 Only\nd. 3 & 4 Only",
+      "a": "**b (1, 2 & 4 Only)** — The Lokpal and Lokayuktas Act 2013 was enacted to implement the UN Convention Against Corruption (UNCAC), stipulates a minimum age of 45 years for the Chairperson and members (Sec 3(3)), and provides penalties for false complaints (Sec 46). Group C and D public servants ARE covered under its jurisdiction (referred to CVC)."
+    },
+    {
+      "id": "polity_ak_0210",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements regarding the Pro-Tem Speaker are correct?\n1. After the Lok Sabha elections, the President administers oath to the Pro-Tem Speaker, which\nis same as the oath for membership of the Lok Sabha.\n2. Pro-Tem Speaker conducts the proceedings of the House when both the Speaker's and the\nDeputy Speaker's posts lie vacant due to death, resignation etc.\n3. No Pro-Tem Speaker has ever become the Speaker later.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these\n\n\n\nIndian\nPolity",
+      "a": "**a (1 Only)** — Following a general election, the President appoints a Pro-Tem Speaker (typically the senior-most MP) and administers the oath under Article 99. When the offices of Speaker and Deputy Speaker fall vacant mid-term, the President appoints an MP to perform the duties under Article 95(1). G.V. Mavalankar and Somnath Chatterjee both served as temporary presiding officers before election as Speaker."
+    },
+    {
+      "id": "polity_ak_0211",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently 'Guillotine' has been in the news. What is the meaning when 'Guillotine' is applied in\nthe House?\na. All the outstanding demands for grants are deemed to have been passed\nb. A debate is brought to close by a majority decision of the House, even if members remain to\nspeak\nc. The Chairperson cuts short the ongoing session, to bring early prorogation of the House\nd. The Chairperson puts outstanding questions related to business, on expiry of allotted\ndiscussion time",
+      "a": "**a (All the outstanding demands for grants are deemed to have been passed)** — In parliamentary financial procedure, 'Guillotine' is applied on the final allotted day of discussion on the Budget, whereby all outstanding Demands for Grants are put to vote immediately without further discussion, whether they have been debated or not."
+    },
+    {
+      "id": "polity_ak_0212",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following would result in the dissolution of the Council of Ministers of the\nstate?\n1. Resignation of the Chief Minister\n2. National Emergency declared in the state\n3. President's Rule in the state\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**c (Equality of votes on a proposal)** — Under Article 100(1) (Lok Sabha) and Article 189(1) (State Assembly), the Speaker or Presiding Officer does not vote in the first instance, but exercises a 'casting vote' in the case of an equality of votes (a tie) to resolve the deadlock."
+    },
+    {
+      "id": "polity_ak_0213",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "As per the report of the Fifteenth Finance Commission, which are the only three states that\nhave a revenue surplus in India (without any devolution from Centre) during the Financial Year\n2020-21?\n1. Gujarat\n2. Maharashtra\n3. Tamil Nadu\n4. Telangana\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 1, 3 & 4 Only\nd. 2, 3 & 4 Only\n\n\n\nIndian\nPolity",
+      "a": "**d (All of these)** — Under Article 280(3), the Finance Commission recommends: the distribution between the Union and the States of the net proceeds of divisible taxes, the principles governing Grants-in-aid under Article 275, and measures needed to augment the Consolidated Fund of a State to supplement Panchayat and Municipality resources."
+    },
+    {
+      "id": "polity_ak_0214",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Union Council of Ministers?\n1. A Minister, who is not a member of any of the Houses of Parliament, shall get elected as a\nmember of any of the Houses within six months to continue as a Minister.\n2. There is no ground provided in the Constitution of India for removal of a Minister from the\nMinistry.\n3. A Minister of State is individually responsible to the concerned Cabinet Minister of the\nMinistry.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 Only\nd. 2 & 3 Only",
+      "a": "**a (1 & 2 Only)** — Under Article 75(5), a Minister who is not an MP for six consecutive months ceases to be a Minister. The Constitution sets out no specific grounds (such as proved misbehaviour) for removing a Minister; they hold office solely during the pleasure of the President (Art 75(2)). Ministers are individually responsible to the President, not to Cabinet Ministers."
+    },
+    {
+      "id": "polity_ak_0215",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What do you understand by a 'Starred Question' in the Parliament of India?\n1. The Member of Parliament, who raised the question, wishes to have an oral answer on the\nfloor of the House.\n2. It is distinguished by an asterisk in the list of questions.\n3. The answer to such a question may be followed by supplementary questions.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**d (All of these)** — A Starred Question in Parliament is distinguished by an asterisk (*), requires an oral answer from the concerned Minister on the floor of the House, and members are permitted to ask supplementary questions arising out of the Minister's reply."
+    },
+    {
+      "id": "polity_ak_0216",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding Panchayats in India?\n1. The Constitution (73rd Amendment) Act introduced Panchayati Raj system in India.\n2. The Constitution provides for minimum one-third reservation for women, of the seats to be\nfilled by direct election in the Panchayat.\nSelect the correct answer using the code given below:\na. 1 Only\nb. 2 Only\nc. Both 1 & 2\nd. Neither 1 nor 2\n\n\n\nIndian\nPolity",
+      "a": "**b (2 Only)** — Panchayati Raj institutions existed prior to 1992 (first inaugurated in Nagaur, Rajasthan in 1959); the 73rd Amendment gave them constitutional status under Part IX (1 is false). Article 243D(3) mandates that not less than one-third of the total number of seats filled by direct election in every Panchayat shall be reserved for women."
+    },
+    {
+      "id": "polity_ak_0217",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who can be appointed as an ad hoc judge of the Supreme Court?\na. A retired Judge of the Supreme Court\nb. A sitting Judge of a High Court duly qualified for appointment as a Judge of Supreme Court\nc. An Acting Judge of the Supreme Court\nd. A person duly qualified for appointment as a Judge of the Supreme Court",
+      "a": "**b (A sitting Judge of a High Court duly qualified for appointment as a Judge of Supreme Court)** — Under Article 127(1), when there is a lack of quorum of permanent judges to hold or continue any session of the Supreme Court, the Chief Justice of India may, with the consent of the President and in consultation with the Chief Justice of the concerned High Court, designate a sitting High Court Judge qualified for SC appointment as an ad hoc Judge."
+    },
+    {
+      "id": "polity_ak_0218",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are NOT correct?\n1. A person can be prosecuted and punished simultaneously for the same offence by different\nCourts of Law.\n2. A person accused of an offence cannot be compelled to be a witness against them self.\n3. Retrospective amendment to civil and criminal law can be made in extreme cases to punish an\noffender.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**b (1 & 3 Only)** — Article 20(2) explicitly prohibits Double Jeopardy (no person can be prosecuted and punished for the same offence more than once). Article 20(1) strictly prohibits retrospective or ex-post facto criminal legislation (retrospective penal laws are unconstitutional). Statement 2 correctly describes the protection against self-incrimination under Article 20(3)."
+    },
+    {
+      "id": "polity_ak_0219",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In India, to form cooperative societies is a\na. Fundamental Right\nb. Constitutional Right\nc. Statutory Right\nd. It is not a right yet recognised",
+      "a": "**a (Fundamental Right)** — The 97th Constitutional Amendment Act, 2011 elevated the right to form cooperative societies to a Fundamental Right under Article 19(1)(c) of the Constitution."
+    },
+    {
+      "id": "polity_ak_0220",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The President, if satisfied of the existence of circumstances requiring immediate action, may\npromulgate an Ordinance in which of the following situations?\n1. Lok Sabha is in session and Rajya Sabha has been prorogued\n2. Lok Sabha has been dissolved and Rajya Sabha is in session\n3. Lok Sabha is in recess and Rajya Sabha is in session\n4. Both Houses are in recess\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 3 & 4 Only\nc. 2 & 4 Only\nd. All of these\n\n\n\nIndian\nPolity",
+      "a": "**d (All of these)** — Under Article 123, the President is empowered to promulgate an Ordinance at any time when either of the two Houses of Parliament is not in session (or when both Houses are in recess or Lok Sabha is dissolved), because an Act of Parliament requires passage by both Houses."
+    },
+    {
+      "id": "polity_ak_0221",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is FALSE in a situation where the Prime Minister (PM) is a member\nof Rajya Sabha?\na. PM will not be the Leader of the House in Lok Sabha\nb. PM will not be able to vote against a Motion of No Confidence against the Council of\nMinisters\nc. PM will not be able to speak on the Budget in the Lok Sabha\nd. NOTA",
+      "a": "**c (PM will not be able to speak on the Budget in the Lok Sabha)** — Under Article 88 of the Constitution, every Union Minister (including a Prime Minister who belongs to the Rajya Sabha) has the constitutional right to speak and take part in the proceedings of both Houses of Parliament. Hence statement 'c' is FALSE."
+    },
+    {
+      "id": "polity_ak_0222",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, Zonal Councils have been in the news. Which of the following statements are\ncorrect about Zonal Councils.\n1. These were set up by The States Reorganisation Act, 1956.\n2. There are five Zonal Councils today.\n3. Union Home Minister is the Chairperson of each of these Councils.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**d (All of these)** — The five statutory Zonal Councils (Northern, Central, Eastern, Western, Southern) were created under the States Reorganisation Act 1956 to foster inter-state and Centre-state cooperation, and the Union Home Minister serves as the common Chairperson of all five councils."
+    },
+    {
+      "id": "polity_ak_0223",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following can be said to be a difference between the federal nature of\nConstitutions of India and USA?\na. Residuary powers being explicitly vested with the Union in Constitution of India\nb. Single Constitution for the Union as well as the States in India\nc. Both of these\nd. None of these",
+      "a": "**c (Both of these)** — Distinct from the US Constitution (where residuary powers are reserved to the States under the 10th Amendment and states have their own constitutions), in India Article 248 explicitly vests all residuary legislative powers in the Union Parliament, and there is a single unified Constitution for both the Union and the States."
+    },
+    {
+      "id": "polity_ak_0224",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In which of the following cases, concurrence of both Houses of Parliament is required to give\nit an effect?\n1. Removal of the Comptroller & Auditor General of India\n2. Approval of a proclamation of National Emergency\n3. Constitutional Amendment Act\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these\n\n\n\nIndian\nPolity",
+      "a": "**d (All of these)** — Under the Constitution, removal of the CAG (Art 148(1) read with Art 124(4)), parliamentary approval of a National Emergency proclamation (Art 352(4)), and passage of a Constitutional Amendment Bill (Art 368) all constitutionally require the separate concurrence and approval of both the Lok Sabha and the Rajya Sabha."
+    },
+    {
+      "id": "polity_ak_0225",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under which condition, Union Public Service Commission may serve the needs of a State?\na. If requested by the concerned State Public Service Commission and approved by the\nGovernor of the State\nb. If requested by the Governor of the State and approved by the President of India\nc. If directed by the President of India\nd. UPSC, being an institution of the Union, cannot serve any of the needs of States",
+      "a": "**b (If requested by the Governor of the State and approved by the President of India)** — Under Article 315(4) of the Constitution of India, the Union Public Service Commission may, if requested by the Governor of a State, with the approval of the President, agree to serve all or any of the recruitment needs of that State."
+    },
+    {
+      "id": "polity_ak_0226",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding 'Service Voters' in India?\n1. An employee of Government of India, who is posted outside India, has the service\nqualification for being a 'Service Voter'.\n2. Service Voters may exercise their suffrage either through postal ballot or through proxy\n3. Service Voter is not issued an Elector Photo Identity Card (EPIC)\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**d (All of these)** — Under Section 20 of the Representation of the People Act 1950, personnel with service qualifications (armed forces, armed police outside state, diplomats abroad) are registered as Service Voters, vote via ETPBS/postal ballots or an appointed proxy, and are not issued standard voter EPIC cards."
+    },
+    {
+      "id": "polity_ak_0227",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following can be said to be the first milestone towards a fully 'Responsible\nGovernment' in India?\na. Government of India Act, 1919\nb. Government of India Act, 1935\nc. Indian Independence Act, 1947\nd. Constitution of India, 1950",
+      "a": "**a (Government of India Act, 1919)** — The Government of India Act 1919 (Montagu-Chelmsford Reforms) marked the first official statutory milestone towards responsible government in India by introducing 'Dyarchy' in the provinces, transferring nation-building subjects (education, health, local government) to ministers responsible to the provincial legislature."
+    },
+    {
+      "id": "polity_ak_0228",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Supreme Court of India is a 'Court of Record'. Why is it called a 'Court of Record'?\na. Its judgments are recorded for perpetual memory and testimony.\nb. It has power to punish for contempt of itself.\nc. Its records are admissible as evidence & cannot be questioned when produced before a Court\nas such.\nd. All of the above\n\n\n\nIndian\nPolity",
+      "a": "**d (All of the above)** — Under Article 129, the Supreme Court of India is a Court of Record because its acts, proceedings, and judicial records are preserved for perpetual testimony, have conclusive evidentiary value that cannot be questioned in any subordinate court, and it possesses inherent power to punish for contempt of itself."
+    },
+    {
+      "id": "polity_ak_0229",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is not a 'type' of municipality under the provisions of the Constitution\nof India?\na. Municipal Council\nb. Municipal Corporation\nc. Nagar Panchayat\nd. Mahanagar Council",
+      "a": "**d (Mahanagar Council)** — Under Article 243Q of the Constitution, urban local bodies are classified into three types: Nagar Panchayat (for a transitional area), Municipal Council (for a smaller urban area), and Municipal Corporation (for a larger urban area). 'Mahanagar Council' is not a constitutional classification."
+    },
+    {
+      "id": "polity_ak_0230",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following proposals being undertaken in the House and the required majority to\napprove/pass the proposal have been matched correctly?\n1. Amending an Act of Parliament - Majority of the members present and voting.\n2. Motion of No Confidence - Majority of the total membership of the House\n3. Motion for Impeachment of President - Not less than 2/3 of the members present and voting,\nand the majority of the total membership of the House\n4. Motion to remove Speaker of Lok Sabha - Majority of all the then members of the House\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 2 & 3 Only\nc. 3 & 4 Only\nd. 1 & 4 Only",
+      "a": "**d (1 & 4 Only)** — Ordinary legislative bills amending an Act require a simple majority of members present and voting (1 is correct). Removing the Speaker of Lok Sabha under Article 94(c) requires an effective majority ('a majority of all the then members of the House') (4 is correct). No-Confidence motions require a simple majority, and Presidential impeachment requires 2/3 of total membership."
+    },
+    {
+      "id": "polity_ak_0231",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Anti Defection Law is perpetually in news in India. Which of the following statements are\ncorrect regarding Anti Defection Law?\n1. A member of the House belonging to any political party, on being expelled by the party, shall\nbe disqualified for being a member of the House.\n2. A member of the House disqualified under the Law cannot become a Minister there (even for\nsix months) unless they become a member of the House again.\n3. A member of the House disqualified under the Law can contest the bye-election that is held\ndue to the vacancy caused by their disqualification.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these\n\n\n\nIndian\nPolity",
+      "a": "**c (2 & 3 Only)** — An expelled party member does not attract disqualification under the Tenth Schedule (*G. Viswanathan* case, 1996, statement 1 is false). Under Articles 75(1B) and 164(1B), a disqualified legislator cannot become a Minister unless re-elected. In *Shrimanth Balasaheb Patil* (2019), the Supreme Court ruled that disqualified legislators cannot be barred from contesting the ensuing bye-elections."
+    },
+    {
+      "id": "polity_ak_0232",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Swachh Bharat Mission (Rural) is a Core Centrally Sponsored Scheme of Government of\nIndia? The scheme is being coordinated by which of the following Ministries of the\nGovernment?\na. Ministry of Jal Shakti\nb. Ministry of Rural Development\nc. Ministry of Health and Family Welfare\nd. Ministry of Tourism",
+      "a": "**a (Ministry of Jal Shakti)** — Swachh Bharat Mission (Grameen/Rural) is administered and coordinated by the Department of Drinking Water and Sanitation under the Ministry of Jal Shakti (while SBM-Urban is coordinated by MoHUA)."
+    },
+    {
+      "id": "polity_ak_0233",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Budget presented before the\nParliament of India in 2020?\n1. A total of 101 demands for grant are made in the Budget for Financial Year 2020-21.\n2. After the Appropriation Bill has been passed successfully, there is no need of any Vote on\nAccount to be passed by the Lok Sabha.\n3. After Appropriation Bill has been passed successfully, there’s no need to enact a Finance Act.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. None of these",
+      "a": "**a (1 & 2 Only)** — Since the advancement of the Budget presentation to February 1st in 2017, the entire Appropriation Bill is passed before March 31st, eliminating the need for a Vote on Account (2 is correct). The Finance Bill must still be enacted every year to give statutory effect to tax and revenue proposals (3 is false)."
+    },
+    {
+      "id": "polity_ak_0234",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following terms are NOT explicitly mentioned in the Constitution of India?\na. Absolute Veto\nb. Suspensive Veto\nc. Pocket Veto\nd. All of the above",
+      "a": "**d (All of the above)** — The specific constitutional terms 'Absolute Veto', 'Suspensive Veto', and 'Pocket Veto' are political science classifications and do not appear anywhere in the text of Article 111 of the Constitution of India."
+    },
+    {
+      "id": "polity_ak_0235",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following constitute the Annual Financial Statement tabled in the Parliament\nevery year?\n1. Actuals for the previous Financial Year.\n2. Budget Estimates for the current Financial Year.\n3. Revised Estimates for the current Financial Year.\n4. Budget Estimates for the next Financial Year.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1, 3 & 4 Only\nc. 2 & 4 Only\nd. All of these\n\n\n\nIndian\nPolity",
+      "a": "**d (All of these)** — Under Article 112, the Annual Financial Statement presented to Parliament contains financial information across three consecutive financial years: the actuals for the preceding year, budget and revised estimates for the ongoing year, and budget estimates for the ensuing year."
+    },
+    {
+      "id": "polity_ak_0236",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Electronically Transmitted Postal\nBallot System (ETPBS)?\n1. It is used to electronically transmit the ballot papers from the Returning Officer to the eligible\nVoters, while those Voters have to print the ballot paper and send it back to the Returning\nOfficer via Post.\n2. It is a complete end-to-end encrypted electronic system to dispatch as well as receive the\nballot papers.\n3. The first ever use of ETPBS in a general election to Lok Sabha was in 2019.\n4. The ETPBS has been designed targeting the Service Voters.\nSelect the correct answer using the code given below:\na. 1 & 3 Only\nb. 1, 3 & 4 Only\nc. 2 & 3 Only\nd. 2 & 4 Only",
+      "a": "**b (1, 3 & 4 Only)** — Under ETPBS, ballot papers are transmitted electronically from the Returning Officer to eligible Service Voters, who print them, mark their vote, and return them by physical post (1 is true). It was first implemented on a nationwide scale in the 2019 General Election (3 is true) and was designed specifically for Service Voters (4 is true). It is not end-to-end electronic voting."
+    },
+    {
+      "id": "polity_ak_0237",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT a significance of the Preamble of Constitution of India?\na. It indicates the source of authority of the Constitution\nb. It defines the objects the Constitution seeks to establish and promote\nc. It is regarded as a source of prohibition upon the powers of the Legislature\nd. It can be referred to arrive at the true meaning of an Article of Constitution where it is\nambiguous",
+      "a": "**b (Administrative Tribunals Act, 1985)** — Central and State Administrative Tribunals were established under the Administrative Tribunals Act, 1985, enacted by Parliament pursuant to Article 323A of the Constitution of India (inserted by the 42nd Amendment)."
+    },
+    {
+      "id": "polity_ak_0238",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Central Administrative\nTribunal (CAT)?\n1. It deals only with the disciplinary matters of public servants.\n2. The procedure prescribed by the Code of Civil Procedure, 1908 is not binding on CAT.\n3. The members of armed forces are not under its jurisdiction, but members of the paramilitary\nforces are.\n4. Applicant is allowed to appear only in person and lawyers are not allowed to represent clients.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1, 2 & 3 Only\nc. 2 Only\nd. 3 & 4 Only\n\n\n\nIndian\nPolity",
+      "a": "**c (2 Only)** — Under Section 22 of the Administrative Tribunals Act 1985, the Central Administrative Tribunal (CAT) is not bound by the procedural strictures of the Code of Civil Procedure 1908, but is guided by the Principles of Natural Justice. Armed forces are excluded, and applicants are entitled to be represented by legal counsel."
+    },
+    {
+      "id": "polity_ak_0239",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is correct regarding the Vice President of India?\n1. The term of office is five years, but (s)he can continue in the office, irrespective of the expiry\nof the term, until the successor enters the office.\n2. The petition challenging the election of the Vice President is heard by a bench of five judges\nof the Supreme Court of India.\n3. After completion of the term, Vice President may seek re-election or contest elections to the\noffice of the President, but shall not contest any other election under the Constitution of India.\nSelect the correct answer using the code given below:\na.1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**a (1 & 2 Only)** — Under Article 67(c), the Vice President continues in office until his/her successor assumes charge. Under Article 71 and Supreme Court Rules, disputes relating to the election of the President or Vice President are adjudicated by a Constitution Bench (5 judges) of the Supreme Court. A former Vice President is eligible to contest other public offices."
+    },
+    {
+      "id": "polity_ak_0240",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following subscribe an oath to 'protect and defend' the Constitution of India?\n1. President of India\n2. Governor of a State\n3. Chief Justice of India\n4. Prime Minister\nSelect the correct answer using the code given below:\na. 1 Only\nb. 1 & 2 Only\nc. 3 Only\nd. All of these",
+      "a": "**b (1 & 2 Only)** — Under Articles 60 and 159 respectively, only the **President of India** and the **Governor of a State** swear an oath to 'preserve, protect and defend the Constitution and the law'. Judges swear to 'uphold' it, and Ministers swear to 'bear true faith and allegiance'."
+    },
+    {
+      "id": "polity_ak_0241",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The addition/deletion of a language in the Eighth Schedule of the Constitution of India\nwould require\na. Amendment to the Constitution of India, under Article 368 (including ratification by States)\nb. Amendment to the Constitution of India, under Article 368 (without any ratification by States)\nc. Ordinary legislation of Parliament of India\nd. Executive Order by the President of India\n\n\n\nIndian\nPolity",
+      "a": "**b (Amendment to the Constitution of India, under Article 368 without any ratification by States)** — Amending the Eighth Schedule to add or remove languages requires a Constitutional Amendment Bill passed under Article 368 by a special majority of Parliament, but does not fall under the federal provisions requiring ratification by State Legislatures."
+    },
+    {
+      "id": "polity_ak_0242",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT essential to have and sustain democracy?\na. Political equality of citizens\nb. A written Constitution\nc. Freedom to protest against Government decisions\nd. All of the above",
+      "a": "**b (A written Constitution)** — While fundamental freedoms, equal franchise, and the right to dissent are indispensable to sustain democracy, a codified or written constitution is not essential (the United Kingdom, New Zealand, and Israel are thriving democracies with uncodified constitutions)."
+    },
+    {
+      "id": "polity_ak_0243",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the writ jurisdiction of the\nSupreme Court (SC) and that of the High Court (HC)?\na. SC can issue writs for any purpose, while the HCs can issue them only for enforcing the\nFundamental Rights\nb. SC can issue writs against the Government, while the HCs cannot do so.\nc. Both of these\nd. NOTA",
+      "a": "**d (NOTA)** — Under Article 32, the Supreme Court's writ jurisdiction is narrower, being exercisable only for the enforcement of Fundamental Rights. In contrast, under Article 226, High Courts can issue writs for Fundamental Rights and 'for any other purpose' (ordinary legal rights). Both Courts can issue writs against the Government."
+    },
+    {
+      "id": "polity_ak_0244",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In case of a joint sitting of both the Houses of Parliament summoned by the President of\nIndia to settle a deadlock over a Bill, the majority required to pass the Bill is:\na. Majority of the members present and voting\nb. Majority of the total membership of both the Houses\nc. Majority of not less than two-thirds of the members present and voting\nd. Both b & c above",
+      "a": "**a (Majority of the members present and voting)** — Under Article 108(4) of the Constitution, a Bill considered at a joint sitting of both Houses is passed if it is approved by a simple majority of the total number of members of both Houses present and voting."
+    },
+    {
+      "id": "polity_ak_0245",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following items are excluded from the gross tax revenue of the Union to derive\nthe 'Divisible Pool' of tax resources?\n1. Customs Duties\n2. Corporation Tax\n3. Cost of Collection of Taxes\n4. Cesses and Surcharges\nSelect the correct answer using the code given below:\na. 1, 2 & 3 Only\nb. 1, 2 & 4 Only\nc. 1, 3 & 4 Only\nd. 3 & 4 Only\n\n\n\nIndian\nPolity",
+      "a": "**d (3 & 4 Only)** — Under Articles 270 and 271 of the Constitution, Cesses and Surcharges levied by the Union for specific purposes, along with the actual Cost of Collection of taxes (Art 279(1)), are excluded from the Gross Tax Revenue to arrive at the Net Divisible Pool shared with the States."
+    },
+    {
+      "id": "polity_ak_0246",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "'Bicameralism' can exist in which of the following systems of governance?\na. Unitary System of Government\nb. Federal System of Government\nc. Parliamentary System of Government\nd. All of the above",
+      "a": "**d (All of the above)** — Bicameralism (a two-chamber legislature) can exist in federal systems (India, USA), unitary systems (United Kingdom, Japan), and parliamentary systems (Britain, India, Canada). It is not exclusive to any single form of government."
+    },
+    {
+      "id": "polity_ak_0247",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Departments of the Government administers the matters related to\npatents regarding IPR?\na. Department of Science and Technology\nb. Department of Scientific & Industrial Research\nc. Department of Commerce\nd. Department for Promotion of Industry and Internal Trade",
+      "a": "**d (Department for Promotion of Industry and Internal Trade)** — The Department for Promotion of Industry and Internal Trade (DPIIT), Ministry of Commerce and Industry, is the nodal central department responsible for administering intellectual property legislation (Patents, Trademarks, Industrial Designs, and Geographical Indications)."
+    },
+    {
+      "id": "polity_ak_0248",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct?\na. Every Bill introduced in the Parliament must be in English & be accompanied by a Hindi\nTranslation\nb. Proceedings of the Supreme Court of India are to be in English language only.\nc. Both of these\nd. NOTA",
+      "a": "**b (Proceedings of the Supreme Court of India are to be in English language only)** — Under Article 348(1)(a) of the Constitution, until Parliament by law otherwise provides, all proceedings in the Supreme Court and in every High Court shall be conducted in the English language only."
+    },
+    {
+      "id": "polity_ak_0249",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions provide/protect rights of the Tribal population in India?\n1. Fundamental Rights\n2. Forest Rights Act\n3. Panchayat (Extension to Scheduled Areas) Act\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 1 & 3 Only\nc. 2 & 3 Only\nd. All of these\n\n\n\nAbhey\nKumar",
+      "a": "**d (All of these)** — Rights of tribal communities are protected across constitutional and statutory dimensions: Fundamental Rights (Art 19(5) land restrictions, Art 29 cultural safeguards), the Forest Rights Act (FRA) 2006, and the Panchayats (Extension to the Scheduled Areas) Act (PESA) 1996."
+    },
+    {
+      "id": "polity_ak_0250",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A Member of either House of Parliament, who is a Minister and belongs to a Political Party,\nbecomes disqualified for continuing as a member of the House, if:\n1. The MP is absent from all the meetings of the House for a period of sixty days.\n2. The MP has voluntarily given up the membership of his/her political party.\n3. A No-Confidence motion is passed against the Minister.\nSelect the correct answer using the code given below:\na. 1 & 2 Only\nb. 2 Only\nc. 2 & 3 Only\nd. All of these",
+      "a": "**a (1 & 2 Only)** — An MP loses their parliamentary seat if absent from all House meetings for sixty consecutive days without permission (Art 101(4)) or if disqualified under the Tenth Schedule for voluntarily giving up party membership. The passage of a No-Confidence Motion requires the Council of Ministers to resign, but does not strip Ministers of their seats as MPs."
+    },
+    {
+      "id": "polity_ak_0251",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Constitution of India has used various expressions regarding classes of citizens. Which of the following are among those expressions? 1. Backward Class of Citizens 2. Socially and Educationally Backward Class of Citizens 3. Weaker Sections of People *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Used in Article 16(4) (*\"backward class of citizens\"*), Articles 15(4) and 340 (*\"socially and educationally backward classes\"*), and Article 46 (*\"weaker sections of the people\"*)."
+    },
+    {
+      "id": "polity_ak_0252",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding languages under the Constitution of India? a. It shall be the duty of the Union to promote the spread of the Hindi language. b. There is no tribal language recognised under the Eighth Schedule of the Constitution. *(c. Both of these | d. NOTA)*",
+      "a": "**a** — Article 351 makes it the duty of the Union to promote the spread of the Hindi language. Statement 'b' is false because tribal languages such as Bodo and Santhali are included in the Eighth Schedule."
+    },
+    {
+      "id": "polity_ak_0253",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding 'Motion of Thanks to President's Address' in Parliament of India? a. First session after each general election & first session of every financial year is addressed by the President. b. Such a motion is put to vote in both the Houses of Parliament. *(c. Both of these | d. NOTA)*",
+      "a": "**b** — Under Article 87(1), the President addresses the first session after each general election to the Lok Sabha and the first session of every **calendar year** (not financial year). The Motion of Thanks is discussed and put to vote in both Houses."
+    },
+    {
+      "id": "polity_ak_0254",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "After Election Commission has compiled the list of members elected to a particular House (Lok Sabha or State Legislative Assembly), who issues the appropriate notification for the due constitution of the House? *(a. President or Governor, as the case may be | b. Election Commission of India | c. Presiding Officer of the respective Houses | d. Ministry of Law and Justice)*",
+      "a": "**b (Election Commission of India)** — Under Section 73 of the Representation of the People Act, 1951, the Election Commission of India issues the notification in the Official Gazette for the due constitution of the House."
+    },
+    {
+      "id": "polity_ak_0255",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Anti-Defection Law (ADL)? a. Presiding Officer of the House is empowered to make rules to give effect to the provisions of ADL. b. A person who is not a member of the House may also file a petition seeking disqualification of a member. *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Paragraph 8 of the Tenth Schedule empowers the Chairman/Speaker to make rules, and the Supreme Court held in *Speaker, Orissa Legislative Assembly v. Utkal Keshari Parida* (2013) that any interested person (even a non-MLA/MP) can bring a defection petition before the Speaker."
+    },
+    {
+      "id": "polity_ak_0256",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are explicit provision(s) made in the Constitution of India? 1. During the vacancy in the Office of the President of India as well as the Vice President of India, the Chief Justice of India shall discharge the duties of the President. 2. A person can contest election to the Lok Sabha or to the State Assemblies from two constituencies. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Statement 1 is provided by *The President (Discharge of Functions) Act, 1969* enacted under Article 70, and Statement 2 is provided by Section 33(7) of *The Representation of the People Act, 1951*; neither is explicitly written in the Constitution."
+    },
+    {
+      "id": "polity_ak_0257",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The responsibility of conducting the decennial Census of India is vested with: *(a. Ministry of Home Affairs | b. Ministry of Statistics and Programme Implementation | c. Ministry of Human Resource Development | d. Ministry of Labour and Employment)*",
+      "a": "**a (Ministry of Home Affairs)** — The decennial Census is conducted by the Office of the Registrar General and Census Commissioner under the Ministry of Home Affairs."
+    },
+    {
+      "id": "polity_ak_0258",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The passage of which of the following motions in the Lok Sabha would necessarily result in the resignation of the Government? 1. Motion of No Confidence 2. Motion of Thanks to the President's Address 3. Censure Motion 4. Adjournment Motion *(a. 1 Only | b. 1 & 2 Only | c. 1 & 3 Only | d. 1 & 4 Only)*",
+      "a": "**a (1 Only)** — The *passage* of a Motion of No Confidence requires the government to resign (whereas it is the *defeat/rejection*, not passage, of the Motion of Thanks that leads to resignation). Censure and Adjournment Motions do not mandate resignation."
+    },
+    {
+      "id": "polity_ak_0259",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "During which of the following situations the Union Parliament may legislate on the subjects in the State List? 1. Proclamation of National Emergency (Art 250) 2. Resolution passed by Rajya Sabha in national interest (Art 249) 3. Request by two or more States (Art 252) / President's Rule (Art 356) *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Articles 249, 250, 252, 253 (international treaties), and 356 all empower Parliament to legislate on State List subjects."
+    },
+    {
+      "id": "polity_ak_0260",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Differential cut-off marks in the UPSC Civil Service Exam for various categories/classes of aspirants can be directly justified from: *(a. Equality before the law | b. Equal protection of the law | c. Procedure established by the law | d. Due process of the law)*",
+      "a": "**b (Equal protection of the law)** — 'Equal protection of the laws' under Article 14 permits reasonable classification and affirmative action (treating equals equally and unequals unequally)."
+    },
+    {
+      "id": "polity_ak_0261",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "President of India proclaims National Emergency under Article 352 on 01/01/2020. Assuming both Houses of Parliament are in session, what is the last date by which this proclamation must be approved by Parliament, and once approved on that last date itself, till which date does it remain valid? *(a. 31/01/2020, 30/06/2020 | b. 29/02/2020, 30/06/2020 | c. 31/01/2020, 31/07/2020 | d. 29/02/2020, 31/07/2020)*",
+      "a": "**c (31/01/2020, 31/07/2020)** — Under Article 352(4), a National Emergency must be approved within **1 month** (by 31/01/2020) and remains in force for **6 months from the date of passage of the second resolution** (until 31/07/2020)."
+    },
+    {
+      "id": "polity_ak_0262",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "President of India proclaims President's Rule under Article 356 in a State on 01/01/2020. Assuming both Houses are in session, what is the last date by which it must be approved by Parliament, and once approved on that last date itself, till which date does it remain valid? *(a. 31/01/2020, 30/06/2020 | b. 29/02/2020, 30/06/2020 | c. 31/01/2020, 31/07/2020 | d. 29/02/2020, 31/07/2020)*",
+      "a": "**b (29/02/2020, 30/06/2020)** — Under Article 356(3)–(4), President's Rule must be approved within **2 months** (by 29/02/2020 in leap year 2020) and remains valid for **6 months from the date of issue of the proclamation** (until 30/06/2020)."
+    },
+    {
+      "id": "polity_ak_0263",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "President of India proclaims Financial Emergency under Article 360 on 01/01/2020. Assuming both Houses are in session, what is the last date for parliamentary approval, and once approved, till which date does it remain valid? *(a. 31/01/2020, 30/06/2020 | b. 29/02/2020, 30/06/2020 | c. 31/01/2020, Indefinite Period | d. 29/02/2020, Indefinite Period)*",
+      "a": "**d (29/02/2020, Indefinite Period)** — Under Article 360(2), a Financial Emergency must be approved within **2 months** (by 29/02/2020) and once approved, continues **indefinitely** until revoked by a subsequent proclamation."
+    },
+    {
+      "id": "polity_ak_0264",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under Article 25 of the Constitution of India, the reference made to 'Hindu' also includes persons professing which religions? 1. Sikh 2. Jaina 3. Buddhist 4. Parsi *(Select the correct code)*",
+      "a": "**1, 2 & 3 Only (Sikh, Jaina, and Buddhist)** — Explanation II to Article 25(2)(b) explicitly states that the reference to Hindus shall be construed as including a reference to persons professing the Sikh, Jaina, or Buddhist religion."
+    },
+    {
+      "id": "polity_ak_0265",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Chairperson or a member of a State Public Service Commission may be removed from the Office by an order of: *(a. The President of India | b. The Governor of the State | c. either the President of India, or the Governor of the State | d. Enquiry Committee of Supreme Court, appointed by the President of India)*",
+      "a": "**a (The President of India)** — Although appointed by the Governor, the Chairperson and members of a SPSC can be removed only by the **President of India** under Article 317."
+    },
+    {
+      "id": "polity_ak_0266",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is a basic feature of the Presidential system of Government? *(a. Rigid Constitution | b. Residual powers vested with States | c. Single Executive | d. Supremacy of the Legislature)*",
+      "a": "**c (Single Executive)** — In a Presidential system, the President is both the Head of State and the Head of Government (Single Executive), unlike the Dual Executive of a Parliamentary system."
+    },
+    {
+      "id": "polity_ak_0267",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Members of Parliament can express themselves in the House in: *(a. either English or Hindi | b. either English or Hindi or their mother tongue | c. only one of the languages mentioned in the Eighth Schedule | d. either one of the languages mentioned in the Eighth Schedule or English)*",
+      "a": "**b (either English or Hindi or their mother tongue)** — Under Article 120(1), business in Parliament is transacted in Hindi or English, provided that the Presiding Officer may permit any member who cannot adequately express himself in Hindi or English to address the House in his/her mother tongue."
+    },
+    {
+      "id": "polity_ak_0268",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct regarding the Presiding Officers of the Houses of Parliament? a. The Speaker of Lok Sabha is not part of any Committee of the House. b. The Chairperson of Rajya Sabha is not part of any Committee of the House. *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Both statements are incorrect: the Speaker chairs the Business Advisory Committee, Rules Committee, and General Purposes Committee of the Lok Sabha, and the Chairman of Rajya Sabha chairs the Business Advisory Committee, Rules Committee, and General Purposes Committee of the Rajya Sabha."
+    },
+    {
+      "id": "polity_ak_0269",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Presidents of India and USA? a. President of India is an integral part of legislature (Parliament). b. President of USA is not an integral part of legislature (Congress). *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Under Article 79, the President of India is an integral part of Parliament, whereas under the strict separation of powers in the US Constitution, the US President is not a part of the US Congress."
+    },
+    {
+      "id": "polity_ak_0270",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following High Courts has jurisdiction over the Union Territory of Andaman and Nicobar Islands? *(a. Calcutta High Court | b. Madras High Court | c. Bombay High Court | d. Gauhati High Court)*",
+      "a": "**a (Calcutta High Court)** — The Calcutta High Court exercises territorial jurisdiction over the Andaman and Nicobar Islands (with a circuit bench at Port Blair)."
+    },
+    {
+      "id": "polity_ak_0271",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding 'Overseas Electors'? 1. There is no minimum period for which one should be out of country so as to apply for registration as overseas elector. 2. An overseas elector shall have to produce only their original passport for identification at the polling booth, while resident electors are allowed various other documents for identification. 3. An overseas elector is not issued an Electors Photo Identity Card (EPIC). *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under Section 20A of the RPA, 1950 and related rules, NRIs registered as overseas electors have no minimum stay-abroad threshold, are not issued an EPIC, and must vote in person at the polling station using their original Indian passport."
+    },
+    {
+      "id": "polity_ak_0272",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct about the International Court of Justice (ICJ)? 1. It is the only one of the six principal organs of the United Nations not located in New York, USA. 2. Its official languages are English and French. 3. No two members of the Court may be nationals of the same state. 4. The members of the Court are elected by the UN General Assembly and the Security Council. *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Located at The Hague (Netherlands), the ICJ comprises 15 judges (no two from the same country) elected for 9-year terms by the UNGA and UNSC, with English and French as official languages."
+    },
+    {
+      "id": "polity_ak_0273",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following characteristics are essential for a Constitution to be regarded as 'Federal'? 1. Division of powers 2. Written Constitution 3. Supremacy of the Constitution 4. Independent Judiciary *(Select the correct code)*",
+      "a": "**All of these (1, 2, 3 & 4)** — A federal constitution requires a written supreme constitution dividing powers between federal and state governments, guarded by an independent judiciary."
+    },
+    {
+      "id": "polity_ak_0274",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding an 'Office of Profit' under the Government of India? 1. It is an office which is capable of yielding a profit or pecuniary gain. 2. If the office carries with it, or entitles the holder to, only reimbursement of out of pocket/actual expenses, then it will not be an office of profit. 3. Members of Parliament are not holding an office of profit. 4. The President of India does not act on the advice of the Council of Ministers on the related questions of disqualification of the Members of Parliament. *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Compensatory allowances covering out-of-pocket expenses do not constitute 'profit'; MPs are exempted under the 1959 Act; and under Article 103(2), the President acts according to the opinion of the Election Commission (not the Council of Ministers)."
+    },
+    {
+      "id": "polity_ak_0275",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions alone, if present in a Bill, are sufficient for the Bill to be considered a Money Bill? 1. Imposition or regulation of a tax by the Union 2. Regulation of borrowing of money by the Government of India 3. Giving any guarantee by the Government of India for borrowing of money *(Select the correct code)*",
+      "a": "**All of these (1, 2 & 3)** — Under Article 110(1)(a) and (b), any Bill dealing exclusively with the imposition/regulation of a tax, regulation of borrowing of money, or giving of any guarantee by the Government of India is a Money Bill."
+    },
+    {
+      "id": "polity_ak_0276",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT a component of the oath taken by the Prime Minister of India? *(a. to bear true faith and allegiance to the Constitution of India | b. to uphold the sovereignty and integrity of India | c. to not communicate to any person any matter unless required as part of duty | d. to devote self to the service and well being of the people of India)*",
+      "a": "**d (to devote self to the service and well being of the people of India)** — Devoting oneself to the service and well-being of the people of India is part of the **President's** oath (Article 60) and **Governor's** oath (Article 159), not the oath of a Union Minister/PM in the Third Schedule."
+    },
+    {
+      "id": "polity_ak_0277",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the relation between Centre and States in India? 1. A State cannot be reorganised without seeking the opinion of the concerned State legislature. 2. A Legislative Council can be created in a State only after the State's Legislative Assembly has passed a resolution to that effect. 3. President's Rule can be imposed in a State only on the report of the Governor of that State. 4. Governor can reserve any Bill passed by the State Legislature for the consideration of the President of India. *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 1, 3 & 4 Only | d. 2, 3 & 4 Only)*",
+      "a": "**b (1, 2 & 4 Only)** — Statement 3 is incorrect because Article 356(1) empowers the President to impose President's Rule *\"on receipt of a report from the Governor of a State **or otherwise**\"*."
+    },
+    {
+      "id": "polity_ak_0278",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following features/provisions of the Constitution of India have been borrowed from the Constitution of USA? 1. Fundamental Rights 2. Judicial Review 3. Concurrent List 4. Preamble 5. Impeachment of the President *(a. 1, 2, 3 & 4 Only | b. 1, 2, 4 & 5 Only | c. 1, 3, 4 & 5 Only | d. 2, 3 & 5 Only)*",
+      "a": "**b (1, 2, 4 & 5 Only)** — Fundamental Rights, Judicial Review, the Preamble, and Impeachment of the President were borrowed from the US Constitution. The Concurrent List (3) was borrowed from the Australian Constitution."
+    },
+    {
+      "id": "polity_ak_0279",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Amendments to which of the following provisions of the Constitution of India would require ratification by the Legislatures of not less than half of the States of India? 1. Manner of election of the President 2. Manner of election of the Vice President 3. Method of appointment of judges of the Supreme Court 4. Power and Procedure to amend the Constitution *(a. 1 & 2 Only | b. 1, 3 & 4 Only | c. 2, 3 & 4 Only | d. All of these)*",
+      "a": "**b (1, 3 & 4 Only)** — Under the proviso to Article 368(2), Articles 54 & 55 (Presidential election), Chapter IV of Part V (Union Judiciary), and Article 368 itself require ratification by at least half of the State Legislatures. The election of the Vice-President (Article 66) does not require state ratification."
+    },
+    {
+      "id": "polity_ak_0280",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are correct regarding the applicability of the Model Code of Conduct during elections? 1. During general elections to the Legislative Assembly, the code is applicable only in the concerned State. 2. During bye-elections, the code is enforced in the concerned Constituency (or district). *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — During State Assembly elections, the MCC applies across the concerned State; during bye-elections, it applies in the concerned constituency/district."
+    },
+    {
+      "id": "polity_ak_0281",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is the oldest High Court in India? *(a. Bombay High Court | b. Madras High Court | c. High Court of Delhi | d. Calcutta High Court)*",
+      "a": "**d (Calcutta High Court)** — Established on 1 July 1862 under the Indian High Courts Act, 1861, the Calcutta High Court is the oldest High Court in India."
+    },
+    {
+      "id": "polity_ak_0282",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is an essential feature of a Unitary system of Government? *(a. Unwritten Constitution | b. Independence of Judiciary | c. Absence of regional/local Governments | d. None of these)*",
+      "a": "**d (None of these)** — A unitary state may have a written constitution (e.g., France, Japan) and regional/local governments (e.g., UK devolved parliaments), provided supreme authority rests with the central government."
+    },
+    {
+      "id": "polity_ak_0283",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In India, other than ensuring that public funds are used efficiently and for intended purpose, what is the importance of the office of the Comptroller and Auditor General (CAG)? 1. CAG exercises exchequer control on behalf of the Parliament. 2. Reports of CAG on the execution of projects or programmes by the Ministries are discussed by the Public Accounts Committee. 3. Information from CAG reports can be used by investigating agencies to press charges against those who have violated the law while managing public finances. 4. While dealing with the audit and accounting of government companies, CAG has certain judicial powers for prosecuting those who violate the law. *(a. 1, 2 & 3 Only | b. 2 & 4 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**c (2 & 3 Only)** — In India, the CAG conducts post-facto audit and has neither exchequer control (1 is false) nor judicial/prosecutorial powers (4 is false). Its reports are scrutinised by the PAC (2) and can form the basis for investigative action (3)."
+    },
+    {
+      "id": "polity_ak_0284",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In case the annual Budget is not passed by the Lok Sabha: *(a. the Budget shall be modified and presented again | b. the Budget shall be referred to the Rajya Sabha for suggestions | c. the Union Finance Minister is asked to resign | d. the Prime Minister submits resignation of the Council of Ministers)*",
+      "a": "**d (the Prime Minister submits resignation of the Council of Ministers)** — Failure to pass the Budget in the Lok Sabha amounts to a loss of confidence of the House, requiring the Prime Minister and the Council of Ministers to resign."
+    },
+    {
+      "id": "polity_ak_0285",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "'M3 EVM' has recently been in the news during elections. Which of the following statements are correct in its regard? 1. Unlike M2 EVMs, which had a limit of connecting only 4 Balloting Units, there is no limit with M3 EVMs. 2. There is no limit on the number of votes an M3 EVM can record. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — M3 EVMs can connect a maximum of **24 Balloting Units** (catering to 384 candidates including NOTA) and can record a maximum of **2,000 votes**."
+    },
+    {
+      "id": "polity_ak_0286",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In which of the following cases did the Supreme Court declare federalism as a basic feature of the Constitution of India? *(a. Automobile Transport v. State of Rajasthan, 1962 | b. Kesavananda Bharati v. State of Kerala, 1973 | c. S R Bommai v. Union of India, 1994 | d. Kuldip Nayar v. Union of India, 2006)*",
+      "a": "**b (Kesavananda Bharati v. State of Kerala, 1973) / c (S R Bommai v. Union of India, 1994)** — Federalism was first listed as a basic feature in *Kesavananda Bharati* (1973) and most famously elaborated as part of the Basic Structure in *S.R. Bommai v. Union of India* (1994)."
+    },
+    {
+      "id": "polity_ak_0287",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Members of Standing Committees of the Union Cabinet are appointed by: *(a. The President of India | b. The Prime Minister | c. The Cabinet | d. The Cabinet Secretary)*",
+      "a": "**b (The Prime Minister)** — Cabinet Committees are extra-constitutional bodies set up and reconstituted by the Prime Minister according to the exigencies of time and political requirements."
+    },
+    {
+      "id": "polity_ak_0288",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are Human Rights under the Universal Declaration of Human Rights (UDHR)? 1. Right to property 2. Right to Information 3. Right to education / rest and leisure *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — The UDHR (1948) recognises the right to own property (Article 17), the right to seek, receive, and impart information (Article 19), right to rest and leisure (Article 24), and right to education (Article 26)."
+    },
+    {
+      "id": "polity_ak_0289",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following powers of the President of India can be exercised within his/her discretion? 1. Returning a Bill (not a Money/Constitutional Amendment Bill) for reconsideration (Suspensive Veto) 2. Appointing a Prime Minister when no party has a clear majority in Lok Sabha 3. Summoning a joint sitting of both Houses of Parliament to resolve a deadlock *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Exercising Suspensive Veto/Pocket Veto and appointing a PM in a hung Lok Sabha are situational discretionary powers of the President, whereas summoning a joint sitting under Article 108 is done on the advice of the Council of Ministers."
+    },
+    {
+      "id": "polity_ak_0290",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? 1. The number of members of UPSC and their conditions of service is determined by the President of India. 2. The Chairman of the Finance Commission shall be selected from among persons who have special knowledge of the finances and accounts of Government. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Statement 1 is correct under Article 318. Statement 2 is incorrect because under the Finance Commission (Miscellaneous Provisions) Act, 1951, the *Chairman* is selected from among persons who have had **\"experience in public affairs\"**, while knowledge of government finances and accounts is the qualification for one of the four other members."
+    },
+    {
+      "id": "polity_ak_0291",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following items are included in the Union List of the Seventh Schedule of the Constitution of India? 1. Acquisition of property 2. Forests 3. Bankruptcy and Insolvency *(a. 1 & 2 Only | b. 2 & 3 Only | c. 3 Only | d. None of these)*",
+      "a": "**d (None of these)** — Acquisition and requisitioning of property (Entry 42), Forests (Entry 17A), and Bankruptcy and Insolvency (Entry 9) are all in the **Concurrent List**."
+    },
+    {
+      "id": "polity_ak_0292",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What do you understand by the term 'Delegated Legislation'? *(a. Exercise of power to make legislation directed by the Judiciary to the Legislature | b. Exercise of power to legislate under the authority delegated by the Constitution to the Legislature | c. Exercise of power to make legislation on a subject delegated by a Legislature to another Legislature | d. Exercise of power to make rules delegated by the Legislature to the Executive)*",
+      "a": "**d (Exercise of power to make rules delegated by the Legislature to the Executive)** — Delegated (or subordinate) legislation refers to rules, regulations, and by-laws framed by the Executive under authority conferred by an enabling Act of the Legislature."
+    },
+    {
+      "id": "polity_ak_0293",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "According to the Constitution of India, President shall cause to be laid before the Parliament: 1. the recommendations of the Union Finance Commission 2. the report of the Comptroller & Auditor General 3. the report of the National Commission for Scheduled Castes 4. the annual report on the work done by Union Public Service Commission *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — The President causes all four reports to be laid before Parliament under Article 281 (Finance Commission), Article 151 (CAG), Article 338 (NCSC), and Article 323 (UPSC)."
+    },
+    {
+      "id": "polity_ak_0294",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The provisions made under the Second Schedule of the Constitution of India DO NOT contain explicit provisions regarding emoluments or salary of which of the following? 1. Vice President of India 2. Prime Minister of India 3. Chief Election Commissioner *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — The Second Schedule covers the President, Governors, Speakers/Deputy Speakers, Chairmen/Deputy Chairmen, Judges of SC and HCs, and the CAG. The Vice-President draws salary as Chairman of Rajya Sabha, while salaries of the PM and CEC are governed by separate Acts of Parliament."
+    },
+    {
+      "id": "polity_ak_0295",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Governor of a State in India? 1. A person to be appointed as Governor must have completed thirty-five years of age. 2. Where the same person is appointed as Governor of two or more States, the emoluments and allowances of the Governor shall be allocated among the States equally. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Under Article 157, the minimum age is 35 years (1 is correct). Under Article 158(3A), when a person is Governor of two or more States, the emoluments and allowances are allocated among the States *in such proportion as the President may by order determine* (not necessarily equally; 2 is false)."
+    },
+    {
+      "id": "polity_ak_0296",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statutes are NOT within the jurisdiction of the National Green Tribunal (NGT)? 1. Indian Forest Act, 1927 2. Forest (Conservation) Act, 1980 3. Wildlife (Protection) Act, 1972 4. Biological Diversity Act, 2002 *(a. 1 & 2 Only | b. 1 & 3 Only | c. 3 & 4 Only | d. 2, 3 & 4 Only)*",
+      "a": "**b (1 & 3 Only)** — Schedule I of the NGT Act, 2010 lists 7 laws (including the Forest Conservation Act, 1980 and Biological Diversity Act, 2002), but excludes the **Indian Forest Act, 1927** and the **Wildlife (Protection) Act, 1972**."
+    },
+    {
+      "id": "polity_ak_0297",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the National Green Tribunal (NGT)? *(1. It is a statutory body established under the NGT Act, 2010. 2. It is bound by the procedure laid down under the Code of Civil Procedure, 1908.)*",
+      "a": "**1 Only** — The NGT is a statutory body under the NGT Act, 2010, and under Section 19(1), it is **not** bound by the Code of Civil Procedure, 1908, but is guided by the principles of natural justice."
+    },
+    {
+      "id": "polity_ak_0298",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following was/were the reason(s) for the 'Federal with a strong Centre' nature of the Constitution of India? a. To stem disintegration, and integrate the princely states b. To solve the socio-economic problems of the country through planning and coordination *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Both national integration post-Partition and coordinated socio-economic development motivated the framers to establish a federation with a strong Centre."
+    },
+    {
+      "id": "polity_ak_0299",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Offices are NOT an 'Office of Profit'? 1. President of India 2. Governor of a State 3. Prime Minister of India *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. None of these)*",
+      "a": "**a / All three are exempted** — Under Articles 58(2), 66(4), 102(2), and 191(2), a person is not deemed to hold an office of profit by reason only that he/she is the President, Vice-President, Governor of any State, or a Minister (including PM/CM) of the Union or any State."
+    },
+    {
+      "id": "polity_ak_0300",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "With reference to the Union Executive, which of the following may appoint an Ad hoc Committee of Ministers (including a Group of Ministers) for taking decisions on some matters? 1. The Prime Minister 2. The Union Cabinet 3. Standing Committees of the Cabinet *(Select the correct code)*",
+      "a": "**1 & 2 Only (Prime Minister or Union Cabinet)** — Ad hoc Committees of Ministers (such as Groups of Ministers / GoMs) are constituted by the Prime Minister or the Union Cabinet to examine and report on specific issues.\n\n---\n\n## Part 7: Questions AK 0301 to AK 0350"
+    },
+    {
+      "id": "polity_ak_0301",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are a consumer right recognised under the provisions of law in India? 1. Right to consumer awareness 2. Right to be informed 3. Right to be heard *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Section 2(9) of the Consumer Protection Act, 2019 recognises six consumer rights: right to be protected, right to be informed, right to be assured, right to be heard, right to seek redressal, and right to consumer awareness."
+    },
+    {
+      "id": "polity_ak_0302",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The value of the currency note in India is NOT printed on the note in which of the following Eighth Schedule languages? *(Manipuri, Konkani, Bodo, Dogri, Maithili, Santhali, Sindhi)*",
+      "a": "**All 7 of those languages** — The language panel on Indian currency notes displays the denomination in 15 of the 22 Eighth Schedule languages (in addition to Hindi and English on the faces), omitting Manipuri, Konkani, Bodo, Dogri, Maithili, Santhali, and Sindhi."
+    },
+    {
+      "id": "polity_ak_0303",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statutes provide for preventive detention in India? 1. Prevention of Blackmarketing and Maintenance of Supplies of Essential Commodities Act, 1980 2. Conservation of Foreign Exchange and Prevention of Smuggling Activities Act, 1974 (COFEPOSA) 3. National Security Act, 1980 *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — All three are active central statutes authorising preventive detention in India."
+    },
+    {
+      "id": "polity_ak_0304",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "'The Official Secrets Act, 1923' is often in the news. Which of the following statements are correct regarding this Act? 1. It applies only to the servants of the Government. 2. A person can be charged under the Act even if the action was unintentional. 3. The Court may exclude general public from the proceedings. 4. The punishment may extend up to fourteen years of imprisonment. *(a. 1, 2 & 3 Only | b. 2, 3 & 4 Only | c. 2 & 4 Only | d. 3 & 4 Only)*",
+      "a": "**b (2, 3 & 4 Only)** — The Official Secrets Act, 1923 applies to all persons/citizens (not just government servants; 1 is false), allows prosecution without proving guilty intent if conduct is prejudicial to state safety (2), allows in-camera trials excluding the public (3), and carries up to 14 years' imprisonment for espionage (4)."
+    },
+    {
+      "id": "polity_ak_0305",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct with reference to the Prime Minister's Office (PMO)? 1. It has the status of a department under the Government of India Allocation of Business Rules. 2. It is headed by the Principal Secretary to the Prime Minister. 3. The jurisdiction of PMO extends over all such subjects and activities as are not specially allotted to any other individual department. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — The PMO is a department under the Allocation of Business Rules, 1961, is headed administratively by the Principal Secretary to the PM, and handles residual subjects not allocated to any Ministry/Department."
+    },
+    {
+      "id": "polity_ak_0306",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? 1. The notification for general election to the Lok Sabha and the State Assemblies is issued on the advice of the Election Commission. 2. The notification for general election to the Lok Sabha and the State Assemblies is issued by the Election Commission. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Under Sections 14 and 15 of the RPA, 1951, the notification calling upon constituencies to elect members is issued by the **President** (for Lok Sabha) and the **Governor** (for State Legislative Assembly) on dates recommended by the Election Commission."
+    },
+    {
+      "id": "polity_ak_0307",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Arrange the following Offices in the decreasing order in the 'Order of Precedence', as established by the President of India: 1. Speaker of the Lok Sabha 2. Cabinet Ministers of the Union 3. Judges of the Supreme Court 4. High Commissioners of Commonwealth Countries accredited to India *(a. 3-4-1-2 | b. 1-3-2-4 | c. 3-1-2-4 | d. 1-2-4-3)*",
+      "a": "**d (1-2-4-3)** — Speaker of Lok Sabha (Rank 6) > Union Cabinet Ministers (Rank 7) > Ambassadors Extraordinary and Plenipotentiary / High Commissioners of Commonwealth Countries (Rank 8) > Judges of the Supreme Court (Rank 9)."
+    },
+    {
+      "id": "polity_ak_0308",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are compulsory provisions under The Constitution (Seventy-Fourth Amendment) Act, 1992? 1. Rotation of seats reserved for women 2. Constitution of a State Finance Commission to review financial position of the Municipalities 3. Constitution of a District Planning Committee at the district level *(a. 1 & 2 Only | b. 2 & 3 Only | c. 3 Only | d. All of these)*",
+      "a": "**b (2 & 3 Only)** — Under Article 243T(3), rotation of seats reserved for women in Municipalities is discretionary (*\"may be allotted by rotation\"*), whereas constituting a State Finance Commission (Art 243Y) and a District Planning Committee (Art 243ZD) are mandatory (*\"shall\"*)."
+    },
+    {
+      "id": "polity_ak_0309",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Advocate General (AG) of a State? a. The AG of a State must be qualified to be appointed as a judge of High Court. b. The AG of a state shall not be more than 62 years of age. *(c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a** — Under Article 165(1), the Advocate General must be qualified to be appointed a Judge of a High Court, and the Supreme Court has held that the 62-year retirement age of High Court Judges does not apply to the Advocate General."
+    },
+    {
+      "id": "polity_ak_0310",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following situations would require a 'Vote of Credit' to be passed by the House of People? *(a. To meet the situation when the money has been spent more than the amount granted in the Budget | b. To meet expenditure, as advance for a part of FY, pending the procedure to enact Budget | c. To meet the expenditure even without any corresponding source of revenue | d. To meet unexpected demand where the magnitude of demand cannot be stated with details in the Budget)*",
+      "a": "**d (To meet unexpected demand where the magnitude of demand cannot be stated with details in the Budget)** — Under Article 116(1)(b), a Vote of Credit is granted for meeting an unexpected demand upon the resources of India when, on account of the magnitude or indefinite character of the service, the demand cannot be stated with the details ordinarily given in an annual financial statement."
+    },
+    {
+      "id": "polity_ak_0311",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Governor of a State? 1. The Governor shall make and subscribe an oath/affirmation in the presence of the Chief Justice of the High Court, or in his/her absence, the available senior-most Judge of the High Court. 2. During a vacancy in the office of the Governor, the functions shall be discharged by the Chief Justice of the High Court, or in his/her absence, the available senior-most Judge of the High Court. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Statement 1 is explicitly provided in Article 159. Statement 2 is incorrect because under Article 160, the President may make such provision as he thinks fit for the discharge of the functions of the Governor in any contingency not provided for (it is not automatic under the Constitution)."
+    },
+    {
+      "id": "polity_ak_0312",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In which of the following situations, the President of India may decide who shall preside over the sitting of the House? 1. The offices of the Speaker and Deputy Speaker of the Lok Sabha fall vacant. 2. Simultaneous absence of the Chairman and Deputy Chairman of the Rajya Sabha. 3. Simultaneous absence of the Speaker and Deputy Speaker of the Lok Sabha. 4. Vacancy in the offices of the Chairman and Deputy Chairman of the Rajya Sabha. *(a. 1 & 2 Only | b. 1 & 4 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 4 Only)** — Under Articles 95(1) and 91(1), the President appoints a member of the House to perform the duties of the presiding officer only when both offices are **vacant**. During mere **absence** (2 & 3), a member from the Panel of Chairpersons/Vice-Chairpersons (or a person determined by the House) presides."
+    },
+    {
+      "id": "polity_ak_0313",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following symbols are protected under The Prevention of Insults to National Honour Act, 1971? 1. National Flag of India 2. Constitution of India 3. National Anthem of India *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Sections 2 and 3 of the Prevention of Insults to National Honour Act, 1971 penalise disrespect/insult to the Indian National Flag, the Constitution of India, and the National Anthem."
+    },
+    {
+      "id": "polity_ak_0314",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding an Appropriation Bill introduced in the Parliament of India? 1. It can be introduced only in the Lok Sabha. 2. It contains all the Demands for Grants voted upon by the Lok Sabha. 3. It contains the expenditure charged to the Consolidated Fund of India. 4. No 'Cut Motion' is allowed after the introduction of the Appropriation Bill. *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 2 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under Articles 110 and 114, an Appropriation Bill is a Money Bill introduced only in the Lok Sabha covering both voted grants and charged expenditure, and no amendment/cut motion can be proposed to vary the amount or alter the destination of any grant."
+    },
+    {
+      "id": "polity_ak_0315",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Fundamental Rights are available ONLY to the citizens of India? 1. Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth (Art 15) 2. Equality of opportunity in matters of public employment (Art 16) 3. Right of children to free and compulsory elementary education (Art 21A) *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Articles 15, 16, 19, 29, and 30 are available exclusively to citizens of India. Article 21A is available to all children aged 6 to 14 years, whether citizens or foreigners."
+    },
+    {
+      "id": "polity_ak_0316",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following political parties are eligible for exemption from Income Tax under the Income Tax Act? *(a. All registered political parties only | b. All recognised political parties only | c. All registered parties with a minimum vote share of 1% | d. There is no special exemption for political parties)*",
+      "a": "**a (All registered political parties only)** — Under Section 13A of the Income Tax Act, 1961, any political party registered with the Election Commission of India under Section 29A of the RPA, 1951 is eligible for income tax exemption subject to statutory compliance."
+    },
+    {
+      "id": "polity_ak_0317",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are a discretionary power of the President of India? 1. Summoning a session of Parliament 2. Removing a Minister of the Union against whom there are allegations 3. Presidential reference to the Supreme Court of India seeking its opinion on a question of law *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. NOTA)*",
+      "a": "**d (NOTA)** — All three powers are exercised by the President strictly on the aid and advice of the Prime Minister / Union Council of Ministers under Article 74."
+    },
+    {
+      "id": "polity_ak_0318",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are the functions of the Principal Secretary to the Prime Minister? 1. Heading the Prime Minister's Office (PMO) 2. Assisting the PM as the head of the Union Cabinet 3. Preparing notes on matters to be discussed by the PM 4. Maintaining liaison with the President, Governors, Foreign Representatives etc. *(Select the correct code)*",
+      "a": "**d (All of these)** — As the administrative head of the PMO, the Principal Secretary performs all four functions in assisting the Prime Minister."
+    },
+    {
+      "id": "polity_ak_0319",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following subjects are mentioned in the Union List of the Seventh Schedule of the Constitution of India? 1. Economic and Social Planning 2. Audit of the accounts of the Union and State 3. Electricity 4. Stock Exchanges *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 1, 3 & 4 Only | d. 2 & 4 Only)*",
+      "a": "**d (2 & 4 Only)** — Audit of the accounts of the Union and of the States (Entry 76) and Stock Exchanges and futures markets (Entry 48) are in the Union List. Economic and Social Planning (Entry 20) and Electricity (Entry 38) are in the Concurrent List."
+    },
+    {
+      "id": "polity_ak_0320",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Consumer Protection Act, 2019 has replaced The Consumer Protection Act, 1986. Which of the following are features of the new Act? 1. A consumer can file complaint only in a consumer court where the seller's office is located. 2. A consumer can seek compensation under product liability. 3. E-commerce transactions are included under the ambit of the Act. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**c (2 & 3 Only)** — Under the 2019 Act, a consumer can file a complaint from where the **complainant resides or works for gain** (1 is false), claim product liability compensation (2), and seek protection for e-commerce transactions (3)."
+    },
+    {
+      "id": "polity_ak_0321",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are generally associated with right-wing politics? 1. Social conservatism and preservation of traditional institutions 2. Free-market economic policies 3. Cultural nationalism *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Right-wing political ideology is traditionally associated with social conservatism, free-market enterprise, and nationalism."
+    },
+    {
+      "id": "polity_ak_0322",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the National Disaster Response Fund (NDRF) and the State Disaster Response Fund (SDRF)? 1. These are statutory funds. 2. Union Govt. contributes 50% of SDRF allocation to the States/UTs. 3. The Union Govt.'s contribution is as per the recommendations of the National Disaster Management Authority (NDMA). 4. State Governments may use the funds available under the SDRF even for disasters not included in the notified list of disasters of the Ministry of Home Affairs. *(a. 1, 2 & 3 Only | b. 1 & 4 Only | c. 2 & 3 Only | d. 2, 3 & 4 Only)*",
+      "a": "**b (1 & 4 Only)** — NDRF and SDRF are statutory funds under the Disaster Management Act, 2005 (1 is true), and States can use up to 10% of SDRF for local disasters outside MHA's notified list (4 is true). The Centre contributes **75%** (general states) or **90%** (NE/Himalayan states) based on the recommendations of the **Finance Commission** (2 & 3 are false)."
+    },
+    {
+      "id": "polity_ak_0323",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding election-related surveys in India? 1. Opinion Polls are allowed, but Exit Polls are not allowed. 2. Displaying results of an opinion poll is prohibited only during the period of 48 hours ending with the hour fixed for conclusion of polls. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** — Under Section 126A of the RPA, 1951, Exit Polls are not banned altogether; they are only prohibited during the voting window (from the start of polling in the first phase until 30 minutes after the close of polling in the last phase). Opinion polls are barred on electronic media during the 48-hour silence period under Section 126(1)(b)."
+    },
+    {
+      "id": "polity_ak_0324",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "While new legislations are enacted, at the same time it is important to repeal/terminate other legislations. In this regard, what do you understand by the term 'Sunset Law'? *(a. An essential legislation requiring regular re-authorisation | b. A non-essential legislation that has been repealed by the legislature | c. A legislation which overrides provisions of some other legislations | d. A legal provision that provides for automatic termination of the law on a certain date)*",
+      "a": "**d (A legal provision that provides for automatic termination of the law on a certain date)** — A sunset clause or sunset law automatically expires on a specified date unless affirmatively extended by the legislature."
+    },
+    {
+      "id": "polity_ak_0325",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the National Human Rights Commission (NHRC)? a. It's a statutory body. b. Its Chairperson can be only a retired Chief Justice of India. *(c. Both of these | d. NOTA)*",
+      "a": "**a** — The NHRC is a statutory body established under the Protection of Human Rights Act, 1993. Following the 2019 Amendment, a retired Chief Justice of India **or a retired Judge of the Supreme Court** can be appointed as its Chairperson (so 'b' is incorrect)."
+    },
+    {
+      "id": "polity_ak_0326",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? 1. The Legislature's institutional control over the finances of the Executive is stronger in the Presidential system of Government than in the Parliamentary system of Government. 2. Presidential form of Government should not be considered for nations with diversity of population. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. NOTA)*",
+      "a": "**a (1 Only)** — In a Presidential system (like the USA), separation of powers and independent congressional appropriations committees exercise much stricter institutional control over the Executive's budget than in a Parliamentary system where the Executive commands a majority in the lower House."
+    },
+    {
+      "id": "polity_ak_0327",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Judges of a High Court are appointed by the President after consultation with: 1. Chief Justice of India 2. Governor of the State 3. Chief Justice of the concerned High Court *(Select the correct code)*",
+      "a": "**All three (1, 2 & 3)** — Under Article 217(1), a Judge of a High Court is appointed by the President after consultation with the CJI, the Governor of the State, and (in the case of appointment of a Judge other than the Chief Justice) the Chief Justice of that High Court."
+    },
+    {
+      "id": "polity_ak_0328",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Transfer of a Judge from one High Court to another High Court is made by the President after consultation with: *(a. Chief Justice of India | b. Governor of the concerned States | c. Chief Justice of the High Courts | d. Council of Ministers)*",
+      "a": "**a (Chief Justice of India)** — Under Article 222(1) (and the Third Judges Case, 1998), the President may, after consultation with the Chief Justice of India (plus the SC Collegium of 4 senior-most judges and the Chief Justices of the two High Courts), transfer a Judge from one High Court to another."
+    },
+    {
+      "id": "polity_ak_0329",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What is the meaning of the term 'Zero FIR' in India? *(a. A document registered by police when complete details are not available | b. A document registered in case of petty offences | c. A document that can be registered by any police station for a cognizable offence, without bothering about whether the case is in their jurisdiction or not | d. A document registered in case of suo moto action by police)*",
+      "a": "**c (A document that can be registered by any police station for a cognizable offence, without bothering about whether the case is in their jurisdiction or not)** — A Zero FIR is registered irrespective of territorial jurisdiction (assigned serial number '0') and transferred to the appropriate police station for investigation."
+    },
+    {
+      "id": "polity_ak_0330",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following acts, if unsolicited, constitutes 'Sexual Harassment' (or related offences against women) and is punishable under the law in India? 1. Sending messages over text/WhatsApp/social media/email about the person's body or looks 2. Whistling, singing songs with an intent to tease 3. Following a woman, with or without her knowledge, despite a clear indication of disinterest 4. Abusing a woman with sexually coloured remarks on social media *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under Sections 354A (sexual harassment), 354D (stalking), and 509 (word, gesture or act intended to insult the modesty of a woman) of the IPC (now BNS), all four acts are punishable offences."
+    },
+    {
+      "id": "polity_ak_0331",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Judges of the Supreme Court are paid a salary as determined by: *(a. Parliament by law | b. President of India | c. Pay Commission appointed by the Union Government | d. Collegium of the Supreme Court)*",
+      "a": "**a (Parliament by law)** — Under Article 125(1), the Judges of the Supreme Court are paid such salaries as may be determined by Parliament by law."
+    },
+    {
+      "id": "polity_ak_0332",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The 'right to information' under the Right to Information Act, 2005 includes the right to: 1. inspection of work, documents, records 2. taking notes, extracts or certified copies of documents or records 3. taking certified samples of material 4. obtaining information in electronic mode, where the information is stored in a computer *(Select the correct code)*",
+      "a": "**d (All of these - 1, 2, 3 & 4)** — Section 2(j) of the Right to Information Act, 2005 explicitly includes all four rights."
+    },
+    {
+      "id": "polity_ak_0333",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The question whether any, and if so what, advice was tendered by the Council of Ministers to the President of India may be inquired into by: *(a. Supreme Court of India | b. High Court of a State | c. Both of these | d. NOTA)*",
+      "a": "**d (NOTA)** — Article 74(2) explicitly states that the question whether any, and if so what, advice was tendered by Ministers to the President **shall not be inquired into in any court**."
+    },
+    {
+      "id": "polity_ak_0334",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following classifications are used in the Constitution of India for the Fundamental Rights? 1. Right to Equality 2. Social and Cultural Rights 3. Right to Freedom of Religion *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — Part III uses the sub-headings 'Right to Equality' (Arts 14–18), 'Right to Freedom of Religion' (Arts 25–28), and **'Cultural and Educational Rights'** (Arts 29–30), not 'Social and Cultural Rights'."
+    },
+    {
+      "id": "polity_ak_0335",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding citizenship of India? a. A citizen of India 'by birth' cannot be 'deprived' of her/his citizenship. b. A naturalised citizen of India cannot be appointed as the Prime Minister. *(c. Both of these | d. NOTA)*",
+      "a": "**a** — Under Section 10(1) of the Citizenship Act, 1955, compulsory *deprivation* of citizenship by order of the Central Government applies only to citizens by naturalisation or registration, never to a citizen by birth. Statement 'b' is false as naturalised citizens are eligible for all constitutional offices in India."
+    },
+    {
+      "id": "polity_ak_0336",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The 'Doctrine of Prospective Overruling' was first adopted by the Supreme Court of India in: *(a. Shankari Prasad vs. Union of India, 1951 | b. Sajjan Singh vs. State of Rajasthan, 1965 | c. I C Golaknath vs. State of Punjab, 1967 | d. Keshavananda Bharati vs. State of Kerala, 1973)*",
+      "a": "**c (I C Golaknath vs. State of Punjab, 1967)** — Chief Justice K. Subba Rao invoked the Doctrine of Prospective Overruling for the first time in India in the *Golaknath* case (1967)."
+    },
+    {
+      "id": "polity_ak_0337",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the power of President of India to promulgate Ordinances? a. Ordinance can be promulgated to give effect to a Bill pending before the Parliament. b. Ordinance can be promulgated only on matters related to Ordinary or Money Bills. *(c. Both of these | d. NOTA)*",
+      "a": "**a** — An Ordinance can be issued on the subject matter of a Bill pending in Parliament (if at least one House is prorogued), and its scope extends to any matter on which Parliament can legislate (including Financial Bills, not just Ordinary or Money Bills)."
+    },
+    {
+      "id": "polity_ak_0338",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are a difference between the powers of the President of India and that of the Governor of a State? 1. President cannot exercise his/her executive functions without the advice of the Council of Ministers, while the Governor can. 2. President has no discretionary power provided as such in the Constitution, while the Governor has. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Unlike Article 74 (which binds the President to the advice of the Council of Ministers without an explicit exception clause), Article 163(1)–(2) explicitly provides that the Governor can act in his/her discretion where required by or under the Constitution."
+    },
+    {
+      "id": "polity_ak_0339",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who among the following are ex-officio members of the National Human Rights Commission (NHRC)? 1. Chief Commissioner for Persons with Disabilities 2. Chairpersons of NCSC, NCST, NCW, NCBC, and NCM 3. Chairperson, National Commission for the Protection of Child Rights *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Following the Protection of Human Rights (Amendment) Act, 2019, the Chief Commissioner for Persons with Disabilities and the Chairpersons of NCPCR and NCBC were added alongside the Chairpersons of NCM, NCSC, NCST, and NCW as ex-officio members of the NHRC."
+    },
+    {
+      "id": "polity_ak_0340",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Prime Minister's National Relief Fund (PMNRF)? 1. The disbursements are made out of the fund at the discretion of the Prime Minister. 2. PMNRF is audited by the Comptroller and Auditor General of India. 3. The Fund consists entirely of public contributions and does not get any budgetary support. 4. It was established originally to provide additional funds during the Sino-Indian war in 1962. *(a. 1, 2 & 3 Only | b. 1 & 3 Only | c. 2, 3 & 4 Only | d. 2 & 4 Only)*",
+      "a": "**b (1 & 3 Only)** — Established in January 1948 to assist displaced persons from Pakistan (4 is false; the National Defence Fund was set up in 1962), the PMNRF is funded entirely by voluntary public contributions without budgetary support (3), disbursed at the PM's discretion (1), and audited by an independent Chartered Accountant rather than the CAG (2 is false)."
+    },
+    {
+      "id": "polity_ak_0341",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Office of the 'Chief Whip' in the Parliament has been explicitly recognised in: *(a. Constitution of India | b. Act of Parliament | c. Rules of Procedure of the Houses of Parliament | d. no official / legal document)*",
+      "a": "**b (Act of Parliament)** — While mentioned in neither the Constitution nor the Rules of Procedure, the office of Chief Whip was given statutory recognition in *The Leaders and Chief Whips of Recognised Parties and Groups in Parliament (Facilities) Act, 1998*."
+    },
+    {
+      "id": "polity_ak_0342",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, the Supreme Court has ruled in favour of permanent commission to women officers in the Indian Army. Not allowing a permanent commission to women would violate the principles enshrined in the Constitution of India as under: 1. Article 14 2. Article 15 3. Article 16 *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Denying permanent commission based on gender stereotypes violates equality before law (Art 14), non-discrimination on grounds of sex (Art 15), and equality of opportunity in public employment (Art 16)."
+    },
+    {
+      "id": "polity_ak_0343",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Fifteenth Finance Commission has recently been in the news. Who was the Chairperson of the First Finance Commission? *(a. K C Neogy | b. K Santhanam | c. A K Chanda | d. P V Rajamannar)*",
+      "a": "**a (K C Neogy)** — K.C. Neogy chaired the First Finance Commission of India, constituted in November 1951."
+    },
+    {
+      "id": "polity_ak_0344",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the term of Lok Sabha? a. Lok Sabha may be dissolved before the completion of five-year period from its first sitting. b. The term of Lok Sabha may be extended even beyond five years. *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Under Article 83(2), the Lok Sabha can be dissolved earlier by the President, and while a Proclamation of National Emergency is in operation, its term may be extended by Parliament by law for up to 1 year at a time."
+    },
+    {
+      "id": "polity_ak_0345",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Ministers of the Union shall hold office during the pleasure of the: *(a. President of India | b. Prime Minister | c. Speaker of Lok Sabha | d. President of the Political Party enjoying majority in the Lok Sabha)*",
+      "a": "**a (President of India)** — Article 75(2) states that the Ministers shall hold office during the pleasure of the President."
+    },
+    {
+      "id": "polity_ak_0346",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The 22nd Law Commission of India has been appointed recently. Which of the following statements are correct? 1. It is a non-statutory body. 2. It has a term of five years. 3. One of its Terms of Reference is to repeal obsolete laws. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — The Law Commission of India is a non-statutory executive body constituted for a term of **three years** (not five years), and identifying obsolete laws for repeal is one of its core terms of reference."
+    },
+    {
+      "id": "polity_ak_0347",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, All India Judicial Service (AIJS) has been in the news often with reference to District Judges and subordinate judiciary. To establish an AIJS: *(a. Parliament shall legislate, exercising its constituent legislative power under Article 368 | b. Parliament shall legislate under Article 368 including ratification by at least half of the States | c. Parliament may legislate, exercising its ordinary legislative power, without invoking the provisions of Article 368 of the Constitution of India | d. A resolution passed by the Rajya Sabha under Article 312 is sufficient)*",
+      "a": "**c (Parliament may legislate, exercising its ordinary legislative power, without invoking the provisions of Article 368 of the Constitution of India)** — Under Article 312(1) and (4), after the Rajya Sabha passes a resolution by a 2/3rd majority present and voting, Parliament by **ordinary law** creates the AIJS, and such law is explicitly not deemed an amendment under Article 368."
+    },
+    {
+      "id": "polity_ak_0348",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the report of the Fifteenth Finance Commission (FC-XV)? a. The report makes recommendations for 2020-21 and 2021-26. b. The report recommends reducing state share from divisible pool (to 41%), compared to FC-XIV recommendations (42%). *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — The 15th Finance Commission (chaired by N.K. Singh) submitted an interim report for 2020–21 and a final report for 2021–26, adjusting vertical devolution from 42% to 41% (allocating 1% for the newly formed UTs of J&K and Ladakh)."
+    },
+    {
+      "id": "polity_ak_0349",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT CORRECT as a difference between the powers of the President of India and that of the Governor of a State? 1. President can commute a death sentence, while the Governor cannot. 2. President can dissolve the State's Legislative Assembly by exercising powers under Article 356 of the Constitution, but the Governor cannot dissolve the Assembly under any situation. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Both statements are incorrect: under Article 161, a Governor cannot grant a *pardon* for a death sentence, but **can** suspend, remit, or **commute** a death sentence; and under Article 174(2)(b), the Governor has the power to dissolve the State Legislative Assembly."
+    },
+    {
+      "id": "polity_ak_0350",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements regarding citizenship of India is/are correct? 1. Juristic persons (companies/corporations) can be registered as citizens of India. 2. A citizen of India can simultaneously be a citizen of another country by obtaining the OCI Registration Certificate. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Only natural persons (not juristic persons/corporations) can be citizens under the Citizenship Act, 1955 (*State Trading Corporation* case, 1963), and Article 9 strictly prohibits dual citizenship (an OCI card is not dual citizenship).\n\n---\n\n## Part 8: Questions AK 0351 to AK 0400"
+    },
+    {
+      "id": "polity_ak_0351",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "During the consideration of Demands for Grants in the Lok Sabha, a member moved a motion that 'the demand be reduced by Rs. $100/-$'. This is: *(a. Disapproval of Policy Cut | b. Economy Cut | c. Token Cut | d. Minor Cut)*",
+      "a": "**c (Token Cut)** — A Token Cut motion reduces the demand by Rs. $100$ to ventilate a specific grievance within the sphere of responsibility of the Government of India."
+    },
+    {
+      "id": "polity_ak_0352",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Arrange the following events in a House of Parliament in a possible and typical chronological sequence: 1. Prorogation of the House 2. Adjournment Sine die 3. Recess 4. Summoning of the session *(a. 4-1-2-3 | b. 4-2-3-1 | c. 2-3-1-4 | d. 2-1-3-4)*",
+      "a": "**d (2-1-3-4)** — At the end of a session's sittings, the Presiding Officer declares **Adjournment sine die** (2), followed by the President issuing a notification for **Prorogation** of the session (1), which begins the **Recess** period (3), until the President **Summons** the next session (4)."
+    },
+    {
+      "id": "polity_ak_0353",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? 1. The quorum to constitute a meeting of either House of Parliament is one-tenth of the total number of members of the House. 2. In the absence of quorum, Presiding Officer of the House may still decide to continue with the proceedings of the House, by recording the reasons thereto. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Under Article 100(3), the quorum is one-tenth of the total membership of the House. Under Article 100(4), if there is no quorum, it is the mandatory duty of the Presiding Officer either to adjourn the House or to suspend the meeting until there is a quorum."
+    },
+    {
+      "id": "polity_ak_0354",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? a. The custody of Contingency Fund of India is with the Cabinet Secretary, on behalf of the President. b. National Disaster Response Fund is operated by the Prime Minister's Office (PMO). *(c. Both of these | d. NOTA)*",
+      "a": "**d (NOTA)** — The Contingency Fund of India is held by the **Finance Secretary** (Department of Economic Affairs) on behalf of the President, and the NDRF is located in the Public Account of India and managed by the Ministry of Home Affairs / Ministry of Finance (not the PMO)."
+    },
+    {
+      "id": "polity_ak_0355",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following shall be appointed by the President of India by a warrant under his/her hand and seal? 1. Central Vigilance Commissioner 2. Chief Election Commissioner 3. Judges of Supreme Court 4. Comptroller and Auditor General of India *(a. 1, 3 & 4 Only | b. 2, 3 & 4 Only | c. 3 & 4 Only | d. All of these)*",
+      "a": "**a (1, 3 & 4 Only)** — Judges of the Supreme Court (Art 124(2)), the CAG (Art 148(1)), and the Central Vigilance Commissioner (Sec 4(1), CVC Act, 2003) are explicitly appointed by the President *\"by warrant under his hand and seal\"*, whereas Article 324(2) does not use that phrase for the Chief Election Commissioner."
+    },
+    {
+      "id": "polity_ak_0356",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding elections in India? 1. Returning Officer is appointed by the Election Commission of India. 2. General Elections to Lok Sabha are notified by the President. 3. To contest an election to a seat of Rajya Sabha, the candidate must be an elector in any Parliamentary constituency in India. *(Select the correct code)*",
+      "a": "**All of these (1, 2 & 3)** — Under the RPA, 1951, the ECI designates Returning Officers (Sec 21), the President issues the notification for Lok Sabha general elections (Sec 14), and a Rajya Sabha candidate can be an elector in any parliamentary constituency in India (Sec 3)."
+    },
+    {
+      "id": "polity_ak_0357",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following electors are eligible to be chosen to fill a seat in the Lok Sabha that is reserved for the Scheduled Castes in a State? *(a. Only those who are members of the Scheduled Castes of that State | b. Only those who are members of the Scheduled Castes of any State | c. Either members of the Scheduled Castes or the Scheduled Tribes of that State | d. Either members of the Scheduled Castes or the Scheduled Tribes of any State)*",
+      "a": "**b (Only those who are members of the Scheduled Castes of any State)** — Under Section 4(a) of the Representation of the People Act, 1951, a candidate for a Lok Sabha seat reserved for SCs in a State must be a member of any of the Scheduled Castes, whether of that State or of any other State (and an elector for any Parliamentary constituency)."
+    },
+    {
+      "id": "polity_ak_0358",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The rules of 'Principles of Natural Justice' are applicable to: 1. Judicial functions 2. Quasi-judicial functions 3. Administrative functions *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — As established by the Supreme Court in *A.K. Kraipak v. Union of India* (1969), the Principles of Natural Justice apply not only to judicial and quasi-judicial proceedings but also to administrative actions that entail civil consequences."
+    },
+    {
+      "id": "polity_ak_0359",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is correct about the Motions and Resolutions in the Houses of Parliament? *(a. All Motions are Resolutions, and all Resolutions are Motions | b. All Motions are Resolutions, but all Resolutions are not Motions | c. All Motions are not Resolutions, but all Resolutions are Motions | d. There is no such relation between Motions and Resolutions)*",
+      "a": "**c (All Motions are not Resolutions, but all Resolutions are Motions)** — Every resolution is a specific category of substantive motion, so all resolutions are motions, but not all motions (e.g., subsidiary or procedural motions) are resolutions."
+    },
+    {
+      "id": "polity_ak_0360",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Bills shall NOT lapse with the dissolution of the Lok Sabha? 1. A Bill passed by the Lok Sabha and pending in the Rajya Sabha. 2. A Bill passed by both the Houses of Parliament, and presented to the President for assent. 3. A Bill in regard to which the President has notified the intention to summon the Houses to a joint sitting. *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1 & 3 Only | d. All of these)*",
+      "a": "**b (2 & 3 Only)** — Under Articles 107(5) and 108(5), a Bill passed by the Lok Sabha and pending in the Rajya Sabha **lapses** (1), whereas a Bill pending the President's assent (2) or for which the President has notified a joint sitting prior to dissolution (3) **does not lapse**."
+    },
+    {
+      "id": "polity_ak_0361",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The term 'Republic', as envisaged in the Preamble of the Constitution of India, implies which of the following? 1. Source of all authority under the Constitution is the people. 2. All offices of the State are open to the citizens. 3. Citizens enjoy equal status. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** *(or **a: 1 & 2 Only**)* — A 'Republic' signifies that political sovereignty vests in the people rather than a monarch (1), there is no privileged class, and all public offices (including the Head of State) are open to every citizen without discrimination (2 & 3)."
+    },
+    {
+      "id": "polity_ak_0362",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Bills can be introduced by a Private Member of the House? 1. Bill to reorganise a State (under Article 3) 2. Bill to amend the Constitution of India (under Article 368) 3. Financial Bills 4. Money Bills *(a. 1, 2 & 3 Only | b. 2 & 3 Only | c. 3 Only | d. All of these)*",
+      "a": "**a (1, 2 & 3 Only)** *(or **d: All of these**)* — Neither the Constitution nor the Rules of Procedure prohibit a Private Member from introducing a State Reorganisation Bill, Constitutional Amendment Bill, or Financial Bill (or even a Money Bill, provided the President grants prior recommendation where required under Articles 3 and 117(1))."
+    },
+    {
+      "id": "polity_ak_0363",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Bills would require a recommendation of the President for their introduction in the Parliament? 1. Bill to re-organise a State (under Article 3). 2. Bill to amend the Constitution of India (under Article 368). 3. A Bill involving expenditure from the Consolidated Fund of India. *(a. 1 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 Only)** — A Bill under Article 3 requires the President's prior recommendation for **introduction** (1). A Constitutional Amendment Bill under Article 368 does not (2 is false). Under Article 117(3), a Bill merely involving expenditure from the Consolidated Fund of India (Financial Bill Class-II) requires the President's recommendation for **consideration/passing**, NOT for **introduction** (3 is false)."
+    },
+    {
+      "id": "polity_ak_0364",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Directive Principles of State Policy (DPSPs) in the Constitution of India? 1. The idea has been borrowed from the Constitution of Ireland. 2. The Courts cannot direct the State to give effect to a DPSP. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — DPSPs were borrowed from the Irish Constitution (1937), and under Article 37, they are non-justiciable and cannot be enforced by any court through a writ of mandamus directing the State to enact a law."
+    },
+    {
+      "id": "polity_ak_0365",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "During the consideration of Demands for Grants in the Lok Sabha, a member gives a notice to the Speaker to move a motion that 'the demand be reduced to Zero'. This motion is known as: *(a. Disapproval of Policy Cut | b. Token Cut | c. Economy Cut | d. There is no such cut motion in the Rules)*",
+      "a": "**d (There is no such cut motion in the Rules)** — Under Rule 209 of the Lok Sabha Rules, a Disapproval of Policy Cut moves that *\"the amount of the demand be reduced to **Re. 1**\"* (not Zero)."
+    },
+    {
+      "id": "polity_ak_0366",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "During an election to the Office of the Vice President of India, 601 valid votes were cast. What is the minimum number of votes sufficient for the return of a candidate? *(a. 300 | b. 301 | c. 302 | d. 303)*",
+      "a": "**b (301)** — The electoral quota in the Vice-Presidential election is $\\lfloor \\frac{\\text{Total Valid Votes}}{1 + 1} \\rfloor + 1 = \\lfloor \\frac{601}{2} \\rfloor + 1 = 300 + 1 = 301$."
+    },
+    {
+      "id": "polity_ak_0367",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct about the NITI Aayog? 1. It was established by a resolution of the Union Cabinet. 2. The Vice-Chairperson enjoys the rank of a Cabinet Minister. 3. The CEO enjoys the rank of Secretary to the Government of India. *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — NITI Aayog was set up on 1 January 2015 via a Union Cabinet resolution; its Vice-Chairperson holds the rank of a Cabinet Minister, and its CEO holds the rank of a Secretary to the Government of India."
+    },
+    {
+      "id": "polity_ak_0368",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding privileges of Parliament and its members? 1. The privileges have been codified by the Parliament, as specified under Article 105 of the Constitution of India. 2. Each House of Parliament has power to punish members of the House as well as outsiders for the breach of privilege. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** — Parliament has not yet enacted a comprehensive law codifying all parliamentary privileges under Article 105(3) (1 is false). Each House can punish both members and outsiders for breach of privilege or contempt of the House (2 is true)."
+    },
+    {
+      "id": "polity_ak_0369",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "During an election to 10 seats of the Council of States, 401 valid votes were cast. The quota sufficient to secure the return of a candidate shall be: *(a. 36 | b. 37 | c. 3645 | d. 3646)*",
+      "a": "**d (3646)** *(or **b: 37** in raw votes)* — Under Rule 75/76 of the Conduct of Elections Rules, 1961, when more than one seat is to be filled by proportional representation, the value of each valid ballot paper is taken as $100$. Thus, Total Value $= 401 \\times 100 = 40,100$, and Quota $= \\lfloor \\frac{40,100}{10 + 1} \\rfloor + 1 = 3,645 + 1 = 3,646$ (or $\\lfloor \\frac{401}{11} \\rfloor + 1 = 37$ raw votes)."
+    },
+    {
+      "id": "polity_ak_0370",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "According to the provisions of the Constitution of India, which of the following statements is/are correct condition(s) of the President's office? a. The President shall not be a member of either House of Parliament. b. The President shall not be a member of a House of State Legislature. *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Article 59(1) stipulates that the President shall not be a member of either House of Parliament or of a House of the Legislature of any State."
+    },
+    {
+      "id": "polity_ak_0371",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are within the scope of the audits undertaken by the Comptroller & Auditor General of India? 1. Legal and Regulatory Audit 2. Propriety Audit 3. Performance / Efficiency Audit *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — The CAG conducts legal/regulatory compliance audits (mandatory), propriety audits (looking into wisdom, faithfulness, and economy of expenditure), and performance/efficiency-cum-performance audits."
+    },
+    {
+      "id": "polity_ak_0372",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "With reference to The Gram Nyayalayas Act, 2008, which of the following statements are correct? 1. The Gram Nyayalaya shall exercise both civil and criminal jurisdiction. 2. The District Court shall prepare a panel of social workers at the village level for appointment as Conciliators. 3. The Act makes provisions for mobile courts. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under the Gram Nyayalayas Act, 2008, Gram Nyayalayas exercise both civil and criminal jurisdiction (Sec 11), the District Court (in consultation with the DM) prepares a panel of social workers as Conciliators (Sec 27), and the Nyayadhikari conducts mobile courts in villages (Sec 9)."
+    },
+    {
+      "id": "polity_ak_0373",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Judges of High Court of a State? a. The expenditure on salaries of Judges of High Court is charged on the Consolidated Fund of the State. b. The pensions payable to Judges of High Court are charged on the Consolidated Fund of India. *(c. Both of the above | d. NOTA)*",
+      "a": "**c (Both of the above)** — Under Article 202(3)(d), the salaries and allowances of High Court Judges are charged on the Consolidated Fund of the State, whereas under Article 112(3)(d)(iii), their pensions are charged on the Consolidated Fund of India."
+    },
+    {
+      "id": "polity_ak_0374",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Judges of the High Court of a State are paid a salary as determined by: *(a. The Parliament | b. The President of India | c. The Governor of the State | d. The Legislature of the State)*",
+      "a": "**a (The Parliament)** — Under Article 221(1), the salaries of High Court Judges are determined by Parliament by law."
+    },
+    {
+      "id": "polity_ak_0375",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Budget? 1. Constitution of India has explicitly mandated to distinguish expenditure on 'Revenue Account' from other expenditure. 2. As per Appropriation Act, 2020, over two-thirds of the appropriations are to be charged on the Consolidated Fund of India. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Article 112(2) explicitly mandates distinguishing expenditure on revenue account from other expenditure (1), and because repayment of public debt and interest payments are 'charged' expenditures, charged appropriations account for over two-thirds of total gross appropriations (2)."
+    },
+    {
+      "id": "polity_ak_0376",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who, among the following, was appointed as the Constitutional Adviser to the Constituent Assembly and is attributed for the preparatory work for the drafting of the Constitution of India? *(a. Surendra Nath Mukherjee | b. Thomas Babington Macaulay | c. Frederick Pethick-Lawrence | d. Benegal Narsing Rau)*",
+      "a": "**d (Benegal Narsing Rau)** — Sir B.N. Rau served as the Constitutional Adviser to the Constituent Assembly and prepared the initial draft of the Constitution in October 1947 (while S.N. Mukherjee was the Chief Draftsman)."
+    },
+    {
+      "id": "polity_ak_0377",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is authorised under the provisions of the Constitution of India to impose reasonable restrictions on inter-state trade and commerce? *(a. The Parliament of India | b. The Legislature of the concerned State | c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Under Article 302, Parliament may by law impose restrictions on trade, commerce, or intercourse in the public interest; and under Article 304(b), a State Legislature may (with the prior sanction of the President) impose reasonable restrictions in the public interest."
+    },
+    {
+      "id": "polity_ak_0378",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Article 1 of the Constitution of India states that India shall be a Union of States. The word 'Union' here indicates that: a. Indian federation is not the result of an agreement among the States b. the States have no right to secede *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — As explained by Dr. B.R. Ambedkar in the Constituent Assembly, the phrase 'Union of States' signifies that the Indian federation is not the result of an agreement among autonomous units and that no State has the right to secede."
+    },
+    {
+      "id": "polity_ak_0379",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is mandated by the Constitution of India to ascertain the 'net proceeds' of any tax or duty collected by the Union? *(a. The Finance Commission | b. The Comptroller & Auditor General of India | c. The GST Council | d. The Reserve Bank of India)*",
+      "a": "**b (The Comptroller & Auditor General of India)** — Under Article 279(1), the 'net proceeds' of any tax or duty are ascertained and certified by the Comptroller and Auditor-General of India, whose certificate is final."
+    },
+    {
+      "id": "polity_ak_0380",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding NITI Aayog? a. The Vice-Chairperson is appointed by the Prime Minister. b. The CEO is appointed by the Prime Minister. *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Both the Vice-Chairperson and the Chief Executive Officer (CEO) of NITI Aayog are appointed by the Prime Minister."
+    },
+    {
+      "id": "polity_ak_0381",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Freedoms, as provided by the Constitution of India, CANNOT be restricted by the State? 1. Freedom of Speech and Expression 2. Freedom to practise any profession 3. Freedom to assemble peacefully and without arms *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. None of these)*",
+      "a": "**d (None of these)** — None of the freedoms under Article 19 is absolute; all can be reasonably restricted by the State on the grounds specified in Articles 19(2) to 19(6)."
+    },
+    {
+      "id": "polity_ak_0382",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding water in India? 1. 'Water' is a matter in the State List, under the Seventh Schedule of the Constitution of India. 2. Development of river valleys can be controlled by the Union, if declared by Parliament by law to be in public interest. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Water (water supplies, irrigation, canals, drainage, etc.) is in Entry 17 of the State List, subject to Entry 56 of the Union List, which empowers the Union to regulate and develop inter-State rivers and river valleys to the extent declared by Parliament by law to be expedient in the public interest."
+    },
+    {
+      "id": "polity_ak_0383",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The population Census of India scheduled for 2021 represents which decennial Census in sequence? *(16th Census overall and 8th Census after Independence)*",
+      "a": "**16th Census overall (since 1872) and 8th after Independence** — India's decennial Census began in 1872 (synchronously in 1881), making the 2021/2027 cycle the 16th overall and 8th post-1947."
+    },
+    {
+      "id": "polity_ak_0384",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is implied if a Country is said to have an 'Unwritten Constitution'? 1. The Constitution is not in a written form. 2. Governance is based purely on customs and precedents. 3. The Constitution may be in written form, but is not embodied in a single document. 4. Statutes as well as judicial decisions form part of the Constitution. *(a. 1 Only | b. 1 & 2 Only | c. 3 Only | d. 3 & 4 Only)*",
+      "a": "**d (3 & 4 Only)** — An 'unwritten' (uncodified) constitution, such as that of the UK, consists largely of written statutes (e.g., Magna Carta, Bill of Rights 1689, Parliament Acts), judicial decisions, and conventions, but is not codified into a single overarching document."
+    },
+    {
+      "id": "polity_ak_0385",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Violation of which of the following are an 'Electoral Offence' as per the Representation of the People Act, 1951? 1. Maintenance of secrecy of voting by officials on election duty 2. Grant of paid holiday to employees on the day of poll 3. Prohibition of hiring/procuring vehicles for free conveyance of any elector to and from polling station *(a. 1 & 2 Only | b. 2 & 3 Only | c. 1 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — All three are electoral offences under Chapter III of Part VII of the RPA, 1951: breaching secrecy of voting (Sec 128), failing to grant a paid holiday on polling day (Sec 135B), and providing free conveyance of voters to/from polling stations (Sec 133)."
+    },
+    {
+      "id": "polity_ak_0386",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Lokayukta was created for the first time in India in the state of: *(a. Rajasthan | b. Maharashtra | c. Karnataka | d. Odisha)*",
+      "a": "**b (Maharashtra)** — Although Odisha passed the first Lokpal and Lokayuktas Act in 1970, **Maharashtra** was the first state to actually establish the institution of Lokayukta in 1971."
+    },
+    {
+      "id": "polity_ak_0387",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many Union Territories are there in India today? *(a. 7 | b. 8 | c. 9 | d. 6)*",
+      "a": "**b (8)** — Following the bifurcation of J&K into two UTs (J&K and Ladakh) in October 2019 and the merger of Dadra & Nagar Haveli and Daman & Diu into a single UT on 26 January 2020, India has **8 Union Territories**."
+    },
+    {
+      "id": "polity_ak_0388",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Legislative Assemblies in India has the least number of seats in the House? *(a. Goa | b. Sikkim | c. Puducherry | d. Mizoram)*",
+      "a": "**c (Puducherry)** *(30 elected seats; 33 total with 3 nominated)* — Among all Legislative Assemblies (including UTs), Puducherry has the smallest strength (30 elected seats), followed by Sikkim (32 seats, the smallest among States), and Goa and Mizoram (40 seats each)."
+    },
+    {
+      "id": "polity_ak_0389",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Water Disputes Tribunal in India? 1. The members of the Tribunal are nominated by the Chief Justice of India. 2. The decision of the Tribunal, after publication in the Gazette, has the same force as an order of the Supreme Court. 3. It shall be constituted within a period of one year from the date of receipt of such request from a State Government, if the dispute cannot be settled by negotiation. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under the Inter-State River Water Disputes Act, 1956 (Sections 4 and 6), the Central Government constitutes a Tribunal within 1 year of a State's request, its Chairman and two members are nominated by the CJI from sitting judges of the SC/HCs, and its published award has the same force as an order of the Supreme Court."
+    },
+    {
+      "id": "polity_ak_0390",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Freedom to practise any profession, or to carry on any occupation, trade or business, as provided under Article 19 of the Constitution of India, can be restricted: 1. in public interest. 2. by making a law relating to professional or technical qualifications in that regard. 3. by making a law to create monopoly of the State. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Article 19(6) explicitly permits the State to restrict Article 19(1)(g) in the interests of the general public, prescribe professional or technical qualifications, and carry on any trade, business, industry, or service by the State to the complete or partial exclusion of citizens (state monopoly)."
+    },
+    {
+      "id": "polity_ak_0391",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding Panchayats in India? 1. There shall be constituted in every State three-tier Panchayats, irrespective of area or population of the State. 2. The seats reserved for Scheduled Castes and Scheduled Tribes are temporary, but those reserved for women are not. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** — Under Article 243B(2), a State having a population not exceeding 20 lakhs is not required to constitute Panchayats at the intermediate level (1 is false). Under Article 243D(6), reservation for SCs and STs ceases on the expiration of the period specified in Article 334, whereas reservation for women has no sunset clause (2 is true)."
+    },
+    {
+      "id": "polity_ak_0392",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The question whether a matter complained of in a House of Parliament is actually a breach of privilege of (Members of) Parliament, and the necessary action to be taken, is decided by: *(a. The Committee of Privileges of the House | b. The Presiding Officer of the House | c. The House | d. Any of the above may decide)*",
+      "a": "**c (The House)** — Each House of Parliament is the sole and final judge of its own privileges; the Presiding Officer and the Committee of Privileges only examine the matter and make recommendations to the House."
+    },
+    {
+      "id": "polity_ak_0393",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "According to the Constitution of India, it shall be the duty of the Union to protect every State against: a. External Aggression b. Internal Disturbance *(c. Both of these | d. NOTA)*",
+      "a": "**c (Both of these)** — Article 355 explicitly states that it shall be the duty of the Union to protect every State against external aggression and internal disturbance."
+    },
+    {
+      "id": "polity_ak_0394",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under the Citizenship Act, 1955, by which of the following ways can a person become a citizen of India? 1. By birth 2. By descent 3. By registration 4. By naturalisation *(a. 1 & 2 Only | b. 1, 2 & 3 Only | c. 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Sections 3 to 7 of the Citizenship Act, 1955 provide five modes of acquiring citizenship: by birth, by descent, by registration, by naturalisation, and by incorporation of territory."
+    },
+    {
+      "id": "polity_ak_0395",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The subject of 'Health and Sanitation' finds a reference in which of the following lists/schedules? 1. State List 2. Concurrent List 3. Eleventh Schedule 4. Twelfth Schedule *(Select the correct code)*",
+      "a": "**1, 3 & 4 Only (or 1 Only among Seventh Schedule lists)** — 'Public health and sanitation' is in the **State List** (Entry 6 of the Seventh Schedule), as well as in the **Eleventh Schedule** (Entry 23 for Panchayats) and **Twelfth Schedule** (Entry 6 for Municipalities)."
+    },
+    {
+      "id": "polity_ak_0396",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Sixth Schedule of the Constitution of India? *(1. It applies to the tribal areas of Assam, Meghalaya, Tripura, and Mizoram. 2. The acts of Parliament or State Legislature do not apply or apply with specified modifications to Autonomous Districts as directed by the Governor/President.)*",
+      "a": "**Both 1 & 2** — Paragraph 1 and Paragraph 12/12A/12AA/12B of the Sixth Schedule govern Autonomous Districts in Assam, Meghalaya, Tripura, and Mizoram."
+    },
+    {
+      "id": "polity_ak_0397",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Scheduled and Tribal Areas? 1. While the Fifth Schedule of the Constitution provides for Autonomous Districts in the State, the Sixth Schedule provides for a Tribes Advisory Council. 2. By default, the Union and State Laws are not applicable to the Scheduled areas under the Fifth Schedule, but are applicable to the Tribal areas under the Sixth Schedule. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Both statements are reversed: the **Fifth Schedule** provides for a Tribes Advisory Council (where Union and State laws apply by default unless the Governor directs otherwise), whereas the **Sixth Schedule** provides for Autonomous Districts and Regional Councils."
+    },
+    {
+      "id": "polity_ak_0398",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are included in the Directive Principles of State Policy in the Constitution of India? 1. Uniform Civil Code for the citizens 2. Separation of the Judiciary from the Executive 3. Protection of places and objects of national importance 4. Promotion of small family norms *(a. 1 & 2 Only | b. 1, 2 & 3 Only | c. 3 & 4 Only | d. All of these)*",
+      "a": "**b (1, 2 & 3 Only)** — Uniform Civil Code (Art 44), Separation of Judiciary from Executive (Art 50), and Protection of monuments and places/objects of national importance (Art 49) are in Part IV (DPSPs). Promotion of small family norms is not mentioned in the Constitution."
+    },
+    {
+      "id": "polity_ak_0399",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding Municipalities under Part IXA of the Constitution? *(1. A Municipality shall be given a reasonable opportunity of being heard before its dissolution. 2. A Municipality constituted upon the dissolution of a Municipality before the expiration of its duration shall continue only for the remainder of the period.)*",
+      "a": "**Both 1 & 2 (Note: if Statement 1 says 'it is not necessary to hold a hearing before dissolution', then Statement 1 is false)** — Under Article 243U(1) Proviso, a Municipality **must** be given a reasonable opportunity of being heard before its dissolution, and under Article 243U(4), a reconstituted Municipality serves only the remainder of the term."
+    },
+    {
+      "id": "polity_ak_0400",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who, among the following, is the head of all the civil services of the Union? *(a. Secretary to the Government of India | b. Cabinet Secretary | c. Principal Secretary to the Prime Minister | d. There is no such head)*",
+      "a": "**b (Cabinet Secretary)** — The Cabinet Secretary is the top-most civil servant in India and serves as the ex-officio head of the Civil Services Board and all civil services of the Union.\n\n---\n\n## Part 9: Questions AK 0401 to AK 0450"
+    },
+    {
+      "id": "polity_ak_0401",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Comptroller and Auditor General of India has a duty to compile the accounts of all the States except: *(a. Sikkim | b. Goa | c. Nagaland | d. NOTA)*",
+      "a": "**b (Goa)** — While the CAG compiles and maintains the accounts of State Governments through State Accountants General, **Goa** (whose accounts were departmentalised when it was a UT) maintains its own accounts through its Directorate of Accounts."
+    },
+    {
+      "id": "polity_ak_0402",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under The Citizenship Act, 1955 which of the following are ways in which the citizenship of a citizen of India may be terminated/lost? 1. Renunciation of citizenship 2. Termination of citizenship 3. Deprivation of citizenship 4. Cancellation of citizenship *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2 & 4 Only | d. All of these)*",
+      "a": "**a (1, 2 & 3 Only)** — Sections 8, 9, and 10 of the Citizenship Act, 1955 prescribe three ways of losing citizenship: **Renunciation**, **Termination**, and **Deprivation** ('Cancellation' applies to OCI registration, not citizenship)."
+    },
+    {
+      "id": "polity_ak_0403",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are valid conditions for termination (or deprivation) of the Indian citizenship? 1. If the citizen is ordinarily resident out of India for a continuous period of seven years. 2. If the citizen has shown herself/himself by act or speech to be disloyal or disaffected towards the Constitution of India. 3. If the citizen does not have a certificate of birth within the territory of India. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. NOTA)*",
+      "a": "**a (1 & 2 Only)** *(Note: **d: NOTA** if strictly distinguishing Section 9 'Termination' from Section 10 'Deprivation')* — Continuous residence abroad for 7 years (without being a student/govt employee or registering annually at an Indian consulate) and disloyalty to the Constitution are statutory grounds for **Deprivation** of citizenship under Section 10(2) of the Citizenship Act, 1955, whereas **Termination** under Section 9 occurs upon voluntarily acquiring foreign citizenship."
+    },
+    {
+      "id": "polity_ak_0404",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following animals form a part of the State Emblem of India? 1. Lion 2. Horse 3. Elephant 4. Bull *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 1, 3 & 4 Only | d. All four: 1, 2, 3 & 4)*",
+      "a": "**All four (Lion, Horse, Elephant, and Bull)** — The State Emblem of India (adapted from the Sarnath Lion Capital of Ashoka) features four Asiatic Lions on the circular abacus, and the frieze of the abacus features sculptures of a **Bull**, a **Horse**, an **Elephant**, and a **Lion** separated by intervening Dharma Chakras."
+    },
+    {
+      "id": "polity_ak_0405",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Acts provided for bicameral legislature in India? *(a. Government of India Act, 1909 | b. Government of India Act, 1919 | c. Government of India Act, 1935 | d. Indian Independence Act, 1947)*",
+      "a": "**b (Government of India Act, 1919)** *(and **c: GOI Act, 1935**)* — The Government of India Act, 1919 (Montagu–Chelmsford Reforms) introduced bicameralism at the Centre for the first time (Council of State and Legislative Assembly), while the 1935 Act further introduced bicameralism in 6 out of 11 provinces."
+    },
+    {
+      "id": "polity_ak_0406",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Government of India Act, 1935 vested the residuary powers in the: *(a. British Parliament | b. Federal Legislature | c. State Legislature | d. Governor General)*",
+      "a": "**d (Governor General)** — Under Section 104 of the Government of India Act, 1935, residuary legislative powers were vested in the Governor-General of India to allocate in his discretion."
+    },
+    {
+      "id": "polity_ak_0407",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are feature(s) of Parliamentary Form of Government? 1. Executive is responsible to Judiciary 2. Executive is responsible to Legislature 3. Legislature is responsible to Judiciary *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 Only | d. All of these)*",
+      "a": "**c (2 Only)** — The defining feature of a Parliamentary system is that the Executive (Council of Ministers) is collectively responsible to the Legislature (specifically the Lower House)."
+    },
+    {
+      "id": "polity_ak_0408",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "An Indian citizen was denied a public office due to her/his religion. Which of their fundamental rights has/have been violated? 1. Right to Equality 2. Right to Freedom 3. Right Against Exploitation 4. Right to Freedom of Religion *(a. 1 Only | b. 1 & 4 Only | c. 1, 2 & 4 Only | d. 2, 3 & 4 Only)*",
+      "a": "**a (1 Only)** — Denial of public employment/office on the ground of religion directly violates **Article 16(2)**, which falls under the **Right to Equality** (Articles 14–18)."
+    },
+    {
+      "id": "polity_ak_0409",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A writ petition in case of violation of a Fundamental Right can be presented before: *(a. Supreme Court Only | b. High Court Only | c. Either the High Court or the Supreme Court | d. Any Court of India)*",
+      "a": "**c (Either the High Court or the Supreme Court)** — An aggrieved person can approach either the Supreme Court directly under Article 32 or a High Court under Article 226."
+    },
+    {
+      "id": "polity_ak_0410",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct regarding the legislations made with respect to a matter enumerated in the Concurrent List under the Seventh Schedule of the Constitution of India? 1. Parliament can repeal a law made by the Legislature of the State. 2. If the law made by the Legislature of the State was passed before the law made by the Parliament, then the law made by the State shall prevail. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** — Under Article 254(1), in case of repugnancy on a Concurrent List subject, the law made by **Parliament prevails** whether passed *before or after* the law made by the State Legislature (unless the State law was reserved for and received the President's assent under Art 254(2), and even then the proviso to Art 254(2) empowers Parliament to repeal/amend such a State law)."
+    },
+    {
+      "id": "polity_ak_0411",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the proceedings of Lok Sabha? 1. A question may be addressed by a Member to a private Member. 2. The quorum to constitute a sitting of the House is 55 members including the Speaker. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Under Rule 40 of the Lok Sabha Rules, a question may be addressed to a private member regarding a Bill, resolution, or matter connected with the business of the House for which that member is responsible (1). Under Article 100(3), the quorum is one-tenth of the total membership ($55$ members including the Presiding Officer) (2)."
+    },
+    {
+      "id": "polity_ak_0412",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which among the following was the first Municipal Corporation set up in India? *(a. Calcutta Municipal Corporation | b. Madras Municipal Corporation | c. Bombay Municipal Corporation | d. Delhi Municipal Corporation)*",
+      "a": "**b (Madras Municipal Corporation)** — The first Municipal Corporation in India was set up at Madras in **1687–88**, followed by Municipal Corporations in Bombay and Calcutta in 1726."
+    },
+    {
+      "id": "polity_ak_0413",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "When a question arises as to whether the Chairman or the Speaker of a House has become subject to disqualification under the Anti-Defection Law, the question is referred for a decision to: *(a. Deputy Chairman or Deputy Speaker, as the case may be | b. High Court concerned | c. Ethics Committee of the House | d. A Member of the House, elected by the House in this behalf)*",
+      "a": "**d (A Member of the House, elected by the House in this behalf)** — Under the proviso to Paragraph 6(1) of the Tenth Schedule, if the question is whether the Chairman or Speaker of a House has become subject to disqualification, it is referred to the decision of **such member of the House as the House may elect in this behalf**."
+    },
+    {
+      "id": "polity_ak_0414",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are not a member of any of the Zonal Councils? 1. Lakshadweep 2. Andaman & Nicobar Islands 3. Daman & Diu and Dadra & Nagar Haveli *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Dadra & Nagar Haveli and Daman & Diu are members of the Western Zonal Council, whereas **Andaman & Nicobar Islands** and **Lakshadweep** are not members of any Zonal Council (they are only special invitees to the Southern Zonal Council)."
+    },
+    {
+      "id": "polity_ak_0415",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are NOT a fundamental right provided by the Constitution of India? 1. Right to profess, practise and propagate religion. 2. Equality of opportunity in matters of public employment. 3. Right to free and compulsory education for all children up to the age of 14 years. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 3 Only | d. NOTA)*",
+      "a": "**c (3 Only)** — Article 21A provides the Fundamental Right to free and compulsory education for children of the age of **6 to 14 years** (not *all* children up to 14 years; early childhood care and education for children below the age of 6 years is a DPSP under Article 45)."
+    },
+    {
+      "id": "polity_ak_0416",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following have been prescribed by the Constitution of India as a fundamental duty of every citizen? 1. to have compassion for living creatures 2. to safeguard public property 3. to abjure violence *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — All three are explicitly listed as Fundamental Duties under Article 51A(g) (*\"to have compassion for living creatures\"*) and Article 51A(i) (*\"to safeguard public property and to abjure violence\"*)."
+    },
+    {
+      "id": "polity_ak_0417",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Directive Principles of the State Policy constitute limitations upon: 1. Legislative powers 2. Executive powers *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Fundamental Rights operate as negative limitations on legislative and executive powers, whereas Directive Principles of State Policy are positive directions/obligations to the State, not limitations."
+    },
+    {
+      "id": "polity_ak_0418",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following criteria have been used by the Fifteenth Finance Commission for horizontal devolution of the divisible pool of Union tax proceeds among the States? 1. Tax Effort 2. Fiscal Discipline 3. Forest and Ecology 4. Demographic Performance *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2 & 4 Only | d. 2, 3 & 4 Only)*",
+      "a": "**b (1, 3 & 4 Only)** — The 15th Finance Commission used six criteria for horizontal devolution: Income Distance ($45\\%$), Population 2011 ($15\\%$), Area ($15\\%$), **Demographic Performance** ($12.5\\%$), **Forest and Ecology** ($10\\%$), and **Tax and Fiscal Efforts** ($2.5\\%$). 'Fiscal Discipline' (used by earlier commissions) was not a separate criterion."
+    },
+    {
+      "id": "polity_ak_0419",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? 1. The State-wise allocation of the seats of Lok Sabha is based on the census of 1971. 2. The adjustment of the boundaries of the constituencies of Lok Sabha is based on the census of 2001. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Under Article 82 (as amended by the 84th and 87th Constitutional Amendment Acts), the total number of seats allotted to each State in the Lok Sabha is frozen on the basis of the **1971 Census**, while internal delimitation of territorial constituencies within each State is based on the **2001 Census**."
+    },
+    {
+      "id": "polity_ak_0420",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, Ministry of Human Resource Development has been renamed as Ministry of Education. Which of the following are departments of this Ministry? 1. Department of School Education & Literacy 2. Department of Adult Literacy 3. Department of Higher Education 4. Department of Youth Affairs *(a. 1, 2 & 3 Only | b. 1 & 3 Only | c. 1, 3 & 4 Only | d. 2 & 4 Only)*",
+      "a": "**b (1 & 3 Only)** — The Ministry of Education comprises two departments: the **Department of School Education & Literacy** and the **Department of Higher Education**."
+    },
+    {
+      "id": "polity_ak_0421",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct according to the Constitution of India? 1. The maximum strength of the Rajya Sabha is 250. 2. The maximum strength of the Lok Sabha is 550. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Article 80(1) fixes the maximum strength of the Rajya Sabha at $250$ ($238$ elected $+ 12$ nominated), and Article 81(1) (after the discontinuation of the $2$ Anglo-Indian nominated seats by the 104th Amendment Act, 2019) fixes the maximum elected strength of the Lok Sabha at $550$ ($530$ from States $+ 20$ from UTs)."
+    },
+    {
+      "id": "polity_ak_0422",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following provisions have been made in the Constitution of India? 1. Allocation of seats for the States in Lok Sabha. 2. Allocation of seats in the Legislative Assemblies of the States. 3. Allocation of seats in the Legislative Councils of the States. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. NOTA)*",
+      "a": "**d (NOTA)** — While the Fourth Schedule of the Constitution allocates seats in the *Rajya Sabha*, the Constitution only sets overall ceilings/floors for the Lok Sabha (Art 81), State Legislative Assemblies (Art 170), and State Legislative Councils (Art 171). The actual State-wise allocation of seats in these three bodies is made in the **Representation of the People Act, 1950** (First, Second, and Third Schedules)."
+    },
+    {
+      "id": "polity_ak_0423",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The term 'Sunshine Law' has been in vogue recently. What do you understand by this term? *(a. Laws that bring about a major social change, especially with respect to human rights | b. Laws that liberalise a sector of economy which was earlier monopolised by the Government | c. Laws requiring transparency and disclosure in the Government or business | d. Laws that are enacted while repealing an old/existing law)*",
+      "a": "**c (Laws requiring transparency and disclosure in the Government or business)** — Sunshine laws (such as the Right to Information Act) mandate openness, transparency, and public access to government meetings and records."
+    },
+    {
+      "id": "polity_ak_0424",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A good Citizens' Charter should have which of the following components? 1. Time frame for service to be provided to the citizen. 2. Expectations from the citizen. 3. Focus on grievance redressal. 4. Compensation in case of failure of service delivery. *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 1, 3 & 4 Only | d. 2, 3 & 4 Only)*",
+      "a": "**a (1, 2 & 3 Only)** — According to DARPG guidelines on Citizens' Charters, a Citizens' Charter includes service standards and timelines (1), expectations from citizens/clients (2), and grievance redressal mechanisms (3), but is non-justiciable and does not by itself mandate financial compensation (4)."
+    },
+    {
+      "id": "polity_ak_0425",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Rules for regulating procedure and conduct of business of Houses of Parliament are made by: *(a. the House | b. Rules Committee of the House | c. the Speaker or the Chairman, as the case may be | d. the President of India, on the recommendation of the Speaker/Chairman)*",
+      "a": "**a (the House)** — Article 118(1) explicitly states that **each House of Parliament may make rules** for regulating, subject to the provisions of this Constitution, its procedure and the conduct of its business (the Rules Committee only considers and recommends amendments for approval by the House)."
+    },
+    {
+      "id": "polity_ak_0426",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Arrange the following States in the decreasing order of the number of seats allotted to the State in the Rajya Sabha: 1. Maharashtra 2. Tamil Nadu 3. Karnataka 4. West Bengal *(a. 1-2-4-3 | b. 1-4-2-3 | c. 1-4-3-2 | d. 4-1-2-3)*",
+      "a": "**a (1-2-4-3)** — Under the Fourth Schedule of the Constitution: **Maharashtra** ($19$ seats) > **Tamil Nadu** ($18$ seats) > **West Bengal** ($16$ seats) > **Karnataka** ($12$ seats)."
+    },
+    {
+      "id": "polity_ak_0427",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, the provision for nominating members of Anglo-Indian community to Lok Sabha has been discontinued. Which of the following most appropriately defines an Anglo-Indian? *(a. a person native of India, whose male progenitors in the male line have English descent | b. a person native of India, whose male progenitors in the male line have European descent | c. a person native of India, whose one parent is English and other is Indian | d. a person native of India, whose family lineage traces back to British East India Company)*",
+      "a": "**b (a person native of India, whose male progenitors in the male line have European descent)** — Article 366(2) defines an Anglo-Indian as a person whose father or any of whose other male progenitors in the male line is or was of **European descent** but who is domiciled within the territory of India and is or was born within such territory of parents habitually resident therein."
+    },
+    {
+      "id": "polity_ak_0428",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In light of The Transgender Persons (Protection of Rights) Act, 2019, which of the following statements is/are correct? 1. A person can be recognised as a transgender based on the report of a clinical psychologist. 2. Educational institutions funded or recognised by the Government shall provide exclusive facility of education and recreation for transgender persons. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Under the 2019 Act and 2020 Rules, a certificate of identity as a transgender person is issued by the District Magistrate based on **self-perceived gender identity** without any medical or psychological examination (1 is false), and Section 13 mandates **inclusive** education and sports/recreation on an equal basis with others (not exclusive/segregated facilities; 2 is false)."
+    },
+    {
+      "id": "polity_ak_0429",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "For a Proclamation of President's Rule in a State to continue beyond a period of one year from the date of proclamation, Parliament can pass the resolution only if: 1. a Proclamation of Emergency is in operation, in whole of India or in whole/part of the State 2. the Election Commission certifies the difficulties in holding general elections to the Legislative Assembly of the State *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Either 1 or 2)*",
+      "a": "**c (Both 1 & 2)** — Under Article 356(5), a resolution extending President's Rule beyond 1 year (up to 3 years) cannot be passed unless **both** conditions—an active Proclamation of National Emergency AND certification by the Election Commission of difficulties in holding Assembly elections—are fulfilled concurrently."
+    },
+    {
+      "id": "polity_ak_0430",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Rajbhasha Vibhag (Department of Official Language) is part of which Ministry? *(a. Ministry of Culture | b. Ministry of Home Affairs | c. Ministry of Parliamentary Affairs | d. Ministry of Personnel, Public Grievances and Pensions)*",
+      "a": "**b (Ministry of Home Affairs)** — The Department of Official Language (Rajbhasha Vibhag) is a department under the Ministry of Home Affairs."
+    },
+    {
+      "id": "polity_ak_0431",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Annual Financial Statement of the Union Government in respect of each financial year shall be presented to the House on such day as directed by: *(a. Speaker of Lok Sabha | b. Union Finance Minister | c. President of India | d. Union Cabinet)*",
+      "a": "**c (President of India)** — Under Article 112(1) and Rule 204 of the Lok Sabha Rules, the Annual Financial Statement (Budget) is presented to the House on such day as the **President of India** may direct."
+    },
+    {
+      "id": "polity_ak_0432",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Central Bureau of Investigation (CBI) functions under the: *(a. Ministry of Home Affairs | b. Ministry of Personnel, Public Grievances and Pensions | c. Cabinet Secretariat | d. Prime Minister's Office)*",
+      "a": "**b (Ministry of Personnel, Public Grievances and Pensions)** — The CBI functions administratively under the Department of Personnel and Training (DoPT), Ministry of Personnel, Public Grievances and Pensions."
+    },
+    {
+      "id": "polity_ak_0433",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The principle of 'collective responsibility' under a Parliamentary system implies that: 1. a Motion of No Confidence, if passed, results in the dismissal/resignation of the Council of Ministers 2. no person shall be appointed, or continue as, a member of the Council of Ministers, unless recommended by the Prime Minister *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Under Article 75(3), collective responsibility means the entire Council of Ministers swims and sinks together (resigning if a no-confidence motion is passed) and that no person can be appointed or retained in the Council of Ministers against the advice of the Prime Minister."
+    },
+    {
+      "id": "polity_ak_0434",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is correct regarding the election of the President of India? 1. The MPs and MLAs have one vote each. 2. The MP/MLA who is also a candidate for the election shall not have the right to vote in the election. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — In a Presidential election under the system of proportional representation by means of the single transferable vote, every elector (MP or MLA) has **one ballot/vote** (though the *value* of that single vote varies) (1 is true). An MP/MLA who is a candidate retains full right to vote as an elector (2 is false)."
+    },
+    {
+      "id": "polity_ak_0435",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Constitution of India mandates which of the following to, before entering their office, make and subscribe an oath or affirmation before the President of India, or some person appointed in that behalf by her/him? 1. Chief Election Commissioner 2. Chairman, Union Public Service Commission 3. Chairman, Union Finance Commission *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. NOTA)*",
+      "a": "**d (NOTA)** — The Constitution of India does not prescribe any constitutional oath/affirmation before the President for the Chief Election Commissioner, the Chairman of UPSC, or the Chairman of the Finance Commission."
+    },
+    {
+      "id": "polity_ak_0436",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The provisions of Constitution of India concerning with the Union Judiciary can be amended by: *(a. a simple majority of both the Houses of Parliament | b. a special majority of the Houses of Parliament | c. a special majority of the Houses of Parliament and ratification by a majority of the State Legislatures | d. No amendment is possible due to strict separation of power)*",
+      "a": "**c (a special majority of the Houses of Parliament and ratification by a majority of the State Legislatures)** — Under the proviso to Article 368(2), any amendment seeking to make changes in **Chapter IV of Part V (The Union Judiciary)** requires both a special majority of Parliament and ratification by the legislatures of not less than one-half of the States."
+    },
+    {
+      "id": "polity_ak_0437",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct regarding the power of Supreme Court to make rules for regulating the practice and procedure of the Court? 1. It is subject to the provisions of law made by Parliament. 2. It requires approval of the President of India. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Under Article 145(1), the Supreme Court makes rules for regulating generally the practice and procedure of the Court **\"subject to the provisions of any law made by Parliament\"** and **\"with the approval of the President\"**. Both statements are correct, so neither is incorrect."
+    },
+    {
+      "id": "polity_ak_0438",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Attorney General for India (AG)? 1. AG has no executive authority. 2. The AG holds office for a term co-terminus with the Government. 3. AG is the primary lawyer in the Supreme Court of India. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — The Attorney General is the chief law officer and primary counsel for the Government of India in the Supreme Court (3) and exercises no executive authority (1). Under Article 76(4), the AG holds office during the **pleasure of the President** with no fixed or co-terminus constitutional tenure (resigning when the government changes is only a convention; 2 is false)."
+    },
+    {
+      "id": "polity_ak_0439",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Legislative Council (LC) of a State? 1. The total number of members of the LC shall not exceed one-third of the total number of members of the Legislative Assembly of that State. 2. The total number of members of the LC shall not be less than forty. 3. There is a facility to nominate members from persons having special knowledge in matters of academics, science, social service, art and cooperative movement. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Statements 1 and 2 are correct under Article 171(1). Statement 3 is incorrect because Article 171(5) specifies five fields for nomination by the Governor: **Literature, science, art, co-operative movement and social service** (*not* 'academics')."
+    },
+    {
+      "id": "polity_ak_0440",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding a Bill passed by the State Legislature and reserved by the Governor for the consideration of the President of India? 1. There is no limitation on the power of the Governor to reserve the Bill for consideration of the President of India. 2. The President of India cannot direct the Governor to return a Money Bill to the State Legislature. 3. If the President of India directs the Governor to return the Bill to the State Legislature for reconsideration, it shall be reconsidered by the State Legislature within six months. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under Articles 200 and 201, the Governor has full discretion to reserve any State Bill for the President's consideration (1), the President can direct the Governor to return the Bill only *\"where the Bill is not a Money Bill\"* (2), and the State Legislature must reconsider a returned Bill within a period of six months (3)."
+    },
+    {
+      "id": "polity_ak_0441",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which country is recognised as the first to enact a legislation for providing the right to information? *(a. India | b. Sweden | c. United States of America | d. Finland)*",
+      "a": "**b (Sweden)** — Sweden enacted the world's first Freedom of Information legislation (*Freedom of the Press Act*) in **1766**."
+    },
+    {
+      "id": "polity_ak_0442",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Lokpal and the Lokayuktas in India are inspired from the 'Ombudsman' of other countries. The institution of Ombudsman was first developed in: *(a. England | b. United States of America | c. Sweden | d. Denmark)*",
+      "a": "**c (Sweden)** — The institution of Ombudsman was first created in **Sweden** in **1809**."
+    },
+    {
+      "id": "polity_ak_0443",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, Mitakshara has been in the news. Which of the following statements are correct about Mitakshara? 1. It lays foundation of Hindu law on inheritance of property, i.e., The Hindu Succession Act, 1956. 2. It was written by Vijnanesvara. 3. It is based on the notion of birthright of the son over the properties of the joint family. 4. It provides equal rights to the daughters in the joint family. *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 1, 3 & 4 Only | d. 2 & 3 Only)*",
+      "a": "**a (1, 2 & 3 Only)** — *Mitakshara* is a commentary on the *Yajnavalkya Smriti* written by 12th-century jurist **Vijnanesvara** (2), forming the basis of the Hindu Succession Act, 1956 (1), and recognising a son's coparcenary right by birth in ancestral property (3). Classical Mitakshara law did not grant equal coparcenary rights to daughters (which were conferred only by the 2005 Amendment to the Hindu Succession Act; 4 is false)."
+    },
+    {
+      "id": "polity_ak_0444",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A grant where the funds to meet the proposed expenditure on a new service is to be made available by re-appropriation (i.e., no additional expenditure is being incurred) is: *(a. Balancing Grant | b. Additional Grant | c. Exceptional Grant | d. Token Grant)*",
+      "a": "**d (Token Grant)** — When funds to meet proposed expenditure on a 'new service' can be made available by re-appropriation from savings under another head, a demand for a token sum (of Re. $1$) is submitted to the vote of the Lok Sabha, known as a **Token Grant**."
+    },
+    {
+      "id": "polity_ak_0445",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "According to the Constitution of India, during which of the following situations can the Legislature of a State make a law with regard to trade and commerce making discrimination between one State and another? 1. A situation of scarcity of goods 2. In the interest of Scheduled Tribes 3. If the Bill was introduced with the prior recommendation of the President of India *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. NOTA)*",
+      "a": "**d (NOTA)** — Article 303(1) prohibits both Parliament and State Legislatures from making any law giving preference to one State over another or making discrimination between one State and another. Under Article 303(2), only **Parliament** (never a State Legislature) can make such a law to deal with a situation of scarcity of goods."
+    },
+    {
+      "id": "polity_ak_0446",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The criminalisation of sexual acts of same-sex adults in private, under Section 377 of the Indian Penal Code, has been declared by the Supreme Court as violative of which Constitutional provisions? 1. Article 14 2. Article 15 3. Article 19 4. Article 21 *(a. 1, 2 & 3 Only | b. 1, 2 & 4 Only | c. 1, 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — In *Navtej Singh Johar v. Union of India* (2018), a 5-judge Constitution Bench of the Supreme Court partially struck down Section 377 IPC as violative of Articles **14, 15, 19, and 21**."
+    },
+    {
+      "id": "polity_ak_0447",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding impeachment of President? 1. In the American Presidential system, the motion of impeachment passed by the House of Representatives leads to the automatic removal of the President from the office. 2. In India, the passing of the resolution for impeachment does not necessarily lead to removal of the President from the office. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — In the USA, impeachment by the House of Representatives only indicts the President; removal requires conviction by a two-thirds vote in the **Senate** (1 is false). In India, under Article 61(4), the passage of the impeachment resolution by both Houses by a two-thirds majority of total membership **automatically removes** the President from office from the date the resolution is passed (2 is false)."
+    },
+    {
+      "id": "polity_ak_0448",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the reconstituted Cabinet Committees? 1. The Prime Minister is not a member of some of these Committees. 2. Cabinet Committee on Investment & Growth and the Cabinet Committee on Economic Affairs are headed by the Prime Minister. 3. The Cabinet Committee on Parliamentary Affairs is often referred to as the 'Super-Cabinet'. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — The Prime Minister is not a member of the Cabinet Committee on Accommodation and the Cabinet Committee on Parliamentary Affairs (1 is true), and chairs 6 of the 8 Cabinet Committees including Investment & Growth and Economic Affairs (2 is true). It is the **Cabinet Committee on Political Affairs** (not Parliamentary Affairs) that is called the 'Super-Cabinet' (3 is false)."
+    },
+    {
+      "id": "polity_ak_0449",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Arrange the following parts of the organisational structure of a Ministry in India in a hierarchical order (top to bottom): 1. Department 2. Section 3. Division 4. Wing *(a. 1-2-4-3 | b. 1-4-3-2 | c. 1-3-2-4 | d. 1-3-4-2)*",
+      "a": "**b (1-4-3-2)** — From top to bottom in the Central Secretariat hierarchy: **Department** (headed by Secretary/Special Secretary) $\\rightarrow$ **Wing** (headed by Additional/Joint Secretary) $\\rightarrow$ **Division** (headed by Director/Deputy Secretary) $\\rightarrow$ Branch (headed by Under Secretary) $\\rightarrow$ **Section** (headed by Section Officer)."
+    },
+    {
+      "id": "polity_ak_0450",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The nodal Ministry under which Central Information Commission (CIC) functions is: *(a. Ministry of Home Affairs | b. Ministry of Information & Broadcasting | c. Ministry of Personnel, Public Grievances and Pensions | d. Ministry of Law & Justice)*",
+      "a": "**c (Ministry of Personnel, Public Grievances and Pensions)** — The Central Information Commission (CIC) falls under the administrative purview of the Department of Personnel and Training (DoPT), **Ministry of Personnel, Public Grievances and Pensions**."
+    },
+    {
+      "id": "polity_ak_0451",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, the term 'Wolf-Warrior Diplomacy' has gained currency and it is in reference to the new diplomatic style of the officials of: *(a. Russia | b. China | c. United States of America | d. Israel)*",
+      "a": "**b (China)** — 'Wolf-Warrior Diplomacy' refers to the assertive, confrontational diplomatic style adopted by Chinese diplomats, named after the Chinese action film franchise *Wolf Warrior*."
+    },
+    {
+      "id": "polity_ak_0452",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the elections to the Rajya Sabha? 1. Only elected members of the concerned Legislative Assembly can vote in such elections. 2. A person who is elected to the Rajya Sabha through a bypoll serves only the remainder of the predecessor's term. 3. There is no option of NOTA for the voters of such election. 4. Cross-voting does not attract disqualification under the Anti-Defection Law. *(a. 1, 2 & 3 Only | b. 1 & 4 Only | c. 2, 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Elected MLAs form the electoral college (Art 80(4)), a bypoll winner serves only the remainder of the term (Sec 154, RPA 1951), the Supreme Court removed NOTA from Rajya Sabha polls in 2018 (*Shailesh Manubhai Parmar* case), and cross-voting in RS elections does not attract Tenth Schedule disqualification (*Kuldip Nayar* case, 2006)."
+    },
+    {
+      "id": "polity_ak_0453",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who among the following shall be regarded as the guardian of the Fundamental Rights of the citizens of India? *(a. Constitution of India | b. President of India | c. Supreme Court | d. Union Parliament)*",
+      "a": "**c (Supreme Court)** — Under Article 32, the Supreme Court is the guarantor, protector, and guardian of the Fundamental Rights of citizens."
+    },
+    {
+      "id": "polity_ak_0454",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT a difference between the positions of Vice President of India and Vice President of USA? 1. In case of a vacancy in the office of the President, Vice President of USA takes over the Presidency, whereas Vice President of India does not. 2. Vice President of USA presides over the joint sittings of the US Congress, while the Vice President of India does not do so for joint sittings of the Parliament of India. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Both statements describe real differences: the US Vice-President succeeds to the Presidency for the remainder of the term (whereas the Indian VP only acts as President for up to 6 months), and the US VP presides over joint sessions of the US Congress alongside the House Speaker (whereas the Indian VP never presides over a joint sitting under Art 118(4))."
+    },
+    {
+      "id": "polity_ak_0455",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Industrial Relations Code, 2019 (2020) amalgamates, simplifies and rationalises the provisions of which of the following enactments? 1. The Trade Unions Act, 1926 2. The Industrial Employment (Standing Orders) Act, 1946 3. The Industrial Disputes Act, 1947 4. The Factories Act, 1948 *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2 & 3 Only | d. 2 & 4 Only)*",
+      "a": "**a (1, 2 & 3 Only)** — The Industrial Relations Code subsumes the Trade Unions Act (1926), the Industrial Employment (Standing Orders) Act (1946), and the Industrial Disputes Act (1947). The Factories Act, 1948 is subsumed under the Occupational Safety, Health and Working Conditions Code."
+    },
+    {
+      "id": "polity_ak_0456",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Why was 15th August chosen as the date for declaring Independence of India from British rule? *(a. 5th anniversary of Quit India Movement | b. Celebrated as first Independence Day in 1929 | c. Random date 30 days after passage of Indian Independence Bill | d. Governor General of India chose the date as it was the 2nd anniversary of Japan's surrender in the 2nd World War)*",
+      "a": "**d (Governor General of India chose the date as it was the 2nd anniversary of Japan's surrender in the 2nd World War)** — Lord Mountbatten selected 15 August because it marked the second anniversary of Japan's surrender to the Allied Forces in 1945."
+    },
+    {
+      "id": "polity_ak_0457",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the National Cadet Corps (NCC)? 1. It functions at the national level under the Ministry of Defence. 2. It is a statutory organisation. 3. It is a tri-service organisation, comprising the Army, Navy and Air Wing. 4. 'Duty and Discipline' is its motto. *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2, 3 & 4 Only | d. 2 & 4 Only)*",
+      "a": "**a (1, 2 & 3 Only)** — The NCC is a tri-service statutory organisation established under the National Cadet Corps Act, 1948 under the Ministry of Defence. Its motto was changed from 'Duty and Discipline' to **'Unity and Discipline'** (*Ekta aur Anushasan*) in 1980 (4 is false)."
+    },
+    {
+      "id": "polity_ak_0458",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Sarda Act, 1929 has been in the news lately. What was/were the main objective(s) of this Act? 1. Prevent child marriages in India 2. Promote widow remarriages in India *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — The Child Marriage Restraint Act, 1929 (popularly known as the Sarda Act, sponsored by Harbilas Sarda) aimed to prevent child marriages by fixing the minimum marriage age at 14 for girls and 18 for boys."
+    },
+    {
+      "id": "polity_ak_0459",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In the space of right to information, which of the following statements is/are correct? 1. Disinformation refers to incorrect or misleading information (without intent). 2. Misinformation refers to deliberate spread of false information. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — The definitions are swapped: **Misinformation** is false or inaccurate information shared without intent to deceive, whereas **Disinformation** is false information deliberately created and disseminated to mislead."
+    },
+    {
+      "id": "polity_ak_0460",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the contempt of court in India? 1. The Constitution of India empowers Supreme Court to punish for its contempt. 2. In cases of contempt of Subordinate Courts, the power to punish lies with the concerned High Court. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Article 129 empowers the Supreme Court to punish for contempt of itself (1), and Section 10 of the Contempt of Courts Act, 1971 empowers every High Court to punish for contempt of courts subordinate to it (2)."
+    },
+    {
+      "id": "polity_ak_0461",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct regarding the Prevention of Child Marriage Act, 2006? 1. A male adult above eighteen years of age, who contracts a child marriage, is punishable under the Act. 2. A female adult above eighteen years of age, who contracts a child marriage, is not punishable under the Act. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Both statements are correct under Section 9 of the Prohibition of Child Marriage Act, 2006 (which penalises only a **male adult** above 18 years who contracts a child marriage, and the proviso to Section 11 bars imprisonment of any woman). Hence, neither statement is incorrect."
+    },
+    {
+      "id": "polity_ak_0462",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Constituent Assembly of India? 1. No decision of the Constituent Assembly required division (of votes). 2. The method of election to elect the representatives from the Provincial Assemblies was proportional representation by single transferable vote. 3. The seats in each Province were distributed among the four categories of communities – Hindus, Muslims, Sikhs and General. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. NOTA)*",
+      "a": "**a (1 & 2 Only)** *(or **c** if counting rare divisions)* — Under the Cabinet Mission Plan, provincial seats were divided into **three** communities—**Muslims, Sikhs, and General** (which included Hindus and all others; 3 is false)—and elected by PR with STV (2 is true). Decisions in the Assembly were adopted by consensus without formal division (1)."
+    },
+    {
+      "id": "polity_ak_0463",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following factors are, generally, considered as possible advantages of the Presidential form of Government? 1. Faster decision making 2. Less prominent party divisions 3. Higher role of experts in the Government *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — A Presidential system allows decisive executive action, greater freedom for legislators to vote across party lines, and appointment of domain experts (non-legislators) to the President's Cabinet."
+    },
+    {
+      "id": "polity_ak_0464",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct regarding the Governor of a State in India? 1. In case of a vacancy in the office of Governor, appointment has to be made within a period of six months. 2. Unlike the President of India, who is an integral part of the Union Parliament, Governor is not integral to the State Legislature. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Both statements are incorrect: the Constitution prescribes no 6-month deadline for filling a vacancy in the Governor's office, and under Article 168(1), the Governor **is** an integral part of the State Legislature."
+    },
+    {
+      "id": "polity_ak_0465",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are NOT essential features for cooperative federalism to be fostered in a country? 1. No disputes between States, or between Centre and States. 2. No disputes between State level political parties and national level political parties. 3. Federalism as a means to achieve welfare of people. *(a. 1 Only | b. 1 & 2 Only | c. 2 Only | d. 3 Only)*",
+      "a": "**b (1 & 2 Only)** — Cooperative federalism does not require the complete absence of inter-governmental or party disputes; rather, it requires institutional mechanisms to resolve differences collaboratively for public welfare."
+    },
+    {
+      "id": "polity_ak_0466",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What constitutes a 'session' of Lok Sabha? *(a. Period between the orders of President summoning and proroguing the House | b. Period starting with the first sitting of the House for the day, and ending at the close of business for that day | c. Period between the order of President summoning the House and the Speaker announcing adjournment sine die | d. All the working days when the Speaker's chair was occupied, taken together)*",
+      "a": "**a (Period between the orders of President summoning and proroguing the House)** — A 'session' of a House of Parliament is the period spanning from the first sitting of the House (pursuant to the President's summoning order) until its prorogation (or dissolution in the case of Lok Sabha)."
+    },
+    {
+      "id": "polity_ak_0467",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct regarding Committees of the Lok Sabha? 1. The quorum to constitute a sitting of a Committee shall be nearly one-third of the total membership of the Committee. 2. If the Chairperson of a Committee is absent from any sitting, the Speaker shall appoint another member to act as Chairperson for that sitting. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** — Statement 1 is correct under Rule 259. Statement 2 is incorrect because under Rule 258(3), if the Chairperson is absent from any sitting, **the Committee itself chooses** another member to act as Chairperson for that sitting."
+    },
+    {
+      "id": "polity_ak_0468",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following States has been taken as the benchmark for per capita GSDP by the Fifteenth Finance Commission for 2020-21, whereby all other States get their share based on how distant their per capita GSDP is from the benchmark? *(a. Tamil Nadu | b. Maharashtra | c. Telangana | d. Haryana)*",
+      "a": "**d (Haryana)** — To compute 'Income Distance', the 15th Finance Commission used **Haryana** (the state with the highest per capita GSDP among larger states, excluding Goa and Sikkim) as the benchmark state."
+    },
+    {
+      "id": "polity_ak_0469",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the 'Bharat Ratna'? 1. The number of annual awards is restricted to a maximum of two in a particular year. 2. The recommendations for the award are made by the Prime Minister to the President. 3. A person who is not a citizen of India may be awarded Bharat Ratna. 4. The recipient is allowed to use 'Bharat Ratna' as a prefix to their name. *(a. 1, 2 & 3 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. 2 & 4 Only)*",
+      "a": "**c (2 & 3 Only)** — The normal annual cap is **three** (not two; 1 is false), recommendations are made by the PM to the President (2 is true), non-citizens (e.g., Nelson Mandela, Khan Abdul Ghaffar Khan) have received it (3 is true), and under Article 18(1) (*Balaji Raghavan* case), it cannot be used as a prefix or suffix to the recipient's name (4 is false)."
+    },
+    {
+      "id": "polity_ak_0470",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the various proclamations made by the President of India? 1. A proclamation made under Article 352 (National Emergency) is valid for a period of one month (without parliamentary approval). 2. A proclamation made under Article 356 (President's Rule in a State) is valid for a period of two months. 3. A proclamation made under Article 360 (Financial Emergency) is valid for a period of two months. *(a. 1 Only | b. 2 & 3 Only | c. All of these | d. None of these)*",
+      "a": "**c (All of these)** — Without approval by resolutions of both Houses of Parliament, a proclamation under Article 352 ceases to operate at the expiration of **one month**, while proclamations under Articles 356 and 360 cease to operate at the expiration of **two months**."
+    },
+    {
+      "id": "polity_ak_0471",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Member of Parliament Local Area Development Scheme (MPLADS) is implemented by: *(a. Ministry of Parliamentary Affairs | b. Ministry of Statistics and Programme Implementation | c. Ministry of Finance | d. Ministry of Rural Development and Ministry of Housing & Urban Affairs)*",
+      "a": "**b (Ministry of Statistics and Programme Implementation)** — MPLADS is administered at the Union level by the Ministry of Statistics and Programme Implementation (MoSPI)."
+    },
+    {
+      "id": "polity_ak_0472",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The present policy of the Government to provide reservation for physically handicapped persons (Persons with Benchmark Disabilities) in public employment is an example of: *(a. Horizontal reservation | b. Vertical reservation | c. Parallel reservation | d. Common reservation)*",
+      "a": "**a (Horizontal reservation)** — As held in *Indra Sawhney v. Union of India* (1992), reservation for Persons with Disabilities (and women/ex-servicemen) cuts across vertical social categories (SC, ST, OBC, EWS, General) and is a **horizontal reservation**."
+    },
+    {
+      "id": "polity_ak_0473",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The term 'MOOCs' has been in vogue recently. What do you understand by this term? *(a. Multi-Option Online Courses | b. Meta-level, Open-source and Organic Computations | c. Microprocessor Overlaid Organic Computations | d. Massive Open Online Courses)*",
+      "a": "**d (Massive Open Online Courses)** — MOOCs stands for Massive Open Online Courses (e.g., India's SWAYAM platform)."
+    },
+    {
+      "id": "polity_ak_0474",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct about languages in India? 1. Hindi is the National Language of India. 2. All the languages mentioned under Eighth Schedule of the Constitution, along with English, are National Languages of India. 3. The President's address at the joint session of both Houses of Parliament every year is read by the President in either Hindi or English, as preferred by the President. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. 3 Only)*",
+      "a": "**d (3 Only)** — The Constitution of India does not declare any language as the 'National Language' (Hindi is the *Official Language* of the Union under Article 343; 1 and 2 are false). The President reads his/her address in Hindi or English, with the other version read out by the Vice-President/Chairman."
+    },
+    {
+      "id": "polity_ak_0475",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How is 'Sedition' defined under the laws in India (Section 124A of IPC)? *(a. action that threatens unity of India | b. action that threatens sovereignty of India | c. action that excites disaffection towards the Government of India | d. action that promotes another country in the face of India)*",
+      "a": "**c (action that excites disaffection towards the Government of India)** — Section 124A of the erstwhile IPC defined sedition as bringing or attempting to bring into hatred or contempt, or exciting or attempting to excite **disaffection towards the Government established by law in India** (subject to *Kedar Nath Singh* 1962 safeguard of incitement to violence)."
+    },
+    {
+      "id": "polity_ak_0476",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding reservation in public employment in India? 1. It can be made by the Legislature by enacting a law. 2. It can be made by the Executive by issuing an order. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — In *Indra Sawhney v. Union of India* (1992), the Supreme Court held that the word \"provision\" in Article 16(4) is wide enough to include both legislative enactments and executive orders."
+    },
+    {
+      "id": "polity_ak_0477",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The right to freedom of movement as envisaged under Article 19 of the Constitution includes: 1. right to move inside the country 2. right to move out of the country *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Article 19(1)(d) guarantees the right to move freely **throughout the territory of India** (internal movement). The right to travel abroad falls under **Article 21** (*Maneka Gandhi v. Union of India*, 1978)."
+    },
+    {
+      "id": "polity_ak_0478",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are valid ground(s) under Article 19 of the Constitution of India to restrict the right to freedom of movement of citizens? 1. public health 2. protection of the interest of a Scheduled Tribe 3. public order *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 Only | d. All of these / 2 Only explicitly)*",
+      "a": "**c (2 Only)** *(Note: Article 19(5) explicitly specifies two grounds: **\"in the interests of the general public\"** and **\"for the protection of the interests of any Scheduled Tribe\"**; while the Supreme Court has held that 'interests of the general public' is a wide expression encompassing public health, public order, and morality, only statement 2 is verbatim in Article 19(5)).*"
+    },
+    {
+      "id": "polity_ak_0479",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In the context of the President of the USA, what is a 'Qualified Veto'? *(a. a veto applied only on some provisions of the Bill | b. a veto where the President directs/requires the Legislature to pass the Bill again with a special majority | c. a veto which is conditional and requires the Supreme Court to validate | d. a veto where the President returns the Bill with objections)*",
+      "a": "**b (a veto where the President directs/requires the Legislature to pass the Bill again with a special majority)** — A 'Qualified Veto' (exercised by the US President) can be overridden by the Legislature only by a **extraordinary/special majority** (two-thirds of both Houses of Congress), unlike a 'Suspensive Veto' (exercised by the Indian President) which can be overridden by an ordinary majority."
+    },
+    {
+      "id": "polity_ak_0480",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "If the law made by a State Legislature on a subject in the Concurrent List is inconsistent with a Union law, then such a law of the State Legislature is: *(a. ultra vires | b. repugnant | c. unconstitutional | d. void ab initio)*",
+      "a": "**b (repugnant)** — Under Article 254, inconsistency between a Union law and a State law on a Concurrent List subject is termed **repugnancy** (the State Legislature had competence to enact it, so it is not *ultra vires*, but to the extent of repugnancy it becomes void unless saved by Presidential assent under Art 254(2))."
+    },
+    {
+      "id": "polity_ak_0481",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Member of Parliament Local Area Development Scheme (MPLADS)? 1. Members of Lok Sabha can recommend works only within their Constituencies. 2. Elected Members of Rajya Sabha can recommend works anywhere within the State of their election. 3. Nominated Members of the Rajya Sabha can recommend works anywhere in the country. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — All three are standard provisions under the MPLADS Guidelines (with a relaxation allowing MPs to recommend up to Rs. 25 lakh per year outside their constituency/state for natural calamities)."
+    },
+    {
+      "id": "polity_ak_0482",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the Union Public Service Commission? 1. The recommendations of UPSC, such as the final merit list of Civil Service Exam, is not binding on the Government. 2. UPSC shall be consulted by the Central Government on all matters of recruitment to civil services, but not necessarily for reservation of posts in favour of any backward classes of citizens. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Under Article 320, UPSC's role is advisory (not binding), and Article 320(4) explicitly states that nothing in clause (3) shall require the UPSC to be consulted as respects the manner in which any provision under Article 16(4) (reservation for backward classes) may be made."
+    },
+    {
+      "id": "polity_ak_0483",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding dismissal and removal of a civil servant? 1. A person who is dismissed is eligible for re-employment under the Government. 2. A person who is removed is disqualified from re-employment under the Government. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Under the CCS (CCA) Rules, **Dismissal** from service ordinarily **disqualifies** a civil servant from future government employment, whereas **Removal** from service **does not disqualify** a person from future employment. Both statements are reversed."
+    },
+    {
+      "id": "polity_ak_0484",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the right to property as provided by the Constitution of India? 1. The right is available to citizens as well as non-citizens. 2. A person may be deprived of her/his property. 3. This right does not include intellectual property. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 Only | d. 2 & 3 Only)*",
+      "a": "**a (1 & 2 Only)** — Article 300A states *\"No person shall be deprived of his property save by authority of law\"*: it applies to all persons (citizens and non-citizens; 1 is true), permits deprivation by authority of law (2 is true), and the Supreme Court (*K.T. Plantation* case) has held that 'property' under Art 300A includes intangible and intellectual property (3 is false)."
+    },
+    {
+      "id": "polity_ak_0485",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "When the Rajya Sabha resolves that Parliament may legislate on a matter enumerated in the State List of the Seventh Schedule of the Constitution, such a resolution remains valid for a period of: *(a. six months | b. as specified in the resolution, not exceeding one year | c. one year | d. indefinite, until a resolution is passed to revoke it)*",
+      "a": "**b (as specified in the resolution, not exceeding one year)** — Article 249(2) explicitly states that the resolution *\"shall remain in force for **such period not exceeding one year as may be specified therein**\"* (and can be renewed for 1 year at a time)."
+    },
+    {
+      "id": "polity_ak_0486",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Theory of Separation of Powers separates the powers: *(a. horizontally | b. vertically | c. parallelly | d. subjectively)*",
+      "a": "**a (horizontally)** — Separation of Powers divides authority **horizontally** among co-equal branches (Legislature, Executive, and Judiciary), whereas Federalism divides powers **vertically** across levels of government."
+    },
+    {
+      "id": "polity_ak_0487",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT a Centrally Sponsored Scheme of Government of India? *(a. MGNREGP | b. Pradhan Mantri Gram Sadak Yojana (PMGSY) | c. Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) | d. Pradhan Mantri Awas Yojana (PMAY))*",
+      "a": "**c (Pradhan Mantri Kisan Samman Nidhi (PM-KISAN))** — PM-KISAN is a **Central Sector Scheme** with $100\\%$ funding from the Government of India, whereas MGNREGA, PMGSY, and PMAY are Centrally Sponsored Schemes (CSS)."
+    },
+    {
+      "id": "polity_ak_0488",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the power of the President of India to grant pardon? 1. The petitioner has no right of hearing before the President. 2. The President is not bound to give any reasons for the order. 3. The Supreme Court has laid down specific guidelines for exercise of such power. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. NOTA)*",
+      "a": "**a (1 & 2 Only)** — In *Kehar Singh v. Union of India* (1989), the Supreme Court held that the petitioner has no right to an oral hearing before the President (1), the President is not bound to give reasons for his order (2), and the Court need not lay down specific rigid guidelines for the exercise of Article 72 (3 is false, though in *Shatrughan Chauhan* 2014 the Court laid down guidelines for *handling* mercy petitions and supervening circumstances)."
+    },
+    {
+      "id": "polity_ak_0489",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding reservation in India? 1. Reservation may be given to students on the ground of domicile, in a State university/college. 2. Reservation may be given on the ground of domicile in employment under the State Government. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Article 15(1) does not include 'residence' as a prohibited ground (only 'place of birth'), so reasonable domicile-based reservation in State educational institutions is permissible (*D.P. Joshi* and *Pradeep Jain* cases). Conversely, Article 16(2) explicitly prohibits discrimination on the ground of **'residence'** in public employment, and under Article 16(3) only *Parliament* (not a State) can prescribe residence requirements."
+    },
+    {
+      "id": "polity_ak_0490",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Lok Sabha? 1. The election of the Speaker is held on such date as the President may fix. 2. The election of the Deputy Speaker is held on such date as the Speaker may fix. 3. The panel of chairpersons is nominated by the Speaker. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under Rules 7, 8, and 9 of the Rules of Procedure and Conduct of Business in Lok Sabha, the President fixes the date for the Speaker's election (1), the Speaker fixes the date for the Deputy Speaker's election (2), and the Speaker nominates a panel of not more than 10 Chairpersons (3)."
+    },
+    {
+      "id": "polity_ak_0491",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are NOT a classification for Motions in Lok Sabha? 1. Substitute Motion 2. Subsidiary Motion 3. Ancillary Motion 4. Superseding Motion *(a. 1 & 2 Only | b. 2 & 3 Only | c. 3 & 4 Only | d. NOTA)*",
+      "a": "**d (NOTA)** — Motions in the Lok Sabha are classified into Substantive Motions, **Substitute Motions**, and **Subsidiary Motions** (which are further sub-classified into **Ancillary Motions**, **Superseding Motions**, and Amendments). Thus, all four are valid classifications."
+    },
+    {
+      "id": "polity_ak_0492",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statement is/are correct regarding rights and duties? 1. All rights and all duties are relative. 2. A positive right corresponds to a negative duty, and a negative right corresponds to a positive duty. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Rights and duties are correlative and relative in any organised society (1 is true). However, a **positive right** (e.g., right to education) corresponds to a **positive duty** on the State to provide it, while a **negative right** (e.g., freedom from arbitrary interference) corresponds to a **negative duty** on the State to refrain (2 is false)."
+    },
+    {
+      "id": "polity_ak_0493",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are NOT correct regarding Parliamentary Committees? 1. Ministers are not allowed to be a member of any such Committee. 2. The Chairpersons of half of the Departmentally Related Standing Committees are appointed by the Speaker of Lok Sabha and the other half by the Chairman of Rajya Sabha. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Both are incorrect: while Ministers are barred from Financial Committees and DRSCs, they **are** members of committees like the Business Advisory Committee, Rules Committee, and General Purposes Committee (1 is false); and out of 24 DRSCs, **16** function under the Speaker of Lok Sabha and **8** under the Chairman of Rajya Sabha (not half and half; 2 is false)."
+    },
+    {
+      "id": "polity_ak_0494",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Forms of oath or affirmation for which of the following are prescribed in the Constitution of India? 1. Candidate for election to Lok Sabha 2. Attorney General for India 3. Nominated Members of Parliament *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. 3 Only)*",
+      "a": "**b (1 & 3 Only)** — The Third Schedule of the Constitution prescribes forms of oath/affirmation for Candidates for election to Parliament (Form IIIA) and Members of Parliament, both elected and nominated (Form IIIB). No constitutional oath is prescribed for the Attorney General."
+    },
+    {
+      "id": "polity_ak_0495",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Rights have a correlative in Duties. Similarly, the correlative of 'Immunity' would be: *(a. Liberty | b. Liability | c. Disability | d. Privilege)*",
+      "a": "**c (Disability)** — According to Wesley Newcomb Hohfeld's jural correlatives: *Right $\\leftrightarrow$ Duty*, *Privilege/Liberty $\\leftrightarrow$ No-right*, *Power $\\leftrightarrow$ Liability*, and ***Immunity $\\leftrightarrow$ Disability***."
+    },
+    {
+      "id": "polity_ak_0496",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding 'Delegated Legislation'? 1. The Legislature cannot delegate its (essential) power to make law. 2. It is synonymous with subordinate legislation. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** *(or **c: Both 1 & 2**)* — Delegated legislation is synonymous with subordinate/ancillary legislation (2 is true). While the Legislature can delegate ancillary rule-making power, it cannot delegate its **essential legislative function** of laying down legislative policy (*In re Delhi Laws Act*, 1951)."
+    },
+    {
+      "id": "polity_ak_0497",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "According to the Constitution of India, which among the following may make rules regarding disqualification of Members of a House of Parliament on the ground of defection, under the Anti-Defection Law? *(a. Chairman of the Rajya Sabha, or the Speaker of Lok Sabha, as the case may be | b. Rules Committee of the concerned House | c. Committee for subordinate legislation | d. Ministry of Parliamentary Affairs)*",
+      "a": "**a (Chairman of the Rajya Sabha, or the Speaker of Lok Sabha, as the case may be)** — Under Paragraph 8(1) of the Tenth Schedule, the Chairman or the Speaker of a House is empowered to make rules for giving effect to the provisions of the Schedule."
+    },
+    {
+      "id": "polity_ak_0498",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the power of Parliament to amend the Constitution of India? 1. Powers of the Parliament are same as that of the Constituent Assembly. 2. Power to amend includes the power to amend the Fundamental Rights. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** — Parliament exercises derivative constituent power under Article 368 and cannot alter the Basic Structure (so its power is not identical to the original sovereign Constituent Assembly; 1 is false), but it can amend Fundamental Rights so long as the Basic Structure is not damaged (2 is true)."
+    },
+    {
+      "id": "polity_ak_0499",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A tax can be imposed by the Union or the State by: 1. Legislation 2. Executive Order *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Either 1 or 2)*",
+      "a": "**a (1 Only)** — Under Article 265, *\"No tax shall be levied or collected except by authority of law\"*, where 'law' means a statute enacted by a competent Legislature, never a mere executive order."
+    },
+    {
+      "id": "polity_ak_0500",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Choose the most correct relationship between 'Courts' and 'Tribunals': *(a. All Courts are Tribunals and all Tribunals are Courts | b. All Tribunals are Courts but all Courts are not Tribunals | c. All Courts are Tribunals but all Tribunals are not Courts | d. Courts and Tribunals are two separate entities altogether, one being Judicial and the other being Executive)*",
+      "a": "**c (All Courts are Tribunals but all Tribunals are not Courts)** — As held by the Supreme Court in *Harinagar Sugar Mills Ltd. v. Shyam Sundar Jhunjhunwala* (1961), every Court of law is a Tribunal vested with the judicial power of the State, but not every statutory Tribunal is a Court.\n\n---\n\n## Set 11: Questions AK 0501 to AK 0550"
+    },
+    {
+      "id": "polity_ak_0501",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "President of India may summon a session of the Houses of Parliament on the recommendation of: 1. Prime Minister 2. Union Cabinet 3. Union Minister for Parliamentary Affairs *(a. 1 or 2 Only | b. 1 or 3 Only | c. 2 or 3 Only | d. Any of 1, 2 or 3)*",
+      "a": "**a (1 or 2 Only)** — Normally, the Cabinet Committee on Parliamentary Affairs / Union Cabinet recommends the dates for summoning Parliament, and in emergent situations the Prime Minister can advise the President."
+    },
+    {
+      "id": "polity_ak_0502",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statement(s) is/are NOT correct? 1. It is not necessary that the Lok Sabha and the Rajya Sabha should be summoned simultaneously. 2. It is not necessary that the Lok Sabha and the Rajya Sabha should be prorogued on the same day. *(a. 1 Only | b. 2 Only | c. Both 1 and 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Under Article 85, the two Houses do not have to be summoned or prorogued simultaneously or on the same day. Both statements are correct, so neither is incorrect."
+    },
+    {
+      "id": "polity_ak_0503",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The allocation of seats in the present Lok Sabha is based on the census of the year: *(a. 2011 | b. 2001 | c. 1991 | d. 1971)*",
+      "a": "**d (1971)** — Under the proviso to Article 81(3) (84th Amendment Act, 2001), the allocation of seats to States in the Lok Sabha remains frozen on the basis of the **1971 Census** until the first census taken after the year 2026."
+    },
+    {
+      "id": "polity_ak_0504",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements best reflects the nature of 'Asymmetric Federalism' in the Indian Constitution? *(a. States don't have right to secede from the Union, but Union has power to cede a territory | b. The granting of differential rights/special provisions to certain States by the Constitution | c. Unequal distribution of tax revenues by the Finance Commissions | d. The creation of Union Territories with separate identity from the States)*",
+      "a": "**b (The granting of differential rights/special provisions to certain States by the Constitution)** — Asymmetric federalism refers to constitutional arrangements (such as Articles 371 to 371J and the Fifth/Sixth Schedules) where certain constituent States enjoy special or differential powers/protections compared to others."
+    },
+    {
+      "id": "polity_ak_0505",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The term of the Lok Sabha: *(a. cannot be extended under any situation | b. can be extended by 1 year at a time during proclamation of national emergency, up to maximum 3 years | c. can be extended by 1 year at a time during proclamation of national emergency, any number of times | d. can be extended for any period of time by a resolution passed by both Houses)*",
+      "a": "**c (can be extended by 1 year at a time during proclamation of national emergency, any number of times)** — Under the proviso to Article 83(2), while a Proclamation of National Emergency is in operation, the 5-year term of Lok Sabha may be extended by Parliament by law for a period not exceeding **one year at a time** (with no overall cap of 3 years, though it cannot extend beyond 6 months after the Emergency ceases)."
+    },
+    {
+      "id": "polity_ak_0506",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, Government has added some new tribes into the list of Scheduled Tribes. Which of the following statements is/are correct in this regard? 1. A community can be recognised as a Scheduled Tribe if it qualifies the criteria provided in the Constitution of India. 2. The President of India has the authority to include or exclude a tribe from the list of Scheduled Tribes. *(a. 1 Only | b. 2 Only | c. Both 1 and 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — The Constitution **does not specify the criteria** for recognition of a Scheduled Tribe (1 is false). Under Article 342(1), the President issues the initial public notification specifying STs for a State/UT, but under **Article 342(2)**, any subsequent **inclusion in or exclusion from** that list can be done **only by Parliament by law**, not by the President (2 is false)."
+    },
+    {
+      "id": "polity_ak_0507",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How can the term of Lok Sabha be extended (during a National Emergency)? *(a. By the President, by Executive Order | b. By the Lok Sabha itself, by a resolution | c. By the Parliament, by law | d. By the Parliament, by a resolution)*",
+      "a": "**c (By the Parliament, by law)** — Article 83(2) Proviso explicitly states that the period may be extended **\"by Parliament by law\"** for a period not exceeding one year at a time."
+    },
+    {
+      "id": "polity_ak_0508",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The provision of the 'Calling Attention Notice' has restricted the scope of which of the following? *(a. Question Hour | b. Zero Hour | c. Short Duration Discussion | d. Adjournment Motion)*",
+      "a": "**d (Adjournment Motion)** — Introduced in India in 1954, the Calling Attention Notice allows members to call a Minister's attention to an urgent matter of public importance without the censure element of an Adjournment Motion, thereby significantly restricting the use/scope of Adjournment Motions."
+    },
+    {
+      "id": "polity_ak_0509",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following Union Ministries implements the Cartagena Protocol on Biosafety? *(a. Ministry of Science and Technology | b. Ministry of Environment, Forest and Climate Change | c. Ministry of Chemicals and Fertilizers | d. Ministry of Health and Family Welfare)*",
+      "a": "**b (Ministry of Environment, Forest and Climate Change)** — MoEFCC is the nodal ministry for implementing the Convention on Biological Diversity (CBD) and its Cartagena Protocol on Biosafety in India."
+    },
+    {
+      "id": "polity_ak_0510",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Annual Financial Statement of the Government of India, in respect of each financial year, shall be presented to the Houses of Parliament on such day as the: *(a. President of India may direct | b. Speaker of Lok Sabha may direct | c. Parliament may decide | d. Union Finance Minister may decide)*",
+      "a": "**a (President of India may direct)** — Under Article 112(1) and Rule 204 of the Lok Sabha Rules, the Budget is presented on such day as the President of India may direct."
+    },
+    {
+      "id": "polity_ak_0511",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following powers of the Prime Minister of India are NOT provided for explicitly in the Constitution of India? 1. to advise the President as regards the appointment of other Ministers 2. to allocate business among the Ministers 3. to decide the rank of Ministers 4. to summon a meeting of the Cabinet *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2, 3 & 4 Only | d. 2 & 4 Only)*",
+      "a": "**c (2, 3 & 4 Only)** — Article 75(1) explicitly states that other Ministers shall be appointed by the President on the advice of the Prime Minister (1 is explicit). Allocating business among Ministers (governed by Rules made by the President under Art 77(3)), deciding ranks of Ministers, and summoning Cabinet meetings are not explicitly stated as powers of the PM in the Constitution."
+    },
+    {
+      "id": "polity_ak_0512",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The provisions in the Constitution of India concerning the powers of the Supreme Court can be amended by: *(a. A law passed by the Parliament | b. A Constitutional Amendment passed by the Parliament | c. A Constitutional Amendment passed by the Parliament and ratified by at least 50% of State Legislatures | d. A Constitutional Amendment passed by the Parliament and approved by the Supreme Court)*",
+      "a": "**c (A Constitutional Amendment passed by the Parliament and ratified by at least 50% of State Legislatures)** — Under the proviso to Article 368(2), amending Chapter IV of Part V (The Union Judiciary) requires a special majority of Parliament plus ratification by not less than half of the State Legislatures."
+    },
+    {
+      "id": "polity_ak_0513",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Governor of a State has power to appoint which of the following: 1. Judges of the High Court of the State 2. Members of the State Finance Commission 3. Accountant General *(a. 1 & 2 Only | b. 2 Only | c. 2 & 3 Only | d. All of These)*",
+      "a": "**b (2 Only)** — Under Article 243-I, the Governor constitutes the State Finance Commission (2). High Court Judges are appointed by the President (Art 217), and the State Accountant General is an officer of the IA&AD under the CAG of India."
+    },
+    {
+      "id": "polity_ak_0514",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Local self-government in India can be best explained as an exercise of: *(a. Federalism | b. Administrative Delegation | c. Democratic Decentralisation | d. Direct Democracy)*",
+      "a": "**c (Democratic Decentralisation)** — Panchayati Raj and Municipalities represent **Democratic Decentralisation** (as recommended by the Balwant Rai Mehta Committee, 1957)."
+    },
+    {
+      "id": "polity_ak_0515",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statement(s) is/are correct? 1. The National Commission for Minorities is not a constitutional body. 2. The term 'Minority' is not defined in the Constitution of India. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — The National Commission for Minorities is a statutory body set up under the NCM Act, 1992 (not a constitutional body), and the Constitution does not define the word 'minority'."
+    },
+    {
+      "id": "polity_ak_0516",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following most suitably signifies the role of Supreme Court of India as a guardian of the Constitution of India? *(a. Independence from the Executive and the Legislature | b. Power of Judicial Review | c. Final Interpreter of the Constitution | d. Writ Jurisdiction)*",
+      "a": "**b (Power of Judicial Review)** — The power of Judicial Review (declaring legislative enactments and executive orders unconstitutional if they violate the Constitution) most directly signifies the Supreme Court's role as the guardian of the Constitution."
+    },
+    {
+      "id": "polity_ak_0517",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The system of Proportional Representation as an electoral method ensures: *(a. Representation of minorities | b. Rule of majority | c. Political stability | d. Common national agenda)*",
+      "a": "**a (Representation of minorities)** — Proportional representation ensures that minority groups and smaller political sections receive legislative representation commensurate with their vote share."
+    },
+    {
+      "id": "polity_ak_0518",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following communities has been notified by the Government of India as a minority community? 1. Jain 2. Buddhist 3. Parsi (Zoroastrian) *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under Section 2(c) of the National Commission for Minorities Act, 1992, the Central Government has notified **six** religious communities as minorities: Muslims, Christians, Sikhs, **Buddhists**, **Zoroastrians (Parsis)** (in 1993), and **Jains** (in 2014)."
+    },
+    {
+      "id": "polity_ak_0519",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is NOT essential for a federal form of government? *(a. Written Constitution | b. Division of Power | c. Independent Judiciary | d. Separation of Powers)*",
+      "a": "**d (Separation of Powers)** — Written Constitution, Division of Powers between Union and States, and an Independent Judiciary are essential for federalism. Separation of Powers is essential for a Presidential system, whereas parliamentary federations (like India, Canada, Australia) have a fusion of legislative and executive powers."
+    },
+    {
+      "id": "polity_ak_0520",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The term Public Interest Litigation (PIL) can be traced to which one of the following countries? *(a. The United States | b. The United Kingdom | c. Australia | d. Canada)*",
+      "a": "**a (The United States)** — The concept and term 'Public Interest Litigation' originated in the **United States** in the 1960s before being pioneered in India in the late 1970s/early 1980s by Justices P.N. Bhagwati and V.R. Krishna Iyer."
+    },
+    {
+      "id": "polity_ak_0521",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Constitution of India guarantees freedom of thought and expression to all citizens subject to: 1. implementation of some of the DPSPs 2. Fundamental Duties *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** *(or **a** in light of Art 31C)* — Under Article 19(2), freedom of speech and expression is subject only to the eight reasonable restrictions listed in Article 19(2) (sovereignty/integrity, security of State, friendly relations, public order, decency/morality, contempt of court, defamation, incitement to offence), not DPSPs or Fundamental Duties generally (though laws implementing Art 39(b)-(c) are protected from Art 14 & 19 challenges under Art 31C)."
+    },
+    {
+      "id": "polity_ak_0522",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are envisaged as being under the 'Right Against Exploitation' in the Constitution of India? 1. Prohibition of traffic in human beings and forced labour 2. Abolition of untouchability 3. Prohibition of employment of children in factories and mines *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — 'Right against Exploitation' comprises **Article 23** (Prohibition of traffic in human beings and forced labour) and **Article 24** (Prohibition of employment of children in factories, etc.). Abolition of untouchability (Article 17) falls under 'Right to Equality'."
+    },
+    {
+      "id": "polity_ak_0523",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Directive Principles of State Policy in the Constitution of India is/are limitations upon: 1. legislative function 2. executive function *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — DPSPs are positive directives/guidelines to the State, not negative limitations upon legislative or executive power."
+    },
+    {
+      "id": "polity_ak_0524",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are NOT necessarily the consequence of the proclamation of the President's Rule in a State? 1. Dissolution of the State's Legislative Assembly 2. Removal of the Council of Ministers in the State *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Upon proclamation of President's Rule under Article 356, the State Council of Ministers is dismissed/removed, but the State Legislative Assembly is **not necessarily dissolved** immediately (as held in *S.R. Bommai* 1994, it can only be kept in **suspended animation** until Parliament approves the proclamation)."
+    },
+    {
+      "id": "polity_ak_0525",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "It is the duty of the C&AG of India to audit all transactions relating to: 1. Consolidated Fund of India 2. Consolidated Fund of States 3. Contingency Fund of India 4. Public Account of India *(a. 1 & 2 Only | b. 1, 2 & 3 Only | c. 1, 3 & 4 Only | d. All of these)*",
+      "a": "**d (All of these)** — Under Sections 13 and 15 of the CAG's (Duties, Powers and Conditions of Service) Act, 1971, the CAG audits all transactions of the Union and of the States relating to the Consolidated Funds, Contingency Funds, and Public Accounts."
+    },
+    {
+      "id": "polity_ak_0526",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The reports of the Comptroller & Auditor General of India related to the Union Government Accounts: 1. are submitted to the President of India 2. can be considered in the joint session of both Houses of Parliament 3. are the basis of scrutiny by the Public Accounts Committee of the Parliament *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — Under Article 151(1), CAG reports on Union accounts are submitted to the President (who causes them to be laid before each House of Parliament) (1), and they are examined by the Public Accounts Committee (3). There is no provision for a joint session to consider CAG reports (2 is false)."
+    },
+    {
+      "id": "polity_ak_0527",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Speaker can ask a member of the House to stop speaking and let another member speak. This phenomenon is known as: *(a. Decorum | b. Crossing the floor | c. Interpellation | d. Yielding the floor)*",
+      "a": "**d (Yielding the floor)** — Asking a member who has the floor to stop speaking and give way to another member is called **Yielding the floor**."
+    },
+    {
+      "id": "polity_ak_0528",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Voting for election to which of these offices is conducted with secrecy (secret ballot): 1. Speaker of Lok Sabha 2. Member of Rajya Sabha 3. Member of a State's Legislative Council *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. 3 Only)*",
+      "a": "**d (3 Only)** — Speaker of Lok Sabha is elected by open voice vote / division in the House (1 is open); Rajya Sabha elections use an **open ballot** system for party MLAs since 2003 (2 is open); whereas elections to a **State Legislative Council** are conducted by **secret ballot** under Section 59 of the RPA, 1951 (3 is secret)."
+    },
+    {
+      "id": "polity_ak_0529",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How can a Legislative Council be created or abolished in a State of India? *(a. By Parliament, by law | b. By Parliament, by a Constitutional Amendment Act | c. By Legislative Assembly of the State, by a resolution | d. By Legislative Assembly of the State, by a law)*",
+      "a": "**a (By Parliament, by law)** — Under Article 169(1) and (3), Parliament may **by law** provide for the abolition or creation of a Legislative Council (after the State Legislative Assembly passes a special-majority resolution), and such law is not deemed a Constitutional Amendment under Article 368."
+    },
+    {
+      "id": "polity_ak_0530",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The matters related to the annual budget of Election Commission of India are handled by which of the following Ministries of the Union Government? *(a. Ministry of Parliamentary Affairs | b. Ministry of Law and Justice | c. Ministry of Personnel, Public Grievances and Pensions | d. No Ministry, as Election Commission is independent authority)*",
+      "a": "**b (Ministry of Law and Justice)** — The Legislative Department of the **Ministry of Law and Justice** is the nodal administrative ministry for matters relating to the Election Commission of India and its budget demands."
+    },
+    {
+      "id": "polity_ak_0531",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In the Parliament of India, by which of the following means can a member of a House seek end of an ongoing debate? *(a. Expunction | b. Guillotine | c. Division | d. Closure)*",
+      "a": "**d (Closure)** — Under Rule 362 of the Lok Sabha Rules, any member may move a **Closure Motion** (*\"that the question be now put\"*) to cut short an ongoing debate on a matter before the House."
+    },
+    {
+      "id": "polity_ak_0532",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding Parliament of India? 1. The Provisional Parliament (from 26 January 1950 until first election after independence) was unicameral. 2. The term of the members of Rajya Sabha is same as that of the members of the Senate in the United States. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — Under Article 379 (since repealed), the Constituent Assembly (Legislative) functioned as the **unicameral** Provisional Parliament from 26 January 1950 until both Houses were constituted in May 1952 (1 is true). Members of both the Indian Rajya Sabha and the US Senate serve **6-year terms** with one-third retiring every two years (2 is true)."
+    },
+    {
+      "id": "polity_ak_0533",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who has/have the power to declare that it would be in national interest for Parliament to legislate with respect to a matter in the State List? *(a. Rajya Sabha alone | b. Both Rajya Sabha and Lok Sabha | c. Governors of two or more States | d. President of India, after a resolution is passed by Rajya Sabha)*",
+      "a": "**a (Rajya Sabha alone)** — Under Article 249(1), the **Council of States (Rajya Sabha) alone** has the exclusive power to declare by resolution (supported by not less than two-thirds of the members present and voting) that it is necessary or expedient in the national interest that Parliament should make laws on a State List matter."
+    },
+    {
+      "id": "polity_ak_0534",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the legislative process in the States which are bicameral? 1. In situations of deadlock over passage of Bills between the Legislative Assembly and the Legislative Council, the Governor may summon a joint sitting of the two Houses. 2. Legislative Council is a revisory House, thus no Bill can originate there. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — There is **no provision for a joint sitting** in a State Legislature under Article 197 (the Assembly can override the Council by passing the Bill a second time; 1 is false), and Ordinary Bills **can originate** in the Legislative Council under Article 196(1) (2 is false)."
+    },
+    {
+      "id": "polity_ak_0535",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements best describes the term 'Budget' of Government of India? *(a. Statement of receipts and expenditures of the Government in respect of a financial year | b. Statement of estimated Receipts and Expenditures of the Government in respect of a financial year | c. Government's promises made to the citizens for the financial year | d. Proposals of all the expenditures to be made out of the Consolidated Fund of India)*",
+      "a": "**b (Statement of estimated Receipts and Expenditures of the Government in respect of a financial year)** — Article 112(1) defines the Annual Financial Statement as *\"a statement of the **estimated receipts and expenditure** of the Government of India for that year\"*."
+    },
+    {
+      "id": "polity_ak_0536",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What is the correct sequence of the following events during a Budget Session of the Parliament? 1. Discussion on Budget 2. Passing of Finance Bill 3. Passing of Appropriation Bill 4. Voting on Demand for Grants *(a. 1 – 4 – 3 – 2 | b. 1 – 4 – 2 – 3 | c. 1 – 2 – 3 – 4 | d. 1 – 3 – 2 – 4)*",
+      "a": "**a (1 – 4 – 3 – 2)** — The budgetary stages after presentation are: General **Discussion on Budget** (1) $\\rightarrow$ Scrutiny by DRSCs $\\rightarrow$ **Voting on Demands for Grants** (4) $\\rightarrow$ **Passing of Appropriation Bill** (3) $\\rightarrow$ **Passing of Finance Bill** (2)."
+    },
+    {
+      "id": "polity_ak_0537",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the budgetary process in Parliament of India? a. The Votes on Account can be taken for a maximum period of two months at a time. b. Introduction of the Appropriation Bill and the Finance Bill in the Lok Sabha is not opposed. *(c. Both 'a' and 'b' above | d. NOTA)*",
+      "a": "**b** — Under Article 116(1)(a), the Constitution places **no two-month maximum cap** on a Vote on Account (2 months is only a normal convention, and in election years it is taken for 4 months; so 'a' is false). Under Rule 72(1) Proviso of the Lok Sabha Rules, motions for leave to introduce a Finance Bill or an Appropriation Bill are **put to vote forthwith without debate/opposition** ('b' is true)."
+    },
+    {
+      "id": "polity_ak_0538",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Suppose the Government decides to form a new State out of the existing Union Territory of Jammu & Kashmir. Which of the following steps would be mandatory? 1. Passage of an ordinary Bill by the Parliament 2. Passage of a Constitutional Amendment by the Parliament 3. Reference of the Bill for this purpose to be made by the President of India to the Legislative Assembly of Jammu & Kashmir for seeking opinion *(a. 1 Only | b. 1 & 3 Only | c. 2 Only | d. 2 & 3 Only)*",
+      "a": "**a (1 Only)** — Under Article 3 read with Article 4, forming a State out of a Union Territory requires only an **ordinary law of Parliament** (1 is true, 2 is false). Furthermore, the proviso to Article 3 mandates referring the Bill to the Legislature only where the proposal affects the area, boundaries, or name of **\"any of the States\"**—not a **Union Territory** (*Explanation I* to Article 3 includes UTs in clauses (a)–(e), but **not in the Proviso**; 3 is not mandatory)."
+    },
+    {
+      "id": "polity_ak_0539",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "With respect to the disqualification of a Member of Parliament, who among the following decides whether the member was holding an Office of Profit? *(a. Joint Committee of Parliament on Offices of Profit | b. Presiding Officer of the concerned House | c. Election Commission | d. President of India)*",
+      "a": "**d (President of India)** — Under Article 103(1), if any question arises as to whether a Member of Parliament has become subject to any of the disqualifications in Article 102(1) (including Office of Profit), the question is referred for the decision of the **President** (who acts according to the opinion of the Election Commission)."
+    },
+    {
+      "id": "polity_ak_0540",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following are the principles of Parliamentary System based on which Government of India operates? 1. Presence of a nominal Executive head 2. Vice President as the Chairperson of Upper House 3. Real Executive authority with the Council of Ministers *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — Dual executive (nominal Head of State + real executive authority vested in the Council of Ministers) is a core principle of the Parliamentary system (1 & 3). Having the Vice-President as ex-officio Chairperson of the Upper House (2) is a feature borrowed from the **US Presidential system**, not a principle of parliamentary government."
+    },
+    {
+      "id": "polity_ak_0541",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What do you understand by the term 'Coram' in reference to a case in the Supreme Court of India? *(a. Minimum number of Judges to hold a session of the Court | b. Composition of the Bench hearing a case | c. Standard of behaviour expected of a person present in the Court | d. Case-list of the day for the Bench)*",
+      "a": "**b (Composition of the Bench hearing a case)** — In judicial orders and cause lists, **'Coram'** (Latin for *\"in the presence of\"*) denotes the specific Judge(s) constituting the Bench hearing the case."
+    },
+    {
+      "id": "polity_ak_0542",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The provisions of The Disaster Management Act, 2005 were used in the country to prevent the spread of COVID-19. Which of the following statements is/are correct in this regard? 1. The Chairperson of the National Executive Committee is the Cabinet Secretary in the Government of India. 2. The Chairperson of a State Executive Committee is the Chief Secretary to the State Government. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** — Under Section 8(2)(a) of the Disaster Management Act, 2005, the Chairperson of the National Executive Committee (NEC) is the **Union Home Secretary** (Secretary to the GOI in charge of the Ministry having administrative control of disaster management), NOT the Cabinet Secretary (1 is false). Under Section 20(2)(a), the Chief Secretary of the State is the Chairperson of the State Executive Committee (2 is true)."
+    },
+    {
+      "id": "polity_ak_0543",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Judge of a High Court in India is required to make and subscribe an oath or affirmation before: *(a. Chief Justice of the High Court | b. Chief Justice of India | c. Governor of the State | d. President of India)*",
+      "a": "**c (Governor of the State)** — Under Article 219, every person appointed to be a Judge of a High Court makes and subscribes an oath or affirmation before the **Governor of the State** (or some person appointed in that behalf by him)."
+    },
+    {
+      "id": "polity_ak_0544",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The 'Bharatmala Pariyojana' is a project being executed by which of the following Ministries of the Union Government? *(a. Ministry of Shipping | b. Ministry of Road Transport and Highways | c. Ministry of External Affairs | d. Ministry of Culture)*",
+      "a": "**b (Ministry of Road Transport and Highways)** — Bharatmala Pariyojana is an umbrella highway development programme of the Ministry of Road Transport and Highways (MoRTH)."
+    },
+    {
+      "id": "polity_ak_0545",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Bharat Electronics Limited (BEL) is a Public Sector Undertaking (PSU) under which of the following Ministries of Government of India? *(a. Ministry of Science and Technology | b. Ministry of Defence | c. Ministry of Electronics and Information Technology | d. Ministry of Heavy Industries)*",
+      "a": "**b (Ministry of Defence)** — Bharat Electronics Limited (BEL) is a Navratna Defence PSU under the Department of Defence Production, **Ministry of Defence**."
+    },
+    {
+      "id": "polity_ak_0546",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct about President of India? 1. Upon completion of their term of office, they may seek re-election to the office of President, but not to any other Office under the Constitution. 2. Election to the office of President shall be held within a period of two months before the expiry of the term of office of the outgoing President. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**d (Neither 1 nor 2)** — Article 57 makes a former President eligible for re-election to the office of President and places no bar on holding any other office (1 is false). Under Article 62(1), the election must be completed *before* the expiration of the term (and under Sec 4(3) of the Presidential and Vice-Presidential Elections Act, 1952, the notification can be issued on or after the **sixtieth day** before the expiry of the term of office, which is a statutory provision on notification rather than a constitutional rule that the election must be held within two months)."
+    },
+    {
+      "id": "polity_ak_0547",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct with respect to the elections held for Parliament of India? 1. In biennial election to the Rajya Sabha, a person shall not be nominated as candidate for election to more than two seats allotted to a State. 2. In case of bye-elections to House of People from two or more Parliamentary constituencies which are held simultaneously, a person shall not be nominated as candidate for election from more than two such constituencies. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**b (2 Only)** *(or **c: Both 1 & 2**)* — Section 33(7) of the Representation of the People Act, 1951 explicitly prohibits a candidate from contesting from **more than two** constituencies in a general election, simultaneous bye-elections, or biennial elections to the Rajya Sabha / State Legislative Councils (note that in a Rajya Sabha biennial election, the limit of two seats applies across all States, not just within a single State, making Statement 2 strictly accurate under Section 33(7)(e))."
+    },
+    {
+      "id": "polity_ak_0548",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "In the elections to which of the following, NOTA (None of The Above) is made available as a choice to the voters? I. Office of the President II. The Lok Sabha III. The Rajya Sabha *(a. I and II Only | b. I, II and III | c. II Only | d. II and III Only)*",
+      "a": "**c (II Only)** — NOTA is available only in direct elections to the **Lok Sabha** (and State Legislative Assemblies), not in indirect elections to the Office of the President or the Rajya Sabha."
+    },
+    {
+      "id": "polity_ak_0549",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What is the maximum number of nomination papers allowed to be presented by a candidate for election to the Lok Sabha from the same constituency? *(a. One | b. Two | c. Three | d. Four)*",
+      "a": "**d (Four)** — Under the proviso to Section 33(6) of the Representation of the People Act, 1951, a candidate may be nominated by a maximum of **four** nomination papers in the same constituency."
+    },
+    {
+      "id": "polity_ak_0550",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? 1. Value of the votes of the electors for the office of the President of India is not the same. 2. Value of the votes of all the electors for the office of the Vice-President of India is the same. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**c (Both 1 & 2)** — In the Presidential election, the value of an MLA's vote varies from State to State and differs from an MP's vote (1 is true). In the Vice-Presidential election, the electoral college consists solely of MPs, and the value of every MP's vote is **1** (the same) (2 is true).\n\n---\n\n## Set 12: Questions AK 0551 to AK 0600"
+    },
+    {
+      "id": "polity_ak_0551",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the conventions for conducting the elections to the Offices of the President and Vice-President of India? 1. For the election of the President of India, the Secretary-General, Lok Sabha or the Secretary-General, Rajya Sabha is appointed in rotation, as the Returning Officer. 2. For the election of the Vice-President of India, the Secretary-General, Rajya Sabha is appointed as the Returning Officer. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — By convention, the Election Commission of India appoints the **Secretary-General of Lok Sabha and the Secretary-General of Rajya Sabha by rotation** as the Returning Officer for **both** the Presidential election and the Vice-Presidential election (2 is false)."
+    },
+    {
+      "id": "polity_ak_0552",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding elections to the offices of President & Vice-President of India? 1. For the election of the President of India, the nomination paper of a candidate shall be subscribed by at least 50 electors as proposers and 50 electors as seconders. 2. For the election of the Vice-President of India, the nomination paper of a candidate shall be subscribed by at least 25 electors as proposers and 25 electors as seconders. *(a. 1 Only | b. 2 Only | c. Both 1 and 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Under Section 5B of the Presidential and Vice-Presidential Elections Act, 1952, a Presidential nomination requires **50 proposers and 50 seconders** (1 is true), whereas a Vice-Presidential nomination requires **20 proposers and 20 seconders** (not 25; 2 is false)."
+    },
+    {
+      "id": "polity_ak_0553",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the recently submitted report of the XVI Finance Commission? 1. States' share in divisible pool of Union taxes is recommended at $41\\%$. 2. It introduced a new criterion for horizontal devolution of the divisible pool among the States - Contribution to GDP. 3. It has not recommended any revenue deficit grants to any of the States. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** *(or **a: 1 & 2 Only**)* — The 16th Finance Commission (chaired by Dr. Arvind Panagariya) retained vertical devolution at $41\\%$, introduced 'Contribution to GDP' in horizontal devolution, and discontinued post-devolution revenue deficit grants."
+    },
+    {
+      "id": "polity_ak_0554",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the President's address to both Houses of Parliament assembled together during the first session of Parliament in a year? 1. No other business is transacted by the Houses of Parliament until the President has addressed both the Houses together. 2. The sitting is presided by the Speaker of Lok Sabha. *(a. 1 Only | b. 2 Only | c. Both 1 & 2 | d. Neither 1 nor 2)*",
+      "a": "**a (1 Only)** — Apart from swearing-in of members and election of the Speaker after a general election, no other formal business is transacted until the President addresses both Houses assembled together under Article 87 (1 is true). The President's Address under Article 87 is **not a 'joint sitting' under Article 108**; the **President** himself/herself presides over the occasion, not the Speaker (2 is false)."
+    },
+    {
+      "id": "polity_ak_0555",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The recently introduced Viksit Bharat–Guarantee for Rozgar and Ajeevika Mission (Gramin) (VB-G RAM G) is a scheme administered by which of the following in Government of India? *(a. Prime Minister's Office | b. Ministry of Rural Development | c. Ministry of Panchayati Raj | d. Ministry of Skill Development)*",
+      "a": "**b (Ministry of Rural Development)** — Rural employment guarantee and livelihood missions (Gramin) are administered by the **Ministry of Rural Development**."
+    },
+    {
+      "id": "polity_ak_0556",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "[From the Annual Financial Statement Table: Revenue Receipts $= 1000$, Capital Receipts $= 700$, Borrowings $= 350$, Revenue Expenditure $= 1250$, Interest Payments $= 150$, Capital Expenditure $= 450$.] What is the value of 'A' (Total Receipts)? *(a. 2050 | b. 1350 | c. 1700 | d. 1900)*",
+      "a": "**c (1700)** — $\\text{Total Receipts (A)} = \\text{Revenue Receipts} + \\text{Capital Receipts} = 1000 + 700 = 1700$ (note: Borrowings of $350$ are already a component of Capital Receipts of $700$)."
+    },
+    {
+      "id": "polity_ak_0557",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "[From the same AFS Table] What is the value of 'B' (Total Expenditure)? *(a. 1600 | b. 1700 | c. 1450 | d. 1400)*",
+      "a": "**b (1700)** — $\\text{Total Expenditure (B)} = \\text{Revenue Expenditure} + \\text{Capital Expenditure} = 1250 + 450 = 1700$ (note: Interest Payments of $150$ are already a component of Revenue Expenditure of $1250$)."
+    },
+    {
+      "id": "polity_ak_0558",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "[From the same AFS Table] What is the value of 'C' (Revenue Deficit)? *(a. 100 | b. 150 | c. 200 | d. 250)*",
+      "a": "**d (250)** — $\\text{Revenue Deficit (C)} = \\text{Revenue Expenditure} - \\text{Revenue Receipts} = 1250 - 1000 = 250$."
+    },
+    {
+      "id": "polity_ak_0559",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "[From the same AFS Table] What is the value of 'D' (Fiscal Deficit)? *(a. 350 | b. 250 | c. $-450$ (Surplus) | d. $-100$ (Surplus))*",
+      "a": "**a (350)** — Fiscal Deficit is equal to Total Expenditure minus Non-Debt Receipts, which equals **Total Borrowings $= 350$** (since Total Expenditure $= 1700$ and Non-Debt Receipts $= 1000 + (700 - 350) = 1350$, giving $1700 - 1350 = 350$)."
+    },
+    {
+      "id": "polity_ak_0560",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "[From the same AFS Table] What is the value of 'E' (Primary Deficit)? *(a. 200 | b. 100 | c. $-600$ (Surplus) | d. $-250$ (Surplus))*",
+      "a": "**a (200)** — $\\text{Primary Deficit (E)} = \\text{Fiscal Deficit} - \\text{Interest Payments} = 350 - 150 = 200$."
+    },
+    {
+      "id": "polity_ak_0561",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following Committees/Commission are related to Fundamental Duties in Constitution of India? 1. First Administrative Reforms Commission, 1966 2. Swaran Singh Committee, 1976 3. Justice J S Verma Committee, 1999 4. Justice Geeta Mittal Committee, 2026 *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**b (Only Two)** — Only the **Swaran Singh Committee (1976)** (which recommended adding Part IVA) and the **Justice J.S. Verma Committee (1999)** (on operationalisation of Fundamental Duties) are related to Fundamental Duties."
+    },
+    {
+      "id": "polity_ak_0562",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are NOT correct regarding the removal of the Speaker of Lok Sabha from his/her office? 1. The notice of the resolution for the removal of Speaker shall be submitted to the Deputy Speaker of Lok Sabha. 2. No leave of the House is required to take up the resolution in the House. 3. The resolution to remove the Speaker needs to be passed by a majority of the members present and voting in the House. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — All three statements are incorrect: under Rule 200 of the Lok Sabha Rules, the notice of the resolution is given to the **Secretary-General** (not the Deputy Speaker; 1 is false); under Rule 201, **leave of the House** (at least 50 members rising in their places) is required to move the resolution (2 is false); and under Article 94(c), it must be passed by a **majority of all the then members of the House** (effective majority, not simple majority; 3 is false)."
+    },
+    {
+      "id": "polity_ak_0563",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding the process for the removal of Speaker of Lok Sabha? I. The ground for removal has to be a violation of either the Constitution of India or the Rules of Lok Sabha. II. The Speaker has the right to speak in, and take part in the proceeding of the House to consider the resolution for his/her removal, but does not have the right to vote. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**d (Neither I nor II)** — Article 94(c) does not specify any mandatory constitutional grounds for removing the Speaker (only that the resolution must be specific as to charges under Rule 200A; I is false), and under Article 96(2), the Speaker **is entitled to vote in the first instance** on such a resolution, though not in the case of an equality of votes (II is false)."
+    },
+    {
+      "id": "polity_ak_0564",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct in respect of a joint sitting of the two Houses of Parliament? 1. The Constitution of India specifies that it shall be presided by the Speaker of Lok Sabha. 2. During the absence of the Speaker from such sitting, the Deputy Speaker of the House or, if (s)he is also absent, the Deputy Chairman of the Council of States shall preside. 3. During the absence of the presiding officers of both the Houses of Parliament, such other member of Parliament as may be appointed by the President, shall preside. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Under Article 118(4), the Speaker presides over a joint sitting (1 is true). Under Rule 5 of the Houses of Parliament (Joint Sittings and Communications) Rules, in the Speaker's absence, the Deputy Speaker presides, failing whom the Deputy Chairman of Rajya Sabha presides (2 is true), and if he is also absent, such other person **as may be determined by the Members present at the sitting** presides (not appointed by the President; 3 is false)."
+    },
+    {
+      "id": "polity_ak_0565",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The rules related to the procedures with respect to the joint sitting of the two Houses of Parliament are made by: *(a. The President | b. The Chairman of Rajya Sabha, and then agreed by Speaker of Lok Sabha | c. The Speaker of Lok Sabha, and then agreed by Chairman of Rajya Sabha | d. An Act of Parliament)*",
+      "a": "**a (The President)** — Article 118(3) explicitly states that the **President**, after consultation with the Chairman of the Council of States and the Speaker of the House of the People, may make rules as to the procedure with respect to joint sittings."
+    },
+    {
+      "id": "polity_ak_0566",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding breach of privilege and contempt of the Houses of Parliament? I. All breaches of privilege of the House are contempts of the House. II. A person may be guilty of a contempt of the House even though (s)he does not violate any of the privileges of the House. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — Every breach of privilege amounts to contempt of the House (I is true), while 'contempt of the House' is wider in scope—a person can commit contempt of the House (e.g., obstructing proceedings or disobeying an order of the House) without violating any specific enumerated privilege (II is true)."
+    },
+    {
+      "id": "polity_ak_0567",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "With reference to The Representation of the People Act, 1951, an election petition can be filed by: 1. any candidate related to that election 2. any elector related to that election 3. any resident of the concerned constituency *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Under Section 81(1) of the Representation of the People Act, 1951, an election petition calling in question any election may be presented only by **any candidate at such election** or **any elector** (not just any resident who is not a registered elector)."
+    },
+    {
+      "id": "polity_ak_0568",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "When a Bill passed by the State Legislature is presented to the Governor for assent, which of the following choices are NOT available with the Governor (as per recent Supreme Court rulings on Article 200)? 1. Absolute Veto 2. Suspensive Veto 3. Pocket Veto *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — In *State of Punjab v. Principal Secretary to the Governor of Punjab* (2023) and *State of Tamil Nadu v. Governor of Tamil Nadu* (2025), the Supreme Court held that under the first proviso to Article 200, if the Governor withholds assent to a Bill, he/she **must** return it *\"as soon as possible\"* to the State Legislature for reconsideration (Suspensive Veto), and therefore **cannot exercise an indefinite Pocket Veto or a standalone Absolute Veto** to kill a Bill without returning it."
+    },
+    {
+      "id": "polity_ak_0569",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the Governor's powers with respect to a Bill passed by the State Legislature and presented for his/her assent? 1. The merit of the Governor's decision is not justiciable. 2. If there is prolonged inaction, Courts may issue direction to the Governor. 3. The Governor can act independent of the advice of the Council of Ministers. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** *(or **d: All of these**)* — While courts do not sit in appeal over the substantive merits of a Governor's assent decision (1), the Supreme Court held that prolonged constitutional inaction on Bills is subject to judicial review and timelines (2), and save where the Constitution requires reservation for the President, the Governor acts on the aid and advice of the Council of Ministers."
+    },
+    {
+      "id": "polity_ak_0570",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "According to the Constitution of India, how many of the following statements is/are correct in the situation a Governor reserves a Bill for the consideration of the President? 1. The President may withhold assent. 2. If the President decides to return the Bill to the House(s) of the State Legislature, the House(s) shall reconsider it within a period of six months. 3. If the President decides to return the Bill to the House(s) of the State Legislature, and if it is again passed by the House(s), it shall be presented again to the President for consideration. 4. If presented again to the President for consideration, then the President cannot withhold assent from the Bill. *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**c (Only Three)** — Statements 1, 2, and 3 are explicitly correct under Article 201. Statement 4 is **incorrect** because Article 201 does **not** bind the President to give assent when a State Bill is passed a second time and re-presented to him."
+    },
+    {
+      "id": "polity_ak_0571",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements is/are correct regarding the advisory opinion of the Supreme Court under Article 143 of the Constitution of India? 1. It cannot overrule a previous judgment of the Court. 2. A reference made by the President can be returned unanswered by the Court. 3. There have been sixteen such references made by the President. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**b (Only Two)** — Under Article 143(1), the Supreme Court has discretion and **can decline/return a reference unanswered** for good reasons (as in the 1993 Ayodhya *Special Reference No. 1 of 1993*; 2 is true), and there have been around 15–16 Presidential references to date (3 is true). However, in the *2G Spectrum Presidential Reference (In re: Special Reference No. 1 of 2012)*, a 5-judge Bench clarified that the Supreme Court **can** reconsider/overrule an earlier decision of a smaller Bench while answering a reference under Article 143 (1 is false)."
+    },
+    {
+      "id": "polity_ak_0572",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are example(s) of 'equality before the law' as envisaged in the Constitution of India? 1. Prohibition on discrimination by State on the basis only of religion. 2. Schemes of the government that aim to empower only women. 3. Reducing the cut-off marks for candidates belonging to backward classes in the exams for public employment. *(a. 1 Only | b. 1 & 2 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 Only)** — 'Equality before the law' is a negative concept implying the absence of special privileges and non-discrimination (1). Empowering women (2) and reducing cut-off marks for backward classes (3) are examples of positive affirmative action under **'Equal protection of the laws'**."
+    },
+    {
+      "id": "polity_ak_0573",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Reservation provided in favour of which of the following classes of citizens in India is considered 'vertical' reservation? 1. EWS 2. Transgenders 3. Women *(a. 1 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 Only)** — Reservation for SCs, STs, OBCs, and **Economically Weaker Sections (EWS)** (under Articles 15(6) and 16(6)) is **vertical reservation** (social/economic compartments), whereas reservation for women and transgender persons is **horizontal reservation** cutting across vertical categories."
+    },
+    {
+      "id": "polity_ak_0574",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements is/are correct regarding the constitutional provisions related to reservation for backward classes of citizens in educational institutions and public employment? 1. The provision for admissions in educational institutions states the nature of backwardness. 2. The provisions for reservation in public employment does not state the nature of backwardness. 3. Reservation in educational institutions is a fundamental right. 4. Reservation in public employment is a fundamental right. *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**b (Only Two)** — Article 15(4) & (5) specify the nature of backwardness as **\"socially and educationally backward classes\"** (1 is true), whereas Article 16(4) simply uses the phrase **\"any backward class of citizens\"** without qualifying the nature of backwardness (2 is true). Moreover, the Supreme Court (*Mukesh Kumar v. State of Uttarakhand*, 2020) has repeatedly held that Articles 15(4)/(5) and 16(4) are **enabling provisions**, and reservation is **not a Fundamental Right** (3 & 4 are false)."
+    },
+    {
+      "id": "polity_ak_0575",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? I. Rule of Law is an absolute principle. II. Principles of Natural Justice are absolute principles. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**d (Neither I nor II)** — Neither is absolute: the Rule of Law admits constitutional and statutory exceptions (e.g., diplomatic immunity, immunity to President/Governors under Art 361, discretionary executive powers), and the Principles of Natural Justice can be excluded by express statutory provision or in cases of emergency, confidentiality, or impracticability (*Union of India v. Tulsiram Patel*, 1985)."
+    },
+    {
+      "id": "polity_ak_0576",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who was the first Indian to join the Indian Civil Service? *(a. Surendranath Tagore | b. Surendranath Banerjee | c. Satyendranath Tagore | d. Subhash Chandra Bose)*",
+      "a": "**c (Satyendranath Tagore)** — Satyendranath Tagore became the first Indian to qualify for and join the Indian Civil Service (ICS) in **1863–64**."
+    },
+    {
+      "id": "polity_ak_0577",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Who, among the following, referred to the civil servants of India as the \"Steel Frame of India\"? *(a. Warren Hastings | b. Charles Cornwallis | c. Vallabhbhai Patel | d. Jawaharlal Nehru)*",
+      "a": "**c (Vallabhbhai Patel)** *(Note: British PM David Lloyd George coined the phrase \"steel frame\" in 1922, and among the given options, **Sardar Vallabhbhai Patel** famously championed the All India Services as the 'Steel Frame of India' in the Constituent Assembly).*"
+    },
+    {
+      "id": "polity_ak_0578",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following services existed prior to independence of India? 1. Indian Forest Service 2. Indian Medical Service 3. Indian Education Service *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**c (All Three)** — During British rule, the Imperial Services included the **Imperial Forest Service** (established 1867; later reconstituted as an AIS in 1966), the **Indian Medical Service (IMS)**, and the **Indian Educational Service (IES)** (until provincialisation after the 1919/1924 Lee Commission reforms)."
+    },
+    {
+      "id": "polity_ak_0579",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "When was the first function held to observe the Civil Services Day in India? *(a. 2004 | b. 2006 | c. 2008 | d. 2010)*",
+      "a": "**b (2006)** — The first Civil Services Day function was held on **21 April 2006** at Vigyan Bhawan, New Delhi (commemorating Sardar Vallabhbhai Patel's address to the first batch of IAS probationers at Metcalfe House on 21 April 1947)."
+    },
+    {
+      "id": "polity_ak_0580",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Civil Service Examination was held in India for the first time in which year? *(a. 1920 | b. 1922 | c. 1924 | d. 1926)*",
+      "a": "**b (1922)** — Following the Montagu–Chelmsford Reforms, the ICS examination was held in India for the first time in **1922**."
+    },
+    {
+      "id": "polity_ak_0581",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Where was the first Civil Service Examination held in India? *(a. Delhi | b. Calcutta | c. Allahabad | d. Madras)*",
+      "a": "**c (Allahabad)** — The first ICS examination in India was held at **Allahabad** in 1922."
+    },
+    {
+      "id": "polity_ak_0582",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, the Chief Justice of India has referred which of the following parts of the Constitution as the \"woven rope\" that keeps the Constitution balanced? *(a. Part III | b. Balance between Part III and Part IV | c. Doctrine of Checks and Balances | d. Doctrine of Basic Structure)*",
+      "a": "**d (Doctrine of Basic Structure)** *(or **b: Balance between Part III and Part IV**)* — The Basic Structure doctrine (and the harmonious balance between Fundamental Rights and Directive Principles) has been described by the CJI as a tightly woven rope that binds and balances constitutional governance."
+    },
+    {
+      "id": "polity_ak_0583",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, Supreme Court of India recognised Menstrual Health and Hygiene as a fundamental right under which of the following Articles of the Constitution? 1. Article 14 2. Article 19 3. Article 21 4. Article 21A *(a. 1, 2 & 3 Only | b. 1, 3 & 4 Only | c. 2, 3 & 4 Only | d. All of these)*",
+      "a": "**b (1, 3 & 4 Only)** *(or **d: All of these**)* — In its landmark judgment on menstrual hygiene in schools (*Jaya Thakur v. Union of India*, 2026), the Supreme Court held that menstrual health and access to sanitary products in schools are integral to the right to equality and non-discrimination (**Article 14**), the right to life with dignity and health (**Article 21**), and the right to free and compulsory education (**Article 21A**)."
+    },
+    {
+      "id": "polity_ak_0584",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following best describes a \"continuing mandamus\"? *(a. A judicial order that issues a series of directions through more than one writ of mandamus | b. A judicial order that issues a direction through a mandamus, but keeps the matter pending | c. A judicial order that issues a direction through a mandamus, after combining other similar cases | d. A judicial order with timelines, an arbitrator appointed for monitoring compliance and a clear direction of criminal contempt)*",
+      "a": "**b (A judicial order that issues a direction through a mandamus, but keeps the matter pending)** — Pioneered in *Vineet Narain v. Union of India* (1997), a **continuing mandamus** is a procedural innovation where a Constitutional Court, instead of disposing of a petition with a final judgment, keeps the matter pending and issues periodic interim directions while monitoring executive compliance."
+    },
+    {
+      "id": "polity_ak_0585",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements are correct regarding Census 2027 (and the Census Act, 1948)? 1. Census is an item under the Concurrent List of subjects in the Constitution of India. 2. The office of the Registrar General and Census Commissioner functions under the Ministry of Statistics and Programme Implementation. 3. Every person of whom any question as per the Gazette Notification is asked by census-officer shall be legally bound to answer such question. 4. The information collected from individuals is confidential, and cannot be accessed by the Courts. *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**b (Only Two)** — Census is in the **Union List** (Entry 69, not Concurrent List; 1 is false), and the Registrar General functions under the **Ministry of Home Affairs** (not MoSPI; 2 is false). Under Sections 8(2) and 15 of the Census Act, 1948, citizens are legally bound to answer census questions to the best of their knowledge (3 is true), and individual census records are strictly confidential and inadmissible as evidence in any court of law (4 is true)."
+    },
+    {
+      "id": "polity_ak_0586",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "A Constitutional Amendment Bill can be introduced in a House of Parliament of India by how much support in the House? *(a. Majority of the members present and voting | b. Majority of not less than two-thirds of the members present and voting | c. Majority of the total membership of the House | d. Majority of the total membership of the House, and a majority of not less than two-thirds of the members present and voting)*",
+      "a": "**a (Majority of the members present and voting)** — While the **passage** (adoption of the motion at each stage) of a Constitutional Amendment Bill requires a special majority under Article 368(2), obtaining **leave of the House to introduce** the Bill is a procedural motion decided by a **simple majority** of members present and voting under Article 100(1)."
+    },
+    {
+      "id": "polity_ak_0587",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Consider the following statements: Statement I: High Courts in India enjoy power to review their own judgments. Statement II: The High Courts in India are considered 'Courts of Record'. *(a. Both statements are correct and Statement II explains Statement I | b. Both statements are correct but Statement II doesn't explain Statement I | c. Statement I is correct and Statement II is incorrect | d. Statement I is incorrect and Statement II is correct)*",
+      "a": "**a (Both statements are correct and Statement II explains Statement I)** — Although there is no separate article analogous to Article 137 for High Courts, the Supreme Court held (*Shivdev Singh v. State of Punjab*, 1963; *Naresh Shridhar Mirajkar*) that as **Courts of Record** under Article 215, High Courts possess inherent plenary power to review and correct their own judgments/records."
+    },
+    {
+      "id": "polity_ak_0588",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct with respect to the procedure for the removal of a Judge of the Supreme Court of India? 1. The Constitution of India specifies the grounds for removal as 'proved misbehaviour' or 'incapacity'. 2. The motion for removal is to be signed by at least 100 members of the Lok Sabha or the Rajya Sabha. 3. If the motion is admitted, investigation is undertaken by a three-member Committee consisting of a Judge of Supreme Court, a Chief Justice of a High Court and a distinguished jurist. *(a. 1 & 2 Only | b. 1 & 3 Only | c. All of these | d. NOTA)*",
+      "a": "**b (1 & 3 Only)** — Statements 1 and 3 are correct under Article 124(4) and Section 3(2) of the Judges (Inquiry) Act, 1968. Statement 2 is incorrect because under Section 3(1) of the Judges (Inquiry) Act, 1968, the notice of motion must be signed by at least **100 members in the Lok Sabha**, or at least **50 members in the Rajya Sabha** (not 100 in Rajya Sabha)."
+    },
+    {
+      "id": "polity_ak_0589",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct with respect to the provisions of The Judges (Inquiry) Act, 1968? I. Only if the report of the Committee undertaking investigation finds that the Judge fulfils the grounds for removal, the motion is taken up for further consideration of the Parliament, and is voted upon. II. If the motion is adopted by each House of the Parliament, the address praying for the removal of the Judge shall be presented to the President in the same session of Parliament in which the motion is adopted. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — Under Section 6(1) of the Judges (Inquiry) Act, 1968, if the inquiry committee exonerates the judge, the motion is not proceeded with further (I is true); and under Article 124(4) and Section 6(3), the address must be adopted by both Houses and presented to the President in the **same session** (II is true)."
+    },
+    {
+      "id": "polity_ak_0590",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements is/are correct regarding High Courts in India? 1. All decisions of tribunals created under Article 323A and Article 323B of the Constitution of India are subject to scrutiny by a division Bench of the concerned High Court. 2. The Constitution of India provides original jurisdiction too for the High Courts, apart from making them courts of appeal. 3. A Judge of a High Court holds office during the pleasure of the President, subject to the constitutional requirements for removal from office. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**b (Only Two)** — Statement 1 is correct per the 7-judge Bench ruling in *L. Chandra Kumar v. Union of India* (1997). Statement 2 is correct (e.g., Article 226 writ jurisdiction, election petitions, etc.). Statement 3 is **incorrect** because High Court Judges enjoy security of tenure until the age of 62 years under Article 217(1) and **do not** hold office during the pleasure of the President."
+    },
+    {
+      "id": "polity_ak_0591",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "According to the Constitution of India, where a dispute arises as to the age of a Judge: I. in case of a Judge of a High Court, the question is decided by the Governor of that State. II. in case of a Judge of Supreme Court, it is determined by the Chief Justice of India. *(a. Only I | b. Only II | c. Both I and II | d. Neither I nor II)*",
+      "a": "**d (Neither I nor II)** — Under **Article 217(3)**, any question as to the age of a High Court Judge is decided by the **President after consultation with the Chief Justice of India** (I is false). Under **Article 124(2A)**, the age of a Supreme Court Judge is determined by **such authority and in such manner as Parliament may by law provide** (II is false)."
+    },
+    {
+      "id": "polity_ak_0592",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is correct with respect to the Judges of the Supreme Court of India? I. There is no tenure for the Judges. II. There is no minimum age for the appointment of Judges. *(a. Only I | b. Only II | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — The Constitution prescribes **no fixed tenure** of years (only an upper retirement age of 65 years under Article 124(2); I is true) and **no minimum age** for appointment as a Judge of the Supreme Court (II is true)."
+    },
+    {
+      "id": "polity_ak_0593",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following Bills can be introduced by a private member of the legislative House? 1. Money Bill 2. Financial Bill 3. Constitutional Amendment Bill 4. A Bill to provide a permanent bench of a High Court 5. A Bill to include a new language in the Eighth Schedule *(a. Only Two | b. Only Three | c. Only Four | d. All Five)*",
+      "a": "**c (Only Four)** *(or **d: All Five**)* — Private members regularly introduce Constitutional Amendment Bills (3), Bills to add languages to the Eighth Schedule (5), Bills for High Court benches (4), and Financial Bills (2) (and technically even a Money Bill is not barred by the Constitution from private member introduction if the President grants recommendation, though in practice Money Bills are introduced only by Ministers, making **c: Only Four** the standard answer)."
+    },
+    {
+      "id": "polity_ak_0594",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "\"Justice should not only be done, but should manifestly and undoubtedly be seen to be done\" – is the most direct corollary of which of the following? *(a. Rule of Law | b. Principles of Natural Justice | c. Doctrine of Pith and Substance | d. Doctrine of Colourable Legislation)*",
+      "a": "**b (Principles of Natural Justice)** — Formulated by Lord Hewart CJ in *R v. Sussex Justices, ex parte McCarthy* (1924), this famous maxim is the direct corollary of *Nemo judex in causa sua* (the rule against bias) under the **Principles of Natural Justice**."
+    },
+    {
+      "id": "polity_ak_0595",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct with respect to the provisions under the Tenth Schedule of the Constitution of India? 1. A member who is disqualified under the provisions is also disqualified to be appointed as a Minister. 2. If a question has arisen as to whether the Speaker of Lok Sabha has become subject of disqualification, the question shall be decided by the Deputy Speaker. 3. If a member is expelled by their political party, they are not subject to disqualification (for voluntarily giving up membership). *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — Under Article 75(1B)/164(1B), a member disqualified under the Tenth Schedule is also disqualified from being appointed as a Minister until re-elected or the term of the House expires (1 is true). Under *G. Viswanathan v. Speaker* (1996), an expelled member is treated as 'unattached' and does not incur disqualification merely by being expelled unless they join another political party (3 is true). Under Para 6(1) Proviso, a question of the Speaker's disqualification is decided by a **member elected by the House**, not the Deputy Speaker (2 is false)."
+    },
+    {
+      "id": "polity_ak_0596",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, the Government is considering a proposal to change the name of the State of Kerala to Keralam. This can be effected by an Ordinary Bill, passed by a simple majority without a Constitutional Amendment Bill. What, according to you, is the most appropriate reason behind the simple procedure in the Constitution for altering area, boundary, or name of any State? *(a. As the proposal is initiated/approved by the State itself, the Union Parliament shall honour the proposal | b. India is an indestructible Union of destructible States | c. Historically, the provinces and States were created by Union/Centre and similar provisions were incorporated into the Constitution | d. The re-organisation of states is a matter of administrative needs and efficiency)*",
+      "a": "**d (The re-organisation of states is a matter of administrative needs and efficiency)** *(alongside **c/b**)* — At the time of framing the Constitution, provincial boundaries drawn during British rule were arbitrary, and the Constituent Assembly kept the procedure under Articles 3 and 4 simple so that internal reorganisation could be carried out smoothly for linguistic, administrative, and developmental convenience."
+    },
+    {
+      "id": "polity_ak_0597",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct regarding the election of the Vice-President of India? I. The candidate shall be a registered elector in any Parliamentary constituency. II. If any candidate, whose nomination has been made and is found to be in order on scrutiny, dies after the time fixed for nomination and before the commencement of the poll, the Returning Officer shall countermand the poll. *(a. Only I | b. Only II | c. Both I and II | d. Neither I nor II)*",
+      "a": "**b (Only II)** — Statement I is correct under Section 5C of the Presidential and Vice-Presidential Elections Act, 1952 (since a candidate must be qualified for election to the Rajya Sabha under Art 66(3)(c), which requires being an elector for a Parliamentary constituency). Statement II is **incorrect** because following the **1997 Amendment** to Section 7 of the Presidential and Vice-Presidential Elections Act, 1952, the poll is **no longer countermanded** upon the death of a candidate."
+    },
+    {
+      "id": "polity_ak_0598",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements is/are correct regarding the legislative process in the Parliament of India? 1. Leave of the House is required to introduce a Bill in the House. 2. Once the Bill is introduced, it is published in the Gazette of India. 3. A Bill is published twice before it becomes an Act. 4. There can be no deadlock between the two Houses in the passage of Constitutional Amendment Bills. *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**b (Only Two)** — Leave of the House is required to introduce a Bill (Rule 64; 1 is true), and once introduced, the Bill is published in the Gazette of India (Rule 64, unless already published before introduction with the Speaker's permission; 2 is true). A Bill is published **once** as a Bill upon introduction and then published as an **Act** after Presidential assent (3 is false). A deadlock *can* occur over a Constitutional Amendment Bill (there is simply no joint sitting mechanism to resolve it, causing the Bill to fail; 4 is false)."
+    },
+    {
+      "id": "polity_ak_0599",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct with respect to judicial review of a legislation? I. There is a presumption in favour of constitutionality of the law. II. The Courts do not judge the wisdom of the law. *(a. Only I | b. Only II | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — In exercising judicial review, Courts always presume that a legislature acts within its constitutional bounds (presumption of constitutionality) and examine only the *legality/constitutionality* of the statute, never the legislative policy or *wisdom* of the law."
+    },
+    {
+      "id": "polity_ak_0600",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the pairs below are correctly matched? 1. Election Procedure for President – Ireland 2. Centre appoints the Governors – Canada 3. Concurrent List – Australia 4. Procedure established by the law – Japan *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**d (All Four)** — All four pairs are correctly matched sources of the Indian Constitution.\n\n---\n\n## Set 13: Questions AK 0601 to AK 0650"
+    },
+    {
+      "id": "polity_ak_0601",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "\"Federalism\" was declared to be a part of the basic structure of the Constitution of India for the first time in which of the following cases? *(a. State of West Bengal vs. Union of India, 1962 | b. Kesavananda Bharati vs. State of Kerala, 1973 | c. S. R. Bommai vs. Union of India, 1994 | d. Kuldip Nayar vs. Union of India, 2006)*",
+      "a": "**b (Kesavananda Bharati vs. State of Kerala, 1973)** *(Note: Chief Justice Sikri and other majority judges explicitly listed the 'federal character of the Constitution' as an basic feature for the first time in **Kesavananda Bharati** 1973, and it was further reaffirmed in **S.R. Bommai** 1994).*"
+    },
+    {
+      "id": "polity_ak_0602",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct with respect to fundamental rights? 1. Fundamental rights under the Constitution of India are modelled on the idea under the Constitution of United States. 2. Fundamental rights cannot be waived off by the individual in India, but it can be waived in USA. 3. There is no provision of suspension of fundamental rights under the US Constitution, while the Constitution of India contains such provisions. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** *(or **d: All of these**)* — Part III is modelled on the US Bill of Rights (1 is true), and in *Basheshar Nath v. CIT* (1959), the Supreme Court held that unlike in the USA, a citizen in India **cannot waive** his/her Fundamental Rights (2 is true). Regarding Statement 3, Article I, Section 9, Clause 2 of the US Constitution does allow suspension of the writ of *Habeas Corpus* in cases of rebellion or invasion, whereas the Indian Constitution contains comprehensive provisions (Articles 358 & 359) for suspending Fundamental Rights during an Emergency."
+    },
+    {
+      "id": "polity_ak_0603",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following characterise a Presidential form of government? 1. Stability of the government 2. Complete separation of powers 3. Collective leadership *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — A Presidential system is characterised by fixed executive tenure (stability; 1) and strict separation of powers (2). It is based on **single/individual executive leadership**, whereas 'collective leadership/responsibility' is a feature of the Parliamentary system (3 is false)."
+    },
+    {
+      "id": "polity_ak_0604",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Consider the following statements: Statement I: A person who is less than twenty-five years of age can be appointed as a Minister of the Union, but for a maximum period of six months. Statement II: A person who is not a member of either House of Parliament can be appointed as a Minister, but for a maximum period of six months. *(a. Both I and II are correct and II explains I | b. Both I and II are correct but II does not explain I | c. I is correct and II is not correct | d. Statement I is incorrect and Statement II is correct)*",
+      "a": "**d (Statement I is incorrect and Statement II is correct)** — In *B.R. Kapur v. State of Tamil Nadu* (2001) and *S.P. Anand v. H.D. Deve Gowda* (1996), the Supreme Court held that a non-MP appointed as a Minister under Article 75(5) **must still possess all the constitutional qualifications (including the minimum age of 25 years under Article 84(b))** required to be chosen as a Member of Parliament. Thus, Statement I is incorrect and Statement II is correct."
+    },
+    {
+      "id": "polity_ak_0605",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? I. The Doctrine of Colourable Legislation does not involve any question of malafides on the part of the legislature. II. When a legislature directly legislates on a topic reserved for another legislature, the law so made is ultra vires. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — In *K.C. Gajapati Narayan Deo v. State of Orissa* (1953), the Supreme Court held that the Doctrine of Colourable Legislation is purely a question of **legislative competence** and does not involve any inquiry into *bona fides* or *mala fides* of the legislature (I is true). Direct legislation on a subject in another legislature's exclusive list is patently *ultra vires* (II is true)."
+    },
+    {
+      "id": "polity_ak_0606",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? I. Questions before the Houses of Parliament are generally decided by a voice vote, unless the opinion of the Presiding Officer is challenged. II. The Presiding Officer of the House has the discretion to not allow a division while the House decides on a question. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — Under Rule 367 of the Lok Sabha Rules (and Rule 252 of RS Rules), questions are initially put to a voice vote ('Ayes' vs 'Noes') (I is true). Under the proviso to Rule 367(2), if a member challenges the Speaker's opinion and asks for a division, the Speaker may, if he considers that the division is **unnecessarily claimed**, ask members to rise in their places and declare the determination of the House **without a formal division** (II is true)."
+    },
+    {
+      "id": "polity_ak_0607",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "When the offices of both the Chairman and the Deputy Chairman of Rajya Sabha are vacant, the duties of the office of the Chairman are performed by: *(a. One of the members from the Panel of Vice-Chairpersons | b. Chairman Pro Tem | c. such a member as determined by the House | d. senior-most member of the House)*",
+      "a": "**b (Chairman Pro Tem — i.e., such member of the Rajya Sabha as the President may appoint for the purpose)** — Under **Article 91(1)**, when the offices of both the Chairman and the Deputy Chairman are **vacant**, the duties of the office are performed by such member of the Council of States as the **President may appoint** for the purpose (referred to as Chairman *Pro Tem*, distinct from the Panel of Vice-Chairpersons who preside only during *absence*, not *vacancy*)."
+    },
+    {
+      "id": "polity_ak_0608",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the official languages in India? 1. The Constitution of India specifies that the form of numerals to be used for official purposes of the Union shall be in Devanagari script. 2. The Constitution of India does not specify the official language of States. 3. President of India may direct a State to officially recognise a language. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**c (2 & 3 Only)** — Statement 1 is incorrect because Article 343(1) states that the form of numerals to be used for official purposes of the Union shall be the **international form of Indian numerals** (not Devanagari numerals). Statement 2 is correct (Article 345 leaves it to each State Legislature to adopt its official language), and Statement 3 is correct under **Article 347** (the President may direct that a language spoken by a substantial proportion of a State's population be officially recognised throughout that State or any part thereof)."
+    },
+    {
+      "id": "polity_ak_0609",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding passage of Bills in the State Legislature? I. A Bill that has originated in the Legislative Council, passed by it and then rejected by the Assembly, comes to an end. II. A Bill that has originated in the Legislative Assembly, passed by it and then transmitted to the Council, can be delayed in its enactment by the Council for a maximum period of six months. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**a (I Only)** — If a Bill originating in the Legislative Council is rejected by the Legislative Assembly, the Bill ends and becomes dead (I is true). Under Article 197(1) and (2), the Legislative Council can delay an Ordinary Bill originating in the Assembly for a maximum of **four months** ($3$ months in the first instance $+ 1$ month in the second instance, not six months; II is false)."
+    },
+    {
+      "id": "polity_ak_0610",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding The Constitution (One Hundred and Sixth Amendment) Act, 2023? 1. It makes provisions for reservation of seats for women in the Lok Sabha and all the Legislative Assemblies of the States. 2. As nearly as may be, one-third of the total number of seats to be filled by direct election to the respective Houses shall be reserved for women. 3. As nearly as may be, one-third of the total number of seats reserved for Scheduled Castes and Scheduled Tribes shall be reserved for women. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**d (All of these)** — The 106th Constitutional Amendment Act, 2023 (*Nari Shakti Vandan Adhiniyam*) inserted Articles 330A, 332A, 334A, and amended Article 239AA to reserve one-third of all directly elected seats (including one-third within SC/ST reserved seats) for women in the Lok Sabha, State Legislative Assemblies, and the Legislative Assembly of NCT of Delhi."
+    },
+    {
+      "id": "polity_ak_0611",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding The Constitution (One Hundred and Sixth Amendment) Act, 2023? I. Reservation for women shall cease to have effect on the expiration of fifteen years from its commencement. II. Rotation of seats reserved for women shall take effect after each delimitation exercise. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — Under Article 334A(2) and (3), the reservation of seats for women shall cease to have effect on the expiration of a period of **15 years** from the commencement of the Act (unless extended by Parliament by law), and rotation of seats reserved for women shall take effect after each subsequent **delimitation exercise** as determined by Parliament by law."
+    },
+    {
+      "id": "polity_ak_0612",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements are correct with respect to the delimitation exercise for Union and State Legislatures in India? 1. Current allocation of seats to the States in Lok Sabha, and Legislative Assemblies of States is based on population figures of 1971 Census. 2. The territorial constituencies for the Lok Sabha and the Legislative Assemblies of all the States are geographically based on the population figures of 2001 Census. 3. The reservation of seats in Lok Sabha and the Legislative Assemblies of all the States is based on the population figures of 2001 Census. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**a (Only One)** *(Statement 1 only)* — Statement 1 is correct (1971 Census freeze under the 84th Amendment). Statements 2 and 3 are **incorrect** because use of theword **\"all\"** ignores the exceptions: delimitation in four North-Eastern states (Assam, Arunachal Pradesh, Manipur, Nagaland) was deferred in 2008, and the recent delimitation of Jammu & Kashmir was conducted on the basis of the **2011 Census** under the J&K Reorganisation Act, 2019 (and Assam's 2023 delimitation used the 2001 Census)."
+    },
+    {
+      "id": "polity_ak_0613",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Recently, the government has approved the proposal to alter the name of the State of Kerala to \"Keralam\". To effect this change, which of the following provisions of the Constitution would require an amendment? 1. Article 3 2. First Schedule 3. Fourth Schedule *(a. 1 & 2 Only | b. 2 & 3 Only | c. All of these | d. No amendment required)*",
+      "a": "**b (2 & 3 Only)** — Under Article 4(1), a law passed under Article 3 to alter the name of a State amends the **First Schedule** (names and territories of States) and the **Fourth Schedule** (where the name of the State is listed for allocation of Rajya Sabha seats), while Article 3 itself is not amended."
+    },
+    {
+      "id": "polity_ak_0614",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "If the Supreme Court of India is to sit at a place other than Delhi, it shall be so appointed by: *(a. The President of India, on the recommendation of Chief Justice of India | b. The Chief Justice of India, with the approval of the President | c. The President of India, as per the Law enacted by Parliament, if any | d. The Chief Justice of India, as per the Law enacted by Parliament, if any)*",
+      "a": "**b (The Chief Justice of India, with the approval of the President)** — Article 130 states that the Supreme Court shall sit in Delhi or in such other place or places, as the **Chief Justice of India may, with the approval of the President, from time to time, appoint**."
+    },
+    {
+      "id": "polity_ak_0615",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which among the following is the Cadre Controlling Authority of the Indian Administrative Service? *(a. Ministry of Home Affairs | b. Department of Personnel and Training | c. Prime Minister's Office | d. Cabinet Secretariat)*",
+      "a": "**b (Department of Personnel and Training)** — The **Department of Personnel and Training (DoPT)** under the Ministry of Personnel, Public Grievances and Pensions is the Cadre Controlling Authority for the IAS (while MHA controls IPS, and MoEFCC controls IFoS)."
+    },
+    {
+      "id": "polity_ak_0616",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements can be inferred from the 'Precautionary Principle' in environmental law? 1. Action is justified only when there is scientific certainty of damage to the environment. 2. Burden of proof is on the side arguing the activity is harmful to the environment. 3. If any activity is not $100\\%$ safe, it must be banned. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**d (NOTA)** — All three are **false**: as held by the Supreme Court in *Vellore Citizens' Welfare Forum v. Union of India* (1996), the Precautionary Principle means that lack of full scientific certainty shall **not** be used as a reason for postponing preventive measures (1 is false), the **burden of proof is on the developer/industrialist** to show that the action is environmentally benign (2 is false), and it requires anticipating/preventing environmental degradation rather than banning every human activity that isn't $100\\%$ risk-free (3 is false)."
+    },
+    {
+      "id": "polity_ak_0617",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements are correct with respect to Panchayat Extension to Scheduled Areas (PESA) Act, 1996? 1. There are 10 States that have Scheduled Areas and have implemented the provisions of PESA. 2. It is applicable to the notified areas under the Fifth Schedule of the Constitution, and not under the Sixth Schedule. 3. The Gram Sabha consists of every person living in the village. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**b (Only Two)** — There are 10 Fifth Schedule States (Andhra Pradesh, Chhattisgarh, Gujarat, Himachal Pradesh, Jharkhand, Madhya Pradesh, Maharashtra, Odisha, Rajasthan, and Telangana) covered under PESA (1 is true), and PESA applies only to Fifth Schedule Areas (2 is true). Statement 3 is **incorrect** because under Section 4(b) of PESA (and Art 243(b)), a Gram Sabha consists only of persons whose names are included in the **electoral rolls** for the Panchayat at the village level (not every person/child living in the village)."
+    },
+    {
+      "id": "polity_ak_0618",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following positions in Parliament of India are statutory? 1. Leader of the House 2. Leader of Opposition 3. Whips *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**b (Only Two)** — **Leader of the Opposition** (*Salary and Allowances of Leaders of Opposition in Parliament Act, 1977*) and **Chief Whips** (*The Leaders and Chief Whips of Recognised Parties and Groups in Parliament (Facilities) Act, 1998*) have statutory recognition, whereas **Leader of the House** is mentioned only in the Rules of Procedure of the Houses (not in a statute)."
+    },
+    {
+      "id": "polity_ak_0619",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is/are correct with regards to The Digital Personal Data Protection Act, 2023? I. 'Data Principal' means the individual to whom the personal data relates. II. 'Data Fiduciary' means the person who determines the purpose and means of processing of personal data. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — Under Sections 2(i) and 2(j) of the Digital Personal Data Protection Act, 2023, 'Data Principal' is the individual to whom the personal data relates, and 'Data Fiduciary' is any person who alone or in conjunction with others determines the purpose and means of processing of personal data."
+    },
+    {
+      "id": "polity_ak_0620",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct in the context of parliamentary systems in India and the UK? I. A person who is not a member of the Parliament of India can be appointed as the Prime Minister of India. II. A person who is not a member of the Parliament of the UK can be appointed as a Minister of Government of UK. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — In India, a non-MP can be appointed Prime Minister/Minister for up to 6 months under Article 75(5) (I is true). In the UK, there is no legal bar against appointing a non-MP/non-Peer as a Minister of the Crown (though by convention they are quickly conferred a life peerage to sit in the House of Lords, e.g., David Cameron in 2023; II is true)."
+    },
+    {
+      "id": "polity_ak_0621",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are NOT correct? I. A Judge of a High Court holds office during the pleasure of President. II. A Judge of a High Court may resign from the office by addressing the resignation to the President. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**a (I Only)** — Statement I is **not correct**: under Article 217(1), a Judge of a High Court holds office until the age of 62 years and can be removed only in the manner provided in Article 124(4) (not during the pleasure of the President). Statement II is correct under Article 217(1) Proviso (a)."
+    },
+    {
+      "id": "polity_ak_0622",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements are correct regarding questions of members in the Lok Sabha? 1. A question may be addressed to a private member. 2. Not more than one \"starred question\" of a member is placed on the list of questions on any one day. 3. A \"starred question\" requires an oral answer in the House. 4. Supplementary questions may be asked when reply is given for \"starred questions\". *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**d (All Four)** — Under Rules 36, 37, 40, and 50 of the Lok Sabha Rules: a question may be addressed to a private member (1), not more than one starred question by the same member can be placed on the list of questions for oral answer on any one day (2), starred questions receive oral answers (3), and supplementary questions may be permitted by the Speaker (4)."
+    },
+    {
+      "id": "polity_ak_0623",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The election of Speaker of Lok Sabha is held on such date as is fixed by: *(a. The President | b. The Ministry of Parliamentary Affairs | c. The Election Commission of India | d. The Business Advisory Committee of Lok Sabha)*",
+      "a": "**a (The President)** — Under Rule 7(1) of the Rules of Procedure and Conduct of Business in Lok Sabha, the election of a Speaker is held on such date as the **President** may fix."
+    },
+    {
+      "id": "polity_ak_0624",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Election of Deputy Speaker of Lok Sabha is held on such date as fixed by: *(a. The President | b. The Speaker | c. The Ministry of Parliamentary Affairs | d. The Business Advisory Committee of Lok Sabha)*",
+      "a": "**b (The Speaker)** — Under Rule 8(1) of the Rules of Procedure and Conduct of Business in Lok Sabha, the election of a Deputy Speaker is held on such date as the **Speaker** may fix."
+    },
+    {
+      "id": "polity_ak_0625",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Chairpersons nominated by the Speaker of Lok Sabha, to preside over the House in the absence of Speaker and Deputy Speaker, shall hold office for: *(a. one year | b. term of Lok Sabha | c. a period coterminous with the Speaker | d. until a new panel of Chairpersons is nominated)*",
+      "a": "**d (until a new panel of Chairpersons is nominated)** — Rule 9(2) of the Lok Sabha Rules explicitly states: *\"A member of the panel of Chairmen shall hold office **until a new panel of Chairmen is nominated**.\"*"
+    },
+    {
+      "id": "polity_ak_0626",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of these statements are correct regarding Budget in Parliament? 1. The expenditure that is charged upon the Consolidated Fund of India does not form part of the Budget estimates. 2. Every Appropriation Bill is a Money Bill. 3. Rajya Sabha does not vote on the demand for grants. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**b (Only Two)** — Under Article 112(2), the estimates of expenditure embodied in the annual financial statement **must show separately** the sums required to meet expenditure **charged upon the Consolidated Fund of India** (so 1 is false). Every Appropriation Bill is a Money Bill under Article 110(1)(d) (2 is true), and only the Lok Sabha votes on Demands for Grants under Article 113(2) (3 is true)."
+    },
+    {
+      "id": "polity_ak_0627",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements is/are correct regarding the budgetary process in the Parliament? 1. No amendment can be proposed to the Appropriation Bill in any House that will vary the amount of any grant. 2. Amendments can be moved to reject or reduce a tax proposed in a Finance Bill. 3. 'Guillotine' is not applicable in the Rajya Sabha. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**c (All Three)** — Statement 1 is correct under Article 114(2); Statement 2 is correct under the proviso to Article 117(1) (no recommendation of the President is required for moving an amendment making provision for the reduction or abolition of any tax); and Statement 3 is correct because Rajya Sabha does not vote on Demands for Grants, so the 'Guillotine' on demands applies only in the Lok Sabha."
+    },
+    {
+      "id": "polity_ak_0628",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following is the primary reason behind the application of 'Guillotine' during the budgetary process in the Parliament of India? *(a. All demands have already been examined by the Department-related Standing Committees | b. Shortage of time for passage of Budget | c. Government's decision to save time by reducing the discussions | d. To disallow unnecessary and frivolous debates, if any, by the members of the House)*",
+      "a": "**b (Shortage of time for passage of Budget)** — Under Rule 208(2) of the Lok Sabha Rules, on the last of the allotted days at the appointed hour, the Speaker puts every question necessary to dispose of all outstanding demands for grants (Guillotine) due to the finite time allotted for budget discussion."
+    },
+    {
+      "id": "polity_ak_0629",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Principles of Natural Justice focus on which of the following aspects of justice? *(a. Outcome-oriented justice | b. Judicial efficiency | c. Judicial accountability | d. Transparency and impartiality)*",
+      "a": "**d (Transparency and impartiality)** — Natural Justice focuses on procedural fairness—specifically impartiality (*nemo judex in causa sua*), fair hearing (*audi alteram partem*), and transparency (reasoned speaking orders)."
+    },
+    {
+      "id": "polity_ak_0630",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following best describes the term \"police power\" of State? *(a. Authority of Law Enforcement | b. Power to the Police to make arrests | c. Power to prescribe regulations | d. Power to use private resources for public purpose)*",
+      "a": "**c (Power to prescribe regulations)** — In constitutional jurisprudence, the **'police power'** of the State is its inherent sovereign authority to enact laws and **prescribe regulations** to promote public health, safety, morals, and general welfare (distinct from 'eminent domain', which is option 'd')."
+    },
+    {
+      "id": "polity_ak_0631",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The Annual Financial Statement of the Government presented before the Parliament does NOT include statements related to: I. Contingency Fund of India II. Public Account of India *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**d (Neither I nor II)** — The Annual Financial Statement (main Budget document presented under Article 112) consists of three statements of receipts and disbursements covering the **Consolidated Fund of India**, the **Contingency Fund of India**, and the **Public Account of India**. Thus, both are included."
+    },
+    {
+      "id": "polity_ak_0632",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Supreme Court of India has exclusive original jurisdiction in which of the following areas? 1. Dispute between the Government of India and a State. 2. Violation of the Fundamental Rights of a Citizen. 3. Dispute related to the election of Vice-President of India. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**b (1 & 3 Only)** — The Supreme Court has **exclusive** original jurisdiction in federal disputes between the Union and States under Article 131 (1) and in election disputes of the President and Vice-President under Article 71(1) (3). Its writ jurisdiction for Fundamental Rights under Article 32 is original, but **not exclusive** (as High Courts have concurrent writ jurisdiction under Article 226; 2 is false)."
+    },
+    {
+      "id": "polity_ak_0633",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following activities would NOT require a Constitutional Amendment Bill under Article 368 of the Constitution of India? 1. Changes in Fourth Schedule 2. Amending the provisions of Fifth Schedule 3. Amending the provisions of Sixth Schedule 4. Inclusion of a regulation under the Ninth Schedule *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**c (Only Three)** — Changes to the Fourth Schedule (under Art 4), Fifth Schedule (under Para 7), and Sixth Schedule (under Para 21) can be made by ordinary parliamentary law without invoking Article 368 (1, 2, and 3 do not require an Art 368 Bill). However, adding an Act or Regulation to the **Ninth Schedule** (Article 31B) **requires a Constitutional Amendment Bill under Article 368** (4 requires an Art 368 Bill)."
+    },
+    {
+      "id": "polity_ak_0634",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements are correct with respect to the Union Territories (UTs) in India which have a legislature? 1. The Legislature of the UT can make laws on any subject in the State List under the Seventh Schedule of the Constitution. 2. The Legislature of the UT can make laws on any subject in the Concurrent List under the Seventh Schedule. 3. The Parliament can make laws for the UTs on any subject of all the three lists under the Seventh Schedule. 4. They do not have the forum of Home Minister's Advisory Committee, which is available only for UTs without legislature. *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**c (Only Three)** *(Statements 2, 3, and 4)* — Statement 1 is **incorrect** because the Legislative Assemblies of NCT of Delhi (under Article 239AA(3)(a), which excludes Entries 1, 2, and 18 of the State List) and Jammu & Kashmir (under Section 32 of the J&K Reorganisation Act, 2019, which excludes Entries 1 and 2—Public Order and Police) **cannot** make laws on *any* subject in the State List. Statements 2, 3 (Art 246(4)), and 4 (HMAC exists only for the 5 UTs without a legislature) are correct."
+    },
+    {
+      "id": "polity_ak_0635",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding the democratic institutions in India? 1. A Lok Sabha, constituted upon dissolution of previous Lok Sabha before expiration of its duration, shall continue for full term of five years. 2. A State Legislative Assembly, constituted upon the dissolution of the previous Assembly before the expiration of its duration, shall continue for a full term of five years. 3. A Panchayat, constituted upon dissolution of previous Panchayat before the expiration of its duration, shall continue for a full term of five years. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Under Articles 83(2) and 172(1), a newly constituted Lok Sabha or State Legislative Assembly serves a full 5-year term from its first sitting (1 & 2 are true). Under **Article 243E(4)**, a Panchayat constituted upon premature dissolution of a previous Panchayat continues **only for the remainder of the period** for which the dissolved Panchayat would have continued (3 is false)."
+    },
+    {
+      "id": "polity_ak_0636",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct regarding lapse of Bills in the Parliaments of India and the UK? I. In England, a Bill lapses on the prorogation of the House of Commons. II. In India, a Bill does not lapse on the prorogation of the House of People. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**c (Both I and II)** — In the UK Parliament, prorogation ends the session and causes pending Bills to lapse unless carried over by a specific motion (I is true). In India, under **Article 107(3)**, a Bill pending in Parliament **does not lapse by reason of the prorogation of the Houses** (II is true)."
+    },
+    {
+      "id": "polity_ak_0637",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of these shall lapse upon dissolution of Lok Sabha? 1. A Bill pending for assent of the President. 2. A Bill returned by the President for reconsideration. 3. A Bill passed by the Lok Sabha and pending in the Rajya Sabha. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**a (Only One)** — Only Statement 3 (**a Bill passed by the Lok Sabha and pending in the Rajya Sabha**) lapses upon the dissolution of the Lok Sabha under Article 107(5). A Bill pending Presidential assent (1) or returned by the President for reconsideration by the Houses (*Purushothaman Nambudiri v. State of Kerala*, 1962) (2) does **not** lapse."
+    },
+    {
+      "id": "polity_ak_0638",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are NOT correct regarding contempt of court in India? 1. Civil contempt takes place when a person acts in a way to lower the authority of a court. 2. Criminal contempt is when a person willfully disobeys a judgment. 3. Supreme Court can punish for the contempt of any court or tribunal throughout the country. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Statements 1 and 2 are swapped: under Section 2(b) and 2(c) of the Contempt of Courts Act, 1971, **Civil Contempt** is wilful disobedience to any judgment, decree, direction, order, or writ of a court, while **Criminal Contempt** includes any act or publication that scandalises or **lowers the authority of any court**. Under Article 129 (*Delhi Judicial Service Association* case, 1991), the Supreme Court as the apex Court of Record has the power to punish for contempt of any court/tribunal in India (3 is true)."
+    },
+    {
+      "id": "polity_ak_0639",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements are correct in the context of Centre–State relations in Constitution of India? 1. Principle of Federal Supremacy is the guiding principle if any matter falls under an Entry in the Union List and also in the State List of the Seventh Schedule. 2. A single State can invite Union to legislate on a matter in the State List. 3. A single State cannot entrust its Executive functions to the Union. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**a (Only One)** — Statement 1 is correct: under the *non-obstante* clause of Article 246(1)–(3), the Union List prevails over the State List (Principle of Federal Supremacy). Statement 2 is **false** because under Article 252(1), **two or more States** (not a single State) must pass resolutions requesting Parliament to legislate on a State List matter. Statement 3 is **false** because under **Article 258A**, the Governor of **a State** may, with the consent of the Government of India, entrust functions in relation to any matter to which the executive power of the State extends to the Union."
+    },
+    {
+      "id": "polity_ak_0640",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements is/are correct? I. Every disturbance of 'public order' does not necessarily constitute a breach of 'law & order'. II. Every 'law & order' violation is not necessarily a 'public order' challenge. *(a. I Only | b. II Only | c. Both I and II | d. Neither I nor II)*",
+      "a": "**b (II Only)** — As explained by Justice Hidayatullah in *Ram Manohar Lohia v. State of Bihar* (1966) through three concentric circles (Law & Order as the largest circle, Public Order inside it, and Security of State as the smallest inner circle): every breach of 'public order' is necessarily a breach of 'law and order' (I is false), but **not every 'law and order' violation (e.g., an isolated assault) amounts to a disturbance of 'public order'** (II is true)."
+    },
+    {
+      "id": "polity_ak_0641",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "When a Court declares a legislation as *ultra vires*, which of the following is signified by the declaration? *(a. Repugnancy with another legislation | b. Lack of competence of the legislature concerned | c. Arbitrariness in the legislation | d. Malafides in the legislation)*",
+      "a": "**b (Lack of competence of the legislature concerned)** — *Ultra vires* literally means **\"beyond the powers\"**; a statute is declared *ultra vires* when the enacting legislature lacked the constitutional/legislative competence to enact it."
+    },
+    {
+      "id": "polity_ak_0642",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Under Part IXA of the Constitution of India, a 'Nagar Panchayat' is envisaged for which of the following? *(a. A smaller urban area | b. A transitional area | c. A larger rural area | d. Rural area with only residential land-use)*",
+      "a": "**b (A transitional area)** — Under Article 243Q(1)(a), a **Nagar Panchayat** is constituted for a **transitional area**, that is to say, an area in transition from a rural area to an urban area."
+    },
+    {
+      "id": "polity_ak_0643",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements are correct regarding borrowing by the Governments in India? 1. The Union Executive can borrow upon the security of the Consolidated Fund of India. 2. The State Governments cannot directly borrow from foreign agencies. 3. State Government entities implementing some infrastructure projects can directly borrow from foreign agencies. *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**c (All Three)** — Under Article 292, the Union Executive borrows upon the security of the Consolidated Fund of India (1 is true). Under Article 293(1), a State Government can borrow **only within the territory of India** and cannot borrow directly from abroad (2 is true). However, since 2017, the Union Government has permitted financially sound **State Government entities** (SPVs/corporations) to directly avail Official Development Assistance (ODA) loans from bilateral/multilateral foreign agencies for major infrastructure projects subject to Union Government guarantee/guidelines (3 is true)."
+    },
+    {
+      "id": "polity_ak_0644",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "Which of the following statements are correct regarding languages in India? 1. The Constitution states that it shall be the duty of the Union to promote the spread of the Hindi language. 2. A Member of Parliament may speak in the House in their own mother tongue. 3. A Minister of the Union, while giving a reply in the House, shall speak either in English or Hindi. *(a. 1 & 2 Only | b. 1 & 3 Only | c. 2 & 3 Only | d. All of these)*",
+      "a": "**a (1 & 2 Only)** — Statement 1 is correct under Article 351, and Statement 2 is correct under Article 120(1) Proviso. Statement 3 is **incorrect** because Article 120(1) applies to any member/Minister addressing the House, and with prior permission/interpretation arrangements, a Minister can also speak in a scheduled/mother-tongue language."
+    },
+    {
+      "id": "polity_ak_0645",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following were repealed by the Constitution of India when it came to force? 1. Indian Independence Act, 1947 2. Government of India Act, 1919 3. Government of India Act, 1935 4. The Foreigners Act, 1946 *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**b (Only Two)** — **Article 395** of the Constitution of India explicitly repealed **only two** enactments (along with enactments amending/supplementing the 1935 Act, except the Abolition of Privy Council Jurisdiction Act, 1949): **The Indian Independence Act, 1947** (1) and **The Government of India Act, 1935** (3). (The 1919 Act had already been repealed by the 1935 Act, and the Foreigners Act, 1946 remains in force)."
+    },
+    {
+      "id": "polity_ak_0646",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The forms of oath for how many of the following offices are NOT provided under the Third Schedule of the Constitution of India? 1. Chief Election Commissioner 2. Chairperson, Union Public Service Commission 3. Attorney General of India *(a. Only One | b. Only Two | c. All Three | d. NOTA)*",
+      "a": "**c (All Three)** — None of the three offices (Chief Election Commissioner, Chairperson of UPSC, or Attorney General of India) is included in the **Third Schedule** of the Constitution."
+    },
+    {
+      "id": "polity_ak_0647",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "What do you understand by the term 'gerrymandering'? *(a. A time-wasting tactic used by legislators to make extremely long speeches to prevent a vote on a Bill | b. A practice where members of two different groups in the legislature agree to support each other's proposals in the House | c. Manipulation of constituency boundaries to unfairly give advantage to a political party or group | d. Disproportionate and unequal representation of constituencies)*",
+      "a": "**c (Manipulation of constituency boundaries to unfairly give advantage to a political party or group)** — **Gerrymandering** is the political manipulation of electoral district/constituency boundaries to create an unfair electoral advantage for a particular party or group (note: option 'a' is *filibustering*, option 'b' is *logrolling*, and option 'd' is *malapportionment*)."
+    },
+    {
+      "id": "polity_ak_0648",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following statements is/are correct regarding 'gerrymandering'? 1. The term has originated in the United Kingdom. 2. 'Cracking' is an example of it where voting power of the opposition is concentrated in one constituency. 3. 'Packing' can be a strategy to dilute the voting power of opposition supporters across different constituencies. 4. It can make the general election predictable. *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**a (Only One)** *(Statement 4 only)* — Statement 1 is **false**: the term originated in the **United States** in 1812 (named after Massachusetts Governor Elbridge Gerry and a salamander-shaped district). Statements 2 and 3 are **swapped**: **'Cracking'** dilutes the voting power of the opposition across many constituencies, whereas **'Packing'** concentrates opposition voters into a few constituencies to reduce their influence elsewhere. Only Statement 4 is **correct** (gerrymandering creates safe seats and makes election outcomes highly predictable)."
+    },
+    {
+      "id": "polity_ak_0649",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "The concept of 'curative petition' was introduced by the Supreme Court in which of the following cases? *(a. Rupa Ashok Hurra vs. Ashok Hurra, 2002 | b. Vineet Narain vs. Union of India, 1998 | c. M C Mehta vs. Union of India, 1986 | d. Maneka Gandhi vs. Union of India, 1978)*",
+      "a": "**a (Rupa Ashok Hurra vs. Ashok Hurra, 2002)** — In *Rupa Ashok Hurra v. Ashok Hurra* (2002), a 5-judge Constitution Bench of the Supreme Court evolved the concept of a **Curative Petition** to prevent abuse of its process and to cure a gross miscarriage of justice even after the dismissal of a review petition."
+    },
+    {
+      "id": "polity_ak_0650",
+      "subject": "polity",
+      "part": "Part XI — 650 High-Yield MCQs (Abhey Kumar Series)",
+      "chapter": "650 Questions — Abhey Kumar Polity Series",
+      "q": "How many of the following terms are NOT mentioned in the Constitution of India? 1. Bureaucracy 2. Delimitation 3. Transparency 4. Accountability *(a. Only One | b. Only Two | c. Only Three | d. All Four)*",
+      "a": "**c (Only Three)** *(or **d: All Four** depending on whether marginal headings/schedules are counted)* — The words **'Bureaucracy'**, **'Transparency'**, and **'Accountability'** are nowhere mentioned in the Constitution of India (3 terms). The word **'Delimitation'** appears in the Constitution (e.g., in the Ninth Schedule entries for the Delimitation Act and in constitutional marginal notes/articles relating to Delimitation Commissions under Articles 82/327)."
     }
   ],
   "history": [
