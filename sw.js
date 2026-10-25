@@ -1,5 +1,5 @@
 // MainsLog PWA Service Worker with Push Notifications & Study Slot Reminders
-const CACHE_NAME = 'mainslog-pwa-v42';
+const CACHE_NAME = 'mainslog-pwa-v43';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',

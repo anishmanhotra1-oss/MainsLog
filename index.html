@@ -11212,8 +11212,9 @@ function getPendingItemsToday() {
   }) : [];
   let monthlyPending = isMonthlyBlock ? pool.filter(e => {
     if (isEntryDeleted(e.id)) return false;
-    const d = e.targetDate || e.dateStudied;
-    return !e.monthlyDone;
+    const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+    const mRange = getMonthlyVaultRange(today);
+    return !e.monthlyDone && !!(d && d >= mRange.startStr && d <= mRange.endStr);
   }) : [];
 
   if (!HABITS_LOG[today]) HABITS_LOG[today] = {};
@@ -12051,8 +12052,8 @@ function renderRevisionTab() {
   const monthlyNotice = document.getElementById('monthlyNoticeBox');
   const monthlyEntries = pool.filter(e => {
     if (isEntryDeleted(e.id)) return false;
-    const d = e.targetDate || e.dateStudied;
-    return (d >= monthlyRange.startStr && d <= monthlyRange.endStr) || (!e.monthlyDone && d <= monthlyRange.endStr);
+    const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+    return !!(d && d >= monthlyRange.startStr && d <= monthlyRange.endStr);
   });
   if (listMonthly) {
     listMonthly.innerHTML = "";
@@ -12101,8 +12102,8 @@ function renderRevisionTab() {
   const biMonthlyNotice = document.getElementById('biMonthlyNoticeBox');
   const biMonthlyEntries = pool.filter(e => {
     if (isEntryDeleted(e.id)) return false;
-    const d = e.targetDate || e.dateStudied;
-    return (d >= biMonthlyRange.startStr && d <= biMonthlyRange.endStr) || (!e.biMonthlyDone && d <= biMonthlyRange.endStr);
+    const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+    return !!(d && d >= biMonthlyRange.startStr && d <= biMonthlyRange.endStr);
   });
   if (listBiMonthly) {
     listBiMonthly.innerHTML = "";
@@ -12601,16 +12602,16 @@ window.renderRevisionTierModalList = function(tier) {
     const mRange = getMonthlyVaultRange(today);
     filtered = pool.filter(e => {
       if (isEntryDeleted(e.id)) return false;
-      const d = e.targetDate || e.dateStudied;
-      return (d >= mRange.startStr && d <= mRange.endStr) || (!e.monthlyDone && d <= mRange.endStr);
+      const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+      return !!(d && d >= mRange.startStr && d <= mRange.endStr);
     });
   } else if (tier === 'bimonthly') {
     milestoneKey = 'bimonthly';
     const bRange = getBiMonthlyVaultRange(today);
     filtered = pool.filter(e => {
       if (isEntryDeleted(e.id)) return false;
-      const d = e.targetDate || e.dateStudied;
-      return (d >= bRange.startStr && d <= bRange.endStr) || (!e.biMonthlyDone && d <= bRange.endStr);
+      const d = e.targetDate || e.dateStudied || e.loggedOnDate;
+      return !!(d && d >= bRange.startStr && d <= bRange.endStr);
     });
   } else {
     milestoneKey = 'r0';
