@@ -4187,78 +4187,6 @@
     cursor: pointer;
   }
 
-  /* DAY OFF CONTROLS & BANNERS */
-  .day-off-checklist-btn {
-    background: #F8FAFC;
-    border: 1px solid #CBD5E1;
-    color: #475569;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 20px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    text-decoration: none;
-  }
-  .day-off-checklist-btn:hover {
-    background: #F1F5F9;
-    border-color: #94A3B8;
-    color: #1E293B;
-    transform: translateY(-1px);
-  }
-  .day-off-checklist-btn.active {
-    background: #FEF3C7;
-    border-color: #F59E0B;
-    color: #92400E;
-    font-weight: 800;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
-  }
-  .day-off-banner {
-    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
-    border: 1.5px solid #FCD34D;
-    border-radius: 16px;
-    padding: 14px 18px;
-    margin-bottom: 12px;
-    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-  .day-off-banner-title {
-    font-weight: 800;
-    font-size: 14px;
-    color: #92400E;
-    letter-spacing: -0.2px;
-  }
-  .day-off-banner-sub {
-    font-size: 12px;
-    color: #B45309;
-    margin-top: 2px;
-    line-height: 1.4;
-  }
-  .day-off-banner-btn {
-    background: #FFFFFF;
-    color: #92400E;
-    border: 1.5px solid #F59E0B;
-    border-radius: 10px;
-    padding: 7px 14px;
-    font-size: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-  }
-  .day-off-banner-btn:hover {
-    background: #FEF3C7;
-    transform: translateY(-1px);
-  }
-
   .mob-task-card {
     background: #FFFFFF;
     border: 1px solid var(--border-color);
@@ -8212,9 +8140,6 @@
           <span style="font-size: 18px;">🎯</span>
           <span class="mob-hero-lbl">SANKALP TARGETS &middot; Today's Progress</span>
         </div>
-        <button id="btnHomeDayOff" class="mob-hero-pill" onclick="toggleTodayDayOff()" title="Toggle Day Off for Today">
-          <span id="homeDayOffIcon">🏖️</span> <span id="homeDayOffText">Day Off</span>
-        </button>
       </div>
 
       <div style="display: flex; align-items: flex-end; justify-content: space-between; position: relative; z-index: 2; margin-top: 12px;">
@@ -8259,16 +8184,8 @@
     <!-- TODAY'S TASKS SECTION (MATCHING REFERENCE UI) -->
     <div style="margin-bottom: 24px;">
       <div class="mob-tasks-header">
-        <div class="mob-tasks-title" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-          <span>Today's Execution Checklist</span>
-          <span id="homeDayOffBadge" class="day-off-status-tag" style="display: none; background: #FEF3C7; border: 1px solid #FCD34D; color: #92400E; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 20px; letter-spacing: 0.2px;">🏖️ Day Off</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-          <button id="btnChecklistDayOff" onclick="toggleTodayDayOff()" class="day-off-checklist-btn" title="Toggle Day Off for Today">
-            <span id="checklistDayOffIcon">🏖️</span> <span id="checklistDayOffText">Day Off</span>
-          </button>
-          <span class="mob-tasks-seeall" id="homeTrackerDayBadge" onclick="switchTab('tab-habits')">See All Targets ↗</span>
-        </div>
+        <div class="mob-tasks-title">Today's Execution Checklist</div>
+        <span class="mob-tasks-seeall" id="homeTrackerDayBadge" onclick="switchTab('tab-habits')">See All Targets ↗</span>
       </div>
 
       <div id="homeTrackerList" class="item-list"></div>
@@ -10087,9 +10004,6 @@ function getTaskDetails(day, key, taskObj) {
     subject = text.includes('Paper 2') ? 'Sociology Paper II' : 'Sociology Paper I';
     if (!topic && planEntry) topic = planEntry.sociology;
     if (key === 'pyqsoc' && (!topic || topic === 'undefined')) topic = 'Sociology PYQ Practice';
-  } else if (key === 'rest') {
-    subject = 'Current Affairs';
-    if (!topic || topic === 'undefined') topic = 'Light Revision & Rest';
   } else if (key === 'ca') {
     subject = 'Current Affairs';
     if (!topic || topic === 'undefined') topic = 'Daily Current Affairs';
@@ -10233,110 +10147,6 @@ function getAllPrelimsTargets() {
   return (PRELIMS_TARGETS_V1 || []).filter(t => t && t.id && !isEntryDeleted(t.id));
 }
 
-function isTodayDayOff() {
-  const todayStr = getTodayStr();
-  try {
-    const raw = localStorage.getItem('op300_day_off_overrides');
-    const overrides = raw ? JSON.parse(raw) : {};
-    if (typeof overrides[todayStr] === 'boolean') {
-      return overrides[todayStr];
-    }
-  } catch(e) {}
-  
-  const todayEntry = getTodayTrackerEntry();
-  return !!(todayEntry && todayEntry.isOff);
-}
-
-function toggleTodayDayOff() {
-  const todayStr = getTodayStr();
-  const currentIsOff = isTodayDayOff();
-  const nextState = !currentIsOff;
-
-  try {
-    const raw = localStorage.getItem('op300_day_off_overrides');
-    const overrides = raw ? JSON.parse(raw) : {};
-    overrides[todayStr] = nextState;
-    localStorage.setItem('op300_day_off_overrides', JSON.stringify(overrides));
-  } catch(e) {
-    console.error('Error saving day off override:', e);
-  }
-
-  try {
-    const bc = new BroadcastChannel('anish_op300_broadcast');
-    bc.postMessage({ type: 'DAY_OFF_TOGGLED', date: todayStr, isOff: nextState });
-  } catch(e) {}
-
-  renderHomeTrackerTargets();
-  updateDayOffButtonsUI();
-  showDayOffToast(nextState ? '🏖️ Day Off activated for today! Rest, recharge & light revision.' : '⚡ Resumed full study mode with standard targets.');
-}
-
-function updateDayOffButtonsUI() {
-  const isOff = isTodayDayOff();
-  
-  // 1. Hero top pill button
-  const heroBtn = document.getElementById('btnHomeDayOff');
-  const heroIcon = document.getElementById('homeDayOffIcon');
-  const heroText = document.getElementById('homeDayOffText');
-  if (heroBtn) {
-    if (isOff) {
-      heroBtn.style.background = 'rgba(254, 243, 199, 0.35)';
-      heroBtn.style.borderColor = '#FCD34D';
-      heroBtn.style.color = '#FFFFFF';
-      heroBtn.style.boxShadow = '0 0 14px rgba(245, 158, 11, 0.5)';
-      if (heroIcon) heroIcon.textContent = '🌴';
-      if (heroText) heroText.textContent = 'Day Off: Active ✓';
-    } else {
-      heroBtn.style.background = 'rgba(255, 255, 255, 0.22)';
-      heroBtn.style.borderColor = 'rgba(255, 255, 255, 0.38)';
-      heroBtn.style.color = '#FFFFFF';
-      heroBtn.style.boxShadow = 'none';
-      if (heroIcon) heroIcon.textContent = '🏖️';
-      if (heroText) heroText.textContent = 'Day Off';
-    }
-  }
-
-  // 2. Checklist header button & badge
-  const chkBtn = document.getElementById('btnChecklistDayOff');
-  const chkIcon = document.getElementById('checklistDayOffIcon');
-  const chkText = document.getElementById('checklistDayOffText');
-  const badge = document.getElementById('homeDayOffBadge');
-
-  if (chkBtn) {
-    if (isOff) {
-      chkBtn.classList.add('active');
-      if (chkIcon) chkIcon.textContent = '🌴';
-      if (chkText) chkText.textContent = 'Day Off (Active)';
-    } else {
-      chkBtn.classList.remove('active');
-      if (chkIcon) chkIcon.textContent = '🏖️';
-      if (chkText) chkText.textContent = 'Day Off';
-    }
-  }
-
-  if (badge) {
-    badge.style.display = isOff ? 'inline-flex' : 'none';
-  }
-}
-
-function showDayOffToast(msg) {
-  let toast = document.getElementById('mainslogDayOffToast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'mainslogDayOffToast';
-    toast.style.cssText = 'position:fixed;bottom:84px;left:50%;transform:translateX(-50%);background:#1E293B;color:#FFFFFF;padding:12px 20px;border-radius:24px;font-size:13px;font-weight:700;z-index:99999;box-shadow:0 8px 24px rgba(0,0,0,0.3);opacity:0;transition:opacity 0.3s ease, transform 0.3s ease;pointer-events:none;text-align:center;max-width:90%;border:1px solid rgba(255,255,255,0.15);';
-    document.body.appendChild(toast);
-  }
-  toast.textContent = msg;
-  toast.style.opacity = '1';
-  toast.style.transform = 'translateX(-50%) translateY(0)';
-  if (window._dayOffToastTimer) clearTimeout(window._dayOffToastTimer);
-  window._dayOffToastTimer = setTimeout(() => {
-    toast.style.opacity = '0';
-    toast.style.transform = 'translateX(-50%) translateY(10px)';
-  }, 3000);
-}
-
 function renderHomeTrackerTargets() {
   const container = document.getElementById('homeTrackerList');
   const tabHabitsContainer = document.getElementById('tabHabitsTrackerList');
@@ -10432,7 +10242,6 @@ function renderHomeTrackerTargets() {
 
     if (container) container.innerHTML = html;
     if (tabHabitsContainer) tabHabitsContainer.innerHTML = html;
-    updateDayOffButtonsUI();
     return;
   }
 
@@ -10470,22 +10279,10 @@ function renderHomeTrackerTargets() {
     return;
   }
 
-  const isOffToday = isTodayDayOff();
-  const effectiveEntry = Object.assign({}, todayEntry, { isOff: isOffToday });
-  if (!isOffToday && todayEntry.isOff) {
-    effectiveEntry.gs = "GS Comprehensive Revision & Backlog Catch-up";
-    effectiveEntry.sociology = "Sociology Thinkers & Answer Structure Practice";
-    effectiveEntry.csat = "CSAT Speed Practice & High-Yield Questions";
-  }
-
   const todayIdx = TRACKER_PLAN_DATA.findIndex(p => p.day === todayEntry.day);
-  const tasks = getTodayTrackerTasks(effectiveEntry, todayIdx >= 0 ? todayIdx : 0);
+  const tasks = getTodayTrackerTasks(todayEntry, todayIdx >= 0 ? todayIdx : 0);
 
-  if (dayBadge) {
-    dayBadge.textContent = isOffToday 
-      ? `Day ${todayEntry.day} · Day Off · ${todayEntry.date.split(',')[1] || todayEntry.date}`
-      : `Day ${todayEntry.day} · ${todayEntry.date.split(',')[1] || todayEntry.date}`;
-  }
+  if (dayBadge) dayBadge.textContent = `Day ${todayEntry.day} · ${todayEntry.date.split(',')[1] || todayEntry.date}`;
 
   const dayProg = (TRACKER_PROGRESS[todayEntry.day] && TRACKER_PROGRESS[todayEntry.day].checks) ? TRACKER_PROGRESS[todayEntry.day].checks : {};
   let doneCount = tasks.filter(t => !!dayProg[t.key]).length;
@@ -10516,26 +10313,7 @@ function renderHomeTrackerTargets() {
     }).join('');
   };
 
-  let html = '';
-  if (isOffToday) {
-    html += `
-      <div class="day-off-banner">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <div style="width: 38px; height: 38px; border-radius: 10px; background: #FDE68A; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">
-            🏖️
-          </div>
-          <div>
-            <div class="day-off-banner-title">Day Off Active &middot; Rest &amp; Revision</div>
-            <div class="day-off-banner-sub">GS, Sociology &amp; CSAT study paused. Keep current affairs light and consistent.</div>
-          </div>
-        </div>
-        <button onclick="toggleTodayDayOff()" class="day-off-banner-btn">
-          ⚡ Resume Full Study
-        </button>
-      </div>
-    `;
-  }
-  html += buildItemsHTML();
+  const html = buildItemsHTML();
 
   if (container) container.innerHTML = html;
   if (tabHabitsContainer) tabHabitsContainer.innerHTML = html;
@@ -10556,16 +10334,10 @@ function renderHomeTrackerTargets() {
 
   const domBadgeText = document.getElementById('dominanceStatusBadgeText');
   if (domBadgeText) {
-    if (isOffToday) {
-      if (pct === 100) domBadgeText.textContent = "Rest & Recovery Completed! 🌟";
-      else if (pct > 0) domBadgeText.textContent = "Light Revision in Progress ☕";
-      else domBadgeText.textContent = "Rest & Recovery Day · Light Revision & CA";
-    } else {
-      if (pct === 100) domBadgeText.textContent = "100% Perfect Execution!";
-      else if (pct >= 80) domBadgeText.textContent = "Great Progress! Keep Going";
-      else if (pct >= 40) domBadgeText.textContent = "Hunting Mode Active";
-      else domBadgeText.textContent = "Fight Back & Complete Targets";
-    }
+    if (pct === 100) domBadgeText.textContent = "100% Perfect Execution!";
+    else if (pct >= 80) domBadgeText.textContent = "Great Progress! Keep Going";
+    else if (pct >= 40) domBadgeText.textContent = "Hunting Mode Active";
+    else domBadgeText.textContent = "Fight Back & Complete Targets";
   }
 
   const pctValEl = document.getElementById('homeTrackerPctVal');
@@ -10592,7 +10364,6 @@ function renderHomeTrackerTargets() {
       updateTrackerTaskState(d, k, isChecked, tObj);
     });
   });
-  updateDayOffButtonsUI();
 }
 
 let deferredPwaPrompt = null;
