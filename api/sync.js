@@ -1,6 +1,7 @@
 const CLOUD_SYNC_URL = 'https://api.restful-api.dev/objects/ff808181a067127101a0898aa8da600d';
 
-let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, PRELIMS_TARGETS_V1: [], EB_ENTRIES: [], PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, quizHistory: [], updatedAt: 0 }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
+let memorySyncData = { ENTRIES: [], TRACKER_PROGRESS: {}, HABITS_LOG: {}, CUSTOM_HABITS: [], CONFIG: {}, SCORE_REGISTER: { gs: {}, csat: {} }, PRELIMS_TARGETS_V1: [], EB_ENTRIES: [],
+        deletedEbIds: [], deletedEbIds: [], PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, quizHistory: [], updatedAt: 0 }, deletedScoreIds: [], deletedEntryIds: [], timestamp: 0 };
 
 async function fetchCloudSyncData() {
   try {
@@ -17,6 +18,7 @@ async function fetchCloudSyncData() {
           SCORE_REGISTER: json.data.SCORE_REGISTER || memorySyncData.SCORE_REGISTER,
           PRELIMS_TARGETS_V1: Array.isArray(json.data.PRELIMS_TARGETS_V1) ? json.data.PRELIMS_TARGETS_V1 : memorySyncData.PRELIMS_TARGETS_V1,
           EB_ENTRIES: Array.isArray(json.data.EB_ENTRIES) ? json.data.EB_ENTRIES : (memorySyncData.EB_ENTRIES || []),
+          deletedEbIds: Array.isArray(json.data.deletedEbIds) ? json.data.deletedEbIds : (memorySyncData.deletedEbIds || []),
           PYQ_USER_DATA: json.data.PYQ_USER_DATA || memorySyncData.PYQ_USER_DATA || { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, quizHistory: [], updatedAt: 0 },
           deletedScoreIds: Array.isArray(json.data.deletedScoreIds) ? json.data.deletedScoreIds : memorySyncData.deletedScoreIds,
           deletedEntryIds: Array.isArray(json.data.deletedEntryIds) ? json.data.deletedEntryIds : memorySyncData.deletedEntryIds,
@@ -182,13 +184,14 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
   };
 }
 
-function mergeEbEntries(existing, incoming) {
+function mergeEbEntries(existing, incoming, incomingDeletedIds = [], existingDeletedIds = []) {
+  const delSet = new Set([...(existingDeletedIds || []), ...(incomingDeletedIds || [])]);
   const map = new Map();
   (existing || []).forEach(e => {
-    if (e && e.id) map.set(e.id, e);
+    if (e && e.id && !delSet.has(e.id)) map.set(e.id, e);
   });
   (incoming || []).forEach(e => {
-    if (!e || !e.id) return;
+    if (!e || !e.id || delSet.has(e.id)) return;
     if (!map.has(e.id)) {
       map.set(e.id, e);
     } else {
@@ -198,7 +201,10 @@ function mergeEbEntries(existing, incoming) {
       map.set(e.id, incTime >= oldTime ? { ...old, ...e } : { ...e, ...old });
     }
   });
-  return Array.from(map.values()).sort((a, b) => parseTime(b.created_at || b.updated_at) - parseTime(a.created_at || a.updated_at));
+  return {
+    mergedEbEntries: Array.from(map.values()).sort((a, b) => parseTime(b.created_at || b.updated_at) - parseTime(a.created_at || a.updated_at)),
+    deletedEbIds: Array.from(delSet)
+  };
 }
 
 function mergePyqUserData(existing, incoming) {
@@ -522,7 +528,7 @@ module.exports = async (req, res) => {
       currentData.deletedScoreIds
     );
 
-    const mergedEbEntries = mergeEbEntries(currentData.EB_ENTRIES, body.EB_ENTRIES);
+    const { mergedEbEntries, deletedEbIds: mergedDeletedEbIds } = mergeEbEntries(currentData.EB_ENTRIES, body.EB_ENTRIES, body.deletedEbIds, currentData.deletedEbIds);
     const mergedPyqUserData = mergePyqUserData(currentData.PYQ_USER_DATA, body.PYQ_USER_DATA);
 
     const updatedData = {
@@ -534,6 +540,7 @@ module.exports = async (req, res) => {
       SCORE_REGISTER: mergedScores,
       PRELIMS_TARGETS_V1: mergedPrelimsTargets,
       EB_ENTRIES: mergedEbEntries,
+      deletedEbIds: mergedDeletedEbIds,
       PYQ_USER_DATA: mergedPyqUserData,
       deletedScoreIds: mergedDeletedScoreIds,
       deletedEntryIds: Array.from(delEntrySet),
@@ -553,6 +560,7 @@ module.exports = async (req, res) => {
       SCORE_REGISTER: updatedData.SCORE_REGISTER,
       PRELIMS_TARGETS_V1: updatedData.PRELIMS_TARGETS_V1,
       EB_ENTRIES: updatedData.EB_ENTRIES,
+      deletedEbIds: updatedData.deletedEbIds,
       PYQ_USER_DATA: updatedData.PYQ_USER_DATA,
       deletedScoreIds: updatedData.deletedScoreIds,
       deletedEntryIds: updatedData.deletedEntryIds

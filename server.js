@@ -80,6 +80,7 @@ function readSyncData() {
     PRELIMS_TARGETS_V1: [],
     TRACKER_PROGRESS: {},
     EB_ENTRIES: [],
+    deletedEbIds: [],
     PYQ_USER_DATA: { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 },
     deletedScoreIds: [],
     deletedEntryIds: [],
@@ -94,6 +95,7 @@ function readSyncData() {
     if (!Array.isArray(data.PRELIMS_TARGETS_V1)) data.PRELIMS_TARGETS_V1 = [];
     if (!data.TRACKER_PROGRESS || typeof data.TRACKER_PROGRESS !== 'object') data.TRACKER_PROGRESS = {};
     if (!Array.isArray(data.EB_ENTRIES)) data.EB_ENTRIES = [];
+    if (!Array.isArray(data.deletedEbIds)) data.deletedEbIds = [];
     if (!data.PYQ_USER_DATA || typeof data.PYQ_USER_DATA !== 'object') {
       data.PYQ_USER_DATA = { bookmarks: [], bookmarkMeta: {}, attempted: [], attemptedMeta: {}, answers: {}, updatedAt: 0 };
     }
@@ -290,13 +292,14 @@ function mergeScoreRegister(existingScores, incomingScores, incomingDeletedScore
   };
 }
 
-function mergeEbEntries(existing, incoming) {
+function mergeEbEntries(existing, incoming, incomingDeletedIds = [], existingDeletedIds = []) {
+  const delSet = new Set([...(existingDeletedIds || []), ...(incomingDeletedIds || [])]);
   const map = new Map();
   (existing || []).forEach(e => {
-    if (e && e.id) map.set(e.id, e);
+    if (e && e.id && !delSet.has(e.id)) map.set(e.id, e);
   });
   (incoming || []).forEach(e => {
-    if (!e || !e.id) return;
+    if (!e || !e.id || delSet.has(e.id)) return;
     if (!map.has(e.id)) {
       map.set(e.id, e);
     } else {
@@ -306,7 +309,10 @@ function mergeEbEntries(existing, incoming) {
       map.set(e.id, incTime >= oldTime ? { ...old, ...e } : { ...e, ...old });
     }
   });
-  return Array.from(map.values()).sort((a, b) => parseTime(b.created_at || b.updated_at) - parseTime(a.created_at || a.updated_at));
+  return {
+    mergedEbEntries: Array.from(map.values()).sort((a, b) => parseTime(b.created_at || b.updated_at) - parseTime(a.created_at || a.updated_at)),
+    deletedEbIds: Array.from(delSet)
+  };
 }
 
 function mergePyqUserData(existing, incoming) {
@@ -606,7 +612,7 @@ function mergePyqUserData(existing, incoming) {
         );
         const mergedScores = mergedScoresObj.mergedScores;
         const mergedDeletedScoreIds = mergedScoresObj.deletedScoreIds;
-        const mergedEbEntries = mergeEbEntries(existingData.EB_ENTRIES, body.EB_ENTRIES);
+        const { mergedEbEntries, deletedEbIds: mergedDeletedEbIds } = mergeEbEntries(existingData.EB_ENTRIES, body.EB_ENTRIES, body.deletedEbIds, existingData.deletedEbIds);
         const mergedPyqUserData = mergePyqUserData(existingData.PYQ_USER_DATA, body.PYQ_USER_DATA);
 
         const updated = {
@@ -618,8 +624,10 @@ function mergePyqUserData(existing, incoming) {
           TRACKER_PROGRESS: mergedTrackerProgress,
           SCORE_REGISTER: mergedScores,
           EB_ENTRIES: mergedEbEntries,
+          deletedEbIds: mergedDeletedEbIds,
           PYQ_USER_DATA: mergedPyqUserData,
           deletedScoreIds: mergedDeletedScoreIds,
+          deletedEbIds: mergedDeletedEbIds,
           deletedEntryIds: Array.from(delEntrySet)
         };
         const saved = writeSyncData(updated);

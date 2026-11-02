@@ -15,6 +15,7 @@
 
   /* ─── CONSTANTS ─────────────────────────────────────────── */
   const LS_KEY        = 'EB_ENTRIES_v1';
+  const LS_DEL_KEY    = 'EB_DELETED_IDS_v1';
   const SYNC_URL      = '/api/sync';
   const PARTS         = ['GS1', 'GS2', 'GS3', 'GS4'];
   const TYPES         = ['Example', 'Thinker', 'Case Study'];
@@ -52,6 +53,8 @@
   };
 
   /* ─── STATE ─────────────────────────────────────────────── */
+  let eb_deletedIds = new Set();
+
   let eb_state = {
     entries   : [],          // all eb_entries
     activePart: 'GS1',       // active tab
@@ -150,11 +153,28 @@
 
   /* ─── STORAGE: localStorage ──────────────────────────────── */
 
+  function eb_loadDeletedIds() {
+    try {
+      const raw = localStorage.getItem(LS_DEL_KEY);
+      if (raw) {
+        eb_deletedIds = new Set(JSON.parse(raw));
+      }
+    } catch(e) {}
+  }
+
+  function eb_saveDeletedIds() {
+    try {
+      localStorage.setItem(LS_DEL_KEY, JSON.stringify(Array.from(eb_deletedIds)));
+    } catch(e) {}
+  }
+
   function eb_loadFromLS() {
+    eb_loadDeletedIds();
     try {
       const raw = localStorage.getItem(LS_KEY);
       if (raw) {
-        eb_state.entries = JSON.parse(raw);
+        const parsed = JSON.parse(raw);
+        eb_state.entries = (Array.isArray(parsed) ? parsed : []).filter(e => e && e.id && !eb_deletedIds.has(e.id));
         return true;
       }
     } catch (e) { /* ignore */ }
@@ -172,11 +192,18 @@
 
   /* ─── STORAGE: Cloud sync ────────────────────────────────── */
 
-  function eb_mergeEntries(local, remote) {
+  function eb_mergeEntries(local, remote, remoteDeletedIds = []) {
+    (remoteDeletedIds || []).forEach(id => {
+      if (id) eb_deletedIds.add(id);
+    });
+    eb_saveDeletedIds();
+
     const map = new Map();
-    local.forEach(e => { if (e && e.id) map.set(e.id, e); });
-    remote.forEach(e => {
-      if (!e || !e.id) return;
+    (local || []).forEach(e => {
+      if (e && e.id && !eb_deletedIds.has(e.id)) map.set(e.id, e);
+    });
+    (remote || []).forEach(e => {
+      if (!e || !e.id || eb_deletedIds.has(e.id)) return;
       if (!map.has(e.id)) {
         map.set(e.id, e);
       } else {
@@ -190,18 +217,29 @@
       .sort((a, b) => new Date(b.created_at || b.updated_at || 0) - new Date(a.created_at || a.updated_at || 0));
   }
 
+  function eb_syncFromCloud(remoteEntries, remoteDeletedIds = []) {
+    if (!Array.isArray(remoteEntries) && !Array.isArray(remoteDeletedIds)) return;
+    eb_loadFromLS();
+    const prevStr = JSON.stringify(eb_state.entries);
+    eb_state.entries = eb_mergeEntries(eb_state.entries, remoteEntries || [], remoteDeletedIds || []);
+    const newStr = JSON.stringify(eb_state.entries);
+    if (prevStr !== newStr) {
+      eb_saveToLS();
+      eb_updateHeroStats();
+      const tab = eb_el('tab-examples-bank');
+      if (tab && tab.classList.contains('active')) {
+        eb_renderCurrentPart();
+      }
+    }
+  }
+
   async function eb_pullCloud() {
     try {
       const res = await fetch(SYNC_URL, { method: 'GET' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const data = await res.json();
-      if (data && Array.isArray(data.EB_ENTRIES)) {
-        eb_state.entries = eb_mergeEntries(eb_state.entries, data.EB_ENTRIES);
-        eb_saveToLS();
-        eb_updateHeroStats();
-        if (eb_el('tab-examples-bank') && !eb_el('tab-examples-bank').classList.contains('hidden')) {
-          eb_renderCurrentPart();
-        }
+      if (data && (Array.isArray(data.EB_ENTRIES) || Array.isArray(data.deletedEbIds))) {
+        eb_syncFromCloud(data.EB_ENTRIES, data.deletedEbIds);
       }
     } catch (e) {
       console.warn('[EB] Cloud pull failed:', e);
@@ -213,19 +251,31 @@
       const res = await fetch(SYNC_URL, {
         method : 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body   : JSON.stringify({ EB_ENTRIES: eb_state.entries })
+        body   : JSON.stringify({
+          EB_ENTRIES: eb_state.entries,
+          deletedEbIds: Array.from(eb_deletedIds)
+        })
       });
       if (res.ok) {
         const data = await res.json();
-        if (data && Array.isArray(data.EB_ENTRIES)) {
-          eb_state.entries = eb_mergeEntries(eb_state.entries, data.EB_ENTRIES);
-          eb_saveToLS();
-          eb_updateHeroStats();
+        if (data && (Array.isArray(data.EB_ENTRIES) || Array.isArray(data.deletedEbIds))) {
+          eb_syncFromCloud(data.EB_ENTRIES, data.deletedEbIds);
         }
       }
     } catch (e) {
       console.warn('[EB] Cloud push failed:', e);
     }
+  }
+
+  function eb_notifyBroadcast() {
+    try {
+      if (window.syncChannel && typeof window.syncChannel.postMessage === 'function') {
+        window.syncChannel.postMessage('EB_SYNC_UPDATE');
+      } else {
+        const ch = new BroadcastChannel('mainslog_sync_channel');
+        ch.postMessage('EB_SYNC_UPDATE');
+      }
+    } catch (e) {}
   }
 
   function eb_addExternalEntry(entry) {
@@ -241,6 +291,7 @@
     eb_updateHeroStats();
     eb_pushCloud();
     eb_renderCurrentPart();
+    eb_notifyBroadcast();
     return true;
   }
 
@@ -409,6 +460,7 @@
     eb_clearForm();
     eb_renderCurrentPart();
     eb_pushCloud();
+    eb_notifyBroadcast();
   }
 
   function eb_editEntry(id) {
@@ -443,11 +495,14 @@
     const entry = eb_getEntry(id);
     const label = entry ? `"${entry.title}"` : 'this entry';
     if (!confirm(`Delete ${label}?\nThis action cannot be undone.`)) return;
+    eb_deletedIds.add(id);
+    eb_saveDeletedIds();
     eb_state.entries = eb_state.entries.filter(e => e.id !== id);
     eb_saveToLS();
     eb_showToast('🗑️ Entry deleted');
     eb_renderCurrentPart();
     eb_pushCloud();
+    eb_notifyBroadcast();
   }
 
   function eb_copyEntry(id) {
@@ -970,12 +1025,14 @@ const srcHtml = entry.source
   /* ─── PUBLIC API (attached to window.EBModule) ───────────── */
 
   window.EBModule = {
+    init            : eb_init,
+    syncFromCloud   : eb_syncFromCloud,
+    getDeletedIds   : function() { return Array.from(eb_deletedIds); },
+    render          : eb_renderCurrentPart,
     addExternalEntry: eb_addExternalEntry,
     getEntries      : function() { return eb_state.entries; },
     hasPyqEntry     : function(pyqId) { return eb_state.entries.some(e => e.pyq_id === pyqId); },
-    init            : eb_init,
     switchPart      : eb_switchPart,
-    updateFilter    : eb_updateFilter,
     clearFilters    : eb_clearFilters,
     saveEntry       : eb_saveEntry,
     editEntry       : eb_editEntry,
@@ -1029,6 +1086,20 @@ const srcHtml = entry.source
 
 
   // Auto-sync across devices & tabs
+  try {
+    const syncCh = window.syncChannel || new BroadcastChannel('mainslog_sync_channel');
+    syncCh.addEventListener('message', (e) => {
+      if (e.data === 'EB_SYNC_UPDATE' || e.data === 'SYNC_UPDATE') {
+        eb_loadFromLS();
+        eb_updateHeroStats();
+        const tab = eb_el('tab-examples-bank');
+        if (tab && tab.classList.contains('active')) {
+          eb_renderCurrentPart();
+        }
+      }
+    });
+  } catch (e) {}
+
   window.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       eb_pullCloud();
@@ -1038,11 +1109,14 @@ const srcHtml = entry.source
     eb_pullCloud();
   });
   window.addEventListener('storage', (e) => {
-    if (e.key === LS_KEY && e.newValue) {
+    if ((e.key === LS_KEY || e.key === LS_DEL_KEY) && e.newValue) {
       try {
-        eb_state.entries = JSON.parse(e.newValue);
+        eb_loadFromLS();
         eb_updateHeroStats();
-        eb_renderCurrentPart();
+        const tab = eb_el('tab-examples-bank');
+        if (tab && tab.classList.contains('active')) {
+          eb_renderCurrentPart();
+        }
       } catch (err) {}
     }
   });
@@ -1050,6 +1124,21 @@ const srcHtml = entry.source
     if (document.visibilityState === 'visible') {
       eb_pullCloud();
     }
-  }, 45000);
+  }, 15000);
+
+  // Initialize immediately on load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!eb_initialized) {
+        eb_initialized = true;
+        eb_init();
+      }
+    });
+  } else {
+    if (!eb_initialized) {
+      eb_initialized = true;
+      eb_init();
+    }
+  }
 
 })();

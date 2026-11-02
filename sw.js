@@ -218,16 +218,20 @@ self.addEventListener('message', (event) => {
 // BACKGROUND PERIODIC SYNC STUDY REMINDERS
 // ==========================================
 const TIMETABLE_SLOTS_SW = [
-  { start: "07:00", end: "08:00", title: "Wake Up & Morning Prep", timeDisplay: "7:00 AM – 8:00 AM", desc: "Hydration, morning exercise and mental preparation." },
-  { start: "08:00", end: "09:30", title: "CSAT Practice", timeDisplay: "8:00 AM – 9:30 AM", desc: "Quantitative aptitude, reasoning and comprehension practice." },
-  { start: "09:30", end: "12:30", title: "GS Mains Study Block 1", timeDisplay: "9:30 AM – 12:30 PM", desc: "Core static syllabus conceptual depth and topic notes." },
-  { start: "12:30", end: "13:30", title: "GS Mains Study Block 2", timeDisplay: "12:30 PM – 1:30 PM", desc: "Targeted topic revision and syllabus mapping." },
-  { start: "14:00", end: "15:30", title: "Current Affairs Analysis", timeDisplay: "2:00 PM – 3:30 PM", desc: "The Hindu editorial reading, monthly compilation notes." },
-  { start: "16:30", end: "19:30", title: "Sociology Optional Deep Dive", timeDisplay: "4:30 PM – 7:30 PM", desc: "Sociological thinkers, PYQs and paper 1 & 2 coverage." },
-  { start: "21:00", end: "23:00", title: "GS Answer Writing Practice", timeDisplay: "9:00 PM – 11:00 PM", desc: "Answer writing practice, structure and model solutions." },
-  { start: "23:00", end: "00:30", title: "Skill Building Block", timeDisplay: "11:00 PM – 12:30 AM", desc: "Technical skill development and strategic tools." },
-  { start: "00:30", end: "01:30", title: "Sociology PYQ & Revision", timeDisplay: "12:30 AM – 1:30 AM", desc: "Concept recap, thinker quotes and previous questions." },
-  { start: "01:30", end: "02:30", title: "Same-Day R0 Review", timeDisplay: "1:30 AM – 2:30 AM", desc: "Complete active recall of all topics studied today." }
+  { start: "07:00", end: "07:30", title: "Wake up & get ready", timeDisplay: "7:00 AM – 7:30 AM", desc: "Wake up, hygiene, hydration and morning prep." },
+  { start: "07:30", end: "08:00", title: "Unique VA", timeDisplay: "7:30 AM – 8:00 AM", desc: "Unique Value Addition note consolidation and thinker quotes." },
+  { start: "08:00", end: "09:30", title: "CSAT", timeDisplay: "8:00 AM – 9:30 AM", desc: "Quantitative aptitude, reasoning and comprehension practice." },
+  { start: "09:30", end: "13:45", title: "GS (Mains)", timeDisplay: "9:30 AM – 1:45 PM", desc: "Core static syllabus conceptual depth and topic notes for Mains." },
+  { start: "13:45", end: "14:00", title: "Lunch / Break", timeDisplay: "1:45 PM – 2:00 PM", desc: "Lunch and short mental recharge." },
+  { start: "14:00", end: "15:30", title: "CA (The Hindu + CA VA)", timeDisplay: "2:00 PM – 3:30 PM", desc: "The Hindu editorial reading and Current Affairs Value Addition." },
+  { start: "15:30", end: "16:30", title: "Break / Rest", timeDisplay: "3:30 PM – 4:30 PM", desc: "Afternoon rest, power nap and physical decompression." },
+  { start: "16:30", end: "19:30", title: "GS (Pre)", timeDisplay: "4:30 PM – 7:30 PM", desc: "Prelims GS core focus, high-yield static concepts and standard texts." },
+  { start: "19:30", end: "21:00", title: "Dinner / Break", timeDisplay: "7:30 PM – 9:00 PM", desc: "Dinner, break and relaxation." },
+  { start: "21:00", end: "23:00", title: "Game", timeDisplay: "9:00 PM – 11:00 PM", desc: "Gaming recreation and cognitive unwinding." },
+  { start: "23:00", end: "00:00", title: "PYQs", timeDisplay: "11:00 PM – 12:00 AM", desc: "Previous Year Questions solving and question pattern drills." },
+  { start: "00:00", end: "01:00", title: "Socio / Flashcards", timeDisplay: "12:00 AM – 1:00 AM", desc: "Sociology thinker revision and active recall flashcards." },
+  { start: "01:00", end: "01:30", title: "Revision", timeDisplay: "1:00 AM – 1:30 AM", desc: "End-of-day active recall and recap of today's topics." },
+  { start: "01:30", end: "07:00", title: "Sleep", timeDisplay: "1:30 AM – 7:00 AM", desc: "Recharging sleep for memory consolidation and next day readiness." }
 ];
 
 async function checkBackgroundSlots() {

@@ -2973,10 +2973,131 @@
     box-shadow: 0 0 0 3px var(--bg-main);
   }
 
-  .routine-slot-card.slot-blue { background: #EEF2FF; border-color: #E0E7FF; }
+  .routine-tag-sub {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--brand-blue);
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .routine-meta-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .routine-stats-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .routine-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .routine-stat-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+  }
+  .routine-stat-value {
+    font-size: 17px;
+    font-weight: 800;
+    font-family: var(--font-heading);
+  }
+  .routine-stat-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--border-color);
+  }
+  .routine-legend-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+  .routine-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .legend-dot.dot-blue { background: #3B82F6; box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
+  .legend-dot.dot-green { background: #22C55E; box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2); }
+  .legend-dot.dot-grey { background: #94A3B8; box-shadow: 0 0 0 2px rgba(148, 163, 184, 0.2); }
+
+  .routine-slot-card.slot-blue { background: #EFF6FF; border-color: #BFDBFE; }
+  .routine-slot-card.slot-blue::before { border-color: #3B82F6; }
+  .routine-slot-card.slot-green { background: #F0FDF4; border-color: #BBF7D0; }
+  .routine-slot-card.slot-green::before { border-color: #22C55E; }
+  .routine-slot-card.slot-grey { background: #F8FAFC; border-color: #E2E8F0; }
+  .routine-slot-card.slot-grey::before { border-color: #94A3B8; }
   .routine-slot-card.slot-yellow { background: #FEFCE8; border-color: #FEF08A; }
   .routine-slot-card.slot-mint { background: #F0FDF4; border-color: #BBF7D0; }
   .routine-slot-card.slot-pink { background: #FFF1F2; border-color: #FECDD3; }
+
+  .routine-slot-card.slot-done {
+    opacity: 0.65;
+    background: #F1F5F9 !important;
+    border-color: #CBD5E1 !important;
+  }
+  .routine-slot-card.slot-done .slot-card-title {
+    text-decoration: line-through;
+    color: #64748B;
+  }
+  .slot-duration-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.06);
+    color: #475569;
+    white-space: nowrap;
+  }
+  .slot-done-btn {
+    border: 1.5px solid #CBD5E1;
+    background: #FFFFFF;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s ease;
+  }
+  .slot-done-btn:hover {
+    border-color: #22C55E;
+    color: #16A34A;
+  }
+  .slot-done-btn.done {
+    background: #22C55E;
+    border-color: #16A34A;
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
+  }
 
   .slot-card-header {
     display: flex;
@@ -8316,17 +8437,43 @@
     <div class="routine-container-box">
       <div class="routine-sync-header">
         <div>
-          <div style="font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-            <span>📅 Daily Routine &amp; Schedule</span>
+          <div style="font-family: var(--font-heading); font-size: 22px; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+            <span>📅 Daily Time Table</span>
+            <span class="routine-tag-sub">UPSC CSE Prelims 2027 – Daily Routine</span>
             <span id="routineLiveBadge" class="live-sync-pill">
               <span class="live-pulse-dot"></span> LIVE SYNC
             </span>
           </div>
-          <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+          <div style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">
             Showing timetable for <b id="routineSelectedDateLabel" style="color: var(--brand-blue);">Today</b> &middot; Live Clock: <span id="routineLiveClock" style="font-family: var(--font-mono); font-weight: 700; color: var(--text-primary);">--:--:--</span>
           </div>
         </div>
         <button class="btn btn-outline" id="btnRoutineToday" onclick="resetRoutineToToday()" style="min-height: 36px; padding: 6px 14px; font-size: 11px; border-radius: 20px; width: auto;">⚡ Reset to Today</button>
+      </div>
+
+      <!-- Routine Summary & Legend Bar -->
+      <div class="routine-meta-card">
+        <div class="routine-stats-summary">
+          <div class="routine-stat-item">
+            <span class="routine-stat-label">Total Study Time</span>
+            <span class="routine-stat-value" style="color: #2563EB;">13 hr 15 min</span>
+          </div>
+          <div class="routine-stat-divider"></div>
+          <div class="routine-stat-item">
+            <span class="routine-stat-label">Game</span>
+            <span class="routine-stat-value" style="color: #16A34A;">2 hr</span>
+          </div>
+          <div class="routine-stat-divider"></div>
+          <div class="routine-stat-item">
+            <span class="routine-stat-label">Break / Meals / Sleep</span>
+            <span class="routine-stat-value" style="color: #64748B;">8 hr 45 min</span>
+          </div>
+        </div>
+        <div class="routine-legend-bar">
+          <span class="routine-legend-item"><span class="legend-dot dot-blue"></span> Blue = Study</span>
+          <span class="routine-legend-item"><span class="legend-dot dot-green"></span> Green = Game</span>
+          <span class="routine-legend-item"><span class="legend-dot dot-grey"></span> Grey = Break / Meals</span>
+        </div>
       </div>
 
       <div class="weekly-date-strip" id="weeklyDateStrip"></div>
@@ -10456,9 +10603,14 @@ async function pushToCentralServer(extraData = {}) {
   const scoreState = (window.ScoreRegisterModule && window.ScoreRegisterModule.getState) ? window.ScoreRegisterModule.getState() : {};
   const deletedScoreIds = (window.ScoreRegisterModule && window.ScoreRegisterModule.getDeletedIds) ? window.ScoreRegisterModule.getDeletedIds() : [];
 
+  const ebEntriesList = (window.EBModule && typeof window.EBModule.getEntries === 'function') ? window.EBModule.getEntries() : JSON.parse(localStorage.getItem('EB_ENTRIES_v1') || '[]');
+  const ebDeletedList = (window.EBModule && typeof window.EBModule.getDeletedIds === 'function') ? window.EBModule.getDeletedIds() : JSON.parse(localStorage.getItem('EB_DELETED_IDS_v1') || '[]');
+
   const payload = {
     ENTRIES, PRELIMS_TARGETS_V1, TRACKER_PROGRESS, HABITS_LOG, CUSTOM_HABITS, CONFIG,
     SCORE_REGISTER: scoreState,
+    EB_ENTRIES: ebEntriesList,
+    deletedEbIds: ebDeletedList,
     deletedScoreIds: deletedScoreIds,
     deletedEntryIds: Array.from(deletedEntryIds),
     timestamp: Date.now(),
@@ -10596,6 +10748,9 @@ async function pollCentralServer() {
         if (data.SCORE_REGISTER && window.ScoreRegisterModule && typeof window.ScoreRegisterModule.mergeCloudScores === 'function') {
           window.ScoreRegisterModule.mergeCloudScores(data.SCORE_REGISTER, data.deletedScoreIds);
         }
+        if ((data.EB_ENTRIES || data.deletedEbIds) && window.EBModule && typeof window.EBModule.syncFromCloud === 'function') {
+          window.EBModule.syncFromCloud(data.EB_ENTRIES, data.deletedEbIds);
+        }
         if (data.PRELIMS_TARGETS_V1 && Array.isArray(data.PRELIMS_TARGETS_V1)) {
           const pltMap = new Map();
           (PRELIMS_TARGETS_V1 || []).forEach(t => {
@@ -10668,17 +10823,20 @@ const SUBJECT_COLORS = {
 };
 
 const TIMETABLE_SLOTS = [
-  { start: "07:00", end: "08:00", title: "Wake Up & Morning Prep", timeDisplay: "7:00 AM – 8:00 AM", desc: "Hydration, morning exercise and mental preparation.", colorClass: "slot-pink" },
-  { start: "08:00", end: "09:30", title: "CSAT Practice", timeDisplay: "8:00 AM – 9:30 AM", desc: "Quantitative aptitude, reasoning and comprehension practice.", colorClass: "slot-blue" },
-  { start: "09:30", end: "12:30", title: "GS Mains Study Block 1", timeDisplay: "9:30 AM – 12:30 PM", desc: "Core static syllabus conceptual depth and topic notes.", colorClass: "slot-yellow" },
-  { start: "12:30", end: "13:30", title: "GS Mains Study Block 2", timeDisplay: "12:30 PM – 1:30 PM", desc: "Targeted topic revision and syllabus mapping.", colorClass: "slot-mint" },
-  { start: "14:00", end: "15:30", title: "Current Affairs Analysis", timeDisplay: "2:00 PM – 3:30 PM", desc: "The Hindu editorial reading, monthly compilation notes.", colorClass: "slot-pink" },
-  { start: "16:30", end: "19:30", title: "Sociology Optional Deep Dive", timeDisplay: "4:30 PM – 7:30 PM", desc: "Sociological thinkers, PYQs and paper 1 & 2 coverage.", colorClass: "slot-blue" },
-  { start: "21:00", end: "23:00", title: "GS Answer Writing Practice", timeDisplay: "9:00 PM – 11:00 PM", desc: "Answer writing practice, structure and model solutions.", colorClass: "slot-yellow" },
-  { start: "23:00", end: "00:30", title: "Skill Building Block", timeDisplay: "11:00 PM – 12:30 AM", desc: "Technical skill development and strategic tools.", colorClass: "slot-mint" },
-  { start: "00:30", end: "01:30", title: "Sociology PYQ & Revision", timeDisplay: "12:30 AM – 1:30 AM", desc: "Concept recap, thinker quotes and previous questions.", colorClass: "slot-pink" },
-  { start: "01:30", end: "02:30", title: "Same-Day R0 Review", timeDisplay: "1:30 AM – 2:30 AM", desc: "Complete active recall of all topics studied today.", colorClass: "slot-blue" },
-  { start: "02:30", end: "07:00", title: "Rest & Sleep Block", timeDisplay: "2:30 AM – 7:00 AM", desc: "Recharging sleep for tomorrow's execution.", colorClass: "slot-mint" }
+  { id: "slot_01", start: "07:00", end: "07:30", title: "Wake up & get ready", timeDisplay: "7:00 AM – 7:30 AM", duration: "30 min", desc: "Wake up, hygiene, morning hydration and get ready.", category: "break", colorClass: "slot-grey" },
+  { id: "slot_02", start: "07:30", end: "08:00", title: "Unique VA", timeDisplay: "7:30 AM – 8:00 AM", duration: "30 min", desc: "Unique Value Addition note consolidation and thinker quotes.", category: "study", colorClass: "slot-blue" },
+  { id: "slot_03", start: "08:00", end: "09:30", title: "CSAT", timeDisplay: "8:00 AM – 9:30 AM", duration: "1 hr 30 min", desc: "Quantitative aptitude, reasoning and comprehension practice.", category: "study", colorClass: "slot-blue" },
+  { id: "slot_04", start: "09:30", end: "13:45", title: "GS (Mains)", timeDisplay: "9:30 AM – 1:45 PM", duration: "4 hr 15 min", desc: "Core static syllabus conceptual depth and topic notes for Mains.", category: "study", colorClass: "slot-blue" },
+  { id: "slot_05", start: "13:45", end: "14:00", title: "Lunch / Break", timeDisplay: "1:45 PM – 2:00 PM", duration: "15 min", desc: "Nutritious lunch and brief mental recharge.", category: "break", colorClass: "slot-grey" },
+  { id: "slot_06", start: "14:00", end: "15:30", title: "CA (The Hindu + CA VA)", timeDisplay: "2:00 PM – 3:30 PM", duration: "1 hr 30 min", desc: "The Hindu editorial reading and Current Affairs Value Addition.", category: "study", colorClass: "slot-blue" },
+  { id: "slot_07", start: "15:30", end: "16:30", title: "Break / Rest", timeDisplay: "3:30 PM – 4:30 PM", duration: "1 hr", desc: "Rest, decompression, and afternoon recharge.", category: "break", colorClass: "slot-grey" },
+  { id: "slot_08", start: "16:30", end: "19:30", title: "GS (Pre)", timeDisplay: "4:30 PM – 7:30 PM", duration: "3 hr", desc: "Prelims GS core focus, factual retention, concept mapping and standard books.", category: "study", colorClass: "slot-blue" },
+  { id: "slot_09", start: "19:30", end: "21:00", title: "Dinner / Break", timeDisplay: "7:30 PM – 9:00 PM", duration: "1 hr 30 min", desc: "Healthy dinner, family time, and evening relaxation.", category: "break", colorClass: "slot-grey" },
+  { id: "slot_10", start: "21:00", end: "23:00", title: "Game", timeDisplay: "9:00 PM – 11:00 PM", duration: "2 hr", desc: "Dedicated recreation and gaming downtime for cognitive balance.", category: "game", colorClass: "slot-green" },
+  { id: "slot_11", start: "23:00", end: "00:00", title: "PYQs", timeDisplay: "11:00 PM – 12:00 AM", duration: "1 hr", desc: "Previous Year Questions solving, pattern recognition and option elimination.", category: "study", colorClass: "slot-blue" },
+  { id: "slot_12", start: "00:00", end: "01:00", title: "Socio / Flashcards", timeDisplay: "12:00 AM – 1:00 AM", duration: "1 hr", desc: "Sociology thinker revision and active recall flashcards session.", category: "study", colorClass: "slot-blue" },
+  { id: "slot_13", start: "01:00", end: "01:30", title: "Revision", timeDisplay: "1:00 AM – 1:30 AM", duration: "30 min", desc: "End-of-day active recall and recap of today's study items.", category: "study", colorClass: "slot-blue" },
+  { id: "slot_14", start: "01:30", end: "07:00", title: "Sleep", timeDisplay: "1:30 AM – 7:00 AM", duration: "5 hr 30 min", desc: "Deep restorative sleep for memory consolidation and tomorrow's energy.", category: "break", colorClass: "slot-grey" }
 ];
 
 // ==========================================
@@ -11798,6 +11956,18 @@ function updateLiveClockAndSync() {
   renderTimetable();
 }
 
+window.toggleRoutineSlotDone = function(slotId, dateStr) {
+  const dStr = dateStr || SELECTED_ROUTINE_DATE || getTodayStr();
+  const key = `ROUTINE_DONE_${dStr}_${slotId}`;
+  const curr = localStorage.getItem(key) === 'true';
+  if (curr) {
+    localStorage.removeItem(key);
+  } else {
+    localStorage.setItem(key, 'true');
+  }
+  renderTimetable();
+};
+
 function renderTimetable() {
   const container = document.getElementById('routineTimeline');
   if (!container) return;
@@ -11841,12 +12011,22 @@ function renderTimetable() {
       }
     }
 
+    const isDone = localStorage.getItem(`ROUTINE_DONE_${SELECTED_ROUTINE_DATE}_${slot.id}`) === 'true';
+
     const card = document.createElement('div');
-    card.className = `routine-slot-card ${slot.colorClass} ${isCurrent ? 'active-slot' : ''}`;
+    card.className = `routine-slot-card ${slot.colorClass} ${isCurrent ? 'active-slot' : ''} ${isDone ? 'slot-done' : ''}`;
     card.innerHTML = `
       <div class="slot-card-header">
-        <div class="slot-card-title">${slot.title}</div>
-        <div class="slot-card-time">${slot.timeDisplay}</div>
+        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+          <div class="slot-card-title">${slot.title}</div>
+          <span class="slot-duration-badge">${slot.duration}</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="slot-card-time">${slot.timeDisplay}</div>
+          <button type="button" class="slot-done-btn ${isDone ? 'done' : ''}" onclick="toggleRoutineSlotDone('${slot.id}', '${SELECTED_ROUTINE_DATE}')" title="Toggle Done">
+            ${isDone ? '✓ Done' : '○ Done'}
+          </button>
+        </div>
       </div>
       <div class="slot-card-desc">${slot.desc}</div>
     `;
@@ -12502,6 +12682,15 @@ function switchTab(tabId) {
 
   if (tabId === 'tab-scores' && window.ScoreRegisterModule) {
     window.ScoreRegisterModule.init();
+  }
+
+  if (tabId === 'tab-examples-bank') {
+    if (window.EBModule && typeof window.EBModule.init === 'function') {
+      window.EBModule.init();
+    }
+    if (window.EBModule && typeof window.EBModule.render === 'function') {
+      window.EBModule.render();
+    }
   }
 
   if (tabId === 'tab-toppers') {

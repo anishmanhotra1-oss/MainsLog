@@ -36,8 +36,11 @@
 
     function loadEbEntries() {
       try {
+        const delRaw = localStorage.getItem('EB_DELETED_IDS_v1');
+        const delSet = new Set(delRaw ? JSON.parse(delRaw) : []);
         const raw = localStorage.getItem(EB_LS_KEY);
-        return raw ? JSON.parse(raw) : [];
+        const list = raw ? JSON.parse(raw) : [];
+        return (Array.isArray(list) ? list : []).filter(e => e && e.id && !delSet.has(e.id));
       } catch (e) { return []; }
     }
 
@@ -324,9 +327,16 @@
         }
 
         // 2. Reconcile EB_ENTRIES
-        if (data && Array.isArray(data.EB_ENTRIES)) {
-          state.ebEntries = data.EB_ENTRIES;
-          try { localStorage.setItem(EB_LS_KEY, JSON.stringify(data.EB_ENTRIES)); } catch (e) {}
+        if (data && (Array.isArray(data.EB_ENTRIES) || Array.isArray(data.deletedEbIds))) {
+          const remoteDeletedIds = new Set(data.deletedEbIds || []);
+          try {
+            const localDel = JSON.parse(localStorage.getItem('EB_DELETED_IDS_v1') || '[]');
+            localDel.forEach(id => remoteDeletedIds.add(id));
+            localStorage.setItem('EB_DELETED_IDS_v1', JSON.stringify(Array.from(remoteDeletedIds)));
+          } catch(e) {}
+          const incoming = Array.isArray(data.EB_ENTRIES) ? data.EB_ENTRIES : [];
+          state.ebEntries = incoming.filter(e => e && e.id && !remoteDeletedIds.has(e.id));
+          try { localStorage.setItem(EB_LS_KEY, JSON.stringify(state.ebEntries)); } catch (e) {}
           if (state.currentView === 'questions') {
             renderQuestionList();
           }
@@ -411,8 +421,15 @@
         fetch(SYNC_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ EB_ENTRIES: state.ebEntries })
+          body: JSON.stringify({
+            EB_ENTRIES: state.ebEntries,
+            deletedEbIds: JSON.parse(localStorage.getItem('EB_DELETED_IDS_v1') || '[]')
+          })
         }).catch(() => {});
+        try {
+          const ch = new BroadcastChannel('mainslog_sync_channel');
+          ch.postMessage('EB_SYNC_UPDATE');
+        } catch (e) {}
       } catch (e) {}
 
       showPyqToast('💡 Added to Examples Bank under ' + gsPart + '!');
@@ -3560,5 +3577,25 @@
 
     // Bind filters once on startup
     attachFilterListeners();
+    try {
+      const syncCh = new BroadcastChannel('mainslog_sync_channel');
+      syncCh.addEventListener('message', (e) => {
+        if (e.data === 'EB_SYNC_UPDATE' || e.data === 'SYNC_UPDATE') {
+          state.ebEntries = loadEbEntries();
+          if (state.currentView === 'questions') {
+            renderQuestionList();
+          }
+        }
+      });
+    } catch (e) {}
+
+    window.addEventListener('storage', (e) => {
+      if (e.key === EB_LS_KEY || e.key === 'EB_DELETED_IDS_v1') {
+        state.ebEntries = loadEbEntries();
+        if (state.currentView === 'questions') {
+          renderQuestionList();
+        }
+      }
+    });
   }
 })();
